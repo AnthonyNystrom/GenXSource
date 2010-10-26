@@ -1,0 +1,94 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NuGenVisUI", "..\..\..\NuGenVisUI\~svn\src\NuGenVisUI.csproj", "{94687627-0C0E-4818-8B6E-858AA19118DF}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NuGenDEMVis", "NuGenDEMVis\NuGenDEMVis.csproj", "{9C26210C-A2B4-4119-9368-68B474FAFCB5}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NuGenRenderCore", "..\..\..\NuGenRenderCore\~svn\src\NuGenRenderCore.csproj", "{96169C26-6B5C-4E2F-8A6D-95F3F5D6C696}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NuGenRenderOptics", "..\..\..\NuGenRenderOptics\~svn\src\NuGenRenderOptics\NuGenRenderOptics.csproj", "{B29F7EC9-6427-42CB-B30B-81105623C468}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NuGenRasterDatabase", "..\..\..\NuGenRasterDatabase\~svn\src\NuGenRasterDatabase\NuGenRasterDatabase.csproj", "{F77921C8-B9B2-4882-B43D-04146EB64C01}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PQTree-Prototype", "PQTree-Prototype\PQTree-Prototype.csproj", "{2F36EF2E-8D01-4EBC-917E-E6C4A10A9ED4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94687627-0C0E-4818-8B6E-858AA19118DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94687627-0C0E-4818-8B6E-858AA19118DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94687627-0C0E-4818-8B6E-858AA19118DF}.Debug|x86.ActiveCfg = Debug|x86
+		{94687627-0C0E-4818-8B6E-858AA19118DF}.Debug|x86.Build.0 = Debug|x86
+		{94687627-0C0E-4818-8B6E-858AA19118DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94687627-0C0E-4818-8B6E-858AA19118DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94687627-0C0E-4818-8B6E-858AA19118DF}.Release|x86.ActiveCfg = Release|x86
+		{94687627-0C0E-4818-8B6E-858AA19118DF}.Release|x86.Build.0 = Release|x86
+		{9C26210C-A2B4-4119-9368-68B474FAFCB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C26210C-A2B4-4119-9368-68B474FAFCB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C26210C-A2B4-4119-9368-68B474FAFCB5}.Debug|x86.ActiveCfg = Debug|x86
+		{9C26210C-A2B4-4119-9368-68B474FAFCB5}.Debug|x86.Build.0 = Debug|x86
+		{9C26210C-A2B4-4119-9368-68B474FAFCB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C26210C-A2B4-4119-9368-68B474FAFCB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C26210C-A2B4-4119-9368-68B474FAFCB5}.Release|x86.ActiveCfg = Release|x86
+		{9C26210C-A2B4-4119-9368-68B474FAFCB5}.Release|x86.Build.0 = Release|x86
+		{96169C26-6B5C-4E2F-8A6D-95F3F5D6C696}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96169C26-6B5C-4E2F-8A6D-95F3F5D6C696}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96169C26-6B5C-4E2F-8A6D-95F3F5D6C696}.Debug|x86.ActiveCfg = Debug|x86
+		{96169C26-6B5C-4E2F-8A6D-95F3F5D6C696}.Debug|x86.Build.0 = Debug|x86
+		{96169C26-6B5C-4E2F-8A6D-95F3F5D6C696}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96169C26-6B5C-4E2F-8A6D-95F3F5D6C696}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96169C26-6B5C-4E2F-8A6D-95F3F5D6C696}.Release|x86.ActiveCfg = Release|x86
+		{96169C26-6B5C-4E2F-8A6D-95F3F5D6C696}.Release|x86.Build.0 = Release|x86
+		{B29F7EC9-6427-42CB-B30B-81105623C468}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B29F7EC9-6427-42CB-B30B-81105623C468}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B29F7EC9-6427-42CB-B30B-81105623C468}.Debug|x86.ActiveCfg = Debug|x86
+		{B29F7EC9-6427-42CB-B30B-81105623C468}.Debug|x86.Build.0 = Debug|x86
+		{B29F7EC9-6427-42CB-B30B-81105623C468}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B29F7EC9-6427-42CB-B30B-81105623C468}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B29F7EC9-6427-42CB-B30B-81105623C468}.Release|x86.ActiveCfg = Release|x86
+		{B29F7EC9-6427-42CB-B30B-81105623C468}.Release|x86.Build.0 = Release|x86
+		{F77921C8-B9B2-4882-B43D-04146EB64C01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F77921C8-B9B2-4882-B43D-04146EB64C01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F77921C8-B9B2-4882-B43D-04146EB64C01}.Debug|x86.ActiveCfg = Debug|x86
+		{F77921C8-B9B2-4882-B43D-04146EB64C01}.Debug|x86.Build.0 = Debug|x86
+		{F77921C8-B9B2-4882-B43D-04146EB64C01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F77921C8-B9B2-4882-B43D-04146EB64C01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F77921C8-B9B2-4882-B43D-04146EB64C01}.Release|x86.ActiveCfg = Release|x86
+		{F77921C8-B9B2-4882-B43D-04146EB64C01}.Release|x86.Build.0 = Release|x86
+		{2F36EF2E-8D01-4EBC-917E-E6C4A10A9ED4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F36EF2E-8D01-4EBC-917E-E6C4A10A9ED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F36EF2E-8D01-4EBC-917E-E6C4A10A9ED4}.Debug|x86.ActiveCfg = Debug|x86
+		{2F36EF2E-8D01-4EBC-917E-E6C4A10A9ED4}.Debug|x86.Build.0 = Debug|x86
+		{2F36EF2E-8D01-4EBC-917E-E6C4A10A9ED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F36EF2E-8D01-4EBC-917E-E6C4A10A9ED4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F36EF2E-8D01-4EBC-917E-E6C4A10A9ED4}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

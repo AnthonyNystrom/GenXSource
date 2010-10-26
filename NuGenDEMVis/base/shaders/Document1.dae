@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+    <asset>
+        <contributor>
+            <author>Andrew</author>
+            <authoring_tool>NVIDIA FX Composer 2.0</authoring_tool>
+            <comments/>
+            <copyright/>
+        </contributor>
+        <created>2007-11-23T11:30:11</created>
+        <keywords>FXComposer, NVIDIA</keywords>
+        <modified>2008-02-11T14:36:42</modified>
+        <subject/>
+        <title/>
+    </asset>
+    <library_effects>
+        <effect id="Effect" name="cpu_dem">
+            <profile_COMMON>
+                <technique sid="Constant">
+                    <constant>
+                        <emission>
+                            <color>0.5 0.5 0.5 1</color>
+                        </emission>
+                        <reflective>
+                            <color>0 0 0 1</color>
+                        </reflective>
+                        <reflectivity>
+                            <float>0</float>
+                        </reflectivity>
+                        <transparent>
+                            <color>0 0 0 1</color>
+                        </transparent>
+                        <transparency>
+                            <float>1</float>
+                        </transparency>
+                        <index_of_refraction>
+                            <float>1</float>
+                        </index_of_refraction>
+                    </constant>
+                </technique>
+            </profile_COMMON>
+            <extra type="import">
+                <technique profile="NVIDIA_FXCOMPOSER">
+                    <import url="cpu_dem.fx" compiler_options="" profile="fx"/>
+                </technique>
+            </extra>
+        </effect>
+        <effect id="Effect1" name="cpu_dem_hClr">
+            <profile_COMMON>
+                <technique sid="Constant">
+                    <constant>
+                        <emission>
+                            <color>0.5 0.5 0.5 1</color>
+                        </emission>
+                        <reflective>
+                            <color>0 0 0 1</color>
+                        </reflective>
+                        <reflectivity>
+                            <float>0</float>
+                        </reflectivity>
+                        <transparent>
+                            <color>0 0 0 1</color>
+                        </transparent>
+                        <transparency>
+                            <float>1</float>
+                        </transparency>
+                        <index_of_refraction>
+                            <float>1</float>
+                        </index_of_refraction>
+                    </constant>
+                </technique>
+            </profile_COMMON>
+            <extra type="import">
+                <technique profile="NVIDIA_FXCOMPOSER">
+                    <import url="cpu_dem_hClr.fx" compiler_options="" profile="fx"/>
+                </technique>
+            </extra>
+        </effect>
+        <effect id="Effect2" name="gpu_dem">
+            <profile_COMMON>
+                <technique sid="__fxc2_default">
+                    <constant/>
+                </technique>
+            </profile_COMMON>
+            <extra type="import">
+                <technique profile="NVIDIA_FXCOMPOSER">
+                    <import url="gpu_dem.fx" compiler_options="" profile="fx"/>
+                </technique>
+            </extra>
+        </effect>
+    </library_effects>
+    <library_images>
+        <image id="default_color" name="default_color">
+            <init_from>../../../../../../program%20files%20(x86)/nvidia%20corporation/fx%20composer%202/media/textures/default_color.dds</init_from>
+        </image>
+    </library_images>
+</COLLADA>

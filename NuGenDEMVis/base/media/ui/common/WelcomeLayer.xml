@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layer size="200 100" position="0 0" layout="near far" classFile="WelcomeLayer.boo" className="WelcomeLayer"
+       onMouseOver="DropShadow()" onMouseOut="HideShadow()">
+  <resources>
+    <texture url="file://media/ui/common/vista-close.png:areas:icon:close" name="closeIcon"/>
+    <!--<layoutTexture url="file://media/ui/common/popupLayout.png" name="background"/>-->
+  </resources>
+  <background layout="background"/>
+  <items>
+    <label text="Welcome to NuGenDEMVis" position="0 0"/>
+    <label text="Sampling using 256 blocks of 32x32 samples" position="0 15"/>
+    <icon img="closeIcon" position="0 0" size="28 16"  layout="far near" enabled="true" highlight="true" onclick="\t\tpass"/>
+  </items>
+</layer>

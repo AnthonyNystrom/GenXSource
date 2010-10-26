@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fileTypes>
+  <fileType name="Jpeg Image">
+    <ext>jpeg</ext>
+    <ext>jpg</ext>
+  </fileType>
+  <fileType name="Bitmap Image">
+    <ext>bmp</ext>
+  </fileType>
+  <fileType name="Portable Network Graphics Image">
+    <ext>png</ext>
+  </fileType>
+  <fileType name="Tiff">
+    <ext>tiff</ext>
+  </fileType>
+  <fileType name="USGS ASCII DEM">
+    <ext>dem</ext>
+  </fileType>
+</fileTypes>

@@ -1,0 +1,346 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9C26210C-A2B4-4119-9368-68B474FAFCB5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Genetibase.NuGenDEMVis</RootNamespace>
+    <AssemblyName>NuDEMVis</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <StartupObject>
+    </StartupObject>
+    <ManifestCertificateThumbprint>00DC9347CF60BF6166361E729913F994CC1A3DFA</ManifestCertificateThumbprint>
+    <ManifestKeyFile>NuGenDEMVis_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>false</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetZone>LocalIntranet</TargetZone>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+    <PublishUrl>C:\Users\Andrew\Desktop\publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="gdal_csharp, Version=0.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\references-bin\x86\gdal_csharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Data.v3, Version=3.5.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf" />
+    <Reference Include="Janus.Windows.ButtonBar.v3, Version=3.5.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
+    <Reference Include="Janus.Windows.Common.v3, Version=3.5.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf" />
+    <Reference Include="Janus.Windows.ExplorerBar.v3, Version=3.5.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
+    <Reference Include="Janus.Windows.GridEX.v3, Version=3.5.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
+    <Reference Include="Janus.Windows.Ribbon.v3, Version=3.5.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
+    <Reference Include="Janus.Windows.UI.v3, Version=3.5.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf" />
+    <Reference Include="Microsoft.DirectX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.DirectX.Direct3D, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.DirectX.Direct3DX, Version=1.0.2908.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.VisualStudio.DebuggerVisualizers, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="NuGenOcTree, Version=1.0.2890.28719, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\NuGenOctree\~svn\src\Debug\NuGenOcTree.dll</HintPath>
+    </Reference>
+    <Reference Include="ScintillaNET, Version=1.0.2626.22303, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\references-bin\x86\ScintillaNET.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClrIntensityDataProfile.cs" />
+    <Compile Include="CpuDemGeometry.cs" />
+    <Compile Include="CrossSectionGraph.cs" />
+    <Compile Include="DataProfile.cs" />
+    <Compile Include="DataProfileControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataProfileControl.Designer.cs">
+      <DependentUpon>DataProfileControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataProfilePreviewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataProfilePreviewControl.Designer.cs">
+      <DependentUpon>DataProfilePreviewControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet.cs" />
+    <Compile Include="DataSource.cs" />
+    <Compile Include="DataSourceControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataSourceControl.Designer.cs">
+      <DependentUpon>DataSourceControl.cs</DependentUpon>
+    </Compile>
+    <None Include="DEMReader.cs" />
+    <Compile Include="DataSourcesEditorDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataSourcesEditorDlg.Designer.cs">
+      <DependentUpon>DataSourcesEditorDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DEMGeometry.cs" />
+    <Compile Include="DEMGraphicsProfile.cs" />
+    <Compile Include="DiffuseMapDEMSampler.cs" />
+    <Compile Include="DigitalElevationMap.cs" />
+    <Compile Include="FileFilter.cs" />
+    <Compile Include="FileType.cs" />
+    <Compile Include="GDALReader.cs" />
+    <Compile Include="GISValueDataProfile.cs" />
+    <Compile Include="GpuDemGeometry.cs" />
+    <Compile Include="GreyScaleDEMSampler.cs" />
+    <Compile Include="HeightBand.cs" />
+    <Compile Include="HeightBandDEMSampler.cs" />
+    <Compile Include="HeightMapDEMSampler.cs" />
+    <Compile Include="IDataSourceReader.cs" />
+    <Compile Include="IDEMDataSampler.cs" />
+    <Compile Include="IDEMGeometry.cs" />
+    <Compile Include="IDigitalElevationMap.cs" />
+    <Compile Include="LineIntersection.cs" />
+    <Compile Include="MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiSampleRasterSampler.cs" />
+    <Compile Include="NewVisDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewVisDlg.Designer.cs">
+      <DependentUpon>NewVisDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NormalMapGenerator.cs" />
+    <Compile Include="PreviewRasterizer.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="ProgramArgs.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RasterDatabaseLookup.cs" />
+    <Compile Include="RasterDatabaseRenderer.cs" />
+    <Compile Include="ScreenshotDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScreenshotDlg.Designer.cs">
+      <DependentUpon>ScreenshotDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SourceDataDiffuseSampler.cs" />
+    <Compile Include="SplashDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashDlg.Designer.cs">
+      <DependentUpon>SplashDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TextureWriter.cs" />
+    <Compile Include="UI3DVisControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI3DVisControl.Designer.cs">
+      <DependentUpon>UI3DVisControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VerticalPointerEntity.cs" />
+    <Compile Include="VisRenderingContext3D.cs" />
+    <Compile Include="VisViewTab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisViewTab.Designer.cs">
+      <DependentUpon>VisViewTab.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\NuGenRasterDatabase\~svn\src\NuGenRasterDatabase\NuGenRasterDatabase.csproj">
+      <Project>{F77921C8-B9B2-4882-B43D-04146EB64C01}</Project>
+      <Name>NuGenRasterDatabase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\NuGenRenderCore\~svn\src\NuGenRenderCore.csproj">
+      <Project>{96169C26-6B5C-4E2F-8A6D-95F3F5D6C696}</Project>
+      <Name>NuGenRenderCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\NuGenVisUI\~svn\src\NuGenVisUI.csproj">
+      <Project>{94687627-0C0E-4818-8B6E-858AA19118DF}</Project>
+      <Name>NuGenVisUI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DataProfileControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DataProfileControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataSourceControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DataSourceControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWindow.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewVisDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NewVisDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resource1.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red-layer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rgb-layer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue-layer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="NuGenDEMVis_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Resources\green-layer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DataSourcesEditorDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DataSourcesEditorDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DefaultGlobalSettings.xml" />
+    <EmbeddedResource Include="ScreenshotDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ScreenshotDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashDlg.resx">
+      <DependentUpon>SplashDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="Resources\FileTypes.xml" />
+    <None Include="Resources\logo-800.jpg" />
+    <Content Include="Resources\VerticalPointer_Shape.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

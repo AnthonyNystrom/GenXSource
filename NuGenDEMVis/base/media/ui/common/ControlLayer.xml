@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layer size="100 20" position="0 0" layout="far far" classFile="ControlLayer.boo" className="ControlLayer"
+       onMouseOver="DropShadow()" onMouseOut="HideShadow()">
+  <resources>
+    <texture url="file://media/ui/common/InViewIconsX16.png:areas:icon:xAxis" name="xAxisIcon"/>
+  </resources>
+  <background layout="background"/>
+  <items>
+    <icon img="xAxisIcon" position="0 0" size="16 16"  layout="near near" enabled="true" highlight="true" onclick="\t\tpass"/>
+  </items>
+</layer>

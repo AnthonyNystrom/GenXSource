@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="windows-1250"?>
+
+<resource url="vista-close.png" mime="Content-Type:image/png">
+  <areas>
+    <icon id="close">
+      <coords id="face" u="0" v="0" w="28" h="15"/>
+      <coords id="disabled" u="0" v="16" w="28" h="15"/>
+      <coords id="highlight" u="0" v="32" w="28" h="15"/>
+    </icon>
+  </areas>
+</resource>
