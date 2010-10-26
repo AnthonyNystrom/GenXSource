@@ -1,0 +1,417 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A2870A01-BAFD-4CAB-BA8B-7AA984BA5494}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Genetibase.NuGenMediImage</RootNamespace>
+    <AssemblyName>Genetibase.NuGenMediImage</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BrightnessChangedEventArgs.cs" />
+    <Compile Include="ContrastChangedEventArgs.cs" />
+    <Compile Include="NuGenColorsStatic.cs" />
+    <Compile Include="EventArgs.cs" />
+    <Compile Include="Delegates.cs" />
+    <Compile Include="FileType.cs" />
+    <Compile Include="History.cs" />
+    <Compile Include="HistoryList.cs" />
+    <Compile Include="ImageArray.cs" />
+    <Compile Include="NuGenColors.cs" />
+    <Compile Include="StartMenuCollection.cs" />
+    <Compile Include="TabBar.cs" />
+    <Compile Include="TabBarConvertor.cs" />
+    <Compile Include="SliceViewerConvertor.cs" />
+    <Compile Include="SliceViewer.cs" />
+    <Compile Include="Filters.cs" />
+    <Compile Include="Handlers\AnalyzeImage.cs" />
+    <Compile Include="Handlers\DICOMImage.cs" />
+    <Compile Include="Handlers\ImageBase.cs" />
+    <Compile Include="Handlers\InterImage.cs" />
+    <Compile Include="Handlers\PPMImage.cs" />
+    <Compile Include="Handlers\RAWImage.cs" />
+    <Compile Include="ThumbnailViewer.cs">
+    </Compile>
+    <Compile Include="ThumbnailViewerConvertor.cs" />
+    <Compile Include="ImageViewerDesigner.cs" />
+    <Compile Include="MeasurementUnits.cs" />
+    <Compile Include="UI\Controls\FlickerFreePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Controls\NoScrollToControlPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Controls\OpHelper.cs" />
+    <Compile Include="UI\Controls\ColorTrackBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Controls\ColorTrackBarDesigner.cs" />
+    <Compile Include="UI\Controls\CrystalGradientControl.cs" />
+    <Compile Include="UI\Controls\CustomPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Controls\MultiPane.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Controls\RibbonButtonCollection.cs" />
+    <Compile Include="UI\Controls\RibbonLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Controls\RibbonSlider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Controls\RibbonSlider.Designer.cs">
+      <DependentUpon>RibbonSlider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ScrollablePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Controls\ThemedPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Controls\TTrackBar.cs" />
+    <Compile Include="UI\Controls\VerticalProgressBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Controls\ViewerAnnot.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Controls\ViewerAnnot.Designer.cs">
+      <DependentUpon>ViewerAnnot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ViewerPane.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Controls\ViewerPane.Designer.cs">
+      <DependentUpon>ViewerPane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dialogs\DlgEmboss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dialogs\DlgEmboss.Designer.cs">
+      <DependentUpon>DlgEmboss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dialogs\DlgOpenRaw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenMediImage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NuGenMediImage.Designer.cs">
+      <DependentUpon>NuGenMediImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Controls\CustomMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Controls\CustomMenuItem.Designer.cs">
+      <DependentUpon>CustomMenuItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ImageViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Controls\ImageViewer.designer.cs">
+      <DependentUpon>ImageViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\ImageViewerVertical.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Controls\ImageViewerVertical.designer.cs">
+      <DependentUpon>ImageViewerVertical.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\RibbonButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Controls\RibbonControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Controls\RibbonGallery.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Controls\RibbonGroup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Controls\RibbonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Controls\RibbonPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Controls\RibbonTab.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Controls\RibbonTrack.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Controls\RibbonTrack.designer.cs">
+      <DependentUpon>RibbonTrack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Controls\TransparentPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Menus\MeasurementUnitsMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Menus\MeasurementUnitsMenu.designer.cs">
+      <DependentUpon>MeasurementUnitsMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Menus\LutMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Menus\LutMenu.designer.cs">
+      <DependentUpon>LutMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Menus\OverLayMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Menus\OverLayMenu.designer.cs">
+      <DependentUpon>OverLayMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Menus\PhotoMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Menus\PhotoMenu.designer.cs">
+      <DependentUpon>PhotoMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Menus\ZoomBoxMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Menus\ZoomBoxMenu.designer.cs">
+      <DependentUpon>ZoomBoxMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Menus\ZoomSizeMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Menus\ZoomSizeMenu.designer.cs">
+      <DependentUpon>ZoomSizeMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\ColorSpace.cs" />
+    <Compile Include="Utility\FastBitmap\FastBitmap.cs" />
+    <Compile Include="Utility\FastBitmap\PixelData.cs" />
+    <Compile Include="Utility\Histogram.cs" />
+    <Compile Include="UI\Controls\ValueChangedEventArgs.cs" />
+    <Compile Include="UI\Controls\ValueDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Controls\ValueDlg.designer.cs">
+      <DependentUpon>ValueDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\ImageArray.cs" />
+    <Compile Include="Utility\Utility.cs" />
+    <Compile Include="UI\Controls\Viewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UI\Controls\ColorTrackBar.resx">
+      <DependentUpon>ColorTrackBar.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Controls\ScrollablePanel.resx">
+      <DependentUpon>ScrollablePanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Controls\ViewerPane.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ViewerPane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dialogs\DlgOpenRaw.resx">
+      <DependentUpon>DlgOpenRaw.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenMediImage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenMediImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Controls\CustomMenuItem.resx">
+      <DependentUpon>CustomMenuItem.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Controls\ImageViewer.resx">
+      <DependentUpon>ImageViewer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Controls\ImageViewerVertical.resx">
+      <DependentUpon>ImageViewerVertical.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Controls\RibbonTrack.resx">
+      <DependentUpon>RibbonTrack.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Controls\Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Controls\ValueDlg.resx">
+      <DependentUpon>ValueDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Menus\LutMenu.resx">
+      <DependentUpon>LutMenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Menus\OverLayMenu.resx">
+      <DependentUpon>OverLayMenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Menus\PhotoMenu.resx">
+      <DependentUpon>PhotoMenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Menus\ZoomBoxMenu.resx">
+      <DependentUpon>ZoomBoxMenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Menus\ZoomSizeMenu.resx">
+      <DependentUpon>ZoomSizeMenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Controls\Viewer.resx">
+      <DependentUpon>Viewer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\about.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addfolder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg_blank.png" />
+    <Content Include="Resources\bg_tilted.PNG" />
+    <None Include="Resources\note_remove.png" />
+    <EmbeddedResource Include="LUTs\BLACKBDY.LUT" />
+    <EmbeddedResource Include="LUTs\bone.LUT" />
+    <EmbeddedResource Include="LUTs\CARDIAC.LUT" />
+    <EmbeddedResource Include="LUTs\FLOW.LUT" />
+    <EmbeddedResource Include="LUTs\GE_color.LUT" />
+    <EmbeddedResource Include="LUTs\Gold.LUT" />
+    <EmbeddedResource Include="LUTs\HOTIRON.LUT" />
+    <EmbeddedResource Include="LUTs\NIH.LUT" />
+    <EmbeddedResource Include="LUTs\NIH_fire.LUT" />
+    <EmbeddedResource Include="LUTs\NIH_ice.LUT" />
+    <EmbeddedResource Include="LUTs\Rainramp.LUT" />
+    <EmbeddedResource Include="LUTs\SPECTRUM.LUT" />
+    <EmbeddedResource Include="LUTs\X_hot.LUT" />
+    <EmbeddedResource Include="LUTs\X_rain.LUT" />
+    <EmbeddedResource Include="UI\Controls\VerticalProgressBar.resx">
+      <DependentUpon>VerticalProgressBar.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Controls\ViewerAnnot.resx">
+      <DependentUpon>ViewerAnnot.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dialogs\DlgEmboss.resx">
+      <DependentUpon>DlgEmboss.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Menus\MeasurementUnitsMenu.resx">
+      <DependentUpon>MeasurementUnitsMenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Resources\double_arrow_down.png" />
+    <None Include="Resources\double_arrow_up.png" />
+    <None Include="Resources\double_arrow_right.png" />
+    <None Include="Resources\double_arrow_left.png" />
+    <None Include="Resources\left_arrow.png" />
+    <None Include="Resources\view.png" />
+    <None Include="Resources\undo.png" />
+    <None Include="Resources\text_align_left.png" />
+    <None Include="Resources\save_small.png" />
+    <None Include="Resources\save_as.png" />
+    <None Include="Resources\save.png" />
+    <None Include="Resources\RotateRight.png" />
+    <None Include="Resources\RotateLeft.png" />
+    <None Include="Resources\remove.png" />
+    <None Include="Resources\redo.png" />
+    <None Include="Resources\OK.png" />
+    <None Include="Resources\note_add.png" />
+    <None Include="Resources\logo.jpg" />
+    <None Include="Resources\load_small.png" />
+    <None Include="Resources\load.png" />
+    <None Include="Resources\icon.ico" />
+    <None Include="Resources\icecube.png" />
+    <None Include="Resources\help2.png" />
+    <None Include="Resources\font.png" />
+    <None Include="Resources\flipver.png" />
+    <None Include="Resources\fliphor.png" />
+    <None Include="Resources\exit.png" />
+    <None Include="Resources\crop.png" />
+    <None Include="Resources\Close_small.png" />
+    <None Include="Resources\Close.png" />
+    <None Include="Resources\Clear.png" />
+    <None Include="Resources\chequerboard.png" />
+    <None Include="Resources\Cancel.png" />
+    <None Include="Resources\box.png" />
+    <None Include="Resources\busy.ani" />
+    <None Include="Resources\Thumbs.db" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NuGenAnnotations\NuGenAnnotations.csproj">
+      <Project>{C2F951D8-2CB6-4AB5-9029-1EE3FCDB910A}</Project>
+      <Name>NuGenAnnotations</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
