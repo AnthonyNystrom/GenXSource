@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<project>
+  <objectives>
+    <objective num="1">
+      <desc>Basic DirectX view of plotted data</desc>
+      <status>complete</status>
+    </objective>
+    <objective num="2">
+      <desc>Add more features similar to PSurface ones</desc>
+    </objective>
+    <objective num="3">
+      <desc>Load and render different file formats</desc>
+    </objective>
+  </objectives>
+  <logs>
+    <todo>
+      <item>Optimize software view</item>
+      <item>Implement more avalon-bridge features</item>
+      <item>Add view camera controls</item>
+      <item>Add lwo support</item>
+      <item>Add obj support</item>
+    </todo>
+    <change>
+      <changes at="06-03-2007">
+        <change>Added basic 3ds support</change>
+      </changes>
+      <changes at="07-03-2007">
+        <change>Basic material support</change>
+        <change>Basic camera support</change>
+        <change>Basic lighting support</change>
+      </changes>
+      <changes at="13-03-2007">
+        <change>Fixed some material group issues with 3ds loading</change>
+        <change>Added dynamic camera depth/z-buffer based on scene size</change>
+        <change>Texture filename matching support - helps 3ds load textures</change>
+        <change>Added basic fallback device support</change>
+      </changes>
+    </change>
+  </logs>
+</project>
