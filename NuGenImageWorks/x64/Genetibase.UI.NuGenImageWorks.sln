@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genetibase.UI.NuGenImageWorks", "Genetibase.UI.NuGenImageWorks.csproj", "{E8957020-EFE1-493C-8C30-989AE546B0B0}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E8957020-EFE1-493C-8C30-989AE546B0B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8957020-EFE1-493C-8C30-989AE546B0B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8957020-EFE1-493C-8C30-989AE546B0B0}.Debug|x64.ActiveCfg = Debug|x64
+		{E8957020-EFE1-493C-8C30-989AE546B0B0}.Debug|x64.Build.0 = Debug|x64
+		{E8957020-EFE1-493C-8C30-989AE546B0B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8957020-EFE1-493C-8C30-989AE546B0B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8957020-EFE1-493C-8C30-989AE546B0B0}.Release|x64.ActiveCfg = Release|x64
+		{E8957020-EFE1-493C-8C30-989AE546B0B0}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

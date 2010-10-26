@@ -1,0 +1,386 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E8957020-EFE1-493C-8C30-989AE546B0B0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Genetibase.UI.NuGenImageWorks</RootNamespace>
+    <AssemblyName>NuGenImageWorks x64</AssemblyName>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>af27814a-6c57-95b4-f62c-9cf4a5f06675.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnimatedCursor\AniCursor.cs" />
+    <Compile Include="AnimatedCursor\AsyncUtils.cs" />
+    <Compile Include="ContentAlignmentCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ContentAlignmentCtrl.Designer.cs">
+      <DependentUpon>ContentAlignmentCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BoxFilterCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BoxFilterCtrl.Designer.cs">
+      <DependentUpon>BoxFilterCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extra.cs" />
+    <Compile Include="ExtraFilters\FishEye.cs" />
+    <Compile Include="FileSaveDialogEx\Controls\SaveFileDialogEx.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FileSaveDialogEx\Controls\SaveFileDialogEx.Designer.cs">
+      <DependentUpon>SaveFileDialogEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileSaveDialogEx\FormSaveFileDialog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FileSaveDialogEx\FormSaveFileDialog.designer.cs">
+      <DependentUpon>FormSaveFileDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileSaveDialogEx\OS\Enums.cs" />
+    <Compile Include="FileSaveDialogEx\OS\structs.cs" />
+    <Compile Include="FileSaveDialogEx\OS\Win32.cs" />
+    <Compile Include="frmBF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBF.Designer.cs">
+      <DependentUpon>frmBF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Effects\ConvMatrix.cs" />
+    <Compile Include="Effects\Effects2.cs" />
+    <Compile Include="Effects\Graphics.cs" />
+    <Compile Include="frmCA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCA.Designer.cs">
+      <DependentUpon>frmCA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFE.Designer.cs">
+      <DependentUpon>frmFE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFR.Designer.cs">
+      <DependentUpon>frmFR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectBackGround.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectBackGround.Designer.cs">
+      <DependentUpon>frmSelectBackGround.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operations.cs" />
+    <Compile Include="PictureBoxEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RibbonTrackEn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RibbonTrackEn.Designer.cs">
+      <DependentUpon>RibbonTrackEn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ImageViewer.Designer.cs">
+      <DependentUpon>ImageViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhotoMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhotoMenu.Designer.cs">
+      <DependentUpon>PhotoMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RibbonButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RibbonControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RibbonGallery.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RibbonGroup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RibbonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RibbonPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RibbonTab.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RibbonTrack.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RibbonTrack.Designer.cs">
+      <DependentUpon>RibbonTrack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ContentAlignmentCtrl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ContentAlignmentCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BoxFilterCtrl.resx">
+      <DependentUpon>BoxFilterCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileSaveDialogEx\Controls\SaveFileDialogEx.resx">
+      <DependentUpon>SaveFileDialogEx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileSaveDialogEx\FormSaveFileDialog.resx">
+      <DependentUpon>FormSaveFileDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBF.resx">
+      <DependentUpon>frmBF.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCA.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFE.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmFE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFR.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmFR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectBackGround.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSelectBackGround.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtraFilters\Images.resources" />
+    <EmbeddedResource Include="RibbonTrackEn.resx">
+      <DependentUpon>RibbonTrackEn.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageViewer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ImageViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhotoMenu.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PhotoMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RibbonTrack.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RibbonTrack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UndoRedoCtrl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UndoRedoCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ValueDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ValueDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Filter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SlideChangedEventArgs.cs" />
+    <Compile Include="Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransparentPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UndoRedoCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UndoRedoCtrl.Designer.cs">
+      <DependentUpon>UndoRedoCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Undo\Entity.cs" />
+    <Compile Include="Undo\ModificationHistory.cs" />
+    <Compile Include="Undo\PropertyValue.cs" />
+    <Compile Include="Undo\UndoHelper.cs" />
+    <Compile Include="Undo\ValueChangedEventArgs.cs" />
+    <Compile Include="Utility.cs" />
+    <Compile Include="ValueDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ValueDlg.Designer.cs">
+      <DependentUpon>ValueDlg.cs</DependentUpon>
+    </Compile>
+    <None Include="Resources\load.png" />
+    <None Include="Resources\save.png" />
+    <None Include="Resources\clear.png" />
+    <None Include="Resources\exit.png" />
+    <None Include="Resources\about.png" />
+    <None Include="Resources\remove.png" />
+    <None Include="Resources\add.png" />
+    <Compile Include="Effects.cs" />
+    <Compile Include="WaitCursor\ApplicationWaitCursor.cs" />
+    <Compile Include="WaitCursor\StCursor.cs" />
+    <Compile Include="WaitCursor\StDelayedCallback.cs" />
+    <Compile Include="WaitCursor\StThreadAttachedDelayedCallback.cs" />
+    <Compile Include="WaterMark.cs" />
+    <Compile Include="ExtraFilters\BasicFilter.cs" />
+    <Compile Include="ExtraFilters\BoxFilter.cs" />
+    <Compile Include="ExtraFilters\DropShadow.cs" />
+    <Compile Include="ExtraFilters\IFilter.cs" />
+    <Compile Include="ExtraFilters\PolaroidFrameFilter.cs" />
+    <Compile Include="ExtraFilters\Resize.cs" />
+    <Compile Include="ExtraFilters\Rotate.cs" />
+    <Compile Include="ExtraFilters\RoundedCorners.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+    <None Include="Resources\box.png" />
+    <None Include="Resources\bg.PNG" />
+    <None Include="Resources\help2.png" />
+    <None Include="Resources\Close_small.png" />
+    <None Include="Resources\text_align_left.png" />
+    <None Include="Resources\font.png" />
+    <None Include="Resources\Cancel.png" />
+    <None Include="Resources\load_small.png" />
+    <None Include="Resources\save_small.png" />
+    <None Include="Resources\save_as.png" />
+    <None Include="Resources\note_add.png" />
+    <None Include="Resources\OK.png" />
+    <None Include="Resources\flipver.png" />
+    <None Include="Resources\fliphor.png" />
+    <None Include="Resources\Image-Crop.bmp" />
+    <None Include="Resources\Crop.png" />
+    <None Include="Resources\RotateRight.png" />
+    <None Include="Resources\RotateLeft.png" />
+    <None Include="Resources\chequerboard.png" />
+    <None Include="Resources\addfolder.png" />
+    <None Include="Resources\busy.ani" />
+    <None Include="Resources\redo.png" />
+    <None Include="Resources\undo.png" />
+    <Compile Include="ExtraFilters\FloorReflectionFilter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+    <None Include="af27814a-6c57-95b4-f62c-9cf4a5f06675.snk" />
+    <None Include="Resources\icecube.png" />
+    <None Include="Resources\view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <EmbeddedResource Include="NuGenImageWorks.plsk" />
+    <Reference Include="Xheo.Licensing">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC\Xheo.Licensing\2.1.5000.0__798276055709c98a\Xheo.Licensing.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

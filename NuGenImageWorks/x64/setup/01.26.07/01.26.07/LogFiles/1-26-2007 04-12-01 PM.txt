@@ -1,0 +1,191 @@
+================= Logging started at 1/26/2007 04:12:01 PM ==================
+Created release folders
+AdminExecuteSequence table successfully built
+AdminUISequence table successfully built
+AdvtExecuteSequence table successfully built
+AdvtUISequence table successfully built
+InstallExecuteSequence table successfully built
+InstallUISequence table successfully built
+Directory table successfully built
+Feature table successfully built
+FeatureComponents table successfully built
+Component table successfully built
+Loading File table
+Building File table
+Adding merge module 'Microsoft OLE 2.40 for Windows NT and Windows 95' that is a dependency of component 'Xheo.Licensing.dll'
+Merging Microsoft OLE 2.40  for Windows NT(TM) and Windows 95(TM) Operating Systems: C:\Program Files (x86)\Common Files\Merge Modules\OLEAUT32.MSM
+File table successfully built
+Building MsiFileHash table
+MsiFileHash table successfully built
+Class table successfully built
+Extension table successfully built
+ODBCDataSource table successfully built
+ODBCDriver table successfully built
+ISSQLScriptFile table successfully built
+ISSQLScriptReplace table successfully built
+ISSQLConnectionScript table successfully built
+ISSQLConnection table successfully built
+ISSQLConnectionDBServer table successfully built
+ISSQLRequirement table successfully built
+ISPalmApp table successfully built
+ISPalmAppFile table successfully built
+ISComPlusProxy table successfully built
+ISComPlusApplication table successfully built
+ISComCatalogCollection table successfully built
+ISComCatalogCollectionObjects table successfully built
+ISComCatalogObject table successfully built
+ISComCatalogAttribute table successfully built
+ISComPlusApplicationDLL table successfully built
+ISComPlusServerFile table successfully built
+ISComPlusProxyFile table successfully built
+ISComPlusServerDepFile table successfully built
+ISComPlusProxyDepFile table successfully built
+ISXmlFile table successfully built
+ISXmlElement table successfully built
+ISXmlElementAttrib table successfully built
+ActionText table successfully built
+AppSearch table successfully built
+BindImage table successfully built
+CCPSearch table successfully built
+Condition table successfully built
+AppId table successfully built
+Property table successfully built
+BBControl table successfully built
+Billboard table successfully built
+Binary table successfully built
+CompLocator table successfully built
+Complus table successfully built
+ControlCondition table successfully built
+ControlEvent table successfully built
+CreateFolder table successfully built
+CustomAction table successfully built
+Error table successfully built
+DrLocator table successfully built
+DuplicateFile table successfully built
+Environment table successfully built
+EventMapping table successfully built
+FileSFPCatalog table successfully built
+Font table successfully built
+IniFile table successfully built
+IniLocator table successfully built
+ISCEApp table successfully built
+ISCEDir table successfully built
+ISCEFileExt table successfully built
+ISCEInstall table successfully built
+ISCEOtherAppCABs table successfully built
+ISCERegistry table successfully built
+ISCESetupFile table successfully built
+ISCEShtCut table successfully built
+ISComponentExtended table successfully built
+ISDRMFile table successfully built
+ISIISCommon table successfully built
+ISIISMetaData table successfully built
+ISObjectProperty table successfully built
+IsolatedComponent table successfully built
+ISSelfReg table successfully built
+ISSQLDBMetaData table successfully built
+ISSQLScriptError table successfully built
+ISVRoot table successfully built
+ISVRootAppMaps table successfully built
+Verb table successfully built
+ISWebSite table successfully built
+ISXmlLocator table successfully built
+LaunchCondition table successfully built
+LockPermissions table successfully built
+MIME table successfully built
+MoveFile table successfully built
+MsiAssembly table successfully built
+MsiAssemblyName table successfully built
+MsiDigitalCertificate table successfully built
+MsiDigitalSignature table successfully built
+MsiDriverPackages table successfully built
+MsiPatchCertificate table successfully built
+ODBCAttribute table successfully built
+ODBCSourceAttribute table successfully built
+ODBCTranslator table successfully built
+PatchPackage table successfully built
+ProgId table successfully built
+PublishComponent table successfully built
+Registry table successfully built
+RegLocator table successfully built
+RemoveFile table successfully built
+RemoveIniFile table successfully built
+RemoveRegistry table successfully built
+ReserveCost table successfully built
+SelfReg table successfully built
+ServiceControl table successfully built
+ServiceInstall table successfully built
+SFPCatalog table successfully built
+Shortcut table successfully built
+Signature table successfully built
+TextStyle table successfully built
+TypeLib table successfully built
+UIText table successfully built
+Upgrade table successfully built
+ISIISWebServiceExtension table successfully built
+ISIISAppPool table successfully built
+ISFileManifests table successfully built
+ISCustomActionReference table successfully built
+_Validation table successfully built
+Searching project for extract-at-build components...
+Building scanned MsiAssembly records
+Building scanned MsiAssemblyName records
+Validating Custom Action sequencing
+Embedding manifest SetupExe.Invoker.manifest into setup.exe
+Dialog AdminChangeFolder for language English (United States) built
+Dialog AdminNetworkLocation for language English (United States) built
+Dialog AdminWelcome for language English (United States) built
+Dialog CancelSetup for language English (United States) built
+Dialog CustomSetup for language English (United States) built
+Dialog CustomSetupTips for language English (United States) built
+Dialog CustomerInformation for language English (United States) built
+Dialog DatabaseFolder for language English (United States) built
+Dialog DestinationFolder for language English (United States) built
+Dialog DiskSpaceRequirements for language English (United States) built
+Dialog FilesInUse for language English (United States) built
+Dialog InstallChangeFolder for language English (United States) built
+Dialog InstallWelcome for language English (United States) built
+Dialog LicenseAgreement for language English (United States) built
+Dialog MaintenanceType for language English (United States) built
+Dialog MaintenanceWelcome for language English (United States) built
+Dialog MsiRMFilesInUse for language English (United States) built
+Dialog OutOfSpace for language English (United States) built
+Dialog PatchWelcome for language English (United States) built
+Dialog ReadyToInstall for language English (United States) built
+Dialog ReadyToRemove for language English (United States) built
+Dialog SQLBrowse for language English (United States) built
+Dialog SQLLogin for language English (United States) built
+Dialog SetupCompleteError for language English (United States) built
+Dialog SetupCompleteSuccess for language English (United States) built
+Dialog SetupError for language English (United States) built
+Dialog SetupInitialization for language English (United States) built
+Dialog SetupInterrupted for language English (United States) built
+Dialog SetupProgress for language English (United States) built
+Dialog SetupResume for language English (United States) built
+Dialog SetupType for language English (United States) built
+Dialog SplashBitmap for language English (United States) built
+Resolving strings...
+Language English (United States) built
+Adding Microsoft(R) .NET Framework redistributables to setup...
+Building CAB files...
+Data1.cab built
+Files built
+Media table successfully built
+Started signing certificate.msi ...
+Succeeded
+Performing Upgrading and Patching Validation
+Started signing NuGenImageWorks x64.msi ...
+Succeeded
+Setup.exe created
+Started signing setup.exe ...
+Succeeded
+---------------------------------------------------------------------------------------------------------------------------------
+Windows validation is disabled. To enable Windows validation: on the Tools menu, click Options and select the Validation tab.
+You can use the Windows(R) Vista Quality Validation Suite (plus InstallShield ICEs) to determine whether your product meets Windows Vista Quality Program installation standards.
+For more information, see KB article <file:http://support.installshield.com/kb/view.asp?articleid=Q112118>.
+---------------------------------------------------------------------------------------------------------------------------------
+Automatic update notification disabled
+01.26.07\01.26.07 - 0 error(s), 0 warning(s)
+================= Logging stopped at 1/26/2007 04:12:08 PM ==================
+Log file has been created: <file:C:\Documents and Settings\Administrator\Desktop\NUGENIMAGEWORKS\NuGenImageWorks_12.27.06\NuGenImageWorks x64\01.26.07\01.26.07\LogFiles\1-26-2007 04-12-01 PM.txt>
+
