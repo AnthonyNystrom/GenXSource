@@ -1,0 +1,1357 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_TOOLBAR_MOLECULE_HIRES BITMAP                  "res\\moleculeToolbar40x40x24.bmp"
+IDR_TOOLBAR_MOLECULE    BITMAP                  "res\\MoleToolbar.bmp"
+IDR_TOOLBAR             BITMAP                  "res\\Toolbar.bmp"
+IDR_TOOLBAR_TIMELINE    BITMAP                  "res\\toolbar_.bmp"
+IDR_TOOLBAR_RIBBON_VIEW BITMAP                  "res\\bmp00004.bmp"
+IDR_TOOLBAR_OUTPUT_PANE BITMAP                  "res\\toolbar1.bmp"
+IDR_TOOLBAR_RESIDUE_PANE BITMAP                  "res\\bmp00007.bmp"
+IDR_TOOLBAR_RESIDUE_BAR BITMAP                  "res\\bmp00008.bmp"
+IDB_BITMAP_RESIDUE_TREE BITMAP                  "res\\bitmap4.bmp"
+IDB_BITMAP_CHECKMARK    BITMAP                  "res\\optionmarks.bmp"
+IDR_TOOLBAR_SELECTION_LIST BITMAP                  "res\\bmp00009.bmp"
+IDR_TOOLBAR_PANE_PROPERTIES BITMAP                  "res\\toolbar3.bmp"
+IDR_TOOLBAR_SCRIPT_EDIT BITMAP                  "res\\bmp00010.bmp"
+IDR_TOOLBAR_MOLECULES   BITMAP                  "res\\bmp00001.bmp"
+IDR_TOOLBAR_VS          BITMAP                  "res\\bmp00002.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_OPENPDBID DIALOGEX 0, 0, 234, 154
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Open PDB ID Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_PDBID,7,25,220,98,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL
+    PUSHBUTTON      "OK",IDOK,65,133,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,119,133,50,14
+    LTEXT           "PDB ID (Separated by "";""  "",""  ""\\n"")",IDC_STATIC,7,7,124,8
+END
+
+IDD_ABOUT_BOX DIALOGEX 0, 0, 274, 45
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Protein Insight"
+FONT 8, "MS Sans Serif", 400, 0, 0x0
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,7,7,20,20
+    LTEXT           "Protein Insight v2.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2008-2009 Chan-Yong Park",IDC_STATIC,40,25,199,8
+    DEFPUSHBUTTON   "OK",IDOK,217,7,50,14,WS_GROUP
+END
+
+IDD_SELECTDEVICE DIALOGEX 0, 0, 289, 302
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Direct3D Settings"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Adapter and device",IDC_STATIC,5,5,276,47
+    LTEXT           "Display &Adapter:",IDC_STATIC,16,17,98,10,SS_CENTERIMAGE
+    COMBOBOX        IDC_ADAPTER_COMBO,124,15,149,100,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Render &Device:",IDC_STATIC,16,34,98,10,SS_CENTERIMAGE
+    COMBOBOX        IDC_DEVICE_COMBO,124,32,149,100,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Display mode settings",IDC_STATIC,5,56,276,98
+    CONTROL         "&Windowed",IDC_WINDOW,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,16,68,98,15
+    CONTROL         "&Fullscreen",IDC_FULLSCREEN,"Button",BS_AUTORADIOBUTTON,16,83,98,15
+    LTEXT           "Adapter F&ormat:",IDC_STATIC,16,103,98,8
+    COMBOBOX        IDC_ADAPTERFORMAT_COMBO,124,101,149,204,CBS_DROPDOWNLIST | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    LTEXT           "&Resolution:",IDC_STATIC,16,120,98,8
+    COMBOBOX        IDC_RESOLUTION_COMBO,124,118,149,204,CBS_DROPDOWNLIST | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    LTEXT           "R&efresh Rate:",IDC_STATIC,16,137,98,8
+    COMBOBOX        IDC_REFRESHRATE_COMBO,124,135,149,204,CBS_DROPDOWNLIST | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    GROUPBOX        "Device settings",IDC_STATIC,7,158,274,118
+    LTEXT           "&Back Buffer Format:",IDC_STATIC,16,173,98,8
+    COMBOBOX        IDC_BACKBUFFERFORMAT_COMBO,124,170,149,100,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "De&pth/Stencil Buffer Format:",IDC_STATIC,16,190,98,8
+    COMBOBOX        IDC_DEPTHSTENCILBUFFERFORMAT_COMBO,124,187,149,100,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Multisample Type:",IDC_STATIC,16,207,98,10,SS_CENTERIMAGE
+    COMBOBOX        IDC_MULTISAMPLE_COMBO,124,204,149,100,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Multisample &Quality:",IDC_STATIC,16,224,98,8
+    COMBOBOX        IDC_MULTISAMPLE_QUALITY_COMBO,124,221,149,100,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Vertex Processing:",IDC_STATIC,16,241,98,8
+    COMBOBOX        IDC_VERTEXPROCESSING_COMBO,124,238,149,100,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Present &Interval:",IDC_STATIC,16,258,98,8
+    COMBOBOX        IDC_PRESENTINTERVAL_COMBO,124,255,149,100,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,86,286,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,152,286,50,14
+END
+
+IDD_DIALOG_PROGRESS DIALOG  0, 0, 187, 43
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION
+CAPTION "????"
+FONT 10, "??"
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,130,7,50,14,NOT WS_VISIBLE
+    CONTROL         "Progress1",IDC_PROGRESS,"msctls_progress32",WS_BORDER,7,23,173,14
+    LTEXT           "",IDC_STATIC_DESC,7,7,173,8
+END
+
+IDD_DIALOG_SELECT_PDB DIALOGEX 0, 0, 244, 168
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Select PDB"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_TREE_CTRL,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | TVS_SHOWSELALWAYS | TVS_CHECKBOXES | WS_BORDER | WS_TABSTOP,7,18,172,113
+    EDITTEXT        IDC_EDIT_SELECT_OBJECT,7,147,173,14,ES_AUTOHSCROLL | ES_READONLY
+    DEFPUSHBUTTON   "OK",IDOK,187,18,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,187,35,50,14
+    LTEXT           "Select Two Chain",IDC_STATIC_TEXT,7,7,230,8
+    LTEXT           "Base Object",IDC_STATIC_BASE_OBJECT,7,138,40,8
+END
+
+IDD_DIALOG_CUSTOM_COLOR DIALOGEX 0, 0, 193, 149
+STYLE DS_SETFONT | DS_3DLOOK | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Curvature Color"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_COMBO_COLOR_SIZE,7,20,108,18,CBS_DROPDOWN | CBS_AUTOHSCROLL | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Number of Colors",IDC_STATIC,7,9,104,8
+    LTEXT           "Color List",IDC_STATIC,7,44,104,8
+    CONTROL         "",IDC_STATIC_COLORPREVIEW,"Static",SS_BLACKFRAME,146,19,31,119
+    LTEXT           "1.0",IDC_STATIC,180,19,11,13
+    LTEXT           "-1.0",IDC_STATIC,180,129,13,13
+    LISTBOX         IDC_LIST_COLORS,7,55,108,85,LBS_SORT | LBS_OWNERDRAWVARIABLE | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_DIALOG_FILE_EXTENSION DIALOGEX 0, 0, 441, 174
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_CLIPSIBLINGS | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,89,102,345,1
+    GROUPBOX        "",1119,7,3,427,97,NOT WS_VISIBLE
+    LTEXT           "Input PDB ID (example: 1b17). For multiple, comma separated",IDC_STATIC,98,122,276,11
+    EDITTEXT        IDC_EDIT_PDBID,98,135,246,25,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL
+    PUSHBUTTON      "Download and Open",IDC_BUTTON_DOWNLOAD_OPEN,351,129,77,25,BS_MULTILINE
+    GROUPBOX        "PDB Download and Open",IDC_STATIC,89,111,345,56
+END
+
+IDD_DIALOG_COLOR_SELECTION DIALOGEX 0, 0, 321, 287
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Color Selection"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Custom4",IDC_GRID_COLOR_SELECTION,"MFCGridCtrl",WS_TABSTOP,7,7,218,271
+    DEFPUSHBUTTON   "Ok",IDOK,241,7,64,19
+    PUSHBUTTON      "Cancel",IDCANCEL,241,30,64,19
+    PUSHBUTTON      "Reset Default",IDC_BUTTON_DEFAULT,241,53,64,19
+    PUSHBUTTON      "Add",IDC_BUTTON_ADD_COLOR,247,87,50,14,NOT WS_VISIBLE
+    PUSHBUTTON      "Delete",IDC_BUTTON_DELETE_COLOR,247,104,50,14,NOT WS_VISIBLE
+    PUSHBUTTON      "Move Up",IDC_BUTTON_MOVE_UP,247,121,50,14,NOT WS_VISIBLE
+    PUSHBUTTON      "Move Down",IDC_BUTTON_MOVE_DOWN,247,138,50,14,NOT WS_VISIBLE
+    PUSHBUTTON      "ColorPicker",IDC_BUTTON_COLOR_PICKER,251,73,54,6,BS_CENTER | BS_NOTIFY | NOT WS_VISIBLE
+    CONTROL         "",IDC_CUSTOM_GRADIENT_COLOR,"Static",SS_BLACKFRAME | NOT WS_VISIBLE,249,166,47,112
+    LTEXT           "Diffuse Gradient Color",IDC_STATIC_GRADIENT_COLOR,238,155,72,8,NOT WS_VISIBLE
+END
+
+IDD_DIALOG_FILE_EXTENSION_SAVE_IMAGE DIALOGEX 0, 0, 441, 178
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_CLIPSIBLINGS | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_IMAGE_WIDTH,181,136,64,14,ES_AUTOHSCROLL | WS_GROUP
+    EDITTEXT        IDC_EDIT_IMAGE_HEIGHT,181,152,64,14,ES_AUTOHSCROLL
+    CONTROL         "Current Window Size",IDC_CHECK_CURRENT_WINDOW_SIZE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,155,121,83,10
+    COMBOBOX        IDC_COMBO_IMAGE_FORMAT,274,120,102,58,CBS_DROPDOWNLIST | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    GROUPBOX        "Image Size",IDC_STATIC,134,107,127,64
+    LTEXT           "Width:",IDC_STATIC,151,140,22,8
+    LTEXT           "Height:",IDC_STATIC,151,154,24,8
+    LTEXT           "Format",IDC_STATIC,275,111,24,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,89,102,345,1
+    GROUPBOX        "",1119,7,3,427,97,NOT WS_VISIBLE
+END
+
+IDD_DIALOG_MAKE_MOVIE DIALOGEX 0, 0, 316, 291
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,105,270,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,159,270,50,14
+    GROUPBOX        "Image Size",IDC_STATIC,58,198,127,61
+    LTEXT           "Width:",IDC_STATIC,76,225,22,8
+    LTEXT           "Height:",IDC_STATIC,76,239,24,8
+    EDITTEXT        IDC_EDIT_IMAGE_WIDTH,106,223,64,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_IMAGE_HEIGHT,106,239,64,14,ES_AUTOHSCROLL
+    LTEXT           "FPS:",IDC_STATIC,198,209,16,8
+    EDITTEXT        IDC_EDIT_FPS,216,206,40,14,ES_AUTOHSCROLL
+    CONTROL         "Same as Image Size",IDC_CHECK_CURRENT_WINDOW_SIZE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,80,211,79,10
+    LISTBOX         IDC_LIST_BITMAP_FILENAME,16,81,284,101,LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_MOVIE_FILENAME,14,19,232,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSE,251,19,50,14
+    GROUPBOX        "Movie File name",IDC_STATIC,7,7,302,35
+    GROUPBOX        "Source Bitmap File name",IDC_STATIC,7,49,302,142
+    PUSHBUTTON      "Insert",IDC_BUTTON_INSERT,16,63,50,14
+    PUSHBUTTON      "Remove",IDC_BUTTON_REMOVE,69,63,50,14
+    PUSHBUTTON      "Up",IDC_BUTTON_UP,136,63,50,14
+    PUSHBUTTON      "Down",IDC_BUTTON_DOWN,190,63,50,14
+END
+
+IDD_DIALOG_DOTNET_SETTING DIALOGEX 0, 0, 262, 145
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "DotNet Setting"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,48,124,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,105,124,50,14
+    EDITTEXT        IDC_EDIT_ASSEMBLIES,7,18,248,82,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL | WS_HSCROLL
+    LTEXT           "Referenced Assemblies",IDC_STATIC,7,7,75,8
+    CONTROL         "Include Debug Information",IDC_CHECK_DEBUG_INFO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,106,101,10
+    PUSHBUTTON      "Default",IDC_BUTTON_DEFAULT,162,124,50,14
+END
+
+IDD_TUTORIAL_DIALOG DIALOGEX 0, 0, 316, 180
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_HELP_DIALOG DIALOGEX 0, 0, 316, 180
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_DIALOG_LAUNCH_PLUGIN_OPTION DIALOGEX 0, 0, 272, 233
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "New Plugin Option Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "C#",IDC_RADIO_CS,"Button",BS_AUTORADIOBUTTON,46,54,52,10
+    CONTROL         "C++/CLI",IDC_RADIO_CPP,"Button",BS_AUTORADIOBUTTON,110,54,52,10
+    CONTROL         "Visual Basic",IDC_RADIO_VB,"Button",BS_AUTORADIOBUTTON,174,54,52,10
+    EDITTEXT        IDC_EDIT_PLUGIN_NAME,7,89,258,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PLUGIN_DESCRIPTION,7,119,258,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_INSTALL_DIR,7,149,204,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_DIR_BROWSE,215,149,50,14
+    CONTROL         "Create Directory for Plugin",IDC_CHECK_CREATE_NEW_DIRECTORY,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,170,101,10
+    CONTROL         "Launch Visual Studio For Compiling",IDC_CHECK_LAUNCH_VS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,182,125,10
+    CONTROL         "Launch Plugin Help",IDC_CHECK_LAUNCH_HELP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,194,75,10
+    DEFPUSHBUTTON   "OK",IDOK,84,212,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,137,212,50,14
+    LTEXT           "Name of Plugin",IDC_STATIC,7,79,258,8
+    LTEXT           "For using this function, you have to use Microsoft Visual Studio 2008 express edition or later version. You can download visual studio 2008 express edition in http://www.microsoft.com/express",IDC_STATIC,7,7,258,32
+    LTEXT           "Choose Install Directory",IDC_STATIC,7,138,188,8
+    GROUPBOX        "Choose Language",IDC_STATIC,16,40,241,31
+    LTEXT           "Description of Plugin(This field is shown in the Plugin menu of ProteinInsight)",IDC_STATIC,7,109,258,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DIALOG_OPENPDBID, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 227
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 147
+    END
+
+    IDD_ABOUT_BOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 267
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 38
+    END
+
+    IDD_SELECTDEVICE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 259
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 143
+    END
+
+    IDD_DIALOG_PROGRESS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 36
+    END
+
+    IDD_DIALOG_SELECT_PDB, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 237
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 161
+    END
+
+    IDD_DIALOG_CUSTOM_COLOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 170
+        TOPMARGIN, 9
+        BOTTOMMARGIN, 138
+    END
+
+    IDD_DIALOG_FILE_EXTENSION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 434
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 167
+    END
+
+    IDD_DIALOG_COLOR_SELECTION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 314
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 278
+    END
+
+    IDD_DIALOG_FILE_EXTENSION_SAVE_IMAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 434
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 171
+    END
+
+    IDD_DIALOG_MAKE_MOVIE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 284
+    END
+
+    IDD_DIALOG_DOTNET_SETTING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 255
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 138
+    END
+
+    IDD_TUTORIAL_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 173
+    END
+
+    IDD_HELP_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 173
+    END
+
+    IDD_DIALOG_LAUNCH_PLUGIN_OPTION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 265
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 226
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "Open PDBID...",               ID_FILE_OPEN_PDBID
+        MENUITEM SEPARATOR
+        MENUITEM "Add PDB...",                  IDM_ADD_PDB
+        MENUITEM "Add PDBID...",                ID_FILE_ADD_PDBID
+        MENUITEM SEPARATOR
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Workspace",                  ID_VIEW_WORKSPACE
+        MENUITEM "&Properties",                 ID_VIEW_PROPERTIES
+        MENUITEM "&Folders",                    ID_VIEW_FOLDERS
+        MENUITEM SEPARATOR
+        POPUP "&Toolbar"
+        BEGIN
+            MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        END
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About Protein Insight...",   ID_APP_ABOUT
+    END
+END
+
+IDR_SKINSDTYPE MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "Open PDBID...",               ID_FILE_OPEN_PDBID
+        MENUITEM SEPARATOR
+        MENUITEM "Add PDB...",                  IDM_ADD_PDB
+        MENUITEM "Add PDBID...",                ID_FILE_ADD_PDBID
+        MENUITEM SEPARATOR
+        MENUITEM "Open Workspace...\tCtrl+Shift+O", ID_FILE_OPENWORKSPACE
+        MENUITEM "Save Workspace...\tCtrl+Shift+S", ID_FILE_SAVEWORKSPACE
+        MENUITEM "Save as Workspace...",        ID_FILE_SAVEASWORKSPACE
+        MENUITEM "&Close Workspace",            ID_WINDOW_CLOSE_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "Save Image...",               ID_FILE_SCREENSHOT
+        MENUITEM "Make Movie with Still Images...", ID_FILE_START_MAKEMOVIE
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 57616
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       57665
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "ViewList",                    ID_VIEW_LIST
+        MENUITEM SEPARATOR
+        POPUP "&Toolbar"
+        BEGIN
+            MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        END
+        MENUITEM "&Status Bar",                 59393
+        MENUITEM SEPARATOR
+        MENUITEM "Full Screen",                 ID_VIEW_FULLSCREEN
+    END
+    POPUP "&PlugIn"
+    BEGIN
+        MENUITEM "PlugIns List",                ID_PLUGIN_LIST
+        MENUITEM SEPARATOR
+        MENUITEM "Rescan Plugins",              ID_PLUGIN_RESCANPLUGINS
+        MENUITEM "Open Plugin Folder",          ID_PLUGIN_OPENPLUGINFOLDER
+        MENUITEM SEPARATOR
+        MENUITEM "Run Plugin",                  ID_PLUGIN_RUNPLUG
+        MENUITEM SEPARATOR
+        MENUITEM "Create New Plugin with Visual Studio", ID_PLUGIN_MAKE_VS
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "A&uto Hide All",              ID_WINDOW_AUTOHIDEALL
+        MENUITEM "More Windows...",             ID_WINDOW_MORE
+        MENUITEM "C&lose All Documents",        ID_WINDOW_CLOSE_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "Windows List",                35000
+        MENUITEM SEPARATOR
+        MENUITEM "More Windows...",             ID_WINDOW_MORE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "Tutorial",                    ID_HELP_TUTORIAL
+        MENUITEM SEPARATOR
+        MENUITEM "&About Protein Insight...",   57664
+    END
+END
+
+IDR_MENU MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "Config &display...\tF2",      IDM_CHANGEDEVICE
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit\tESC",                  IDM_EXIT
+    END
+END
+
+IDR_MENU_TREE_SELECTION_POPUP MENU 
+BEGIN
+    POPUP "_POPUP_"
+    BEGIN
+        MENUITEM "Center checked items",        ID_CENTER_SELECTED_MOLECULE
+        MENUITEM SEPARATOR
+        POPUP "Atom"
+        BEGIN
+            MENUITEM "Select C",                    ID_ATOM_SELECTC
+            MENUITEM "Select N",                    ID_ATOM_SELECTN
+            MENUITEM "Select O",                    ID_ATOM_SELECTO
+            MENUITEM "Select Na",                   ID_ATOM_SELECTNA
+            MENUITEM "Select Mg",                   ID_ATOM_SELECTMG
+            MENUITEM "Select P",                    ID_ATOM_SELECTP
+            MENUITEM "Select S",                    ID_ATOM_SELECTS
+            MENUITEM SEPARATOR
+            MENUITEM "Select Ca",                   ID_SELECT_CA
+            MENUITEM "Select Backbone",             ID_SELECT_BACKBONE
+            MENUITEM "Select Side Chain",           ID_SELECT_SIDECHAIN
+        END
+        POPUP "HETATM"
+        BEGIN
+            MENUITEM "Select HETATM",               ID_SELECT_HETATM_WITH_HOH
+            MENUITEM "Select HETATM except HOH",    ID_SELECT_HETATM_WITHOUT_HOH
+        END
+        POPUP "Residue"
+        BEGIN
+            MENUITEM "Select Hydrophilic",          ID_SELECT_HYDROPHILIC
+            MENUITEM "Select Hydrophobic",          ID_SELECT_HYDROPHOBIC
+            MENUITEM SEPARATOR
+            MENUITEM "Select Helix",                ID_SELECT_HELIX
+            MENUITEM "Select Sheet",                ID_SELECT_SHEET
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Save Selection",              ID_SELECT_SPLIT_NEW_PDB
+    END
+END
+
+IDR_POPUP_PANES MENU 
+BEGIN
+    POPUP "PopupPanes"
+    BEGIN
+        MENUITEM "Auto Hide",                   ID_POPUP_AUTOHIDE
+        MENUITEM "Hide",                        ID_POPUP_HIDE
+    END
+END
+
+IDR_MENU_SCRIPT MENU 
+BEGIN
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM "&Redo\tCtrl+Y",               ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM "&Delete\tDel",                ID_EDIT_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "Select A&ll\tCtrl+A",         ID_EDIT_SELECT_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "&Find\tCtrl+F",               ID_EDIT_FIND
+        MENUITEM "R&eplace\tCtrl+H",            ID_EDIT_REPLACE
+        MENUITEM "&Go To...\tCtrl+G",           40503
+        MENUITEM SEPARATOR
+        POPUP "&Advanced"
+        BEGIN
+            MENUITEM "&Tabify Selection",           40504
+            MENUITEM "Untabify Selection",          40505
+            MENUITEM SEPARATOR
+            MENUITEM "Make Selection Uppercase\tCtrl+Shift+U", 40506
+            MENUITEM "Make Selection Lowercase\tCtrl+U", 40507
+            MENUITEM SEPARATOR
+            MENUITEM "View Whitespaces\tCtrl+Shift+8", 40508, CHECKED
+            MENUITEM SEPARATOR
+            MENUITEM "&Collapse All",               40509
+            MENUITEM "&Expand All",                 40510
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Toggle Brea&kpoint\tF9",      40511
+        MENUITEM SEPARATOR
+        MENUITEM "Toggle &Bookmark\tCtrl+F2",   ID_TOOLS_BOOKMARK
+        MENUITEM "Ne&xt Bookmark\tF2",          ID_TOOLS_NEXT_BOOKMARK
+        MENUITEM "Pre&v Bookmark\tShift+F2",    ID_TOOLS_PREV_BOOKMARK
+        MENUITEM SEPARATOR
+        MENUITEM "Read Only",                   40512
+    END
+END
+
+ID_DISPLAY_BIOUNIT MENU 
+BEGIN
+    POPUP "BIOMT"
+    BEGIN
+        MENUITEM "Wireframe model",             ID_BUTTON_BIOUNIT_WIREFRAME
+        MENUITEM "Stick model",                 ID_BUTTON_BIOUNIT_STICK
+        MENUITEM "Ball model",                  ID_BUTTON_BIOUNIT_BALL
+        MENUITEM "Ball&&Stick model",           ID_BUTTON_BIOUNIT_BALL_STICK
+        MENUITEM "Ribbon model",                ID_BUTTON_BIOUNIT_RIBBON
+        POPUP "Surface model"
+        BEGIN
+            MENUITEM "0 (Low Polygon)",             ID_BIOUNIT_SURFACE_POLYGON_0
+            MENUITEM "1",                           ID_BIOUNIT_SURFACE_POLYGON_1
+            MENUITEM "2",                           ID_BIOUNIT_SURFACE_POLYGON_2
+            MENUITEM "3",                           ID_BIOUNIT_SURFACE_POLYGON_3
+            MENUITEM "4",                           ID_BIOUNIT_SURFACE_POLYGON_4
+            MENUITEM "5",                           ID_BIOUNIT_SURFACE_POLYGON_5
+            MENUITEM "6",                           ID_BIOUNIT_SURFACE_POLYGON_6
+            MENUITEM "7",                           ID_BIOUNIT_SURFACE_POLYGON_7
+            MENUITEM "8 (Default)",                 ID_BIOUNIT_SURFACE_POLYGON_8
+            MENUITEM "9",                           ID_BIOUNIT_SURFACE_POLYGON_9
+            MENUITEM "10(High Polygon)",            ID_BIOUNIT_SURFACE_POLYGON_10
+            MENUITEM SEPARATOR
+            MENUITEM "Marching Cube Algorithm",     ID_SURFACE_BIOUNIT_GEN_MQ
+            MENUITEM "MSMS",                        ID_SURFACE_BIOUNIT_GEN_MSMS
+        END
+    END
+END
+
+ID_BUTTON_DOTSURFACE MENU 
+BEGIN
+    POPUP "Surface"
+    BEGIN
+        MENUITEM "0 (Low Polygon)",             ID_SURFACE_POLYGON_0
+        MENUITEM "1",                           ID_SURFACE_POLYGON_1
+        MENUITEM "2",                           ID_SURFACE_POLYGON_2
+        MENUITEM "3",                           ID_SURFACE_POLYGON_3
+        MENUITEM "4",                           ID_SURFACE_POLYGON_4
+        MENUITEM "5",                           ID_SURFACE_POLYGON_5
+        MENUITEM "6",                           ID_SURFACE_POLYGON_6
+        MENUITEM "7",                           ID_SURFACE_POLYGON_7
+        MENUITEM "8 (Default)",                 ID_SURFACE_POLYGON_8
+        MENUITEM "9",                           ID_SURFACE_POLYGON_9
+        MENUITEM "10(High Polygon)",            ID_SURFACE_POLYGON_10
+        MENUITEM SEPARATOR
+        MENUITEM "Marching Cube Algorithm",     ID_SURFACE_GEN_MQ
+        MENUITEM "MSMS",                        ID_SURFACE_GEN_MSMS
+    END
+END
+
+ID_VIEW_ALL MENU 
+BEGIN
+    POPUP "__"
+    BEGIN
+        MENUITEM "View All and Set Display Parameters", ID_VIEWALL_DISPLAY_PARAMS
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,2
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "Protein Insight MFC Application"
+            VALUE "FileVersion", "2,0,0,0"
+            VALUE "InternalName", "Protein Insight"
+            VALUE "LegalCopyright", "Copyright (C) 2008 Chanyong Park"
+            VALUE "OriginalFilename", "Protein Insight.exe"
+            VALUE "ProductName", "Protein Insight"
+            VALUE "ProductVersion", "2,0,0,0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_TOOLBAR_MOLECULE TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_BUTTON_WIREFRAME
+    BUTTON      ID_BUTTON_STICK
+    BUTTON      ID_BUTTON_BALL
+    BUTTON      ID_BUTTON_BALL_STICK
+    BUTTON      ID_BUTTON_RIBBON
+    BUTTON      ID_BUTTON_DOTSURFACE
+    SEPARATOR
+    BUTTON      ID_CENTER_MOLECULE
+    BUTTON      ID_FLAG_MOLECULE_SELECTION_CENTER
+    SEPARATOR
+    BUTTON      ID_DISPLAY_BIOUNIT
+    BUTTON      ID_ATTATCH_BIOUNIT
+END
+
+IDR_TOOLBAR_MOLECULE_HIRES TOOLBAR  40, 40
+BEGIN
+    BUTTON      ID_BUTTON_WIREFRAME
+    BUTTON      ID_BUTTON_STICK
+    BUTTON      ID_BUTTON_BALL
+    BUTTON      ID_BUTTON_BALL_STICK
+    BUTTON      ID_BUTTON_RIBBON
+    BUTTON      ID_BUTTON_DOTSURFACE
+    SEPARATOR
+    BUTTON      ID_CENTER_MOLECULE
+    BUTTON      ID_FLAG_MOLECULE_SELECTION_CENTER
+    BUTTON      ID_VIEW_ALL
+    SEPARATOR
+    BUTTON      ID_DISPLAY_BIOUNIT
+    BUTTON      ID_ATTATCH_BIOUNIT
+END
+
+IDR_TOOLBAR TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_FILE_OPEN
+    BUTTON      IDM_ADD_PDB
+    BUTTON      IDM_CLOSE_PDB
+    SEPARATOR
+    BUTTON      ID_FILE_OPENWORKSPACE
+    BUTTON      ID_FILE_SAVEWORKSPACE
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+END
+
+IDR_TOOLBAR_TIMELINE TOOLBAR  16, 16
+BEGIN
+    BUTTON      IDC_TIMELINE_SLIDER
+    SEPARATOR
+    BUTTON      ID_BUTTON_GO_FIRST
+    BUTTON      ID_BUTTON_PREV_FRAME
+    SEPARATOR
+    BUTTON      ID_BUTTON_PLAY
+    BUTTON      ID_BUTTON_STOP
+    SEPARATOR
+    BUTTON      ID_BUTTON_NEXT_FRAME
+    BUTTON      ID_BUTTON_GO_LAST
+    SEPARATOR
+    BUTTON      ID_BUTTON_PLAY_FAST
+    BUTTON      ID_BUTTON_PLAY_SLOW
+END
+
+IDR_TOOLBAR_RIBBON_VIEW TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_BUTTON_DISPLAY_HELIX
+    BUTTON      ID_BUTTON_DISPLAY_SHEET
+    BUTTON      ID_BUTTON_DISPLAY_RIBBON
+END
+
+IDR_TOOLBAR_OUTPUT_PANE TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_BUTTON_CLEAR_ALL
+    SEPARATOR
+    BUTTON      ID_SCRIPT_RUN
+END
+
+IDR_TOOLBAR_RESIDUE_PANE TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_DISPLAY_SELECTED
+    SEPARATOR
+    BUTTON      ID_SELECTION_OPTION
+END
+
+IDR_TOOLBAR_RESIDUE_BAR TOOLBAR  16, 15
+BEGIN
+    BUTTON      IDD_SAVE_SELECTION
+    SEPARATOR
+    BUTTON      IDD_SYNC_PDB
+    SEPARATOR
+    BUTTON      ID_SELECTION_OPTION
+END
+
+IDR_TOOLBAR_SELECTION_LIST TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_TOOLBAR_SHOWALL
+    BUTTON      ID_TOOLBAR_HIDEALL
+    BUTTON      ID_TOOLBAR_DELETE
+    SEPARATOR
+    BUTTON      ID_TOOLBAR_DESELECT_ALL
+    SEPARATOR
+    BUTTON      ID_TOOLBAR_CENTER_CURRENT_SELECTION
+    SEPARATOR
+    BUTTON      ID_TOOLBAR_UNION
+    BUTTON      ID_TOOLBAR_INTERSECT
+    BUTTON      ID_TOOLBAR_SUBTRACT
+    BUTTON      ID_TOOLBAR_RESULT
+    SEPARATOR
+    BUTTON      ID_TOOLBAR_UP
+    BUTTON      ID_TOOLBAR_DOWN
+END
+
+IDR_TOOLBAR_PANE_PROPERTIES TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_PANEPROPERIES_CATEGORIZED
+    BUTTON      ID_PANEPROPERIES_ALPHABETIC
+    SEPARATOR
+    BUTTON      ID_PANEPROPERIES_SCENE
+END
+
+IDR_TOOLBAR_SCRIPT_EDIT TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    BUTTON      ID_FILE_SAVE_AS
+    SEPARATOR
+    BUTTON      ID_EDIT_UNDO
+    BUTTON      ID_EDIT_REDO
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_TOOLS_BOOKMARK
+    BUTTON      ID_TOOLS_NEXT_BOOKMARK
+    BUTTON      ID_TOOLS_PREV_BOOKMARK
+    SEPARATOR
+    BUTTON      ID_SCRIPT_AUTO_COMPLETE
+    SEPARATOR
+    BUTTON      ID_SCRIPT_COMPILE
+    BUTTON      ID_SCRIPT_RUN
+    SEPARATOR
+    BUTTON      ID_BUTTON_COPY_PLUG_IN
+    SEPARATOR
+    BUTTON      ID_SCRIPT_OPTION
+    SEPARATOR
+    BUTTON      ID_SCRIPT_HELP_PANE
+END
+
+IDR_TOOLBAR_MOLECULES TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_ACTIVE_PDB
+END
+
+IDR_TOOLBAR_VS TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_PLUGIN_MAKE_VS
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\ProteinVista.ico"
+IDR_SKINSDTYPE          ICON                    "res\\ProteinVistaDoc.ico"
+IDI_MAIN_ICON           ICON                    "res\\DirectX.ico"
+ID_PLUGIN_MAKE_CS       ICON                    "res\\CS.ico"
+ID_PLUGIN_MAKE_VB       ICON                    "res\\VB.ico"
+ID_PLUGIN_MAKE_VCPP     ICON                    "res\\VCPP.ico"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\ProteinVista.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_SKINSDTYPE ACCELERATORS 
+BEGIN
+    "E",            ID_CENTER_MOLECULE,     VIRTKEY, CONTROL, NOINVERT
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "F",            ID_EDIT_FIND,           VIRTKEY, CONTROL, NOINVERT
+    VK_F3,          ID_EDIT_FIND_SILENT,    VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "Y",            ID_EDIT_REDO,           VIRTKEY, CONTROL, NOINVERT
+    "H",            ID_EDIT_REPLACE,        VIRTKEY, CONTROL, NOINVERT
+    "A",            ID_EDIT_SELECT_ALL,     VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+    "G",            ID_FILE_GOTO,           VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPENWORKSPACE,  VIRTKEY, SHIFT, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "M",            ID_FLAG_MOLECULE_SELECTION_CENTER, VIRTKEY, CONTROL, NOINVERT
+    VK_F6,          ID_NEXT_PDB_LIST,       VIRTKEY, NOINVERT
+    VK_F5,          ID_NEXT_SELECTION_LIST, VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PDB_LIST,       VIRTKEY, SHIFT, NOINVERT
+    VK_F5,          ID_PREV_SELECTION_LIST, VIRTKEY, SHIFT, NOINVERT
+    VK_F2,          ID_TOOLS_BOOKMARK,      VIRTKEY, NOINVERT
+    VK_F2,          ID_TOOLS_NEXT_BOOKMARK, VIRTKEY, CONTROL, NOINVERT
+    VK_F2,          ID_TOOLS_PREV_BOOKMARK, VIRTKEY, SHIFT, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "Protein Insight 2.0"
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_SKINSDTYPE          "\nProteinInsight\nProteinInsight\nProtein Data Bank Files (*.ent)\n.ent\nProteinInsight.Document\nProteinInsight.Document"
+    ID_TASKPANEL_TEST       "Test TaskPanel\nTest TaskPanel"
+    ID_OUTPUTPANE_TEST      "Test OutputPane\nTest OutputPane"
+    ID_TASKPANEL_ALIGN      "Protein Alignment\nProtein Alignment"
+    ID_TASKPANEL_POCKET_SEARCH "Pocket Detection\nPocket Detection"
+    ID_OUTPUTPANE_ALIGN     "Protein Alignment\nProtein Alignment"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_OUTPUTPANE_POCKET_SEARCH "Pocket Detection\nPocket Detection"
+    IDR_SELECTION           "Selection\nSelection"
+    IDR_RESIDUEPANE         "Residue\nResidue"
+    IDR_SELECTIONLIST       "Selection List\nSelection List"
+    ID_TASKPANEL_COMPARISON "Comparison\nComparison"
+    ID_OUTPUTPANE_COMPARISON "Comparison Results\nComparison Results"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_SCRIPT_AUTO_COMPLETE "Auto Complete\nAuto Complete (Ctrl+Space)"
+    ID_TOOLBAR_CENTER_CURRENT_SELECTION "Center VP\nCenter"
+    ID_BUTTON_COPY_PLUG_IN  "Copy Plugin Folder\nCopy Plugin Folder"
+    ID_SELECTION_OPTION     "Selection Option\nSelection"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_SCRIPT_MAKE_DLL      "Make this script to Plug-in DLL\nMake Plug-in DLL"
+    ID_SCRIPT_OPTION        "Option Dialog\nOption"
+    ID_TOOLBAR_UP           "Up\nUp"
+    ID_TOOLBAR_DOWN         "Down\nDown"
+    ID_SCRIPT_COMPILE       "Compile\nCompile"
+    ID_SCRIPT_HELP          "Script Help\nScript Help"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_SCRIPT_RUN           "Run Script\nRun"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_TASKPANEL_SURFACE_COMPARISON "Surface Comparison\nSurface Comparison"
+    IDR_HEADEROUTPUT        "PDB Header\nPDB Header"
+    ID_OUTPUTPANE_SURFACE_COMPARISON "Surface Comparison\nSurface Comparison"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Protein Insight V2.0"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_NEW           "Open another window for the active document\nNew Window"
+    ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
+    ID_WINDOW_CASCADE       "Arrange windows so they overlap\nCascade Windows"
+    ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+    AFX_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_CB_EDIT              "Edit control\nEdit control"
+    ID_CB_COMBO             "Combo box\nCombo box"
+    ID_CB_CHECKBOX          "Check box\nCheck box"
+    ID_CB_PROGRESS          "Progress bar\nProgress bar"
+    ID_CB_SLIDER            "Slider control\nSlider control"
+    ID_CB_DTP               "Date-time picker\nDate-time picker"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_CHECKED              "This is a stupid button\nRun"
+    ID_MAIL                 "Mail\nMail"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_BUTTON_DISPLAY_HELIX "Show Helix\nShow Helix"
+    ID_BUTTON_DISPLAY_SHEET "Show Sheet\nShow Sheet"
+    ID_BUTTON_DISPLAY_RIBBON "Show All Ribbon\nShow All Ribbon"
+    IDM_SHOW_AMINOACID      "Show Amino acid\nShow Amino acid"
+    IDM_HIDE_AMINOACID      "Hide Amino acid\nHide Amino acid"
+    IDM_SELECT_ALL          "Select all residue"
+    IDM_DESELECT            "Deselect"
+    IDM_SELECT_AMINO_ACID   "Select amino acid\nSelect amino acid"
+    IDM_DESELECT_AMINO_ACID "Deselect amino acid\nDeselect amino acid"
+    IDM_SELECT_INVERSE      "Inverse select\nInverse select"
+    ID_BUTTON40250          "test\ntest2"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_BUTTON_WIREFRAME     "Add current selection to new VP with Wireframe display method\nWireframe"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_BUTTON_STICK         "Add current selection to new VP with Stick display method\nStick"
+    ID_BUTTON_BALL          "Add current selection to new VP with SpaceFill display method\nSpaceFill"
+    ID_BUTTON_BALL_STICK    "Add current selection to new VP with Stick display method\nBallnStick"
+    ID_BUTTON_RIBBON        "Add current selection to new VP with Ribbon display method\nRibbon"
+    ID_BUTTON_DOTSURFACE    "Add current selection to new VP with Surface display method\nSurface"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_UPDATE_CURRENT_SELECTION "UpdateSelection"
+    ID_CENTER_MOLECULE      "Move Current VP or Molecule to global origin(0,0,0)\nCenter Molecule"
+    ID_PANEPROPERIES_SCENE  "Show/Hide Scene Property"
+    IDR_RENDERPROPERTIES    "Render Properties\nRender Properties"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_TOOLBAR_SUBTRACT     "Subtract\n- "
+    ID_TOOLBAR_RESULT       "Result\n= "
+    ID_DISPLAY_BIOUNIT      "Visualize Bio-unit\nBioUnit"
+    ID_ATTATCH_BIOUNIT      "Set transform of each Bio-unit\nAttatch BioUnit"
+    ID_FLAG_MOLECULE_SELECTION_CENTER 
+                            "Option for Rotation Origin\nCenter Flag"
+    ID_ACTIVE_PDB           "Active PDB\nActive PDB"
+    ID_BUTTON_DESELECT_ALL  "Deselect\nDeselect"
+    ID_TOOLBAR_DESELECT_ALL "Deselect\nDeselect"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_ANNOTATION_DELETE_ALL "Delete\nDelete"
+    ID_ANNOTATION_MOTIF_SCAN "Motif Scan\nMotif Scan"
+    IDR_TOOLBAR_RESIDUE_PANE "Display\nDisplay"
+    ID_DISPLAY_SELECTED     "Display Option\nDisplay"
+    ID_SELECT_ALL           "Select All\nSelect All"
+    ID_ADD_SELECTION        "Add Selection\nAdd Selection"
+    IDD_SYNC_PDB            "SYNC\nSync"
+    ID_TOOLBAR_SHOWALL      "Show All\nShowAll"
+    ID_TOOLBAR_HIDEALL      "HideAll"
+    ID_TOOLBAR_DELETE       "Delete"
+    ID_TOOLBAR_DESELECT     "Deselect\nDeselect"
+    ID_TOOLBAR_DUPLICATE    "Duplicate"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_OPENWORKSPACE   "Open Workspace\nOpen Workspace"
+    ID_FILE_SAVEWORKSPACE   "Save Workspace\nSave Workspace"
+    ID_TOOLBAR_UNION        "Union\n+ "
+    ID_TOOLBAR_INTERSECT    "Intersect\n* "
+END
+
+STRINGTABLE 
+BEGIN
+    IDM_DISPLAY_SIDECHAIN   "Display Side Chain\nDisplay Side Chain"
+    IDM_DISPLAY_HETATM      "Hetero Atom\nHetero Atom"
+END
+
+STRINGTABLE 
+BEGIN
+    IDM_ADD_PDB             "Add PDB\nAdd PDB"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_BUTTON_RECALC        "Solvent accessibility model\nSolvent accessibility model"
+END
+
+STRINGTABLE 
+BEGIN
+    IDM_CLOSE_PDB           "Close PDB\nClose PDB"
+    IDM_DISPLAY_ONLY_CA     "Display Only Ca\nDisplay Only Ca"
+END
+
+STRINGTABLE 
+BEGIN
+    IDM_BUTTON_ANNOTATION   "Annotation"
+    IDR_ANNOTATION_INFO     "Annotation\nAnnotation"
+    IDR_ATOM_INFO           "Atom Distance\nAtom Distance"
+    IDR_ATOM_FIND           "Atom Find\nAtom Find"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_BUTTON_CLEAR_ALL     "Clear All\nClear All"
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_RMSDOUTPUT          "RMSD\nRMSD"
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_LRA_RESULT          "LRA Result\nLRA Result"
+    IDR_ALIGNMENT_RESULT_PANE "Alignment\nAlignment"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_TASKPANEL_3DEH       "Similarity Search & Comparison\nSimilarity Search & Comparison"
+    ID_OUTPUTPANE_3DEH      "Similarity Output\nSimilarity Output"
+    ID_OUTPUTPANE_GH        "Binding Site Output\nBinding Site Output"
+    ID_TASKPANEL_GH         "Binding Site\nBinding Site"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_OUTPUTPANE_PLDOCK    "P-L Docking Output\nP-L Docking Output"
+    ID_TASKPANEL_PLDOCK     "P-L Docking\nP-L Docking"
+    IDR_PANE_PDB_TREE       "PDB Tree\nPDB Tree"
+    IDR_PANE_SELECTION_LIST "VP List\nVP List"
+    IDR_PANE_SELECTION_PROP "Properties\nProperties"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_ANNOTATION_DELETE    "Delete\nDelete"
+END
+
+STRINGTABLE 
+BEGIN
+    IDD_SAVE_SELECTION      "Save Selection to File\nSaveSelection"
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_PANE_HEADER         "Header\nHeader"
+    IDR_PANE_RESIDUE        "Residues\nResidues"
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_PANE_SCRIPT_OUTPUT  "Output\nOutput"
+    IDR_PANE_SCRIPT_INPUT   "Script\nScript"
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_PANE_TUTORIAL       "Tutorial\nTutorial"
+    IDR_PANE_HELP           "Script Help\nScript Help"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_TOOLS_BOOKMARK       "Toggle Bookmark\nToggle Bookmark"
+    ID_TOOLS_NEXT_BOOKMARK  "Next Bookmark\nNext Bookmark"
+    ID_TOOLS_PREV_BOOKMARK  "Previous Bookmark\nPrevious Bookmark"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_SCRIPT_HELP_PANE     "Script Help Pane/nScript Help Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_PLUGIN_MAKE_CS       "Create New C# Plugin\nCreate New C# Plugin"
+    ID_PLUGIN_MAKE_CPP      "Create New C++/CLI Plugin\nCreate New C++/CLI Plugin"
+    ID_PLUGIN_MAKE_VB       "Create New VB Plugin\nCreate New VB Plugin"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_PLUGIN_MAKE_VS       "Create New Plugin with Visual Studio\nCreate New Plugin with Visual Studio"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\ProteinVista.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,93 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NuGenCbase", "NuGenCbase.vcproj", "{7C2A31D0-DB33-4160-8236-A5FD9F0900EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProtein", "..\TestProtein\TestProtein.csproj", "{2C242088-778C-4CCD-8D0F-1EEA43113ACD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NuGenCbaseUI", "..\NuGenCbaseUI\NuGenCbaseUI.csproj", "{BC009346-C253-4A08-AD68-A912F7514E3A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NuGenCbaseInterface", "..\NuGenCbaseInterface\NuGenCBaseInterface.vcproj", "{1F4F4D3C-540C-498E-9A54-2D52A0565EB0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|Win32 = Debug|Win32
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C2A31D0-DB33-4160-8236-A5FD9F0900EE}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{7C2A31D0-DB33-4160-8236-A5FD9F0900EE}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{7C2A31D0-DB33-4160-8236-A5FD9F0900EE}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{7C2A31D0-DB33-4160-8236-A5FD9F0900EE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7C2A31D0-DB33-4160-8236-A5FD9F0900EE}.Debug|Win32.Build.0 = Debug|Win32
+		{7C2A31D0-DB33-4160-8236-A5FD9F0900EE}.Release|Any CPU.ActiveCfg = Release|Win32
+		{7C2A31D0-DB33-4160-8236-A5FD9F0900EE}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{7C2A31D0-DB33-4160-8236-A5FD9F0900EE}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{7C2A31D0-DB33-4160-8236-A5FD9F0900EE}.Release|Win32.ActiveCfg = Release|Win32
+		{7C2A31D0-DB33-4160-8236-A5FD9F0900EE}.Release|Win32.Build.0 = Release|Win32
+		{2C242088-778C-4CCD-8D0F-1EEA43113ACD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C242088-778C-4CCD-8D0F-1EEA43113ACD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C242088-778C-4CCD-8D0F-1EEA43113ACD}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{2C242088-778C-4CCD-8D0F-1EEA43113ACD}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{2C242088-778C-4CCD-8D0F-1EEA43113ACD}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{2C242088-778C-4CCD-8D0F-1EEA43113ACD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C242088-778C-4CCD-8D0F-1EEA43113ACD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C242088-778C-4CCD-8D0F-1EEA43113ACD}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{2C242088-778C-4CCD-8D0F-1EEA43113ACD}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{2C242088-778C-4CCD-8D0F-1EEA43113ACD}.Release|Win32.ActiveCfg = Release|Any CPU
+		{BC009346-C253-4A08-AD68-A912F7514E3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC009346-C253-4A08-AD68-A912F7514E3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC009346-C253-4A08-AD68-A912F7514E3A}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{BC009346-C253-4A08-AD68-A912F7514E3A}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{BC009346-C253-4A08-AD68-A912F7514E3A}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{BC009346-C253-4A08-AD68-A912F7514E3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC009346-C253-4A08-AD68-A912F7514E3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC009346-C253-4A08-AD68-A912F7514E3A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{BC009346-C253-4A08-AD68-A912F7514E3A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{BC009346-C253-4A08-AD68-A912F7514E3A}.Release|Win32.ActiveCfg = Release|Any CPU
+		{1F4F4D3C-540C-498E-9A54-2D52A0565EB0}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{1F4F4D3C-540C-498E-9A54-2D52A0565EB0}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{1F4F4D3C-540C-498E-9A54-2D52A0565EB0}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{1F4F4D3C-540C-498E-9A54-2D52A0565EB0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1F4F4D3C-540C-498E-9A54-2D52A0565EB0}.Debug|Win32.Build.0 = Debug|Win32
+		{1F4F4D3C-540C-498E-9A54-2D52A0565EB0}.Release|Any CPU.ActiveCfg = Release|Win32
+		{1F4F4D3C-540C-498E-9A54-2D52A0565EB0}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{1F4F4D3C-540C-498E-9A54-2D52A0565EB0}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{1F4F4D3C-540C-498E-9A54-2D52A0565EB0}.Release|Win32.ActiveCfg = Release|Win32
+		{1F4F4D3C-540C-498E-9A54-2D52A0565EB0}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs10.codeplex.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = CompileScript\\CompileScript.csproj
+		SccProjectName1 = CompileScript
+		SccLocalPath1 = CompileScript
+		SccProjectUniqueName2 = ProteinVista.vcproj
+		SccLocalPath2 = .
+		SccProjectUniqueName3 = ProteinVistaInterface\\ProteinVistaInterface.vcproj
+		SccProjectName3 = ProteinVistaInterface
+		SccLocalPath3 = ProteinVistaInterface
+		SccProjectUniqueName4 = ProteinVistaPlugInCSharp\\ProteinInsightPlugInCSharp.csproj
+		SccProjectName4 = ProteinVistaPlugInCSharp
+		SccLocalPath4 = ProteinVistaPlugInCSharp
+		SccProjectUniqueName5 = PlugInLibrary\\EachColor\\EachColor.csproj
+		SccProjectTopLevelParentUniqueName5 = ProteinInsight.sln
+		SccProjectName5 = PlugInLibrary/EachColor
+		SccLocalPath5 = PlugInLibrary\\EachColor
+		SccProjectUniqueName6 = PlugInLibrary\\FindContactSurface\\FindContactSurface.csproj
+		SccProjectTopLevelParentUniqueName6 = ProteinInsight.sln
+		SccProjectName6 = PlugInLibrary/FindContactSurface
+		SccLocalPath6 = PlugInLibrary\\FindContactSurface
+	EndGlobalSection
+	GlobalSection(DPCodeReviewSolutionGUID) = preSolution
+		DPCodeReviewSolutionGUID = {00000000-0000-0000-0000-000000000000}
+	EndGlobalSection
+EndGlobal

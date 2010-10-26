@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BC009346-C253-4A08-AD68-A912F7514E3A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NuGenCbaseUI</RootNamespace>
+    <AssemblyName>NuGenCbaseUI</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>ProteinInsight_126.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PDBSaveDlg\Enums.cs" />
+    <Compile Include="PDBSaveDlg\FileDialogControlBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PDBSaveDlg\FileDialogControlBase.designer.cs">
+      <DependentUpon>FileDialogControlBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PDBSaveDlg\HelperTypes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PDBSaveDlg\PDBOpenDialogControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PDBSaveDlg\PDBOpenDialogControl.Designer.cs">
+      <DependentUpon>PDBOpenDialogControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PDBSaveDlg\structs.cs" />
+    <Compile Include="PDBSaveDlg\Win32.cs" />
+    <Compile Include="PIRender.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PIRender.Designer.cs">
+      <DependentUpon>PIRender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="PDBSaveDlg\FileDialogControlBase.resx">
+      <DependentUpon>FileDialogControlBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PDBSaveDlg\PDBOpenDialogControl.resx">
+      <DependentUpon>PDBOpenDialogControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PIRender.resx">
+      <DependentUpon>PIRender.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ProteinInsight_126.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NuGenCbaseInterface\NuGenCBaseInterface.vcproj">
+      <Project>{1F4F4D3C-540C-498E-9A54-2D52A0565EB0}</Project>
+      <Name>NuGenCbaseInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NuGenCBase\NuGenCbase.vcproj">
+      <Project>{7C2A31D0-DB33-4160-8236-A5FD9F0900EE}</Project>
+      <Name>NuGenCbase</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
