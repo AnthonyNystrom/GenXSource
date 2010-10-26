@@ -1,0 +1,154 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C7B70FD9-1B0D-4927-A31E-442F9790A2F3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Genetibase.ApplicationBlocks</RootNamespace>
+    <AssemblyName>Genetibase.ApplicationBlocks</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Genetibase.ApplicationBlocks.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Genetibase.ApplicationBlocks.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ComponentModel\NuGenSRCategoryAttribute.cs" />
+    <Compile Include="ComponentModel\NuGenSRDescriptionAttribute.cs" />
+    <Compile Include="DialogInternals\INuGenDialogBlockLayoutManager.cs" />
+    <Compile Include="Enums\NuGenImageType.cs" />
+    <Compile Include="Enums\NuGenPresenterMode.cs" />
+    <Compile Include="ImageExportInternals\INuGenThumbnailLayoutManager.cs" />
+    <Compile Include="ImageExportInternals\INuGenThumbnailRenderer.cs" />
+    <Compile Include="NuGenThumbnail.cs" />
+    <Compile Include="NuGenDialogBlock.cs">
+    </Compile>
+    <Compile Include="NuGenImageExportBlock.cs">
+    </Compile>
+    <Compile Include="NuGenPresenter.cs">
+    </Compile>
+    <Compile Include="NuGenSketchCanvas.cs" />
+    <Compile Include="NuGenSketchCanvas.Painter.FreeHandState.cs" />
+    <Compile Include="NuGenSketchCanvas.MessageFilter.cs" />
+    <Compile Include="NuGenSketchCanvas.Painter.cs" />
+    <Compile Include="NuGenSketchCanvas.Painter.PainterState.cs" />
+    <Compile Include="NuGenThumbnail.RotateButton.cs" />
+    <Compile Include="ImageExportInternals\ImageRotationStyle.cs" />
+    <Compile Include="NuGenThumbnailContainer.cs">
+    </Compile>
+    <Compile Include="NuGenThumbnailContainer.GridPanel.cs" />
+    <Compile Include="NuGenThumbnailContainer.ImageCollection.cs" />
+    <Compile Include="PresenterInternals\NuGenPresenterForm.cs">
+    </Compile>
+    <Compile Include="PresenterInternals\NuGenPresenterForm.Transform.cs" />
+    <Compile Include="PresenterInternals\NuGenSpotGrab.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ImageExportInternals\ImageExportService.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Genetibase.Shared.Controls\Genetibase.Shared.Controls.csproj">
+      <Project>{7AFBEE90-61C7-46A9-95B8-67373C1C6F4D}</Project>
+      <Name>Genetibase.Shared.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Genetibase.Shared\Genetibase.Shared.csproj">
+      <Project>{A7A02558-58A0-4333-BFAF-77CB49DE17F0}</Project>
+      <Name>Genetibase.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Genetibase.Win32\Genetibase.Win32.csproj">
+      <Project>{8E94E64C-52F7-4865-ACF1-3FEC8F61B531}</Project>
+      <Name>Genetibase.Win32</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Enums\NuGenThumbnailMode.cs" />
+    <Compile Include="ImageExportInternals\ImageExportDialog.ControlAction.cs" />
+    <Compile Include="ImageExportInternals\ImageExportDialog.ControlButton.cs" />
+    <Compile Include="ImageExportInternals\ImageExportDialog.ControlPanel.cs" />
+    <Compile Include="ImageExportInternals\ImageExportDialog.cs">
+    </Compile>
+    <Compile Include="ImageExportInternals\ImageExportDialog.FormatCombo.cs" />
+    <Compile Include="ImageExportInternals\ImageExportDialog.LayoutPanel.cs" />
+    <Compile Include="ImageExportInternals\ImageExportDialog.OpacitySpin.cs" />
+    <Compile Include="ImageExportInternals\ImageExportDialog.PathSelector.cs" />
+    <Compile Include="ImageExportInternals\ImageExportDialog.SizeSpin.cs" />
+    <Compile Include="ImageExportInternals\ImageExportDialog.Step.cs" />
+    <Compile Include="ImageExportInternals\ImageExportDialog.Title.cs" />
+    <Compile Include="ImageExportInternals\ImageExportDialog.TypeCombo.cs" />
+    <Compile Include="ImageExportInternals\ImageRotator.cs" />
+    <Compile Include="ImageExportInternals\NuGenRatioSizeTracker.cs" />
+    <Compile Include="ImageExportInternals\ThumbnailSelectionService.cs" />
+    <Compile Include="ImageExportInternals\SlideViewer.cs" />
+    <Compile Include="NuGenCountDownBlock.cs" />
+    <Compile Include="NuGenCountDownSpan.cs" />
+    <Compile Include="NuGenFontBlock.cs" />
+    <Compile Include="NuGenSlide.cs" />
+    <Compile Include="NuGenThumbnail.CCWRotateButton.cs" />
+    <Compile Include="NuGenThumbnail.CWRotateButton.cs" />
+    <Compile Include="NuGenThumbnailContainer.AddImageEventArgs.cs" />
+    <Compile Include="NuGenThumbnailContainer.ImageEventArgs.cs" />
+    <Compile Include="NuGenThumbnailContainer.ImageTracker.cs" />
+    <Compile Include="NuGenThumbnailContainer.InsertImageEventArgs.cs" />
+    <Compile Include="NuGenThumbnailContainer.LoupePanel.cs" />
+    <Compile Include="NuGenThumbnailContainer.ModeEventArgs.cs" />
+    <Compile Include="NuGenThumbnailContainer.RemoveImageEventArgs.cs" />
+    <Compile Include="NuGenThumbnailContainer.SlideManager.cs" />
+    <Compile Include="NuGenThumbnailContainer.ThumbnailManager.cs" />
+    <Compile Include="NuGenThumbnailContainer.ToolBar.cs" />
+    <Compile Include="NuGenThumbnailContainer.ToolBarButton.cs" />
+    <Compile Include="NuGenThumbnailContainer.ToolBarSeparatorButton.cs" />
+    <Compile Include="NuGenThumbnailContainer.VisibilityEventArgs.cs" />
+    <Compile Include="PresenterInternals\INuGenTempImageService.cs" />
+    <Compile Include="PresenterInternals\NuGenTempImageService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\NuGenIcon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

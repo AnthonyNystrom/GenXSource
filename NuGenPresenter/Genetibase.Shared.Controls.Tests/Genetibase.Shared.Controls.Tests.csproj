@@ -1,0 +1,107 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{83BDE2DE-54F1-4104-9010-EADBBADE198D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Genetibase.Shared.Controls.Tests</RootNamespace>
+    <AssemblyName>Genetibase.Shared.Controls.Tests</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NUnit.Framework, Version=2.2.7.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\NUnit\NUnit.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ImageListTests.cs" />
+    <Compile Include="NuGenAlignSelector\NuGenAlignSelectorTests.cs" />
+    <Compile Include="NuGenAlignSelector\NuGenAlignSelectorTests.Mockery.cs" />
+    <Compile Include="NuGenAZTreeNodeComparerTests.cs" />
+    <Compile Include="CalculatorEngine\NuGenCalculatorEngineTests.cs" />
+    <Compile Include="CalculatorEngine\NuGenCalculatorEngineTests.Mockery.cs" />
+    <Compile Include="NuGenControlReflector\NuGenControlReflectorTests.cs" />
+    <Compile Include="NuGenDrawItemStateTranslatorTests.cs" />
+    <Compile Include="NuGenInt32Combo\NuGenInt32ComboTests.cs" />
+    <Compile Include="NuGenInt32Combo\NuGenInt32ComboTests.Mockery.cs" />
+    <Compile Include="NuGenMeasureUnitsValueConverter\NuGenMeasureUnitsValueConverterTests.cs" />
+    <Compile Include="NuGenMeasureUnitsValueConverter\NuGenMeasureUnitsValueConverterTests.Mockery.cs" />
+    <Compile Include="NuGenOptionSpin\NuGenOptionSpinTests.cs" />
+    <Compile Include="NuGenOptionSpin\NuGenOptionSpinTests.Mockery.cs" />
+    <Compile Include="NuGenPinpointWindow\NuGenPinpointWindowTests.cs" />
+    <Compile Include="NuGenPinpointWindow\NuGenPinpointWindowTests.Mockery.cs" />
+    <Compile Include="NuGenProgressBar\NuGenProgressBarTests.cs" />
+    <Compile Include="NuGenProgressBar\NuGenProgressBarTests.Mockery.cs" />
+    <Compile Include="NuGenSpin\NuGenSpinTests.cs" />
+    <Compile Include="NuGenSpin\NuGenSpinTests.Mockery.cs" />
+    <Compile Include="NuGenInt32ValueConverter\NuGenInt32ValueConverterTests.cs" />
+    <Compile Include="NuGenInt32ValueConverter\NuGenInt32ValueConverterTests.Mockery.cs" />
+    <Compile Include="NuGenTabItemStateTranslatorTests.cs" />
+    <Compile Include="NuGenToolTipInfoConverterTests.cs" />
+    <Compile Include="NuGenToolTipInfoTests.cs" />
+    <Compile Include="NuGenToolTipLayoutDescriptorTests.cs" />
+    <Compile Include="NuGenTrackBar\NuGenTrackBarTests.cs" />
+    <Compile Include="NuGenTrackBar\NuGenTrackBarTests.Mockery.cs" />
+    <Compile Include="NuGenTrackBar\NuGenTrackBarTests.ServiceProvider.cs" />
+    <Compile Include="NuGenTreeNodeSorterTests.cs" />
+    <Compile Include="NuGenTreeNode\NuGenTreeNodeTests.cs" />
+    <Compile Include="NuGenTreeNode\NuGenTreeNodeTests.NodeCollection.cs" />
+    <Compile Include="NuGenTreeNode\NuGenTreeNodeTests.Properties.cs" />
+    <Compile Include="NuGenTreePopulateService.cs" />
+    <Compile Include="NuGenTreeViewDragDropServiceTests.cs" />
+    <Compile Include="NuGenTreeViewSelectionServiceTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DotNetMock\DotNetMock.csproj">
+      <Project>{3ED74877-D5EE-49E6-94CA-02BD39ADDCD0}</Project>
+      <Name>DotNetMock</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Genetibase.Shared.Controls\Genetibase.Shared.Controls.csproj">
+      <Project>{7AFBEE90-61C7-46A9-95B8-67373C1C6F4D}</Project>
+      <Name>Genetibase.Shared.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Genetibase.Shared.Controls.Design\Genetibase.Shared.Controls.Design.csproj">
+      <Project>{C4E55216-11FF-4CEF-AF80-7E4EE90BC518}</Project>
+      <Name>Genetibase.Shared.Controls.Design</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Genetibase.Shared\Genetibase.Shared.csproj">
+      <Project>{A7A02558-58A0-4333-BFAF-77CB49DE17F0}</Project>
+      <Name>Genetibase.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

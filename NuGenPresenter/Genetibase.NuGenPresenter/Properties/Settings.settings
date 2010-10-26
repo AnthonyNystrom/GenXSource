@@ -1,0 +1,111 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Genetibase.NuGenPresenter.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="PenWidth" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="PenColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Red</Value>
+    </Setting>
+    <Setting Name="LockTransformHotKeys" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">L</Value>
+    </Setting>
+    <Setting Name="SaveHotKeys" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">S</Value>
+    </Setting>
+    <Setting Name="ShowPointerHotKeys" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">R</Value>
+    </Setting>
+    <Setting Name="ZoomInHotKeys" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">Up</Value>
+    </Setting>
+    <Setting Name="ZoomOutHotKeys" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">Down</Value>
+    </Setting>
+    <Setting Name="ClearHotKeys" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">C</Value>
+    </Setting>
+    <Setting Name="EscapeHotKeys" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">Escape</Value>
+    </Setting>
+    <Setting Name="ExportPathCollection" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Interval" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="ThumbnailMode" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="ThumbnailSize" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">150</Value>
+    </Setting>
+    <Setting Name="ConstrainWidth" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ConstrainHeight" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="MaximumWidth" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">640</Value>
+    </Setting>
+    <Setting Name="MaximumHeight" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">640</Value>
+    </Setting>
+    <Setting Name="SlideShow" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="SlideBackgroundColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Black</Value>
+    </Setting>
+    <Setting Name="SlideAlignment" Type="System.Drawing.ContentAlignment" Scope="User">
+      <Value Profile="(Default)">MiddleCenter</Value>
+    </Setting>
+    <Setting Name="SlidePathCollection" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SelectedSlidePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="StretchSlide" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="RandomSlideAlignment" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="SlideLatency" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="SlideFitScreen" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="DrawHotKeys" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">Ctrl+Shift+D</Value>
+    </Setting>
+    <Setting Name="ZoomHotKeys" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">Ctrl+Shift+Z</Value>
+    </Setting>
+    <Setting Name="NumberWatermark" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="WatermarkFont" Type="System.Drawing.Font" Scope="User">
+      <Value Profile="(Default)">Microsoft Sans Serif, 8.25pt</Value>
+    </Setting>
+    <Setting Name="WatermarkColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Gray</Value>
+    </Setting>
+    <Setting Name="WatermarkColorOpacity" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">70</Value>
+    </Setting>
+    <Setting Name="WatermarkAlignment" Type="System.Drawing.ContentAlignment" Scope="User">
+      <Value Profile="(Default)">TopLeft</Value>
+    </Setting>
+    <Setting Name="ExportDialogLocation" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">0, 0</Value>
+    </Setting>
+    <Setting Name="ExportDialogSize" Type="System.Drawing.Size" Scope="User">
+      <Value Profile="(Default)">640, 480</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
