@@ -1,0 +1,21 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="NuGenUnify.FilePathControl"
+	x:Name="UserControl" MaxHeight="25">
+
+    <Grid x:Name="LayoutRoot">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="28" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25" />
+        </Grid.RowDefinitions>
+        <TextBox Grid.Column="0" Width="Auto" Style="{DynamicResource {x:Type TextBox}}" Text="" TextWrapping="NoWrap" Name="txtFileName" Validation.ErrorTemplate="{DynamicResource DefaultErrorTemplate}"/>
+        <Button Grid.Column="1"  Width="27" Height="25" Content="..." Style="{DynamicResource NuGenButton}" Name="btnBrowse" Click="btnBrowse_Click"/>
+    </Grid>
+</UserControl>

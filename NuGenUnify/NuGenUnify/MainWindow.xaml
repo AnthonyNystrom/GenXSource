@@ -1,0 +1,117 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:Anno="http://schemas.microsoft.com/expression/blend/extensions/annotations/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="Anno d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:local="clr-namespace:NuGenUnify"
+	x:Class="NuGenUnify.MainWindow"
+	x:Name="Window"
+	Title="NuGenUnify"
+	Width="800" Height="600" WindowStyle="None" AllowsTransparency="True" Background="Transparent" WindowStartupLocation="CenterScreen">
+    <Border BorderThickness="1" BorderBrush="Transparent" CornerRadius="10" Padding="2">
+        <Border.Background>
+            <LinearGradientBrush StartPoint="0.498,0.038" EndPoint="0.5,1.028">
+                <GradientStop Offset="0.066" Color="#D9E2EA"/>
+                <GradientStop Offset="0.453" Color="#F9FBFF"/>
+                <GradientStop Offset="0.847" Color="#D9E2EA"/>
+            </LinearGradientBrush>
+        </Border.Background>
+        <Grid d:LayoutOverrides="Height" x:Name="TopBorder">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30" />
+                <ColumnDefinition Width="*" MinWidth="300"/>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="120" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25" MinHeight="25" />
+                <RowDefinition Height="*" MinHeight="23" />
+                <RowDefinition Height="37" />
+                <RowDefinition Height="23" />
+            </Grid.RowDefinitions>
+            <Border Height="Auto" Grid.ColumnSpan="4" CornerRadius="10,10,0,0" Name="brdTop" MouseLeftButtonDown="TopBorder_MouseLeftButtonDown">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0.023,0.569" EndPoint="0.982,0.481">
+                        <GradientStop Offset="0.066" Color="#3E5BAB" />
+                        <GradientStop Offset="0.453" Color="#3B88BC" />
+                        <GradientStop Offset="0.847" Color="#3E5BAB" />
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+            <Image Source="Resources\Images\nugenunify.png" Grid.Column="0" Margin="5,0,0,0" Width="16" Height="16" />
+            <Label Grid.Column="1" Content="NuGenUnify" Foreground="White" FontWeight="Bold" FontSize="14.667" FontFamily="Fonts/#Trebuchet MS" Margin="0"  VerticalContentAlignment="Center"/>
+            <StackPanel Name="stackPanel1" Grid.Column="3" Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,6,0">
+                <Button x:Name="btnMinimize" Content="" HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="btnMinimize_Click" IsTabStop="False" Style="{DynamicResource NuGenMinimizeButton}" />
+                <Button x:Name="btnMaximize" Content="" HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="btnMaximize_Click" IsTabStop="False" Style="{DynamicResource NuGenTopButton}" IsEnabled="False" />
+                <Button x:Name="btnClose" Content="" HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="btnClose_Click" IsTabStop="False" Style="{DynamicResource NuGenRedTopButton}"/>
+            </StackPanel>
+
+
+            <Border CornerRadius="10,10,10,10" Opacity="50" Grid.Row="1" Grid.ColumnSpan="2" Margin="7" >
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0.065,0.426" EndPoint="0.937,0.425">
+                        <GradientStop Offset="0.066" Color="#9BBFD5" />
+                        <GradientStop Offset="0.453" Color="#C7DAE8" />
+                        <GradientStop Offset="0.847" Color="#9BBFD5" />
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <StackPanel Name="stackPanel2" HorizontalAlignment="Stretch" Margin="7" VerticalAlignment="Stretch">
+                    <Label Content="Primary Assembly" Foreground="White" FontSize="12" FontFamily="Fonts/#Trebuchet MS" />
+                    <local:FilePathControl x:Name="fileMainAssembly" />
+                    <Label Content="Other Assemblies" Foreground="White" FontSize="12" FontFamily="Fonts/#Trebuchet MS" />
+                    <local:AssemblyListControl VerticalAlignment="Stretch" Height="407" Margin="0,0,0,0" x:Name="lstAssemblies" />
+                    <Image Height="150" Name="image1" Stretch="Fill" Width="200" />
+                </StackPanel>
+                <Border.Effect>
+                    <DropShadowEffect Color="Gray"
+                      Opacity=".50"
+                      ShadowDepth="5" />
+                </Border.Effect>
+            </Border>
+
+            <Border CornerRadius="10,10,10,10" Opacity="50" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Margin="7" >
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0.065,0.426" EndPoint="0.937,0.425">
+                        <GradientStop Offset="0.066" Color="#9BBFD5" />
+                        <GradientStop Offset="0.453" Color="#C7DAE8" />
+                        <GradientStop Offset="0.847" Color="#9BBFD5" />
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Border.Effect>
+                    <DropShadowEffect Color="Gray"
+                      Opacity=".50"
+                      ShadowDepth="5" />
+                </Border.Effect>
+                <StackPanel Name="stackPanel3" Margin="7">
+                    <Label Content="Attribute File" Foreground="White" FontSize="12" FontFamily="Fonts/#Trebuchet MS" />
+                    <local:FilePathControl x:Name="fnaAttribute" />
+                    <Label Content="Exclude File" Foreground="White" FontSize="12" FontFamily="Fonts/#Trebuchet MS" />
+                    <local:FilePathControl x:Name="fnaExclude" />
+                    <Label Content="Key File" Foreground="White" FontSize="12" FontFamily="Fonts/#Trebuchet MS" />
+                    <local:FilePathControl x:Name="fnaKey" />
+                    <Label Content="Log File" Foreground="White" FontSize="12" FontFamily="Fonts/#Trebuchet MS" />
+                    <local:FilePathControl x:Name="fnaLog" SaveMode="True"/>
+                    <Label Content="Output File" Foreground="White" FontSize="12" FontFamily="Fonts/#Trebuchet MS" />
+                    <local:FilePathControl x:Name="fnaOutput" Filter="" SaveMode="True" />
+                </StackPanel>
+            </Border>
+
+            <Button x:Name="btnSettings" Grid.Column="2" Grid.Row="2" Content="Settings" Style="{DynamicResource NuGenButton}" Click="btnSettings_Click" HorizontalAlignment="Right" />
+            <Button x:Name="btnMerge" Grid.Column="3"  Grid.Row="2" Style="{DynamicResource NuGenButton}"  Content="Merge" HorizontalAlignment="Right" Margin="0,0,7,0" Click="btnMerge_Click" />
+
+
+            <Border Height="Auto" Grid.ColumnSpan="4" CornerRadius="0,0,10,10" Grid.Row="3"  Grid.Column="0" >
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0.023,0.569" EndPoint="0.982,0.481">
+                        <GradientStop Offset="0.066" Color="#3E5BAB" />
+                        <GradientStop Offset="0.453" Color="#3B88BC" />
+                        <GradientStop Offset="0.847" Color="#3E5BAB" />
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+            <Label Grid.Column="0" Grid.ColumnSpan="2"  Grid.Row="3" Content="NuGenUnify UI For ILMerge ©Microsoft Corp." Foreground="White"  Height="Auto" FontSize="12" FontFamily="Fonts/#Trebuchet MS" VerticalContentAlignment="Top"/>
+
+        </Grid>
+    </Border>
+</Window>

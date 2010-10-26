@@ -1,0 +1,159 @@
+﻿<Window x:Class="NuGenUnify.SettingsWindow"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:sys="clr-namespace:System;assembly=mscorlib"
+	xmlns:local="clr-namespace:NuGenUnify"
+    xmlns:p="clr-namespace:NuGenUnify.Properties"
+	xmlns:Anno="http://schemas.microsoft.com/expression/blend/extensions/annotations/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="Anno d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	x:Name="Window"
+	Title="Settings"
+	Width="425" Height="500" WindowStyle="None" AllowsTransparency="True" Background="Transparent" ShowInTaskbar="False" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Focusable="False" IsHitTestVisible="True" Topmost="False" IsTabStop="False" ShowActivated="False" Loaded="Window_Loaded">
+    <Window.Resources>
+        <p:Settings x:Key="settings" />
+        <ObjectDataProvider MethodName="GetValues" ObjectType="{x:Type sys:Enum}" x:Key="TargetKindValues">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="local:TargetKind" />
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+    </Window.Resources>
+    <Border BorderThickness="1" BorderBrush="Black" CornerRadius="10" Padding="2">
+        <Border.Background>
+            <LinearGradientBrush StartPoint="0.498,0.038" EndPoint="0.5,1.028">
+                <GradientStop Offset="0.066" Color="#D9E2EA"/>
+                <GradientStop Offset="0.453" Color="#F9FBFF"/>
+                <GradientStop Offset="0.847" Color="#D9E2EA"/>
+            </LinearGradientBrush>
+        </Border.Background>
+
+        <Grid VerticalAlignment="Top" d:LayoutOverrides="Height" x:Name="TopBorder"  DataContext="{StaticResource settings}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="28"/>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+            <Border Grid.ColumnSpan="4" CornerRadius="10,10,0,0" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0.023,0.569" EndPoint="0.982,0.481">
+                        <GradientStop Offset="0.066" Color="#3E5BAB" />
+                        <GradientStop Offset="0.453" Color="#3B88BC" />
+                        <GradientStop Offset="0.847" Color="#3E5BAB" />
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+            <Button x:Name="btnClose" Margin="0,0,5,0" Grid.Column="3" Content="" HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="btnClose_Click" IsTabStop="False" Style="{DynamicResource NuGenRedTopButton}" />
+            <Label HorizontalAlignment="Left"  Grid.Column="0" Grid.ColumnSpan="2" Content="Settings" Width="65" Foreground="White" FontWeight="Bold" FontSize="14.667" FontFamily="Fonts/#Trebuchet MS"/>
+
+            <Label Grid.Row="1" HorizontalAlignment="Left" Margin="10,10,0,0" Name="label1" VerticalAlignment="Top">Settings</Label>
+            <GroupBox Grid.Row="1" Margin="70,23,20,0"  Height="2" VerticalAlignment="Top"></GroupBox>
+
+            <Border BorderThickness="1" BorderBrush="DarkGray" Grid.Row ="2"  Margin="10,0,10,0">
+                <ScrollViewer VerticalScrollBarVisibility="Visible" Grid.Row ="2" Background="White">
+                    <Grid VerticalAlignment="Top" d:LayoutOverrides="Height"  DataContext="{StaticResource settings}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20" />
+                            <ColumnDefinition Width="250" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="23" />
+                            <RowDefinition Height="17" />
+                            <RowDefinition Height="17" />
+                            <RowDefinition Height="17" />
+                            <RowDefinition Height="17" />
+                            <RowDefinition Height="17" />
+                            <RowDefinition Height="17" />
+                            <RowDefinition Height="17" />
+                            <RowDefinition Height="17" />
+                            <RowDefinition Height="17" />
+                            
+                            <RowDefinition Height="17" />
+                            <RowDefinition Height="17" />
+
+                            <RowDefinition Height="17" />
+                            <RowDefinition Height="27" />
+
+                            <RowDefinition Height="25" />
+                            <RowDefinition Height="25" />
+                            <RowDefinition Height="17" />
+                            <RowDefinition Height="17" />
+                            <RowDefinition Height="17" />
+                            <RowDefinition Height="17" />
+                            <RowDefinition Height="25" />
+                            <RowDefinition Height="17" />
+                            
+                            <RowDefinition Height="25" />
+                            <RowDefinition Height="22" />
+                            <RowDefinition Height="25" />
+                            <RowDefinition Height="17" />
+                            <RowDefinition Height="17" />
+                            <RowDefinition Height="17" />
+                            <RowDefinition Height="17" />
+                        </Grid.RowDefinitions>
+                        <Grid.Resources>
+                            <local:EnumBooleanConverter x:Key="enumBooleanConverter" />
+                            <local:TargetPlatformConverter x:Key="targetPlatformConverter" />
+                        </Grid.Resources>
+                        <Image Source="Resources\Images\gears.png" RenderOptions.BitmapScalingMode="NearestNeighbor" Grid.Column="0" Width="16" Height="16"/>
+                        <Label Grid.Column="1" Grid.Row="0">General</Label>
+
+                        <CheckBox Grid.Row="1" Grid.Column="1" Name="chkClosed" IsChecked="{Binding Path=Default.Closed,Mode=TwoWay}" ToolTip="If true, then the 'transitive closure' of the input assemblies is computed and added to the list of input assemblies.">Closed</CheckBox>
+                        <CheckBox Grid.Row="2" Grid.Column="1" Name="chkCopyAttributes" IsChecked="{Binding Path=Default.CopyAttributes,Mode=TwoWay}" ToolTip="If true, then the assembly level attributes of each input assembly are copied over into the target assembly.">Copy Attributes</CheckBox>
+                        <CheckBox Grid.Row="3" Grid.Column="1" Name="chkDebugInfo" IsChecked="{Binding Path=Default.DebugInfo,Mode=TwoWay}" ToolTip="If true, then any .pdb files that are found for the input assemblies are preserved into a .pdb file for the target assembly.">Debug Info</CheckBox>
+                        <CheckBox Grid.Row="4" Grid.Column="1" Name="chkDelaySign" IsChecked="{Binding Path=Default.DelaySign,Mode=TwoWay}" ToolTip="When this is set before calling Merge, then the target assembly will be delay signed. This can be set only in conjunction with the /keyfile option.">Delay Sign</CheckBox>
+                        <CheckBox Grid.Row="5" Grid.Column="1" Name="chkInternalize" IsChecked="{Binding Path=Default.Internalize,Mode=TwoWay}" ToolTip="This controls whether types in assemblies other than the primary assembly have their visibility modified.">Internalize</CheckBox>
+                        <CheckBox Grid.Row="6" Grid.Column="1" Name="chkShouldLog" IsChecked="{Binding Path=Default.ShouldLog,Mode=TwoWay}" ToolTip="When this is set before calling Merge, then log messages are written. It is used in conjunction with the LogFile property">Should Log</CheckBox>
+                        <CheckBox Grid.Row="7" Grid.Column="1" Name="chkXmlDocumentation" IsChecked="{Binding Path=Default.XmlDocumentation,Mode=TwoWay}" ToolTip="This property controls whether XML documentation files are merged to produce an XML documentation file for the target assembly.">Xml Documentation</CheckBox>
+                        <CheckBox Grid.Row="8" Grid.Column="1" Name="chkAllowWildCards" IsChecked="{Binding Path=Default.AllowWildCards,Mode=TwoWay}" ToolTip="If true, any wild cards in file names are expanded and all matching files will be used as input.">AllowWildCards</CheckBox>
+                        <CheckBox Grid.Row="9" Grid.Column="1" Name="chkAllowZeroPEKind" IsChecked="{Binding Path=Default.AllowZeroPEKind,Mode=TwoWay}" ToolTip="If true, then if an assembly's PeKind flag (this is the value of the field listed as .corflags in the Manifest) is zero it will be treated as if it was ILonly">Allow Zero PEKind</CheckBox>
+                        <CheckBox Grid.Row="10" Grid.Column="1" Name="chkPublicKeyTokens" IsChecked="{Binding Path=Default.PublicKeyTokens,Mode=TwoWay}" ToolTip="It indicates whether external assembly references in the manifest of the target assembly will use public keys (false) or public key tokens (true).">Public Key Tokens</CheckBox>
+                        <CheckBox Grid.Row="11" Grid.Column="1" Name="chkUnionMerge" IsChecked="{Binding Path=Default.UnionMerge,Mode=TwoWay}" ToolTip="When this is true, then types with the same name are all merged into a single type in the target assembly. The single type is the union of all of the individual types in the input assemblies: it contains all of the members from each of the corresponding types in the input assemblies.">Union Merge</CheckBox>
+                        <CheckBox Grid.Row="12" Grid.Column="1" Name="chkAllowMultipleAssemblyLevelAttributes" IsChecked="{Binding Path=Default.AllowMultipleAssemblyLevelAttributes,Mode=TwoWay}">Allow Multiple Assembly Level Attributes</CheckBox>
+                        
+                        <Label Grid.Row="13" Grid.Column="1">Version</Label>
+                        <TextBox Grid.Row="14" Grid.Column="1" Name="txtVersion" Text="{Binding Path=Default.Version}" />
+
+
+                        <Image Grid.Row="15" Source="Resources\Images\gears.png" RenderOptions.BitmapScalingMode="NearestNeighbor" Grid.Column="0" Width="16" Height="16" />
+                        <Label Grid.Row="15" Grid.Column="1">Target Kind</Label>
+
+                        <RadioButton Grid.Row="16" Grid.Column="1" GroupName="TargetKind" IsChecked="{Binding Path=Default.TargetKind, Converter={StaticResource enumBooleanConverter}, ConverterParameter=Dll}">Dll</RadioButton>
+                        <RadioButton Grid.Row="17" Grid.Column="1" GroupName="TargetKind" IsChecked="{Binding Path=Default.TargetKind, Converter={StaticResource enumBooleanConverter}, ConverterParameter=Exe}">Exe</RadioButton>
+                        <RadioButton Grid.Row="18" Grid.Column="1" GroupName="TargetKind" IsChecked="{Binding Path=Default.TargetKind, Converter={StaticResource enumBooleanConverter}, ConverterParameter=WinExe}">WinExe</RadioButton>
+                        <RadioButton Grid.Row="19" Grid.Column="1" GroupName="TargetKind" IsChecked="{Binding Path=Default.TargetKind, Converter={StaticResource enumBooleanConverter}, ConverterParameter=SameAsPrimaryAssembly}">SameAsPrimaryAssembly</RadioButton>
+
+                        <Image Grid.Row="20" RenderOptions.BitmapScalingMode="NearestNeighbor" Source="Resources\Images\gears.png" Grid.Column="0" Width="16" Height="16" />
+                        <Label Grid.Row="20" Grid.Column="1">Duplicate Types</Label>
+                        <CheckBox Grid.Row="21" Grid.Column="1" Name="chkAllowDuplicateType" IsChecked="{Binding Path=Default.AllowDuplicateType,Mode=TwoWay}">Allow Duplicate Type</CheckBox>
+                        <Label Grid.Row="22" Grid.Column="1">Duplicate Type Name</Label>
+                        <TextBox Grid.Row="23" Grid.Column="1" Name="txtDuplicateTypeName" Text="{Binding Path=Default.DuplicateTypeName}" />
+
+                        <Image Grid.Row="24" RenderOptions.BitmapScalingMode="NearestNeighbor" Source="Resources\Images\gears.png" Grid.Column="0" Width="16" Height="16" />
+                        <Label Grid.Row="24" Grid.Column="1">Target Platform</Label>
+                        <RadioButton Grid.Row="25" Grid.Column="1" GroupName="Platform" IsChecked="{Binding Path=Default.TargetPlatform, Converter={StaticResource targetPlatformConverter}, ConverterParameter=v1}">v1</RadioButton>
+                        <RadioButton Grid.Row="26" Grid.Column="1" GroupName="Platform" IsChecked="{Binding Path=Default.TargetPlatform, Converter={StaticResource targetPlatformConverter}, ConverterParameter=v1_1}">v1_1</RadioButton>
+                        <RadioButton Grid.Row="27" Grid.Column="1" GroupName="Platform" IsChecked="{Binding Path=Default.TargetPlatform, Converter={StaticResource targetPlatformConverter}, ConverterParameter=v2}">v2</RadioButton>
+                        <RadioButton Grid.Row="28" Grid.Column="1" GroupName="Platform" IsChecked="{Binding Path=Default.TargetPlatform, Converter={StaticResource targetPlatformConverter}, ConverterParameter=v4}">v4</RadioButton>
+
+                    </Grid>
+                </ScrollViewer>
+            </Border>
+
+
+            <Label Grid.Row="3" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top">Reset NuGenUnify Settings</Label>
+            <GroupBox Grid.Row="3" Margin="170,23,20,0"  Height="2" VerticalAlignment="Top"></GroupBox>
+            <Button x:Name="btnReset" HorizontalAlignment="Left" VerticalAlignment="top" Content="Reset" Grid.Row="4" Margin="10,0,10,0" Style="{DynamicResource NuGenButton}" Click="btnReset_Click" />
+            
+            <Button x:Name="btnClose1" HorizontalAlignment="Right" VerticalAlignment="top" Content="Close" Grid.Row="5" Margin="0,0,10,0" Style="{DynamicResource NuGenButton}" Click="btnClose_Click"/>
+        </Grid>
+
+
+    </Border>
+</Window>
