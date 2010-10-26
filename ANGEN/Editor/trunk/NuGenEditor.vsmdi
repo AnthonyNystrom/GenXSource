@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestLists xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2006">
+  <TestList name="Lists of Tests" id="8c43106b-9dc1-4907-a29f-aa66a61bf5b6">
+    <RunConfiguration id="c3144f60-e2d0-42f7-873e-be67f5591dac" name="Local Test Run" storage="localtestrun.testrunconfig" type="Microsoft.VisualStudio.TestTools.Common.TestRunConfiguration, Microsoft.VisualStudio.QualityTools.Common,   PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestList>
+  <TestList name="Tests Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+    <TestLinks>
+      <TestLink id="925dd499-49b0-c910-0a20-3d5033e204b4" name="ImmediateVerificationWillFailTest2" storage="genetibase.nugenmock.tests\bin\debug\genetibase.nugenmock.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="69ab7726-254d-5eab-02b3-e262b8ee4280" name="VerifyWillFailTest" storage="genetibase.nugenmock.tests\bin\debug\genetibase.nugenmock.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="7d4d9358-9f34-63bb-2a9f-91da8401ddfa" name="VerifyWillFailTest" storage="genetibase.nugenmock.tests\bin\debug\genetibase.nugenmock.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="35a16b0d-4985-dc8b-b9da-a0fab9462a8b" name="IncVerifyWillFailTest" storage="genetibase.nugenmock.tests\bin\debug\genetibase.nugenmock.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="7f53872f-0f59-6b4f-e2eb-e0cac5a91413" name="VerifyWillFailTest" storage="genetibase.nugenmock.tests\bin\debug\genetibase.nugenmock.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="1bf253e6-731f-4e68-05a9-5cc0860fa7ac" name="ImmediateVerificationWillFailTest3" storage="genetibase.nugenmock.tests\bin\debug\genetibase.nugenmock.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="3b4ab189-d0e3-de3c-40a4-a45ada380d3d" name="VerifyWillFailTest" storage="genetibase.nugenmock.tests\bin\debug\genetibase.nugenmock.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="ad3d6922-c89b-5f77-9e2a-255d42ce5257" name="ImmediateVerificationWillFail" storage="genetibase.nugenmock.tests\bin\debug\genetibase.nugenmock.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="1136d1b9-3fc5-9764-16b8-418029b542e1" name="VerifyWillFailTest" storage="genetibase.nugenmock.tests\bin\debug\genetibase.nugenmock.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="6fc043f3-e7a7-c40f-9177-906b5eef705c" name="ImmediateVerificationWillFailTest" storage="genetibase.nugenmock.tests\bin\debug\genetibase.nugenmock.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    </TestLinks>
+  </TestList>
+</TestLists>

@@ -1,0 +1,284 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{057B6D79-27DC-4CE6-9752-F0F3A3094D3E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Genetibase.SmoothControls</RootNamespace>
+    <AssemblyName>Genetibase.SmoothControls</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Genetibase.SmoothControls.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Genetibase.SmoothControls.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NuGenSmoothButton.cs">
+    </Compile>
+    <Compile Include="NuGenSmoothPanel.cs">
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ComponentModel\NuGenSRCategoryAttribute.cs" />
+    <Compile Include="ComponentModel\NuGenSRDescriptionAttribute.cs" />
+    <Compile Include="INuGenSmoothColors.cs" />
+    <Compile Include="INuGenSmoothColorManager.cs" />
+    <Compile Include="NuGenSmoothCheckBox.cs">
+    </Compile>
+    <Compile Include="NuGenSmoothColorManager.cs" />
+    <Compile Include="NuGenSmoothColorsDisabled.cs" />
+    <Compile Include="NuGenSmoothColorsHot.cs" />
+    <Compile Include="NuGenSmoothColorsNormal.cs" />
+    <Compile Include="NuGenSmoothColorsPressed.cs" />
+    <Compile Include="NuGenSmoothComboBox.cs">
+    </Compile>
+    <Compile Include="NuGenSmoothGroupBox.cs">
+    </Compile>
+    <Compile Include="NuGenSmoothOptionSpin.cs" />
+    <Compile Include="NuGenSmoothPictureBox.cs" />
+    <Compile Include="NuGenSmoothProgressBar.cs">
+    </Compile>
+    <Compile Include="NuGenSmoothColorTable.cs" />
+    <Compile Include="NuGenSmoothPropertyGrid.cs">
+    </Compile>
+    <Compile Include="NuGenSmoothRadioButton.cs" />
+    <Compile Include="NuGenSmoothRenderer.cs" />
+    <Compile Include="NuGenSmoothServiceProvider.cs" />
+    <Compile Include="NuGenSmoothSpin.cs">
+    </Compile>
+    <Compile Include="NuGenSmoothSplitContainer.cs">
+    </Compile>
+    <Compile Include="NuGenSmoothTabControl.cs" />
+    <Compile Include="TabControlInternals\NuGenSmoothTabLayoutBuilder.cs" />
+    <Compile Include="NuGenSmoothTabPage.cs" />
+    <Compile Include="TabControlInternals\NuGenSmoothTabRenderer.cs" />
+    <Compile Include="NuGenSmoothTextBox.cs">
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CloseButton_Hot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CloseButton_Normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlignSelectorInternals\NuGenSmoothAlignDropDownServiceProvider.cs" />
+    <Compile Include="AlignSelectorInternals\NuGenSmoothAlignSelectorServiceProvider.cs" />
+    <Compile Include="ButtonInternals\NuGenSmoothButtonLayoutManager.cs" />
+    <Compile Include="ButtonInternals\NuGenSmoothButtonRenderer.cs" />
+    <Compile Include="ButtonInternals\NuGenSmoothButtonServiceProvider.cs" />
+    <Compile Include="CalculatorInternals\NuGenSmoothCalculatorDropDownServiceProvider.cs" />
+    <Compile Include="CalculatorInternals\NuGenSmoothCalculatorPopupServiceProvider.cs" />
+    <Compile Include="CalendarInternals\NuGenSmoothCalendarRenderer.cs" />
+    <Compile Include="CalendarInternals\NuGenSmoothCalendarServiceProvider.cs" />
+    <Compile Include="CheckBoxInternals\NuGenSmoothCheckBoxRenderer.cs" />
+    <Compile Include="CheckBoxInternals\NuGenSmoothCheckBoxServiceProvider.cs" />
+    <Compile Include="ColorBoxInternals\NuGenSmoothColorBoxServiceProvider.cs" />
+    <Compile Include="DirectorySelectorInternals\NuGenSmoothDirectorySelectorRenderer.cs" />
+    <Compile Include="DirectorySelectorInternals\NuGenSmoothDirectorySelectorServiceProvider.cs" />
+    <Compile Include="DropDownInternals\NuGenSmoothDropDownServiceProvider.cs" />
+    <Compile Include="HotKeySelectorInternals\NuGenSmoothHotKeySelectorServiceProvider.cs" />
+    <Compile Include="NavigationBarInternals\NuGenSmoothNavigationBarLayoutManager.cs" />
+    <Compile Include="NavigationBarInternals\NuGenSmoothNavigationBarRenderer.cs" />
+    <Compile Include="NavigationBarInternals\NuGenSmoothNavigationBarServiceProvider.cs" />
+    <Compile Include="NuGenSmoothAlignDropDown.cs" />
+    <Compile Include="NuGenSmoothAlignSelector.cs" />
+    <Compile Include="NuGenSmoothCalculatorDropDown.cs" />
+    <Compile Include="NuGenSmoothCalculatorPopup.cs" />
+    <Compile Include="NuGenSmoothCalendar.cs" />
+    <Compile Include="NuGenSmoothColorBox.cs" />
+    <Compile Include="NuGenSmoothColorBoxPopup.cs" />
+    <Compile Include="ColorBoxInternals\NuGenSmoothColorBoxPopupServiceProvider.cs" />
+    <Compile Include="ComboBoxInternals\NuGenSmoothComboBoxRenderer.cs" />
+    <Compile Include="ComboBoxInternals\NuGenSmoothComboBoxServiceProvider.cs" />
+    <Compile Include="NuGenSmoothColorsFocused.cs" />
+    <Compile Include="NuGenSmoothContextMenuStrip.cs" />
+    <Compile Include="NuGenSmoothDirectorySelector.cs" />
+    <Compile Include="NuGenSmoothDriveCombo.cs" />
+    <Compile Include="NuGenSmoothDropDown.cs" />
+    <Compile Include="DropDownInternals\NuGenSmoothDropDownRenderer.cs" />
+    <Compile Include="NuGenSmoothFontBox.cs" />
+    <Compile Include="FontBoxInternals\NuGenSmoothFontBoxServiceProvider.cs" />
+    <Compile Include="GroupBoxInternals\NuGenSmoothGroupBoxRenderer.cs" />
+    <Compile Include="GroupBoxInternals\NuGenSmoothGroupBoxServiceProvider.cs" />
+    <Compile Include="NuGenSmoothFontSizeBox.cs" />
+    <Compile Include="NuGenSmoothHotKeySelector.cs" />
+    <Compile Include="NuGenSmoothIntCombo.cs" />
+    <Compile Include="NuGenSmoothListBox.cs" />
+    <Compile Include="ListBoxInternals\NuGenSmoothListBoxRenderer.cs" />
+    <Compile Include="ListBoxInternals\NuGenSmoothListBoxServiceProvider.cs" />
+    <Compile Include="NuGenSmoothMenuButton.cs" />
+    <Compile Include="NuGenSmoothMenuStrip.cs" />
+    <Compile Include="NuGenSmoothNavigationBar.cs" />
+    <Compile Include="NuGenSmoothNavigationPane.cs" />
+    <Compile Include="NuGenSmoothPinpointList.cs" />
+    <Compile Include="NuGenSmoothPinpointWindow.cs" />
+    <Compile Include="NuGenSmoothPopupContainer.cs" />
+    <Compile Include="NuGenSmoothPrintPreview.cs">
+    </Compile>
+    <Compile Include="NuGenSmoothPanelEx.cs" />
+    <Compile Include="NuGenSmoothRoundedPanelEx.cs" />
+    <Compile Include="NuGenSmoothScrollButton.cs" />
+    <Compile Include="NuGenSmoothServiceManager.cs" />
+    <Compile Include="NuGenSmoothSplitButton.cs" />
+    <Compile Include="NuGenSmoothStatusStrip.cs" />
+    <Compile Include="NuGenSmoothSwitchButton.cs" />
+    <Compile Include="NuGenSmoothSwitcher.cs" />
+    <Compile Include="NuGenSmoothTaskBox.cs" />
+    <Compile Include="NuGenSmoothTitle.cs" />
+    <Compile Include="NuGenSmoothTitlePanel.cs" />
+    <Compile Include="NuGenSmoothToolStrip.cs" />
+    <Compile Include="NuGenSmoothToolStripManager.cs" />
+    <Compile Include="NuGenSmoothToolStripRenderer.cs" />
+    <Compile Include="NuGenSmoothToolTip.cs" />
+    <Compile Include="PanelExInternals\NuGenSmoothRoundedPanelExRenderer.cs" />
+    <Compile Include="PanelExInternals\NuGenSmoothRoundedPanelExServiceProvider.cs" />
+    <Compile Include="PanelExInternals\RendererUtils.cs" />
+    <Compile Include="PanelInternals\NuGenSmoothPanelRenderer.cs" />
+    <Compile Include="PanelInternals\NuGenSmoothPanelServiceProvider.cs" />
+    <Compile Include="PictureBoxInternals\INuGenSmoothPictureBoxLayoutManager.cs" />
+    <Compile Include="PictureBoxInternals\NuGenSmoothPictureBoxLayoutManager.cs" />
+    <Compile Include="PictureBoxInternals\NuGenSmoothPictureBoxServiceProvider.cs" />
+    <Compile Include="PinpointInternals\NuGenSmoothPinpointLayoutManager.cs" />
+    <Compile Include="PinpointInternals\NuGenSmoothPinpointRenderer.cs" />
+    <Compile Include="PinpointInternals\NuGenSmoothPinpointServiceProvider.cs" />
+    <Compile Include="PopupContainerInternals\NuGenSmoothPopupContainerServiceProvider.cs" />
+    <Compile Include="PrintPreviewInternals\NuGenSmoothPrintPreviewServiceProvider.cs" />
+    <Compile Include="ProgressBarInternals\NuGenSmoothProgressBarRenderer.cs" />
+    <Compile Include="ProgressBarInternals\NuGenSmoothProgressBarServiceProvider.cs" />
+    <Compile Include="PropertyGridInternals\NuGenSmoothPropertyGridRenderer.cs" />
+    <Compile Include="PropertyGridInternals\NuGenSmoothPropertyGridServiceProvider.cs" />
+    <Compile Include="RadioButtonInternals\NuGenSmoothRadioButtonRenderer.cs" />
+    <Compile Include="RadioButtonInternals\NuGenSmoothRadioButtonServiceProvider.cs" />
+    <Compile Include="PanelExInternals\NuGenSmoothPanelExRenderer.cs" />
+    <Compile Include="PanelExInternals\NuGenSmoothPanelExServiceProvider.cs" />
+    <Compile Include="ScrollBarInternals\NuGenSmoothScrollBarRenderer.cs" />
+    <Compile Include="ScrollBarInternals\NuGenSmoothScrollBarServiceProvider.cs" />
+    <Compile Include="NuGenSmoothScrollBar.cs" />
+    <Compile Include="SmoothSpin.cs" />
+    <Compile Include="SpinInternals\NuGenSmoothSpinRenderer.cs" />
+    <Compile Include="SpinInternals\NuGenSmoothSpinServiceProvider.cs" />
+    <Compile Include="SplitButtonInternals\NuGenSmoothMenuButtonServiceProvider.cs" />
+    <Compile Include="SplitButtonInternals\NuGenSmoothSplitButtonLayoutManager.cs" />
+    <Compile Include="SplitButtonInternals\NuGenSmoothSplitButtonRenderer.cs" />
+    <Compile Include="SplitButtonInternals\NuGenSmoothSplitButtonServiceProvider.cs" />
+    <Compile Include="SplitContainerInternals\NuGenSmoothSplitContainerRenderer.cs" />
+    <Compile Include="SplitContainerInternals\NuGenSmoothSplitContainerServiceProvider.cs" />
+    <Compile Include="SwitcherInternals\NuGenSmoothSwitchButtonLayoutManager.cs" />
+    <Compile Include="SwitcherInternals\NuGenSmoothSwitchButtonRenderer.cs" />
+    <Compile Include="SwitcherInternals\NuGenSmoothSwitcherServiceProvider.cs" />
+    <Compile Include="TabControlInternals\NuGenSmoothTabControlServiceProvider.cs" />
+    <Compile Include="TabControlInternals\NuGenSmoothTabLayoutManager.cs" />
+    <Compile Include="TaskBoxInternals\NuGenSmoothTaskBoxLayoutManager.cs" />
+    <Compile Include="TaskBoxInternals\NuGenSmoothTaskBoxRenderer.cs" />
+    <Compile Include="TaskBoxInternals\NuGenSmoothTaskBoxServiceProvider.cs" />
+    <Compile Include="TextBoxInternals\NuGenSmoothTextBoxRenderer.cs" />
+    <Compile Include="TextBoxInternals\NuGenSmoothTextBoxServiceProvider.cs" />
+    <Compile Include="SmoothProgressBar.cs">
+    </Compile>
+    <Compile Include="SmoothTrackBar.cs" />
+    <Compile Include="TitleInternals\NuGenSmoothTitleRenderer.cs" />
+    <Compile Include="TitleInternals\NuGenSmoothTitleServiceProvider.cs" />
+    <Compile Include="TitlePanelInternals\NuGenSmoothTitlePanelServiceProvider.cs" />
+    <Compile Include="TitlePanelInternals\NuGenSmoothTitlePanelLayoutManager.cs" />
+    <Compile Include="ToolStripInternals\NuGenSmoothToolStripServiceProvider.cs" />
+    <Compile Include="ToolTipInternals\NuGenSmoothToolTipRenderer.cs" />
+    <Compile Include="ToolTipInternals\NuGenSmoothToolTipServiceProvider.cs" />
+    <Compile Include="TrackBarInternals\NuGenSmoothTrackBarServiceProvider.cs" />
+    <Compile Include="NuGenSmoothTrackBar.cs">
+    </Compile>
+    <Compile Include="TrackBarInternals\NuGenSmoothTrackBarRenderer.cs" />
+    <None Include="Resources\CloseButton_Pressed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\NuGenIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Genetibase.Shared.Controls\Genetibase.Shared.Controls.csproj">
+      <Project>{7AFBEE90-61C7-46A9-95B8-67373C1C6F4D}</Project>
+      <Name>Genetibase.Shared.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Genetibase.Shared\Genetibase.Shared.csproj">
+      <Project>{A7A02558-58A0-4333-BFAF-77CB49DE17F0}</Project>
+      <Name>Genetibase.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Genetibase.Win32\Genetibase.Win32.csproj">
+      <Project>{8E94E64C-52F7-4865-ACF1-3FEC8F61B531}</Project>
+      <Name>Genetibase.Win32</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FastBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FastForward.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

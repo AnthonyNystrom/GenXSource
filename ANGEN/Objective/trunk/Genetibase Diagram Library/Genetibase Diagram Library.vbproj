@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{69AFE03A-CA8F-43EB-AFB2-D64C04A63979}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Genetibase.NuGenObjective</RootNamespace>
+    <AssemblyName>Genetibase.NuGenObjective</AssemblyName>
+    <MyType>Windows</MyType>
+    <OptionStrict>On</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Genetibase.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <DefineConstants>_MYTYPE="Empty",GENETIBASENAMESPACE="http://genetibase.com/Schemas/DiagramSchema.xsd"</DefineConstants>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Genetibase.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <DefineConstants>_MYTYPE="Empty",GENETIBASENAMESPACE="http://genetibase.com/Schemas/DiagramSchema.xsd"</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Action.vb" />
+    <Compile Include="DiffPatch\DiagramDiffPatch.vb" />
+    <Compile Include="DiffPatch\DiffAlgorithm.vb" />
+    <Compile Include="DiffPatch\DiffCollection.vb" />
+    <Compile Include="DiffPatch\DiffEdit.vb" />
+    <Compile Include="DiffPatch\DiffType.vb" />
+    <Compile Include="DiffPatch\UnixDiff1Algorithm.vb" />
+    <Compile Include="ElementCollectionEventArgs.vb" />
+    <Compile Include="Diagram.vb" />
+    <Compile Include="Element.vb" />
+    <Compile Include="ElementChangedEventArgs.vb" />
+    <Compile Include="ElementCollection.vb" />
+    <Compile Include="ElementFactoryBase.vb" />
+    <Compile Include="ElementRenamedEventArgs.vb" />
+    <Compile Include="ModelObject.vb" />
+    <Compile Include="Interaction.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="Page.vb" />
+    <Compile Include="Role.vb" />
+    <Compile Include="State.vb" />
+    <Compile Include="ModelSystem.vb" />
+    <Compile Include="Task.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataModel.cd" />
+    <None Include="DiagramSchema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DiagramSchema.xsx">
+      <DependentUpon>DiagramSchema.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="ViewModel.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

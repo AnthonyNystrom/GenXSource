@@ -1,0 +1,36 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SampleFramework.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="WindowState" Type="System.Windows.Forms.FormWindowState" Scope="User">
+      <Value Profile="(Default)">Normal</Value>
+    </Setting>
+    <Setting Name="Size" Type="System.Drawing.Size" Scope="User">
+      <Value Profile="(Default)">300, 300</Value>
+    </Setting>
+    <Setting Name="Location" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">0, 0</Value>
+    </Setting>
+    <Setting Name="DefaultSamplesLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Samples</Value>
+    </Setting>
+    <Setting Name="ScreenshotFileName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Sample.jpg</Value>
+    </Setting>
+    <Setting Name="DescriptionFileName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Sample.txt</Value>
+    </Setting>
+    <Setting Name="CSProjectFolderName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">CS</Value>
+    </Setting>
+    <Setting Name="VBProjectFolderName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">VB</Value>
+    </Setting>
+    <Setting Name="CSProjectExtension" Type="System.String" Scope="User">
+      <Value Profile="(Default)">csproj</Value>
+    </Setting>
+    <Setting Name="VBProjectExtension" Type="System.String" Scope="User">
+      <Value Profile="(Default)">vbproj</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

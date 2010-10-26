@@ -1,0 +1,109 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E0445DE4-D894-4B34-8A1E-FE66DEC468B8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Genetibase.MathX</RootNamespace>
+    <AssemblyName>Genetibase.MathX</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Genetibase.MathX.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Genetibase.MathX.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Enums\NuGenAngleMode.cs" />
+    <Compile Include="FormulaInterpreter\NuGenAbs.cs" />
+    <Compile Include="FormulaInterpreter\NuGenAddition.cs" />
+    <Compile Include="FormulaInterpreter\NuGenCenteredSize.cs" />
+    <Compile Include="FormulaInterpreter\NuGenConstantE.cs" />
+    <Compile Include="FormulaInterpreter\NuGenConstantPI.cs" />
+    <Compile Include="FormulaInterpreter\NuGenCos.cs" />
+    <Compile Include="FormulaInterpreter\NuGenDivision.cs" />
+    <Compile Include="FormulaInterpreter\NuGenFormulaElement.cs" />
+    <Compile Include="FormulaInterpreter\NuGenFunction.cs" />
+    <Compile Include="FormulaInterpreter\NuGenLog.cs" />
+    <Compile Include="FormulaInterpreter\NuGenMeasureElementArgs.cs" />
+    <Compile Include="FormulaInterpreter\NuGenMultiplication.cs" />
+    <Compile Include="FormulaInterpreter\NuGenOperator.cs" />
+    <Compile Include="FormulaInterpreter\NuGenPower.cs" />
+    <Compile Include="FormulaInterpreter\NuGenRamainder.cs" />
+    <Compile Include="FormulaInterpreter\NuGenRenderElementArgs.cs" />
+    <Compile Include="FormulaInterpreter\NuGenSin.cs" />
+    <Compile Include="FormulaInterpreter\NuGenSqr.cs" />
+    <Compile Include="FormulaInterpreter\NuGenSubtraction.cs" />
+    <Compile Include="FormulaInterpreter\NuGenTan.cs" />
+    <Compile Include="FormulaInterpreter\NuGenValue.cs" />
+    <Compile Include="FormulaInterpreter\NuGenVariable.cs" />
+    <Compile Include="NuGenFormula.cs" />
+    <Compile Include="NuGenFormulaCollectionBase.cs" />
+    <Compile Include="NuGenVisiPlot2D.cs">
+    </Compile>
+    <Compile Include="FormulaInterpreter\NuGenInterpreter.cs" />
+    <Compile Include="NuGenFormulaCollection.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\NuGenIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ComponentModel\NuGenSRCategoryAttribute.cs" />
+    <Compile Include="ComponentModel\NuGenSRDescriptionAttribute.cs" />
+    <Compile Include="Enums\NuGenPlotTool.cs" />
+    <Compile Include="FormulaInterpreter\NuGenFac.cs" />
+    <Compile Include="NuGenPlotInterval.cs" />
+    <Compile Include="NuGenPlotPaintInterval.cs" />
+    <Compile Include="NuGenPlotPaintIntervalF.cs" />
+    <Compile Include="NuGenPlotPositionEventHandler.cs" />
+    <Compile Include="NuGenPlotSuccessEventHandler.cs" />
+    <Compile Include="NuGenPlotToolBase.cs" />
+    <Compile Include="NuGenSelectionPlotTool.cs" />
+    <Compile Include="NuGenZoomPlotTool.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,3 @@
+ProgressBar, TrackBar, and ScrollBar are derived from a common control. That is all the controls support both horizontal and vertical orientation.
+ProgressBar exposes three styles: continuous, blocks, and marquee.
+TrackBar supports various tick styles: none, bottom-left, top-right, both. Use it to set timer speed in this sample.

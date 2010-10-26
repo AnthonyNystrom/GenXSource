@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genetibase.NuGenEditor", "Genetibase.NuGenEditor\Genetibase.NuGenEditor.csproj", "{C58FF4DC-AAAC-4732-BC6D-CC7961C8B8E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genetibase.Shared", "Genetibase.Shared\Genetibase.Shared.csproj", "{439FF55D-A918-4343-B6F8-2C789F45AC07}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{527E6953-0210-4A3A-9A38-ED6A0D1B5448}"
+	ProjectSection(SolutionItems) = preProject
+		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
+		NuGenEditor.vsmdi = NuGenEditor.vsmdi
+	EndProjectSection
+	ProjectSection(FolderStartupServices) = postProject
+		{B4F97281-0DBD-4835-9ED8-7DFB966E87FF} = {B4F97281-0DBD-4835-9ED8-7DFB966E87FF}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genetibase.Shared.Tests", "Genetibase.Shared.Tests\Genetibase.Shared.Tests.csproj", "{EA072926-8BFD-4994-82CC-0FA4197FF299}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genetibase.NuGenMock", "Genetibase.NuGenMock\Genetibase.NuGenMock.csproj", "{4C321E1B-6789-43FD-B9B5-3DB54DBDE893}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genetibase.NuGenMock.Tests", "Genetibase.NuGenMock.Tests\Genetibase.NuGenMock.Tests.csproj", "{03C5B426-98C9-4C7A-B76B-803DF793E1AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genetibase.Win32", "Genetibase.Win32\Genetibase.Win32.csproj", "{8E94E64C-52F7-4865-ACF1-3FEC8F61B531}"
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = NuGenEditor.vsmdi
+	EndGlobalSection
+	GlobalSection(TextTemplating) = postSolution
+		TextTemplating = 1
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C58FF4DC-AAAC-4732-BC6D-CC7961C8B8E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C58FF4DC-AAAC-4732-BC6D-CC7961C8B8E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C58FF4DC-AAAC-4732-BC6D-CC7961C8B8E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C58FF4DC-AAAC-4732-BC6D-CC7961C8B8E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{439FF55D-A918-4343-B6F8-2C789F45AC07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{439FF55D-A918-4343-B6F8-2C789F45AC07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{439FF55D-A918-4343-B6F8-2C789F45AC07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{439FF55D-A918-4343-B6F8-2C789F45AC07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA072926-8BFD-4994-82CC-0FA4197FF299}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA072926-8BFD-4994-82CC-0FA4197FF299}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA072926-8BFD-4994-82CC-0FA4197FF299}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA072926-8BFD-4994-82CC-0FA4197FF299}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C321E1B-6789-43FD-B9B5-3DB54DBDE893}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C321E1B-6789-43FD-B9B5-3DB54DBDE893}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C321E1B-6789-43FD-B9B5-3DB54DBDE893}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C321E1B-6789-43FD-B9B5-3DB54DBDE893}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03C5B426-98C9-4C7A-B76B-803DF793E1AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03C5B426-98C9-4C7A-B76B-803DF793E1AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03C5B426-98C9-4C7A-B76B-803DF793E1AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03C5B426-98C9-4C7A-B76B-803DF793E1AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E94E64C-52F7-4865-ACF1-3FEC8F61B531}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E94E64C-52F7-4865-ACF1-3FEC8F61B531}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E94E64C-52F7-4865-ACF1-3FEC8F61B531}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E94E64C-52F7-4865-ACF1-3FEC8F61B531}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

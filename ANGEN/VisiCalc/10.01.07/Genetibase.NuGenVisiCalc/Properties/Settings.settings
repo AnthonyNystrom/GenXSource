@@ -1,0 +1,48 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Genetibase.NuGenVisiCalc.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="MainForm_Location" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">240, 0</Value>
+    </Setting>
+    <Setting Name="MainForm_Size" Type="System.Drawing.Size" Scope="User">
+      <Value Profile="(Default)">640, 480</Value>
+    </Setting>
+    <Setting Name="MainForm_State" Type="System.Windows.Forms.FormWindowState" Scope="User">
+      <Value Profile="(Default)">Normal</Value>
+    </Setting>
+    <Setting Name="ToolboxForm_Location" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">0, 0</Value>
+    </Setting>
+    <Setting Name="ToolboxForm_Size" Type="System.Drawing.Size" Scope="User">
+      <Value Profile="(Default)">240, 320</Value>
+    </Setting>
+    <Setting Name="PropertiesForm_Size" Type="System.Drawing.Size" Scope="User">
+      <Value Profile="(Default)">240, 320</Value>
+    </Setting>
+    <Setting Name="PropertiesForm_Location" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">880, 0</Value>
+    </Setting>
+    <Setting Name="PropertiesForm_Visible" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ToolboxForm_Visible" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="MainForm_CanvasSize" Type="System.Drawing.Size" Scope="User">
+      <Value Profile="(Default)">512, 512</Value>
+    </Setting>
+    <Setting Name="MainForm_MaintainCanvasSizeAspectRatio" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="OutputForm_Location" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">240, 480</Value>
+    </Setting>
+    <Setting Name="OutputForm_Size" Type="System.Drawing.Size" Scope="User">
+      <Value Profile="(Default)">640, 150</Value>
+    </Setting>
+    <Setting Name="OutputForm_Visible" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

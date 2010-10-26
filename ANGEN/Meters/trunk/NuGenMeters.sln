@@ -1,0 +1,88 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NUnit", "NUnit", "{04396267-E3DE-4C7F-8699-84C2BB6CE42D}"
+	ProjectSection(SolutionItems) = preProject
+		NUnit\NUnit.Framework.dll = NUnit\NUnit.Framework.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetMock", "DotNetMock\DotNetMock.csproj", "{3ED74877-D5EE-49E6-94CA-02BD39ADDCD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genetibase.Shared", "Genetibase.Shared\Genetibase.Shared.csproj", "{A7A02558-58A0-4333-BFAF-77CB49DE17F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genetibase.Shared.Controls", "Genetibase.Shared.Controls\Genetibase.Shared.Controls.csproj", "{7AFBEE90-61C7-46A9-95B8-67373C1C6F4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genetibase.Shared.Controls.Design", "Genetibase.Shared.Controls.Design\Genetibase.Shared.Controls.Design.csproj", "{C4E55216-11FF-4CEF-AF80-7E4EE90BC518}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genetibase.Shared.Controls.Tests", "Genetibase.Shared.Controls.Tests\Genetibase.Shared.Controls.Tests.csproj", "{83BDE2DE-54F1-4104-9010-EADBBADE198D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genetibase.Shared.Design", "Genetibase.Shared.Design\Genetibase.Shared.Design.csproj", "{50EE44FC-D51B-471E-A199-15621498ECA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genetibase.Shared.Design.Tests", "Genetibase.Shared.Design.Tests\Genetibase.Shared.Design.Tests.csproj", "{C8CD9F27-5F65-4C3E-A174-856D8BE11848}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genetibase.Shared.Tests", "Genetibase.Shared.Tests\Genetibase.Shared.Tests.csproj", "{9BB5FF25-149E-4E2E-A475-D9045835A364}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genetibase.Win32", "Genetibase.Win32\Genetibase.Win32.csproj", "{8E94E64C-52F7-4865-ACF1-3FEC8F61B531}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genetibase.Win32.Tests", "Genetibase.Win32.Tests\Genetibase.Win32.Tests.csproj", "{3B5E713C-C38D-431F-A00C-D749023FC0BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genetibase.Meters", "Genetibase.Meters\Genetibase.Meters.csproj", "{9A7BCC71-B194-432B-8045-9F7792D5F8E8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3ED74877-D5EE-49E6-94CA-02BD39ADDCD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ED74877-D5EE-49E6-94CA-02BD39ADDCD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ED74877-D5EE-49E6-94CA-02BD39ADDCD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ED74877-D5EE-49E6-94CA-02BD39ADDCD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7A02558-58A0-4333-BFAF-77CB49DE17F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7A02558-58A0-4333-BFAF-77CB49DE17F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7A02558-58A0-4333-BFAF-77CB49DE17F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7A02558-58A0-4333-BFAF-77CB49DE17F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AFBEE90-61C7-46A9-95B8-67373C1C6F4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AFBEE90-61C7-46A9-95B8-67373C1C6F4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AFBEE90-61C7-46A9-95B8-67373C1C6F4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AFBEE90-61C7-46A9-95B8-67373C1C6F4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4E55216-11FF-4CEF-AF80-7E4EE90BC518}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4E55216-11FF-4CEF-AF80-7E4EE90BC518}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4E55216-11FF-4CEF-AF80-7E4EE90BC518}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4E55216-11FF-4CEF-AF80-7E4EE90BC518}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83BDE2DE-54F1-4104-9010-EADBBADE198D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83BDE2DE-54F1-4104-9010-EADBBADE198D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83BDE2DE-54F1-4104-9010-EADBBADE198D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83BDE2DE-54F1-4104-9010-EADBBADE198D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50EE44FC-D51B-471E-A199-15621498ECA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50EE44FC-D51B-471E-A199-15621498ECA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50EE44FC-D51B-471E-A199-15621498ECA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50EE44FC-D51B-471E-A199-15621498ECA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8CD9F27-5F65-4C3E-A174-856D8BE11848}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8CD9F27-5F65-4C3E-A174-856D8BE11848}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8CD9F27-5F65-4C3E-A174-856D8BE11848}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8CD9F27-5F65-4C3E-A174-856D8BE11848}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BB5FF25-149E-4E2E-A475-D9045835A364}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BB5FF25-149E-4E2E-A475-D9045835A364}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BB5FF25-149E-4E2E-A475-D9045835A364}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BB5FF25-149E-4E2E-A475-D9045835A364}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E94E64C-52F7-4865-ACF1-3FEC8F61B531}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E94E64C-52F7-4865-ACF1-3FEC8F61B531}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E94E64C-52F7-4865-ACF1-3FEC8F61B531}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E94E64C-52F7-4865-ACF1-3FEC8F61B531}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B5E713C-C38D-431F-A00C-D749023FC0BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B5E713C-C38D-431F-A00C-D749023FC0BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B5E713C-C38D-431F-A00C-D749023FC0BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B5E713C-C38D-431F-A00C-D749023FC0BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A7BCC71-B194-432B-8045-9F7792D5F8E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A7BCC71-B194-432B-8045-9F7792D5F8E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A7BCC71-B194-432B-8045-9F7792D5F8E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A7BCC71-B194-432B-8045-9F7792D5F8E8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TextTemplating) = postSolution
+		TextTemplating = 1
+	EndGlobalSection
+EndGlobal

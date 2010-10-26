@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ActionList_Calendar_Dates" xml:space="preserve">
+    <value>Dates</value>
+  </data>
+  <data name="ActionList_Calendar_ShowFooter" xml:space="preserve">
+    <value>Show footer</value>
+  </data>
+  <data name="ActionList_Calendar_ShowHeader" xml:space="preserve">
+    <value>Show header</value>
+  </data>
+  <data name="ActionList_Calendar_ShowWeekdays" xml:space="preserve">
+    <value>Show week days</value>
+  </data>
+  <data name="ActionList_Calendar_ShowWeeknumbers" xml:space="preserve">
+    <value>Show week numbers</value>
+  </data>
+  <data name="ActionList_ControlReflector_ControlToReflect" xml:space="preserve">
+    <value>Control To Reflect</value>
+  </data>
+  <data name="ActionList_LinkLabel_ActiveLinkColor" xml:space="preserve">
+    <value>Hover Color</value>
+  </data>
+  <data name="ActionList_LinkLabel_Image" xml:space="preserve">
+    <value>Link Image</value>
+  </data>
+  <data name="ActionList_LinkLabel_LinkColor" xml:space="preserve">
+    <value>Default Color</value>
+  </data>
+  <data name="ActionList_NavigationBar_AddNavigationPane" xml:space="preserve">
+    <value>Add NavigationPane</value>
+  </data>
+  <data name="ActionList_NavigationBar_RemoveNavigationPane" xml:space="preserve">
+    <value>Remove NavigationPane</value>
+  </data>
+  <data name="ActionList_Orientation" xml:space="preserve">
+    <value>Orientation</value>
+  </data>
+  <data name="ActionList_Panel_Dock" xml:space="preserve">
+    <value>Dock</value>
+  </data>
+  <data name="ActionList_PictureBox_DisplayMode" xml:space="preserve">
+    <value>DisplayMode</value>
+  </data>
+  <data name="ActionList_PictureBox_Image" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="ActionList_Switcher_AddSwitchPage" xml:space="preserve">
+    <value>Add Page</value>
+  </data>
+  <data name="ActionList_Switcher_RemoveSwitchPage" xml:space="preserve">
+    <value>Remove Page</value>
+  </data>
+  <data name="ActionList_TabControl_AddTabPage" xml:space="preserve">
+    <value>Add TabPage</value>
+  </data>
+  <data name="ActionList_TabControl_RemoveTabPage" xml:space="preserve">
+    <value>Remove TabPage</value>
+  </data>
+  <data name="ActionList_TrackBar_TickStyle" xml:space="preserve">
+    <value>TickStyle</value>
+  </data>
+  <data name="ActionList_TreeView_EditNodes" xml:space="preserve">
+    <value>Edit Nodes</value>
+  </data>
+  <data name="ActionList_TreeView_ImageList" xml:space="preserve">
+    <value>ImageList</value>
+  </data>
+  <data name="ActionList_Watermark_Watermark" xml:space="preserve">
+    <value>Watermark</value>
+  </data>
+  <data name="ActionList_Watermark_WatermarkAlign" xml:space="preserve">
+    <value>Watermark Alignment</value>
+  </data>
+  <data name="ActionList_Watermark_WatermarkHeight" xml:space="preserve">
+    <value>Watermark Height</value>
+  </data>
+  <data name="ActionList_Watermark_WatermarkTransparency" xml:space="preserve">
+    <value>Watermark Transparency</value>
+  </data>
+  <data name="ActionList_Watermark_WatermarkWidth" xml:space="preserve">
+    <value>Watermark Width</value>
+  </data>
+  <data name="Argument_DataSourceLocksItems" xml:space="preserve">
+    <value>Cannot modify the Items collection when the DataSource property is set.</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Delete.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Description_Calendar_Dates" xml:space="preserve">
+    <value>Collection with formatted dates.</value>
+  </data>
+  <data name="Description_Calendar_ShowFooter" xml:space="preserve">
+    <value>Indicates whether the footer should be visible.</value>
+  </data>
+  <data name="Description_Calendar_ShowHeader" xml:space="preserve">
+    <value>Indicates whether the header should be visible.</value>
+  </data>
+  <data name="Description_Calendar_ShowWeekdays" xml:space="preserve">
+    <value>Indicates whether weekdays should be visible.</value>
+  </data>
+  <data name="Description_Calendar_ShowWeeknumbers" xml:space="preserve">
+    <value>Indicates whether the weeknumbers should be visible.</value>
+  </data>
+  <data name="Description_GradientPanel_WatermarkHeight" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Description_GradientPanel_WatermarkWidth" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Description_TreeView_EditNodes" xml:space="preserve">
+    <value>Invokes the Nodes collection editor.</value>
+  </data>
+  <data name="Text_NavigationButtonCollectionEditor_addButton" xml:space="preserve">
+    <value>&amp;Add</value>
+  </data>
+  <data name="Text_NavigationButtonCollectionEditor_EditorForm" xml:space="preserve">
+    <value>NavigationButton Editor</value>
+  </data>
+  <data name="Text_NavigationButtonCollectionEditor_item" xml:space="preserve">
+    <value>Button</value>
+  </data>
+  <data name="Text_NavigationButtonCollectionEditor_mainTitle" xml:space="preserve">
+    <value>Select a button to edit:</value>
+  </data>
+  <data name="Text_NavigationButtonCollectionEditor_propertyTitle" xml:space="preserve">
+    <value>{0} properties:</value>
+  </data>
+  <data name="Text_NavigationButtonCollectionEditor_propertyTitleNone" xml:space="preserve">
+    <value>Properties:</value>
+  </data>
+  <data name="Text_NavigationButtonCollectionEditor_removeButton" xml:space="preserve">
+    <value>&amp;Remove</value>
+  </data>
+  <data name="Text_ToolTipInfoEditor_cancelButton" xml:space="preserve">
+    <value>&amp;Cancel</value>
+  </data>
+  <data name="Text_ToolTipInfoEditor_customSizeCheckBox" xml:space="preserve">
+    <value>Custom size</value>
+  </data>
+  <data name="Text_ToolTipInfoEditor_EditorForm" xml:space="preserve">
+    <value>ToolTip Editor</value>
+  </data>
+  <data name="Text_ToolTipInfoEditor_EditorPictureBox" xml:space="preserve">
+    <value>Double-click to select an image...</value>
+  </data>
+  <data name="Text_ToolTipInfoEditor_okButton" xml:space="preserve">
+    <value>&amp;Ok</value>
+  </data>
+  <data name="Text_ToolTipInfoEditor_previewButton" xml:space="preserve">
+    <value>&amp;Preview</value>
+  </data>
+  <data name="Text_ToolTipInfoEditor_xLabel" xml:space="preserve">
+    <value>x</value>
+  </data>
+  <data name="Text_TreeNodeCollectionEditor_addChildButton" xml:space="preserve">
+    <value>Add &amp;Child</value>
+  </data>
+  <data name="Text_TreeNodeCollectionEditor_addRootButton" xml:space="preserve">
+    <value>Add &amp;Root</value>
+  </data>
+  <data name="Text_TreeNodeCollectionEditor_EditorForm" xml:space="preserve">
+    <value>TreeNode Editor</value>
+  </data>
+  <data name="Text_TreeNodeCollectionEditor_mainTitle" xml:space="preserve">
+    <value>Select a node to edit:</value>
+  </data>
+  <data name="Text_TreeNodeCollectionEditor_node" xml:space="preserve">
+    <value>Node</value>
+  </data>
+  <data name="Text_TreeNodeCollectionEditor_propertyTitle" xml:space="preserve">
+    <value>{0} properties:</value>
+  </data>
+  <data name="Text_TreeNodeCollectionEditor_propertyTitleNone" xml:space="preserve">
+    <value>Properties:</value>
+  </data>
+</root>

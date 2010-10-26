@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B2336B07-4953-475E-8B0B-D8E73E5A83EB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>FakeIconEditor.My.MyApplication</StartupObject>
+    <RootNamespace>FakeIconEditor</RootNamespace>
+    <AssemblyName>FakeIconEditor</AssemblyName>
+    <MyType>WindowsForms</MyType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>FakeIconEditor.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>FakeIconEditor.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BlendForm.Designer.vb">
+      <DependentUpon>BlendForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BlendForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ColorEventArgs.vb" />
+    <Compile Include="ColorPanel.Designer.vb">
+      <DependentUpon>ColorPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ColorPanel.vb">
+    </Compile>
+    <Compile Include="MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PaletteForm.Designer.vb">
+      <DependentUpon>PaletteForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PaletteForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BlendForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BlendForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaletteForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PaletteForm.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\Controls\Genetibase.Shared.Controls.Design\Genetibase.Shared.Controls.Design.csproj">
+      <Project>{C4E55216-11FF-4CEF-AF80-7E4EE90BC518}</Project>
+      <Name>Genetibase.Shared.Controls.Design</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Controls\Genetibase.Shared.Controls\Genetibase.Shared.Controls.csproj">
+      <Project>{7AFBEE90-61C7-46A9-95B8-67373C1C6F4D}</Project>
+      <Name>Genetibase.Shared.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Controls\Genetibase.Shared.Design\Genetibase.Shared.Design.csproj">
+      <Project>{50EE44FC-D51B-471E-A199-15621498ECA7}</Project>
+      <Name>Genetibase.Shared.Design</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Controls\Genetibase.Shared\Genetibase.Shared.csproj">
+      <Project>{A7A02558-58A0-4333-BFAF-77CB49DE17F0}</Project>
+      <Name>Genetibase.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Controls\Genetibase.SmoothControls.Design\Genetibase.SmoothControls.Design.csproj">
+      <Project>{6762F6AB-CDB1-4327-B447-AAB15637FADE}</Project>
+      <Name>Genetibase.SmoothControls.Design</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Controls\Genetibase.SmoothControls\Genetibase.SmoothControls.csproj">
+      <Project>{057B6D79-27DC-4CE6-9752-F0F3A3094D3E}</Project>
+      <Name>Genetibase.SmoothControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Controls\Genetibase.Win32\Genetibase.Win32.csproj">
+      <Project>{8E94E64C-52F7-4865-ACF1-3FEC8F61B531}</Project>
+      <Name>Genetibase.Win32</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

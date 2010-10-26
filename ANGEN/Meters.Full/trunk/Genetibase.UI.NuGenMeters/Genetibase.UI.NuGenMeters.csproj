@@ -1,0 +1,2534 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9A7BCC71-B194-432B-8045-9F7792D5F8E8}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Genetibase.UI.NuGenMeters.Full</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Genetibase.UI.NuGenMeters</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>doc\Genetibase.UI.NuGenMeters.xml</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>2</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>doc\Genetibase.UI.NuGenMeters.xml</DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ComponentModel\NuGenSRCategoryAttribute.cs" />
+    <Compile Include="ComponentModel\NuGenSRDescriptionAttribute.cs" />
+    <Compile Include="Design\NuGenInstanceNameConverter.cs" />
+    <Compile Include="INuGenCounter.cs" />
+    <Compile Include="JobObjectDetails\NuGenCreatingProcessIdGraph.cs" />
+    <Compile Include="JobObjectDetails\NuGenCreatingProcessIdMeter.cs" />
+    <Compile Include="JobObjectDetails\NuGenElapsedTimeGraph.cs" />
+    <Compile Include="JobObjectDetails\NuGenElapsedTimeMeter.cs" />
+    <Compile Include="JobObjectDetails\NuGenHandleCountGraph.cs" />
+    <Compile Include="JobObjectDetails\NuGenHandleCountMeter.cs" />
+    <Compile Include="JobObjectDetails\NuGenIdProcessGraph.cs" />
+    <Compile Include="JobObjectDetails\NuGenIdProcessMeter.cs" />
+    <Compile Include="JobObjectDetails\NuGenIoDataBytesPerSecGraph.cs" />
+    <Compile Include="JobObjectDetails\NuGenIoDataBytesPerSecMeter.cs" />
+    <Compile Include="JobObjectDetails\NuGenIoDataOperationsPerSecGraph.cs" />
+    <Compile Include="JobObjectDetails\NuGenIoDataOperationsPerSecMeter.cs" />
+    <Compile Include="JobObjectDetails\NuGenIoOtherBytesPerSecGraph.cs" />
+    <Compile Include="JobObjectDetails\NuGenIoOtherBytesPerSecMeter.cs" />
+    <Compile Include="JobObjectDetails\NuGenIoOtherOperationsPerSecGraph.cs" />
+    <Compile Include="JobObjectDetails\NuGenIoOtherOperationsPerSecMeter.cs" />
+    <Compile Include="JobObjectDetails\NuGenIoReadBytesPerSecGraph.cs" />
+    <Compile Include="JobObjectDetails\NuGenIoReadBytesPerSecMeter.cs" />
+    <Compile Include="JobObjectDetails\NuGenIoReadOperationsPerSecGraph.cs" />
+    <Compile Include="JobObjectDetails\NuGenIoReadOperationsPerSecMeter.cs" />
+    <Compile Include="JobObjectDetails\NuGenIoWriteBytesPerSecGraph.cs" />
+    <Compile Include="JobObjectDetails\NuGenIoWriteBytesPerSecMeter.cs" />
+    <Compile Include="JobObjectDetails\NuGenIoWriteOperationsPerSecGraph.cs" />
+    <Compile Include="JobObjectDetails\NuGenIoWriteOperationsPerSecMeter.cs" />
+    <Compile Include="JobObjectDetails\NuGenPageFaultsPerSecGraph.cs" />
+    <Compile Include="JobObjectDetails\NuGenPageFaultsPerSecMeter.cs" />
+    <Compile Include="JobObjectDetails\NuGenPageFileBytesGraph.cs" />
+    <Compile Include="JobObjectDetails\NuGenPageFileBytesMeter.cs" />
+    <Compile Include="JobObjectDetails\NuGenPageFileBytesPeakGraph.cs" />
+    <Compile Include="JobObjectDetails\NuGenPageFileBytesPeakMeter.cs" />
+    <Compile Include="JobObjectDetails\NuGenPercentPrivilegedTimeGraph.cs" />
+    <Compile Include="JobObjectDetails\NuGenPercentPrivilegedTimeMeter.cs" />
+    <Compile Include="JobObjectDetails\NuGenPercentProcessorTimeGraph.cs" />
+    <Compile Include="JobObjectDetails\NuGenPercentProcessorTimeMeter.cs" />
+    <Compile Include="JobObjectDetails\NuGenPercentUserTimeGraph.cs" />
+    <Compile Include="JobObjectDetails\NuGenPercentUserTimeMeter.cs" />
+    <Compile Include="JobObjectDetails\NuGenPoolNonpagedBytesGraph.cs" />
+    <Compile Include="JobObjectDetails\NuGenPoolNonpagedBytesMeter.cs" />
+    <Compile Include="JobObjectDetails\NuGenPoolPagedBytesGraph.cs" />
+    <Compile Include="JobObjectDetails\NuGenPoolPagedBytesMeter.cs" />
+    <Compile Include="JobObjectDetails\NuGenPriorityBaseGraph.cs" />
+    <Compile Include="JobObjectDetails\NuGenPriorityBaseMeter.cs" />
+    <Compile Include="JobObjectDetails\NuGenPrivateBytesGraph.cs" />
+    <Compile Include="JobObjectDetails\NuGenPrivateBytesMeter.cs" />
+    <Compile Include="JobObjectDetails\NuGenThreadCountGraph.cs" />
+    <Compile Include="JobObjectDetails\NuGenThreadCountMeter.cs" />
+    <Compile Include="JobObjectDetails\NuGenVirtualBytesGraph.cs" />
+    <Compile Include="JobObjectDetails\NuGenVirtualBytesMeter.cs" />
+    <Compile Include="JobObjectDetails\NuGenVirtualBytesPeakGraph.cs" />
+    <Compile Include="JobObjectDetails\NuGenVirtualBytesPeakMeter.cs" />
+    <Compile Include="JobObjectDetails\NuGenWorkingSetGraph.cs" />
+    <Compile Include="JobObjectDetails\NuGenWorkingSetMeter.cs" />
+    <Compile Include="JobObjectDetails\NuGenWorkingSetPeakGraph.cs" />
+    <Compile Include="JobObjectDetails\NuGenWorkingSetPeakMeter.cs" />
+    <Compile Include="JobObject\NuGenCurrentPercentKernelModeTimeGraph.cs" />
+    <Compile Include="JobObject\NuGenCurrentPercentKernelModeTimeMeter.cs" />
+    <Compile Include="JobObject\NuGenCurrentPercentProcessorTimeGraph.cs" />
+    <Compile Include="JobObject\NuGenCurrentPercentProcessorTimeMeter.cs" />
+    <Compile Include="JobObject\NuGenCurrentPercentUserModeTimeGraph.cs" />
+    <Compile Include="JobObject\NuGenCurrentPercentUserModeTimeMeter.cs" />
+    <Compile Include="JobObject\NuGenPagesPerSecGraph.cs" />
+    <Compile Include="JobObject\NuGenPagesPerSecMeter.cs" />
+    <Compile Include="JobObject\NuGenProcessCountActiveGraph.cs" />
+    <Compile Include="JobObject\NuGenProcessCountActiveMeter.cs" />
+    <Compile Include="JobObject\NuGenProcessCountTerminatedGraph.cs" />
+    <Compile Include="JobObject\NuGenProcessCountTerminatedMeter.cs" />
+    <Compile Include="JobObject\NuGenProcessCountTotalGraph.cs" />
+    <Compile Include="JobObject\NuGenProcessCountTotalMeter.cs" />
+    <Compile Include="JobObject\NuGenThisPeriodMSecKernelModeGraph.cs" />
+    <Compile Include="JobObject\NuGenThisPeriodMSecKernelModeMeter.cs" />
+    <Compile Include="JobObject\NuGenThisPeriodMSecProcessorGraph.cs" />
+    <Compile Include="JobObject\NuGenThisPeriodMSecProcessorMeter.cs" />
+    <Compile Include="JobObject\NuGenThisPeriodMSecUserModeGraph.cs" />
+    <Compile Include="JobObject\NuGenThisPeriodMSecUserModeMeter.cs" />
+    <Compile Include="JobObject\NuGenTotalMSecKernelModeGraph.cs" />
+    <Compile Include="JobObject\NuGenTotalMSecKernelModeMeter.cs" />
+    <Compile Include="JobObject\NuGenTotalMSecProcessorGraph.cs" />
+    <Compile Include="JobObject\NuGenTotalMSecProcessorMeter.cs" />
+    <Compile Include="JobObject\NuGenTotalMSecUserModeGraph.cs" />
+    <Compile Include="JobObject\NuGenTotalMSecUserModeMeter.cs" />
+    <Compile Include="LogicalDisk\NuGenAvgDiskBytesPerReadGraph.cs" />
+    <Compile Include="LogicalDisk\NuGenAvgDiskBytesPerReadMeter.cs" />
+    <Compile Include="LogicalDisk\NuGenAvgDiskBytesPerTransferGraph.cs" />
+    <Compile Include="LogicalDisk\NuGenAvgDiskBytesPerTransferMeter.cs" />
+    <Compile Include="LogicalDisk\NuGenAvgDiskBytesPerWriteGraph.cs" />
+    <Compile Include="LogicalDisk\NuGenAvgDiskBytesPerWriteMeter.cs" />
+    <Compile Include="LogicalDisk\NuGenAvgDiskQueueLengthGraph.cs" />
+    <Compile Include="LogicalDisk\NuGenAvgDiskQueueLengthMeter.cs" />
+    <Compile Include="LogicalDisk\NuGenAvgDiskReadQueueLengthGraph.cs" />
+    <Compile Include="LogicalDisk\NuGenAvgDiskReadQueueLengthMeter.cs" />
+    <Compile Include="LogicalDisk\NuGenAvgDiskSecPerReadGraph.cs" />
+    <Compile Include="LogicalDisk\NuGenAvgDiskSecPerReadMeter.cs" />
+    <Compile Include="LogicalDisk\NuGenAvgDiskSecPerTransferGraph.cs" />
+    <Compile Include="LogicalDisk\NuGenAvgDiskSecPerTransferMeter.cs" />
+    <Compile Include="LogicalDisk\NuGenAvgDiskSecPerWriteGraph.cs" />
+    <Compile Include="LogicalDisk\NuGenAvgDiskSecPerWriteMeter.cs" />
+    <Compile Include="LogicalDisk\NuGenAvgDiskWriteQueueLengthGraph.cs" />
+    <Compile Include="LogicalDisk\NuGenAvgDiskWriteQueueLengthMeter.cs" />
+    <Compile Include="LogicalDisk\NuGenCurrentDiskQueueLengthGraph.cs" />
+    <Compile Include="LogicalDisk\NuGenCurrentDiskQueueLengthMeter.cs" />
+    <Compile Include="LogicalDisk\NuGenDiskBytesPerSecGraph.cs" />
+    <Compile Include="LogicalDisk\NuGenDiskBytesPerSecMeter.cs" />
+    <Compile Include="LogicalDisk\NuGenDiskReadBytesPerSecGraph.cs" />
+    <Compile Include="LogicalDisk\NuGenDiskReadBytesPerSecMeter.cs" />
+    <Compile Include="LogicalDisk\NuGenDiskReadsPerSecGraph.cs" />
+    <Compile Include="LogicalDisk\NuGenDiskReadsPerSecMeter.cs" />
+    <Compile Include="LogicalDisk\NuGenDiskTransfersPerSecGraph.cs" />
+    <Compile Include="LogicalDisk\NuGenDiskTransfersPerSecMeter.cs" />
+    <Compile Include="LogicalDisk\NuGenDiskWriteBytesPerSecGraph.cs" />
+    <Compile Include="LogicalDisk\NuGenDiskWriteBytesPerSecMeter.cs" />
+    <Compile Include="LogicalDisk\NuGenDiskWritesPerSecGraph.cs" />
+    <Compile Include="LogicalDisk\NuGenDiskWritesPerSecMeter.cs" />
+    <Compile Include="LogicalDisk\NuGenFreeMegabytesGraph.cs" />
+    <Compile Include="LogicalDisk\NuGenFreeMegabytesMeter.cs" />
+    <Compile Include="LogicalDisk\NuGenPercentDiskReadTimeGraph.cs" />
+    <Compile Include="LogicalDisk\NuGenPercentDiskReadTimeMeter.cs" />
+    <Compile Include="LogicalDisk\NuGenPercentDiskTimeGraph.cs" />
+    <Compile Include="LogicalDisk\NuGenPercentDiskTimeMeter.cs" />
+    <Compile Include="LogicalDisk\NuGenPercentDiskWriteTimeGraph.cs" />
+    <Compile Include="LogicalDisk\NuGenPercentDiskWriteTimeMeter.cs" />
+    <Compile Include="LogicalDisk\NuGenPercentFreeSpaceGraph.cs" />
+    <Compile Include="LogicalDisk\NuGenPercentFreeSpaceMeter.cs" />
+    <Compile Include="LogicalDisk\NuGenPercentIdleTimeGraph.cs" />
+    <Compile Include="LogicalDisk\NuGenPercentIdleTimeMeter.cs" />
+    <Compile Include="LogicalDisk\NuGenSplitIoPerSecGraph.cs" />
+    <Compile Include="LogicalDisk\NuGenSplitIoPerSecMeter.cs" />
+    <Compile Include="NbtConnection\NuGenBytesReceivedPerSecGraph.cs" />
+    <Compile Include="NbtConnection\NuGenBytesReceivedPerSecMeter.cs" />
+    <Compile Include="NbtConnection\NuGenBytesSentPerSecGraph.cs" />
+    <Compile Include="NbtConnection\NuGenBytesSentPerSecMeter.cs" />
+    <Compile Include="NbtConnection\NuGenBytesTotalPerSecGraph.cs" />
+    <Compile Include="NbtConnection\NuGenBytesTotalPerSecMeter.cs" />
+    <Compile Include="NetClrExceptions\NuGenNumberOfExcepsThrownGraph.cs" />
+    <Compile Include="NetClrExceptions\NuGenNumberOfExcepsThrownMeter.cs" />
+    <Compile Include="NetClrExceptions\NuGenNumberOfExcepsThrownPerSecGraph.cs" />
+    <Compile Include="NetClrExceptions\NuGenNumberOfExcepsThrownPerSecMeter.cs" />
+    <Compile Include="NetClrExceptions\NuGenNumberOfFiltersPerSecGraph.cs" />
+    <Compile Include="NetClrExceptions\NuGenNumberOfFiltersPerSecMeter.cs" />
+    <Compile Include="NetClrExceptions\NuGenNumberOfFinallysPerSecGraph.cs" />
+    <Compile Include="NetClrExceptions\NuGenNumberOfFinallysPerSecMeter.cs" />
+    <Compile Include="NetClrExceptions\NuGenThrowToCatchDepthGraph.cs" />
+    <Compile Include="NetClrExceptions\NuGenThrowToCatchDepthMeter.cs" />
+    <Compile Include="NetClrInterop\NuGenNumberOfCCWsGraph.cs" />
+    <Compile Include="NetClrInterop\NuGenNumberOfCCWsMeter.cs" />
+    <Compile Include="NetClrInterop\NuGenNumberOfMarshallingGraph.cs" />
+    <Compile Include="NetClrInterop\NuGenNumberOfMarshallingMeter.cs" />
+    <Compile Include="NetClrInterop\NuGenNumberOfStubsGraph.cs" />
+    <Compile Include="NetClrInterop\NuGenNumberOfStubsMeter.cs" />
+    <Compile Include="NetClrInterop\NuGenNumberOfTlbExportsPerSecGraph.cs" />
+    <Compile Include="NetClrInterop\NuGenNumberOfTlbExportsPerSecMeter.cs" />
+    <Compile Include="NetClrInterop\NuGenNumberOfTlbImportsPerSecGraph.cs" />
+    <Compile Include="NetClrInterop\NuGenNumberOfTlbImportsPerSecMeter.cs" />
+    <Compile Include="NetClrJit\NuGenILBytesJittedPerSecGraph.cs" />
+    <Compile Include="NetClrJit\NuGenILBytesJittedPerSecMeter.cs" />
+    <Compile Include="NetClrJit\NuGenNumberOfILBytesJittedGraph.cs" />
+    <Compile Include="NetClrJit\NuGenNumberOfILBytesJittedMeter.cs" />
+    <Compile Include="NetClrJit\NuGenNumberOfMethodsJittedGraph.cs" />
+    <Compile Include="NetClrJit\NuGenNumberOfMethodsJittedMeter.cs" />
+    <Compile Include="NetClrJit\NuGenPercentTimeInJitGraph.cs" />
+    <Compile Include="NetClrJit\NuGenPercentTimeInJitMeter.cs" />
+    <Compile Include="NetClrJit\NuGenStandardJitFailuresGraph.cs" />
+    <Compile Include="NetClrJit\NuGenStandardJitFailuresMeter.cs" />
+    <Compile Include="NetClrJit\NuGenTotalNumberOfILBytesJittedGraph.cs" />
+    <Compile Include="NetClrJit\NuGenTotalNumberOfILBytesJittedMeter.cs" />
+    <Compile Include="NetClrLoading\NuGenAssemblySearchLengthGraph.cs" />
+    <Compile Include="NetClrLoading\NuGenAssemblySearchLengthMeter.cs" />
+    <Compile Include="NetClrLoading\NuGenBytesInLoaderHeapGraph.cs" />
+    <Compile Include="NetClrLoading\NuGenBytesInLoaderHeapMeter.cs" />
+    <Compile Include="NetClrLoading\NuGenCurrentAppDomainsGraph.cs" />
+    <Compile Include="NetClrLoading\NuGenCurrentAppDomainsMeter.cs" />
+    <Compile Include="NetClrLoading\NuGenCurrentAssembliesGraph.cs" />
+    <Compile Include="NetClrLoading\NuGenCurrentAssembliesMeter.cs" />
+    <Compile Include="NetClrLoading\NuGenCurrentClassesLoadedGraph.cs" />
+    <Compile Include="NetClrLoading\NuGenCurrentClassesLoadedMeter.cs" />
+    <Compile Include="NetClrLoading\NuGenPercentTimeLoadingGraph.cs" />
+    <Compile Include="NetClrLoading\NuGenPercentTimeLoadingMeter.cs" />
+    <Compile Include="NetClrLoading\NuGenRateOfAppDomainsGraph.cs" />
+    <Compile Include="NetClrLoading\NuGenRateOfAppDomainsMeter.cs" />
+    <Compile Include="NetClrLoading\NuGenRateOfAppDomainsUnloadedGraph.cs" />
+    <Compile Include="NetClrLoading\NuGenRateOfAppDomainsUnloadedMeter.cs" />
+    <Compile Include="NetClrLoading\NuGenRateOfAssembliesGraph.cs" />
+    <Compile Include="NetClrLoading\NuGenRateOfAssembliesMeter.cs" />
+    <Compile Include="NetClrLoading\NuGenRateOfClassesLoadedGraph.cs" />
+    <Compile Include="NetClrLoading\NuGenRateOfClassesLoadedMeter.cs" />
+    <Compile Include="NetClrLoading\NuGenRateOfLoadFailuresGraph.cs" />
+    <Compile Include="NetClrLoading\NuGenRateOfLoadFailuresMeter.cs" />
+    <Compile Include="NetClrLoading\NuGenTotalAppDomainsGraph.cs" />
+    <Compile Include="NetClrLoading\NuGenTotalAppDomainsMeter.cs" />
+    <Compile Include="NetClrLoading\NuGenTotalAssembliesGraph.cs" />
+    <Compile Include="NetClrLoading\NuGenTotalAssembliesMeter.cs" />
+    <Compile Include="NetClrLoading\NuGenTotalClassesLoadedGraph.cs" />
+    <Compile Include="NetClrLoading\NuGenTotalClassesLoadedMeter.cs" />
+    <Compile Include="NetClrLoading\NuGenTotalNumberOfLoadFailuresGraph.cs" />
+    <Compile Include="NetClrLoading\NuGenTotalNumberOfLoadFailuresMeter.cs" />
+    <Compile Include="NetClrLocksAndThreads\NuGenContentionRatePerSecGraph.cs" />
+    <Compile Include="NetClrLocksAndThreads\NuGenContentionRatePerSecMeter.cs" />
+    <Compile Include="NetClrLocksAndThreads\NuGenCurrentQueueLengthGraph.cs" />
+    <Compile Include="NetClrLocksAndThreads\NuGenCurrentQueueLengthMeter.cs" />
+    <Compile Include="NetClrLocksAndThreads\NuGenNumberOfCurrentLogicalThreadsGraph.cs" />
+    <Compile Include="NetClrLocksAndThreads\NuGenNumberOfCurrentLogicalThreadsMeter.cs" />
+    <Compile Include="NetClrLocksAndThreads\NuGenNumberOfCurrentPhysicalThreadsGraph.cs" />
+    <Compile Include="NetClrLocksAndThreads\NuGenNumberOfCurrentPhysicalThreadsMeter.cs" />
+    <Compile Include="NetClrLocksAndThreads\NuGenNumberOfCurrentRecognizedThreadsGraph.cs" />
+    <Compile Include="NetClrLocksAndThreads\NuGenNumberOfCurrentRecognizedThreadsMeter.cs" />
+    <Compile Include="NetClrLocksAndThreads\NuGenQueueLengthPeakGraph.cs" />
+    <Compile Include="NetClrLocksAndThreads\NuGenQueueLengthPeakMeter.cs" />
+    <Compile Include="NetClrLocksAndThreads\NuGenQueueLengthPerSecGraph.cs" />
+    <Compile Include="NetClrLocksAndThreads\NuGenQueueLengthPerSecMeter.cs" />
+    <Compile Include="NetClrLocksAndThreads\NuGenRateOfRecognizedThreadsPerSecGraph.cs" />
+    <Compile Include="NetClrLocksAndThreads\NuGenRateOfRecognizedThreadsPerSecMeter.cs" />
+    <Compile Include="NetClrLocksAndThreads\NuGenTotalNumberOfContentionsGraph.cs" />
+    <Compile Include="NetClrLocksAndThreads\NuGenTotalNumberOfContentionsMeter.cs" />
+    <Compile Include="NetClrMemory\NuGenAllocatedBytesPerSecGraph.cs" />
+    <Compile Include="NetClrMemory\NuGenAllocatedBytesPerSecMeter.cs" />
+    <Compile Include="NetClrMemory\NuGenFinalizationSurvivorsGraph.cs" />
+    <Compile Include="NetClrMemory\NuGenFinalizationSurvivorsMeter.cs" />
+    <Compile Include="NetClrMemory\NuGenGen0HeapSizeGraph.cs" />
+    <Compile Include="NetClrMemory\NuGenGen0HeapSizeMeter.cs" />
+    <Compile Include="NetClrMemory\NuGenGen0PromotedBytesPerSecGraph.cs" />
+    <Compile Include="NetClrMemory\NuGenGen0PromotedBytesPerSecMeter.cs" />
+    <Compile Include="NetClrMemory\NuGenGen2HeapSizeGraph.cs" />
+    <Compile Include="NetClrMemory\NuGenGen2HeapSizeMeter.cs" />
+    <Compile Include="NetClrMemory\NuGenLargeObjectHeapSizeGraph.cs" />
+    <Compile Include="NetClrMemory\NuGenLargeObjectHeapSizeMeter.cs" />
+    <Compile Include="NetClrMemory\NuGenNumberOfBytesInAllHeapsGraph.cs" />
+    <Compile Include="NetClrMemory\NuGenNumberOfBytesInAllHeapsMeter.cs" />
+    <Compile Include="NetClrMemory\NuGenNumberOfGCHandlesGraph.cs" />
+    <Compile Include="NetClrMemory\NuGenNumberOfGCHandlesMeter.cs" />
+    <Compile Include="NetClrMemory\NuGenNumberOfGen0CollectionsGraph.cs" />
+    <Compile Include="NetClrMemory\NuGenNumberOfGen0CollectionsMeter.cs" />
+    <Compile Include="NetClrMemory\NuGenNumberOfGen1CollectionsGraph.cs" />
+    <Compile Include="NetClrMemory\NuGenNumberOfGen1CollectionsMeter.cs" />
+    <Compile Include="NetClrMemory\NuGenNumberOfGen2CollectionsGraph.cs" />
+    <Compile Include="NetClrMemory\NuGenNumberOfGen2CollectionsMeter.cs" />
+    <Compile Include="NetClrMemory\NuGenNumberOfInducedGCGraph.cs" />
+    <Compile Include="NetClrMemory\NuGenNumberOfInducedGCMeter.cs" />
+    <Compile Include="NetClrMemory\NuGenNumberOfPinnedObjectsGraph.cs" />
+    <Compile Include="NetClrMemory\NuGenNumberOfPinnedObjectsMeter.cs" />
+    <Compile Include="NetClrMemory\NuGenNumberOfSinkBlocksInUseGraph.cs" />
+    <Compile Include="NetClrMemory\NuGenNumberOfSinkBlocksInUseMeter.cs" />
+    <Compile Include="NetClrMemory\NuGenNumberOfTotalCommittedBytesGraph.cs" />
+    <Compile Include="NetClrMemory\NuGenNumberOfTotalCommittedBytesMeter.cs" />
+    <Compile Include="NetClrMemory\NuGenNumberOfTotalReservedBytesGraph.cs" />
+    <Compile Include="NetClrMemory\NuGenNumberOfTotalReservedBytesMeter.cs" />
+    <Compile Include="NetClrMemory\NuGenPercentTimeInGCGraph.cs" />
+    <Compile Include="NetClrMemory\NuGenPercentTimeInGCMeter.cs" />
+    <Compile Include="NetClrMemory\NuGenPromotedFinalizationMemoryFromGen0Graph.cs" />
+    <Compile Include="NetClrMemory\NuGenPromotedFinalizationMemoryFromGen0Meter.cs" />
+    <Compile Include="NetClrMemory\NuGenPromotedFinalizationMemoryFromGen1Graph.cs" />
+    <Compile Include="NetClrMemory\NuGenPromotedFinalizationMemoryFromGen1Meter.cs" />
+    <Compile Include="NetClrMemory\NuGenPromotedMemoryFromGen0Graph.cs" />
+    <Compile Include="NetClrMemory\NuGenPromotedMemoryFromGen0Meter.cs" />
+    <Compile Include="NetClrMemory\NuGenPromotedMemoryFromGen1Graph.cs" />
+    <Compile Include="NetClrMemory\NuGenPromotedMemoryFromGen1Meter.cs" />
+    <Compile Include="NetClrRemoting\NuGenChannelsGraph.cs" />
+    <Compile Include="NetClrRemoting\NuGenChannelsMeter.cs" />
+    <Compile Include="NetClrRemoting\NuGenContextBoundClassesLoadedGraph.cs" />
+    <Compile Include="NetClrRemoting\NuGenContextBoundClassesLoadedMeter.cs" />
+    <Compile Include="NetClrRemoting\NuGenContextBoundObjectsAllocPerSecGraph.cs" />
+    <Compile Include="NetClrRemoting\NuGenContextBoundObjectsAllocPerSecMeter.cs" />
+    <Compile Include="NetClrRemoting\NuGenContextProxiesGraph.cs" />
+    <Compile Include="NetClrRemoting\NuGenContextProxiesMeter.cs" />
+    <Compile Include="NetClrRemoting\NuGenContextsGraph.cs" />
+    <Compile Include="NetClrRemoting\NuGenContextsMeter.cs" />
+    <Compile Include="NetClrRemoting\NuGenRemoteCallsPerSecGraph.cs" />
+    <Compile Include="NetClrRemoting\NuGenRemoteCallsPerSecMeter.cs" />
+    <Compile Include="NetClrRemoting\NuGenTotalRemoteCallsGraph.cs" />
+    <Compile Include="NetClrRemoting\NuGenTotalRemoteCallsMeter.cs" />
+    <Compile Include="NetClrSecurity\NuGenNumberOfLinkTimeChecksGraph.cs" />
+    <Compile Include="NetClrSecurity\NuGenNumberOfLinkTimeChecksMeter.cs" />
+    <Compile Include="NetClrSecurity\NuGenPercentTimeInRTCecksGraph.cs" />
+    <Compile Include="NetClrSecurity\NuGenPercentTimeInRTChecksMeter.cs" />
+    <Compile Include="NetClrSecurity\NuGenPercentTimeInSigAuthenticatingGraph.cs" />
+    <Compile Include="NetClrSecurity\NuGenPercentTimeInSigAuthenticatingMeter.cs" />
+    <Compile Include="NetClrSecurity\NuGenStackWalkDepthGraph.cs" />
+    <Compile Include="NetClrSecurity\NuGenStackWalkDepthMeter.cs" />
+    <Compile Include="NetClrSecurity\NuGenTotalRuntimeChecksGraph.cs" />
+    <Compile Include="NetClrSecurity\NuGenTotalRuntimeChecksMeter.cs" />
+    <Compile Include="NuGenBackgroundStyle.cs" />
+    <Compile Include="NuGenCaptionTextPositionStyle.cs" />
+    <Compile Include="Design\NuGenCategoryNameConverter.cs" />
+    <Compile Include="Design\NuGenCounterNameConverter.cs" />
+    <Compile Include="NuGenProgressTextPositionStyle.cs" />
+    <Compile Include="NuGenValueRepresentation.cs" />
+    <Compile Include="PagingFile\NuGenPercentUsageGraph.cs" />
+    <Compile Include="PagingFile\NuGenPercentUsageMeter.cs" />
+    <Compile Include="PagingFile\NuGenPercentUsagePeakGraph.cs" />
+    <Compile Include="PagingFile\NuGenPercentUsagePeakMeter.cs" />
+    <Compile Include="PhysicalDisk\NuGenAvgDiskBytesPerReadGraph.cs" />
+    <Compile Include="PhysicalDisk\NuGenAvgDiskBytesPerReadMeter.cs" />
+    <Compile Include="PhysicalDisk\NuGenAvgDiskBytesPerTransferGraph.cs" />
+    <Compile Include="PhysicalDisk\NuGenAvgDiskBytesPerTransferMeter.cs" />
+    <Compile Include="PhysicalDisk\NuGenAvgDiskBytesPerWriteGraph.cs" />
+    <Compile Include="PhysicalDisk\NuGenAvgDiskBytesPerWriteMeter.cs" />
+    <Compile Include="PhysicalDisk\NuGenAvgDiskQueueLengthGraph.cs" />
+    <Compile Include="PhysicalDisk\NuGenAvgDiskQueueLengthMeter.cs" />
+    <Compile Include="PhysicalDisk\NuGenAvgDiskSecPerReadGraph.cs" />
+    <Compile Include="PhysicalDisk\NuGenAvgDiskSecPerReadMeter.cs" />
+    <Compile Include="PhysicalDisk\NuGenAvgDiskSecPerTransferGraph.cs" />
+    <Compile Include="PhysicalDisk\NuGenAvgDiskSecPerTransferMeter.cs" />
+    <Compile Include="PhysicalDisk\NugenAvgDiskSecPerWriteGraph.cs" />
+    <Compile Include="PhysicalDisk\NuGenAvgDiskSecPerWriteMeter.cs" />
+    <Compile Include="PhysicalDisk\NuGenAvgDiskWriteQueueLengthGraph.cs" />
+    <Compile Include="PhysicalDisk\NuGenAvgDiskWriteQueueLengthMeter.cs" />
+    <Compile Include="PhysicalDisk\NuGenCurrentDiskQueueLengthGraph.cs" />
+    <Compile Include="PhysicalDisk\NuGenCurrentDiskQueueLengthMeter.cs" />
+    <Compile Include="PhysicalDisk\NuGenDiskBytesPerSecGraph.cs" />
+    <Compile Include="PhysicalDisk\NuGenDiskBytesPerSecMeter.cs" />
+    <Compile Include="PhysicalDisk\NuGenDiskReadBytesPerSecGraph.cs" />
+    <Compile Include="PhysicalDisk\NuGenDiskReadBytesPerSecMeter.cs" />
+    <Compile Include="PhysicalDisk\NuGenDiskReadsPerSecGraph.cs" />
+    <Compile Include="PhysicalDisk\NuGenDiskReadsPerSecMeter.cs" />
+    <Compile Include="PhysicalDisk\NuGenDiskTransfersPerSecGraph.cs" />
+    <Compile Include="PhysicalDisk\NuGenDiskTransfersPerSecMeter.cs" />
+    <Compile Include="PhysicalDisk\NuGenDiskWriteBytesPerSecGraph.cs" />
+    <Compile Include="PhysicalDisk\NuGenDiskWriteBytesPerSecMeter.cs" />
+    <Compile Include="PhysicalDisk\NuGenDiskWritesPerSecGraph.cs" />
+    <Compile Include="PhysicalDisk\NuGenDiskWritesPerSecMeter.cs" />
+    <Compile Include="PhysicalDisk\NuGenPercentDiskReadTimeGraph.cs" />
+    <Compile Include="PhysicalDisk\NuGenPercentDiskReadTimeMeter.cs" />
+    <Compile Include="PhysicalDisk\NuGenPercentDiskTimeGraph.cs" />
+    <Compile Include="PhysicalDisk\NuGenPercentDiskTimeMeter.cs" />
+    <Compile Include="PhysicalDisk\NuGenPercentDiskWriteTimeGraph.cs" />
+    <Compile Include="PhysicalDisk\NuGenPercentDiskWriteTimeMeter.cs" />
+    <Compile Include="PhysicalDisk\NuGenPercentIdleTimeGraph.cs" />
+    <Compile Include="PhysicalDisk\NuGenPercentIdleTimeMeter.cs" />
+    <Compile Include="PhysicalDisk\NuGenSplitIoPerSecGraph.cs" />
+    <Compile Include="PhysicalDisk\NuGenSplitIoPerSecMeter.cs" />
+    <Compile Include="PrintQueue\NuGenAddNetworkPrinterCallsGraph.cs" />
+    <Compile Include="PrintQueue\NuGenAddNetworkPrinterCallsMeter.cs" />
+    <Compile Include="PrintQueue\NuGenBytesPrintedPerSecGraph.cs" />
+    <Compile Include="PrintQueue\NuGenBytesPrintedPerSecMeter.cs" />
+    <Compile Include="PrintQueue\NuGenEnumerateNetworkPrinterCallsGraph.cs" />
+    <Compile Include="PrintQueue\NuGenEnumerateNetworkPrinterCallsMeter.cs" />
+    <Compile Include="PrintQueue\NuGenJobErrorsGraph.cs" />
+    <Compile Include="PrintQueue\NuGenJobErrorsMeter.cs" />
+    <Compile Include="PrintQueue\NuGenJobSpoolingGraph.cs" />
+    <Compile Include="PrintQueue\NuGenJobSpoolingMeter.cs" />
+    <Compile Include="PrintQueue\NuGenMaxJobsSpoolingGraph.cs" />
+    <Compile Include="PrintQueue\NuGenMaxJobsSpoolingMeter.cs" />
+    <Compile Include="PrintQueue\NuGenMaxReferencesGraph.cs" />
+    <Compile Include="PrintQueue\NuGenMaxReferencesMeter.cs" />
+    <Compile Include="PrintQueue\NuGenNotReadyErrorsGraph.cs" />
+    <Compile Include="PrintQueue\NuGenNotReadyErrorsMeter.cs" />
+    <Compile Include="PrintQueue\NuGenOutOfPaperErrorsGraph.cs" />
+    <Compile Include="PrintQueue\NuGenOutOfPaperErrorsMeter.cs" />
+    <Compile Include="PrintQueue\NuGenReferencesGraph.cs" />
+    <Compile Include="PrintQueue\NuGenReferencesMeter.cs" />
+    <Compile Include="PrintQueue\NuGenTotalJobsPrintedGraph.cs" />
+    <Compile Include="PrintQueue\NuGenTotalJobsPrintedMeter.cs" />
+    <Compile Include="PrintQueue\NuGenTotalPagesPrintedGraph.cs" />
+    <Compile Include="PrintQueue\NuGenTotalPagesPrintedMeter.cs" />
+    <Compile Include="Processor\NuGenC1TransitionsPerSecGraph.cs" />
+    <Compile Include="Processor\NuGenC1TransitionsPerSecMeter.cs" />
+    <Compile Include="Processor\NuGenC2TransitionsPerSecGraph.cs" />
+    <Compile Include="Processor\NuGenC2TransitionsPerSecMeter.cs" />
+    <Compile Include="Processor\NuGenC3TransitionsPerSecGraph.cs" />
+    <Compile Include="Processor\NuGenC3TransitionsPerSecMeter.cs" />
+    <Compile Include="Processor\NuGenDpcRateGraph.cs" />
+    <Compile Include="Processor\NuGenDpcRateMeter.cs" />
+    <Compile Include="Processor\NuGenDPCsQueuedPerSecGraph.cs" />
+    <Compile Include="Processor\NuGenDPCsQueuedPerSecMeter.cs" />
+    <Compile Include="Processor\NuGenInterruptsPerSecGraph.cs" />
+    <Compile Include="Processor\NuGenInterruptsPerSecMeter.cs" />
+    <Compile Include="Processor\NuGenPercentC1TimeGraph.cs" />
+    <Compile Include="Processor\NuGenPercentC1TimeMeter.cs" />
+    <Compile Include="Processor\NuGenPercentC2TimeGraph.cs" />
+    <Compile Include="Processor\NuGenPercentC2TimeMeter.cs" />
+    <Compile Include="Processor\NuGenPercentC3TimeGraph.cs" />
+    <Compile Include="Processor\NuGenPercentC3TimeMeter.cs" />
+    <Compile Include="Processor\NuGenPercentDpcTimeGraph.cs" />
+    <Compile Include="Processor\NuGenPercentDpcTimeMeter.cs" />
+    <Compile Include="Processor\NuGenPercentIdleTimeGraph.cs" />
+    <Compile Include="Processor\NuGenPercentIdleTimeMeter.cs" />
+    <Compile Include="Processor\NuGenPercentInterruptTimeGraph.cs" />
+    <Compile Include="Processor\NuGenPercentInterruptTimeMeter.cs" />
+    <Compile Include="Processor\NuGenPercentPrivilegedTimeGraph.cs" />
+    <Compile Include="Processor\NuGenPercentPrivilegedTimeMeter.cs" />
+    <Compile Include="Processor\NuGenPercentProcessorTimeGraph.cs" />
+    <Compile Include="Processor\NuGenPercentProcessorTimeMeter.cs" />
+    <Compile Include="Processor\NuGenPercentUserTimeGraph.cs" />
+    <Compile Include="Processor\NuGenPercentUserTimeMeter.cs" />
+    <Compile Include="Process\NuGenCreatingProcessIdGraph.cs" />
+    <Compile Include="Process\NuGenCreatingProcessIdMeter.cs" />
+    <Compile Include="Process\NuGenElapsedTimeGraph.cs" />
+    <Compile Include="Process\NuGenElapsedTimeMeter.cs" />
+    <Compile Include="Process\NuGenHandleCountGraph.cs" />
+    <Compile Include="Process\NuGenHandleCountMeter.cs" />
+    <Compile Include="Process\NuGenIdProcessGraph.cs" />
+    <Compile Include="Process\NuGenIdProcessMeter.cs" />
+    <Compile Include="Process\NuGenIoDataBytesPerSecGraph.cs" />
+    <Compile Include="Process\NuGenIoDataBytesPerSecMeter.cs" />
+    <Compile Include="Process\NuGenIoDataOperationsPerSecGraph.cs" />
+    <Compile Include="Process\NuGenIoDataOperationsPerSecMeter.cs" />
+    <Compile Include="Process\NuGenIoOtherBytesPerSecGraph.cs" />
+    <Compile Include="Process\NuGenIoOtherBytesPerSecMeter.cs" />
+    <Compile Include="Process\NuGenIoOtherOperationsPerSecGraph.cs" />
+    <Compile Include="Process\NuGenIoOtherOperationsPerSecMeter.cs" />
+    <Compile Include="Process\NuGenIoReadBytesPerSecGraph.cs" />
+    <Compile Include="Process\NuGenIoReadBytesPerSecMeter.cs" />
+    <Compile Include="Process\NuGenIoReadOperationsPerSecGraph.cs" />
+    <Compile Include="Process\NuGenIoReadOperationsPerSecMeter.cs" />
+    <Compile Include="Process\NuGenIoWriteBytesPerSecGraph.cs" />
+    <Compile Include="Process\NuGenIoWriteBytesPerSecMeter.cs" />
+    <Compile Include="Process\NuGenIoWriteOperationsPerSecGraph.cs" />
+    <Compile Include="Process\NuGenIoWriteOperationsPerSecMeter.cs" />
+    <Compile Include="Process\NuGenPageFaultsPerSecGraph.cs" />
+    <Compile Include="Process\NuGenPageFaultsPerSecMeter.cs" />
+    <Compile Include="Process\NuGenPageFileBytesGraph.cs" />
+    <Compile Include="Process\NuGenPageFileBytesMeter.cs" />
+    <Compile Include="Process\NuGenPageFileBytesPeakGraph.cs" />
+    <Compile Include="Process\NuGenPageFileBytesPeakMeter.cs" />
+    <Compile Include="Process\NuGenPercentPrivilegedTimeGraph.cs" />
+    <Compile Include="Process\NuGenPercentPrivilegedTimeMeter.cs" />
+    <Compile Include="Process\NuGenPercentProcessorTimeGraph.cs" />
+    <Compile Include="Process\NuGenPercentProcessorTimeMeter.cs" />
+    <Compile Include="Process\NuGenPercentUserTimeGraph.cs" />
+    <Compile Include="Process\NuGenPercentUserTimeMeter.cs" />
+    <Compile Include="Process\NuGenPoolNonpagedBytesGraph.cs" />
+    <Compile Include="Process\NuGenPoolNonpagedBytesMeter.cs" />
+    <Compile Include="Process\NuGenPoolPagedBytesGraph.cs" />
+    <Compile Include="Process\NuGenPoolPagedBytesMeter.cs" />
+    <Compile Include="Process\NuGenPriorityBaseGraph.cs" />
+    <Compile Include="Process\NuGenPriorityBaseMeter.cs" />
+    <Compile Include="Process\NuGenPrivateBytesGraph.cs" />
+    <Compile Include="Process\NuGenPrivateBytesMeter.cs" />
+    <Compile Include="Process\NuGenThreadCountGraph.cs" />
+    <Compile Include="Process\NuGenThreadCountMeter.cs" />
+    <Compile Include="Process\NuGenVirtualBytesGraph.cs" />
+    <Compile Include="Process\NuGenVirtualBytesMeter.cs" />
+    <Compile Include="Process\NuGenVirtualBytesPeakGraph.cs" />
+    <Compile Include="Process\NuGenVirtualBytesPeakMeter.cs" />
+    <Compile Include="Process\NuGenWorkingSetGraph.cs" />
+    <Compile Include="Process\NuGenWorkingSetMeter.cs" />
+    <Compile Include="Process\NuGenWorkingSetPeakGraph.cs" />
+    <Compile Include="Process\NuGenWorkingSetPeakMeter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NuGenBarBase.cs">
+    </Compile>
+    <Compile Include="Design\NuGenBarBaseDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NuGenByteMeterBase.cs">
+    </Compile>
+    <Compile Include="NuGenCTLabel.cs">
+    </Compile>
+    <Compile Include="Design\NuGenCTLabelDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NuGenGenericBase.cs">
+    </Compile>
+    <Compile Include="Design\NuGenGenericBaseDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NuGenGraphBase.cs">
+    </Compile>
+    <Compile Include="Design\NuGenGraphBaseDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NuGenGraphGeneric.cs">
+    </Compile>
+    <Compile Include="Design\NuGenGraphGenericDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NuGenGraphHost.cs">
+    </Compile>
+    <Compile Include="Design\NuGenGraphHostDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NuGenGraphLine.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NuGenGraphLog.cs">
+    </Compile>
+    <Compile Include="Design\NuGenGraphLogDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NuGenLog.cs">
+    </Compile>
+    <Compile Include="NuGenMeterBar.cs">
+    </Compile>
+    <Compile Include="NuGenMeterBase.cs">
+    </Compile>
+    <Compile Include="Design\NuGenMeterBaseDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NuGenMeterGeneric.cs">
+    </Compile>
+    <Compile Include="NuGenPushGraphBar.cs">
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Thread\NuGenContextSwitchesPerSecGraph.cs" />
+    <Compile Include="Thread\NuGenContextSwithcesPerSecMeter.cs" />
+    <Compile Include="Thread\NuGenElapsedTimeGraph.cs" />
+    <Compile Include="Thread\NuGenElapsedTimeMeter.cs" />
+    <Compile Include="Thread\NuGenIdProcessGraph.cs" />
+    <Compile Include="Thread\NuGenIdProcessMeter.cs" />
+    <Compile Include="Thread\NuGenIdThreadGraph.cs" />
+    <Compile Include="Thread\NuGenIdThreadMeter.cs" />
+    <Compile Include="Thread\NuGenPercentPrivilegedTimeGraph.cs" />
+    <Compile Include="Thread\NuGenPercentPrivilegedTimeMeter.cs" />
+    <Compile Include="Thread\NuGenPercentProcessorTimeGraph.cs" />
+    <Compile Include="Thread\NuGenPercentProcessorTimeMeter.cs" />
+    <Compile Include="Thread\NuGenPercentUserTimeGraph.cs" />
+    <Compile Include="Thread\NuGenPercentUserTimeMeter.cs" />
+    <Compile Include="Thread\NuGenPriorityBaseGraph.cs" />
+    <Compile Include="Thread\NuGenPriorityBaseMeter.cs" />
+    <Compile Include="Thread\NuGenPriorityCurrentGraph.cs" />
+    <Compile Include="Thread\NuGenPriorityCurrentMeter.cs" />
+    <Compile Include="Thread\NuGenStartAddressGraph.cs" />
+    <Compile Include="Thread\NuGenStartAddressMeter.cs" />
+    <Compile Include="Thread\NuGenThreadStateGraph.cs" />
+    <Compile Include="Thread\NuGenThreadStateMeter.cs" />
+    <Compile Include="Thread\NuGenThreadWaitReasonGraph.cs" />
+    <Compile Include="Thread\NuGenThreadWaitReasonMeter.cs" />
+    <EmbeddedResource Include="JobObjectDetails\NuGenCreatingProcessIdGraph.resx">
+      <DependentUpon>NuGenCreatingProcessIdGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenCreatingProcessIdMeter.resx">
+      <DependentUpon>NuGenCreatingProcessIdMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenElapsedTimeGraph.resx">
+      <DependentUpon>NuGenElapsedTimeGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenElapsedTimeMeter.resx">
+      <DependentUpon>NuGenElapsedTimeMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenHandleCountGraph.resx">
+      <DependentUpon>NuGenHandleCountGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenHandleCountMeter.resx">
+      <DependentUpon>NuGenHandleCountMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenIdProcessGraph.resx">
+      <DependentUpon>NuGenIdProcessGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenIdProcessMeter.resx">
+      <DependentUpon>NuGenIdProcessMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenIoDataBytesPerSecGraph.resx">
+      <DependentUpon>NuGenIoDataBytesPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenIoDataBytesPerSecMeter.resx">
+      <DependentUpon>NuGenIoDataBytesPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenIoDataOperationsPerSecGraph.resx">
+      <DependentUpon>NuGenIoDataOperationsPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenIoDataOperationsPerSecMeter.resx">
+      <DependentUpon>NuGenIoDataOperationsPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenIoOtherBytesPerSecGraph.resx">
+      <DependentUpon>NuGenIoOtherBytesPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenIoOtherBytesPerSecMeter.resx">
+      <DependentUpon>NuGenIoOtherBytesPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenIoOtherOperationsPerSecGraph.resx">
+      <DependentUpon>NuGenIoOtherOperationsPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenIoOtherOperationsPerSecMeter.resx">
+      <DependentUpon>NuGenIoOtherOperationsPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenIoReadBytesPerSecGraph.resx">
+      <DependentUpon>NuGenIoReadBytesPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenIoReadBytesPerSecMeter.resx">
+      <DependentUpon>NuGenIoReadBytesPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenIoReadOperationsPerSecGraph.resx">
+      <DependentUpon>NuGenIoReadOperationsPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenIoReadOperationsPerSecMeter.resx">
+      <DependentUpon>NuGenIoReadOperationsPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenIoWriteBytesPerSecGraph.resx">
+      <DependentUpon>NuGenIoWriteBytesPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenIoWriteBytesPerSecMeter.resx">
+      <DependentUpon>NuGenIoWriteBytesPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenIoWriteOperationsPerSecGraph.resx">
+      <DependentUpon>NuGenIoWriteOperationsPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenIoWriteOperationsPerSecMeter.resx">
+      <DependentUpon>NuGenIoWriteOperationsPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenPageFaultsPerSecGraph.resx">
+      <DependentUpon>NuGenPageFaultsPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenPageFaultsPerSecMeter.resx">
+      <DependentUpon>NuGenPageFaultsPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenPageFileBytesGraph.resx">
+      <DependentUpon>NuGenPageFileBytesGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenPageFileBytesMeter.resx">
+      <DependentUpon>NuGenPageFileBytesMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenPageFileBytesPeakGraph.resx">
+      <DependentUpon>NuGenPageFileBytesPeakGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenPageFileBytesPeakMeter.resx">
+      <DependentUpon>NuGenPageFileBytesPeakMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenPercentPrivilegedTimeGraph.resx">
+      <DependentUpon>NuGenPercentPrivilegedTimeGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenPercentPrivilegedTimeMeter.resx">
+      <DependentUpon>NuGenPercentPrivilegedTimeMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenPercentProcessorTimeGraph.resx">
+      <DependentUpon>NuGenPercentProcessorTimeGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenPercentProcessorTimeMeter.resx">
+      <DependentUpon>NuGenPercentProcessorTimeMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenPercentUserTimeGraph.resx">
+      <DependentUpon>NuGenPercentUserTimeGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenPercentUserTimeMeter.resx">
+      <DependentUpon>NuGenPercentUserTimeMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenPoolNonpagedBytesGraph.resx">
+      <DependentUpon>NuGenPoolNonpagedBytesGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenPoolNonpagedBytesMeter.resx">
+      <DependentUpon>NuGenPoolNonpagedBytesMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenPoolPagedBytesGraph.resx">
+      <DependentUpon>NuGenPoolPagedBytesGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenPoolPagedBytesMeter.resx">
+      <DependentUpon>NuGenPoolPagedBytesMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenPriorityBaseGraph.resx">
+      <DependentUpon>NuGenPriorityBaseGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenPriorityBaseMeter.resx">
+      <DependentUpon>NuGenPriorityBaseMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenPrivateBytesGraph.resx">
+      <DependentUpon>NuGenPrivateBytesGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenPrivateBytesMeter.resx">
+      <DependentUpon>NuGenPrivateBytesMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenThreadCountGraph.resx">
+      <DependentUpon>NuGenThreadCountGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenThreadCountMeter.resx">
+      <DependentUpon>NuGenThreadCountMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenVirtualBytesGraph.resx">
+      <DependentUpon>NuGenVirtualBytesGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenVirtualBytesMeter.resx">
+      <DependentUpon>NuGenVirtualBytesMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenVirtualBytesPeakGraph.resx">
+      <DependentUpon>NuGenVirtualBytesPeakGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenVirtualBytesPeakMeter.resx">
+      <DependentUpon>NuGenVirtualBytesPeakMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenWorkingSetGraph.resx">
+      <DependentUpon>NuGenWorkingSetGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenWorkingSetMeter.resx">
+      <DependentUpon>NuGenWorkingSetMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenWorkingSetPeakGraph.resx">
+      <DependentUpon>NuGenWorkingSetPeakGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObjectDetails\NuGenWorkingSetPeakMeter.resx">
+      <DependentUpon>NuGenWorkingSetPeakMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObject\NuGenCurrentPercentKernelModeTimeGraph.resx">
+      <DependentUpon>NuGenCurrentPercentKernelModeTimeGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObject\NuGenCurrentPercentKernelModeTimeMeter.resx">
+      <DependentUpon>NuGenCurrentPercentKernelModeTimeMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObject\NuGenCurrentPercentProcessorTimeGraph.resx">
+      <DependentUpon>NuGenCurrentPercentProcessorTimeGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObject\NuGenCurrentPercentProcessorTimeMeter.resx">
+      <DependentUpon>NuGenCurrentPercentProcessorTimeMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObject\NuGenCurrentPercentUserModeTimeGraph.resx">
+      <DependentUpon>NuGenCurrentPercentUserModeTimeGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObject\NuGenCurrentPercentUserModeTimeMeter.resx">
+      <DependentUpon>NuGenCurrentPercentUserModeTimeMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObject\NuGenPagesPerSecGraph.resx">
+      <DependentUpon>NuGenPagesPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObject\NuGenPagesPerSecMeter.resx">
+      <DependentUpon>NuGenPagesPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObject\NuGenProcessCountActiveGraph.resx">
+      <DependentUpon>NuGenProcessCountActiveGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObject\NuGenProcessCountActiveMeter.resx">
+      <DependentUpon>NuGenProcessCountActiveMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObject\NuGenProcessCountTerminatedGraph.resx">
+      <DependentUpon>NuGenProcessCountTerminatedGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObject\NuGenProcessCountTerminatedMeter.resx">
+      <DependentUpon>NuGenProcessCountTerminatedMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObject\NuGenProcessCountTotalGraph.resx">
+      <DependentUpon>NuGenProcessCountTotalGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObject\NuGenProcessCountTotalMeter.resx">
+      <DependentUpon>NuGenProcessCountTotalMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObject\NuGenThisPeriodMSecKernelModeGraph.resx">
+      <DependentUpon>NuGenThisPeriodMSecKernelModeGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObject\NuGenThisPeriodMSecKernelModeMeter.resx">
+      <DependentUpon>NuGenThisPeriodMSecKernelModeMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObject\NuGenThisPeriodMSecProcessorGraph.resx">
+      <DependentUpon>NuGenThisPeriodMSecProcessorGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObject\NuGenThisPeriodMSecProcessorMeter.resx">
+      <DependentUpon>NuGenThisPeriodMSecProcessorMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObject\NuGenThisPeriodMSecUserModeGraph.resx">
+      <DependentUpon>NuGenThisPeriodMSecUserModeGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObject\NuGenThisPeriodMSecUserModeMeter.resx">
+      <DependentUpon>NuGenThisPeriodMSecUserModeMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObject\NuGenTotalMSecKernelModeGraph.resx">
+      <DependentUpon>NuGenTotalMSecKernelModeGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObject\NuGenTotalMSecKernelModeMeter.resx">
+      <DependentUpon>NuGenTotalMSecKernelModeMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObject\NuGenTotalMSecProcessorGraph.resx">
+      <DependentUpon>NuGenTotalMSecProcessorGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObject\NuGenTotalMSecProcessorMeter.resx">
+      <DependentUpon>NuGenTotalMSecProcessorMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObject\NuGenTotalMSecUserModeGraph.resx">
+      <DependentUpon>NuGenTotalMSecUserModeGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobObject\NuGenTotalMSecUserModeMeter.resx">
+      <DependentUpon>NuGenTotalMSecUserModeMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenAvgDiskBytesPerReadGraph.resx">
+      <DependentUpon>NuGenAvgDiskBytesPerReadGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenAvgDiskBytesPerReadMeter.resx">
+      <DependentUpon>NuGenAvgDiskBytesPerReadMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenAvgDiskBytesPerTransferGraph.resx">
+      <DependentUpon>NuGenAvgDiskBytesPerTransferGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenAvgDiskBytesPerTransferMeter.resx">
+      <DependentUpon>NuGenAvgDiskBytesPerTransferMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenAvgDiskBytesPerWriteGraph.resx">
+      <DependentUpon>NuGenAvgDiskBytesPerWriteGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenAvgDiskBytesPerWriteMeter.resx">
+      <DependentUpon>NuGenAvgDiskBytesPerWriteMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenAvgDiskQueueLengthGraph.resx">
+      <DependentUpon>NuGenAvgDiskQueueLengthGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenAvgDiskQueueLengthMeter.resx">
+      <DependentUpon>NuGenAvgDiskQueueLengthMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenAvgDiskReadQueueLengthGraph.resx">
+      <DependentUpon>NuGenAvgDiskReadQueueLengthGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenAvgDiskReadQueueLengthMeter.resx">
+      <DependentUpon>NuGenAvgDiskReadQueueLengthMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenAvgDiskSecPerReadGraph.resx">
+      <DependentUpon>NuGenAvgDiskSecPerReadGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenAvgDiskSecPerReadMeter.resx">
+      <DependentUpon>NuGenAvgDiskSecPerReadMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenAvgDiskSecPerTransferGraph.resx">
+      <DependentUpon>NuGenAvgDiskSecPerTransferGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenAvgDiskSecPerTransferMeter.resx">
+      <DependentUpon>NuGenAvgDiskSecPerTransferMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenAvgDiskSecPerWriteGraph.resx">
+      <DependentUpon>NuGenAvgDiskSecPerWriteGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenAvgDiskSecPerWriteMeter.resx">
+      <DependentUpon>NuGenAvgDiskSecPerWriteMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenAvgDiskWriteQueueLengthGraph.resx">
+      <DependentUpon>NuGenAvgDiskWriteQueueLengthGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenAvgDiskWriteQueueLengthMeter.resx">
+      <DependentUpon>NuGenAvgDiskWriteQueueLengthMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenCurrentDiskQueueLengthGraph.resx">
+      <DependentUpon>NuGenCurrentDiskQueueLengthGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenCurrentDiskQueueLengthMeter.resx">
+      <DependentUpon>NuGenCurrentDiskQueueLengthMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenDiskBytesPerSecGraph.resx">
+      <DependentUpon>NuGenDiskBytesPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenDiskBytesPerSecMeter.resx">
+      <DependentUpon>NuGenDiskBytesPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenDiskReadBytesPerSecGraph.resx">
+      <DependentUpon>NuGenDiskReadBytesPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenDiskReadBytesPerSecMeter.resx">
+      <DependentUpon>NuGenDiskReadBytesPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenDiskReadsPerSecGraph.resx">
+      <DependentUpon>NuGenDiskReadsPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenDiskReadsPerSecMeter.resx">
+      <DependentUpon>NuGenDiskReadsPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenDiskTransfersPerSecGraph.resx">
+      <DependentUpon>NuGenDiskTransfersPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenDiskTransfersPerSecMeter.resx">
+      <DependentUpon>NuGenDiskTransfersPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenDiskWriteBytesPerSecGraph.resx">
+      <DependentUpon>NuGenDiskWriteBytesPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenDiskWriteBytesPerSecMeter.resx">
+      <DependentUpon>NuGenDiskWriteBytesPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenDiskWritesPerSecGraph.resx">
+      <DependentUpon>NuGenDiskWritesPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenDiskWritesPerSecMeter.resx">
+      <DependentUpon>NuGenDiskWritesPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenFreeMegabytesGraph.resx">
+      <DependentUpon>NuGenFreeMegabytesGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenFreeMegabytesMeter.resx">
+      <DependentUpon>NuGenFreeMegabytesMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenPercentDiskReadTimeGraph.resx">
+      <DependentUpon>NuGenPercentDiskReadTimeGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenPercentDiskReadTimeMeter.resx">
+      <DependentUpon>NuGenPercentDiskReadTimeMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenPercentDiskTimeGraph.resx">
+      <DependentUpon>NuGenPercentDiskTimeGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenPercentDiskTimeMeter.resx">
+      <DependentUpon>NuGenPercentDiskTimeMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenPercentDiskWriteTimeGraph.resx">
+      <DependentUpon>NuGenPercentDiskWriteTimeGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenPercentDiskWriteTimeMeter.resx">
+      <DependentUpon>NuGenPercentDiskWriteTimeMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenPercentFreeSpaceGraph.resx">
+      <DependentUpon>NuGenPercentFreeSpaceGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenPercentFreeSpaceMeter.resx">
+      <DependentUpon>NuGenPercentFreeSpaceMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenPercentIdleTimeGraph.resx">
+      <DependentUpon>NuGenPercentIdleTimeGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenPercentIdleTimeMeter.resx">
+      <DependentUpon>NuGenPercentIdleTimeMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenSplitIoPerSecGraph.resx">
+      <DependentUpon>NuGenSplitIoPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicalDisk\NuGenSplitIoPerSecMeter.resx">
+      <DependentUpon>NuGenSplitIoPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NbtConnection\NuGenBytesReceivedPerSecGraph.resx">
+      <DependentUpon>NuGenBytesReceivedPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NbtConnection\NuGenBytesReceivedPerSecMeter.resx">
+      <DependentUpon>NuGenBytesReceivedPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NbtConnection\NuGenBytesSentPerSecGraph.resx">
+      <DependentUpon>NuGenBytesSentPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NbtConnection\NuGenBytesSentPerSecMeter.resx">
+      <DependentUpon>NuGenBytesSentPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NbtConnection\NuGenBytesTotalPerSecGraph.resx">
+      <DependentUpon>NuGenBytesTotalPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NbtConnection\NuGenBytesTotalPerSecMeter.resx">
+      <DependentUpon>NuGenBytesTotalPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrExceptions\NuGenNumberOfExcepsThrownGraph.resx">
+      <DependentUpon>NuGenNumberOfExcepsThrownGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrExceptions\NuGenNumberOfExcepsThrownMeter.resx">
+      <DependentUpon>NuGenNumberOfExcepsThrownMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrExceptions\NuGenNumberOfExcepsThrownPerSecGraph.resx">
+      <DependentUpon>NuGenNumberOfExcepsThrownPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrExceptions\NuGenNumberOfExcepsThrownPerSecMeter.resx">
+      <DependentUpon>NuGenNumberOfExcepsThrownPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrExceptions\NuGenNumberOfFiltersPerSecGraph.resx">
+      <DependentUpon>NuGenNumberOfFiltersPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrExceptions\NuGenNumberOfFiltersPerSecMeter.resx">
+      <DependentUpon>NuGenNumberOfFiltersPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrExceptions\NuGenNumberOfFinallysPerSecGraph.resx">
+      <DependentUpon>NuGenNumberOfFinallysPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrExceptions\NuGenNumberOfFinallysPerSecMeter.resx">
+      <DependentUpon>NuGenNumberOfFinallysPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrExceptions\NuGenThrowToCatchDepthGraph.resx">
+      <DependentUpon>NuGenThrowToCatchDepthGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrExceptions\NuGenThrowToCatchDepthMeter.resx">
+      <DependentUpon>NuGenThrowToCatchDepthMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrInterop\NuGenNumberOfCCWsGraph.resx">
+      <DependentUpon>NuGenNumberOfCCWsGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrInterop\NuGenNumberOfCCWsMeter.resx">
+      <DependentUpon>NuGenNumberOfCCWsMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrInterop\NuGenNumberOfMarshallingGraph.resx">
+      <DependentUpon>NuGenNumberOfMarshallingGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrInterop\NuGenNumberOfMarshallingMeter.resx">
+      <DependentUpon>NuGenNumberOfMarshallingMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrInterop\NuGenNumberOfStubsGraph.resx">
+      <DependentUpon>NuGenNumberOfStubsGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrInterop\NuGenNumberOfStubsMeter.resx">
+      <DependentUpon>NuGenNumberOfStubsMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrInterop\NuGenNumberOfTlbExportsPerSecGraph.resx">
+      <DependentUpon>NuGenNumberOfTlbExportsPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrInterop\NuGenNumberOfTlbExportsPerSecMeter.resx">
+      <DependentUpon>NuGenNumberOfTlbExportsPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrInterop\NuGenNumberOfTlbImportsPerSecGraph.resx">
+      <DependentUpon>NuGenNumberOfTlbImportsPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrInterop\NuGenNumberOfTlbImportsPerSecMeter.resx">
+      <DependentUpon>NuGenNumberOfTlbImportsPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrJit\NuGenILBytesJittedPerSecGraph.resx">
+      <DependentUpon>NuGenILBytesJittedPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrJit\NuGenILBytesJittedPerSecMeter.resx">
+      <DependentUpon>NuGenILBytesJittedPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrJit\NuGenNumberOfILBytesJittedGraph.resx">
+      <DependentUpon>NuGenNumberOfILBytesJittedGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrJit\NuGenNumberOfILBytesJittedMeter.resx">
+      <DependentUpon>NuGenNumberOfILBytesJittedMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrJit\NuGenNumberOfMethodsJittedGraph.resx">
+      <DependentUpon>NuGenNumberOfMethodsJittedGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrJit\NuGenNumberOfMethodsJittedMeter.resx">
+      <DependentUpon>NuGenNumberOfMethodsJittedMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrJit\NuGenPercentTimeInJitGraph.resx">
+      <DependentUpon>NuGenPercentTimeInJitGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrJit\NuGenPercentTimeInJitMeter.resx">
+      <DependentUpon>NuGenPercentTimeInJitMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrJit\NuGenStandardJitFailuresGraph.resx">
+      <DependentUpon>NuGenStandardJitFailuresGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrJit\NuGenStandardJitFailuresMeter.resx">
+      <DependentUpon>NuGenStandardJitFailuresMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrJit\NuGenTotalNumberOfILBytesJittedGraph.resx">
+      <DependentUpon>NuGenTotalNumberOfILBytesJittedGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrJit\NuGenTotalNumberOfILBytesJittedMeter.resx">
+      <DependentUpon>NuGenTotalNumberOfILBytesJittedMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLoading\NuGenAssemblySearchLengthGraph.resx">
+      <DependentUpon>NuGenAssemblySearchLengthGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLoading\NuGenAssemblySearchLengthMeter.resx">
+      <DependentUpon>NuGenAssemblySearchLengthMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLoading\NuGenBytesInLoaderHeapGraph.resx">
+      <DependentUpon>NuGenBytesInLoaderHeapGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLoading\NuGenBytesInLoaderHeapMeter.resx">
+      <DependentUpon>NuGenBytesInLoaderHeapMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLoading\NuGenCurrentAppDomainsGraph.resx">
+      <DependentUpon>NuGenCurrentAppDomainsGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLoading\NuGenCurrentAppDomainsMeter.resx">
+      <DependentUpon>NuGenCurrentAppDomainsMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLoading\NuGenCurrentAssembliesGraph.resx">
+      <DependentUpon>NuGenCurrentAssembliesGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLoading\NuGenCurrentAssembliesMeter.resx">
+      <DependentUpon>NuGenCurrentAssembliesMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLoading\NuGenCurrentClassesLoadedGraph.resx">
+      <DependentUpon>NuGenCurrentClassesLoadedGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLoading\NuGenCurrentClassesLoadedMeter.resx">
+      <DependentUpon>NuGenCurrentClassesLoadedMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLoading\NuGenPercentTimeLoadingGraph.resx">
+      <DependentUpon>NuGenPercentTimeLoadingGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLoading\NuGenPercentTimeLoadingMeter.resx">
+      <DependentUpon>NuGenPercentTimeLoadingMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLoading\NuGenRateOfAppDomainsGraph.resx">
+      <DependentUpon>NuGenRateOfAppDomainsGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLoading\NuGenRateOfAppDomainsMeter.resx">
+      <DependentUpon>NuGenRateOfAppDomainsMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLoading\NuGenRateOfAppDomainsUnloadedGraph.resx">
+      <DependentUpon>NuGenRateOfAppDomainsUnloadedGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLoading\NuGenRateOfAppDomainsUnloadedMeter.resx">
+      <DependentUpon>NuGenRateOfAppDomainsUnloadedMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLoading\NuGenRateOfAssembliesGraph.resx">
+      <DependentUpon>NuGenRateOfAssembliesGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLoading\NuGenRateOfAssembliesMeter.resx">
+      <DependentUpon>NuGenRateOfAssembliesMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLoading\NuGenRateOfClassesLoadedGraph.resx">
+      <DependentUpon>NuGenRateOfClassesLoadedGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLoading\NuGenRateOfClassesLoadedMeter.resx">
+      <DependentUpon>NuGenRateOfClassesLoadedMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLoading\NuGenRateOfLoadFailuresGraph.resx">
+      <DependentUpon>NuGenRateOfLoadFailuresGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLoading\NuGenRateOfLoadFailuresMeter.resx">
+      <DependentUpon>NuGenRateOfLoadFailuresMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLoading\NuGenTotalAppDomainsGraph.resx">
+      <DependentUpon>NuGenTotalAppDomainsGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLoading\NuGenTotalAppDomainsMeter.resx">
+      <DependentUpon>NuGenTotalAppDomainsMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLoading\NuGenTotalAssembliesGraph.resx">
+      <DependentUpon>NuGenTotalAssembliesGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLoading\NuGenTotalAssembliesMeter.resx">
+      <DependentUpon>NuGenTotalAssembliesMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLoading\NuGenTotalClassesLoadedGraph.resx">
+      <DependentUpon>NuGenTotalClassesLoadedGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLoading\NuGenTotalClassesLoadedMeter.resx">
+      <DependentUpon>NuGenTotalClassesLoadedMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLoading\NuGenTotalNumberOfLoadFailuresGraph.resx">
+      <DependentUpon>NuGenTotalNumberOfLoadFailuresGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLoading\NuGenTotalNumberOfLoadFailuresMeter.resx">
+      <DependentUpon>NuGenTotalNumberOfLoadFailuresMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLocksAndThreads\NuGenContentionRatePerSecGraph.resx">
+      <DependentUpon>NuGenContentionRatePerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLocksAndThreads\NuGenContentionRatePerSecMeter.resx">
+      <DependentUpon>NuGenContentionRatePerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLocksAndThreads\NuGenCurrentQueueLengthGraph.resx">
+      <DependentUpon>NuGenCurrentQueueLengthGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLocksAndThreads\NuGenCurrentQueueLengthMeter.resx">
+      <DependentUpon>NuGenCurrentQueueLengthMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLocksAndThreads\NuGenNumberOfCurrentLogicalThreadsGraph.resx">
+      <DependentUpon>NuGenNumberOfCurrentLogicalThreadsGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLocksAndThreads\NuGenNumberOfCurrentLogicalThreadsMeter.resx">
+      <DependentUpon>NuGenNumberOfCurrentLogicalThreadsMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLocksAndThreads\NuGenNumberOfCurrentPhysicalThreadsGraph.resx">
+      <DependentUpon>NuGenNumberOfCurrentPhysicalThreadsGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLocksAndThreads\NuGenNumberOfCurrentPhysicalThreadsMeter.resx">
+      <DependentUpon>NuGenNumberOfCurrentPhysicalThreadsMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLocksAndThreads\NuGenNumberOfCurrentRecognizedThreadsGraph.resx">
+      <DependentUpon>NuGenNumberOfCurrentRecognizedThreadsGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLocksAndThreads\NuGenNumberOfCurrentRecognizedThreadsMeter.resx">
+      <DependentUpon>NuGenNumberOfCurrentRecognizedThreadsMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLocksAndThreads\NuGenQueueLengthPeakGraph.resx">
+      <DependentUpon>NuGenQueueLengthPeakGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLocksAndThreads\NuGenQueueLengthPeakMeter.resx">
+      <DependentUpon>NuGenQueueLengthPeakMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLocksAndThreads\NuGenQueueLengthPerSecGraph.resx">
+      <DependentUpon>NuGenQueueLengthPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLocksAndThreads\NuGenQueueLengthPerSecMeter.resx">
+      <DependentUpon>NuGenQueueLengthPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLocksAndThreads\NuGenRateOfRecognizedThreadsPerSecGraph.resx">
+      <DependentUpon>NuGenRateOfRecognizedThreadsPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLocksAndThreads\NuGenRateOfRecognizedThreadsPerSecMeter.resx">
+      <DependentUpon>NuGenRateOfRecognizedThreadsPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLocksAndThreads\NuGenTotalNumberOfContentionsGraph.resx">
+      <DependentUpon>NuGenTotalNumberOfContentionsGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrLocksAndThreads\NuGenTotalNumberOfContentionsMeter.resx">
+      <DependentUpon>NuGenTotalNumberOfContentionsMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrMemory\NuGenAllocatedBytesPerSecGraph.resx">
+      <DependentUpon>NuGenAllocatedBytesPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrMemory\NuGenAllocatedBytesPerSecMeter.resx">
+      <DependentUpon>NuGenAllocatedBytesPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrMemory\NuGenFinalizationSurvivorsGraph.resx">
+      <DependentUpon>NuGenFinalizationSurvivorsGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrMemory\NuGenFinalizationSurvivorsMeter.resx">
+      <DependentUpon>NuGenFinalizationSurvivorsMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrMemory\NuGenGen0HeapSizeGraph.resx">
+      <DependentUpon>NuGenGen0HeapSizeGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrMemory\NuGenGen0HeapSizeMeter.resx">
+      <DependentUpon>NuGenGen0HeapSizeMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrMemory\NuGenGen0PromotedBytesPerSecGraph.resx">
+      <DependentUpon>NuGenGen0PromotedBytesPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrMemory\NuGenGen0PromotedBytesPerSecMeter.resx">
+      <DependentUpon>NuGenGen0PromotedBytesPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrMemory\NuGenGen2HeapSizeGraph.resx">
+      <DependentUpon>NuGenGen2HeapSizeGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrMemory\NuGenGen2HeapSizeMeter.resx">
+      <DependentUpon>NuGenGen2HeapSizeMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrMemory\NuGenLargeObjectHeapSizeGraph.resx">
+      <DependentUpon>NuGenLargeObjectHeapSizeGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrMemory\NuGenLargeObjectHeapSizeMeter.resx">
+      <DependentUpon>NuGenLargeObjectHeapSizeMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrMemory\NuGenNumberOfBytesInAllHeapsGraph.resx">
+      <DependentUpon>NuGenNumberOfBytesInAllHeapsGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrMemory\NuGenNumberOfBytesInAllHeapsMeter.resx">
+      <DependentUpon>NuGenNumberOfBytesInAllHeapsMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrMemory\NuGenNumberOfGCHandlesGraph.resx">
+      <DependentUpon>NuGenNumberOfGCHandlesGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrMemory\NuGenNumberOfGCHandlesMeter.resx">
+      <DependentUpon>NuGenNumberOfGCHandlesMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrMemory\NuGenNumberOfGen0CollectionsGraph.resx">
+      <DependentUpon>NuGenNumberOfGen0CollectionsGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrMemory\NuGenNumberOfGen0CollectionsMeter.resx">
+      <DependentUpon>NuGenNumberOfGen0CollectionsMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrMemory\NuGenNumberOfGen1CollectionsGraph.resx">
+      <DependentUpon>NuGenNumberOfGen1CollectionsGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrMemory\NuGenNumberOfGen1CollectionsMeter.resx">
+      <DependentUpon>NuGenNumberOfGen1CollectionsMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrMemory\NuGenNumberOfGen2CollectionsGraph.resx">
+      <DependentUpon>NuGenNumberOfGen2CollectionsGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrMemory\NuGenNumberOfGen2CollectionsMeter.resx">
+      <DependentUpon>NuGenNumberOfGen2CollectionsMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrMemory\NuGenNumberOfInducedGCGraph.resx">
+      <DependentUpon>NuGenNumberOfInducedGCGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrMemory\NuGenNumberOfInducedGCMeter.resx">
+      <DependentUpon>NuGenNumberOfInducedGCMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrMemory\NuGenNumberOfPinnedObjectsGraph.resx">
+      <DependentUpon>NuGenNumberOfPinnedObjectsGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrMemory\NuGenNumberOfPinnedObjectsMeter.resx">
+      <DependentUpon>NuGenNumberOfPinnedObjectsMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrMemory\NuGenNumberOfSinkBlocksInUseGraph.resx">
+      <DependentUpon>NuGenNumberOfSinkBlocksInUseGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrMemory\NuGenNumberOfSinkBlocksInUseMeter.resx">
+      <DependentUpon>NuGenNumberOfSinkBlocksInUseMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrMemory\NuGenNumberOfTotalCommittedBytesGraph.resx">
+      <DependentUpon>NuGenNumberOfTotalCommittedBytesGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrMemory\NuGenNumberOfTotalCommittedBytesMeter.resx">
+      <DependentUpon>NuGenNumberOfTotalCommittedBytesMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrMemory\NuGenNumberOfTotalReservedBytesGraph.resx">
+      <DependentUpon>NuGenNumberOfTotalReservedBytesGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrMemory\NuGenNumberOfTotalReservedBytesMeter.resx">
+      <DependentUpon>NuGenNumberOfTotalReservedBytesMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrMemory\NuGenPercentTimeInGCGraph.resx">
+      <DependentUpon>NuGenPercentTimeInGCGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrMemory\NuGenPercentTimeInGCMeter.resx">
+      <DependentUpon>NuGenPercentTimeInGCMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrMemory\NuGenPromotedFinalizationMemoryFromGen0Graph.resx">
+      <DependentUpon>NuGenPromotedFinalizationMemoryFromGen0Graph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrMemory\NuGenPromotedFinalizationMemoryFromGen0Meter.resx">
+      <DependentUpon>NuGenPromotedFinalizationMemoryFromGen0Meter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrMemory\NuGenPromotedFinalizationMemoryFromGen1Graph.resx">
+      <DependentUpon>NuGenPromotedFinalizationMemoryFromGen1Graph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrMemory\NuGenPromotedFinalizationMemoryFromGen1Meter.resx">
+      <DependentUpon>NuGenPromotedFinalizationMemoryFromGen1Meter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrMemory\NuGenPromotedMemoryFromGen0Graph.resx">
+      <DependentUpon>NuGenPromotedMemoryFromGen0Graph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrMemory\NuGenPromotedMemoryFromGen0Meter.resx">
+      <DependentUpon>NuGenPromotedMemoryFromGen0Meter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrMemory\NuGenPromotedMemoryFromGen1Graph.resx">
+      <DependentUpon>NuGenPromotedMemoryFromGen1Graph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrMemory\NuGenPromotedMemoryFromGen1Meter.resx">
+      <DependentUpon>NuGenPromotedMemoryFromGen1Meter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrRemoting\NuGenChannelsGraph.resx">
+      <DependentUpon>NuGenChannelsGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrRemoting\NuGenChannelsMeter.resx">
+      <DependentUpon>NuGenChannelsMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrRemoting\NuGenContextBoundClassesLoadedGraph.resx">
+      <DependentUpon>NuGenContextBoundClassesLoadedGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrRemoting\NuGenContextBoundClassesLoadedMeter.resx">
+      <DependentUpon>NuGenContextBoundClassesLoadedMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrRemoting\NuGenContextBoundObjectsAllocPerSecGraph.resx">
+      <DependentUpon>NuGenContextBoundObjectsAllocPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrRemoting\NuGenContextBoundObjectsAllocPerSecMeter.resx">
+      <DependentUpon>NuGenContextBoundObjectsAllocPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrRemoting\NuGenContextProxiesGraph.resx">
+      <DependentUpon>NuGenContextProxiesGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrRemoting\NuGenContextProxiesMeter.resx">
+      <DependentUpon>NuGenContextProxiesMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrRemoting\NuGenContextsGraph.resx">
+      <DependentUpon>NuGenContextsGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrRemoting\NuGenContextsMeter.resx">
+      <DependentUpon>NuGenContextsMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrRemoting\NuGenRemoteCallsPerSecGraph.resx">
+      <DependentUpon>NuGenRemoteCallsPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrRemoting\NuGenRemoteCallsPerSecMeter.resx">
+      <DependentUpon>NuGenRemoteCallsPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrRemoting\NuGenTotalRemoteCallsGraph.resx">
+      <DependentUpon>NuGenTotalRemoteCallsGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrRemoting\NuGenTotalRemoteCallsMeter.resx">
+      <DependentUpon>NuGenTotalRemoteCallsMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrSecurity\NuGenNumberOfLinkTimeChecksGraph.resx">
+      <DependentUpon>NuGenNumberOfLinkTimeChecksGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrSecurity\NuGenNumberOfLinkTimeChecksMeter.resx">
+      <DependentUpon>NuGenNumberOfLinkTimeChecksMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrSecurity\NuGenPercentTimeInRTCecksGraph.resx">
+      <DependentUpon>NuGenPercentTimeInRTCecksGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrSecurity\NuGenPercentTimeInRTChecksMeter.resx">
+      <DependentUpon>NuGenPercentTimeInRTChecksMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrSecurity\NuGenPercentTimeInSigAuthenticatingGraph.resx">
+      <DependentUpon>NuGenPercentTimeInSigAuthenticatingGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrSecurity\NuGenPercentTimeInSigAuthenticatingMeter.resx">
+      <DependentUpon>NuGenPercentTimeInSigAuthenticatingMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrSecurity\NuGenStackWalkDepthGraph.resx">
+      <DependentUpon>NuGenStackWalkDepthGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrSecurity\NuGenStackWalkDepthMeter.resx">
+      <DependentUpon>NuGenStackWalkDepthMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrSecurity\NuGenTotalRuntimeChecksGraph.resx">
+      <DependentUpon>NuGenTotalRuntimeChecksGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetClrSecurity\NuGenTotalRuntimeChecksMeter.resx">
+      <DependentUpon>NuGenTotalRuntimeChecksMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenBarBase.resx">
+      <DependentUpon>NuGenBarBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenByteMeterBase.resx">
+      <DependentUpon>NuGenByteMeterBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenCTLabel.resx">
+      <DependentUpon>NuGenCTLabel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenGenericBase.resx">
+      <DependentUpon>NuGenGenericBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenGraphBase.resx">
+      <DependentUpon>NuGenGraphBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenGraphGeneric.resx">
+      <DependentUpon>NuGenGraphGeneric.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenGraphHost.resx">
+      <DependentUpon>NuGenGraphHost.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenGraphLog.resx">
+      <DependentUpon>NuGenGraphLog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenLog.resx">
+      <DependentUpon>NuGenLog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenMeterBar.resx">
+      <DependentUpon>NuGenMeterBar.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenMeterBase.resx">
+      <DependentUpon>NuGenMeterBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenMeterGeneric.resx">
+      <DependentUpon>NuGenMeterGeneric.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenPositionStyleEditorControl.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenPushGraphBar.resx">
+      <DependentUpon>NuGenPushGraphBar.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PagingFile\NuGenPercentUsageGraph.resx">
+      <DependentUpon>NuGenPercentUsageGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PagingFile\NuGenPercentUsageMeter.resx">
+      <DependentUpon>NuGenPercentUsageMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PagingFile\NuGenPercentUsagePeakGraph.resx">
+      <DependentUpon>NuGenPercentUsagePeakGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PagingFile\NuGenPercentUsagePeakMeter.resx">
+      <DependentUpon>NuGenPercentUsagePeakMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysicalDisk\NuGenAvgDiskBytesPerReadGraph.resx">
+      <DependentUpon>NuGenAvgDiskBytesPerReadGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysicalDisk\NuGenAvgDiskBytesPerReadMeter.resx">
+      <DependentUpon>NuGenAvgDiskBytesPerReadMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysicalDisk\NuGenAvgDiskBytesPerTransferGraph.resx">
+      <DependentUpon>NuGenAvgDiskBytesPerTransferGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysicalDisk\NuGenAvgDiskBytesPerTransferMeter.resx">
+      <DependentUpon>NuGenAvgDiskBytesPerTransferMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysicalDisk\NuGenAvgDiskBytesPerWriteGraph.resx">
+      <DependentUpon>NuGenAvgDiskBytesPerWriteGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysicalDisk\NuGenAvgDiskBytesPerWriteMeter.resx">
+      <DependentUpon>NuGenAvgDiskBytesPerWriteMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysicalDisk\NuGenAvgDiskQueueLengthGraph.resx">
+      <DependentUpon>NuGenAvgDiskQueueLengthGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysicalDisk\NuGenAvgDiskQueueLengthMeter.resx">
+      <DependentUpon>NuGenAvgDiskQueueLengthMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysicalDisk\NuGenAvgDiskSecPerReadGraph.resx">
+      <DependentUpon>NuGenAvgDiskSecPerReadGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysicalDisk\NuGenAvgDiskSecPerReadMeter.resx">
+      <DependentUpon>NuGenAvgDiskSecPerReadMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysicalDisk\NuGenAvgDiskSecPerTransferGraph.resx">
+      <DependentUpon>NuGenAvgDiskSecPerTransferGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysicalDisk\NuGenAvgDiskSecPerTransferMeter.resx">
+      <DependentUpon>NuGenAvgDiskSecPerTransferMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysicalDisk\NugenAvgDiskSecPerWriteGraph.resx">
+      <DependentUpon>NugenAvgDiskSecPerWriteGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysicalDisk\NuGenAvgDiskSecPerWriteMeter.resx">
+      <DependentUpon>NuGenAvgDiskSecPerWriteMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysicalDisk\NuGenAvgDiskWriteQueueLengthGraph.resx">
+      <DependentUpon>NuGenAvgDiskWriteQueueLengthGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysicalDisk\NuGenAvgDiskWriteQueueLengthMeter.resx">
+      <DependentUpon>NuGenAvgDiskWriteQueueLengthMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysicalDisk\NuGenCurrentDiskQueueLengthGraph.resx">
+      <DependentUpon>NuGenCurrentDiskQueueLengthGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysicalDisk\NuGenCurrentDiskQueueLengthMeter.resx">
+      <DependentUpon>NuGenCurrentDiskQueueLengthMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysicalDisk\NuGenDiskBytesPerSecGraph.resx">
+      <DependentUpon>NuGenDiskBytesPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysicalDisk\NuGenDiskBytesPerSecMeter.resx">
+      <DependentUpon>NuGenDiskBytesPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysicalDisk\NuGenDiskReadBytesPerSecGraph.resx">
+      <DependentUpon>NuGenDiskReadBytesPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysicalDisk\NuGenDiskReadBytesPerSecMeter.resx">
+      <DependentUpon>NuGenDiskReadBytesPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysicalDisk\NuGenDiskReadsPerSecGraph.resx">
+      <DependentUpon>NuGenDiskReadsPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysicalDisk\NuGenDiskReadsPerSecMeter.resx">
+      <DependentUpon>NuGenDiskReadsPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysicalDisk\NuGenDiskTransfersPerSecGraph.resx">
+      <DependentUpon>NuGenDiskTransfersPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysicalDisk\NuGenDiskTransfersPerSecMeter.resx">
+      <DependentUpon>NuGenDiskTransfersPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysicalDisk\NuGenDiskWriteBytesPerSecGraph.resx">
+      <DependentUpon>NuGenDiskWriteBytesPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysicalDisk\NuGenDiskWriteBytesPerSecMeter.resx">
+      <DependentUpon>NuGenDiskWriteBytesPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysicalDisk\NuGenDiskWritesPerSecGraph.resx">
+      <DependentUpon>NuGenDiskWritesPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysicalDisk\NuGenDiskWritesPerSecMeter.resx">
+      <DependentUpon>NuGenDiskWritesPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysicalDisk\NuGenPercentDiskReadTimeGraph.resx">
+      <DependentUpon>NuGenPercentDiskReadTimeGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysicalDisk\NuGenPercentDiskReadTimeMeter.resx">
+      <DependentUpon>NuGenPercentDiskReadTimeMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysicalDisk\NuGenPercentDiskTimeGraph.resx">
+      <DependentUpon>NuGenPercentDiskTimeGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysicalDisk\NuGenPercentDiskTimeMeter.resx">
+      <DependentUpon>NuGenPercentDiskTimeMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysicalDisk\NuGenPercentDiskWriteTimeGraph.resx">
+      <DependentUpon>NuGenPercentDiskWriteTimeGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysicalDisk\NuGenPercentDiskWriteTimeMeter.resx">
+      <DependentUpon>NuGenPercentDiskWriteTimeMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysicalDisk\NuGenPercentIdleTimeGraph.resx">
+      <DependentUpon>NuGenPercentIdleTimeGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysicalDisk\NuGenPercentIdleTimeMeter.resx">
+      <DependentUpon>NuGenPercentIdleTimeMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysicalDisk\NuGenSplitIoPerSecGraph.resx">
+      <DependentUpon>NuGenSplitIoPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysicalDisk\NuGenSplitIoPerSecMeter.resx">
+      <DependentUpon>NuGenSplitIoPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintQueue\NuGenAddNetworkPrinterCallsGraph.resx">
+      <DependentUpon>NuGenAddNetworkPrinterCallsGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintQueue\NuGenAddNetworkPrinterCallsMeter.resx">
+      <DependentUpon>NuGenAddNetworkPrinterCallsMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintQueue\NuGenBytesPrintedPerSecGraph.resx">
+      <DependentUpon>NuGenBytesPrintedPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintQueue\NuGenBytesPrintedPerSecMeter.resx">
+      <DependentUpon>NuGenBytesPrintedPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintQueue\NuGenEnumerateNetworkPrinterCallsGraph.resx">
+      <DependentUpon>NuGenEnumerateNetworkPrinterCallsGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintQueue\NuGenEnumerateNetworkPrinterCallsMeter.resx">
+      <DependentUpon>NuGenEnumerateNetworkPrinterCallsMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintQueue\NuGenJobErrorsGraph.resx">
+      <DependentUpon>NuGenJobErrorsGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintQueue\NuGenJobErrorsMeter.resx">
+      <DependentUpon>NuGenJobErrorsMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintQueue\NuGenJobSpoolingGraph.resx">
+      <DependentUpon>NuGenJobSpoolingGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintQueue\NuGenJobSpoolingMeter.resx">
+      <DependentUpon>NuGenJobSpoolingMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintQueue\NuGenMaxJobsSpoolingGraph.resx">
+      <DependentUpon>NuGenMaxJobsSpoolingGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintQueue\NuGenMaxJobsSpoolingMeter.resx">
+      <DependentUpon>NuGenMaxJobsSpoolingMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintQueue\NuGenMaxReferencesGraph.resx">
+      <DependentUpon>NuGenMaxReferencesGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintQueue\NuGenMaxReferencesMeter.resx">
+      <DependentUpon>NuGenMaxReferencesMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintQueue\NuGenNotReadyErrorsGraph.resx">
+      <DependentUpon>NuGenNotReadyErrorsGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintQueue\NuGenNotReadyErrorsMeter.resx">
+      <DependentUpon>NuGenNotReadyErrorsMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintQueue\NuGenOutOfPaperErrorsGraph.resx">
+      <DependentUpon>NuGenOutOfPaperErrorsGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintQueue\NuGenOutOfPaperErrorsMeter.resx">
+      <DependentUpon>NuGenOutOfPaperErrorsMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintQueue\NuGenReferencesGraph.resx">
+      <DependentUpon>NuGenReferencesGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintQueue\NuGenReferencesMeter.resx">
+      <DependentUpon>NuGenReferencesMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintQueue\NuGenTotalJobsPrintedGraph.resx">
+      <DependentUpon>NuGenTotalJobsPrintedGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintQueue\NuGenTotalJobsPrintedMeter.resx">
+      <DependentUpon>NuGenTotalJobsPrintedMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintQueue\NuGenTotalPagesPrintedGraph.resx">
+      <DependentUpon>NuGenTotalPagesPrintedGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintQueue\NuGenTotalPagesPrintedMeter.resx">
+      <DependentUpon>NuGenTotalPagesPrintedMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processor\NuGenC1TransitionsPerSecGraph.resx">
+      <DependentUpon>NuGenC1TransitionsPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processor\NuGenC1TransitionsPerSecMeter.resx">
+      <DependentUpon>NuGenC1TransitionsPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processor\NuGenC2TransitionsPerSecGraph.resx">
+      <DependentUpon>NuGenC2TransitionsPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processor\NuGenC2TransitionsPerSecMeter.resx">
+      <DependentUpon>NuGenC2TransitionsPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processor\NuGenC3TransitionsPerSecGraph.resx">
+      <DependentUpon>NuGenC3TransitionsPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processor\NuGenC3TransitionsPerSecMeter.resx">
+      <DependentUpon>NuGenC3TransitionsPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processor\NuGenDpcRateGraph.resx">
+      <DependentUpon>NuGenDpcRateGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processor\NuGenDpcRateMeter.resx">
+      <DependentUpon>NuGenDpcRateMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processor\NuGenDPCsQueuedPerSecGraph.resx">
+      <DependentUpon>NuGenDPCsQueuedPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processor\NuGenDPCsQueuedPerSecMeter.resx">
+      <DependentUpon>NuGenDPCsQueuedPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processor\NuGenInterruptsPerSecGraph.resx">
+      <DependentUpon>NuGenInterruptsPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processor\NuGenInterruptsPerSecMeter.resx">
+      <DependentUpon>NuGenInterruptsPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processor\NuGenPercentC1TimeGraph.resx">
+      <DependentUpon>NuGenPercentC1TimeGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processor\NuGenPercentC1TimeMeter.resx">
+      <DependentUpon>NuGenPercentC1TimeMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processor\NuGenPercentC2TimeGraph.resx">
+      <DependentUpon>NuGenPercentC2TimeGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processor\NuGenPercentC2TimeMeter.resx">
+      <DependentUpon>NuGenPercentC2TimeMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processor\NuGenPercentC3TimeGraph.resx">
+      <DependentUpon>NuGenPercentC3TimeGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processor\NuGenPercentC3TimeMeter.resx">
+      <DependentUpon>NuGenPercentC3TimeMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processor\NuGenPercentDpcTimeGraph.resx">
+      <DependentUpon>NuGenPercentDpcTimeGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processor\NuGenPercentDpcTimeMeter.resx">
+      <DependentUpon>NuGenPercentDpcTimeMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processor\NuGenPercentIdleTimeGraph.resx">
+      <DependentUpon>NuGenPercentIdleTimeGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processor\NuGenPercentIdleTimeMeter.resx">
+      <DependentUpon>NuGenPercentIdleTimeMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processor\NuGenPercentInterruptTimeGraph.resx">
+      <DependentUpon>NuGenPercentInterruptTimeGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processor\NuGenPercentInterruptTimeMeter.resx">
+      <DependentUpon>NuGenPercentInterruptTimeMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processor\NuGenPercentPrivilegedTimeGraph.resx">
+      <DependentUpon>NuGenPercentPrivilegedTimeGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processor\NuGenPercentPrivilegedTimeMeter.resx">
+      <DependentUpon>NuGenPercentPrivilegedTimeMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processor\NuGenPercentProcessorTimeGraph.resx">
+      <DependentUpon>NuGenPercentProcessorTimeGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processor\NuGenPercentProcessorTimeMeter.resx">
+      <DependentUpon>NuGenPercentProcessorTimeMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processor\NuGenPercentUserTimeGraph.resx">
+      <DependentUpon>NuGenPercentUserTimeGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processor\NuGenPercentUserTimeMeter.resx">
+      <DependentUpon>NuGenPercentUserTimeMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenCreatingProcessIdGraph.resx">
+      <DependentUpon>NuGenCreatingProcessIdGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenCreatingProcessIdMeter.resx">
+      <DependentUpon>NuGenCreatingProcessIdMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenElapsedTimeGraph.resx">
+      <DependentUpon>NuGenElapsedTimeGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenElapsedTimeMeter.resx">
+      <DependentUpon>NuGenElapsedTimeMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenHandleCountGraph.resx">
+      <DependentUpon>NuGenHandleCountGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenHandleCountMeter.resx">
+      <DependentUpon>NuGenHandleCountMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenIdProcessGraph.resx">
+      <DependentUpon>NuGenIdProcessGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenIdProcessMeter.resx">
+      <DependentUpon>NuGenIdProcessMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenIoDataBytesPerSecGraph.resx">
+      <DependentUpon>NuGenIoDataBytesPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenIoDataBytesPerSecMeter.resx">
+      <DependentUpon>NuGenIoDataBytesPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenIoDataOperationsPerSecGraph.resx">
+      <DependentUpon>NuGenIoDataOperationsPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenIoDataOperationsPerSecMeter.resx">
+      <DependentUpon>NuGenIoDataOperationsPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenIoOtherBytesPerSecGraph.resx">
+      <DependentUpon>NuGenIoOtherBytesPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenIoOtherBytesPerSecMeter.resx">
+      <DependentUpon>NuGenIoOtherBytesPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenIoOtherOperationsPerSecGraph.resx">
+      <DependentUpon>NuGenIoOtherOperationsPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenIoOtherOperationsPerSecMeter.resx">
+      <DependentUpon>NuGenIoOtherOperationsPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenIoReadBytesPerSecGraph.resx">
+      <DependentUpon>NuGenIoReadBytesPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenIoReadBytesPerSecMeter.resx">
+      <DependentUpon>NuGenIoReadBytesPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenIoReadOperationsPerSecGraph.resx">
+      <DependentUpon>NuGenIoReadOperationsPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenIoReadOperationsPerSecMeter.resx">
+      <DependentUpon>NuGenIoReadOperationsPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenIoWriteBytesPerSecGraph.resx">
+      <DependentUpon>NuGenIoWriteBytesPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenIoWriteBytesPerSecMeter.resx">
+      <DependentUpon>NuGenIoWriteBytesPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenIoWriteOperationsPerSecGraph.resx">
+      <DependentUpon>NuGenIoWriteOperationsPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenIoWriteOperationsPerSecMeter.resx">
+      <DependentUpon>NuGenIoWriteOperationsPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenPageFaultsPerSecGraph.resx">
+      <DependentUpon>NuGenPageFaultsPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenPageFaultsPerSecMeter.resx">
+      <DependentUpon>NuGenPageFaultsPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenPageFileBytesGraph.resx">
+      <DependentUpon>NuGenPageFileBytesGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenPageFileBytesMeter.resx">
+      <DependentUpon>NuGenPageFileBytesMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenPageFileBytesPeakGraph.resx">
+      <DependentUpon>NuGenPageFileBytesPeakGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenPageFileBytesPeakMeter.resx">
+      <DependentUpon>NuGenPageFileBytesPeakMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenPercentPrivilegedTimeGraph.resx">
+      <DependentUpon>NuGenPercentPrivilegedTimeGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenPercentPrivilegedTimeMeter.resx">
+      <DependentUpon>NuGenPercentPrivilegedTimeMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenPercentProcessorTimeGraph.resx">
+      <DependentUpon>NuGenPercentProcessorTimeGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenPercentProcessorTimeMeter.resx">
+      <DependentUpon>NuGenPercentProcessorTimeMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenPercentUserTimeGraph.resx">
+      <DependentUpon>NuGenPercentUserTimeGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenPercentUserTimeMeter.resx">
+      <DependentUpon>NuGenPercentUserTimeMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenPoolNonpagedBytesGraph.resx">
+      <DependentUpon>NuGenPoolNonpagedBytesGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenPoolNonpagedBytesMeter.resx">
+      <DependentUpon>NuGenPoolNonpagedBytesMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenPoolPagedBytesGraph.resx">
+      <DependentUpon>NuGenPoolPagedBytesGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenPoolPagedBytesMeter.resx">
+      <DependentUpon>NuGenPoolPagedBytesMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenPriorityBaseGraph.resx">
+      <DependentUpon>NuGenPriorityBaseGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenPriorityBaseMeter.resx">
+      <DependentUpon>NuGenPriorityBaseMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenPrivateBytesGraph.resx">
+      <DependentUpon>NuGenPrivateBytesGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenPrivateBytesMeter.resx">
+      <DependentUpon>NuGenPrivateBytesMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenThreadCountGraph.resx">
+      <DependentUpon>NuGenThreadCountGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenThreadCountMeter.resx">
+      <DependentUpon>NuGenThreadCountMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenVirtualBytesGraph.resx">
+      <DependentUpon>NuGenVirtualBytesGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenVirtualBytesMeter.resx">
+      <DependentUpon>NuGenVirtualBytesMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenVirtualBytesPeakGraph.resx">
+      <DependentUpon>NuGenVirtualBytesPeakGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenVirtualBytesPeakMeter.resx">
+      <DependentUpon>NuGenVirtualBytesPeakMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenWorkingSetGraph.resx">
+      <DependentUpon>NuGenWorkingSetGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenWorkingSetMeter.resx">
+      <DependentUpon>NuGenWorkingSetMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenWorkingSetPeakGraph.resx">
+      <DependentUpon>NuGenWorkingSetPeakGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\NuGenWorkingSetPeakMeter.resx">
+      <DependentUpon>NuGenWorkingSetPeakMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thread\NuGenContextSwitchesPerSecGraph.resx">
+      <DependentUpon>NuGenContextSwitchesPerSecGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thread\NuGenContextSwithcesPerSecMeter.resx">
+      <DependentUpon>NuGenContextSwithcesPerSecMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thread\NuGenElapsedTimeGraph.resx">
+      <DependentUpon>NuGenElapsedTimeGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thread\NuGenElapsedTimeMeter.resx">
+      <DependentUpon>NuGenElapsedTimeMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thread\NuGenIdProcessGraph.resx">
+      <DependentUpon>NuGenIdProcessGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thread\NuGenIdProcessMeter.resx">
+      <DependentUpon>NuGenIdProcessMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thread\NuGenIdThreadGraph.resx">
+      <DependentUpon>NuGenIdThreadGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thread\NuGenIdThreadMeter.resx">
+      <DependentUpon>NuGenIdThreadMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thread\NuGenPercentPrivilegedTimeGraph.resx">
+      <DependentUpon>NuGenPercentPrivilegedTimeGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thread\NuGenPercentPrivilegedTimeMeter.resx">
+      <DependentUpon>NuGenPercentPrivilegedTimeMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thread\NuGenPercentProcessorTimeGraph.resx">
+      <DependentUpon>NuGenPercentProcessorTimeGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thread\NuGenPercentProcessorTimeMeter.resx">
+      <DependentUpon>NuGenPercentProcessorTimeMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thread\NuGenPercentUserTimeGraph.resx">
+      <DependentUpon>NuGenPercentUserTimeGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thread\NuGenPercentUserTimeMeter.resx">
+      <DependentUpon>NuGenPercentUserTimeMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thread\NuGenPriorityBaseGraph.resx">
+      <DependentUpon>NuGenPriorityBaseGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thread\NuGenPriorityBaseMeter.resx">
+      <DependentUpon>NuGenPriorityBaseMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thread\NuGenPriorityCurrentGraph.resx">
+      <DependentUpon>NuGenPriorityCurrentGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thread\NuGenPriorityCurrentMeter.resx">
+      <DependentUpon>NuGenPriorityCurrentMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thread\NuGenStartAddressGraph.resx">
+      <DependentUpon>NuGenStartAddressGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thread\NuGenStartAddressMeter.resx">
+      <DependentUpon>NuGenStartAddressMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thread\NuGenThreadStateGraph.resx">
+      <DependentUpon>NuGenThreadStateGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thread\NuGenThreadStateMeter.resx">
+      <DependentUpon>NuGenThreadStateMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thread\NuGenThreadWaitReasonGraph.resx">
+      <DependentUpon>NuGenThreadWaitReasonGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thread\NuGenThreadWaitReasonMeter.resx">
+      <DependentUpon>NuGenThreadWaitReasonMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Toolbox\NuGen.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Genetibase.PerformanceCounters\Genetibase.PerformanceCounters.csproj">
+      <Project>{64BABDE2-2227-40D3-BD9B-61734E833DF9}</Project>
+      <Name>Genetibase.PerformanceCounters</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Genetibase.Shared.Design\Genetibase.Shared.Design.csproj">
+      <Project>{50EE44FC-D51B-471E-A199-15621498ECA7}</Project>
+      <Name>Genetibase.Shared.Design</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Genetibase.Shared\Genetibase.Shared.csproj">
+      <Project>{A7A02558-58A0-4333-BFAF-77CB49DE17F0}</Project>
+      <Name>Genetibase.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Genetibase.Win32\Genetibase.Win32.csproj">
+      <Project>{8E94E64C-52F7-4865-ACF1-3FEC8F61B531}</Project>
+      <Name>Genetibase.Win32</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,50 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:ctrls="clr-namespace:Genetibase.Windows.Controls"
+	xmlns:sys="clr-namespace:System;assembly=mscorlib"
+	>
+	<ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary Source="EditorViewStyle.xaml" />
+	</ResourceDictionary.MergedDictionaries>
+	<sys:Double x:Key="EditorStyle_SplitterHeight">5</sys:Double>
+	<Style x:Key="{x:Type ctrls:NuGenEditor}" TargetType="{x:Type ctrls:NuGenEditor}">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type ctrls:NuGenEditor}">
+					<Grid SnapsToDevicePixels="True">
+						<Grid.RowDefinitions>
+							<RowDefinition Name="_topEditorRow" Height="0*" />
+							<RowDefinition Name="_bottomEditorRow" MinHeight="50" />
+						</Grid.RowDefinitions>
+						<ctrls:EditorView
+							x:Name="PART_TopEditor"
+							Grid.Row="0"
+							Style="{StaticResource EditorViewStyle}"
+							>
+							<ScrollViewer.Margin>
+								<Thickness Bottom="{StaticResource EditorStyle_SplitterHeight}" />
+							</ScrollViewer.Margin>
+						</ctrls:EditorView>
+						<ctrls:EditorView 							x:Name="PART_BottomEditor"							Grid.Row="1"
+							CanSplit="True"
+							Command="{x:Static ctrls:NuGenEditorCommands.SplitContainer}"
+							Style="{StaticResource EditorViewStyle}"
+							/>
+						<GridSplitter 
+							x:Name="_splitter"
+							Grid.Row="0"
+							BorderBrush="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}"
+							BorderThickness="0 1 0 1"							Height="{StaticResource EditorStyle_SplitterHeight}"
+							HorizontalAlignment="Stretch"
+							SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+							IsEnabled="False"
+							VerticalAlignment="Bottom"
+						/>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+</ResourceDictionary>
+	

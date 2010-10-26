@@ -1,0 +1,660 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppearanceCategory" xml:space="preserve">
+    <value>Appearance</value>
+  </data>
+  <data name="BackGradientEndColorChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the BackGradientEndColor property changes.</value>
+  </data>
+  <data name="BackGradientEndColorDescription" xml:space="preserve">
+    <value>Determines the end color of the back gradient.</value>
+  </data>
+  <data name="BackGradientStartColorChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the BackGradientStart property changes.</value>
+  </data>
+  <data name="BackGradientStartColorDescription" xml:space="preserve">
+    <value>Determines the start color of the back gradient.</value>
+  </data>
+  <data name="BackgroundColorChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the BackgroundColor property changes.</value>
+  </data>
+  <data name="BackgroundColorDescription" xml:space="preserve">
+    <value>Determines the background color for the control.</value>
+  </data>
+  <data name="BackgroundGradientCategory" xml:space="preserve">
+    <value>BackgroundGradient</value>
+  </data>
+  <data name="BackgroundImageDescription" xml:space="preserve">
+    <value>The background image used for the control.</value>
+  </data>
+  <data name="BackgroundStyleChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the BackgroundStyle property changes.</value>
+  </data>
+  <data name="BackgroundStyleDescription" xml:space="preserve">
+    <value>Determines the style of the background.</value>
+  </data>
+  <data name="BackgroundTransparencyChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the BackgroundTransparency property changes.</value>
+  </data>
+  <data name="BackgroundTransparencyDescription" xml:space="preserve">
+    <value>Determines the background transparency level for the control.</value>
+  </data>
+  <data name="BackTubeEndColorChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the BackTubeGradientEndColor property changes.</value>
+  </data>
+  <data name="BackTubeGradientEndColorDescription" xml:space="preserve">
+    <value>Determines the end color of the back tube gradient.</value>
+  </data>
+  <data name="BackTubeGradientStartColorDescription" xml:space="preserve">
+    <value>Determines the start color of the back tube gradient.</value>
+  </data>
+  <data name="BackTubeStartColorChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the BackTubeGradientStartColor property changes.</value>
+  </data>
+  <data name="BehaviorCategory" xml:space="preserve">
+    <value>Behavior</value>
+  </data>
+  <data name="BorderColorChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the BorderColor property changes.</value>
+  </data>
+  <data name="BorderColorDescription" xml:space="preserve">
+    <value>Determines the border color for the control.</value>
+  </data>
+  <data name="BorderStyleChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the BorderStyle property changes.</value>
+  </data>
+  <data name="BorderStyleDescription" xml:space="preserve">
+    <value>Determines the border style for the control.</value>
+  </data>
+  <data name="CaptionTextAlignmentChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the CaptionTextAlignment property changes.</value>
+  </data>
+  <data name="CaptionTextAlignmentDescription" xml:space="preserve">
+    <value>Determines the alignment of the caption text.</value>
+  </data>
+  <data name="CaptionTextBackColorChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the CaptionTextBackColor property changes.</value>
+  </data>
+  <data name="CaptionTextBackColorDescription" xml:space="preserve">
+    <value>Determines the back color for the label.</value>
+  </data>
+  <data name="CaptionTextBackgroundTransparencyChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the CaptionTextBackgroundTransparency property changes.</value>
+  </data>
+  <data name="CaptionTextBackgroundTransparencyDescription" xml:space="preserve">
+    <value>Determines the background transparency level for the label.</value>
+  </data>
+  <data name="CaptionTextBorderColorChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the CaptionTextBorderColorChanged property changes.</value>
+  </data>
+  <data name="CaptionTextBorderColorDescription" xml:space="preserve">
+    <value>Determines the border color for the label.</value>
+  </data>
+  <data name="CaptionTextBorderStyleChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the CaptionTextBorderStyle property changes.</value>
+  </data>
+  <data name="CaptionTextBorderStyleDescription" xml:space="preserve">
+    <value>The border style of the CaptionText.</value>
+  </data>
+  <data name="CaptionTextCategory" xml:space="preserve">
+    <value>CaptionText</value>
+  </data>
+  <data name="CaptionTextChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the CaptionText property changes.</value>
+  </data>
+  <data name="CaptionTextDescription" xml:space="preserve">
+    <value>Determines the caption text for the meter.</value>
+  </data>
+  <data name="CaptionTextEatLineChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the CaptionTextEatLine property changes.</value>
+  </data>
+  <data name="CaptionTextEatLineDescription" xml:space="preserve">
+    <value>Indicates whether to eat the tail symbols which cannot be displayed due to the label width.</value>
+  </data>
+  <data name="CaptionTextEdgeIndentChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the CaptionTextEdgeIndent property changes.</value>
+  </data>
+  <data name="CaptionTextEdgeIndentDescription" xml:space="preserve">
+    <value>Determines the indent of the captioin text form the nearest edge of the meter.</value>
+  </data>
+  <data name="CaptionTextFontChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the CaptionTextFont property changes.</value>
+  </data>
+  <data name="CaptionTextFontDescription" xml:space="preserve">
+    <value>Determines the font for the caption text.</value>
+  </data>
+  <data name="CaptionTextForeColorChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the CaptionTextForeColor property changes.</value>
+  </data>
+  <data name="CaptionTextForeColorDescription" xml:space="preserve">
+    <value>The foreground color of the control.</value>
+  </data>
+  <data name="CaptionTextForegroundTransparencyChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the CaptionTextForegroundTransparency property changes.</value>
+  </data>
+  <data name="CaptionTextForegroundTransparencyDescription" xml:space="preserve">
+    <value>Determines the foreground transparency level for the label.</value>
+  </data>
+  <data name="CaptionTextOrientationChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the CaptionTextOrientation property changes.</value>
+  </data>
+  <data name="CaptionTextOrientationDescription" xml:space="preserve">
+    <value>Determines the direction of the caption text.</value>
+  </data>
+  <data name="CaptionTextPositionChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the CaptionTextPosition property changes.</value>
+  </data>
+  <data name="CaptionTextPositionDescription" xml:space="preserve">
+    <value>Determines the positioning of the caption text.</value>
+  </data>
+  <data name="CaptionTextVisibleChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the CaptionTextVisible property changes.</value>
+  </data>
+  <data name="CaptionTextVisibleDescription" xml:space="preserve">
+    <value>Indicates whether the caption text is visible.</value>
+  </data>
+  <data name="CaptionTextWordWrapChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the CaptionTextWordWrap property changes.</value>
+  </data>
+  <data name="CaptionTextWordWrapDescription" xml:space="preserve">
+    <value>Indicates whether the lines are automatically word-wrapped.</value>
+  </data>
+  <data name="CategoryNameChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the CategoryName property changes.</value>
+  </data>
+  <data name="CategoryNameDescription" xml:space="preserve">
+    <value>Determines the name of the counter category for this counter.</value>
+  </data>
+  <data name="CheckFileNameException" xml:space="preserve">
+    <value>The separator must not contain the following characters: {0} {1}</value>
+  </data>
+  <data name="CounterCategory" xml:space="preserve">
+    <value>Counter</value>
+  </data>
+  <data name="CounterExistException" xml:space="preserve">
+    <value>Specified counter doesn't exist.</value>
+  </data>
+  <data name="CounterFormatChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the CounterFormat property changes.</value>
+  </data>
+  <data name="CounterFormatDescription" xml:space="preserve">
+    <value>Determines the format for the counter, i.e. "%".</value>
+  </data>
+  <data name="CounterNameChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the CounterName property changes.</value>
+  </data>
+  <data name="CounterNameDescription" xml:space="preserve">
+    <value>Determines the name of the counter.</value>
+  </data>
+  <data name="CounterStepDescription" xml:space="preserve">
+    <value>Determines the step of the counter.</value>
+  </data>
+  <data name="CounterStepException" xml:space="preserve">
+    <value>Step cannot be lesser than 1.</value>
+  </data>
+  <data name="DigitsChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the Digits property changes.</value>
+  </data>
+  <data name="DigitsDescription" xml:space="preserve">
+    <value>Determines the number of digits in the postfix.</value>
+  </data>
+  <data name="DigitsException" xml:space="preserve">
+    <value>The number of digits cannot be lesser than 1.</value>
+  </data>
+  <data name="EatLineChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the EatLine property changes.</value>
+  </data>
+  <data name="EatLineDescription" xml:space="preserve">
+    <value>If true replaces the tail symbols which cannot be dispalyed with \"...\". Takes affect only if the WordWrap property is false.</value>
+  </data>
+  <data name="ExtraPerformanceChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the ExtraPerformance property changes.</value>
+  </data>
+  <data name="ExtraPerformanceDescription" xml:space="preserve">
+    <value>Indicates whether to use native GDI for rendering.</value>
+  </data>
+  <data name="ForegroundColorChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the ForegroundColor property changes.</value>
+  </data>
+  <data name="ForegroundColorDescription" xml:space="preserve">
+    <value>Determines the foreground color for the control.</value>
+  </data>
+  <data name="ForegroundGradientCategory" xml:space="preserve">
+    <value>ForegroundGradient</value>
+  </data>
+  <data name="ForegroundStyleChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the ForegroundStyle property changes.</value>
+  </data>
+  <data name="ForegroundStyleDescription" xml:space="preserve">
+    <value>Determines the foreground style for the control.</value>
+  </data>
+  <data name="ForegroundTransparencyChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the ForegroundTransparency property changes.</value>
+  </data>
+  <data name="ForegroundTransparencyDescription" xml:space="preserve">
+    <value>Determines the foreground transparency level for the control.</value>
+  </data>
+  <data name="GigaPrefix" xml:space="preserve">
+    <value>Giga</value>
+  </data>
+  <data name="GradientEndColorChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the GradientEndColor property changes.</value>
+  </data>
+  <data name="GradientEndColorDescription" xml:space="preserve">
+    <value>Determines the end color of the gradient.</value>
+  </data>
+  <data name="GradientStartColorChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the GradientStartColor property changes.</value>
+  </data>
+  <data name="GradientStartColorDescription" xml:space="preserve">
+    <value>Determines the start color of the gradient.</value>
+  </data>
+  <data name="GraphLineIndexDescription" xml:space="preserve">
+    <value>Determines the ID of the graph line in the collection.</value>
+  </data>
+  <data name="GraphLogCategory" xml:space="preserve">
+    <value>GraphLog</value>
+  </data>
+  <data name="GraphLogDescription" xml:space="preserve">
+    <value>Indicates whether to log the value changes on the meter.</value>
+  </data>
+  <data name="GridCategory" xml:space="preserve">
+    <value>Grid</value>
+  </data>
+  <data name="GridColorChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the GridColor property changes.</value>
+  </data>
+  <data name="GridColorDescription" xml:space="preserve">
+    <value>Determines the color for the grid.</value>
+  </data>
+  <data name="GridStepChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the GridStep property changes.</value>
+  </data>
+  <data name="GridStepDescription" xml:space="preserve">
+    <value>Determines the step for the grid.</value>
+  </data>
+  <data name="GridTransparencyChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the GridTransparency property changes.</value>
+  </data>
+  <data name="GridTransparencyDescription" xml:space="preserve">
+    <value>Determines the grid transparency level.</value>
+  </data>
+  <data name="InstanceNameChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the InstanceName property changes.</value>
+  </data>
+  <data name="InstanceNameDescription" xml:space="preserve">
+    <value>Determines an instance name for this counter.</value>
+  </data>
+  <data name="IsBarChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the IsBar property changes.</value>
+  </data>
+  <data name="IsBarDescription" xml:space="preserve">
+    <value>Determines whether to show the graph line as a set of bars.</value>
+  </data>
+  <data name="KiloPrefix" xml:space="preserve">
+    <value>Kilo</value>
+  </data>
+  <data name="LatencyChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the Latency property changes.</value>
+  </data>
+  <data name="LatencyDescription" xml:space="preserve">
+    <value>Determines the latency for the counter.</value>
+  </data>
+  <data name="LineColorChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the LineColor property changes.</value>
+  </data>
+  <data name="LineColorDescription" xml:space="preserve">
+    <value>Determines the graph line color.</value>
+  </data>
+  <data name="LogCategory" xml:space="preserve">
+    <value>Log</value>
+  </data>
+  <data name="LogDescription" xml:space="preserve">
+    <value>Indicates whether to log the value changes on the meter.</value>
+  </data>
+  <data name="LogOutputChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the LogOutput property changes.</value>
+  </data>
+  <data name="LogOutputDescription" xml:space="preserve">
+    <value>Determines the path to write the log file to.</value>
+  </data>
+  <data name="LogOutputException" xml:space="preserve">
+    <value>Please, specify the extension for the file.</value>
+  </data>
+  <data name="MachineNameChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the MachineName property changes.</value>
+  </data>
+  <data name="MachineNameDescription" xml:space="preserve">
+    <value>Determines the computer name for this counter.</value>
+  </data>
+  <data name="MaximumChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the Maximum property changes.</value>
+  </data>
+  <data name="MaxLogFileSizeChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the MaxLogFileSize property changes.</value>
+  </data>
+  <data name="MaxLogFileSizeDescription" xml:space="preserve">
+    <value>Determines the maximum log file in KB.</value>
+  </data>
+  <data name="MegaPrefix" xml:space="preserve">
+    <value>Mega</value>
+  </data>
+  <data name="MinimumChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the Minimum property changes.</value>
+  </data>
+  <data name="OrientationChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the Orientation property changes.</value>
+  </data>
+  <data name="OrientationDescription" xml:space="preserve">
+    <value>Determines the orientation of the control.</value>
+  </data>
+  <data name="OutputLogFileName" xml:space="preserve">
+    <value>output.log</value>
+  </data>
+  <data name="PerformanceCounterCategory" xml:space="preserve">
+    <value>Performance Counter</value>
+  </data>
+  <data name="ProgressTextAlignmentChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the ProgressTextAlignment property changes.</value>
+  </data>
+  <data name="ProgressTextAlignmentDescription" xml:space="preserve">
+    <value>Determines the alignment of the progress text.</value>
+  </data>
+  <data name="ProgressTextBackColorChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the ProgressTextBackColor property changes.</value>
+  </data>
+  <data name="ProgressTextBackColorDescription" xml:space="preserve">
+    <value>Determines the back color for the label.</value>
+  </data>
+  <data name="ProgressTextBackgroundTransparencyChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the ProgressTextBackgroundTransparency property changes.</value>
+  </data>
+  <data name="ProgressTextBackgroundTransparencyDescription" xml:space="preserve">
+    <value>Determines the background transparency level for the label.</value>
+  </data>
+  <data name="ProgressTextBorderColorChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the ProgressTextBorderColor property changes.</value>
+  </data>
+  <data name="ProgressTextBorderColorDescription" xml:space="preserve">
+    <value>Determines the border color for the label.</value>
+  </data>
+  <data name="ProgressTextBorderStyleChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the ProgressTextBorderStyle property changes.</value>
+  </data>
+  <data name="ProgressTextBorderStyleDescription" xml:space="preserve">
+    <value>The border style of the ProgressText.</value>
+  </data>
+  <data name="ProgressTextCategory" xml:space="preserve">
+    <value>ProgressText</value>
+  </data>
+  <data name="ProgressTextEatLineChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the ProgressTextEatLine property changes.</value>
+  </data>
+  <data name="ProgressTextEatLineDescription" xml:space="preserve">
+    <value>Indicates whether to eat the tail symbols which cannot be displayed due to the label width.</value>
+  </data>
+  <data name="ProgressTextEdgeIndentChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the ProgressTextEdgeIndent property changes.</value>
+  </data>
+  <data name="ProgressTextEdgeIndentDescription" xml:space="preserve">
+    <value>Determines the indent of the progress text from the nearest edge of the meter.</value>
+  </data>
+  <data name="ProgressTextFontChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the ProgressTextFont property changes.</value>
+  </data>
+  <data name="ProgressTextFontDescription" xml:space="preserve">
+    <value>Determines the font for the progress text.</value>
+  </data>
+  <data name="ProgressTextForeColorChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the ProgressTextForeColor property changes.</value>
+  </data>
+  <data name="ProgressTextForeColorDescription" xml:space="preserve">
+    <value>The foreground color of the control.</value>
+  </data>
+  <data name="ProgressTextForegroundTransparencyChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the ProgressTextForegroundTransparency property changes.</value>
+  </data>
+  <data name="ProgressTextForegroundTransparencyDescription" xml:space="preserve">
+    <value>Determines the foreground transparency level for the label.</value>
+  </data>
+  <data name="ProgressTextOrientationChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the ProgressTextOrientation property changes.</value>
+  </data>
+  <data name="ProgressTextOrientationDescription" xml:space="preserve">
+    <value>Determines the direction of the progress text.</value>
+  </data>
+  <data name="ProgressTextPositionChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the ProgressTextPosition property changes.</value>
+  </data>
+  <data name="ProgressTextPositionDescription" xml:space="preserve">
+    <value>Determines the positioning of the progress text.</value>
+  </data>
+  <data name="ProgressTextVisibleChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the ProgressTextVisible property changes.</value>
+  </data>
+  <data name="ProgressTextVisibleDescription" xml:space="preserve">
+    <value>Indicates whether the progress text is visible.</value>
+  </data>
+  <data name="PropertyChangedCategory" xml:space="preserve">
+    <value>Property Changed</value>
+  </data>
+  <data name="ReleaseTickLineChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the ReleaseTickLine property changes.</value>
+  </data>
+  <data name="ReleaseTickLineDescription" xml:space="preserve">
+    <value>Indicates whether to release the tick line.</value>
+  </data>
+  <data name="ReleaseTickLineTimeoutChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the ReleaseTickLineTimeout property changes.</value>
+  </data>
+  <data name="ReleaseTickLineTimeoutDescription" xml:space="preserve">
+    <value>Time in milliseconds between the tick line releases.</value>
+  </data>
+  <data name="SeparatorChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the Separator property changes.</value>
+  </data>
+  <data name="SeparatorDescription" xml:space="preserve">
+    <value>Determines the separator of the postfix.</value>
+  </data>
+  <data name="ShowGridChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the ShowGrid property changes.</value>
+  </data>
+  <data name="ShowGridDescription" xml:space="preserve">
+    <value>Indicates whether to show the grid.</value>
+  </data>
+  <data name="SplitLogFileChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the SplitLogFile property changes.</value>
+  </data>
+  <data name="SplitLogFileDescription" xml:space="preserve">
+    <value>Indicates whether to split a log file if its size exceeds MaxLogFileSize.</value>
+  </data>
+  <data name="StepChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the StepChanged property changes.</value>
+  </data>
+  <data name="StepDescription" xml:space="preserve">
+    <value>Determines the line step for the graph.</value>
+  </data>
+  <data name="StretchImageChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the StretchImage property changes.</value>
+  </data>
+  <data name="StretchImageDescription" xml:space="preserve">
+    <value>Indicates whether to stretch the background image.</value>
+  </data>
+  <data name="SwitchedOnChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the SwitchedOn property changes.</value>
+  </data>
+  <data name="SwitchedOnDescription" xml:space="preserve">
+    <value>Indicates whether the meter is switched on.</value>
+  </data>
+  <data name="TexOrientationChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the TextOrientation property changes.</value>
+  </data>
+  <data name="TextAlignChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the TextAlign property changes.</value>
+  </data>
+  <data name="TextAlignDescription" xml:space="preserve">
+    <value>Determines text alignment for the control.</value>
+  </data>
+  <data name="TextChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the Text property changes.</value>
+  </data>
+  <data name="TextOrientationDescription" xml:space="preserve">
+    <value>Determines the text orientation for the control.</value>
+  </data>
+  <data name="TickLineChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the TickLine property changes.</value>
+  </data>
+  <data name="TickLineDescription" xml:space="preserve">
+    <value>Indicates whether to show the tick line.</value>
+  </data>
+  <data name="TimerTickDescription" xml:space="preserve">
+    <value>Occurs when the Tick event occurs on the timer.</value>
+  </data>
+  <data name="TubeEndColorChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the TubeEndColor property changes.</value>
+  </data>
+  <data name="TubeGradientEndColorDescription" xml:space="preserve">
+    <value>Determines the end color of the tube gradient.</value>
+  </data>
+  <data name="TubeGradientStartColorDescription" xml:space="preserve">
+    <value>Determines the start color of the tube gradient.</value>
+  </data>
+  <data name="TubeStartColorChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the TubeStartColor property changes.</value>
+  </data>
+  <data name="ValueChangedDescription" xml:space="preserve">
+    <value>Occurs when the value on the counter changes.</value>
+  </data>
+  <data name="ValueDescription" xml:space="preserve">
+    <value>The current value of the meter.</value>
+  </data>
+  <data name="ValueRepresentationChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the ValueRepresentation property changes.</value>
+  </data>
+  <data name="ValueRepresentationDescription" xml:space="preserve">
+    <value>Determines the value representation of the counter.</value>
+  </data>
+  <data name="WordWrapChangedDescription" xml:space="preserve">
+    <value>Occurs when the value of the WordWrap property changes.</value>
+  </data>
+  <data name="WordWrapDescription" xml:space="preserve">
+    <value>Indicates whether lines are automatically word-wrapped.</value>
+  </data>
+</root>

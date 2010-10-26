@@ -1,0 +1,319 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C58FF4DC-AAAC-4732-BC6D-CC7961C8B8E6}</ProjectGuid>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <RootNamespace>Genetibase.Windows.Controls</RootNamespace>
+    <AssemblyName>Genetibase.NuGenEditor</AssemblyName>
+    <WarningLevel>4</WarningLevel>
+    <OutputType>library</OutputType>
+    <ApplicationVersion>1.0.0.*</ApplicationVersion>
+    <!-- Most people will use Publish dialog in Visual Studio to increment this -->
+    <MinFrameworkVersionRequired>3.0</MinFrameworkVersionRequired>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>bin\Debug\Genetibase.NuGenEditor.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>bin\Release\Genetibase.NuGenEditor.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="PresentationFramework.Aero">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework.Classic">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework.Luna">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework.Royale">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationTypes">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EditorArea.cs" />
+    <Compile Include="EditorConnector.cs" />
+    <Compile Include="EditorHelper.cs" />
+    <Compile Include="EditorScrollBar.cs" />
+    <Compile Include="EditorView.xaml.cs">
+      <DependentUpon>EditorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditorViewHelper.cs" />
+    <Compile Include="Editor\AdornmentLibrary\Breakpoint\BreakpointAdornment.cs" />
+    <Compile Include="Editor\AdornmentLibrary\Breakpoint\BreakpointAdornmentSurface.cs" />
+    <Compile Include="Editor\AdornmentLibrary\Breakpoint\BreakpointProvider.cs" />
+    <Compile Include="Editor\AdornmentLibrary\Breakpoint\IBreakpointAdornment.cs" />
+    <Compile Include="Editor\AdornmentLibrary\Breakpoint\IBreakpointProvider.cs" />
+    <Compile Include="Editor\AdornmentLibrary\TextMarker\ITextMarkerAdornment.cs" />
+    <Compile Include="Editor\AdornmentLibrary\TextMarker\ITextMarkerProvider.cs" />
+    <Compile Include="Editor\AdornmentLibrary\TextMarker\TextMarkerAdornment.cs" />
+    <Compile Include="Editor\AdornmentLibrary\TextMarker\TextMarkerAdornmentSurface.cs" />
+    <Compile Include="Editor\AdornmentLibrary\TextMarker\TextMarkerProvider.cs" />
+    <Compile Include="Editor\AdornmentLibrary\ToolTip\IToolTipProvider.cs" />
+    <Compile Include="Editor\AdornmentLibrary\ToolTip\ToolTipAdornment.cs" />
+    <Compile Include="Editor\AdornmentLibrary\ToolTip\ToolTipAdornmentSurface.cs" />
+    <Compile Include="Editor\AdornmentLibrary\ToolTip\ToolTipProvider.cs" />
+    <Compile Include="Editor\AdornmentSurfaceManager\AdornmentSurfaceManager.cs" />
+    <Compile Include="Editor\AdornmentSurfaceManager\IAdornmentSurfaceHost.cs" />
+    <Compile Include="Editor\AdornmentSurfaceManager\IAdornmentSurfaceManager.cs" />
+    <Compile Include="Editor\AdornmentSurfaceManager\IAdornmentSurfaceSpaceManager.cs" />
+    <Compile Include="Editor\AdornmentSurface\AdornmentDiscriminatorAttribute.cs" />
+    <Compile Include="Editor\AdornmentSurface\IAdornmentSurface.cs" />
+    <Compile Include="Editor\AdornmentSurface\SurfacePosition.cs" />
+    <Compile Include="Editor\Adornment\AdornmentAggregator.cs" />
+    <Compile Include="Editor\Adornment\AdornmentsChangedEventArgs.cs" />
+    <Compile Include="Editor\Adornment\IAdornment.cs" />
+    <Compile Include="Editor\Adornment\IAdornmentProvider.cs" />
+    <Compile Include="Editor\CaretElement.cs" />
+    <Compile Include="Editor\CaretPosition.cs" />
+    <Compile Include="Editor\Classification\ClassificationChangedEventArgs.cs" />
+    <Compile Include="Editor\Classification\ClassificationFormatMap.cs" />
+    <Compile Include="Editor\Classification\ClassificationFormatMapSelector.cs" />
+    <Compile Include="Editor\Classification\ClassificationSpan.cs" />
+    <Compile Include="Editor\Classification\ClassifierAggregator.cs" />
+    <Compile Include="Editor\Classification\DefaultClassificationFormatMap.cs" />
+    <Compile Include="Editor\Classification\IClassificationFormatMap.cs" />
+    <Compile Include="Editor\Classification\IClassifier.cs" />
+    <Compile Include="Editor\Classification\IScanner.cs" />
+    <Compile Include="Editor\Classification\IStateManagement.cs" />
+    <Compile Include="Editor\Classification\LineBasedStateManagement.cs" />
+    <Compile Include="Editor\Classification\TokenInfo.cs" />
+    <Compile Include="Editor\CsColoringContext.cs" />
+    <Compile Include="Editor\CsColorizer.cs" />
+    <Compile Include="Editor\CsColorizerData.cs" />
+    <Compile Include="Editor\CsColorizerState.cs" />
+    <Compile Include="Editor\CsLexer.cs" />
+    <Compile Include="Editor\VbColoringContext.cs" />
+    <Compile Include="Editor\VbColorizer.cs" />
+    <Compile Include="Editor\VbColorizerData.cs" />
+    <Compile Include="Editor\VbColorizerState.cs" />
+    <Compile Include="Editor\VbLexer.cs" />
+    <Compile Include="Editor\XmlColorizerData.cs" />
+    <Compile Include="Editor\XmlColorizerState.cs" />
+    <Compile Include="Editor\Commands\CommandChangedEventArgs.cs" />
+    <Compile Include="Editor\Commands\CommandChangedEventHandler.cs" />
+    <Compile Include="Editor\Commands\CommandExecutionEventArgs.cs" />
+    <Compile Include="Editor\Commands\CommandExecutionEventHandler.cs" />
+    <Compile Include="Editor\Commands\ICommand.cs" />
+    <Compile Include="Editor\Commands\ICommandCollection.cs" />
+    <Compile Include="Editor\Commands\ICommandManager.cs" />
+    <Compile Include="Editor\Commands\ICommandTarget.cs" />
+    <Compile Include="Editor\Configuration\IConfigurationObject.cs" />
+    <Compile Include="Editor\Configuration\IConfigurationObjectCollection.cs" />
+    <Compile Include="Editor\DefaultLineGutterContentLayer.cs" />
+    <Compile Include="Editor\DefaultLineGutterDrawingVisual.cs" />
+    <Compile Include="Editor\DefaultLineGutterTextSource.cs" />
+    <Compile Include="Editor\DefaultLineNumberProvider.cs" />
+    <Compile Include="Editor\Documents\CodeEditor.cs" />
+    <Compile Include="Editor\Documents\ICodeEditor.cs" />
+    <Compile Include="Editor\DocumentTypeHelper.cs" />
+    <Compile Include="Editor\Find\FindLogic.cs" />
+    <Compile Include="Editor\Find\IFindLogic.cs" />
+    <Compile Include="Editor\FrozenBuffer.cs" />
+    <Compile Include="Editor\ImeHighlight.cs" />
+    <Compile Include="Editor\InputBinding\ClickMouseBinding.cs" />
+    <Compile Include="Editor\InputBinding\EditorKeyBinding.cs" />
+    <Compile Include="Editor\InputBinding\EditorMouseBinding.cs" />
+    <Compile Include="Editor\InputBinding\IKeyBinding.cs" />
+    <Compile Include="Editor\InputBinding\IMouseBinding.cs" />
+    <Compile Include="Editor\IPropertyOwner.cs" />
+    <Compile Include="Editor\IScanner.cs" />
+    <Compile Include="Editor\IStateManagement.cs" />
+    <Compile Include="Editor\ITextBufferFactory.cs" />
+    <Compile Include="Editor\ITextEdit.cs" />
+    <Compile Include="Editor\ITextEditorFactory.cs" />
+    <Compile Include="Editor\ITextReader.cs" />
+    <Compile Include="Editor\ITextVersion.cs" />
+    <Compile Include="Editor\LineBasedStateManagement.cs" />
+    <Compile Include="Editor\LinkBuffer.cs" />
+    <Compile Include="Editor\LinkBufferFactory.cs" />
+    <Compile Include="Editor\Navigation\DefaultTextNavigator.cs" />
+    <Compile Include="Editor\Navigation\ITextStructureNavigator.cs" />
+    <Compile Include="Editor\Navigation\ITextStructureNavigatorFactory.cs" />
+    <Compile Include="Editor\Navigation\NaturalLanguageNavigator.cs" />
+    <Compile Include="Editor\Navigation\TextExtent.cs" />
+    <Compile Include="Editor\Navigation\TextStructureNavigationFactory.cs" />
+    <Compile Include="Editor\NormalizedSpan.cs" />
+    <Compile Include="Editor\NormalizedSpanManager.cs" />
+    <Compile Include="Editor\SelectionLayer.cs" />
+    <Compile Include="Editor\SpaceNegotiation.cs" />
+    <Compile Include="Editor\Span.cs" />
+    <Compile Include="Editor\SpanTrackingMode.cs" />
+    <Compile Include="Editor\StatefulClassifier.cs" />
+    <Compile Include="Editor\TextBuffer.cs" />
+    <Compile Include="Editor\TextChange.cs" />
+    <Compile Include="Editor\TextChangedEventArgs.cs" />
+    <Compile Include="Editor\TextContentLayer.cs" />
+    <Compile Include="Editor\TextEditorAutomationPeer.cs" />
+    <Compile Include="Editor\TextEditorPatternProvider.cs" />
+    <Compile Include="Editor\TextEmbeddedSpace.cs" />
+    <Compile Include="Editor\TextFormattingModifier.cs" />
+    <Compile Include="Editor\TextFormattingParagraphProperties.cs" />
+    <Compile Include="Editor\TextFormattingRunProperties.cs" />
+    <Compile Include="Editor\TextFormattingSource.cs" />
+    <Compile Include="Editor\TextLineVisual.cs" />
+    <Compile Include="Editor\TextLineVisualList.cs" />
+    <Compile Include="Editor\TextPoint.cs" />
+    <Compile Include="Editor\TextRangeProvider.cs" />
+    <Compile Include="Editor\TextSpan.cs" />
+    <Compile Include="Editor\TextUtilities.cs" />
+    <Compile Include="Editor\TextVersion.cs" />
+    <Compile Include="Editor\TrackingMode.cs" />
+    <Compile Include="Editor\Undo\IUndoManager.cs" />
+    <Compile Include="Editor\Undo\IUndoUnit.cs" />
+    <Compile Include="Editor\Undo\UndoEventArgs.cs" />
+    <Compile Include="Editor\Undo\UndoManager.cs" />
+    <Compile Include="Editor\UserInterface\CodeOptionsModel.cs" />
+    <Compile Include="Editor\VersionedTextSpan.cs" />
+    <Compile Include="Editor\View\CaretPlacement.cs" />
+    <Compile Include="Editor\View\CaretPositionChangedEventArgs.cs" />
+    <Compile Include="Editor\View\EditorCommands.cs" />
+    <Compile Include="Editor\View\ICaretPosition.cs" />
+    <Compile Include="Editor\View\IEditorCommands.cs" />
+    <Compile Include="Editor\View\ITextArea.cs" />
+    <Compile Include="Editor\View\ITextCaret.cs" />
+    <Compile Include="Editor\View\ITextLine.cs" />
+    <Compile Include="Editor\View\ITextSelection.cs" />
+    <Compile Include="Editor\View\MarkerSpan.cs" />
+    <Compile Include="Editor\View\TextAreaHelper.cs" />
+    <Compile Include="Editor\View\TextAreaInputEventArgs.cs" />
+    <Compile Include="Editor\View\TextAreaLayoutChangedEventArgs.cs" />
+    <Compile Include="Editor\View\TextBounds.cs" />
+    <Compile Include="Editor\View\TextEditAction.cs" />
+    <Compile Include="Editor\View\TextInputState.cs" />
+    <Compile Include="Editor\View\TextUndoGroup.cs" />
+    <Compile Include="Editor\View\TextUndoUnit.cs" />
+    <Compile Include="Editor\View\ViewRelativePosition.cs" />
+    <Compile Include="Editor\VisualsFactory.cs" />
+    <Compile Include="Editor\XmlColoringContext.cs" />
+    <Compile Include="Editor\XmlColorizer.cs" />
+    <Compile Include="Editor\XmlWordClassificationLookup.cs" />
+    <Compile Include="IEditorArea.cs" />
+    <Compile Include="IEditorView.cs" />
+    <Compile Include="NuGenEditor.xaml.cs">
+      <DependentUpon>NuGenEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenEditorCommands.CommandId.cs" />
+    <Compile Include="NuGenEditorCommands.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Genetibase.Shared\Genetibase.Shared.csproj">
+      <Project>{439FF55D-A918-4343-B6F8-2C789F45AC07}</Project>
+      <Name>Genetibase.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Genetibase.Win32\Genetibase.Win32.csproj">
+      <Project>{8E94E64C-52F7-4865-ACF1-3FEC8F61B531}</Project>
+      <Name>Genetibase.Win32</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="EditorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NuGenEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Editor\EditorStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Editor\EditorViewStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Aero.NormalColor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Luna.Homestead.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Luna.Metallic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Luna.NormalColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Royale.NormalColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

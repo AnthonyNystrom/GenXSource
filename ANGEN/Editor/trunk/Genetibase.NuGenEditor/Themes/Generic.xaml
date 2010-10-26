@@ -1,0 +1,36 @@
+﻿<!--
+	Generic.xaml
+	Copyright © 2007 Alex Nesterov	
+	mailto:a.nesterov@genetibase.com 
+-->
+	
+<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:ctrls="clr-namespace:Genetibase.Windows.Controls"
+	xmlns:theme="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Classic"
+	>
+	
+	<!--
+	    *************************
+		*** SplitButton Style ***
+	    *************************
+	-->
+	
+	<Style x:Key="{ComponentResourceKey TypeInTargetAssembly={x:Type ctrls:NuGenEditor}, ResourceId={x:Type Thumb}}" TargetType="Thumb">
+		<Setter Property="Height" Value="7" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="Thumb">
+					<theme:ClassicBorderDecorator
+						BorderStyle="Raised"
+                        Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"
+                        BorderThickness="3"
+                        BorderBrush="{x:Static theme:ClassicBorderDecorator.ClassicBorderBrush}"
+						/>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	
+</ResourceDictionary>

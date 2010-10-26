@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Argument_EnumWithoutFlags" xml:space="preserve">
+    <value>Specified System.Enum is not marked with System.FlagsAttribute.</value>
+  </data>
+  <data name="Argument_InvalidCheckLBound" xml:space="preserve">
+    <value>The value should be greater than or equal to {0}.</value>
+  </data>
+  <data name="Argument_InvalidCheckUBound" xml:space="preserve">
+    <value>The value should be less than or equal to {0}.</value>
+  </data>
+  <data name="Argument_InvalidDefaultValue" xml:space="preserve">
+    <value>The value should be between {0} and {1}.</value>
+  </data>
+  <data name="Argument_InvalidEnumType" xml:space="preserve">
+    <value>Type byte, sbyte, short, ushort, int, uint, long, or long expected.</value>
+  </data>
+  <data name="Argument_InvalidHWnd" xml:space="preserve">
+    <value>Specified handle 0x{0:X} does not represent a window.</value>
+  </data>
+  <data name="Argument_InvalidResolutionStruct" xml:space="preserve">
+    <value>The width and height of the {0} structure should be positive.</value>
+  </data>
+  <data name="Argument_NotPositiveRadius" xml:space="preserve">
+    <value>The value for radius must be greater than zero.</value>
+  </data>
+  <data name="Argument_TypeValidationFailed" xml:space="preserve">
+    <value>{0} should be of type {1}.</value>
+  </data>
+  <data name="Argument_ZeroLengthString" xml:space="preserve">
+    <value>String cannot have zero length.</value>
+  </data>
+  <data name="ArgumentOutOfRange_PolygonPoints" xml:space="preserve">
+    <value>The number of points for the polygon should not be less than 3.</value>
+  </data>
+  <data name="FormatException_HexColor" xml:space="preserve">
+    <value>Specified hexadecimal color representation must be specified in the FFFFFF format.</value>
+  </data>
+  <data name="InvalidCast_NotClass" xml:space="preserve">
+    <value>{0} is not a class.</value>
+  </data>
+  <data name="InvalidOperation_EventKeyNotFound" xml:space="preserve">
+    <value>No delegate with the specified key associated found.</value>
+  </data>
+  <data name="InvalidOperation_HandlerParams" xml:space="preserve">
+    <value>The handler is expected to contain two formal parameters. The first one should be of type System.Object while the second should be of type System.EventArgs or any derived.</value>
+  </data>
+  <data name="InvalidOperation_HandlerType" xml:space="preserve">
+    <value>The event should be of type {0}.</value>
+  </data>
+  <data name="InvalidOperation_MethodInvokationFailed" xml:space="preserve">
+    <value>Unable to invoke the method with the specified parameters. Check if the specified object contains the method with the specified name. Possibly the specified object contains several overloads of the method with the specified name. Try specifying method signature.</value>
+  </data>
+  <data name="InvalidOperation_MouseEventHandlerType" xml:space="preserve">
+    <value>The event should be of type System.Windows.Forms.MouseEventHandler.</value>
+  </data>
+  <data name="Message_EventNotFoundException" xml:space="preserve">
+    <value>Event with the specified name '{0}' cannot be found on type {1}.</value>
+  </data>
+  <data name="Message_FieldNotFoundException" xml:space="preserve">
+    <value>Field with the specified name '{0}' cannot be found on type {1}.</value>
+  </data>
+  <data name="Message_MethodNotFoundException" xml:space="preserve">
+    <value>Method with the specified name '{0}' cannot be found on type {1}.</value>
+  </data>
+  <data name="Message_PropertyNotFoundException" xml:space="preserve">
+    <value>Property with the specified name '{0}' cannot be found on type {1}.</value>
+  </data>
+  <data name="Message_ServiceNotFoundException" xml:space="preserve">
+    <value>Service of type {0} cannot be found.</value>
+  </data>
+  <data name="Message_WmHandlerSignatureException" xml:space="preserve">
+    <value>Method {0} should match Genetibase.Shared.Windows.NuGenWmHandler delegate.</value>
+  </data>
+  <data name="Serializer_Version" xml:space="preserve">
+    <value>1.0</value>
+  </data>
+  <data name="StringProcessor_EatTrailer" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="TypeLoad_NotFound" xml:space="preserve">
+    <value>Type {0} not found.</value>
+  </data>
+  <data name="Win32_InvalidKbdLLHookHandle" xml:space="preserve">
+    <value>The retrieved WH_KEYBOARD_LL hook handle is invalid.</value>
+  </data>
+  <data name="XmlAttribute_Application" xml:space="preserve">
+    <value>Application</value>
+  </data>
+  <data name="XmlAttribute_Count" xml:space="preserve">
+    <value>Count</value>
+  </data>
+  <data name="XmlAttribute_IsEmfImage" xml:space="preserve">
+    <value>IsEmfImage</value>
+  </data>
+  <data name="XmlAttribute_IsImage" xml:space="preserve">
+    <value>IsImage</value>
+  </data>
+  <data name="XmlAttribute_IsKey" xml:space="preserve">
+    <value>IsKey</value>
+  </data>
+  <data name="XmlAttribute_IsList" xml:space="preserve">
+    <value>IsList</value>
+  </data>
+  <data name="XmlAttribute_IsNull" xml:space="preserve">
+    <value>IsNull</value>
+  </data>
+  <data name="XmlAttribute_IsRef" xml:space="preserve">
+    <value>IsRef</value>
+  </data>
+  <data name="XmlAttribute_IsSer" xml:space="preserve">
+    <value>IsSer</value>
+  </data>
+  <data name="XmlAttribute_Length" xml:space="preserve">
+    <value>Length</value>
+  </data>
+  <data name="XmlAttribute_Ref" xml:space="preserve">
+    <value>Ref</value>
+  </data>
+  <data name="XmlAttribute_Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="XmlAttribute_Value" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="XmlAttribute_Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="XmlTag_Item" xml:space="preserve">
+    <value>Item</value>
+  </data>
+  <data name="XmlValue_False" xml:space="preserve">
+    <value>False</value>
+  </data>
+  <data name="XmlValue_True" xml:space="preserve">
+    <value>True</value>
+  </data>
+</root>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WebPart xmlns="http://schemas.microsoft.com/WebPart/v2" >
+	<Title>Genetibase Diagram</Title>
+	<Description>Displays a single page from a Genetibase diagram on a Genetibase diagram server.</Description>
+	<Assembly>GenetibaseDiagramWebPartLibrary, version=1.0.0.0, culture=neutral</Assembly>
+	<TypeName>Genetibase.SharePoint.WebPartPages.GenetibaseDiagramPageWebPart</TypeName>
+	<!-- Specify initial values for any additional base class or custom properties here. -->
+</WebPart>
+
