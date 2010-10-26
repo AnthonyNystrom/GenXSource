@@ -1,0 +1,244 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{94687627-0C0E-4818-8B6E-858AA19118DF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NuGenVisUI</RootNamespace>
+    <AssemblyName>NuGenVisUI</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Boo.Lang, Version=2.0.0.0, Culture=neutral, PublicKeyToken=32c39770e9a21a67, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\boo-0.8.2.2960-bin\bin\Boo.Lang.dll</HintPath>
+    </Reference>
+    <Reference Include="Boo.Lang.CodeDom, Version=2.0.0.0, Culture=neutral, PublicKeyToken=32c39770e9a21a67, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\boo-0.8.2.2960-bin\bin\Boo.Lang.CodeDom.dll</HintPath>
+    </Reference>
+    <Reference Include="Boo.Lang.Compiler, Version=2.0.0.0, Culture=neutral, PublicKeyToken=32c39770e9a21a67, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\boo-0.8.2.2960-bin\bin\Boo.Lang.Compiler.dll</HintPath>
+    </Reference>
+    <Reference Include="Boo.Lang.Interpreter, Version=2.0.0.0, Culture=neutral, PublicKeyToken=32c39770e9a21a67, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\boo-0.8.2.2960-bin\bin\Boo.Lang.Interpreter.dll</HintPath>
+    </Reference>
+    <Reference Include="Boo.Lang.Parser, Version=2.0.0.0, Culture=neutral, PublicKeyToken=32c39770e9a21a67, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\boo-0.8.2.2960-bin\bin\Boo.Lang.Parser.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Common.v3, Version=3.5.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf" />
+    <Reference Include="Janus.Windows.Ribbon.v3, Version=3.5.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
+    <Reference Include="Janus.Windows.UI.v3, Version=3.5.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf" />
+    <Reference Include="Microsoft.DirectX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.DirectX.Direct3D, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.DirectX.Direct3DX, Version=1.0.2908.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="NuGenOcTree, Version=1.0.2922.27120, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\NuGenOctree\~svn\src\Debug\NuGenOcTree.dll</HintPath>
+    </Reference>
+    <Reference Include="ScintillaNET, Version=1.0.2626.22303, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\NuGenDEMVis\~svn\src\references-bin\x86\ScintillaNET.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Axis3DHelper.cs" />
+    <Compile Include="BooScript.cs" />
+    <Compile Include="BooScriptBuilder.cs" />
+    <Compile Include="BooScriptContentLoader.cs" />
+    <Compile Include="BooScriptEventsBridge.cs" />
+    <Compile Include="CircleHelper.cs" />
+    <Compile Include="DistanceMeasurer.cs" />
+    <Compile Include="GraphicsDeviceInfoDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphicsDeviceInfoDlg.Designer.cs">
+      <DependentUpon>GraphicsDeviceInfoDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphicsProfile.cs" />
+    <Compile Include="GraphicsProfileInfoDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphicsProfileInfoDlg.Designer.cs">
+      <DependentUpon>GraphicsProfileInfoDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIImage.cs" />
+    <Compile Include="GUILabel.cs" />
+    <Compile Include="GUILayerItem.cs" />
+    <Compile Include="GUIProgressBar.cs" />
+    <Compile Include="IViewInputController.cs" />
+    <Compile Include="ILayer.cs" />
+    <Compile Include="ILayerScriptInterface.cs" />
+    <Compile Include="ILayerStack.cs" />
+    <Compile Include="ILayoutManager.cs" />
+    <Compile Include="IUI3DControl.cs" />
+    <Compile Include="LayerContentLoader.cs" />
+    <Compile Include="LoadingLayer.cs" />
+    <Compile Include="MdiWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MdiWindow.Designer.cs">
+      <DependentUpon>MdiWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrbitalMovementControler.cs" />
+    <Compile Include="PathTools.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PureQuadTree.cs" />
+    <Compile Include="QuadTree.cs" />
+    <Compile Include="RecentFiles.cs" />
+    <Compile Include="RenderingContext3D.cs" />
+    <Compile Include="RenderingSource3D.cs" />
+    <Compile Include="RenderingView3D.cs" />
+    <Compile Include="RotationAxis3DHelper.cs" />
+    <Compile Include="SceneManager.cs" />
+    <Compile Include="ScriptDocument.cs" />
+    <Compile Include="ScriptEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ScriptEditorControl.designer.cs">
+      <DependentUpon>ScriptEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScriptingHostExplorer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScriptingHostExplorer.Designer.cs">
+      <DependentUpon>ScriptingHostExplorer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SimpleGUILayer.cs" />
+    <Compile Include="SphereHelper.cs" />
+    <Compile Include="UI3DControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI3DControl.Designer.cs">
+      <DependentUpon>UI3DControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewTab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewTab.Designer.cs">
+      <DependentUpon>ViewTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisLayer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GraphicsDeviceInfoDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GraphicsDeviceInfoDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphicsProfileInfoDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GraphicsProfileInfoDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MdiWindow.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MdiWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScriptEditorControl.resx">
+      <DependentUpon>ScriptEditorControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScriptingHostExplorer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ScriptingHostExplorer.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\NuGenRenderCore\~svn\src\NuGenRenderCore.csproj">
+      <Project>{96169C26-6B5C-4E2F-8A6D-95F3F5D6C696}</Project>
+      <Name>NuGenRenderCore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Script-Delete.png" />
+    <None Include="Resources\Script-Load.png" />
+    <None Include="Resources\Script-New.png" />
+    <None Include="Resources\Script-Play.png" />
+    <None Include="Resources\Script-Save.png" />
+    <None Include="Resources\Compile.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
