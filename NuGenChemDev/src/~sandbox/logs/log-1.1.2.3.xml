@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project>
+  <objectives>
+    <objective desc="Metaball integration with project" status="complete"/>
+  </objectives>
+  <logs>
+    <todo>
+      <rollovers>
+        <item desc="Incorporation of better device handling and creation support" priority="low" status="50%"/>
+        <item desc="Options to toggle chemical structures (cartoons etc.)"/>
+        <item desc="Loading molecule feedback" status="complete"/>
+        <item desc="Detect when shading descriptions change" priority="low" status="complete"/>
+        <item desc="Adaptive marching cube support" status="80%"/>
+        <item desc="Blending support for polygonised volumes" status="complete"/>
+        <item desc="Optimize isosurface point collection?"/>
+      </rollovers>
+    </todo>
+    <change>
+      <changes at="11/02/07">
+        <change>Added basic logging and progress feedback support</change>
+      </changes>
+      <changes at="12/02/07">
+        <change>Added basic property tree to allow shading changes to be detected</change>
+      </changes>
+    </change>
+  </logs>
+</project>

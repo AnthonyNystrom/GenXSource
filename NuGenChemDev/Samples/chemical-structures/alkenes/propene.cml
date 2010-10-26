@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<molecule xmlns="http://www.xml-cml.org/schema/cml2/core" id="CS_propene">
+ <formula concise=" C 3 H 6 "/>
+ <identifier version="InChI/1">
+  <basic>1/C3H6/c1-3-2/h3H,1H2,2H3</basic>
+ </identifier>
+ <name convention="IUPAC">Propene</name>
+ <atomArray>
+  <atom id="a1" elementType="H" x3="-1.962100" y3="-0.006400" z3="-0.988700"/>
+  <atom id="a2" elementType="C" x3="-2.519000" y3="0.108000" z3="-1.911200"/>
+  <atom id="a3" elementType="H" x3="-1.959900" y3="0.269500" z3="-2.825600"/>
+  <atom id="a4" elementType="C" x3="-3.854800" y3="0.049600" z3="-1.908200"/>
+  <atom id="a5" elementType="H" x3="-4.367300" y3="-0.113900" z3="-0.967100"/>
+  <atom id="a6" elementType="C" x3="-4.699400" y3="0.195800" z3="-3.128800"/>
+  <atom id="a7" elementType="H" x3="-4.100700" y3="0.358000" z3="-4.030700"/>
+  <atom id="a8" elementType="H" x3="-5.300900" y3="-0.705200" z3="-3.278300"/>
+  <atom id="a9" elementType="H" x3="-5.378400" y3="1.045500" z3="-3.014900"/>
+ </atomArray>
+ <bondArray>
+  <bond atomRefs2="a1 a2" order="1"/>
+  <bond atomRefs2="a2 a3" order="1"/>
+  <bond atomRefs2="a2 a4" order="2"/>
+  <bond atomRefs2="a4 a5" order="1"/>
+  <bond atomRefs2="a4 a6" order="1"/>
+  <bond atomRefs2="a6 a7" order="1"/>
+  <bond atomRefs2="a6 a8" order="1"/>
+  <bond atomRefs2="a6 a9" order="1"/>
+ </bondArray>
+ <list>
+  <propertyList>
+   <property dictRef="cml:molwt" title="molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="cml:molwt" units="unit:g">42.0797</scalar>
+   </property>
+   <property dictRef="chemwt:exact_molwt" title="exact molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="chemwt:exact_molwt" units="unit:g">42.0469502</scalar>
+   </property>
+   <property dictRef="cml:mpt" title="melting point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:mpt" units="unit:celsius">-185</scalar>
+   </property>
+   <property dictRef="cml:bpt" title="boiling point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:bpt" units="unit:celsius">-48</scalar>
+   </property>
+  </propertyList>
+ </list>
+</molecule>

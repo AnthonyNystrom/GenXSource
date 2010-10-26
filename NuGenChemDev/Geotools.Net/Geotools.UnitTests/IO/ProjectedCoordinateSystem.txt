@@ -1,0 +1,31 @@
+PROJCS[
+    "OSGB 1936 / British National Grid",
+    GEOGCS[
+        "OSGB 1936",
+        DATUM[
+            "OSGB 1936",
+            SPHEROID[
+                "Airy 1830",6377563.396,299.3249646,
+                AUTHORITY["EPSG","7001"]
+            ]
+            TOWGS84[0,0,0,0,0,0,0],
+            AUTHORITY["EPSG","6277"]
+        ]
+        PRIMEM[
+            "Greenwich",0,
+            AUTHORITY["EPSG","8901"]
+        ]
+        AXIS["Geodetic latitude","NORTH"],
+        AXIS["Geodetic longitude","EAST"],
+        AUTHORITY["EPSG","4277"]
+    ],
+    PROJECTION["Transverse Mercator"],
+    PARAMETER["latitude_of_natural_origin",49],
+    PARAMETER["longitude_of_natural_origin",-2],
+    PARAMETER["scale_factor_at_natural_origin",0.999601272],
+    PARAMETER["false_easting",400000],
+    PARAMETER["false_northing",-100000],
+    AXIS["Easting","EAST"],
+    AXIS["Northing","NORTH"],
+    AUTHORITY["EPSG","27700"]
+]

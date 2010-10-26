@@ -1,0 +1,311 @@
+HEADER    HORMONE                                 17-OCT-77   1GCN      1GCN   3
+COMPND    GLUCAGON (PH 6 - PH 7 FORM)                                   1GCN   4
+SOURCE    PORCINE (SUS SCROFA) PANCREAS                                 1GCN   5
+AUTHOR    T.L.BLUNDELL,K.SASAKI,S.DOCKERILL,I.J.TICKLE                  1GCN   6
+REVDAT   5   30-SEP-83 1GCND   1       REVDAT                           1GCND  1
+REVDAT   4   31-DEC-80 1GCNC   1       REMARK                           1GCND  2
+REVDAT   3   22-OCT-79 1GCNB   3       ATOM                             1GCND  3
+REVDAT   2   29-AUG-79 1GCNA   3       CRYST1                           1GCND  4
+REVDAT   1   28-NOV-77 1GCN    0                                        1GCND  5
+JRNL        AUTH   K.SASAKI,S.DOCKERILL,D.A.ADAMIAK,I.J.TICKLE,         1GCN   7
+JRNL        AUTH 2 T.BLUNDELL                                           1GCN   8
+JRNL        TITL   X-RAY ANALYSIS OF GLUCAGON AND ITS RELATIONSHIP TO   1GCN   9
+JRNL        TITL 2 RECEPTOR BINDING                                     1GCN  10
+JRNL        REF    NATURE                        V. 257   751 1975      1GCN  11
+JRNL        REFN   ASTM NATUAS  UK ISSN 0028-0836                  006  1GCN  12
+REMARK   1                                                              1GCN  13
+REMARK   1 REFERENCE 1                                                  1GCN  14
+REMARK   1  EDIT   M.O.DAYHOFF                                          1GCN  15
+REMARK   1  REF    ATLAS OF PROTEIN SEQUENCE     V.   5   125 1976      1GCN  16
+REMARK   1  REF  2 AND STRUCTURE,SUPPLEMENT 2                           1GCN  17
+REMARK   1  PUBL   NATIONAL BIOMEDICAL RESEARCH FOUNDATION,             1GCN  18
+REMARK   1  PUBL 2 SILVER SPRING,MD.                                    1GCN  19
+REMARK   1  REFN                   ISBN 0-912466-05-7              435  1GCN  20
+REMARK   2                                                              1GCN  21
+REMARK   2 RESOLUTION. 3.0 ANGSTROMS.                                   1GCNC  1
+REMARK   3                                                              1GCN  23
+REMARK   3 REFINEMENT. REALSPACE REFINEMENT AND ENERGY REFINEMENT.      1GCN  24
+REMARK   4                                                              1GCN  25
+REMARK   4 THE GLUCAGON CRYSTALS ARE FORMED AT PH 9.2 AND THEN THE PH   1GCN  26
+REMARK   4 IS CHANGED TO BETWEEN 6 AND 7.  CRYSTALS AT BOTH PH,S HAVE   1GCN  27
+REMARK   4 HIGH TEMPERATURE FACTORS, AND DATA TERMINATE AT              1GCN  28
+REMARK   4 APPROXIMATELY 3 ANGSTROMS RESOLUTION.  THE COORDINATES ARE   1GCN  29
+REMARK   4 OBTAINED FROM THE 3 ANGSTROMS RESOLUTION ELECTRON DENSITY    1GCN  30
+REMARK   4 MAP AND REFINED USING REAL SPACE REFINEMENT AGAINST          1GCN  31
+REMARK   4 (2FOBS-FCALC),ALPHA CALC  ELECTRON DENSITY MAPS WITH         1GCN  32
+REMARK   4 GEOMETRIC RESTRAINTS, FOLLOWED BY LEVITT ENERGY              1GCN  33
+REMARK   4 MINIMIZATION.  NO SOLVENT CAN BE INCLUDED AT 3 ANGSTROMS.    1GCN  34
+REMARK   4 WARNING - LOW RESOLUTION (3 ANGSTROMS) IMPLIES RATHER        1GCN  35
+REMARK   4 INACCURATE COORDINATES AND MEANINGLESS TEMPERATURE FACTORS.  1GCN  36
+REMARK   5                                                              1GCNA  1
+REMARK   5 CORRECTION.  MOVE CRYST1 RECORD TO ITS PROPER POSITION.      1GCNA  2
+REMARK   5  29-AUG-79.                                                  1GCNA  3
+REMARK   6                                                              1GCNB  1
+REMARK   6 CORRECTION. FIX NAMING AND HENCE ORDERING OF TWO ATOMS.      1GCNB  2
+REMARK   6  22-OCT-79.                                                  1GCNB  3
+REMARK   7                                                              1GCNC  2
+REMARK   7 CORRECTION. STANDARDIZE FORMAT OF REMARK 2.  31-DEC-80.      1GCNC  3
+REMARK   8                                                              1GCND  6
+REMARK   8 CORRECTION. INSERT REVDAT RECORDS. 30-SEP-83.                1GCND  7
+SEQRES   1     29  HIS SER GLN GLY THR PHE THR SER ASP TYR SER LYS TYR  1GCN  37
+SEQRES   2     29  LEU ASP SER ARG ARG ALA GLN ASP PHE VAL GLN TRP LEU  1GCN  38
+SEQRES   3     29  MET ASN THR                                          1GCN  39
+FTNOTE   1                                                              1GCN  40
+FTNOTE   1 RESIDUES 1 THROUGH 5 ARE RATHER DISORDERED IN THE CRYSTALS.  1GCN  41
+HELIX    1   A PHE      6  LEU     26  1                                1GCN  42
+CRYST1   47.100   47.100   47.100  90.00  90.00  90.00 P 21 3       12  1GCNA  4
+ORIGX1       .021231  0.000000  0.000000       0.000000                 1GCN  43
+ORIGX2      0.000000   .021231  0.000000       0.000000                 1GCN  44
+ORIGX3      0.000000  0.000000   .021231       0.000000                 1GCN  45
+SCALE1       .021231  0.000000  0.000000       0.000000                 1GCN  46
+SCALE2      0.000000   .021231  0.000000       0.000000                 1GCN  47
+SCALE3      0.000000  0.000000   .021231       0.000000                 1GCN  48
+ATOM      1  N   HIS     1      49.668  24.248  10.436  1.00 25.00   1  1GCN  50
+ATOM      2  CA  HIS     1      50.197  25.578  10.784  1.00 16.00   1  1GCN  51
+ATOM      3  C   HIS     1      49.169  26.701  10.917  1.00 16.00   1  1GCN  52
+ATOM      4  O   HIS     1      48.241  26.524  11.749  1.00 16.00   1  1GCN  53
+ATOM      5  CB  HIS     1      51.312  26.048   9.843  1.00 16.00   1  1GCN  54
+ATOM      6  CG  HIS     1      50.958  26.068   8.340  1.00 16.00   1  1GCN  55
+ATOM      7  ND1 HIS     1      49.636  26.144   7.860  1.00 16.00   1  1GCN  56
+ATOM      8  CD2 HIS     1      51.797  26.043   7.286  1.00 16.00   1  1GCN  57
+ATOM      9  CE1 HIS     1      49.691  26.152   6.454  1.00 17.00   1  1GCN  58
+ATOM     10  NE2 HIS     1      51.046  26.090   6.098  1.00 17.00   1  1GCN  59
+ATOM     11  N   SER     2      49.788  27.850  10.784  1.00 16.00   1  1GCN  60
+ATOM     12  CA  SER     2      49.138  29.147  10.620  1.00 15.00   1  1GCN  61
+ATOM     13  C   SER     2      47.713  29.006  10.110  1.00 15.00   1  1GCN  62
+ATOM     14  O   SER     2      46.740  29.251  10.864  1.00 15.00   1  1GCN  63
+ATOM     15  CB  SER     2      49.875  29.930   9.569  1.00 16.00   1  1GCN  64
+ATOM     16  OG  SER     2      49.145  31.057   9.176  1.00 19.00   1  1GCN  65
+ATOM     17  N   GLN     3      47.620  28.367   8.973  1.00 15.00   1  1GCN  66
+ATOM     18  CA  GLN     3      46.287  28.193   8.308  1.00 14.00   1  1GCN  67
+ATOM     19  C   GLN     3      45.406  27.172   8.963  1.00 14.00   1  1GCN  68
+ATOM     20  O   GLN     3      44.198  27.508   9.014  1.00 14.00   1  1GCN  69
+ATOM     21  CB  GLN     3      46.489  27.963   6.806  1.00 18.00   1  1GCN  70
+ATOM     22  CG  GLN     3      45.138  27.800   6.111  1.00 21.00   1  1GCN  71
+ATOM     23  CD  GLN     3      45.304  27.952   4.603  1.00 24.00   1  1GCN  72
+ATOM     24  OE1 GLN     3      46.432  28.202   4.112  1.00 24.00   1  1GCN  73
+ATOM     25  NE2 GLN     3      44.233  27.647   3.897  1.00 26.00   1  1GCN  74
+ATOM     26  N   GLY     4      46.014  26.394   9.871  1.00 14.00   1  1GCN  75
+ATOM     27  CA  GLY     4      45.422  25.287  10.680  1.00 14.00   1  1GCN  76
+ATOM     28  C   GLY     4      43.892  25.215  10.719  1.00 14.00   1  1GCN  77
+ATOM     29  O   GLY     4      43.287  26.155  11.288  1.00 14.00   1  1GCN  78
+ATOM     30  N   THR     5      43.406  23.993  10.767  1.00 14.00   1  1GCN  79
+ATOM     31  CA  THR     5      42.004  23.642  10.443  1.00 12.00   1  1GCN  80
+ATOM     32  C   THR     5      40.788  24.146  11.252  1.00 12.00   1  1GCN  81
+ATOM     33  O   THR     5      39.804  23.384  11.410  1.00 12.00   1  1GCN  82
+ATOM     34  CB  THR     5      41.934  22.202   9.889  1.00 14.00   1  1GCN  83
+ATOM     35  OG1 THR     5      41.080  21.317  10.609  1.00 15.00   1  1GCN  84
+ATOM     36  CG2 THR     5      43.317  21.556   9.849  1.00 15.00   1  1GCN  85
+ATOM     37  N   PHE     6      40.628  25.463  11.441  1.00 12.00      1GCN  86
+ATOM     38  CA  PHE     6      39.381  25.950  12.104  1.00 12.00      1GCN  87
+ATOM     39  C   PHE     6      38.156  25.684  11.232  1.00 12.00      1GCN  88
+ATOM     40  O   PHE     6      37.231  25.002  11.719  1.00 12.00      1GCN  89
+ATOM     41  CB  PHE     6      39.407  27.425  12.584  1.00 12.00      1GCN  90
+ATOM     42  CG  PHE     6      38.187  27.923  13.430  1.00 12.00      1GCN  91
+ATOM     43  CD1 PHE     6      36.889  27.518  13.163  1.00 12.00      1GCN  92
+ATOM     44  CD2 PHE     6      38.386  28.862  14.419  1.00 12.00      1GCN  93
+ATOM     45  CE1 PHE     6      35.813  27.967  13.909  1.00 12.00      1GCNB  4
+ATOM     46  CE2 PHE     6      37.306  29.328  15.177  1.00 12.00      1GCNB  5
+ATOM     47  CZ  PHE     6      36.019  28.871  14.928  1.00 12.00      1GCN  96
+ATOM     48  N   THR     7      38.341  25.794   9.956  1.00 12.00      1GCN  97
+ATOM     49  CA  THR     7      37.249  25.666   8.991  1.00 12.00      1GCN  98
+ATOM     50  C   THR     7      36.324  24.452   9.101  1.00 12.00      1GCN  99
+ATOM     51  O   THR     7      35.111  24.637   9.387  1.00 12.00      1GCN 100
+ATOM     52  CB  THR     7      37.884  25.743   7.628  1.00 13.00      1GCN 101
+ATOM     53  OG1 THR     7      37.940  27.122   7.317  1.00 14.00      1GCN 102
+ATOM     54  CG2 THR     7      37.073  25.003   6.585  1.00 14.00      1GCN 103
+ATOM     55  N   SER     8      36.964  23.356   9.442  1.00 12.00      1GCN 104
+ATOM     56  CA  SER     8      36.286  22.063   9.486  1.00 12.00      1GCN 105
+ATOM     57  C   SER     8      35.575  21.813  10.813  1.00 11.00      1GCN 106
+ATOM     58  O   SER     8      35.203  20.650  11.111  1.00 10.00      1GCN 107
+ATOM     59  CB  SER     8      37.291  20.958   9.189  1.00 16.00      1GCN 108
+ATOM     60  OG  SER     8      37.917  21.247   7.943  1.00 20.00      1GCN 109
+ATOM     61  N   ASP     9      35.723  22.783  11.694  1.00 10.00      1GCN 110
+ATOM     62  CA  ASP     9      35.004  22.803  12.977  1.00 10.00      1GCN 111
+ATOM     63  C   ASP     9      33.532  23.121  12.749  1.00 10.00      1GCN 112
+ATOM     64  O   ASP     9      32.645  22.360  13.210  1.00 10.00      1GCN 113
+ATOM     65  CB  ASP     9      35.556  23.874  13.919  1.00 11.00      1GCN 114
+ATOM     66  CG  ASP     9      36.280  23.230  15.096  1.00 13.00      1GCN 115
+ATOM     67  OD1 ASP     9      36.088  22.010  15.324  1.00 16.00      1GCN 116
+ATOM     68  OD2 ASP     9      36.821  23.974  15.951  1.00 16.00      1GCN 117
+ATOM     69  N   TYR    10      33.316  24.220  12.040  1.00 10.00      1GCN 118
+ATOM     70  CA  TYR    10      31.967  24.742  11.748  1.00 10.00      1GCN 119
+ATOM     71  C   TYR    10      31.203  23.973  10.685  1.00 10.00      1GCN 120
+ATOM     72  O   TYR    10      29.980  23.772  10.885  1.00 10.00      1GCN 121
+ATOM     73  CB  TYR    10      31.951  26.230  11.367  1.00 10.00      1GCN 122
+ATOM     74  CG  TYR    10      30.613  26.678  10.713  1.00 10.00      1GCN 123
+ATOM     75  CD1 TYR    10      30.563  26.886   9.350  1.00 10.00      1GCN 124
+ATOM     76  CD2 TYR    10      29.463  26.824  11.461  1.00 10.00      1GCN 125
+ATOM     77  CE1 TYR    10      29.377  27.275   8.733  1.00 10.00      1GCN 126
+ATOM     78  CE2 TYR    10      28.272  27.214  10.848  1.00 10.00      1GCN 127
+ATOM     79  CZ  TYR    10      28.226  27.452   9.483  1.00 10.00      1GCN 128
+ATOM     80  OH  TYR    10      27.365  27.683   9.060  1.00 11.00      1GCN 129
+ATOM     81  N   SER    11      31.796  23.909   9.491  1.00 10.00      1GCN 130
+ATOM     82  CA  SER    11      31.146  23.418   8.250  1.00 10.00      1GCN 131
+ATOM     83  C   SER    11      30.463  22.048   8.303  1.00 10.00      1GCN 132
+ATOM     84  O   SER    11      29.615  21.759   7.422  1.00 10.00      1GCN 133
+ATOM     85  CB  SER    11      32.004  23.615   6.998  1.00 14.00      1GCN 134
+ATOM     86  OG  SER    11      32.013  24.995   6.632  1.00 19.00      1GCN 135
+ATOM     87  N   LYS    12      30.402  21.619   9.544  1.00 10.00      1GCN 136
+ATOM     88  CA  LYS    12      29.792  20.460  10.189  1.00  9.00      1GCN 137
+ATOM     89  C   LYS    12      28.494  20.817  10.932  1.00  9.00      1GCN 138
+ATOM     90  O   LYS    12      27.597  19.943  10.980  1.00  9.00      1GCN 139
+ATOM     91  CB  LYS    12      30.811  20.013  11.224  1.00 10.00      1GCN 140
+ATOM     92  CG  LYS    12      30.482  18.661  11.833  1.00 14.00      1GCN 141
+ATOM     93  CD  LYS    12      31.413  18.365  12.999  1.00 18.00      1GCN 142
+ATOM     94  CE  LYS    12      31.243  16.937  13.498  1.00 22.00      1GCN 143
+ATOM     95  NZ  LYS    12      32.121  16.717  14.652  1.00 26.00      1GCN 144
+ATOM     96  N   TYR    13      28.583  21.742  11.894  1.00  9.00      1GCN 145
+ATOM     97  CA  TYR    13      27.396  22.283  12.612  1.00  8.00      1GCN 146
+ATOM     98  C   TYR    13      26.214  22.497  11.670  1.00  8.00      1GCN 147
+ATOM     99  O   TYR    13      25.037  22.245  12.029  1.00  8.00      1GCN 148
+ATOM    100  CB  TYR    13      27.730  23.578  13.385  1.00  8.00      1GCN 149
+ATOM    101  CG  TYR    13      26.516  24.500  13.692  1.00  8.00      1GCN 150
+ATOM    102  CD1 TYR    13      25.798  24.377  14.867  1.00  8.00      1GCN 151
+ATOM    103  CD2 TYR    13      26.185  25.498  12.796  1.00  8.00      1GCN 152
+ATOM    104  CE1 TYR    13      24.713  25.228  15.120  1.00  8.00      1GCNB  6
+ATOM    105  CE2 TYR    13      25.108  26.342  13.035  1.00  8.00      1GCNB  7
+ATOM    106  CZ  TYR    13      24.370  26.210  14.196  1.00  8.00      1GCN 155
+ATOM    107  OH  TYR    13      23.202  26.933  14.347  1.00 10.00      1GCN 156
+ATOM    108  N   LEU    14      26.522  22.993  10.494  1.00  8.00      1GCN 157
+ATOM    109  CA  LEU    14      25.461  23.263   9.523  1.00  8.00      1GCN 158
+ATOM    110  C   LEU    14      24.912  21.978   8.907  1.00  8.00      1GCN 159
+ATOM    111  O   LEU    14      24.122  22.025   7.933  1.00  8.00      1GCN 160
+ATOM    112  CB  LEU    14      25.923  24.242   8.447  1.00 13.00      1GCN 161
+ATOM    113  CG  LEU    14      25.064  25.509   8.412  1.00 19.00      1GCN 162
+ATOM    114  CD1 LEU    14      25.564  26.496   7.505  1.00 25.00      1GCN 163
+ATOM    115  CD2 LEU    14      23.582  25.209   8.199  1.00 25.00      1GCN 164
+ATOM    116  N   ASP    15      25.556  20.886   9.263  1.00  8.00      1GCN 165
+ATOM    117  CA  ASP    15      25.075  19.552   8.885  1.00  8.00      1GCN 166
+ATOM    118  C   ASP    15      24.208  19.002  10.009  1.00  8.00      1GCN 167
+ATOM    119  O   ASP    15      23.550  17.940   9.861  1.00  8.00      1GCN 168
+ATOM    120  CB  ASP    15      26.246  18.601   8.644  1.00 11.00      1GCN 169
+ATOM    121  CG  ASP    15      26.260  18.121   7.196  1.00 16.00      1GCN 170
+ATOM    122  OD1 ASP    15      26.021  18.946   6.280  1.00 21.00      1GCN 171
+ATOM    123  OD2 ASP    15      26.732  16.984   6.946  1.00 21.00      1GCN 172
+ATOM    124  N   SER    16      24.015  19.861  10.986  1.00  8.00      1GCN 173
+ATOM    125  CA  SER    16      23.180  19.548  12.149  1.00  7.00      1GCN 174
+ATOM    126  C   SER    16      21.923  20.414  12.167  1.00  7.00      1GCN 175
+ATOM    127  O   SER    16      20.841  19.941  12.598  1.00  7.00      1GCN 176
+ATOM    128  CB  SER    16      23.981  19.746  13.437  1.00  9.00      1GCN 177
+ATOM    129  OG  SER    16      23.327  19.102  14.524  1.00 11.00      1GCN 178
+ATOM    130  N   ARG    17      22.037  21.605  11.597  1.00  7.00      1GCN 179
+ATOM    131  CA  ARG    17      20.875  22.504  11.583  1.00  6.00      1GCN 180
+ATOM    132  C   ARG    17      19.868  22.156  10.491  1.00  6.00      1GCN 181
+ATOM    133  O   ARG    17      18.665  22.015  10.809  1.00  6.00      1GCN 182
+ATOM    134  CB  ARG    17      21.214  23.997  11.557  1.00  7.00      1GCN 183
+ATOM    135  CG  ARG    17      20.010  24.800  12.063  1.00  9.00      1GCN 184
+ATOM    136  CD  ARG    17      19.570  25.929  11.132  1.00 11.00      1GCN 185
+ATOM    137  NE  ARG    17      20.149  27.218  11.537  1.00 12.00      1GCN 186
+ATOM    138  CZ  ARG    17      19.828  28.351  10.936  1.00 13.00      1GCN 187
+ATOM    139  NH1 ARG    17      19.319  28.304   9.720  1.00 14.00      1GCN 188
+ATOM    140  NH2 ARG    17      20.351  29.485  11.362  1.00 14.00      1GCN 189
+ATOM    141  N   ARG    18      20.378  21.725   9.348  1.00  6.00      1GCN 190
+ATOM    142  CA  ARG    18      19.530  21.258   8.235  1.00  5.00      1GCN 191
+ATOM    143  C   ARG    18      19.148  19.796   8.478  1.00  5.00      1GCN 192
+ATOM    144  O   ARG    18      18.326  19.189   7.741  1.00  5.00      1GCN 193
+ATOM    145  CB  ARG    18      20.237  21.481   6.888  1.00  8.00      1GCN 194
+ATOM    146  CG  ARG    18      19.384  21.236   5.634  1.00  9.00      1GCN 195
+ATOM    147  CD  ARG    18      19.623  19.860   5.005  1.00 11.00      1GCN 196
+ATOM    148  NE  ARG    18      20.029  19.997   3.600  1.00 12.00      1GCN 197
+ATOM    149  CZ  ARG    18      19.398  19.415   2.597  1.00 13.00      1GCN 198
+ATOM    150  NH1 ARG    18      18.483  18.493   2.835  1.00 14.00      1GCN 199
+ATOM    151  NH2 ARG    18      19.831  19.597   1.364  1.00 14.00      1GCN 200
+ATOM    152  N   ALA    19      19.560  19.319   9.623  1.00  6.00      1GCN 201
+ATOM    153  CA  ALA    19      19.126  17.991  10.053  1.00  6.00      1GCN 202
+ATOM    154  C   ALA    19      18.002  18.136  11.071  1.00  6.00      1GCN 203
+ATOM    155  O   ALA    19      16.933  17.494  10.922  1.00  7.00      1GCN 204
+ATOM    156  CB  ALA    19      20.285  17.187  10.629  1.00 15.00      1GCN 205
+ATOM    157  N   GLN    20      18.094  19.241  11.783  1.00  7.00      1GCN 206
+ATOM    158  CA  GLN    20      17.013  19.632  12.689  1.00  7.00      1GCN 207
+ATOM    159  C   GLN    20      15.897  20.314  11.905  1.00  7.00      1GCN 208
+ATOM    160  O   GLN    20      14.701  20.031  12.162  1.00  7.00      1GCN 209
+ATOM    161  CB  GLN    20      17.513  20.538  13.821  1.00 11.00      1GCN 210
+ATOM    162  CG  GLN    20      16.699  21.829  13.936  1.00 16.00      1GCN 211
+ATOM    163  CD  GLN    20      16.591  22.277  15.393  1.00 22.00      1GCN 212
+ATOM    164  OE1 GLN    20      17.533  22.060  16.194  1.00 24.00      1GCN 213
+ATOM    165  NE2 GLN    20      15.356  22.544  15.773  1.00 24.00      1GCN 214
+ATOM    166  N   ASP    21      16.292  20.724  10.714  1.00  7.00      1GCN 215
+ATOM    167  CA  ASP    21      15.405  21.490   9.835  1.00  7.00      1GCN 216
+ATOM    168  C   ASP    21      14.451  20.565   9.120  1.00  7.00      1GCN 217
+ATOM    169  O   ASP    21      13.245  20.850   8.962  1.00  7.00      1GCN 218
+ATOM    170  CB  ASP    21      16.212  22.278   8.809  1.00 14.00      1GCN 219
+ATOM    171  CG  ASP    21      15.427  23.525   8.413  1.00 21.00      1GCN 220
+ATOM    172  OD1 ASP    21      15.031  24.298   9.321  1.00 28.00      1GCN 221
+ATOM    173  OD2 ASP    21      15.316  23.827   7.200  1.00 28.00      1GCN 222
+ATOM    174  N   PHE    22      14.987  19.373   8.843  1.00  7.00      1GCN 223
+ATOM    175  CA  PHE    22      14.216  18.253   8.289  1.00  7.00      1GCN 224
+ATOM    176  C   PHE    22      13.098  17.860   9.246  1.00  7.00      1GCN 225
+ATOM    177  O   PHE    22      11.956  17.556   8.818  1.00  7.00      1GCN 226
+ATOM    178  CB  PHE    22      15.134  17.038   8.105  1.00  8.00      1GCN 227
+ATOM    179  CG  PHE    22      14.349  15.761   7.724  1.00 10.00      1GCN 228
+ATOM    180  CD1 PHE    22      14.022  15.527   6.410  1.00 12.00      1GCN 229
+ATOM    181  CD2 PHE    22      13.992  14.842   8.689  1.00 12.00      1GCN 230
+ATOM    182  CE1 PHE    22      13.302  14.391   6.050  1.00 14.00      1GCN 231
+ATOM    183  CE2 PHE    22      13.269  13.708   8.340  1.00 14.00      1GCN 232
+ATOM    184  CZ  PHE    22      12.917  13.483   7.018  1.00 16.00      1GCN 233
+ATOM    185  N   VAL    23      13.455  17.883  10.517  1.00  7.00      1GCN 234
+ATOM    186  CA  VAL    23      12.574  17.403  11.589  1.00  7.00      1GCN 235
+ATOM    187  C   VAL    23      11.283  18.205  11.729  1.00  7.00      1GCN 236
+ATOM    188  O   VAL    23      10.233  17.600  12.052  1.00  7.00      1GCN 237
+ATOM    189  CB  VAL    23      13.339  17.278  12.906  1.00 10.00      1GCN 238
+ATOM    190  CG1 VAL    23      12.441  17.004  14.108  1.00 13.00      1GCN 239
+ATOM    191  CG2 VAL    23      14.455  16.248  12.794  1.00 13.00      1GCN 240
+ATOM    192  N   GLN    24      11.255  19.253  10.941  1.00  8.00      1GCN 241
+ATOM    193  CA  GLN    24      10.082  20.114  10.818  1.00  8.00      1GCN 242
+ATOM    194  C   GLN    24       9.158  19.638   9.692  1.00  8.00      1GCN 243
+ATOM    195  O   GLN    24       7.959  19.990   9.663  1.00  8.00      1GCN 244
+ATOM    196  CB  GLN    24      10.575  21.521  10.498  1.00 14.00      1GCN 245
+ATOM    197  CG  GLN    24       9.505  22.591  10.661  1.00 20.00      1GCN 246
+ATOM    198  CD  GLN    24       9.964  23.862   9.956  1.00 26.00      1GCN 247
+ATOM    199  OE1 GLN    24      10.079  24.941  10.587  1.00 32.00      1GCN 248
+ATOM    200  NE2 GLN    24      10.086  23.739   8.649  1.00 32.00      1GCN 249
+ATOM    201  N   TRP    25       9.723  19.074   8.651  1.00  8.00      1GCN 250
+ATOM    202  CA  TRP    25       8.899  18.676   7.495  1.00  9.00      1GCN 251
+ATOM    203  C   TRP    25       8.118  17.395   7.751  1.00  9.00      1GCN 252
+ATOM    204  O   TRP    25       6.860  17.395   7.725  1.00  9.00      1GCN 253
+ATOM    205  CB  TRP    25       9.761  18.442   6.262  1.00 11.00      1GCN 254
+ATOM    206  CG  TRP    25       8.871  18.331   5.004  1.00 12.00      1GCN 255
+ATOM    207  CD1 TRP    25       8.097  19.279   4.442  1.00 12.00      1GCN 256
+ATOM    208  CD2 TRP    25       8.640  17.180   4.249  1.00 12.00      1GCN 257
+ATOM    209  NE1 TRP    25       7.041  18.780   3.259  1.00 12.00      1GCN 258
+ATOM    210  CE2 TRP    25       7.873  17.564   3.121  1.00 12.00      1GCN 259
+ATOM    211  CE3 TRP    25       9.124  15.884   4.378  1.00 12.00      1GCN 260
+ATOM    212  CZ2 TRP    25       7.726  16.765   2.003  1.00 12.00      1GCN 261
+ATOM    213  CZ3 TRP    25       8.870  15.038   3.296  1.00 12.00      1GCN 262
+ATOM    214  CH2 TRP    25       8.216  15.469   2.140  1.00 12.00      1GCN 263
+ATOM    215  N   LEU    26       8.857  16.484   8.346  1.00  9.00      1GCN 264
+ATOM    216  CA  LEU    26       8.377  15.159   8.741  1.00 10.00      1GCN 265
+ATOM    217  C   LEU    26       7.534  15.279  10.012  1.00 11.00      1GCN 266
+ATOM    218  O   LEU    26       6.755  14.347  10.331  1.00 11.00      1GCN 267
+ATOM    219  CB  LEU    26       9.611  14.267   8.924  1.00 10.00      1GCN 268
+ATOM    220  CG  LEU    26       9.342  12.810   9.303  1.00 10.00      1GCN 269
+ATOM    221  CD1 LEU    26       8.223  12.149   8.505  1.00 10.00      1GCN 270
+ATOM    222  CD2 LEU    26      10.637  11.982   9.250  1.00 10.00      1GCN 271
+ATOM    223  N   MET    27       7.281  16.544  10.320  1.00 11.00      1GCN 272
+ATOM    224  CA  MET    27       6.446  16.959  11.451  1.00 11.00      1GCN 273
+ATOM    225  C   MET    27       5.607  18.227  11.219  1.00 13.00      1GCN 274
+ATOM    226  O   MET    27       4.823  18.240  10.244  1.00 13.00      1GCN 275
+ATOM    227  CB  MET    27       7.327  17.118  12.679  1.00 11.00      1GCN 276
+ATOM    228  CG  MET    27       6.518  17.289  13.953  1.00 11.00      1GCN 277
+ATOM    229  SD  MET    27       7.301  18.326  15.196  1.00 11.00      1GCN 278
+ATOM    230  CE  MET    27       5.833  18.677  16.178  1.00 11.00      1GCN 279
+ATOM    231  N   ASN    28       6.147  19.366  11.620  1.00 14.00      1GCN 280
+ATOM    232  CA  ASN    28       5.399  20.637  11.728  1.00 14.00      1GCN 281
+ATOM    233  C   ASN    28       3.878  20.587  11.716  1.00 17.00      1GCN 282
+ATOM    234  O   ASN    28       3.252  21.114  10.763  1.00 19.00      1GCN 283
+ATOM    235  CB  ASN    28       5.874  21.774  10.843  1.00 14.00      1GCN 284
+ATOM    236  CG  ASN    28       6.246  22.905  11.791  1.00 14.00      1GCN 285
+ATOM    237  OD1 ASN    28       6.929  22.629  12.807  1.00 14.00      1GCN 286
+ATOM    238  ND2 ASN    28       6.271  24.085  11.229  1.00 14.00      1GCN 287
+ATOM    239  N   THR    29       3.391  19.940  12.762  1.00 21.00      1GCN 288
+ATOM    240  CA  THR    29       2.014  19.761  13.283  1.00 21.00      1GCN 289
+ATOM    241  C   THR    29        .826  19.943  12.332  1.00 23.00      1GCN 290
+ATOM    242  O   THR    29        .932  19.600  11.133  1.00 30.00      1GCN 291
+ATOM    243  CB  THR    29       1.845  20.667  14.505  1.00 21.00      1GCN 292
+ATOM    244  OG1 THR    29       1.214  21.893  14.153  1.00 21.00      1GCN 293
+ATOM    245  CG2 THR    29       3.180  20.968  15.185  1.00 21.00      1GCN 294
+ATOM    246  OXT THR    29       -.317  20.109  12.824  1.00 25.00      1GCN 295
+TER     247      THR    29                                              1GCN 296
+MASTER       34    2    0    1    0    0    0    6  246    1    0    3  1GCND  8
+END                                                                     1GCN 298

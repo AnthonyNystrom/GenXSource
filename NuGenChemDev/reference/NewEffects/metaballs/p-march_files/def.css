@@ -1,0 +1,311 @@
+/*
+Stylesheet for WXT-site 2004,
+Børre Stenseth, Ostfold University College
+The stylesheet discriminates between styles for screen, print and
+projection (the latter works only(?) for Opera with F11)
+*/
+
+@media screen
+{
+body{
+	color: black;
+	font-family:"Verdana","Geneva","Arial","Times",sans-serif;
+	font-size:13px;
+	text-align:left;
+	margin:0px;
+	margin-right:5px;
+	padding:0px;
+	background-image:url(../gfx/left_bg.gif);
+	background-repeat: repeat-y;
+}
+
+p,ul,ol,td,th{font-size:13px;}
+li{margin-top:7px;}
+
+/* main parts on templates */
+.banner{margin:0px;padding:0px}
+.menues{float:left;margin:0px;padding:0px}
+.maincontent{margin-left:145px}
+
+/* linking NB: sequence is important */
+a:link	 {color:#993306;}
+a:visited {color:#993306;}
+a:hover   {color:blue;}
+a:active  {color:black;}
+
+/* headings */
+h1,h2,h3,h4,.pagename{
+   font-family:"Arial", sans-serif;
+   font-weight:normal;
+   color:black;
+   margin-top:10px;
+}
+h2,h3,h4,h5{
+   background-color:#EED9B0;
+}
+
+/* quoting XML,XSL,HTML,CSS etc */
+.mlcode{
+   font-size: 11px;
+   color:#111199;
+}
+
+
+/* show pops as buttonlike inline texts*/
+.popup{
+ margin-right:4px;
+ margin-left:4px;
+ padding-left:5px;
+ padding-right:5px;
+ color:blue;
+ background-color:white;
+ border-width:thin;
+ border-style:outset;
+ font-size:11px;
+ background-color:#ffff22;
+ cursor:pointer;
+}
+
+/* card and opinion at bottom */
+.mainpop{
+  margin-left:140px;
+  cursor:pointer;
+}
+
+/* field sets as used in template Q */
+.legend{
+	font-size: 12px;
+	font-weight:600;
+	/* font-style: italic;*/
+	line-height:100%;
+   color:#000000;
+}
+
+.fieldcontent{
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-top: 3px;
+   padding-bottom: 5px;
+}
+
+/* styles hardwired by WXT */
+/* tocmenu PI,  3 levels enough */
+.tocmenu-0,.tocmenu-1,.tocmenu-2,.tocmenu-3,
+.tocmenu-a0,.tocmenu-a1,.tocmenu-a2,.tocmenu-a3
+{
+  font-size: 11px;
+  font-weight:200;
+  background-color:transparent;
+  text-decoration:none;
+  line-height:120%;
+}
+.tocmenu-0,.tocmenu-a0{ margin-left:0px;}
+.tocmenu-1,.tocmenu-a1{ margin-left:7px;font-weight:200;line-height:150%;}
+.tocmenu-2,.tocmenu-a2{ margin-left:14px;}
+.tocmenu-3,.tocmenu-a3{ margin-left:21px;}
+
+/* tocgroup PI  3 levels enough*/
+.tocgroup-0,.tocgroup-1,.tocgroup-2,.tocgroup-3,
+.tocgroup-a0,.tocgroup-a1,.tocgroup-a2,.tocgroup-a3{
+  font-size: 12px;
+  font-weight:200;
+  background-color:transparent;
+  text-decoration:none;
+  line-height:120%;
+}
+
+.tocgroup-0,.tocgroup-a0{ margin-left:0px;}
+.tocgroup-1,.tocgroup-a1{ margin-left:30px; font-weight:600; line-height:200%;}
+.tocgroup-2,.tocgroup-a2{ margin-left:54px; font-weight:600; line-height:160%;}
+.tocgroup-3,.tocgroup-a3{ margin-left:70px;}
+
+
+/* tocpage PI  5 levels enough*/
+.tocpage-0,.tocpage-1,.tocpage-2,.tocpage-3,
+.tocpage-a0,.tocpage-a1,.tocpage-a2,.tocpage-a3
+{
+  font-size: 12px;
+  font-weight:200;
+  background-color:transparent;
+  text-decoration:none;
+  line-height:120%;
+}
+
+.tocpage-0,.tocpage-a0{ padding-left:0px;}
+.tocpage-1,.tocpage-a1{ padding-left:30px; font-weight:600; line-height:200%;}
+.tocpage-2,.tocpage-a2{ padding-left:44px; }
+.tocpage-3,.tocpage-a3{ padding-left:50px;}
+
+/* toctrail */
+.toctrail-0,.toctrail-a0{
+  font-size: 12px;
+  font-weight:200;
+  background-color:transparent;
+  text-decoration:none;
+  line-height:160%;
+}
+
+/* tocchildren and tocsiblings */
+.tocsiblings-0, .tocsiblings-a0, .tocchildren{
+  font-size: 12px;
+  font-weight:200;
+  background-color:transparent;
+  text-decoration:none;
+  line-height:160%;
+}
+
+/* indexes */
+.ixentry{margin-left:24px;font-style:italic}
+.ixword{font-weight:bold}
+
+
+/* /styles hardwired by WXT */
+
+/* hilited tablecall */
+.litecell{background-color:#FFFFC0}
+
+/* subhead */
+.subhead{
+  font-size:11px;
+  margin-left:7px;
+  font-weight: normal;
+  }
+
+
+/* <!--SITENAME--> */
+.sitename{
+  font-size:18px;
+  text-align:right;
+  font-weight: bold;
+  color:#2D2D7D;/*#993306;*/
+  background-color:#EED9B0;
+  padding-top:2px;
+  padding-bottom:14px;
+  padding-right:10px;
+  padding-left:0px;
+  border-style:none none solid none;
+  border-width:0px;
+  border-bottom-width:1px;
+  border-color:black;
+  margin:0px;
+}
+
+/* <!--PAGENAME--> */
+.pagename{
+  font-size:large;
+  font-weight: bold;
+  color:#000000;
+}
+
+
+/* bottom of pages, author, date, message etc. */
+.mainfooter{
+  font-size:8pt;
+  margin-left:140px;
+  color:#555555;
+}
+
+/* same but at extreme left */
+.leftfooter{
+  font-size:8pt;
+  margin-left:10px;
+  color:#555555;
+}
+
+/*Standard PRE inline with some variations
+  mainly for presentation of code       */
+
+pre{
+	white-space: pre;
+	font-family: "Courier", "Courier new", mono-space;
+	background-color: #ffffff;
+	font-size: 12px;
+	color: black;
+}
+
+.auxline {
+	white-space: pre;
+	font-family: "Courier", "Courier new", mono-space;
+	color: #008000;
+}
+
+.code {
+	white-space: pre;
+	font-family: "Courier", "Courier new", mono-space;
+	display: block;
+}
+
+.javacode {
+	white-space: pre;
+	font-family: "Courier", "Courier new", mono-space;
+	background-color: #EEFFEE;
+}
+
+.printonly{display:none}
+
+} /* screen */
+
+
+
+
+@media print
+{
+	body{
+		color: black;
+		font-family:"Verdana","Geneva","Arial","Times",sans-serif;
+		font-size:11px;
+		text-align:left;
+		margin:0px;
+		padding:0px;
+	}
+	td{		color: black;
+		font-family:"Verdana","Geneva","Arial","Times",sans-serif;
+		font-size:11px;
+		text-align:left;
+  }
+	.printhide{display:none}
+	.printonly{display:block}
+
+}/* print */
+
+
+@media projection
+{
+	body{
+		color: black;
+		font-family:"Verdana","Geneva","Arial","Times",sans-serif;
+		font-size:10px;
+		text-align:left;
+		margin:10px;
+		padding:0px;
+	}
+	.printhide{display:none}
+
+	.mlcode{
+   font-size: 18px;
+   color:#111199;
+   }
+  .pycode,.mlcode,.pre,.javacode,.auxline{
+    /*page-break-before:always;*/
+    font-size: 18px;
+		white-space: pre;
+		font-family: "Courier", "Courier new", mono-space;
+		display: block;
+		line-heigth:80%;
+  }
+	.javacode {
+	background-color: #EEFFEE;
+  }
+
+  .auxline{
+  color: black;
+  }
+
+	.pre{
+		color: black;
+	}
+
+}/* projection */
+
+
+

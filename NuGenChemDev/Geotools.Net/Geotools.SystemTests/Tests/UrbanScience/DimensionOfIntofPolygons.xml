@@ -1,0 +1,67 @@
+<run>
+<precisionModel type="FLOATING"/>
+<case>
+  <Desc>Intersection of two Polygons</Desc>
+  <a>
+    POLYGON ((200 320, 300 320, 320 260, 320 200, 260 140, 180 140, 120 220, 120 280, 200 320))
+  </a>
+  <b>
+    POLYGON ((300 400, 300 320, 420 320, 420 400, 300 400))
+  </b>
+  <test>
+    <op name="relate" arg1="A" arg2="B" arg3="FF2F01212">true</op>
+  </test>  
+</case>
+<case>
+  <Desc>Intersection of two Polygons- Intersection at a point</Desc>
+  <a>
+    POINT (300 320) 
+  </a>  
+  <test>
+    <op name="Dimension" arg1="A">0</op>
+  </test>  
+</case>
+<case>
+  <Desc>Intersection of two Polygons</Desc> 
+  <a>
+    POLYGON ((180 280, 340 280, 300 180, 140 180, 180 280))
+  </a>
+  <b>
+    POLYGON ((240 340, 200 280, 360 280, 400 340, 240 340))
+  </b>
+  <test>
+    <op name="relate" arg1="A" arg2="B" arg3="FF2F11212">true</op>
+  </test>
+  <test>
+</case>  
+<case>
+  <Desc>Intersection of two Polygons- Resultant as a Line</Desc>
+  <a>
+    LINESTRING (200 280, 340 280) 
+  </a>  
+  <test>
+    <op name="Dimension" arg1="A">1</op>
+  </test>  
+</case>
+<case>
+  <Desc>Intersection of two Polygons</Desc>
+   <a>
+    POLYGON ((200 300, 360 300, 360 200, 200 200, 200 300))
+  </a>
+  <b>
+    POLYGON ((240 340, 240 260, 400 260, 400 340, 240 340))
+  </b>
+  <test>
+    <op name="relate" arg1="A" arg2="B" arg3="212101212">true</op>
+  </test>  
+</case>
+<case>
+  <Desc>Intersection of two Polygons- Resultant as an Area</Desc>
+  <a>
+    POLYGON ((240 300, 360 300, 360 260, 240 260, 240 300)) 
+  </a>  
+  <test>
+    <op name="Dimension" arg1="A">2</op>
+  </test>  
+</case>
+</run>

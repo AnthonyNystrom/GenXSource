@@ -1,0 +1,773 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><!--
+Børre Stenseth, Høgskolen i Østfold
+Template file WXT.10
+-->
+
+
+
+
+	<link href="p-march_files/def.css" rel="STYLESHEET">
+	<meta content="WXT 1.0" name="GENERATOR"><title>Marching cubes</title><!-- =============================== -->
+	
+  
+  <script type="text/javascript">
+  function simplepopup(url,wname,wstyle)
+  {
+  	if(wstyle=="*")
+  		wstyle='scrollbars=yes,resizable=yes,width=600,height=600,status=0';
+  	newwindow=window.open(url, wname, wstyle);
+  	if (window.focus) {newwindow.focus()}
+  }
+  </script><!-- =============================== --></head><body>
+<div>
+<a name="TopOfPage">
+</a></div>
+
+<!-- banner stuff -->
+<div class="printhide">
+<a name="TopOfPage">  </a><div class="menues">
+<a name="TopOfPage">    </a><a href="http://www.ia.hiof.no/">
+    <img alt="logo" src="p-march_files/logo.gif" style="border: medium none ;" height="73" width="155">
+    </a>
+  </div>
+<!-- menues -->
+  <div class="maincontent">
+      <div class="sitename">
+     Computer Graphics<br>
+     <a href="http://www.hiof.no/">Østfold University College</a>
+      </div>
+    <div>
+      <div style="float: left; margin-top: 5px;">
+      <span class="toctrail-0">
+<a href="http://www.ia.hiof.no/%7Eborres/cgraph/index.html" title="Welcome to this site for Computer Graphics">Welcome</a>
+</span>&gt;<span class="toctrail-0">
+<a href="http://www.ia.hiof.no/%7Eborres/cgraph/explain/summary.html" title="Explanation of some phenomena or techniques">Explaining</a>
+</span>&gt;<span class="toctrail-a0">Marching cubes</span>
+      </div>
+      <!-- navigare -->
+			<div style="text-align: right;">
+			<span class="prev">
+<a href="http://www.ia.hiof.no/%7Eborres/cgraph/explain/blending/p-blend.html" title="Explaining blending by an example">
+<img alt="../../gfx/prev.gif" src="p-march_files/prev.gif" style="border: 0px none ;">
+</a>
+</span>
+			<span class="home">
+<a href="http://www.ia.hiof.no/%7Eborres/cgraph/index.html" title="Welcome to this site for Computer Graphics">
+<img alt="../../gfx/home.gif" src="p-march_files/home.gif" style="border: 0px none ;">
+</a>
+</span>
+			<span class="next">
+<a href="http://www.ia.hiof.no/%7Eborres/cgraph/draw/summary.html" title="Drawing something">
+<img alt="../../gfx/next.gif" src="p-march_files/next.gif" style="border: 0px none ;">
+</a>
+</span>
+      </div>
+    </div>
+  </div> <!-- main -->
+</div>
+<!-- /printhide -->
+<!-- end of banner stuff -->
+
+<div style="clear: both;">
+
+<!-- describing left menues -->
+<div class="printhide">
+<div class="menues">
+    <div class="tocmenu-1">
+<a href="http://www.ia.hiof.no/%7Eborres/cgraph/index.html" title="Welcome to this site for Computer Graphics">Welcome</a>
+</div>
+<div class="tocmenu-1">
+<a href="http://www.ia.hiof.no/%7Eborres/cgraph/platforms/p-plattforms.html" title="Programming platforms used in this material">Platforms</a>
+</div>
+<div class="tocmenu-1">
+<a href="http://www.ia.hiof.no/%7Eborres/cgraph/math/summary.html" title="Basics for programmers">Mathematics</a>
+</div>
+<div class="tocmenu-1">
+<a href="http://www.ia.hiof.no/%7Eborres/cgraph/explain/summary.html" title="Explanation of some phenomena or techniques">Explaining</a>
+</div>
+<div class="tocmenu-2">
+<a href="http://www.ia.hiof.no/%7Eborres/cgraph/explain/perspective/p-perspective.html" title="Explains basic understanding of perspectives">Perspective</a>
+</div>
+<div class="tocmenu-2">
+<a href="http://www.ia.hiof.no/%7Eborres/cgraph/explain/frames/p-frames.html" title="Explains how to change coordinatesystem with a simple matrixoperation">Frames</a>
+</div>
+<div class="tocmenu-2">
+<a href="http://www.ia.hiof.no/%7Eborres/cgraph/explain/shadow/p-shadow.html" title="Explains some strategies for making shadows">Shadows</a>
+</div>
+<div class="tocmenu-2">
+<a href="http://www.ia.hiof.no/%7Eborres/cgraph/explain/blending/p-blend.html" title="Explaining blending by an example">Blending</a>
+</div>
+<div class="tocmenu-a2">Marching cubes</div>
+<div class="tocmenu-1">
+<a href="http://www.ia.hiof.no/%7Eborres/cgraph/draw/summary.html" title="Drawing something">Drawing</a>
+</div>
+<div class="tocmenu-1">
+<a href="http://www.ia.hiof.no/%7Eborres/cgraph/admin/p-ref.html" title="References">References</a>
+</div>
+</div> <!-- left menues -->
+</div>
+<!-- /printhide -->
+
+
+
+<!-- main content -->
+<div class="maincontent">
+    <div class="printable">
+            <h1>
+	Marching Cubes
+</h1>
+            
+            <p class="subhead">
+
+            </p><fieldset>
+            <legend class="legend">Purpose:</legend>
+            <div class="fieldcontent">
+<p> This module will try to explain how you can model algebraic
+surfaces with Marching Cubes, a known (and unfortunately patented)
+algorithm. When using this algorithm you can in a simple way make
+3-dimentional models of a given surface without modeling data. This
+enables us to model simple and complicated equations and systems, as
+long as we can calculate a value on a given (x,y,z) point in the space.
+</p>
+</div>
+            </fieldset>
+
+    <div>
+      <div style="padding: 3px; float: right;">
+      <div id="imageblock">
+   <img alt="tre metaballer som slår seg samme i en grid" src="p-march_files/sluttprodukt.jpg">
+   <br>Three force points that creates three balls that unites.
+</div>
+      </div>
+      <p> While we in theory want control over
+every point that is rendered, this is not possible in practice, no
+matter how much machine power we have access to. If we want to model a
+given formula (for example x<sup>2</sup> + y<sup>2</sup> + z<sup>2</sup>
+= r), we will in practice have to choose a resolution for what we want
+to show (since we can't render infinite small point in realistic time).
+One of the ways to do this is with ray tracing where you find what
+color every pixel in the resulting picture correspond to. This is for
+the time being so demanding that we can't make good real time
+visualization. By using Marching Cubes we can render triangles that
+makes a good approximation to the model in real time. </p>
+    </div>
+
+    <p> To understand why a method like this is
+necessary, we'll have a closer look at what I mentioned earlier in the
+module. Many times we want to model a figure that we don't know the
+shape of in advance (That is, we don't know which triangles it is going
+to consist of). When we get away from the concept that requires that we
+know the triangles the figure is made up of in advance, we can generate
+dynamical figures that can be modified and modeled with simple
+mathematical formulas. The only requirement we have for what we are
+going to model, is that we can decide whether a point (x,y,z) is inside
+or outside the figure. With this information we can build a model that
+is close to what we want to model. We can change the accuracy by
+adjusting the algorithm to the purpose of the application - that is an
+application that is dependant of running in real time could use a low
+resolution, while an application that renders a still image or similar
+could use a high resolution and generate a far more detailed picture.<br>
+<br>
+</p>
+<p> As with almost all principles for 3d graphics, Marching Cubes is
+best explained if we study the same phenomenon in 2d first. We will now
+study Marching Squares and not Marching Cubes, but the principle is the
+same. The principle is that we make a grid of points. For each of these
+points we decide whether the point is inside or outside the object we
+want to model. For squares that have all of their points inside or
+outside the figure we do nothing (at least in 3d space). To illustrate
+this we can study the result from a possible implementation of Marching
+Squares.<br>
+<br>
+</p>
+<div>
+
+	<img alt="marching_squares" src="p-march_files/marching_squares.png" style="float: right;">
+	
+	<p>
+The red ellipsis state the form we wish to achieve, while the green
+line show the result from a run through of the Marching Squares. The
+points in the grid are where the horizontal and the vertical lines
+meet. </p>	
+		   
+</div>
+<p>
+   The pseudo code for the algorithm can be outlined like this:
+</p>
+<pre class="code">1.For every <b>point</b> in the grid
+  1.1 set the point's status to inside or outside the ellipsis
+      (from the formula for an ellipsis)
+2.For every <b>square</b> in the grid
+  2.1. For every line segment that has a point outside 
+  		  and a point inside the figure
+     2.1.1. Add a point in the list t placed
+                in the middle between the two points
+3. Draw sequential lines between the points
+    found in the list t.
+</pre>
+<p> This was a quick look into how this can be done in 2d. We will now
+look at cubes (which have 8 corners) in contrast to the squares we
+looked at with Marching Squares. This will add a third dimension that
+is directed "inwards" in the screen. We now have a grid that forms a
+grid system in three dimensions, almost like a Lego plate full of
+identical, square blocks, for example 10x10x10. This leads us to what
+makes our algorithm flexible; if we want to increase the accuracy of
+the model we generate, we simply decrease the size of our cubes, but
+increase the number of them. This means that we have to process more
+points, but it gives us a better result. In the precompiled code I
+operate with a grid that is 28x28x28, which means that each frame has
+to process 21952 points. If we increase accuracy to 40x40x40 (which
+seems like a small increase) we have to process 64000 points. After
+some testing I found that 28x28x28 gave a satisfactory resolution and
+still ran quite nicely on an "ok" computer for 3d applications today.
+Let's look a bit more on the method to get Marching Squares over in
+three dimensions.<br>
+<br>
+</p>
+<table cellpadding="5" width="100%">
+  <tbody><tr>
+  <td>
+  <img alt="kube_hjoerner" src="p-march_files/kube_hjoerner.gif">
+  </td>
+  <td>
+  <img alt="kube_linjer" src="p-march_files/kube_linjer.gif">
+  </td>
+  </tr>
+</tbody></table>
+<p class="leftfooter">
+		 (The numbering in the drawing does <strong>NOT</strong> correspond to the numbering used in the code.)
+         </p>
+<p> The images show one cube in the grid. As explained earlier a grid
+consists of a variable number of cubes, in our case the magical number
+21952. Since a cube has 8 points and each of these points can have two
+different types of status (inside or outside) we get 2^8 = 256
+different combinations of points that's on the inside our outside of
+the model for a given cube. If all of the points are on the inside, the
+cube will be absorbed by the frames around the model, so then we aren't
+interested in drawing anything at all. If all the points are on the
+outside we are in the same situation, only the opposite - the cube
+doesn't contribute to the model anyway. For each of these combinations
+we have a set of triangles that can be generated. As we outlined in
+Marching Squares we found a point that was in the middle of the line
+between the point on the outside and the point on the inside; in 3d a
+missing point will lead to that 3 lines intersect. This necessarily
+gives us three points - just enough to build a triangle. Of the 256
+different combinations 2 will not give a drawing, 8 will result in a
+triangle placed in every corner of the cube.. and so on. For a more
+detailed explanation I recommend the links that I have listed as source
+material.<br>
+<br>
+	
+</p>
+<p>
+	A quick sequence of images that should illustrate how the triangles are generated from every cube:
+</p>
+<table border="0" cellpadding="5" cellspacing="0">
+
+<tbody><tr>
+   <td>
+<img alt="cube_01" src="p-march_files/cube_01.png">
+   </td>
+
+   <td>Our usual cube.
+   </td>
+</tr>
+
+<tr>
+   <td>
+<img alt="cube_02" src="p-march_files/cube_02.png">
+   </td>
+
+   <td>
+      We have one point on the outside of the model we want to draw, the remaining seven are on the inside:
+   </td>
+</tr>
+
+
+<tr>
+   <td>
+<img alt="cube_03" src="p-march_files/cube_03.png">
+   </td>
+
+   <td>
+We have generated a triangle that is formed between the centers on all
+three lines that now have one point on the inside and one on the
+outside of the model. </td>
+</tr>
+
+
+<tr>
+   <td>
+<img alt="cube_04" src="p-march_files/cube_04.png">
+   </td>
+
+   <td>
+We have another point in the same cube that is outside the model (in
+the code this is decided before we draw the triangles, but it is easier
+to illustrate it bit by bit). </td>
+</tr>
+
+
+<tr>
+   <td>
+<img alt="cube_05" src="p-march_files/cube_05.png">
+   </td>
+
+   <td>
+We generate another triangle, this time on the other side of the cube.
+As we can se, this single cube has contributed with two triangles for
+the finished model. When we run through all ~21.000 cubes, we get a
+model quite close to what we want. </td>
+</tr>
+
+<tr>
+   <td colspan="2">
+   The grid and some of the triangles that is generated when running the application is visible here:
+   <br>
+<br>
+   <img alt="grid" src="p-march_files/grid.jpg">
+   </td>
+</tr>
+</tbody></table>
+<p>
+And now, to the part that actually makes things happen, the code:<br>
+<br>
+</p>
+<p> Technically the 'problem' with the 256 different combinations of
+missing points solved in the following way: There is a lookup table
+that contains 256 entries. This table contains an overview over which
+of the 12 line segments we shall interpolate if this combination
+occurs.
+</p>
+<pre class="code">const int mcubes::edgeTable[256] = {
+   0x0  , 0x109, 0x203, 0x30a, 0x406, 0x50f, 0x605, 0x70c,
+   ....
+}<br>
+</pre>
+<p> We see that if we look up 0 in the lookup table (none on the
+inside), it will return '0'. It is the same for 255 (which corresponds
+to 1111 1111). When we know which of the 12 line segments that shall
+interpolate, we calculate points on these line segments, which we then
+store in an internal 12-elements array. Every line segment has a fixed
+point in this array. To discover _which_ of these points we are
+interested in (of the 12), we have another table that states which
+points we should make triangles between to draw the desired triangle. A
+segment of this table follows:
+</p>
+<pre class="code">const int mcubes::triTable[256][16] = {
+   {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1},<br>
+   {0, 8, 3, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1},<br>
+      ...
+};
+</pre>
+<p> Entry #0 tells us that we're not getting any triangles if we have 0
+in lookup value. Entry #1 states that if we have '1' as a lookup value
+(corner 1 is missing), we are going to draw a triangle between the
+points 0, 8 and 3 from our 12 elements big static array. As a result of
+the treatment we do when we control edgeTable, we have updated these
+three points to be interpolated points between the endpoints on a
+single line. In practice (as we'll see later) we loop over every point
+in the table (up to 15) until we come across -1. Then groups of three
+of these points construct a triangle.<br>
+<br>
+	
+</p>
+<p> This code example is almost self-explanatory. This is how it is
+settled if a point is going to be included in the final result or not.
+We have defined a border value (metaballs_iso_value) that states
+whether the points are on the inside or the outside. If the calculation
+for a point leads to a value below this iso value, the point is
+presumed to be outside the model. The points that have a value above
+the iso value, is on the inside.
+</p>
+<pre class="code">if (this-&gt;vertices[idx].flux &gt; this-&gt;metaballs_iso_value)
+{
+   this-&gt;vertices[idx].inside = true;
+}
+else
+{
+   this-&gt;vertices[idx].inside = false;
+}
+</pre>
+<p> The following code describes how the index in the lookup table is
+calculated. It takes a cube in our grid as a starting point, and checks
+the eight corners to check if it's inside or outside the model. If all
+eight are on the inside we will get 255 as a lookup value - and if all
+the points are on the outside we will get 0. In these two cases we have
+0x0 has an entry in edgeTable, this tells us that we don't want to
+interpolate any of our edges. All other combinations will generate a
+set with interpolations of edges and (further down) one or more
+triangles. This is a small segment of the routine (which will have 8 if
+statements, not only two).
+</p>
+<pre class="code">if (this-&gt;vertices[idx].inside) lookup |= 128;
+if (this-&gt;vertices[idx+1].inside) lookup |= 64;
+</pre>
+<p> The code below is a segment showing how interpolation of the
+different line segments is done. The value we got from the table we
+found the lookup value for in the code above, is AND'ed with values
+that correspond to 2^0 -&gt; 2^11. This results in every one of the
+twelve line segments that is inside a cube. Then we place a point in
+the 12 point array discussed earlier, already interpolated in our
+interpolation routines.
+</p>
+<pre class="code">if (this-&gt;edgeTable[lookup] &amp; 1)
+   this-&gt;verts[0] = this-&gt;mb-&gt;interpolate(
+      this-&gt;vertices[idx + this-&gt;size_y +
+                        (this-&gt;size_y * this-&gt;size_z)],
+      this-&gt;vertices[idx + 1 + this-&gt;size_y +
+                        (this-&gt;size_y * this-&gt;size_z)]
+   }
+</pre>
+<p> The code presented here does the calculation. We construct a
+for-loop that runs through the entries made for a specific lookup part
+of triTable. As I showed earlier, these values can for example be of
+0,8,3. This means that we want to see the points we have interpolated
+in our 12 elements array on element 0, 8 and 3. These construct a
+triangle. I have chosen to have two loops in this code section, one
+that loops from triangle to triangle and one that runs through the
+different points in the triangle, the reason for this is to give the
+possibility to render the whole figure in wire frame if this is
+desired. This point assumes that we are capable of drawing single line
+loops on three points each, which makes us unable to use a fixed loop
+that only takes three points at a time (as done with the ordinary
+GL_TRIANGLES used here). Notice that we loop through the values in
+triTable until an element is -1, which means that we don't have any
+triangles left to draw. We also state the normal for each of the
+interpolated points, to make the lighting work as desired.
+</p>
+<pre class="code">for (i = 0; this-&gt;triTable[lookup][i] != -1; i+=3)
+{
+   glBegin(GL_TRIANGLES);
+   {
+      for (j = i; j &lt; (i+3); j++)
+      {
+         glNormal3f(
+               (float) this-&gt;verts[this-&gt;triTable[lookup][j]].normal_x,
+               (float) this-&gt;verts[this-&gt;triTable[lookup][j]].normal_y,
+               (float) this-&gt;verts[this-&gt;triTable[lookup][j]].normal_z
+                  );
+
+         glVertex3f(
+               (float) this-&gt;verts[this-&gt;triTable[lookup][j]].x_pos,
+               (float) this-&gt;verts[this-&gt;triTable[lookup][j]].y_pos,
+               (float) this-&gt;verts[this-&gt;triTable[lookup][j]].z_pos
+                  );
+
+      }
+   }
+   glEnd();
+}
+</pre>
+<p> Since we now have had a look at the part of the code that does the
+drawing and logic behind the "parsing" of the different cube
+combinations, I will also have a quick look at the two routines that
+makes it work in practice. The first routine is a simple interpolation
+routine, defined as 'inline' in c++ since it is run one time for every
+point in the grid (as mentioned this is about 21.000 points in the
+precompiled version). In practice this makes the compiler set the code
+directly in, instead of giving us a function call with the slow speed
+this brings (as a stack (don't think it is included in inline
+statements) and parsing of parameters). <br>
+<br>
+</p>
+<p> The calculation of the interpolated points should not require any
+more explanation; we calculate a weight in proportion to the two points
+and how the decisive point shall interpolate in accordance to them.
+This is done in accordance to the parameter 'flux' that states how much
+a point is affected of our different metapoints / force points. The
+calculations for this is done in the routine described a segment
+further down. </p>
+<pre class="code">inline vertex interpolate(vertex v1, vertex v2)
+{
+   vertex v;
+   double diff;
+
+   diff = (this-&gt;iso_value - v1.flux) / (v2.flux - v1.flux);
+
+   /* finds where on the line segment the point is */
+   v.x_pos = v1.x_pos + (v2.x_pos - v1.x_pos) * diff;
+   v.y_pos = v1.y_pos + (v2.y_pos - v1.y_pos) * diff;
+   v.z_pos = v1.z_pos + (v2.z_pos - v1.z_pos) * diff;
+   v.flux = (v1.flux + v2.flux) * 0.5;
+
+   /* calculate an average value from 
+      the normals on the single points */
+   v.normal_x = v1.normal_x + (v2.normal_x - v1.normal_x) * diff;
+   v.normal_y = v1.normal_y + (v2.normal_y - v1.normal_y) * diff;
+   v.normal_z = v1.normal_z + (v2.normal_z - v1.normal_z) * diff;
+
+   return v;
+}
+</pre>
+<p> This is the code that calculates how the metapoints / force points
+affect every element we wish to watch in the grid. First we initialize
+the flux value for this point to 0, before we run through a quick loop
+for each of the metapoints to see how much the current point is
+affected. In practice I do this by calculating an ordinary vector
+length between the grid point and the metapoint. The formula I chose to
+use is (force^2 / (x_length^2 + y_length^2 + z_length^2), which gives
+us a function that decrease gradually as the distance increase. The
+first force value is pushed into a fabs, to make it possible to have a
+negative effect from a meta point. I have no code that illustrate this
+in practice, but it shouldn't be worse than some simple small
+modifications to be able to have a given point that affects the whole
+grid in a negative direction. There are several good, pretty examples
+on how to do this (see thermo plastique of inf, available from
+http://www.pouet.net/prod.php?which=5558). This is one of many possible
+extensions that can be suggested as a project during another
+run-through of this course.
+</p>
+<pre class="code">inline double get_vertex_value(vertex v)
+{
+   double flux = 0.0;
+
+   for (i = 0; i &lt; num_metapoints; i++)
+   {
+	  /* calculate the distance to this point
+	      from the given metapoint */	 
+      length_x = metapoints[i].x_pos - v.x_pos;
+      length_y = metapoints[i].y_pos - v.y_pos;
+      length_z = metapoints[i].z_pos - v.z_pos;
+
+	  /* calculate the strength that affects this point */
+      flux += fabs(metapoints[i].power) * metapoints[i].power / (
+            length_x * length_x +
+            length_y * length_y +
+            length_z * length_z + 1);
+   }
+
+   return flux;
+}
+</pre>
+<p>
+	There is also some comments in the code (but it is not "over commentated" so a certain understanding of C/C++ is necessary.
+</p>
+
+      <fieldset>
+         <legend class="legend">References and examples:</legend>
+         <div class="fieldcontent">
+         <p>References</p>
+<ul>
+<li>
+         "Marching Cubes" by Adrian Secord
+         <a href="http://www.cs.ubc.ca/%7Eajsecord/uwaterloo_web/MarchingCubes.html" title="external link">
+<br>
+         www.cs.ubc.ca/~ajsecord/uwaterloo_web/MarchingCubes.html
+         </a>
+</li>
+
+<li>
+         "March - A Marching Cubes Implementation" by Markus Trenkwalder<br>
+         <a href="http://www.cg.tuwien.ac.at/courses/Visualisierung/2001-2002/Ergebnisse/Beispiel1/TrenkwalderM/march/doc/march/" title="external link">
+            www.cg.tuwien.ac.at/courses/Visualisierung/2001-2002/Ergebnisse/Beispiel1/TrenkwalderM/march/doc/march/
+         </a>
+</li>
+
+<li>
+         "Marching Cubes Based Polygonisation" by Nicholas Nash (paradox / vivid)<br>
+         <a href="http://www.cfxweb.net/modules.php?name=News&amp;file=article&amp;sid=199" title="external link">
+            www.cfxweb.net/modules.php?name=News&amp;file=article&amp;sid=199
+         </a>
+</li>
+
+<li>
+         "Polygonising a scalar field" by Paul Bourke<br>
+         <a href="http://astronomy.swin.edu.au/%7Epbourke/modelling/polygonise/" title="external link">
+            astronomy.swin.edu.au/~pbourke/modelling/polygonise/
+         </a>
+</li>
+
+<li>
+		Morten O. Hansen has written glwin that makes an opengl context window in a nice way.<br>
+		Steinar H. Gundersom has given great (and right) answers on a couple of technical C++ questions.<br>
+		Eirik Refsdal has dribbled at my balls.
+</li>
+</ul>
+<p>Runnable file (exe-file)</p>
+<ul>
+<li>
+   <a href="http://www.ia.hiof.no/%7Eborres/cgraph/explain/marching/precompiled/exeandimage.zip">exeandimage.zip</a>
+   The exe-file packed together with the texture env_sphere.bmp. The two files have to be in the same
+   catalogue when the application is running. 
+</li>
+</ul>
+<p> The application is developed on a Pentium 4 2.53GHz with ATI Radeon
+9700 as a graphics accelerator card. In debug mode the application in
+it present state runs with about 120 frames per second. In release mode
+this number has been increased to 210 frames per second. On an AMD
+650MHz GeForce 2 the release files runs with about 50 frames per
+second. It is in other words recommended to have some sort of 3d
+acceleration on the graphics card.
+</p>
+<p>Source code</p>
+<ul>
+<li>
+<a href="http://www.ia.hiof.no/%7Eborres/cgraph/explain/marching/filer/source.zip">source.zip</a>
+</li>
+</ul>
+<p>Visual material</p>
+<ul>
+<li>A movie showing regular use of the program (8.8Mb)<br>
+            <a href="http://www.ia.hiof.no/%7Eborres/gbsupport/marching_videos/eksempel.avi">video/eksempel.avi</a>
+</li>
+<li>A movie showing the different viewing possibilities (24.4Mb)<br>
+            <a href="http://www.ia.hiof.no/%7Eborres/gbsupport/marching_videos/eksempel_paa_lys_wireframe_og_uten_textures.avi">video/eksempel_paa_lys_wireframe_og_uten_textures.avi</a>
+</li>
+<li>A collection of screenshots from the development of the application that shows different states and how it progressed.
+<br>
+[
+<span class="pop">
+<a href="javascript:simplepopup('bilder/screenshots/metaballs_alpha1.png','CodePop','*')" title="Pop-Up">
+   alpha1.png</a>
+</span>
+] [
+<span class="pop">
+<a href="javascript:simplepopup('bilder/screenshots/metaballs_alpha2.png','CodePop','*')" title="Pop-Up">
+   alpha2.png</a>
+</span>
+] [
+<span class="pop">
+<a href="javascript:simplepopup('bilder/screenshots/metaballs_alpha3.png','CodePop','*')" title="Pop-Up">
+   alpha3.png</a>
+</span>
+]
+<br>
+[
+<span class="pop">
+<a href="javascript:simplepopup('bilder/screenshots/metaballs_beta1.png','CodePop','*')" title="Pop-Up">
+   beta1.png</a>
+</span>
+] [
+<span class="pop">
+<a href="javascript:simplepopup('bilder/screenshots/metaballs_beta2.png','CodePop','*')" title="Pop-Up">
+   beta2.png</a>
+</span>
+] [
+<span class="pop">
+<a href="javascript:simplepopup('bilder/screenshots/metaballs_beta3.png','CodePop','*')" title="Pop-Up">
+   beta3.png</a>
+</span>
+] [
+<span class="pop">
+<a href="javascript:simplepopup('bilder/screenshots/metaballs_beta4.png','CodePop','*')" title="Pop-Up">
+   beta4.png</a>
+</span>
+] [
+<span class="pop">
+<a href="javascript:simplepopup('bilder/screenshots/metaballs_beta5.png','CodePop','*')" title="Pop-Up">
+   beta5.png</a>
+</span>
+] [
+<span class="pop">
+<a href="javascript:simplepopup('bilder/screenshots/metaballs_beta6.png','CodePop','*')" title="Pop-Up">
+   beta6.png</a>
+</span>
+] [
+<span class="pop">
+<a href="javascript:simplepopup('bilder/screenshots/metaballs_beta7.png','CodePop','*')" title="Pop-Up">
+   beta7.png</a>
+</span>
+]
+
+</li>
+<li>
+A scanned sheet from the planning process: 
+<span class="pop">
+<a href="javascript:simplepopup('bilder/skisser01.jpg','CodePop','*')" title="Pop-Up">
+   skisser01.jpg</a>
+</span>
+</li>
+</ul>
+         </div>
+      </fieldset>
+
+      <p>
+
+      </p><fieldset>
+         <legend class="legend">Control and maintainance:</legend>
+         <div class="fieldcontent">
+            <p>
+	Written by  Mats Lindh, March 2003. Editorial adjustments for this site by
+	Børre Stenseth, March 2003.
+	</p>
+         </div>
+      </fieldset>
+
+    </div>
+<!-- printable -->
+</div> <!-- main -->
+
+
+<!-- printpage message -->
+<div class="printonly">
+	<div class="mainfooter">
+	  <p>
+		Computer Graphics from Østfold College:
+		
+  	http://www.ia.hiof.no/~borres/cgraph/
+  
+	</p></div>
+</div>
+
+
+<div class="printhide">
+
+<!-- kill floating -->
+<div style="clear: both;">
+
+ <!-- din mening -->
+ <!--
+ <div style="float:left;margin-top:10px">
+    <div class="mainpop"
+    onclick="simplepopup('http://www.ia.hiof.no/~borres/cgi-bin/quality/p-en-qualitypop.html','innspill','scrollbars=yes,resizable=yes,width=550,height=520,status=0')">
+    <img src="gfx/inspill.gif" alt="skjema popup" style="border:0px"/>
+    </div>
+ </div>
+ -->
+      <!-- navigare -->
+			<div style="text-align: right;">
+			<span class="prev">
+<a href="http://www.ia.hiof.no/%7Eborres/cgraph/explain/blending/p-blend.html" title="Explaining blending by an example">
+<img alt="../../gfx/prev.gif" src="p-march_files/prev.gif" style="border: 0px none ;">
+</a>
+</span>
+			<span class="home">
+<a href="http://www.ia.hiof.no/%7Eborres/cgraph/index.html" title="Welcome to this site for Computer Graphics">
+<img alt="../../gfx/home.gif" src="p-march_files/home.gif" style="border: 0px none ;">
+</a>
+</span>
+			<span class="next">
+<a href="http://www.ia.hiof.no/%7Eborres/cgraph/draw/summary.html" title="Drawing something">
+<img alt="../../gfx/next.gif" src="p-march_files/next.gif" style="border: 0px none ;">
+</a>
+</span>
+      </div>
+
+<!-- kill floating -->
+<div style="clear: both;">
+
+<hr style="height: 1px;">
+
+<!-- bottom: authors, date, message -->
+<div style="float: left;">
+
+   <div class="mainpop" onclick="javascript:simplepopup('http://www.ia.hiof.no/~borres/cgi-bin/signature/signature.py','signatur','scrollbars=no,resizable=no,width=300,height=120,status=0')">
+      <img alt="popup card" src="p-march_files/minicard.png" style="border: 0px none ; margin-top: 5px;">
+   </div>
+
+   <div class="mainfooter">
+<a href="http://www.ia.hiof.no/%7Eborres/wxtdoc/">WXT</a> : Apr 25, 2005</div>
+	</div>
+	<!-- validation -->
+	<div style="text-align: right;">
+	<a href="http://validator.w3.org/check/referer">
+      <img alt="Valid XHTML" src="p-march_files/valid-xhtml.gif" style="border: 0px none ;" height="31" width="88">
+</a>
+	</div>
+</div>
+<!-- /printhide -->
+
+
+</div></div></div></body></html>

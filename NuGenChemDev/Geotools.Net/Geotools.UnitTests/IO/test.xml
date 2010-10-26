@@ -1,0 +1,44 @@
+	test1	"<?xml version="1.0" encoding="utf-16"?>
+<CS_CoorindateSystem Dimension="3">
+  <CS_CompoundCoordinateSystem>
+    <CS_Info AuthorityCode="7405" Abbreviation="" Authority="EPSG" Name="OSGB36 / British National Grid + ODN" />
+    <CS_AxisInfo Name="Easting" Orientation="EAST" />
+    <CS_AxisInfo Name="Northing" Orientation="NORTH" />
+    <CS_AxisInfo Name="Altitude" Orientation="UP" />
+    <CS_Info AuthorityCode="7405" Abbreviation="" Authority="EPSG" Name="OSGB36 / British National Grid + ODN" />
+    <CS_CoorindateSystem Dimension="2">
+      <CS_ProjectionCoordinateSystem>
+        <CS_Info AuthorityCode="27700" Abbreviation="" Authority="EPSG" Name="OSGB 1936 / British National Grid" />
+        <CS_AxisInfo Name="Easting" Orientation="EAST" />
+        <CS_AxisInfo Name="Northing" Orientation="NORTH" />
+        <CS_CoorindateSystem Dimension="2">
+          <CS_GeographicCoordinateSystem>
+            <CS_Info AuthorityCode="4277" Abbreviation="" Authority="EPSG" Name="OSGB 1936" />
+            <CS_AxisInfo Name="Geodetic latitude" Orientation="NORTH" />
+            <CS_AxisInfo Name="Geodetic longitude" Orientation="EAST" />
+            <CS_HorizontalDatum DatumType="CS_HD_Geocentric">
+              <CS_Info AuthorityCode="6277" Abbreviation="" Authority="EPSG" Name="OSGB 1936" />
+              <CS_Ellipsoid SemiMajorAxis="6377563.396" SemiMinorAxis="6356256.90923729" InverseFlattening="299.3249646" IvgDefinitive="1">
+                <CS_Info AuthorityCode="7001" Abbreviation="" Authority="EPSG" Name="Airy 1830" />
+                <CS_LinearUnit MetersPerUnit="1">
+                  <CS_Info AuthorityCode="9001" Abbreviation="" Authority="EPSG" Name="metre" />
+                </CS_LinearUnit>
+              </CS_Ellipsoid>
+              <CS_WGS84ConversionInfo Dx="0" Dy="0" Dz="0" Ex="0" Ey="0" Ez="0" Ppm="0" />
+            </CS_HorizontalDatum>
+            <CS_AngularUnit RadiansPerUnit="1">
+              <CS_Info AuthorityCode="" Abbreviation="" Authority="" Name="" />
+            </CS_AngularUnit>
+            <CS_PrimeMeridian Longitude="0">
+              <CS_Info AuthorityCode="8901" Abbreviation="" Authority="EPSG" Name="Greenwich" />
+              <CS_AngularUnit RadiansPerUnit="1">
+                <CS_Info AuthorityCode="9101" Abbreviation="" Authority="EPSG" Name="radian" />
+              </CS_AngularUnit>
+            </CS_PrimeMeridian>
+          </CS_GeographicCoordinateSystem>
+        </CS_CoorindateSystem>
+      </CS_ProjectionCoordinateSystem>
+    </CS_CoorindateSystem>
+    <CS_CoorindateSystem Dimension="1" />
+  </CS_CompoundCoordinateSystem>
+</CS_CoorindateSystem>"	string

@@ -1,0 +1,131 @@
+<run>
+<precisionModel type="FLOATING"/>
+
+<case>
+  <a>
+    POLYGON ((40 20, 40 140, 260 160, 260 60, 260 20, 40 20))
+  </a>
+
+  <b>
+    POLYGON ((400 140, 420 40, 600 80, 600 120, 400 140))
+  </b>
+<test>
+  <op name="disjoint" arg1="A" arg2="B">
+    true
+  </op>
+</test>
+<test>
+  <op name="overlaps" arg1="A" arg2="B">
+    false
+  </op>
+</test>
+<test>
+  <op name="touches" arg1="A" arg2="B">
+    false
+  </op>
+</test>
+<test>
+  <op name="crosses" arg1="A" arg2="B">
+    false
+  </op>
+</test>
+<test>
+  <op name="within" arg1="A" arg2="B">
+    false
+  </op>
+</test>
+<test>
+  <op name="contains" arg1="A" arg2="B">
+    false
+  </op>
+</test>
+<test>
+  <op name="equals" arg1="A" arg2="B">
+    false
+  </op>
+</test>
+<test>
+  <op name="intersects" arg1="A" arg2="B">
+    false
+  </op>
+</test>
+<test>
+  <op name="isempty" arg1="A" arg2="B">
+    false
+  </op>
+</test>
+<test>
+  <op name="isvalid" arg1="A" arg2="B">
+    true
+  </op>
+</test>
+<test>
+  <op name="issimple" arg1="A" arg2="B">
+    true
+  </op>
+</test>
+<test>
+  <op name="convexhull" arg1="A" arg2="B">
+    POLYGON ((40 20, 40 140, 260 160, 260 20, 40 20))
+  </op>
+</test>
+<test>
+  <op name="getboundary" arg1="A" arg2="B">
+    MULTILINESTRING ((40 20, 40 140, 260 160, 260 60, 260 20, 40 20))
+  </op>
+</test>
+<test>
+  <op name="symdifference" arg1="A" arg2="B">
+    MULTIPOLYGON (((40 20, 40 140, 260 160, 260 60, 260 20, 40 20)), 
+      ((400 140, 600 120, 600 80, 420 40, 400 140)))
+  </op>
+</test>
+<test>
+  <op name="difference" arg1="A" arg2="B">
+    POLYGON ((40 20, 40 140, 260 160, 260 60, 260 20, 40 20))
+  </op>
+</test>
+<test>
+  <op name="union" arg1="A" arg2="B">
+    MULTIPOLYGON (((40 20, 40 140, 260 160, 260 60, 260 20, 40 20)), 
+      ((400 140, 600 120, 600 80, 420 40, 400 140)))
+  </op>
+</test>
+<test>
+  <op name="intersection" arg1="A" arg2="B">
+    GEOMETRYCOLLECTION EMPTY
+  </op>
+</test>
+</case>
+
+<case>
+  <a>
+    POLYGON ((40 100, 240 80, 440 280, 120 320, 40 100), 
+      (140 260, 120 140, 260 180, 220 260, 140 260))
+  </a>
+</case>
+
+<case>
+  <a>
+    LINESTRING (40 60, 320 60)
+  </a>
+</case>
+
+<case>
+<desc>Multipolygon Buffer</desc>
+  <a>
+    MULTIPOLYGON (((60 60, 220 60, 240 160, 120 220, 40 180, 60 60)), 
+      ((300 140, 420 80, 460 160, 420 240, 340 260, 300 140)))
+  </a>
+</case>
+
+<case>
+  <a>
+    GEOMETRYCOLLECTION (POLYGON ((60 80, 240 60, 260 120, 180 220, 60 200, 60 80)), 
+      LINESTRING (300 80, 320 260), 
+      POINT (120 240), 
+      POLYGON ((160 320, 240 320, 240 360, 180 380, 160 320)))
+  </a>
+</case>
+
+</run>

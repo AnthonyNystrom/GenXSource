@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="NuGenSVisualLib.Rendering.ThreeD.ChemRenderingContext3DDX9">
+    <Position X="1" Y="1" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>ChemRenderingContext3D.cs</FileName>
+      <HashCode>AQAAAAIAgDACAAAAAAGAAAAAEACABAAAABAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="atomRenderer" Hidden="true" />
+      <Field Name="chemRenderingSource" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NuGenSVisualLib.Rendering.Chem.AtomRenderer3DSpheres">
+    <Position X="4" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <FileName>AtomRenderer3DSpheres.cs</FileName>
+      <HashCode>gAAAgAACACAABAAAAAABAAAAAACAAAAAAQACAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="device" Hidden="true" />
+      <Field Name="fillMode" Hidden="true" />
+      <Field Name="sphere" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NuGenSVisualLib.Rendering.Chem.AtomRenderer3DSprites">
+    <Position X="6.25" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <FileName>AtomRenderer3DSprites.cs</FileName>
+      <HashCode>gAAAAAAAACAAAAAAAAABAAAAAAAAAAAAAQACAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NuGenSVisualLib.Rendering.Shading.GeneralShadingDesc">
+    <Position X="1" Y="4.25" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>GeneralShadingDesc.cs</FileName>
+      <HashCode>AAAAAgAACAAAAAgIAAAABAQACAQIAAAAAABAAgEAAAI=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="antiAliasing" Hidden="true" />
+      <Field Name="bgColor" Hidden="true" />
+      <Field Name="bgImg" Hidden="true" />
+      <Field Name="bgImgSize" Hidden="true" />
+      <Field Name="lowDetail" Hidden="true" />
+      <Field Name="shadingMode" Hidden="true" />
+      <Field Name="wireframe" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="NuGenSVisualLib.Rendering.Shading.GeneralShadingDesc.ShadingModes" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>GeneralShadingDesc.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+  </Class>
+  <Class Name="NuGenSVisualLib.AtomShadingDesc">
+    <Position X="1" Y="6.5" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>AtomShadingDesc.cs</FileName>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAgAAAI=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="representation" Hidden="true" />
+      <Field Name="wireframe" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="NuGenSVisualLib.AtomShadingDesc.Representations" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>AtomShadingDesc.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+  </Class>
+  <Class Name="NuGenSVisualLib.BondShadingDesc">
+    <Position X="3.5" Y="5.25" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>BondShadingDesc.cs</FileName>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NuGenSVisualLib.Rendering.CompleteOutputDescription">
+    <Position X="7.25" Y="5.75" Width="2.5" />
+    <TypeIdentifier>
+      <FileName>CompleteOutputDescription.cs</FileName>
+      <HashCode>AAAAIAAAQCAAAEAAAAQAAAAECAAAAAAAAAAAAAAACAA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="AtomShadingDesc" />
+      <Property Name="BondShadingDesc" />
+      <Property Name="GeneralLightingDesc" />
+    </ShowAsAssociation>
+    <Members>
+      <Field Name="atomShadingDesc" Hidden="true" />
+      <Field Name="bondShadingDesc" Hidden="true" />
+      <Field Name="generalLightingDesc" Hidden="true" />
+      <Field Name="generalShadingDesc" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="NuGenSVisualLib.GeneralLightingDesc">
+    <Position X="4.5" Y="8.25" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>GeneralLightingDesc.cs</FileName>
+      <HashCode>QEAAAACAAAAAgIAAAACAAgAAAAIAAAACAAAAAEBAAAA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Lights" />
+    </ShowAsAssociation>
+    <Members>
+      <Field Name="ambient" Hidden="true" />
+      <Field Name="enabled" Hidden="true" />
+      <Field Name="fixedLightPositions" Hidden="true" />
+      <Field Name="lights" Hidden="true" />
+      <Field Name="specular" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="NuGenSVisualLib.UI.Lighting.LightWrapper">
+    <Position X="1" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>LightWrapper.cs</FileName>
+      <HashCode>AQAAAAAAAAAAIIAAAACAEAAAAAAAGgAAAAAAAQEAABA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="castSpecular" Hidden="true" />
+      <Field Name="direction" Hidden="true" />
+      <Field Name="enabled" Hidden="true" />
+      <Field Name="lightColor" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NuGenSVisualLib.HashTableSettings">
+    <Position X="14.5" Y="4.75" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>HashTableSettings.cs</FileName>
+      <HashCode>AAAAABACAAAAIAAACAAAAAAAAAAAAAAAAAAAAAAAAQg=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="hashTable" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NuGenSVisualLib.Axis3D">
+    <Position X="15.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Axis3D.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABACAAAAEAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NuGenSVisualLib.BondRenderer3DLines">
+    <Position X="12.75" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <FileName>BondRenderer3DLines.cs</FileName>
+      <HashCode>gAAAAAACACAAAAAAACABAAAAAAAAAAAAAAACAAAAEAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="device" Hidden="true" />
+      <Field Name="vBuffer" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NuGenSVisualLib.MoleculeMaterialsModule">
+    <Position X="17.5" Y="5" Width="2" />
+    <TypeIdentifier>
+      <FileName>MoleculeMaterialsModule.cs</FileName>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAABAABAAAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="materials" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NuGenSVisualLib.LocalChemSettings">
+    <Position X="14.5" Y="7.5" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>LocalChemSettings.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NuGenSVisualLib.Rendering.Devices.OutputRequirements">
+    <Position X="10" Y="7.25" Width="2" />
+    <TypeIdentifier>
+      <FileName>DeviceRequirements.cs</FileName>
+      <HashCode>IAAAABAAAAAAAAAAAAQADAAEAAQAAAAAAAAIAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="antiAliasing" Hidden="true" />
+      <Field Name="devType" Hidden="true" />
+      <Field Name="format" Hidden="true" />
+      <Field Name="windowed" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="NuGenSVisualLib.Rendering.Devices.OutputCaps">
+    <Position X="10" Y="9.5" Width="2" />
+    <TypeIdentifier>
+      <FileName>OutputCaps.cs</FileName>
+      <HashCode>ACAAAAAiAAAAAgIAAAACCAAAAAQAAAAAQAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="adapterDetails" Hidden="true" />
+      <Field Name="antialiasCaps" Hidden="true" />
+      <Field Name="caps" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="NuGenSVisualLib.Rendering.Devices.OutputSettings">
+    <Position X="12.5" Y="9.5" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>OutputSettings.cs</FileName>
+      <HashCode>IAAAAAAAAAAAAAIAAAQCBAAEAAQABAAAAAAIAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="adapter" Hidden="true" />
+      <Field Name="devType" Hidden="true" />
+      <Field Name="windowed" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Interface Name="NuGenSVisualLib.Rendering.Chem.IAtomRenderer3DDx9">
+    <Position X="5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <FileName>IAtomRenderer.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="NuGenSVisualLib.Rendering.Chem.ITypeRenderer3DDx9">
+    <Position X="8" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <FileName>ITypeRenderer3DDX9.cs</FileName>
+      <HashCode>gAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="NuGenSVisualLib.Rendering.Chem.IBondRenderer3DDx9">
+    <Position X="9.75" Y="2.75" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>IBondRenderer3DDx9.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="NuGenSVisualLib.ISettings">
+    <Position X="12" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>ISettings.cs</FileName>
+      <HashCode>AAAAABACAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="NuGenSVisualLib.IEntity">
+    <Position X="12" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>IEntity.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABACAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="NuGenSVisualLib.ISettingsModule">
+    <Position X="17.5" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <FileName>ISettingsModule.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+</ClassDiagram>

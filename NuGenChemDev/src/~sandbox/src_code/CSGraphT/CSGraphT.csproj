@@ -1,0 +1,189 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <SchemaVersion>2.0</SchemaVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>CSGraphT</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CSGraphT</RootNamespace>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <ProjectGuid>{D18F0875-AD63-4744-A3B2-A8CE00239165}</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>.\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>.\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib">
+      <Name>mscorlib</Name>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Management">
+      <Name>System.Management</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.Xml</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="org\_3pq\jgrapht\alg\ConnectivityInspector.cs" />
+    <None Include="org\_3pq\jgrapht\alg\CycleDetector.cs" />
+    <Compile Include="org\_3pq\jgrapht\alg\DijkstraShortestPath.cs" />
+    <None Include="org\_3pq\jgrapht\alg\StrongConnectivityInspector.cs" />
+    <None Include="org\_3pq\jgrapht\alg\util\VertexDegreeComparator.cs" />
+    <None Include="org\_3pq\jgrapht\alg\VertexCovers.cs" />
+    <Compile Include="org\_3pq\jgrapht\DirectedGraph.cs" />
+    <Compile Include="org\_3pq\jgrapht\Edge.cs" />
+    <Compile Include="org\_3pq\jgrapht\EdgeFactory.cs" />
+    <Compile Include="org\_3pq\jgrapht\edge\DefaultEdge.cs" />
+    <Compile Include="org\_3pq\jgrapht\edge\DirectedEdge.cs" />
+    <Compile Include="org\_3pq\jgrapht\edge\DirectedWeightedEdge.cs" />
+    <Compile Include="org\_3pq\jgrapht\edge\EdgeFactories.cs" />
+    <Compile Include="org\_3pq\jgrapht\edge\UndirectedEdge.cs" />
+    <Compile Include="org\_3pq\jgrapht\edge\UndirectedWeightedEdge.cs" />
+    <Compile Include="org\_3pq\jgrapht\event\ConnectedComponentTraversalEvent.cs" />
+    <Compile Include="org\_3pq\jgrapht\event\EdgeTraversalEvent.cs" />
+    <Compile Include="org\_3pq\jgrapht\event\GraphChangeEvent.cs" />
+    <Compile Include="org\_3pq\jgrapht\event\GraphEdgeChangeEvent.cs" />
+    <Compile Include="org\_3pq\jgrapht\event\GraphListener.cs" />
+    <Compile Include="org\_3pq\jgrapht\event\GraphVertexChangeEvent.cs" />
+    <Compile Include="org\_3pq\jgrapht\event\TraversalListener.cs" />
+    <Compile Include="org\_3pq\jgrapht\event\TraversalListenerAdapter.cs" />
+    <Compile Include="org\_3pq\jgrapht\event\VertexSetListener.cs" />
+    <Compile Include="org\_3pq\jgrapht\event\VertexTraversalEvent.cs" />
+    <None Include="org\_3pq\jgrapht\ext\JGraphModelAdapter.cs" />
+    <None Include="org\_3pq\jgrapht\ext\VisioExporter.cs" />
+    <None Include="org\_3pq\jgrapht\generate\EmptyGraphGenerator.cs" />
+    <None Include="org\_3pq\jgrapht\generate\GraphGenerator.cs" />
+    <None Include="org\_3pq\jgrapht\generate\LinearGraphGenerator.cs" />
+    <None Include="org\_3pq\jgrapht\generate\RingGraphGenerator.cs" />
+    <None Include="org\_3pq\jgrapht\generate\WheelGraphGenerator.cs" />
+    <Compile Include="org\_3pq\jgrapht\Graph.cs" />
+    <Compile Include="org\_3pq\jgrapht\GraphHelper.cs" />
+    <Compile Include="org\_3pq\jgrapht\graph\AbstractBaseGraph.cs" />
+    <Compile Include="org\_3pq\jgrapht\graph\AbstractGraph.cs" />
+    <Compile Include="org\_3pq\jgrapht\graph\AsUndirectedGraph.cs" />
+    <Compile Include="org\_3pq\jgrapht\graph\DefaultDirectedGraph.cs" />
+    <None Include="org\_3pq\jgrapht\graph\DefaultDirectedWeightedGraph.cs" />
+    <None Include="org\_3pq\jgrapht\graph\DefaultListenableGraph.cs" />
+    <None Include="org\_3pq\jgrapht\graph\DirectedMultigraph.cs" />
+    <None Include="org\_3pq\jgrapht\graph\DirectedSubgraph.cs" />
+    <None Include="org\_3pq\jgrapht\graph\DirectedWeightedMultigraph.cs" />
+    <None Include="org\_3pq\jgrapht\graph\DirectedWeightedSubgraph.cs" />
+    <Compile Include="org\_3pq\jgrapht\graph\EdgeListFactory.cs" />
+    <Compile Include="org\_3pq\jgrapht\graph\GraphDelegator.cs" />
+    <None Include="org\_3pq\jgrapht\graph\ListenableDirectedGraph.cs" />
+    <None Include="org\_3pq\jgrapht\graph\ListenableDirectedWeightedGraph.cs" />
+    <None Include="org\_3pq\jgrapht\graph\ListenableUndirectedGraph.cs" />
+    <None Include="org\_3pq\jgrapht\graph\ListenableUndirectedWeightedGraph.cs" />
+    <None Include="org\_3pq\jgrapht\graph\Multigraph.cs" />
+    <None Include="org\_3pq\jgrapht\graph\Pseudograph.cs" />
+    <Compile Include="org\_3pq\jgrapht\graph\SimpleDirectedGraph.cs" />
+    <None Include="org\_3pq\jgrapht\graph\SimpleDirectedWeightedGraph.cs" />
+    <Compile Include="org\_3pq\jgrapht\graph\SimpleGraph.cs" />
+    <None Include="org\_3pq\jgrapht\graph\SimpleWeightedGraph.cs" />
+    <Compile Include="org\_3pq\jgrapht\graph\Subgraph.cs" />
+    <Compile Include="org\_3pq\jgrapht\graph\UndirectedSubgraph.cs" />
+    <None Include="org\_3pq\jgrapht\graph\UndirectedWeightedSubgraph.cs" />
+    <None Include="org\_3pq\jgrapht\graph\UnmodifiableDirectedGraph.cs" />
+    <None Include="org\_3pq\jgrapht\graph\UnmodifiableGraph.cs" />
+    <None Include="org\_3pq\jgrapht\graph\UnmodifiableUndirectedGraph.cs" />
+    <None Include="org\_3pq\jgrapht\graph\WeightedMultigraph.cs" />
+    <None Include="org\_3pq\jgrapht\graph\WeightedPseudograph.cs" />
+    <None Include="org\_3pq\jgrapht\LabeledElement.cs" />
+    <Compile Include="org\_3pq\jgrapht\ListenableGraph.cs" />
+    <Compile Include="org\_3pq\jgrapht\traverse\AbstractGraphIterator.cs" />
+    <Compile Include="org\_3pq\jgrapht\traverse\BreadthFirstIterator.cs" />
+    <Compile Include="org\_3pq\jgrapht\traverse\ClosestFirstIterator.cs" />
+    <Compile Include="org\_3pq\jgrapht\traverse\CrossComponentIterator.cs" />
+    <None Include="org\_3pq\jgrapht\traverse\DepthFirstIterator.cs" />
+    <Compile Include="org\_3pq\jgrapht\traverse\GraphIterator.cs" />
+    <None Include="org\_3pq\jgrapht\traverse\TopologicalOrderIterator.cs" />
+    <Compile Include="org\_3pq\jgrapht\UndirectedGraph.cs" />
+    <Compile Include="org\_3pq\jgrapht\util\FibonacciHeap.cs" />
+    <None Include="org\_3pq\jgrapht\util\ModifiableInteger.cs" />
+    <None Include="org\_3pq\jgrapht\VertexFactory.cs" />
+    <None Include="org\_3pq\jgrapht\WeightedGraph.cs" />
+    <Compile Include="SupportClass.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

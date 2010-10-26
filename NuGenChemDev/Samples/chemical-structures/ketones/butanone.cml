@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<molecule xmlns="http://www.xml-cml.org/schema/cml2/core" id="CS_butanone">
+ <formula concise=" C 4 H 8 O 1 "/>
+ <identifier version="InChI/1">
+  <basic>1/C4H8O/c1-3-4(2)5/h3H2,1-2H3</basic>
+ </identifier>
+ <name convention="IUPAC">Butanone</name>
+ <atomArray>
+  <atom id="a1" elementType="H" x3="-2.000200" y3="-0.031500" z3="-0.940200"/>
+  <atom id="a2" elementType="C" x3="-2.534900" y3="-0.089100" z3="-1.893100"/>
+  <atom id="a3" elementType="H" x3="-2.221500" y3="0.748400" z3="-2.523100"/>
+  <atom id="a4" elementType="H" x3="-2.287300" y3="-1.037600" z3="-2.378200"/>
+  <atom id="a5" elementType="C" x3="-4.017100" y3="-0.014900" z3="-1.652300"/>
+  <atom id="a6" elementType="O" x3="-4.465800" y3="0.093500" z3="-0.518500"/>
+  <atom id="a7" elementType="C" x3="-4.899500" y3="-0.081900" z3="-2.880000"/>
+  <atom id="a8" elementType="H" x3="-4.629500" y3="0.746100" z3="-3.543000"/>
+  <atom id="a9" elementType="H" x3="-4.694600" y3="-1.023200" z3="-3.399700"/>
+  <atom id="a10" elementType="C" x3="-6.380200" y3="-0.000100" z3="-2.542900"/>
+  <atom id="a11" elementType="H" x3="-6.681800" y3="-0.823400" z3="-1.887900"/>
+  <atom id="a12" elementType="H" x3="-6.617000" y3="0.937600" z3="-2.030600"/>
+  <atom id="a13" elementType="H" x3="-6.983300" y3="-0.051700" z3="-3.453900"/>
+ </atomArray>
+ <bondArray>
+  <bond atomRefs2="a1 a2" order="1"/>
+  <bond atomRefs2="a2 a3" order="1"/>
+  <bond atomRefs2="a2 a4" order="1"/>
+  <bond atomRefs2="a2 a5" order="1"/>
+  <bond atomRefs2="a5 a6" order="2"/>
+  <bond atomRefs2="a5 a7" order="1"/>
+  <bond atomRefs2="a7 a8" order="1"/>
+  <bond atomRefs2="a7 a9" order="1"/>
+  <bond atomRefs2="a7 a10" order="1"/>
+  <bond atomRefs2="a10 a11" order="1"/>
+  <bond atomRefs2="a10 a12" order="1"/>
+  <bond atomRefs2="a10 a13" order="1"/>
+ </bondArray>
+ <list>
+  <propertyList>
+   <property dictRef="cml:molwt" title="molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="cml:molwt" units="unit:g">72.1057</scalar>
+   </property>
+   <property dictRef="chemwt:exact_molwt" title="exact molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="chemwt:exact_molwt" units="unit:g">72.0575149</scalar>
+   </property>
+   <property dictRef="cml:mpt" title="melting point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:mpt" units="unit:celsius">-87</scalar>
+   </property>
+   <property dictRef="cml:bpt" title="boiling point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:bpt" units="unit:celsius">79</scalar>
+   </property>
+  </propertyList>
+ </list>
+</molecule>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CompleteOutputDescName xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GeneralShadingDesc>
+    <AntiAliasing>FourSamples</AntiAliasing>
+    <Wireframe>false</Wireframe>
+    <BackgroundColor />
+    <BackgroundImgSize>
+      <Width>0</Width>
+      <Height>0</Height>
+    </BackgroundImgSize>
+    <BackgroundImgAlignment>Centre</BackgroundImgAlignment>
+    <ShadingMode>Smooth</ShadingMode>
+  </GeneralShadingDesc>
+  <AtomShadingDesc>
+    <Wireframe>false</Wireframe>
+    <Representation>Spheres</Representation>
+    <SymbolText>false</SymbolText>
+    <LowDetail>false</LowDetail>
+    <BlendSymbolText>true</BlendSymbolText>
+  </AtomShadingDesc>
+  <BondShadingDesc>
+    <Wireframe>false</Wireframe>
+    <ShadeBothColors>false</ShadeBothColors>
+    <BondOrderAsMultipleBonds>false</BondOrderAsMultipleBonds>
+    <Representation>Wire_Lines</Representation>
+  </BondShadingDesc>
+  <GeneralLightingDesc>
+    <Enabled>true</Enabled>
+    <Ambient />
+    <Specular />
+    <FixedLightPositions>false</FixedLightPositions>
+    <Light>
+      <Enabled>true</Enabled>
+      <LightColor r="255" g="255" b="255"/>
+      <CastHighlights>true</CastHighlights>
+      <DirectionX>1</DirectionX>
+      <DirectionY>1</DirectionY>
+      <DirectionZ>1</DirectionZ>
+    </Light>
+  </GeneralLightingDesc>
+</CompleteOutputDescName>

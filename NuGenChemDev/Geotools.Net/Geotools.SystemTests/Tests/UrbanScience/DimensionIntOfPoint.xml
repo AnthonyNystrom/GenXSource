@@ -1,0 +1,66 @@
+<run>
+<precisionModel type="FLOATING"/>
+<case>
+  <Desc>Intersection of Two Points</Desc>
+  <a>
+    POINT (180 260)
+  </a>
+  <b>
+    POINT (180 260)
+  </b>
+  <test>
+    <op name="relate" arg1="A" arg2="B" arg3="0FFFFFFF2">true</op>
+  </test>  
+</case>
+<case>
+  <Desc>Dimension of Intersection of Two Points</Desc>	
+  <a>
+    POINT (180 260)
+  </a>  
+  <test>
+    <op name="Dimension" arg1="A">0</op>
+  </test>  
+</case>
+<case>
+  <Desc>Intersection of Point and Line</Desc>
+  <a>
+    POINT (160 260)
+  </a>
+  <b>
+    LINESTRING (80 260, 240 260)
+  </b>
+  <test>
+    <op name="relate" arg1="A" arg2="B" arg3="0FFFFF102">true</op>
+  </test>  
+</case>
+<case>
+  <Desc>Dimension of Intersection of Point and LineString</Desc>	
+  <a>
+    POINT (160 260)
+  </a>  
+  <test>
+    <op name="Dimension" arg1="A">0</op>
+  </test>  
+</case>
+<case>
+  <Desc>Intersection of Point and Polygon</Desc>
+  <a>
+    POLYGON ((180 320, 260 320, 260 260, 180 260, 180 320))
+  </a>
+  <b>
+    POINT (220 280)
+  </b>
+  <test>
+    <op name="relate" arg1="A" arg2="B" arg3="0F2FF1FF2">true</op>
+  </test>  
+</case>
+<case>
+  <Desc>Dimension of Intersection of Point and Polygon</Desc>	
+  <a>
+    POINT (220 280)
+  </a>  
+  <test>
+    <op name="Dimension" arg1="A">0</op>
+  </test>  
+</case>
+</run>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<molecule xmlns="http://www.xml-cml.org/schema/cml2/core" id="CS_acetonitrile">
+ <formula concise=" C 2 H 3 N 1 "/>
+ <identifier version="InChI/1">
+  <basic>1/C2H3N/c1-2-3/h1H3</basic>
+ </identifier>
+ <name convention="IUPAC">Acetonitrile</name>
+ <atomArray>
+  <atom id="a1" elementType="C" x3="0.495700" y3="-0.008000" z3="0.000300"/>
+  <atom id="a2" elementType="C" x3="-0.962100" y3="0.015500" z3="-0.000600"/>
+  <atom id="a3" elementType="N" x3="-2.119900" y3="0.034200" z3="-0.001200"/>
+  <atom id="a4" elementType="H" x3="0.865500" y3="0.229700" z3="1.008600"/>
+  <atom id="a5" elementType="H" x3="0.874700" y3="0.737200" z3="-0.714600"/>
+  <atom id="a6" elementType="H" x3="0.846200" y3="-1.008700" z3="-0.292500"/>
+ </atomArray>
+ <bondArray>
+  <bond atomRefs2="a1 a2" order="1"/>
+  <bond atomRefs2="a1 a4" order="1"/>
+  <bond atomRefs2="a1 a5" order="1"/>
+  <bond atomRefs2="a1 a6" order="1"/>
+  <bond atomRefs2="a2 a3" order="3"/>
+ </bondArray>
+ <list>
+  <propertyList>
+   <property dictRef="cml:molwt" title="molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="cml:molwt" units="unit:g">41.0519</scalar>
+   </property>
+   <property dictRef="chemwt:exact_molwt" title="exact molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="chemwt:exact_molwt" units="unit:g">41.0265491</scalar>
+   </property>
+   <property dictRef="cml:mpt" title="melting point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:mpt" units="unit:celsius">-48</scalar>
+   </property>
+   <property dictRef="cml:bpt" title="boiling point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:bpt" units="unit:celsius">81</scalar>
+   </property>
+  </propertyList>
+ </list>
+</molecule>

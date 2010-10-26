@@ -1,0 +1,22 @@
+<run>
+<precisionModel type="FLOATING"/>
+<case>
+  <a>
+    POLYGON ((200 320, 360 320, 320 240, 160 240, 200 320))
+  </a>
+  <b>
+    POLYGON ((260 360, 420 360, 380 280, 220 280, 260 360))
+  </b>
+  <test>
+    <op name="relate" arg1="A" arg2="B" arg3="212101212">true</op>
+  </test>
+</case> 
+<case>
+  <a>
+    POLYGON ((240 320, 360 320, 340 280, 220 280, 240 320))    
+  </a>
+  <test>
+    <op name="Dimension" arg1="A">2</op>      
+  </test>
+</case>
+</run>

@@ -1,0 +1,497 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D54623F7-B066-4642-8DD6-C95AFF9DA401}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NuGenSVisualLib</RootNamespace>
+    <AssemblyName>NuGenSVisualLib</AssemblyName>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>NuGenCDEKey.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Janus.Data.v3, Version=3.5.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
+    <Reference Include="Janus.Windows.ButtonBar.v3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
+      <HintPath>C:\Users\Andrew\Documents\Visual Studio 2005\Controls\Janus WinForms Controls v3\Janus.Windows.ButtonBar.v3.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Janus.Windows.Common.v3, Version=3.5.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
+    <Reference Include="Janus.Windows.GridEX.v3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Andrew\Documents\Visual Studio 2005\Controls\Janus WinForms Controls v3\Janus.Windows.GridEX.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Ribbon.v3, Version=3.5.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
+    <Reference Include="Janus.Windows.UI.v3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Andrew\Documents\Visual Studio 2005\Controls\Janus WinForms Controls v3\Janus.Windows.UI.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DirectX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.DirectX.Direct3D, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.DirectX.Direct3DX, Version=1.0.2908.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="NuGenCDKSharp, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\NuGenCDKSharp\bin\Debug\NuGenCDKSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGenJavax, Version=1.0.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\javax\bin\Release\NuGenJavax.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGenJmol, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\NuGenJmol\bin\Debug\NuGenJmol.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGenNoiseLib, Version=1.0.2710.21483, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\NuGenNoiseLib\release\NuGenNoiseLib.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGenVideoEnc, Version=1.0.1.1, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\VideoEnc\bin\x86\Debug\NuGenVideoEnc.dll</HintPath>
+    </Reference>
+    <Reference Include="OcTree, Version=1.0.2710.20370, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Octree\release\OcTree.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AntiAliasCaps.cs" />
+    <Compile Include="AtomBlobBufferCreator.cs" />
+    <Compile Include="AtomMetaballs.cs" />
+    <Compile Include="AtomRenderer3DSpheres.cs" />
+    <Compile Include="AtomRenderer3DSprites.cs" />
+    <Compile Include="AtomShadingDesc.cs" />
+    <Compile Include="AtomSpriteBufferCreator.cs" />
+    <Compile Include="AtomSymbolSpriteBufferCreator.cs" />
+    <Compile Include="Axis3D.cs" />
+    <Compile Include="BallAndStickRenderingScheme.cs" />
+    <Compile Include="BallAndStickSchemeSUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BallAndStickSchemeSUI.Designer.cs">
+      <DependentUpon>BallAndStickSchemeSUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BloomEffect.cs" />
+    <Compile Include="BondAngle.cs" />
+    <Compile Include="BondBufferCreator.cs" />
+    <Compile Include="BondLinesBufferCreator.cs" />
+    <Compile Include="BondRenderer3DThickLines.cs" />
+    <Compile Include="BondShadingDesc.cs" />
+    <Compile Include="BondThickLinesBufferCreator.cs" />
+    <Compile Include="BoundingBoxEntity.cs" />
+    <Compile Include="CacheManager.cs" />
+    <Compile Include="Camera.cs" />
+    <Compile Include="CDKxamlIO.cs" />
+    <Compile Include="Chem2DControl.cs">
+    </Compile>
+    <Compile Include="Chem2DControl.Designer.cs">
+      <DependentUpon>Chem2DControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chem3DControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Chem3DControl.Designer.cs">
+      <DependentUpon>Chem3DControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChemEntityCartoon.cs" />
+    <Compile Include="ChemEntityRibbon.cs" />
+    <Compile Include="ChemRenderingContext2DGDI.cs" />
+    <Compile Include="ChemRenderingContext3D.cs" />
+    <Compile Include="ChemRenderingSource2D.cs" />
+    <Compile Include="ChemRenderingSource3D.cs" />
+    <Compile Include="ChemSymbolRenderer3D.cs" />
+    <Compile Include="ChemSymbolTextures.cs" />
+    <Compile Include="ColourHelperMath.cs" />
+    <Compile Include="CommonDeviceInterface.cs" />
+    <Compile Include="CompleteOutputDescription.cs" />
+    <Compile Include="DirectionalLightControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DirectionalLightControl.Designer.cs">
+      <DependentUpon>DirectionalLightControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EffectDetailsDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EffectDetailsDlg.Designer.cs">
+      <DependentUpon>EffectDetailsDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EffectPreviewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EffectPreviewControl.Designer.cs">
+      <DependentUpon>EffectPreviewControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EffectSettings.cs" />
+    <Compile Include="EncodingDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EncodingDlg.Designer.cs">
+      <DependentUpon>EncodingDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrameFilter.cs" />
+    <Compile Include="GeomDataTransformer.cs" />
+    <Compile Include="GeometryCreator.cs" />
+    <Compile Include="GlowEffect.cs" />
+    <Compile Include="GraphicsFixedPipeline3D.cs" />
+    <Compile Include="GraphicsPipeline3D.cs" />
+    <Compile Include="GraphicsProgramablePipeline3D.cs" />
+    <Compile Include="IChemEntity.cs" />
+    <Compile Include="ILayerManager.cs" />
+    <Compile Include="ILoadingItem.cs" />
+    <Compile Include="ImageContentLoader.cs" />
+    <Compile Include="IsosurfaceGenerator2D.cs" />
+    <Compile Include="IsosurfaceGenerator3D.cs" />
+    <Compile Include="LightingSetup.cs" />
+    <Compile Include="LightPreview.cs">
+    </Compile>
+    <Compile Include="LightPreviewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LightPreviewControl.Designer.cs">
+      <DependentUpon>LightPreviewControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LineHelperMath.cs" />
+    <Compile Include="LoadingGUILayer.cs" />
+    <Compile Include="LoadingResourcesDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadingResourcesDlg.Designer.cs">
+      <DependentUpon>LoadingResourcesDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LODcontrol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LODcontrol.Designer.cs">
+      <DependentUpon>LODcontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Log.cs" />
+    <Compile Include="LogDataFormatting.cs" />
+    <Compile Include="MarchingCubes.cs" />
+    <Compile Include="MeshOptimzer.cs" />
+    <Compile Include="Metaball.cs" />
+    <Compile Include="MetaballEffect.cs" />
+    <Compile Include="MetaballRenderingScheme.cs" />
+    <Compile Include="MetaBlobsEffect.cs" />
+    <Compile Include="MetaBlobsRenderingScheme.cs" />
+    <Compile Include="MoleculeAtomicNumberTemplate.cs" />
+    <Compile Include="MoleculeControlLayer.cs" />
+    <Compile Include="MoleculeLoadingProgress.cs" />
+    <Compile Include="MoleculeLoadingResults.cs" />
+    <Compile Include="MoleculeRandomTemplate.cs" />
+    <Compile Include="MoleculeSchemeDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MoleculeSchemeDlg.Designer.cs">
+      <DependentUpon>MoleculeSchemeDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MonochromeEffectSettings.cs" />
+    <Compile Include="OpenMoleculeDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpenMoleculeDlg.Designer.cs">
+      <DependentUpon>OpenMoleculeDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutputRequirements.cs" />
+    <Compile Include="GeneralLightingDesc.cs" />
+    <Compile Include="GeneralShadingDesc.cs" />
+    <Compile Include="HashTableSettings.cs" />
+    <Compile Include="IAtomRenderer.cs" />
+    <Compile Include="IBondRenderer3DDx9.cs" />
+    <Compile Include="IChemControl.cs" />
+    <Compile Include="IChemRenderingSource.cs" />
+    <Compile Include="IControlHandler.cs" />
+    <Compile Include="IEntity.cs" />
+    <Compile Include="ISettings.cs" />
+    <Compile Include="ISettingsModule.cs" />
+    <Compile Include="ITypeRenderer3DDX9.cs" />
+    <Compile Include="MoleculeMaterialsModule.cs" />
+    <Compile Include="Molecules.cs" />
+    <Compile Include="MovementControlHandler.cs" />
+    <Compile Include="OutputCaps.cs" />
+    <Compile Include="OutputSettings.cs" />
+    <Compile Include="PeriodicTableControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PeriodicTableControl.Designer.cs">
+      <DependentUpon>PeriodicTableControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerlinGenerator.cs" />
+    <Compile Include="PerlinImprovedNoiseEffect.cs" />
+    <Compile Include="PointSpriteHelper.cs" />
+    <Compile Include="PPixelLightEffectSettings.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyTree.cs" />
+    <Compile Include="QuadTree.cs" />
+    <Compile Include="RecordingSettings.cs" />
+    <Compile Include="RenderDeviceInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RenderDeviceInfo.Designer.cs">
+      <DependentUpon>RenderDeviceInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RenderingContext.cs" />
+    <Compile Include="RenderingContext2D.cs" />
+    <Compile Include="RenderingContext2DGDI.cs" />
+    <Compile Include="RenderingContext3D.cs" />
+    <Compile Include="IChemRenderingContext.cs" />
+    <Compile Include="IRenderingContext.cs" />
+    <Compile Include="IRenderingSource.cs" />
+    <Compile Include="IRenderingView.cs" />
+    <Compile Include="LightWrapper.cs" />
+    <Compile Include="MoleculeLoader.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RenderingContext3DDX9.cs" />
+    <Compile Include="RenderingEffects.cs" />
+    <Compile Include="RenderingScheme.cs" />
+    <Compile Include="RenderingSource2D.cs" />
+    <Compile Include="RenderingSource3D.cs" />
+    <Compile Include="RenderingView2D.cs" />
+    <Compile Include="RenderingView3D.cs" />
+    <Compile Include="RequirementGague.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RequirementGague.Designer.cs">
+      <DependentUpon>RequirementGague.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResourceManager.cs" />
+    <Compile Include="RzLoader.cs" />
+    <Compile Include="SceneManager.cs" />
+    <Compile Include="SchemePreviewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SchemePreviewControl.Designer.cs">
+      <DependentUpon>SchemePreviewControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScreenLabelViewSpace.cs" />
+    <Compile Include="ShadowMappingEffect.cs" />
+    <Compile Include="SimpleGUILayer.cs" />
+    <Compile Include="SpaceFillScheme.cs" />
+    <Compile Include="SphereAxis3D.cs" />
+    <Compile Include="SphereMathHelper.cs" />
+    <Compile Include="SpriteRenderingScheme.cs" />
+    <Compile Include="SpriteSchemeSUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SpriteSchemeSUI.Designer.cs">
+      <DependentUpon>SpriteSchemeSUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StructuresShadingDesc.cs" />
+    <Compile Include="SupportedFormatsInfoDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupportedFormatsInfoDlg.Designer.cs">
+      <DependentUpon>SupportedFormatsInfoDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TextTexture.cs" />
+    <Compile Include="UleDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UleDlg.Designer.cs">
+      <DependentUpon>UleDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserLevelException.cs" />
+    <Compile Include="VideoEncSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VideoEncSettings.Designer.cs">
+      <DependentUpon>VideoEncSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VideoPipe.cs" />
+    <Compile Include="ViewRecording.cs" />
+    <Compile Include="ViewRecordingDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewRecordingDlg.Designer.cs">
+      <DependentUpon>ViewRecordingDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VolumeScene.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Materials.config" />
+    <EmbeddedResource Include="Shading.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Atom.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd">
+      <SubType>Designer</SubType>
+    </None>
+    <EmbeddedResource Include="Chem3DControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Chem3DControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LightPreview.resx">
+      <DependentUpon>LightPreview.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Molecule.config" />
+    <EmbeddedResource Include="RenderDeviceInfo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RenderDeviceInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BallAndStickSchemeSUI.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BallAndStickSchemeSUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="defaultOutput.xml" />
+    <EmbeddedResource Include="EncodingDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EncodingDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadingResourcesDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LoadingResourcesDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoleculeSchemeDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MoleculeSchemeDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpenMoleculeDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OpenMoleculeDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="SchemePreviewControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SchemePreviewControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupportedFormatsInfoDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SupportedFormatsInfoDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UleDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UleDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VideoEncSettings.resx">
+      <DependentUpon>VideoEncSettings.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewRecordingDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ViewRecordingDlg.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <EmbeddedResource Include="DirectionalLightControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DirectionalLightControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LightPreviewControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LightPreviewControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoleculeSchemes.config" />
+    <EmbeddedResource Include="RequirementGague.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RequirementGague.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpriteSchemeSUI.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SpriteSchemeSUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="NewRendering.cd" />
+    <None Include="NuGenCDEKey.pfx" />
+    <None Include="Resources\Bubble.fragment.hlsl" />
+    <None Include="Resources\Bubble.vertex.hlsl" />
+    <None Include="Resources\PPL.fragment.hlsl" />
+    <None Include="Resources\PPL.vertex.hlsl" />
+    <None Include="Resources\PPL[Toon].fragment.hlsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="EffectDetailsDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EffectDetailsDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LightingPresets.config" />
+    <EmbeddedResource Include="LODcontrol.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LODcontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PeriodicTableControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PeriodicTableControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram3.cd" />
+    <None Include="Resources\Arrow.png" />
+    <Content Include="Resources\defaultRecSettings.xml" />
+    <None Include="Resources\greentick-32.png" />
+    <None Include="Resources\redcross-32.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

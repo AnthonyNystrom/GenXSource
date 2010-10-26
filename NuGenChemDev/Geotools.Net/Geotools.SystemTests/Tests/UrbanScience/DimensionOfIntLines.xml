@@ -1,0 +1,99 @@
+<run>
+<precisionModel type="FLOATING"/>
+<case>
+  <Desc>Intersection of Two linestrings</Desc> 	
+  <a>
+    LINESTRING (180 280, 420 280)
+  </a>
+  <b>
+    LINESTRING (300 340, 300 200)
+  </b>
+  <test>
+    <op name="relate" arg1="A" arg2="B" arg3="0F1FF0102">true</op>
+  </test>  
+</case>
+<case>
+  <Desc>Dimension of Intersection of Two linestrings - Intersecting at a point</Desc> 
+  <a>
+    POINT (300 280) 
+  </a>  
+  <test>
+    <op name="Dimension" arg1="A">0</op>
+  </test>  
+</case>
+<case>
+  <Desc>Intersection of Two linestrings</Desc>
+  <a>
+    LINESTRING (120 260, 340 260)
+  </a>
+  <b>
+    LINESTRING (140 260, 300 260)
+  </b>
+  <test>
+    <op name="relate" arg1="A" arg2="B" arg3="101FF0FF2">true</op>
+  </test>  
+</case>
+<case>
+  <Desc>Dimension of Intersection of Two linestrings</Desc>
+  <a>  
+    LINESTRING (140 260, 300 260)
+  </a>  
+  <test>
+    <op name="Dimension" arg1="A">1</op>
+  </test>  
+</case>
+<case>
+  <Desc>Intersection of LineString and Polygon</Desc>
+  <a>
+    LINESTRING (180 280, 360 280)
+  </a>
+  <b>
+    POLYGON ((260 340, 420 340, 380 240, 220 240, 260 340))
+  </b>
+  <test>
+    <op name="relate" arg1="A" arg2="B" arg3="1010F0212">true</op>
+  </test>  
+</case>
+<case>
+  <Desc>Dimension of Intersection of LineString and Polygon</Desc>
+  <a>  
+    LINESTRING (236 280, 360 280)
+  </a>  
+  <test>
+    <op name="Dimension" arg1="A">1</op>
+  </test>  
+</case>
+<case>
+  <Desc>Intersection of LineString and Polygon</Desc>
+  <a>
+     POLYGON ((200 280, 340 280, 340 180, 260 160, 200 180, 200 280)) 
+  </a>
+  <b>    
+     LINESTRING (160 160, 380 160)
+  </b>
+  <test>
+    <op name="relate" arg1="A" arg2="B" arg3="FF20F1102">true</op>
+  </test>  
+</case>
+<case>
+  <Desc>Dimension of Intersection of LineString and Polygon</Desc>
+  <a>  
+    POINT (260 160)
+  </a>  
+  <test>
+    <op name="Dimension" arg1="A">0</op>
+  </test>  
+</case>
+<case>
+  <Desc>Reversing the WellKnownText of Geometries</Desc>
+  <a>
+    LINESTRING (160 160, 380 160)   
+  </a>
+  <b>     
+    POLYGON ((200 280, 340 280, 340 180, 260 160, 200 180, 200 280)) 
+  </b>
+  <test>
+    <op name="relate" arg1="A" arg2="B" arg3="FF20F1102">false</op>
+  </test>  
+</case>
+</run>

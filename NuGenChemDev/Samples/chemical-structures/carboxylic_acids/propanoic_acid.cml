@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<molecule xmlns="http://www.xml-cml.org/schema/cml2/core" id="CS_propanoic_acid">
+ <formula concise=" C 3 H 6 O 2 "/>
+ <identifier version="InChI/1">
+  <basic>1/C3H6O2/c1-2-3(4)5/h2H2,1H3,(H,4,5)</basic>
+ </identifier>
+ <name convention="IUPAC">Proanoic acid</name>
+ <atomArray>
+  <atom id="a1" elementType="H" x3="-1.988100" y3="0.019300" z3="-0.949100"/>
+  <atom id="a2" elementType="C" x3="-2.547000" y3="0.057900" z3="-1.888400"/>
+  <atom id="a3" elementType="H" x3="-2.218000" y3="0.939400" z3="-2.447200"/>
+  <atom id="a4" elementType="H" x3="-2.283000" y3="-0.824900" z3="-2.478500"/>
+  <atom id="a5" elementType="C" x3="-4.040900" y3="0.111600" z3="-1.616700"/>
+  <atom id="a6" elementType="H" x3="-4.614000" y3="0.157500" z3="-2.548400"/>
+  <atom id="a7" elementType="H" x3="-4.363900" y3="-0.796200" z3="-1.097300"/>
+  <atom id="a8" elementType="C" x3="-4.392500" y3="1.299100" z3="-0.752200"/>
+  <atom id="a9" elementType="O" x3="-4.613600" y3="1.230100" z3="0.448400"/>
+  <atom id="a10" elementType="O" x3="-4.424500" y3="2.466500" z3="-1.454600"/>
+  <atom id="a11" elementType="H" x3="-4.631500" y3="3.264500" z3="-0.922100"/>
+ </atomArray>
+ <bondArray>
+  <bond atomRefs2="a1 a2" order="1"/>
+  <bond atomRefs2="a2 a3" order="1"/>
+  <bond atomRefs2="a2 a4" order="1"/>
+  <bond atomRefs2="a2 a5" order="1"/>
+  <bond atomRefs2="a5 a6" order="1"/>
+  <bond atomRefs2="a5 a7" order="1"/>
+  <bond atomRefs2="a5 a8" order="1"/>
+  <bond atomRefs2="a8 a9" order="2"/>
+  <bond atomRefs2="a8 a10" order="1"/>
+  <bond atomRefs2="a10 a11" order="1"/>
+ </bondArray>
+ <list>
+  <propertyList>
+   <property dictRef="cml:molwt" title="molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="cml:molwt" units="unit:g">74.0785</scalar>
+   </property>
+   <property dictRef="chemwt:exact_molwt" title="exact molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="chemwt:exact_molwt" units="unit:g">74.0367794</scalar>
+   </property>
+   <property dictRef="cml:mpt" title="melting point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:mpt" units="unit:celsius">-23</scalar>
+   </property>
+   <property dictRef="cml:bpt" title="boiling point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:bpt" units="unit:celsius">141</scalar>
+   </property>
+  </propertyList>
+ </list>
+</molecule>

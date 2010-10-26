@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<molecule xmlns="http://www.xml-cml.org/schema/cml2/core" id="CS_2-methylpropane">
+ <formula concise=" C 4 H 10 "/>
+ <identifier version="InChI/1">
+  <basic>1/C4H10/c1-4(2)3/h4H,1-3H3</basic>
+ </identifier>
+ <name convention="IUPAC">2-Methylpropane</name>
+ <atomArray>
+  <atom id="a1" elementType="H" x3="-1.933100" y3="0.002400" z3="-1.032700"/>
+  <atom id="a2" elementType="C" x3="-2.535200" y3="0.118300" z3="-1.939100"/>
+  <atom id="a3" elementType="H" x3="-2.292000" y3="1.089800" z3="-2.381700"/>
+  <atom id="a4" elementType="H" x3="-2.223900" y3="-0.658300" z3="-2.644400"/>
+  <atom id="a5" elementType="C" x3="-4.024400" y3="0.005200" z3="-1.623800"/>
+  <atom id="a6" elementType="H" x3="-4.208600" y3="-0.981300" z3="-1.185200"/>
+  <atom id="a7" elementType="C" x3="-4.441600" y3="1.065700" z3="-0.608300"/>
+  <atom id="a8" elementType="H" x3="-3.869600" y3="0.964500" z3="0.319300"/>
+  <atom id="a9" elementType="H" x3="-4.278900" y3="2.077100" z3="-0.994100"/>
+  <atom id="a10" elementType="H" x3="-5.502200" y3="0.970400" z3="-0.356200"/>
+  <atom id="a11" elementType="C" x3="-4.855100" y3="0.124700" z3="-2.898800"/>
+  <atom id="a12" elementType="H" x3="-4.709800" y3="1.096100" z3="-3.382400"/>
+  <atom id="a13" elementType="H" x3="-4.581000" y3="-0.652200" z3="-3.619300"/>
+  <atom id="a14" elementType="H" x3="-5.922300" y3="0.013900" z3="-2.682900"/>
+ </atomArray>
+ <bondArray>
+  <bond atomRefs2="a1 a2" order="1"/>
+  <bond atomRefs2="a2 a3" order="1"/>
+  <bond atomRefs2="a2 a4" order="1"/>
+  <bond atomRefs2="a2 a5" order="1"/>
+  <bond atomRefs2="a5 a6" order="1"/>
+  <bond atomRefs2="a5 a7" order="1"/>
+  <bond atomRefs2="a5 a11" order="1"/>
+  <bond atomRefs2="a7 a8" order="1"/>
+  <bond atomRefs2="a7 a9" order="1"/>
+  <bond atomRefs2="a7 a10" order="1"/>
+  <bond atomRefs2="a11 a12" order="1"/>
+  <bond atomRefs2="a11 a13" order="1"/>
+  <bond atomRefs2="a11 a14" order="1"/>
+ </bondArray>
+ <list>
+  <propertyList>
+   <property dictRef="cml:molwt" title="molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="cml:molwt" units="unit:g">58.1222</scalar>
+   </property>
+   <property dictRef="chemwt:exact_molwt" title="exact molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="chemwt:exact_molwt" units="unit:g">58.0782503</scalar>
+   </property>
+   <property dictRef="cml:mpt" title="melting point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:mpt" units="unit:celsius">-160</scalar>
+   </property>
+   <property dictRef="cml:bpt" title="boiling point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:bpt" units="unit:celsius">-12</scalar>
+   </property>
+  </propertyList>
+ </list>
+</molecule>

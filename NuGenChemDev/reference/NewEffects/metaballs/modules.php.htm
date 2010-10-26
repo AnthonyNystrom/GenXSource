@@ -1,0 +1,1388 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>[ hacked by deviance ] - Marching Cubes Based Polygonisation</title>
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="EXPIRES" content="0">
+<meta name="RESOURCE-TYPE" content="DOCUMENT">
+<meta name="DISTRIBUTION" content="GLOBAL">
+<meta name="AUTHOR" content="[ hacked by deviance ]">
+<meta name="COPYRIGHT" content="Copyright (c) by [ hacked by deviance ]">
+<meta name="KEYWORDS" content="News, news, New, new, Technology, technology, Headlines, headlines, Nuke, nuke, PHP-Nuke, phpnuke, php-nuke, Geek, geek, Geeks, geeks, Hacker, hacker, Hackers, hackers, Linux, linux, Windows, windows, Software, software, Download, download, Downloads, downloads, Free, FREE, free, Community, community, MP3, mp3, Forum, forum, Forums, forums, Bulletin, bulletin, Board, board, Boards, boards, PHP, php, Survey, survey, Kernel, kernel, Comment, comment, Comments, comments, Portal, portal, ODP, odp, Open, open, Open Source, OpenSource, Opensource, opensource, open source, Free Software, FreeSoftware, Freesoftware, free software, GNU, gnu, GPL, gpl, License, license, Unix, UNIX, *nix, unix, MySQL, mysql, SQL, sql, Database, DataBase, Blogs, blogs, Blog, blog, database, Mandrake, mandrake, Red Hat, RedHat, red hat, Slackware, slackware, SUSE, SuSE, suse, Debian, debian, Gnome, GNOME, gnome, Kde, KDE, kde, Enlightenment, enlightenment, Interactive, interactive, Programming, programming, Extreme, extreme, Game, game, Games, games, Web Site, web site, Weblog, WebLog, weblog, Guru, GURU, guru, Oracle, oracle, db2, DB2, odbc, ODBC, plugin, plugins, Plugin, Plugins">
+<meta name="DESCRIPTION" content="[ hacked by deviance ]">
+<meta name="ROBOTS" content="INDEX, FOLLOW">
+<meta name="REVISIT-AFTER" content="1 DAYS">
+<meta name="RATING" content="GENERAL">
+<meta name="GENERATOR" content="PHP-Nuke - Copyright by http://phpnuke.org">
+<link rel="StyleSheet" href="modules.php_files/style.css" type="text/css"></head><body alink="#ffff99" bgcolor="#262a5b" link="#ffff99" text="yellow" vlink="#ffff99"><center>
+
+<table bgcolor="#040732" border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tbody>
+  <tr>
+    <td class="menuitems" align="center" valign="middle" width="20">
+
+      <a href="http://www.cfxweb.net/index.php"><img name="im" src="modules.php_files/chkit2.jpg" border="0" height="100" width="280"></a>
+
+    </td>
+		<td>&nbsp; &nbsp; &nbsp;</td>
+		<td align="center" valign="middle" width="100%">
+
+<table border="0" cellpadding="0" cellspacing="0"><tbody><tr>
+<!-- <td align=middle><a href="http://www.cfxweb.net" class="main_menu"><span dir=rtl> &nbsp; <b>HOME</b> &nbsp; </span></a></td><td><img src="/gfx/reddot.jpg"></td> -->
+<td align="center"><a href="http://www.cfxweb.net/index.php" class="main_menu"><span dir="rtl"> &nbsp; <b>NEWS</b> &nbsp; </span></a></td><td><img src="modules.php_files/reddot.jpg"></td>
+<td align="center"><a href="http://www.cfxweb.net/modules.php?name=Topics" class="main_menu"><span dir="rtl"> &nbsp; <b>ARTICLES</b> &nbsp; </span></a></td><td><img src="modules.php_files/reddot.jpg"></td>
+<td align="center"><a href="http://www.cfxweb.net/modules.php?name=coppermine" class="main_menu"><span dir="rtl"> &nbsp; <b>GALLERY</b> &nbsp; </span></a></td><td><img src="modules.php_files/reddot.jpg"></td>
+<td align="center"><a href="http://www.cfxweb.net/modules.php?name=Downloads" class="main_menu"><span dir="rtl"> &nbsp; <b>FILES</b> &nbsp; </span></a></td><td><img src="modules.php_files/reddot.jpg"></td>
+<td align="center"><a href="http://www.cfxweb.net/modules.php?name=Forums" class="main_menu"><span dir="rtl"> &nbsp; <b>FORUMS</b> &nbsp; </span></a></td>
+</tr></tbody></table>
+
+<!--- bgcolor=#ff7500 --->
+
+</td></tr> 
+</tbody></table>
+</center>
+
+
+
+<table bgcolor="#ffcc33" border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tbody><tr bgcolor="#ffcc33"> 
+    <td width="10"></td>
+    <td> <font color="black" face="verdana,arial" size="2"> <font face="verdana,arial"><font size="2"><b>Welcome&nbsp;Anonymous</b></font>,&nbsp;<font size="1">Please&nbsp;<a href="http://www.cfxweb.net/modules.php?name=Your_Account&amp;op=new_user"><font color="#660000"><b>register</b></font></a>.<br><font color="black" size="2">Now online <b>21</b> users. <b>14488</b> registered members.</font> 
+ </font> 
+		</font></font></td>
+<td></td><td align="right" valign="top" width="40%"><font color="black" face="verdana,arial" size="1">
+	</font><form action="modules.php?name=Your_Account" method="post"><font color="black" face="verdana,arial" size="1">Login&nbsp;<input name="username" size="6" maxlength="25" type="text">Password&nbsp;<input name="user_password" size="6" maxlength="20" type="password">
+	<input name="op" value="login" type="hidden"><input value="go" type="submit"></font></form></td><td>&nbsp;</td>	
+		</tr>	
+		</tbody></table> 
+
+<table border="0" cellpadding="0" cellspacing="0" height="7" width="100%">
+  <tbody><tr> 
+    <td bgcolor="#ffcc33" height="7" width="7"><font face="Arial"></font></td>
+    <td background="modules.php_files/fcor8.gif" height="7"><font face="Arial"><img src="modules.php_files/fcor8.gif" height="7" width="7"></font></td>
+    <td height="7" width="7"><font face="Arial"><img src="modules.php_files/fcor7.gif" height="7" width="7"></font></td>
+  </tr>
+</tbody></table>
+
+          <table align="center" bgcolor="#262a5b" border="0" cellpadding="2" cellspacing="0" width="100%"><tbody><tr><td rowspan="15" bgcolor="#040732" valign="top"><br><img src="modules.php_files/pixel.gif" border="0" height="1" width="130"></td><td><img src="modules.php_files/pixel.htm" alt="" border="0" height="1" width="2"></td>
+<td valign="top" width="100%">
+
+<table hieght="100%" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr width="100%"> <td width="100%">
+
+  <table border="0" cellpadding="3" cellspacing="3" width="100%">
+  <tbody><tr>
+  <td align="center" valign="middle">	
+  <table bgcolor="#827e7a" border="4" bordercolor="#040732" cellpadding="0" cellspacing="0" width="100%">
+	<tbody><tr><td align="center" valign="middle">
+  <font size="1">
+   <!-- TF 468x60 JScript HORIZ code -->
+</font><center><font size="1"><script language="javascript"><!--
+document.write('<scr'+'ipt language=javascript src="http://a.tribalfusion.com/j.ad?site=CFXweb&adSpace=ROS&size=468x60&type=horiz&requestID='+((new Date()).getTime() % 2147483648) + Math.random()+'"></scr'+'ipt>');
+//-->
+</script><script language="javascript" src="modules.php_files/j.js"></script></font><center><font size="1"><a target="_blank" href="http://a.tribalfusion.com/l.click?clickID=aqmwfUPHriWGvR2ryrmHqpYEmw4t3ZdPGBD4AJZboWTmTHQ7Xbnd1UF90quNRrnCUrMQVHJ3mF3tPFrq1E3y5EUi5qUPoT7IYFU8WHFXm6vZbmGjpptvC5qU7QEiFnHm2Wc&amp;clickURL=http%3a%2f%2fwww%2esmokeybear%2ecom"><img src="modules.php_files/622686.gif" alt="Click Here!" border="0" height="60" width="468"></a></font></center>
+<noscript><font size="1">
+   <a href="http://a.tribalfusion.com/i.click?site=CFXweb&adSpace=ROS&size=468x60&requestID=1005127097" target=_blank>
+   <img src="http://a.tribalfusion.com/i.ad?site=CFXweb&adSpace=ROS&size=468x60&requestID=1005127097" 
+                  width=468 height=60 border=0 alt="Click Here"></a>
+</font></noscript>
+</center>
+<!-- TF 468x60 JScript HORIZ code -->
+
+<font size="1">  </font></td></tr></tbody></table>
+  </td></tr></tbody></table>
+  
+
+</td></tr></tbody></table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr valign="top"><td valign="top">
+
+<table align="center" bgcolor="#040732" border="0" cellpadding="0" cellspacing="0" width="99%">
+              <tbody>
+              <tr>
+                <td valign="top"><img src="modules.php_files/corner_topleft.gif" height="11" width="11"></td>
+                <td class="menuitems">&nbsp;</td>
+                <td align="right" valign="top"><img src="modules.php_files/corner_topright.gif" height="11" width="12"></td></tr>
+              <tr>
+                <td class="maintext" colspan="3" align="center" height="100%">
+                  
+<table border="0" cellpadding="0" cellspacing="0" height="100%" width="97%">
+<tbody><tr width="100%" height="100%"><td height="100%" width="100%">
+<table border="0" width="100%"><tbody><tr><td valign="top" width="100%">
+<table bgcolor="#241766" border="0" cellpadding="0" cellspacing="1" width="100%"><tbody><tr><td>
+<table bgcolor="#040732" border="0" cellpadding="8" cellspacing="1" width="100%"><tbody><tr><td>
+<table bgcolor="#662935" border="0" bordercolor="#cc8800" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td>
+		   <table width="100%"><tbody><tr><td align="left">
+			 <table border="0" cellpadding="0" cellspacing="0" width="100%">
+			 <tbody><tr><td align="left" width="80%">
+       <font class="option" face="verdana,arial" size="color=&quot;#ffdd22&quot;"><b>Marching Cubes Based Polygonisation</b></font></td><td align="right">
+			 </td><td align="right" width="20%"><font class="content"><font size="1"></font></font></td></tr></tbody></table>
+       </td></tr></tbody></table></td></tr></tbody></table><table width="100%"><tbody><tr>
+       <td align="right" valign="top" width="100%"> 
+       <font face="verdana,arial" size="1">Posted on Saturday, April 21 @ 14:47:57 CDT by <a href="">r4db0k</a>
+	 </font></td></tr><tr><td align="left" width="100%"><center>
+             <table border="0" width="97%"><tbody><tr><td>
+<font class="content"><br><br></font><p align="center">
+<font class="content"><font color="#ffffb5" face="arial" size="4">
+Marching Cubes Based Polygonisation
+</font>
+</font></p><p align="center">
+<font class="content"><i>
+<a href="mailto:nnash@stokes2.thphys.may.ie">
+paradox / vivid
+</a>
+</i>
+<br><br>
+<a href="http://www.cfxweb.net/files/Detailed/921.shtml">Download the code sample <b>mballs.zip</b></a>
+</font></p><p align="justify">
+
+<font class="content"><font color="#ffffb5" face="arial" size="4">
+Disclaimer
+</font>
+</font></p><p align="justify">
+
+<font class="content">I don't claim this is in any way comprehensive on the subject it aims to
+cover. There are no guarantees given with this document, except that nothing
+is ripped. The methods used in this document are by no means the best, nor is
+the sample source code provided.
+
+</font></p><p align="center">
+<font class="content"><img src="modules.php_files/pxmain.jpg">
+
+</font></p><p align="justify">
+<font class="content"><font color="#ffffb5" face="arial" size="4">
+Introduction
+</font>
+</font></p><p align="justify">
+
+<font class="content">Hey all! This article is about the marching cubes algorithm, the algorithm
+used to produce cool effects like metaballs (not to be mistaken for meatballs,
+which you can find in your local supermarket).
+
+</font></p><p align="justify">
+<font class="content">There are some very good articles on the net about marching cubes.
+You should check out Paul Bourke's page, it is where I learned marching cubes
+from. Exaflop also has a very good article about it. Bloomenthal's paper "Polygonization of implicit surfaces"
+is also very clear, and gives a very nice overview of the technique. It perhaps isn't suitable if you're new to the algorithm.
+
+</font></p><p align="justify">
+<font class="content">We'll develop an implementation of marching cubes using object orientation,
+and then apply it to rendering the well known effect of metaballs.
+
+</font></p><p align="justify">
+<font class="content"><font color="#ffffb5" face="arial" size="4">
+Motivation
+</font>
+</font></p><p align="justify">
+
+<font class="content">Ok, this is my own motivation for marching cubes... I have more or less just
+come up with it on the spot.
+
+</font></p><p align="justify">
+<font class="content">Suppose we have a surface defined by a mathematical equation:
+E.g. a sphere, r^2 = x^2 + y^2 + z^2, for a sphere of radius r, a point is
+on the sphere if it satisfies the equation. This is the idea behind marching
+cubes, we have an equation defining a surface, and we solve it in real time
+to get a plot of the surface in 3D.
+
+</font></p><p align="justify">
+<font class="content">In 2D, if we wanted to plot a circle defined by the equation x^2 + y^2 = r^2,
+we could use the following approach: for every possible value of x and y see
+do they satisfy the equation, for those that do, plot the pixel on the screen.
+This is a bad approach for drawing a circle in 2D, since we can solve the
+equation explicitly rather than implicitly (i.e. trying every point by trial
+and error).
+
+</font></p><p align="justify">
+<font class="content">However, suppose someone gave us ANY function representing a 2D
+plot. How would we plot that? The implicit method presents itself, since we
+don't know how to just generate points on the surface (as we would for e.g. A circle).
+Once we agree to use the implicit method, the problem is to figure out how to actually
+draw the solution to the equation on the screen, we need some algorithm to generate polygons
+so we can draw it. Marching cubes is this algorithm.
+
+</font></p><p align="justify">
+<font class="content"><font color="#ffffb5" face="arial" size="4">
+Marching Cubes: Polygonisation
+</font>
+</font></p><p align="justify">
+
+<font class="content">First we define a space size, this space is where the points in consideration for inclusion in our
+surface must reside. We could use a space of x-y-z size 320x320x320 for example.
+
+</font></p><p align="justify">
+<font class="content">Next we subdivide the space into a designated number of cubes in each
+direction, it doesn't have to be the same number in each direction, but
+it's advisable to keep the length of side of the cubes constant, otherwise
+you can get skewing of the surface.
+
+</font></p><p align="justify">
+<font class="content">A typical number of cubes might be 32x32x32, for our space above this gives
+us cubes of dimensions 10x10x10. Note that even small looking numbers of cubes
+like 32x32x32 are very large, 32x32x32 = 2^15 = 32,768 cubes.
+
+</font></p><p align="justify">
+<font class="content">The number of cubes and space size define how exact our constructed surface
+will be. The length of side of a cube is what counts in how accurate the
+constructed surface is, above 10x10x10 would probably give a pretty crappy
+looking surface. However, if we made our space a bit smaller, e.g. 160x160x160
+it'd probably be very accurate.
+
+</font></p><p align="justify">
+<font class="content">Now, for marching cubes to work, we <i>must</i> be able to answer one question
+given any point and a surface: Is this point inside the surface?
+We'll discuss answering this question in a moment, suppose for now, we always
+can.
+
+</font></p><p align="justify">
+<font class="content">We now generate a the mesh of triangles to represent our surface.
+
+</font></p><p align="justify">
+<font class="content">Here is how it is done: for every vertex of every cube, we check is that
+vertex inside or outside the surface. This results in the fundamental cube
+configurations:
+
+</font></p><p align="justify">
+<table>
+<tbody><tr><td width="10%">(i)</td>   <td>The cube is totally inside the surface.</td></tr>
+<tr><td>(ii)</td>  <td>The cube is totally outside the surface.</td></tr>
+<tr><td>(iii)</td> <td>Some of the cube's vertices are inside, and some are outside of the
+      surface (i.e. it intersects it).</td></tr>
+</tbody></table>
+
+</p><p align="justify">
+<font class="content">The first two cases give us no information about rendering the surface.
+The third, however, if some are inside and some are outside, lets us find the
+intersection of the surface and the sides of the cube and generate some
+triangles to represent the surface at that intersection. To understand this
+here's a diagram:
+
+</font></p><p align="center">
+<font class="content"><img src="modules.php_files/pxinter.jpg">
+
+</font></p><p align="justify">
+<font class="content">(btw, the surface is just represented by a line in this image, of course,
+it should be drawn in 3D)
+
+</font></p><p align="justify">
+<font class="content">So, if we can find the intersection of the surface and the cube sides, we're
+all set to generate the mesh.
+There are two ways to do this, we'll see the second one when we implement
+metaballs, the first one is binary search. Binary search works since we can
+always ask is the point inside or outside, and so we refine the estimate of
+the intersection of the surface and cube in the normal way.
+
+</font></p><p align="justify">
+<font class="content">So now we can generate those triangles to represent the surface as follows:
+Since every vertex of a cube can be either inside or outside the surface
+there are 256 possible triangulations, two of these are trivial, all outside,
+and all inside. So we have 254, as it turns out, by reflections and rotations
+of the cube there are only 15 different triangulations we have to special case
+in our code (e.g. we'd only have one special case for any one vertex of the
+cube outside the surface only, cutting our work down by 8 cases).
+
+</font></p><p align="justify">
+<font class="content">It sounds pretty boring to code the 15 special cases, the kind of boring code
+I try to avoid, so instead I do it a simpler way.
+
+</font></p><p align="justify">
+<font class="content">On Paul Bourke's home page he uses some look up tables to get the
+triangulation. Here is how we do it: Each vertex outside is represented by
+a 1 and each vertex inside is represented by a 0, in binary, and we must have
+a consistent labeling system for our vertices. Then we generate an 8-bit
+index into the edge intersection table.
+
+</font></p><p align="justify"><font class="content">An example: Suppose vertices 5, 0 and 6 were outside (we number the vertices
+of a cube 0, 1, ..., 7). Then we'd generate this index: 01010001.
+We then index an edge intersection table with that, and it gives us a 12 bit
+number (since a cube has twelve sides) telling us which sides of the cube are
+intersected, e.g. if edges 0, 1 and 2 were intersected then this number would
+pop out of the table: 000000000111. A '1' representing an intersected edge
+for each bit of the number. Now we have to actually find the intersection and
+we have the mesh.
+
+</font></p><p align="justify">
+<font class="content">Finally we use our index again this time to index a triangulation table, which
+tells us which vertices to join to which in the mesh. These tables are
+provided with the sample source, and we'll see below exactly how to do the
+above.
+
+</font></p><p align="justify">
+<font class="content">We've been doing things on a cube by cube basis, does this mean to actually
+generate the surface we have to go through EVERY cube in the space and check
+if its vertices are inside or outside the surface? Wouldn't that be very slow?
+We don't go through every cube in the space, because doing so would be too
+slow for realtime apps. Instead we use depth first search.
+
+</font></p><p align="justify">
+<font class="content">We simply note that every cube which intersects the surface is incident
+to at least one other cube which intersects the surface. So, given one
+intersecting cube we can just test all of the cubes touching it, and all the
+ones touching them, etc. So it'll be recursive. Notice that each cube has
+eighteen incident cubes BUT we don't need to recursively check all of them,
+only the ones stuck to its 6 faces, since when they recurse they will test the
+ones that it would have tested if we called it with all eighteen incident
+cubes. The termination condition for this recursive algorithm is when we reach
+a cube we have already encountered. Essentially what we are doing here is drawing
+the connected components of a graph.
+
+</font></p><p align="justify">
+<font class="content">The only very slight draw back of the above is that we have to be able to
+supply the polygonisation routine with an intersecting cube, we'll see ways
+to do this later on.
+
+</font></p><p align="justify">
+<font class="content">Btw, there is another way of avoiding testing every cube in the octree using
+bounding boxes, but I've never coded this and don't know the details of how
+it works.
+
+</font></p><p align="justify">
+<font class="content"><font color="#ffffb5" face="arial" size="4">
+Metaballs: Defining The Surface
+</font>
+</font></p><p align="justify">
+
+<font class="content">If you don't know how and why blobs work, you could try reading my article
+on them in Hugi Diskmag #21 (available at <a href="http://www.hugi.de/">www.hugi.de</a>).
+
+</font></p><p align="justify">
+<font class="content">First of all suppose we already have our marching cubes based mesh generator
+thingy, and that we just need to give it a function to tell it whether a point
+is inside or outside the surface and a function which finds the intersection
+of a cube and the surface for it. We pass the mesh generator these functions
+and it works away fine on the surface which these functions have defined. All
+we are left with is writing these functions to pass to it.
+
+</font></p><p align="justify">
+<font class="content"><font new="" color="#ffffd0" face="courier" size="3">
+<pre>class Point3D
+{
+public:
+   int x, y, z;
+   Point3D(int x = 0, int y = 0, int z = 0)
+   { this-&gt;x = x; this-&gt;y = y; this-&gt;z = z; return; }
+};</pre>
+</font>
+
+</font></p><p align="justify">
+<font class="content">The above class is used for declaring 3D points.
+
+</font></p><p align="justify">
+<font class="content">We want to do metaballs, so we'll develop a class to represent our metaball
+surface, in the code I call this class SphereSurface, here it is:
+
+</font></p><p align="justify">
+<font class="content"><font new="" color="#ffffd0" face="courier" size="3">
+<pre>class SphereSurface
+{
+   int nSpheres, nCells;
+   float minPotential;
+   Point3D *coords, stepSize, spaceSize;
+public:
+   float *potentialBuf;
+   SphereSurface(int nSpheres, int radius, int nCells,
+   Point3D spaceSize, Point3D *coords);
+   float getPotential(Point3D p);
+   bool outside(Point3D p);
+   Point3D getIntersection(Point3D p1, Point3D p2);
+   ~SphereSurface();
+};</pre>
+</font>
+
+</font></p><p align="justify">
+<font class="content">This is treated as a black-box by our marching
+cubes code which just uses two methods: getIntersection and outside.
+However, we need to develop code for
+this, it's simple, to do this.
+</font></p><p align="justify">
+<font class="content">Let's start with the constructor:
+
+</font></p><p align="justify">
+<font class="content"><font new="" color="#ffffd0" face="courier" size="3">
+<pre>SphereSurface::SphereSurface(int nSpheres, int radius, int nCells,
+                                  Point3D spaceSize, Point3D *coords)
+{
+   this-&gt;nSpheres = nSpheres;
+   this-&gt;nCells = nCells;
+   this-&gt;stepSize = stepSize;
+   this-&gt;coords = coords;
+   this-&gt;spaceSize = Point3D(spaceSize.x / 2, spaceSize.y / 2,
+                             spaceSize.z / 2);
+   this-&gt;stepSize = Point3D(spaceSize.x / nCells, spaceSize.y / nCells,
+                            spaceSize.z / nCells);
+   minPotential = 1 / (float) (1 + (radius * radius));
+   potentialBuf = new float[nCells * nCells * nCells];
+   memset(potentialBuf, 0, nCells * nCells * nCells * sizeof(float));
+   return;
+}</pre>
+</font>
+
+</font></p><p align="justify">
+<font class="content">We need to define the surface, so naturally we tell it the number of
+metaballs and their radii. Now, some data which must be the same between the
+surface and the marching cubes code, the number of cubes in every direction
+(nCells), and spaceSize, which is the x-y-z size of our surface space.
+Finally a pointer to the coordinates of the metaballs is passed.
+minPotential is the potential every point on the surface has, the reason
+there is a (1 + ...) will become apparent in a moment.
+
+</font></p><p align="justify">
+<font class="content">Our potential function is called getPotential:
+
+</font></p><p align="justify">
+<font class="content"><font new="" color="#ffffd0" face="courier" size="3">
+<pre>float SphereSurface::getPotential(Point3D p)
+{
+   if(p.x &lt; -spaceSize.x || p.y &lt; -spaceSize.y || p.z &lt; -spaceSize.z || p.x
+      &gt;= spaceSize.x || p.y &gt;= spaceSize.y || p.z &gt;= spaceSize.z) return -1;
+   int ind = ((p.z + spaceSize.z) / stepSize.z) * nCells * nCells +
+             ((p.y + spaceSize.y) / stepSize.y) * nCells +
+             ((p.x + spaceSize.x) / stepSize.x);
+   if(potentialBuf[ind]) return potentialBuf[ind];
+   float total = 0;
+   for(int i = 0; i &lt; nSpheres; i++)
+      total += 1 / (float) (1 + (
+                ((p.x - coords[i].x) * (p.x - coords[i].x)) +
+                ((p.y - coords[i].y) * (p.y - coords[i].y)) +
+                ((p.z - coords[i].z) * (p.z - coords[i].z))));
+   potentialBuf[ind] = total;
+   return total;
+}</pre>
+</font>
+
+</font></p><p align="justify">
+
+<font class="content">You can ignore the references to potentialBuf if you like, it's just for
+a tiny bit of extra speed.
+
+</font></p><p align="justify">
+<font class="content">The (1 + ...) is here to prevent divide by zeros, so above we must compensate.
+
+</font></p><p align="justify">
+<font class="content">Now our outside method:
+
+</font></p><p align="justify">
+<font class="content"><font new="" color="#ffffd0" face="courier" size="3">
+<pre>bool SphereSurface::outside(Point3D p)
+{
+   if(getPotential(p) &lt; minPotential) return 1;
+   return 0;
+}</pre>
+</font>
+
+</font></p><p align="justify">
+
+<font class="content">Finally comes the getIntersection method. Remember I described a binary
+search method for find the intersection between any surface and a cube, that
+method is very general, but also very slow. Instead we use our knowledge of
+metaballs to give us a fast algorithm to find an approximate intersection.
+
+</font></p><p align="justify">
+<font class="content">Here is how it works:
+
+</font></p><p align="justify">
+<font class="content">If we know the potential at two points p1 and p2, and we know it varies
+linearly between p1 and p2, that is, the potential increases in uniform
+increments between p1 and p2 then we can use linear interpolation to find the
+exact intersection of the surface and cube side. Note that our potential function,
+1/r^2 does NOT vary linearly in space, however, if the two points which we are interpolating
+between are sufficiently close together, then it won't be a bad approximation, actually, if the points
+we were interpolating between were ever far enough apart to make the approximation seriously bad, it'd probably
+mean are cubes were so big the polygonisation would be horrible anyway. Having said that, this approximation's
+accuracy depends on how much your potential function varies between two points in space, for some functions it might
+look really crappy even with lots of cubes. Anyway, take a look at the graph of y = 1/x^2 as x gets large it nearly varies
+linearly.
+
+</font></p><p align="justify">
+<font class="content"><font new="" color="#ffffd0" face="courier" size="3">
+<pre>                      *------|-------*
+                     p1      S       p2</pre>
+</font>
+</font></p><p align="justify">
+<font class="content">The surface's potential is at a coordinate we want to find and is marked S,
+call the coordinate of the intersection Sp and the potential at this
+coordinate Sv.
+
+</font></p><p align="justify">
+<font class="content">Call the potential at p1 v1 and v2 at p2. We hope the potential varies
+linearly between p1 and p2, so, for each unit change in coordinate, the
+potential varies by a certain amount, call it P:
+
+</font></p><p align="justify">
+<font class="content"><font new="" color="#ffffd0" face="courier" size="3">
+<pre>                         p2 - p1
+                     P = -------
+                         v2 - v1</pre>
+</font>
+
+</font></p><p align="justify">
+<font class="content">We know the potential at S (minPotential), we want to find the number
+of units away from p1 we are, which is: P * (Sv - v1). Finally we want to
+find the actual point so it is p1 + P * Sv. Expanding this we have:
+
+</font></p><p align="justify">
+<font class="content"><font new="" color="#ffffd0" face="courier" size="3">
+<pre>          (p2 - p1) * (Sv - v1)
+Sp = p1 + ---------------------
+                 v2 - v1</pre>
+</font>
+
+</font></p><p align="justify">
+<font class="content">and in implementation:
+
+</font></p><p align="justify">
+<font class="content"><font new="" color="#ffffd0" face="courier" size="3">
+<pre>Point3D SphereSurface::getIntersection(Point3D p1, Point3D p2)
+{
+   Point3D t;
+   float v1 = getPotential(p1), v2 = getPotential(p2), mp = minPotential;
+   t.x = p1.x + (mp - v1) * (p2.x - p1.x) / (float) (v2 - v1);
+   t.y = p1.y + (mp - v1) * (p2.y - p1.y) / (float) (v2 - v1);
+   t.z = p1.z + (mp - v1) * (p2.z - p1.z) / (float) (v2 - v1);
+   return t;
+}</pre>
+</font>
+
+</font></p><p align="justify">
+<font class="content">Now we have our surface fully defined for our marching cubes code, all we
+have to do is code that. First though we'll see how all this fits together:
+
+</font></p><p align="justify">
+<font class="content"><font new="" color="#ffffd0" face="courier" size="3">
+<pre>int nCells = 20, nBlobs = 6, blobRadius = 18;
+Point3D spaceSize(160, 160, 160), *coords = new Point3D[nBlobs];
+Point3D *mesh = new Point3D[5 * nCells * nCells * nCells];
+SphereSurface surf(nBlobs, blobRadius, nCells, spaceSize, coords);
+CalcMesh <spheresurface> surfMesh(spaceSize, nCells, &amp;surf, mesh); </spheresurface></pre>
+</font>
+
+</font></p><p align="justify">
+<font class="content">I allocate 5 * nCells * nCells * nCells for mesh, because each cube can
+contribute a maximum of 5 triangles to the mesh, although I don't think this
+could ever happen in practice. You could probably get away with 3 * nCells *
+nCells * nCells, but it is maybe a little dangerous.
+
+</font></p><p align="justify">
+<font class="content">The CalcMesh class is what we want to code next. You see, it can take any
+surface at all, once it provides certain methods. In this case it takes the
+SphereSurface object surf (note that CalcMesh is a template class).
+
+</font></p><p align="justify">
+<font class="content"><font color="#ffffb5" face="arial" size="4">
+Marching Cubes: Implementation
+</font>
+</font></p><p align="justify">
+
+<font class="content">Now we have to actually implement our CalcMesh class, actually this is very
+easy.
+
+</font></p><p align="justify">
+<font class="content">Here's the class:
+
+</font></p><p align="justify">
+<font class="content"><font new="" color="#ffffd0" face="courier" size="3">
+<pre>template <class surftype=""> class CalcMesh
+{
+   Point3D spaceSize, stepSize;
+   surfType *surface;
+   int getIndex(Point3D *p), nCells, totalCells;
+   void triangulate(Point3D *s, int index);
+   char *visited;
+public:
+   Point3D *mesh;
+   int nVerts, foundCube;
+   CalcMesh(Point3D spaceSize, int nCells, surfType *surface, Point3D *mesh);
+   void generate(int x, int y, int z), reset();
+   ~CalcMesh();
+};</class></pre>
+</font>
+
+</font></p><p align="justify">
+<font class="content">Ok, the first bit of data is just the size of the space and the x-y-z size
+of each cube (spaceSize and stepSize, respectively).
+
+</font></p><p align="justify">
+<font class="content">Now comes a pointer to the surface, surfType being defined when the class is
+instantiated, we need a pointer to the class so we can call two of its
+methods: surface-&gt;outside(blabla), and surface-&gt;getIntersection(blabla).
+
+</font></p><p align="justify">
+<font class="content">Now we have the getIndex function, which generates an index into the edge
+intersection table, remember, it does this by checking which vertices of the
+cube are inside or outside the surface, the code is simple:
+
+</font></p><p align="justify">
+<font class="content"><font new="" color="#ffffd0" face="courier" size="3">
+<pre>template <class surftype=""> int CalcMesh <surftype>::getIndex(Point3D *p)
+{
+   int index = 0;
+   for(int i = 0; i &lt; 8; i++) if(surface-&gt;outside(p[i])) index |= (1 &lt;&lt; i);
+   return index;
+}</surftype></class></pre>
+</font>
+
+</font></p><p align="justify">
+<font class="content">For every point it sets the particular bit corresponding to that vertex.
+
+</font></p><p align="justify">
+<font class="content">The triangulate method generates the triangulation of the surface at one cube.
+The triangulation comes directly from the table. Strictly speaking, a
+triangulation of a convex polygon, P = { v1,v2,..,vn,v1 } is a subdivision of
+the polygon into triangles with non-intersecting sides, but we don't always
+get polygons when we find the surface/cube intersection, sometimes just two
+separate triangles, but we still need the tables to tell us which vertices
+make up each triangle. It's worth doing some examples on paper to get a full
+understanding of this, imo. Anyway, here's the code:
+
+</font></p><p align="justify">
+<font class="content"><font new="" color="#ffffd0" face="courier" size="3">
+<pre>template <class surftype="">
+void CalcMesh <surftype>::triangulate(Point3D *s, int index)
+{
+   // See which combination of the 12 edges is intersected.
+   // This code is dependent on the naming convention of the
+   // cube's sides&amp;vertices used by edgeTab
+   Point3D verts[12];
+   if(edgeTab[index] &amp; 1) verts[0] = surface-&gt;getIntersection(s[0], s[1]);
+   if(edgeTab[index] &amp; 2) verts[1] = surface-&gt;getIntersection(s[1], s[2]);
+   if(edgeTab[index] &amp; 4) verts[2] = surface-&gt;getIntersection(s[2], s[3]);
+   if(edgeTab[index] &amp; 8) verts[3] = surface-&gt;getIntersection(s[3], s[0]);
+   if(edgeTab[index] &amp; 16) verts[4] = surface-&gt;getIntersection(s[4], s[5]);
+   if(edgeTab[index] &amp; 32) verts[5] = surface-&gt;getIntersection(s[5], s[6]);
+   if(edgeTab[index] &amp; 64) verts[6] = surface-&gt;getIntersection(s[6], s[7]);
+   if(edgeTab[index] &amp; 128) verts[7] = surface-&gt;getIntersection(s[7], s[4]);
+   if(edgeTab[index] &amp; 256) verts[8] = surface-&gt;getIntersection(s[0], s[4]);
+   if(edgeTab[index] &amp; 512) verts[9] = surface-&gt;getIntersection(s[1], s[5]);
+   if(edgeTab[index] &amp; 1024) verts[10] = surface-&gt;getIntersection(s[2], s[6]);
+   if(edgeTab[index] &amp; 2048) verts[11] = surface-&gt;getIntersection(s[3], s[7]);
+   for(int i = 0; triTab[index][i] != -1; i += 3, nVerts += 3)
+   {
+      mesh[nVerts] = verts[triTab[index][i + 2]];
+      mesh[nVerts + 1] = verts[triTab[index][i + 1]];
+      mesh[nVerts + 2] = verts[triTab[index][i]];
+   }
+   return;
+}</surftype></class></pre>
+</font>
+
+</font></p><p align="justify">
+<font class="content">It's pretty big, each line just checks if a particular bit is set in the
+edge intersection table (edgeTab), and if it is it finds the intersection of
+the surface and the cube. The arguments to getIntersection are "hard coded",
+they depend on how we label the cube's edges and vertices. All they are doing
+is looking at the edgeTab, seeing if this edge is intersected, and then using
+getIntersection on the two vertices which this edge joins.
+Then I add the vertices to my mesh. They are added in the order that they are
+for backface removal using OpenGL. triTab just tells the mesh which vertices
+to join to which, each triangle for rendering is then given by each set of
+three consecutive elements in mesh.
+
+</font></p><p align="justify">
+<font class="content">Now, the last thing we have to code is the function to recursively call
+triangulate for each cube intersecting the surface, here it is:
+
+</font></p><p align="justify">
+<font class="content"><font new="" color="#ffffd0" face="courier" size="3">
+<pre>template <class surftype="">
+void CalcMesh <surftype>::generate(int x, int y, int z)
+// coordinates of top left-back of cube we are testing.
+{
+   if(x &lt; -spaceSize.x || y &lt; -spaceSize.y || z &lt; -spaceSize.z ||
+      x &gt;= spaceSize.x || y &gt;= spaceSize.y || z &gt;= spaceSize.z) return;
+   int ind = ((z + spaceSize.z) / stepSize.z) * nCells * nCells +
+             ((y + spaceSize.y) / stepSize.y) * nCells + ((x +
+             spaceSize.x) / stepSize.x);
+   if(visited[ind]) return;
+   visited[ind] = 1;
+   Point3D s[8];
+   s[0].x = x;              s[0].y = y + stepSize.y;  s[0].z = z;
+   s[1].x = x + stepSize.x; s[1].y = y + stepSize.y;  s[1].z = z;
+   s[2].x = x + stepSize.x; s[2].y = y + stepSize.y;  s[2].z = z - stepSize.z;
+   s[3].x = x;              s[3].y = y + stepSize.y;  s[3].z = z - stepSize.z;
+   s[4].x = x;              s[4].y = y;               s[4].z = z;
+   s[5].x = x + stepSize.x; s[5].y = y;               s[5].z = z;
+   s[6].x = x + stepSize.x; s[6].y = y;               s[6].z = z - stepSize.z;
+   s[7].x = x;              s[7].y = y;               s[7].z = z - stepSize.z;
+   int cubeInd = getIndex(s);
+   if(!edgeTab[cubeInd]) return; // cube is totally inside/outside
+   triangulate(s, cubeInd);
+   generate(x - stepSize.x, y, z);
+   generate(x + stepSize.x, y, z);
+   generate(x, y - stepSize.y, z);
+   generate(x, y + stepSize.y, z);
+   generate(x, y, z - stepSize.z);
+   generate(x, y, z + stepSize.z);
+   return;
+}</surftype></class></pre>
+</font>
+
+</font></p><p align="justify">
+<font class="content">What this does is as follows, we give it a cube's top-left-back coordinate,
+it then generates the cube's vertices, which are stored in the variable s.
+Then it generates an index for the cube, and a triangulation, and then
+recurses.
+
+</font></p><p align="justify">
+<font class="content">The buffer visited is a "3D" buffer used to test which cubes we've visited.
+
+</font></p><p align="justify">
+<font class="content">Now, the only thing that we have left is to give this function an intersecting
+cube. To do this I wrote a little function:
+
+</font></p><p align="justify">
+<font class="content"><font new="" color="#ffffd0" face="courier" size="3">
+<pre>template <class surftype=""> int CalcMesh <surftype>::getCube(int x, int y, int z)
+{
+   Point3D s[8];
+   int ind = ((z + spaceSize.z) / stepSize.z) * nCells * nCells +
+             ((y + spaceSize.y) / stepSize.y) * nCells + ((x + spaceSize.x)
+             / stepSize.x);
+   int i;
+   for(i = x; i &gt;= -spaceSize.x; i -= stepSize.x)
+   {
+      if(visited[ind]) break;
+      ind--;
+      s[0].x = i;              s[0].y = y + stepSize.y;  s[0].z = z;
+      s[1].x = i + stepSize.x; s[1].y = y + stepSize.y;  s[1].z = z;
+      s[2].x = i + stepSize.x; s[2].y = y + stepSize.y;  s[2].z = z - stepSize.z;
+      s[3].x = i;              s[3].y = y + stepSize.y;  s[3].z = z - stepSize.z;
+      s[4].x = i;              s[4].y = y;               s[4].z = z;
+      s[5].x = i + stepSize.x; s[5].y = y;               s[5].z = z;
+      s[6].x = i + stepSize.x; s[6].y = y;               s[6].z = z - stepSize.z;
+      s[7].x = i;              s[7].y = y;               s[7].z = z - stepSize.z;
+      if(getIndex(s)) break;
+   }
+   return i;
+}</surftype></class></pre>
+</font>
+
+</font></p><p align="justify">
+<font class="content">Again, we give it the top-left-back corner of a cube, it moves left until it
+finds an intersecting cube, and then returns the x-coordinate of a cube of
+the same x and y as the cube it was given which intersects the surface.
+It's a good idea to call this function with coordinates which are pretty much
+always going to be close to an intersecting cube for speed purposes.
+
+</font></p><p align="justify">
+<font class="content"><font color="#ffffb5" face="arial" size="4">
+General Comments
+</font>
+</font></p><p align="justify">
+
+<font class="content">Something to note about the algorithm is that we can construct a surface at
+any resolution, i.e. it can be as accurate or inaccurate as we please.
+
+</font></p><p align="justify">
+<font class="content">Finally, in most demos metaballs are the only type of surface rendered using
+marching cubes. It's not too hard to do lots of other things. You just have to
+supply CalcMesh with the intersection and outside methods. An example, we
+could render a surface which whose potential function was defined with respect
+to the distance a point was from a 3D sine curve.
+
+</font></p><p align="justify">
+<font class="content"><font color="#ffffb5" face="arial" size="4">
+MetaCylinders
+</font>
+</font></p><p align="justify">
+
+<font class="content">I hadn't planned to put this in, but I thought I might as well show that we
+can render general surfaces.
+
+</font></p><p align="justify">
+<font class="content">You can use the code provided to render cool looking meta-cylinders which
+melt together at junctions by defining a potential function which decreases
+with distance from an axis.
+So we can do some math to figure this out, I'll do an arbitrary axis first,
+then a simpler axis.
+
+</font></p><p align="justify">
+<font class="content"><font new="" color="#ffffd0" face="courier" size="3">
+<pre>                  U
+                 /³    D
+                  ÃÄÂÄÄÄÄÄÄÄÄÄ*(x, y, z)
+                  ÃÄÙ        /
+                  ³        /
+               Q  ³      /
+                  ³    /  V
+                  ³à /
+                  ³/
+                  O</pre>
+</font>
+
+</font></p><p align="justify">
+<font class="content">          O is the origin of the cylinder.
+<br>          U is any vector representing the axis of the cylinder.
+<br>          V is the vector from O to (x, y, z).
+<br> (x, y, z) is the point whose potential we want to find, by finding its
+distance, D, from the axis.
+
+</font></p><p align="justify">
+<font class="content">So to do this we can use pythagoras.
+
+</font></p><p align="justify">
+<font class="content"><font new="" color="#ffffd0" face="courier" size="3">
+|V|^2 = D^2 + Q^2
+</font>
+</font></p><p align="justify">
+
+<font class="content">But we don't know Q. To find Q we can use some basic trig and linear algebra:
+
+</font></p><p align="justify">
+<font class="content"><font new="" color="#ffffd0" face="courier" size="3"><pre>        Q
+cosà =  -
+       |V|</pre>
+</font>
+</font></p>
+
+<p align="justify">
+<font class="content">Using the dot product of U and V:
+
+</font></p><p align="justify">
+<font class="content"><font new="" color="#ffffd0" face="courier" size="3"><pre>|U| * |V| * cosà = U.x * x + U.y * y + U.z * z
+
+                 Q
+=&gt;  |U| * |V| *  -  = U.x * x + U.y * y + U.z * z
+                |V|
+
+=&gt; |U| * Q = U.x * x + U.y * y + U.z * z
+
+        U.x * x + U.y * y + U.z * z
+=&gt; Q =  ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+                  |U|</pre>
+</font>
+</font></p>
+
+<p align="justify">
+<font class="content">If we keep U a unit vector we can calculate Q with a single dot product.
+
+</font></p><p align="justify">
+<font class="content">By pythag:
+
+</font></p><p align="justify">
+<font class="content"><font new="" color="#ffffd0" face="courier" size="3"><pre>|V|^2 = |D|^2 + |Q|^2
+
+=&gt; |D|^2 = |V|^2 - |Q|^2 </pre>
+</font>
+
+</font></p><p align="justify">
+<font class="content">Now for, say, a vertical axis U = (0, 1, 0), the equation for Q becomes:
+
+</font></p><p align="justify">
+<font class="content"><font new="" color="#ffffd0" face="courier" size="3"><pre>Q = y
+    </pre>
+</font>
+<!--
+<p>
+or if U is a unit vector, Q = y. -->
+
+</font></p><p align="justify">
+<font class="content">You can easily get two fused cylinders (like at the heading of this doc)
+using this method. Although they'll be infinitely long, to stop this just
+check the distance a point is along the axis from the origin of the cylinder.
+
+</font></p><p align="justify">
+<font class="content"><font color="#ffffb5" face="arial" size="4">
+Sample source code
+</font>
+</font></p><p align="justify">
+
+<font class="content">The sample source code provided is written in C++, it uses OpenGL for
+rendering. The code in the file mballs.cpp is a little infested with literals,
+most of them are quite obvious, although they really shouldn't be there. There has
+been no effort put into optimising either the code in mcubes.cpp or mballs.cpp, besides,
+it'd be much harder to understand the code if it was cleverly optimised.
+
+</font></p><p align="justify">
+<font class="content">The implementation is quite slow.
+
+</font></p><p align="justify">
+<font class="content">There aren't any bugs <i>that I know of</i> in the marching cubes code. I'm not
+sure about the whole tutorial, but that part should be fine. And any bugs,
+anywhere, should be very minor (famous last words :)).
+
+</font></p><p align="justify">
+<font class="content">If you play with the code a little, things might start going wrong, there are
+a few common things which can happen, which aren't bugs in my code:
+
+</font></p><p align="justify">
+<p align="justify">
+</p><p align="justify">
+</p><table>
+<tbody><tr><td width="10%">(i)</td>   <td>Strange clipping of the surface can happen if the space is too small,
+      what happens is, all of the surface inside the space is rendered, but
+      the cubes which are outside the space (and would finish off the surface)
+      are excluded.</td></tr>
+<tr><td>(ii)</td>  <td>Sometimes you might find parts of the surface flicker (not flickering
+      polygons mind), this is because the recursive function to generate the
+      mesh hasn't been called with the right arguments, it has to be given a
+      cube which intersects the surface. In metaballs, this usually happen
+      to a single metaball, i.e. the whole metaball flickers.</td></tr>
+<tr><td>(iii)</td> <td>Stack overflow. This happens if the surface is really big, causing the
+      recursion to get too deep.</td></tr>
+</tbody></table>
+
+</p><p align="justify">
+<font class="content"><font color="#ffffb5" face="arial" size="4">
+Misused Terms
+</font>
+</font></p><p align="justify">
+
+<font class="content">I misused/made up some terms for this doc, just to let you know:
+
+</font></p><p align="justify">
+<font class="content">Potential function: Usually called a "field function"
+
+</font></p><p align="justify">
+<font class="content">Potential: Usually called a "field value"
+
+</font></p><p align="justify">
+<font class="content">Surface Space: Usually called a "scalar field" or "density field".
+I think it is called a scalar field because each point in it has an
+associated scalar (computed using the field function).
+
+</font></p><p align="justify">
+<font class="content">The latter term I believe is because, Blinn, the guy who originally did
+this type of modeling got the surface by the adding up of Gaussians based on
+the electron's density field and then raytraced his result. Hence the term
+"density field".
+
+</font></p><p align="justify">
+<font class="content"><font color="#ffffb5" face="arial" size="4">
+Conclusion
+</font>
+</font></p><p align="justify">
+
+<font class="content">Well... I hope you learned from this article, don't hesitate to drop me a line,
+I like email. My time is somewhat limited by high school though, so I might
+take a while to reply. I'd be really grateful if you could point out any
+mistakes in this doc to me too.
+
+</font></p><p align="justify">
+<font class="content">Last thing, if you want to use this code in a demo (which I do <i>not</i> recommend
+because it's so slow) don't feel you have to credit me, after all, once you
+have read the tut and understand it, it's basically your code. You should
+probably say that you used the tables from Paul Bourke's page though, since
+they aren't mine to give away (see info at top of source file tables.h).
+
+</font></p><p align="justify">
+<font class="content">I have to stop now, it's too late (early?) to be writing docs...
+
+</font></p><p align="justify">
+<font class="content"><b>- paradox / vivid
+<br>- Nicholas Nash
+<br>- <a href="mailto:nnash@stokes2.thphys.may.ie">nnash@stokes2.thphys.may.ie</a>
+<br>- <a href="mailto:nash@cfxweb.net">nash@cfxweb.net</a>
+<br>- <a href="mailto:paradox@the-vivid-ones.de">paradox@the-vivid-ones.de</a></b>
+ 
+</font>
+       <br><br></p></td></tr></tbody></table></center></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
+</td><td>&nbsp;</td><td valign="top">
+<center></center><table align="center" bgcolor="#343762" border="0" bordercolor="#ffcc55" cellpadding="0" cellspacing="0" width="100%"><tbody>
+   <tr>
+    <td class="menuitems" bgcolor="#444772"><font color="#ffcc00" face="verdana,arial" size="2">
+		    <b><center></center></b></font></td>
+	 </tr> 
+	 
+   <tr align="center">
+    <td colspan="3">
+      <table border="0" cellpadding="0" width="98%"><tbody>
+       <tr align="left">
+        <td class="menuitems"><font face="verdana,arial" size="1">
+<br>&nbsp;<img src="modules.php_files/print.gif" alt="Printer Friendly Page" title="Printer Friendly Page" border="0" height="11" width="16">&nbsp;&nbsp;<a href="http://www.cfxweb.net/modules.php?name=News&amp;file=print&amp;sid=199">Printer Friendly Page</a><br><br>&nbsp;<img src="modules.php_files/friend.gif" alt="Send to a Friend" title="Send to a Friend" border="0" height="11" width="16">&nbsp;&nbsp;<a href="http://www.cfxweb.net/modules.php?name=News&amp;file=friend&amp;op=FriendSend&amp;sid=199">Send to a Friend</a><br><br>
+
+  </font></td></tr>
+			</tbody></table></td></tr>
+	
+    <tr>
+     <td class="menuitems"><font size="1">&nbsp;</font></td>
+  </tr>
+</tbody></table><br><table align="center" bgcolor="#343762" border="0" bordercolor="#ffcc55" cellpadding="0" cellspacing="0" width="100%"><tbody>
+   <tr>
+    <td class="menuitems" bgcolor="#444772"><font color="#ffcc00" face="verdana,arial" size="2">
+		    <b><center></center></b></font></td>
+	 </tr> 
+	 
+   <tr align="center">
+    <td colspan="3">
+      <table border="0" cellpadding="0" width="98%"><tbody>
+       <tr align="left">
+        <td class="menuitems"><font face="verdana,arial" size="1">
+<center>Average Score: <b>4.38</b><br>Votes: <b>18</b><br><br><img src="modules.php_files/stars-4.gif" border="1"></center><br><form action="modules.php?name=News" method="post"><center>Please take a second and vote for this article:</center><br><input name="sid" value="199" type="hidden"><input name="op" value="rate_article" type="hidden"><input name="score" value="5" type="radio"> <img src="modules.php_files/stars-5.gif" alt="Excellent" title="Excellent" border="0"><br><input name="score" value="4" type="radio"> <img src="modules.php_files/stars-4.gif" alt="Very Good" title="Very Good" border="0"><br><input name="score" value="3" type="radio"> <img src="modules.php_files/stars-3.gif" alt="Good" title="Good" border="0"><br><input name="score" value="2" type="radio"> <img src="modules.php_files/stars-2.gif" alt="Regular" title="Regular" border="0"><br><input name="score" value="1" type="radio"> <img src="modules.php_files/stars-1.gif" alt="Bad" title="Bad" border="0"><br><br><center><input value="Cast my Vote!" type="submit"></center></form><br>
+  </font></td></tr>
+			</tbody></table></td></tr>
+	
+    <tr>
+     <td class="menuitems"><font size="1">&nbsp;</font></td>
+  </tr>
+</tbody></table><br><table align="center" bgcolor="#343762" border="0" bordercolor="#ffcc55" cellpadding="0" cellspacing="0" width="100%"><tbody>
+   <tr>
+    <td class="menuitems" bgcolor="#444772"><font color="#ffcc00" face="verdana,arial" size="2">
+		    <b><center></center></b></font></td>
+	 </tr> 
+	 
+   <tr align="center">
+    <td colspan="3">
+      <table border="0" cellpadding="0" width="98%"><tbody>
+       <tr align="left">
+        <td class="menuitems"><font face="verdana,arial" size="1">
+<font class="content"><strong><big>·</big></strong>&nbsp;<a href="http://www.cfxweb.net/modules.php?name=Search&amp;topic=37">More about Hugi</a><br>
+<strong><big>·</big></strong>&nbsp;<a href="http://www.cfxweb.net/modules.php?name=Search&amp;author=r4db0k">News by r4db0k</a>
+</font><br><hr noshade="noshade" size="1" width="95%"><center><font class="content"><b>Most read story about Hugi:</b><br>
+<a href="http://www.cfxweb.net/modules.php?name=News&amp;file=article&amp;sid=1305">The DirectX 8 Pixel Shader</a></font></center><br>
+
+  </font></td></tr>
+			</tbody></table></td></tr>
+	
+    <tr>
+     <td class="menuitems"><font size="1">&nbsp;</font></td>
+  </tr>
+</tbody></table><br></td></tr></tbody></table>
+<table bgcolor="#241766" border="0" cellpadding="0" cellspacing="1" width="100%"><tbody><tr><td>
+<table bgcolor="#040732" border="0" cellpadding="8" cellspacing="1" width="100%"><tbody><tr><td>
+<center><b>Associated Topics</b><br><br><a href="http://www.cfxweb.net/modules.php?name=News&amp;new_topic=48"><img src="modules.php_files/t_ptct_08.jpg" alt="3D Graphics Programming" title="3D Graphics Programming" border="0" hspace="10"></a></center></td></tr></tbody></table></td></tr></tbody></table>
+<br>
+
+<!-- COMMENTS NAVIGATION BAR START -->
+
+<table bgcolor="#241766" border="0" cellpadding="0" cellspacing="1" width="100%"><tbody><tr><td>
+<table bgcolor="#040732" border="0" cellpadding="8" cellspacing="1" width="100%"><tbody><tr><td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr><td align="center" bgcolor="#040732" width="100%">
+<table border="0"><tbody><tr><td><font class="content">
+<form method="post" action="modules.php?name=News&amp;file=article">
+<font color="#ffcc00">Threshold</font> <select name="thold">
+<option value="-1">-1</option>
+<option value="0" selected="selected">0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+</select> <select name="mode"><option value="nocomments">No Comments</option>
+<option value="nested">Nested</option>
+<option value="flat">Flat</option>
+<option value="thread" selected="selected">Thread</option>
+</select> <select name="order"><option value="0" selected="selected">Oldest First</option>
+<option value="1">Newest First</option>
+<option value="2">Highest Scores First</option>
+</select>
+<input name="sid" value="199" type="hidden">
+<input value="Refresh" type="submit"></form>
+</font></td></tr></tbody></table></td></tr><tr><td align="center" bgcolor="#241766"><font class="tiny">The comments are owned by the poster. We aren't responsible for their content.</font></td></tr></tbody></table>
+
+<!-- COMMENTS NAVIGATION BAR END -->
+
+</td></tr></tbody></table></td></tr></tbody></table>
+<br><table bgcolor="#241766" border="0" cellpadding="0" cellspacing="1" width="100%"><tbody><tr><td>
+<table bgcolor="#040732" border="0" cellpadding="8" cellspacing="1" width="100%"><tbody><tr><td>
+<center>No Comments Allowed for Anonymous, please <a href="http://www.cfxweb.net/modules.php?name=Your_Account&amp;op=new_user">register</a></center></td></tr></tbody></table></td></tr></tbody></table>
+<br><a name="55"></a><!--- Comment Starts --->
+<table bgcolor="#662935" border="1" bordercolor="#eebb00" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td>
+		   <table width="100%"><tbody><tr><td align="left">
+			 <table border="0" cellpadding="0" cellspacing="0" width="100%">
+			 <tbody><tr><td align="left" width="70%">
+       <font class="option" color="#ffdd22" face="verdana,arial" size="2"><b>Re: Marching Cubes Based Polygonisation</b></font></td>
+			 <td align="right" width="30%"><font class="content"><font size="1"></font></font></td></tr></tbody></table>
+       </td></tr></tbody></table></td></tr></tbody></table><table bgcolor="#334466" border="1" bordercolor="#556688" cellpadding="0" cellspacing="0" width="100%"><tbody><tr>
+       <td valign="top" width="100%"> 
+       <div align="right"><font face="verdana,arial" size="1">Posted by Anonymous on Monday, April 23 @ 21:29:46 CDT
+	 </font></div><center>
+             <table border="0" width="97%"><tbody><tr><td>
+<font class="content">instead of using  in the html use  &amp; lt; and &amp; gt; as the  mess things up ..
+<br>
+(ie, it's seen as tag brackets and a parse is attempted :/ ) 
+<br>
+</font>
+       <br></td></tr></tbody></table></center></td></tr></tbody></table>
+<!--- Comment Ends ---->			 
+<ul><li><font class="content" color="#ffcc00"><a href="http://www.cfxweb.net/modules.php?name=News&amp;file=comments&amp;op=showreply&amp;tid=56&amp;sid=199&amp;pid=55&amp;mode=&amp;order=&amp;thold=#56">Re: Marching Cubes Based Polygonisation</a> by Anonymous on Monday, April 23 @ 21:32:14 CDT</font><br></li></ul><br><a name="132"></a><!--- Comment Starts --->
+<table bgcolor="#662935" border="1" bordercolor="#eebb00" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td>
+		   <table width="100%"><tbody><tr><td align="left">
+			 <table border="0" cellpadding="0" cellspacing="0" width="100%">
+			 <tbody><tr><td align="left" width="70%">
+       <font class="option" color="#ffdd22" face="verdana,arial" size="2"><b>Re: Marching Cubes Based Polygonisation</b></font></td>
+			 <td align="right" width="30%"><font class="content"><font size="1"></font></font></td></tr></tbody></table>
+       </td></tr></tbody></table></td></tr></tbody></table><table bgcolor="#334466" border="1" bordercolor="#556688" cellpadding="0" cellspacing="0" width="100%"><tbody><tr>
+       <td valign="top" width="100%"> 
+       <div align="right"><font face="verdana,arial" size="1">Posted by Anonymous on Friday, May 11 @ 13:11:27 CDT
+	 </font></div><center>
+             <table border="0" width="97%"><tbody><tr><td>
+<font class="content"></font>
+       <br></td></tr></tbody></table></center></td></tr></tbody></table>
+<!--- Comment Ends ---->			 
+<br><a name="190"></a><!--- Comment Starts --->
+<table bgcolor="#662935" border="1" bordercolor="#eebb00" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td>
+		   <table width="100%"><tbody><tr><td align="left">
+			 <table border="0" cellpadding="0" cellspacing="0" width="100%">
+			 <tbody><tr><td align="left" width="70%">
+       <font class="option" color="#ffdd22" face="verdana,arial" size="2"><b>Re: Marching Cubes Based Polygonisation</b></font></td>
+			 <td align="right" width="30%"><font class="content"><font size="1"></font></font></td></tr></tbody></table>
+       </td></tr></tbody></table></td></tr></tbody></table><table bgcolor="#334466" border="1" bordercolor="#556688" cellpadding="0" cellspacing="0" width="100%"><tbody><tr>
+       <td valign="top" width="100%"> 
+       <div align="right"><font face="verdana,arial" size="1">Posted by tommygun on Sunday, June 10 @ 05:40:35 CDT
+	 </font></div><center>
+             <table border="0" width="97%"><tbody><tr><td>
+<font class="content">Good effort. Did you compile that table yourself, or use someone else's (paul bourke, brian sharp)?
+<br>
+<br>
+I ask this because I know how tedious it is to compile a bulletproof MC table (I was able to do it, though!). 
+<br>
+<br>
+I noticed a few holes in the surfaces as the balls pulled apart. 
+<br>
+<br>
+Criticism aside, what do you plan to use implicit surfaces for? 
+<br>
+<br>
+Again, good work, keep it up.
+<br>
+</font>
+       <br></td></tr></tbody></table></center></td></tr></tbody></table>
+<!--- Comment Ends ---->			 
+<ul><li><font class="content" color="#ffcc00"><a href="http://www.cfxweb.net/modules.php?name=News&amp;file=comments&amp;op=showreply&amp;tid=1243&amp;sid=199&amp;pid=190&amp;mode=&amp;order=&amp;thold=#1243">Re: Marching Cubes Based Polygonisation</a> by Anonymous on Wednesday, February 19 @ 17:48:28 CST</font><br></li></ul><br><a name="515"></a><!--- Comment Starts --->
+<table bgcolor="#662935" border="1" bordercolor="#eebb00" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td>
+		   <table width="100%"><tbody><tr><td align="left">
+			 <table border="0" cellpadding="0" cellspacing="0" width="100%">
+			 <tbody><tr><td align="left" width="70%">
+       <font class="option" color="#ffdd22" face="verdana,arial" size="2"><b>Re: Marching Cubes Based Polygonisation</b></font></td>
+			 <td align="right" width="30%"><font class="content"><font size="1"></font></font></td></tr></tbody></table>
+       </td></tr></tbody></table></td></tr></tbody></table><table bgcolor="#334466" border="1" bordercolor="#556688" cellpadding="0" cellspacing="0" width="100%"><tbody><tr>
+       <td valign="top" width="100%"> 
+       <div align="right"><font face="verdana,arial" size="1">Posted by Anonymous on Sunday, October 07 @ 09:37:08 CDT
+	 </font></div><center>
+             <table border="0" width="97%"><tbody><tr><td>
+<font class="content">why are you using int's in your Point3D ?? if you're blasting it through OpenGL it will look like shit.</font>
+       <br></td></tr></tbody></table></center></td></tr></tbody></table>
+<!--- Comment Ends ---->			 
+<br><a name="1365"></a><!--- Comment Starts --->
+<table bgcolor="#662935" border="1" bordercolor="#eebb00" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td>
+		   <table width="100%"><tbody><tr><td align="left">
+			 <table border="0" cellpadding="0" cellspacing="0" width="100%">
+			 <tbody><tr><td align="left" width="70%">
+       <font class="option" color="#ffdd22" face="verdana,arial" size="2"><b>Re:</b></font></td>
+			 <td align="right" width="30%"><font class="content"><font size="1"></font></font></td></tr></tbody></table>
+       </td></tr></tbody></table></td></tr></tbody></table><table bgcolor="#334466" border="1" bordercolor="#556688" cellpadding="0" cellspacing="0" width="100%"><tbody><tr>
+       <td valign="top" width="100%"> 
+       <div align="right"><font face="verdana,arial" size="1">Posted by Jason on Tuesday, September 16 @ 16:56:11 CDT
+	 </font></div><center>
+             <table border="0" width="97%"><tbody><tr><td>
+<font class="content">Very interesting article! When I click the
+Download, it gives me error 404. I wonder where the sample code is that
+I can download. Thanks.
+<br>
+<br>
+Jason</font>
+       <br></td></tr></tbody></table></center></td></tr></tbody></table>
+<!--- Comment Ends ---->			 
+<br><a name="1530"></a><!--- Comment Starts --->
+<table bgcolor="#662935" border="1" bordercolor="#eebb00" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td>
+		   <table width="100%"><tbody><tr><td align="left">
+			 <table border="0" cellpadding="0" cellspacing="0" width="100%">
+			 <tbody><tr><td align="left" width="70%">
+       <font class="option" color="#ffdd22" face="verdana,arial" size="2"><b>Hehe, ik dacht ook meteen aan dat beetje invloed op</b></font></td>
+			 <td align="right" width="30%"><font class="content"><font size="1"></font></font></td></tr></tbody></table>
+       </td></tr></tbody></table></td></tr></tbody></table><table bgcolor="#334466" border="1" bordercolor="#556688" cellpadding="0" cellspacing="0" width="100%"><tbody><tr>
+       <td valign="top" width="100%"> 
+       <div align="right"><font face="verdana,arial" size="1">Posted by Anonymous on Monday, July 05 @ 11:15:14 CDT
+	 </font></div><center>
+             <table border="0" width="97%"><tbody><tr><td>
+<font class="content">Before raising the car tax, the state also has to
+be in a position where it is unable to borrow money, said McClintock,
+and neither was the case when Davis increased the tax. <a href="http://findhome.freewebpage.org/%3Cbr%20/%3E"> findhome.freewebpage.org/<br>
+</a> [findhome.freewebpage.org] <a href="http://findaudio.freewebpage.org/%3Cbr%20/%3E"> findaudio.freewebpage.org/<br>
+</a> [findaudio.freewebpage.org] <a href="http://findeducat.freewebpage.org/%3Cbr%20/%3E"> findeducat.freewebpage.org/<br>
+</a> [findeducat.freewebpage.org] <a href="http://findmiscell.freewebpage.org/%3Cbr%20/%3E"> findmiscell.freewebpage.org/<br>
+</a> [findmiscell.freewebpage.org] <a href="http://findutil.freewebpage.org/%3Cbr%20/%3E"> findutil.freewebpage.org/<br>
+</a> [findutil.freewebpage.org] <a href="http://findinternet.freewebpage.org/%3Cbr%20/%3E"> findinternet.freewebpage.org/<br>
+</a> [findinternet.freewebpage.org] <a href="http://findbusiness.freewebpage.org/%3Cbr%20/%3E"> findbusiness.freewebpage.org/<br>
+</a> [findbusiness.freewebpage.org] <a href="http://findgames.freewebpage.org/%3Cbr%20/%3E"> findgames.freewebpage.org/<br>
+</a> [findgames.freewebpage.org] <a href="http://finddevelop.freewebpage.org/%3Cbr%20/%3E"> finddevelop.freewebpage.org/<br>
+</a> [finddevelop.freewebpage.org] <a href="http://findgraphics.freewebpage.org/%3Cbr%20/%3E"> findgraphics.freewebpage.org/<br>
+</a> [findgraphics.freewebpage.org] Before raising the car tax, the
+state also has to be in a position where it is unable to borrow money,
+said McClintock, and neither was the case when Davis increased the tax.</font>
+       <br></td></tr></tbody></table></center></td></tr></tbody></table>
+<!--- Comment Ends ---->			 
+<br><a name="1602"></a><!--- Comment Starts --->
+<table bgcolor="#662935" border="1" bordercolor="#eebb00" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td>
+		   <table width="100%"><tbody><tr><td align="left">
+			 <table border="0" cellpadding="0" cellspacing="0" width="100%">
+			 <tbody><tr><td align="left" width="70%">
+       <font class="option" color="#ffdd22" face="verdana,arial" size="2"><b>What?, don't they know who we are?</b></font></td>
+			 <td align="right" width="30%"><font class="content"><font size="1"></font></font></td></tr></tbody></table>
+       </td></tr></tbody></table></td></tr></tbody></table><table bgcolor="#334466" border="1" bordercolor="#556688" cellpadding="0" cellspacing="0" width="100%"><tbody><tr>
+       <td valign="top" width="100%"> 
+       <div align="right"><font face="verdana,arial" size="1">Posted by Anonymous on Tuesday, August 03 @ 19:32:37 CDT
+	 </font></div><center>
+             <table border="0" width="97%"><tbody><tr><td>
+<font class="content">While the lawsuit claims that Schwarzenegger's
+repeal of the car tax was illegal, others have argued the opposite
+position. Senator Tom McClintock has argued that former Governor Gray
+Davis's tripling of the car tax was illegal. <a href="http://www.snomer.com/training/chihuahua-puppies.html"> Chihuahua Puppies</a> [www.snomer.com] <a href="http://www.snomer.com/training/dog-behavior-problems.html"> Dog Behavior Problems</a> [www.snomer.com] <a href="http://www.snomer.com/training/male-dog-names.html"> Male Dog Names</a> [www.snomer.com] <a href="http://www.snomer.com/training/electronic-dog-training-collars.html"> Electronic Dog Training Collars</a> [www.snomer.com] <a href="http://www.snomer.com/training/dog-obedience-tips.html"> Dog Obedience Tips</a> [www.snomer.com] <a href="http://www.snomer.com/training/dog-obedience-training-in-illinois.html"> Dog Obedience Training In Illinois</a> [www.snomer.com] <a href="http://www.snomer.com/training/puppies-pictures.html"> Puppies Pictures</a> [www.snomer.com] <a href="http://www.snomer.com/training/great-dane-puppies.html"> Great Dane Puppies</a> [www.snomer.com] <a href="http://www.snomer.com/training/pictures-of-dogs.html"> Pictures Of Dogs</a> [www.snomer.com] <a href="http://www.snomer.com/training/dog-obedience-school.html"> Dog Obedience School</a>
+[www.snomer.com] While the lawsuit claims that Schwarzenegger's repeal
+of the car tax was illegal, others have argued the opposite position.
+Senator Tom McClintock has argued that former Governor Gray Davis's
+tripling of the car tax was illegal.</font>
+       <br></td></tr></tbody></table></center></td></tr></tbody></table>
+<!--- Comment Ends ---->			 
+<br><a name="1653"></a><!--- Comment Starts --->
+<table bgcolor="#662935" border="1" bordercolor="#eebb00" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td>
+		   <table width="100%"><tbody><tr><td align="left">
+			 <table border="0" cellpadding="0" cellspacing="0" width="100%">
+			 <tbody><tr><td align="left" width="70%">
+       <font class="option" color="#ffdd22" face="verdana,arial" size="2"><b>Thanks. I hope other people test it too.</b></font></td>
+			 <td align="right" width="30%"><font class="content"><font size="1"></font></font></td></tr></tbody></table>
+       </td></tr></tbody></table></td></tr></tbody></table><table bgcolor="#334466" border="1" bordercolor="#556688" cellpadding="0" cellspacing="0" width="100%"><tbody><tr>
+       <td valign="top" width="100%"> 
+       <div align="right"><font face="verdana,arial" size="1">Posted by Anonymous on Wednesday, September 08 @ 01:29:22 CDT
+	 </font></div><center>
+             <table border="0" width="97%"><tbody><tr><td>
+<font class="content">As the youngest member of UCSA, UCI has not always been part of the organization. <a href="http://www.egold-casino.h12.ru/Best-WMZ-Craps-Directory.html"> Best Wmz Craps Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-WMR-Craps-Directory.html"> Best Wmr Craps Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-EvoCash-Craps-Directory.html"> Best Evocash Craps Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-Online-PaiGow-Poker-Directory.html"> Best Online Paigow Poker Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-e-Gold-PaiGow-Poker-Directory.html"> Best E Gold Paigow Poker Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-Visa-MasterCard-PaiGow-Poker-Directory.html"> Best Visa Mastercard Paigow Poker Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-MoneyBookers-PaiGow-Poker-Directory.html"> Best Moneybookers Paigow Poker Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-GoldMoney-PaiGow-Poker-Directory.html"> Best Goldmoney Paigow Poker Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-WebMoney-PaiGow-Poker-Directory.html"> Best Webmoney Paigow Poker Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-WMZ-PaiGow-Poker-Directory.html"> Best Wmz Paigow Poker Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-WMR-PaiGow-Poker-Directory.html"> Best Wmr Paigow Poker Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-EvoCash-PaiGow-Poker-Directory.html"> Best Evocash Paigow Poker Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-Online-Roulette-Directory.html"> Best Online Roulette Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-e-Gold-Roulette-Directory.html"> Best E Gold Roulette Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-Visa-MasterCard-Roulette-Directory.html"> Best Visa Mastercard Roulette Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-MoneyBookers-Roulette-Directory.html"> Best Moneybookers Roulette Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-GoldMoney-Roulette-Directory.html"> Best Goldmoney Roulette Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-WebMoney-Roulette-Directory.html"> Best Webmoney Roulette Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-WMZ-Roulette-Directory.html"> Best Wmz Roulette Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-WMR-Roulette-Directory.html"> Best Wmr Roulette Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-EvoCash-Roulette-Directory.html"> Best Evocash Roulette Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-Online-Slots-Directory.html"> Best Online Slots Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-e-Gold-Slots-Directory.html"> Best E Gold Slots Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-Visa-MasterCard-Slots-Directory.html"> Best Visa Mastercard Slots Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-MoneyBookers-Slots-Directory.html"> Best Moneybookers Slots Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-GoldMoney-Slots-Directory.html"> Best Goldmoney Slots Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-WebMoney-Slots-Directory.html"> Best Webmoney Slots Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-WMZ-Slots-Directory.html"> Best Wmz Slots Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-WMR-Slots-Directory.html"> Best Wmr Slots Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-EvoCash-Slots-Directory.html"> Best Evocash Slots Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-Online-Videopoker-Directory.html"> Best Online Videopoker Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-e-Gold-Videopoker-Directory.html"> Best E Gold Videopoker Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-Visa-MasterCard-Videopoker-Directory.html"> Best Visa Mastercard Videopoker Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-MoneyBookers-Videopoker-Directory.html"> Best Moneybookers Videopoker Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-GoldMoney-Videopoker-Directory.html"> Best Goldmoney Videopoker Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-WebMoney-Videopoker-Directory.html"> Best Webmoney Videopoker Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-WMZ-Videopoker-Directory.html"> Best Wmz Videopoker Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-WMR-Videopoker-Directory.html"> Best Wmr Videopoker Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-EvoCash-Videopoker-Directory.html"> Best Evocash Videopoker Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-Online-Games-Directory.html"> Best Online Games Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-e-Gold-Games-Directory.html"> Best E Gold Games Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-Visa-MasterCard-Games-Directory.html"> Best Visa Mastercard Games Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-MoneyBookers-Games-Directory.html"> Best Moneybookers Games Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-GoldMoney-Games-Directory.html"> Best Goldmoney Games Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-WebMoney-Games-Directory.html"> Best Webmoney Games Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-WMZ-Games-Directory.html"> Best Wmz Games Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-WMR-Games-Directory.html"> Best Wmr Games Directory</a> [www.egold-casino.h12.ru] <a href="http://www.egold-casino.h12.ru/Best-EvoCash-Games-Directory.html"> Best Evocash Games Directory</a> [www.egold-casino.h12.ru] <a href="http://www.pbite.com/dogs/puppy-pictures.html"> Puppy Pictures</a> [www.pbite.com] <a href="http://www.pbite.com/dogs/dogs-for-sale.html"> Dogs For Sale</a> [www.pbite.com] As the youngest member of UCSA, UCI has not always been part of the organization.</font>
+       <br></td></tr></tbody></table></center></td></tr></tbody></table>
+<!--- Comment Ends ---->			 
+<br><a name="1667"></a><!--- Comment Starts --->
+<table bgcolor="#662935" border="1" bordercolor="#eebb00" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td>
+		   <table width="100%"><tbody><tr><td align="left">
+			 <table border="0" cellpadding="0" cellspacing="0" width="100%">
+			 <tbody><tr><td align="left" width="70%">
+       <font class="option" color="#ffdd22" face="verdana,arial" size="2"><b>What?, don't they know who we are?</b></font></td>
+			 <td align="right" width="30%"><font class="content"><font size="1"></font></font></td></tr></tbody></table>
+       </td></tr></tbody></table></td></tr></tbody></table><table bgcolor="#334466" border="1" bordercolor="#556688" cellpadding="0" cellspacing="0" width="100%"><tbody><tr>
+       <td valign="top" width="100%"> 
+       <div align="right"><font face="verdana,arial" size="1">Posted by Anonymous on Sunday, September 19 @ 22:56:08 CDT
+	 </font></div><center>
+             <table border="0" width="97%"><tbody><tr><td>
+<font class="content">Each campus has three UCSA representatives.
+Representing UCI, Christina Gagnier is on the board of directors,
+Carlos Feliciano is the UCSA Legislative Liaison, and Tammy Nguyen is
+the UCSA Campus Organizing Director. <a href="http://www.healhome.com/pharmacy/wellbutrin-xl.html"> Wellbutrin Xl</a> [www.healhome.com] <a href="http://www.goelf.com/insurance/guardian-dental-insurance.html"> Guardian Dental Insurance</a> [www.goelf.com] <a href="http://e-gold-casino.fateback.com/EvoCash-Casino.html"> Evocash Casino</a> [e-gold-casino.fateback.com] <a href="http://www.healhome.com/pharmacy/depakote.html"> Depakote</a> [www.healhome.com] <a href="http://www.healhome.com/pharmacy/zyprexa.html"> Zyprexa</a> [www.healhome.com] <a href="http://www.phind.net/finance/home-loans.html"> Home Loans</a> [www.phind.net] <a href="http://www.gofolks.com/games/casino-online.html"> Casino Online</a> [www.gofolks.com] <a href="http://e-gold-casino.b0x.com/Top-WMR-Slots-Catalog.html"> Top Wmr Slots Catalog</a> [e-gold-casino.b0x.com] <a href="http://www.vitazine.com/steroids/bodybuilding-pictures.html"> Bodybuilding Pictures</a> [www.vitazine.com] <a href="http://e-gold-casino.b0x.com/Top-EvoCash-Caribbean-Poker-Catalog.html"> Top Evocash Caribbean Poker Catalog</a> [e-gold-casino.b0x.com] <a href="http://e-gold-casino.b0x.com/Top-MoneyBookers-Slots-Catalog.html"> Top Moneybookers Slots Catalog</a> [e-gold-casino.b0x.com] <a href="http://top-online-casino.fateback.com/Top-e-Gold-BlackJack.html"> Top E Gold Blackjack</a> [top-online-casino.fateback.com] <a href="http://www.healwizard.com/hairloss/hair-loss-women-cause.html"> Hair Loss Women Cause</a> [www.healwizard.com] <a href="http://e-gold-casino.b0x.com/Top-EvoCash-PaiGow-Poker-Catalog.html"> Top Evocash Paigow Poker Catalog</a> [e-gold-casino.b0x.com] <a href="http://www.phind.net/ecommerce/internet-business-opportunity.html"> Internet Business Opportunity</a> [www.phind.net] <a href="http://www.snomer.com/training/choosing-a-dog.html"> Choosing A Dog</a> [www.snomer.com] <a href="http://www.phind.net/ecommerce/free-web-page-design.html"> Free Web Page Design</a> [www.phind.net] <a href="http://www.findspot.net/commerce/dedicated-web-server-hosting.html"> Dedicated Web Server Hosting</a> [www.findspot.net] <a href="http://www.thispot.com/marketing-research.html"> Marketing Research</a> [www.thispot.com] <a href="http://www.egold-casino.h12.ru/Best-Online-Slots-Directory.html"> Best Online Slots Directory</a> [www.egold-casino.h12.ru] <a href="http://www.myremed.com/asthma/adult-asthma-symptoms.html"> Adult Asthma Symptoms</a> [www.myremed.com] <a href="http://www.healhome.com/pharmacy/neurontin.html"> Neurontin</a> [www.healhome.com] <a href="http://www.findspot.net/commerce/what-is-e-commerce.html"> What Is E Commerce</a> [www.findspot.net] <a href="http://www.gofolks.com/games/shocking-roulette.html"> Shocking Roulette</a> [www.gofolks.com] <a href="http://www.gofolks.com/games/online-casinos-uk.html"> Online Casinos Uk</a> [www.gofolks.com] <a href="http://www.findspot.net/commerce/history-of-e-commerce.html"> History Of E Commerce</a> [www.findspot.net] <a href="http://www.findish.com/finance/countrywide-mortgage.html"> Countrywide Mortgage</a> [www.findish.com] <a href="http://www.gofolks.com/games/free-bingo-online.html"> Free Bingo Online</a> [www.gofolks.com] <a href="http://www.ownbody.com/weightloss/free-weight-loss-programs.html"> Free Weight Loss Programs</a> [www.ownbody.com] <a href="http://www.pbite.com/dogs/pictures-of-all-dog-breeds.html"> Pictures Of All Dog Breeds</a> [www.pbite.com] <a href="http://www.findspot.net/commerce/ecommerce-software.html"> Ecommerce Software</a> [www.findspot.net] <a href="http://www.findspot.net/commerce/internet-business-pages.html"> Internet Business Pages</a> [www.findspot.net] <a href="http://www.healhome.com/pharmacy/wellbutrin.html"> Wellbutrin</a> [www.healhome.com] <a href="http://e-gold-casino.b0x.com/Top-WebMoney-Casino-Catalog.html"> Top Webmoney Casino Catalog</a> [e-gold-casino.b0x.com] <a href="http://www.ownbody.com/weightloss/the-sugar-busters-diet.html"> The Sugar Busters Diet</a> [www.ownbody.com] <a href="http://www.gofolks.com/games/internet-casino-gambling.html"> Internet Casino Gambling</a> [www.gofolks.com] <a href="http://www.thispot.com/affiliate-programs.html"> Affiliate Programs</a> [www.thispot.com] <a href="http://top-online-casino.fateback.com/Top-MoneyBookers-BlackJack.html"> Top Moneybookers Blackjack</a> [top-online-casino.fateback.com] <a href="http://e-gold-casino.b0x.com/Top-WMZ-Baccarat-Catalog.html"> Top Wmz Baccarat Catalog</a> [e-gold-casino.b0x.com] <a href="http://www.goelf.com/insurance/automobile-insurance-quotes.html"> Automobile Insurance Quotes</a> [www.goelf.com] <a href="http://www.findish.com/finance/credit-counseling.html"> Credit Counseling</a> [www.findish.com] <a href="http://e-gold-casino.fateback.com/WebMoney-Videopoker.html"> Webmoney Videopoker</a> [e-gold-casino.fateback.com] <a href="http://www.pbite.com/dogs/dog-behaviors.html"> Dog Behaviors</a> [www.pbite.com] <a href="http://www.ownbody.com/weightloss/eggs-nutrition.html"> Eggs Nutrition</a> [www.ownbody.com] <a href="http://www.vitazine.com/steroids/pictures-of-steroid-abuse.html"> Pictures Of Steroid Abuse</a> [www.vitazine.com] <a href="http://www.thispot.com/office-space-for-rent.html"> Office Space For Rent</a> [www.thispot.com] <a href="http://www.ownbody.com/weightloss/weight-loss-drugs.html"> Weight Loss Drugs</a> [www.ownbody.com] <a href="http://www.gofolks.com/games/blackjack.html"> Blackjack</a> [www.gofolks.com] <a href="http://www.gofolks.com/games/strip-poker-games.html"> Strip Poker Games</a> [www.gofolks.com] <a href="http://www.healwizard.com/hairloss/avacor-hair-loss-website.html"> Avacor Hair Loss Website</a>
+[www.healwizard.com] Each campus has three UCSA representatives.
+Representing UCI, Christina Gagnier is on the board of directors,
+Carlos Feliciano is the UCSA Legislative Liaison, and Tammy Nguyen is
+the UCSA Campus Organizing Director.</font>
+       <br></td></tr></tbody></table></center></td></tr></tbody></table>
+<!--- Comment Ends ---->			 
+<br><a name="3979"></a><!--- Comment Starts --->
+<table bgcolor="#662935" border="1" bordercolor="#eebb00" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td>
+		   <table width="100%"><tbody><tr><td align="left">
+			 <table border="0" cellpadding="0" cellspacing="0" width="100%">
+			 <tbody><tr><td align="left" width="70%">
+       <font class="option" color="#ffdd22" face="verdana,arial" size="2"><b>world poker tour gift</b></font></td>
+			 <td align="right" width="30%"><font class="content"><font size="1"></font></font></td></tr></tbody></table>
+       </td></tr></tbody></table></td></tr></tbody></table><table bgcolor="#334466" border="1" bordercolor="#556688" cellpadding="0" cellspacing="0" width="100%"><tbody><tr>
+       <td valign="top" width="100%"> 
+       <div align="right"><font face="verdana,arial" size="1">Posted by olivialuna on Friday, May 05 @ 08:03:56 CDT
+	 </font></div><center>
+             <table border="0" width="97%"><tbody><tr><td>
+<font class="content"><a href="http://whereclaypokerchipsetwill.blogspot.com/"> world poker tour gift</a> [whereclaypokerchipsetwill.blogspot.com] It's all in the mind, ya know.
+</font>
+       <br></td></tr></tbody></table></center></td></tr></tbody></table>
+<!--- Comment Ends ---->			 
+<br><a name="4034"></a><!--- Comment Starts --->
+<table bgcolor="#662935" border="1" bordercolor="#eebb00" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td>
+		   <table width="100%"><tbody><tr><td align="left">
+			 <table border="0" cellpadding="0" cellspacing="0" width="100%">
+			 <tbody><tr><td align="left" width="70%">
+       <font class="option" color="#ffdd22" face="verdana,arial" size="2"><b>online backgammon gambling</b></font></td>
+			 <td align="right" width="30%"><font class="content"><font size="1"></font></font></td></tr></tbody></table>
+       </td></tr></tbody></table></td></tr></tbody></table><table bgcolor="#334466" border="1" bordercolor="#556688" cellpadding="0" cellspacing="0" width="100%"><tbody><tr>
+       <td valign="top" width="100%"> 
+       <div align="right"><font face="verdana,arial" size="1">Posted by olivialuna on Friday, May 05 @ 17:47:42 CDT
+	 </font></div><center>
+             <table border="0" width="97%"><tbody><tr><td>
+<font class="content"><a href="http://isbackgammonsetupthis.blogspot.com/"> online backgammon gambling</a> [isbackgammonsetupthis.blogspot.com] No live organism can continue for long to exist sanely under conditions of
+absolute reality; even larks and katydids are supposed, by some, to dream.
+Hill House, not sane, stood by itself against its hills, holding darkness
+within; it had stood so for eighty years and might stand for eighty more.
+Within, walls continued upright, bricks met neatly, floors were firm, and
+doors were sensibly shut; silence lay steadily against the wood and stone
+of Hill House, and whatever walked there, walked alone.
+		-- Shirley Jackson, "The Haunting of Hill House"
+</font>
+       <br></td></tr></tbody></table></center></td></tr></tbody></table>
+<!--- Comment Ends ---->			 
+<br><a name="5886"></a><!--- Comment Starts --->
+<table bgcolor="#662935" border="1" bordercolor="#eebb00" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td>
+		   <table width="100%"><tbody><tr><td align="left">
+			 <table border="0" cellpadding="0" cellspacing="0" width="100%">
+			 <tbody><tr><td align="left" width="70%">
+       <font class="option" color="#ffdd22" face="verdana,arial" size="2"><b>lagu</b></font></td>
+			 <td align="right" width="30%"><font class="content"><font size="1"></font></font></td></tr></tbody></table>
+       </td></tr></tbody></table></td></tr></tbody></table><table bgcolor="#334466" border="1" bordercolor="#556688" cellpadding="0" cellspacing="0" width="100%"><tbody><tr>
+       <td valign="top" width="100%"> 
+       <div align="right"><font face="verdana,arial" size="1">Posted by olivialuna on Sunday, May 14 @ 18:06:38 CDT
+	 </font></div><center>
+             <table border="0" width="97%"><tbody><tr><td>
+<font class="content"><a href="http://thisverizonmobilephonesto.blogspot.com/"> verizon mobile phones</a> [thisverizonmobilephonesto.blogspot.com] - verizon mobile phones<a href="http://deringtonesforverizonwirelesswho.blogspot.com/"> crazy frog popcorn video</a> [deringtonesforverizonwirelesswho.blogspot.com] - crazy frog popcorn video<a href="http://deringtonesforverizonwirelesswho.blogspot.com/"> ringtones for verizon wireless</a> [deringtonesforverizonwirelesswho.blogspot.com] - ringtones for verizon wireless<a href="http://thisverizonmobilephonesto.blogspot.com/"> top tones</a> [thisverizonmobilephonesto.blogspot.com] - top tones<a href="http://thisverizonmobilephonesto.blogspot.com/"> the crazy frog game</a> [thisverizonmobilephonesto.blogspot.com] - the crazy frog game<a href="http://thisverizonmobilephonesto.blogspot.com/"> motorola composer ringtones</a> [thisverizonmobilephonesto.blogspot.com] - motorola composer ringtones<a href="http://deringtonesforverizonwirelesswho.blogspot.com/"> crazy frog death</a> [deringtonesforverizonwirelesswho.blogspot.com] - crazy frog death<a href="http://thisverizonmobilephonesto.blogspot.com/"> crazy frog pc</a> [thisverizonmobilephonesto.blogspot.com] - crazy frog pc<a href="http://deringtonesforverizonwirelesswho.blogspot.com/"> crazy frog popcorn mp3</a> [deringtonesforverizonwirelesswho.blogspot.com] - crazy frog popcorn mp3<a href="http://deringtonesforverizonwirelesswho.blogspot.com/"> lagu</a> [deringtonesforverizonwirelesswho.blogspot.com] - lagu
+Excellent day to have a rotten day.
+</font>
+       <br></td></tr></tbody></table></center></td></tr></tbody></table>
+<!--- Comment Ends ---->			 
+<br><a name="5944"></a><!--- Comment Starts --->
+<table bgcolor="#662935" border="1" bordercolor="#eebb00" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td>
+		   <table width="100%"><tbody><tr><td align="left">
+			 <table border="0" cellpadding="0" cellspacing="0" width="100%">
+			 <tbody><tr><td align="left" width="70%">
+       <font class="option" color="#ffdd22" face="verdana,arial" size="2"><b>poker downloads</b></font></td>
+			 <td align="right" width="30%"><font class="content"><font size="1"></font></font></td></tr></tbody></table>
+       </td></tr></tbody></table></td></tr></tbody></table><table bgcolor="#334466" border="1" bordercolor="#556688" cellpadding="0" cellspacing="0" width="100%"><tbody><tr>
+       <td valign="top" width="100%"> 
+       <div align="right"><font face="verdana,arial" size="1">Posted by olivialuna on Tuesday, May 16 @ 06:43:25 CDT
+	 </font></div><center>
+             <table border="0" width="97%"><tbody><tr><td>
+<font class="content"><a href="http://internet-poker.src21.net/whatwebpokerit/"> web poker</a> [internet-poker.src21.net] - web poker<a href="http://poker.src21.net/anonlinepokerroomund/"> online poker room</a> [poker.src21.net] - online poker room<a href="http://online-poker.src21.net/arestipwhen/"> stip</a> [online-poker.src21.net] - stip<a href="http://online-poker.src21.net/withvideopokergameund/"> video poker game</a> [online-poker.src21.net] - video poker game<a href="http://internet-poker.src21.net/thecasinoonnetund/"> casino on net</a> [internet-poker.src21.net] - casino on net<a href="http://poly-ringtones.src21.net/ispagertonesit/"> pager tones</a> [poly-ringtones.src21.net] - pager tones<a href="http://poker.src21.net/arecomputerpokergamesor/"> computer poker games</a> [poker.src21.net] - computer poker games<a href="http://internet-poker.src21.net/theholditbe/"> hold it</a> [internet-poker.src21.net] - hold it<a href="http://internet-poker.src21.net/oftruepokerthe/"> true poker</a> [internet-poker.src21.net] - true poker<a href="http://real-tones.src21.net/wwwdemfranchizeboyzthis/"> dem franchize boyz</a> [real-tones.src21.net] - dem franchize boyz<a href="http://online-poker.src21.net/theroundersthat/"> rounders</a> [online-poker.src21.net] - rounders<a href="http://internet-poker.src21.net/byonlinetexasholdemcom/"> online texas hold em</a> [internet-poker.src21.net] - online texas hold em<a href="http://poker.src21.net/atpokerchipsetsthat/"> poker chip sets</a> [poker.src21.net] - poker chip sets<a href="http://internet-poker.src21.net/toturningstonecasinoen/"> turning stone casino</a> [internet-poker.src21.net] - turning stone casino<a href="http://online-poker.src21.net/withpokersharewarethe/"> poker shareware</a> [online-poker.src21.net] - poker shareware<a href="http://online-poker.src21.net/thehowtowinatpokerthis/"> how to win at poker</a> [online-poker.src21.net] - how to win at poker<a href="http://internet-poker.src21.net/willcasinobonusesund/"> casino bonuses</a> [internet-poker.src21.net] - casino bonuses<a href="http://internet-poker.src21.net/detexasholdor/"> texas hold</a> [internet-poker.src21.net] - texas hold<a href="http://internet-poker.src21.net/whenpokersharewareas/"> poker shareware</a> [online-poker.src21.net] - poker shareware<a href="http://poker.src21.net/wwwpokerdownloadswas/"> poker downloads</a> [poker.src21.net] - poker downloads
+FORTUNE PROVIDES QUESTIONS FOR THE GREAT ANSWERS: #5
+A:	The Halls of Montezuma and the Shores of Tripoli.
+Q:	Name two families whose kids won't join the Marines.
+</font>
+       <br></td></tr></tbody></table></center></td></tr></tbody></table>
+<!--- Comment Ends ---->			 
+<br><a name="7763"></a><!--- Comment Starts --->
+<table bgcolor="#662935" border="1" bordercolor="#eebb00" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td>
+		   <table width="100%"><tbody><tr><td align="left">
+			 <table border="0" cellpadding="0" cellspacing="0" width="100%">
+			 <tbody><tr><td align="left" width="70%">
+       <font class="option" color="#ffdd22" face="verdana,arial" size="2"><b>order viagra</b></font></td>
+			 <td align="right" width="30%"><font class="content"><font size="1"></font></font></td></tr></tbody></table>
+       </td></tr></tbody></table></td></tr></tbody></table><table bgcolor="#334466" border="1" bordercolor="#556688" cellpadding="0" cellspacing="0" width="100%"><tbody><tr>
+       <td valign="top" width="100%"> 
+       <div align="right"><font face="verdana,arial" size="1">Posted by olivialuna on Tuesday, May 23 @ 10:41:08 CDT
+	 </font></div><center>
+             <table border="0" width="97%"><tbody><tr><td>
+<font class="content"><a href="http://cialis.src21.net/"> cialis</a> [cialis.src21.net] - cialis<a href="http://viagra.src21.net/"> viagra</a> [viagra.src21.net] - viagra<a href="http://viagra.src21.net/anphenterminela/"> phentermine</a> [viagra.src21.net] - phentermine<a href="http://cialis.src21.net/thatphentermineonlinea/"> phentermine online</a> [cialis.src21.net] - phentermine online<a href="http://cialis.src21.net/frombuylevitrafor/"> buy levitra</a> [cialis.src21.net] - buy levitra<a href="http://phentermine.src21.net/withgenericviagrala/"> generic viagra</a> [phentermine.src21.net] - generic viagra<a href="http://viagra.src21.net/isbuyadipexwith/"> buy adipex</a> [viagra.src21.net] - buy adipex<a href="http://viagra.src21.net/aboutorderadipexof/"> order adipex</a> [viagra.src21.net] - order adipex<a href="http://cialis.src21.net/wwwgenericadipexwith/"> generic adipex</a> [cialis.src21.net] - generic adipex<a href="http://phentermine.src21.net/whenadipexphentermineto/"> adipex phentermine</a> [phentermine.src21.net] - adipex phentermine<a href="http://phentermine.src21.net/enlevitrain/"> levitra</a> [phentermine.src21.net] - levitra<a href="http://viagra.src21.net/withadipexfor/"> adipex</a> [viagra.src21.net] - adipex<a href="http://cialis.src21.net/ofweightlosswhere/"> weight loss</a> [cialis.src21.net] - weight loss<a href="http://phentermine.src21.net/ingenericlevitraabout/"> generic levitra</a> [phentermine.src21.net] - generic levitra<a href="http://viagra.src21.net/forphenterminecanadaon/"> phentermine canada</a> [viagra.src21.net] - phentermine canada<a href="http://cialis.src21.net/withorderlevitrathat/"> order levitra</a> [cialis.src21.net] - order levitra<a href="http://phentermine.src21.net/inorderviagrawith/"> order viagra</a> [phentermine.src21.net] - order viagra
+What no spouse of a writer can ever understand is that a writer is working
+when he's staring out the window.
+</font>
+       <br></td></tr></tbody></table></center></td></tr></tbody></table>
+<!--- Comment Ends ---->			 
+<table bgcolor="#241766" border="0" cellpadding="0" cellspacing="1" width="100%"><tbody><tr><td>
+<table bgcolor="#040732" border="0" cellpadding="8" cellspacing="1" width="100%"><tbody><tr><td>
+<center><font class="title"><b>Comment Post</b></font></center></td></tr></tbody></table></td></tr></tbody></table>
+<br><table bgcolor="#241766" border="0" cellpadding="0" cellspacing="1" width="100%"><tbody><tr><td>
+<table bgcolor="#040732" border="0" cellpadding="8" cellspacing="1" width="100%"><tbody><tr><td>
+<center>No Comments Allowed for Anonymous, please <a href="http://www.cfxweb.net/modules.php?name=Your_Account&amp;op=new_user">register</a><br><br>[ <a href="javascript:history.go(-1)">Go Back</a> ]</center></td></tr></tbody></table></td></tr></tbody></table>
+<br>
+</td></tr></tbody></table>
+  
+                  </td></tr>
+              <tr>
+                <td valign="bottom"><img src="modules.php_files/corner_lowleft.gif" height="13" width="13"></td>
+                <td class="menuitems">&nbsp;</td>
+                <td align="right" valign="bottom"><img src="modules.php_files/corner_lowright.gif" height="13" width="12"></td></tr></tbody></table></td><!-- Right col -->
+
+</tr></tbody></table></td></tr></tbody></table>
+
+
+
+
+<hr color="#ffcc44" width="100%">
+   <center><font class="tiny">
+    <br></font><center><font class="tiny"><font color="white" face="arial,verdana" size="1">
+© 1999-2004 <a href="http://www.cfxweb.net/modules.php?name=Content&amp;pa=showpage&amp;pid=1">CFXweb Team</a>, read our <a href="http://www.cfxweb.net/modules.php?name=Content&amp;pa=showpage&amp;pid=2">Legal Notice</a>. &nbsp; &nbsp; <font color="white" face="arial,verdana" size="1">[<a href="http://www.cfxweb.net/backend.php">XML news feed</a>]  
+</font><br><br>
+<img src="modules.php_files/cfxweb_button.gif" alt="CFXweb Button by SirFlow"><br>
+</font></font></center>
+
+<font class="tiny"><br></font><center><font class="tiny"><font color="gray" size="1">t: </font></font></center></center></body></html>

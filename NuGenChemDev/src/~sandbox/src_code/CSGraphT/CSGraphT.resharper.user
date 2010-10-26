@@ -1,0 +1,76 @@
+<Configuration>
+  <SharedSolutionDisabledTemplatesManager>
+    <DisabledTemplates />
+  </SharedSolutionDisabledTemplatesManager>
+  <UnitTestRunner>
+    <StartDirectory />
+    <UseShadowCopy>False</UseShadowCopy>
+  </UnitTestRunner>
+  <UserSolutionDisabledTemplatesManager>
+    <DisabledTemplates />
+  </UserSolutionDisabledTemplatesManager>
+  <FileStructureView>
+    <AutoScrollToSource>False</AutoScrollToSource>
+    <TrackCaretLocation>False</TrackCaretLocation>
+  </FileStructureView>
+  <ReFormatCode>
+    <ReorderMembers>False</ReorderMembers>
+    <OptimizeUsings>False</OptimizeUsings>
+    <RemoveRedundantThis>False</RemoveRedundantThis>
+    <ShortenReferences>False</ShortenReferences>
+  </ReFormatCode>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <EditorManager>
+    <RecentFiles>
+      <File id="D18F0875-AD63-4744-A3B2-A8CE00239165/d:org/d:_3pq/d:jgrapht/d:alg/f:StrongConnectivityInspector.cs" caret="14103" scrollPosition="0|310" />
+      <File id="D18F0875-AD63-4744-A3B2-A8CE00239165/d:org/d:_3pq/d:jgrapht/d:alg/f:DijkstraShortestPath.cs" caret="665" scrollPosition="0|0" />
+      <File id="D18F0875-AD63-4744-A3B2-A8CE00239165/d:org/d:_3pq/d:jgrapht/d:edge/f:DefaultEdge.cs" caret="817" scrollPosition="0|0" />
+      <File id="D18F0875-AD63-4744-A3B2-A8CE00239165/d:org/d:_3pq/d:jgrapht/d:edge/f:DirectedEdge.cs" caret="743" scrollPosition="0|0" />
+      <File id="D18F0875-AD63-4744-A3B2-A8CE00239165/d:org/d:_3pq/d:jgrapht/d:edge/f:DirectedWeightedEdge.cs" caret="817" scrollPosition="0|0" />
+      <File id="D18F0875-AD63-4744-A3B2-A8CE00239165/d:org/d:_3pq/d:jgrapht/d:edge/f:EdgeFactories.cs" caret="665" scrollPosition="0|0" />
+      <File id="D18F0875-AD63-4744-A3B2-A8CE00239165/d:org/d:_3pq/d:jgrapht/d:edge/f:UndirectedEdge.cs" caret="817" scrollPosition="0|0" />
+      <File id="D18F0875-AD63-4744-A3B2-A8CE00239165/d:org/d:_3pq/d:jgrapht/d:edge/f:UndirectedWeightedEdge.cs" caret="849" scrollPosition="0|0" />
+      <File id="D18F0875-AD63-4744-A3B2-A8CE00239165/d:org/d:_3pq/d:jgrapht/d:event/f:ConnectedComponentTraversalEvent.cs" caret="743" scrollPosition="0|0" />
+      <File id="D18F0875-AD63-4744-A3B2-A8CE00239165/d:org/d:_3pq/d:jgrapht/d:event/f:EdgeTraversalEvent.cs" caret="743" scrollPosition="0|0" />
+      <File id="D18F0875-AD63-4744-A3B2-A8CE00239165/d:org/d:_3pq/d:jgrapht/d:event/f:GraphChangeEvent.cs" caret="817" scrollPosition="0|0" />
+      <File id="D18F0875-AD63-4744-A3B2-A8CE00239165/d:org/d:_3pq/d:jgrapht/d:event/f:GraphEdgeChangeEvent.cs" caret="743" scrollPosition="0|0" />
+      <File id="D18F0875-AD63-4744-A3B2-A8CE00239165/d:org/d:_3pq/d:jgrapht/d:event/f:GraphListener.cs" caret="846" scrollPosition="0|0" />
+      <File id="D18F0875-AD63-4744-A3B2-A8CE00239165/d:org/d:_3pq/d:jgrapht/d:event/f:GraphVertexChangeEvent.cs" caret="665" scrollPosition="0|0" />
+      <File id="D18F0875-AD63-4744-A3B2-A8CE00239165/d:org/d:_3pq/d:jgrapht/d:event/f:VertexSetListener.cs" caret="0" scrollPosition="0|0" />
+      <File id="D18F0875-AD63-4744-A3B2-A8CE00239165/d:org/d:_3pq/d:jgrapht/d:event/f:TraversalListenerAdapter.cs" caret="0" scrollPosition="0|0" />
+      <File id="D18F0875-AD63-4744-A3B2-A8CE00239165/d:org/d:_3pq/d:jgrapht/d:event/f:TraversalListener.cs" caret="0" scrollPosition="0|0" />
+      <File id="D18F0875-AD63-4744-A3B2-A8CE00239165/d:org/d:_3pq/d:jgrapht/d:traverse/f:DepthFirstIterator.cs" caret="4338" scrollPosition="0|89" />
+      <File id="D18F0875-AD63-4744-A3B2-A8CE00239165/d:org/d:_3pq/d:jgrapht/d:traverse/f:CrossComponentIterator.cs" caret="6284" scrollPosition="0|137" />
+      <File id="D18F0875-AD63-4744-A3B2-A8CE00239165/d:org/d:_3pq/d:jgrapht/f:UndirectedGraph.cs" caret="1898" scrollPosition="0|30" />
+      <File id="D18F0875-AD63-4744-A3B2-A8CE00239165/d:org/d:_3pq/d:jgrapht/d:event/f:VertexTraversalEvent.cs" caret="2402" scrollPosition="0|39" />
+      <File id="D18F0875-AD63-4744-A3B2-A8CE00239165/d:org/d:_3pq/d:jgrapht/f:Graph.cs" caret="20177" scrollPosition="0|466" />
+      <File id="D18F0875-AD63-4744-A3B2-A8CE00239165/d:org/d:_3pq/d:jgrapht/d:graph/f:UndirectedSubgraph.cs" caret="1777" scrollPosition="0|35" />
+      <File id="D18F0875-AD63-4744-A3B2-A8CE00239165/f:SupportClass.cs" caret="4030" scrollPosition="0|96" />
+      <File id="D18F0875-AD63-4744-A3B2-A8CE00239165/d:org/d:_3pq/d:jgrapht/d:traverse/f:BreadthFirstIterator.cs" caret="3871" scrollPosition="0|83" />
+      <File id="D18F0875-AD63-4744-A3B2-A8CE00239165/d:org/d:_3pq/d:jgrapht/d:graph/f:SimpleGraph.cs" caret="0" scrollPosition="0|0" />
+      <File id="D18F0875-AD63-4744-A3B2-A8CE00239165/d:org/d:_3pq/d:jgrapht/d:graph/f:AbstractGraph.cs" caret="0" scrollPosition="0|0" />
+      <File id="D18F0875-AD63-4744-A3B2-A8CE00239165/d:org/d:_3pq/d:jgrapht/d:alg/f:ConnectivityInspector.cs" caret="9972" scrollPosition="0|241" />
+      <File id="D18F0875-AD63-4744-A3B2-A8CE00239165/d:org/d:_3pq/d:jgrapht/d:graph/f:Subgraph.cs" caret="20594" scrollPosition="0|590" />
+      <File id="D18F0875-AD63-4744-A3B2-A8CE00239165/d:org/d:_3pq/d:jgrapht/d:graph/f:AbstractBaseGraph.cs" caret="14995" scrollPosition="0|465" />
+    </RecentFiles>
+  </EditorManager>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Qualified:System.Collections.IEnumerator">
+      <Item value="Reset" priority="0" />
+      <Item value="MoveNext" priority="0" />
+      <Item value="Current" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Collections">
+      <Item value="DictionaryBase" priority="0" />
+      <Item value="DictionaryEntry" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.ICollection">
+      <Item value="GetEnumerator" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:org._3pq.jgrapht.alg.ConnectivityInspector">
+      <Item value="m_connectedSets" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

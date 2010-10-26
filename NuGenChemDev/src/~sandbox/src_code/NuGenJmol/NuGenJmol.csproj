@@ -1,0 +1,121 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A1B04ABF-145F-4CDD-8314-B8CE44AC5C96}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NuGenJmol</RootNamespace>
+    <AssemblyName>NuGenJmol</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.DirectX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.DirectX.Direct3D, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.DirectX.Direct3DX, Version=1.0.2911.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="NuGenCDKSharp, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\NuGenCDKSharp\bin\Release\NuGenCDKSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGenJavax, Version=1.0.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\javax\bin\Release\NuGenJavax.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGenNoiseLib, Version=1.0.2607.21359, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\NuGenNoiseLib\debug\NuGenNoiseLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlphaMonomer.cs" />
+    <Compile Include="AlphaPolymer.cs" />
+    <Compile Include="AminoMonomer.cs" />
+    <Compile Include="AminoPolymer.cs" />
+    <Compile Include="Atom.cs" />
+    <Compile Include="AtomIterator.cs" />
+    <Compile Include="Bond.cs" />
+    <Compile Include="BondIterator.cs" />
+    <Compile Include="Bspf.cs" />
+    <Compile Include="Bspt.cs" />
+    <Compile Include="Cartoon.cs" />
+    <Compile Include="CartoonRenderer.cs" />
+    <Compile Include="Chain.cs" />
+    <Compile Include="ChemFrame.cs" />
+    <Compile Include="ChemModel.cs" />
+    <Compile Include="Colix.cs" />
+    <Compile Include="Cylinder3D.cs" />
+    <Compile Include="Element.cs" />
+    <None Include="Frame.cs" />
+    <Compile Include="FrameRenderer.cs" />
+    <Compile Include="Group.cs" />
+    <Compile Include="Helix.cs" />
+    <Compile Include="Int2IntHash.cs" />
+    <Compile Include="JmolConstants.cs" />
+    <Compile Include="JmolSimpleViewer.cs" />
+    <Compile Include="JmolViewer.cs" />
+    <Compile Include="Leaf.cs" />
+    <Compile Include="Measurement.cs" />
+    <Compile Include="Measures.cs" />
+    <Compile Include="MeasuresRenderer.cs" />
+    <Compile Include="Mmset.cs" />
+    <Compile Include="Model.cs" />
+    <Compile Include="MoleculeTranslationService.cs" />
+    <Compile Include="Monomer.cs" />
+    <Compile Include="Mps.cs" />
+    <Compile Include="MpsRenderer.cs" />
+    <Compile Include="Node.cs" />
+    <Compile Include="NucleicMonomer.cs" />
+    <Compile Include="NucleicPolymer.cs" />
+    <Compile Include="NuGraphics3D.cs" />
+    <Compile Include="NuHermite3D.cs" />
+    <Compile Include="NuSceneBuffer3D.cs" />
+    <Compile Include="PendingMeasurement.cs" />
+    <Compile Include="PhosphorusMonomer.cs" />
+    <Compile Include="PhosphorusPolymer.cs" />
+    <Compile Include="Polymer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProteinStructure.cs" />
+    <Compile Include="Ribbons.cs" />
+    <Compile Include="RibbonsRenderer.cs" />
+    <Compile Include="Shade3D.cs" />
+    <Compile Include="Shape.cs" />
+    <Compile Include="ShapeRenderer.cs" />
+    <Compile Include="Sheet.cs" />
+    <Compile Include="SphereIterator.cs" />
+    <Compile Include="SupportClass.cs" />
+    <Compile Include="Tuple.cs" />
+    <Compile Include="Turn.cs" />
+    <Compile Include="Util.cs" />
+    <Compile Include="Viewer.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

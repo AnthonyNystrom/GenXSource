@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<molecule xmlns="http://www.xml-cml.org/schema/cml2/core" id="CS_4-amino-3H-pyrimidin-2-one">
+ <formula concise=" C 4 H 6 N 3 O 1 "/>
+ <identifier version="InChI/1">
+  <basic>1/C4H6N3O/c5-3-1-2-6-4(8)7-3/h1-2,7H,(H3,5,6,8)</basic>
+ </identifier>
+ <name convention="IUPAC">4-Amino-3H-pyrimidin-2-one</name>
+ <atomArray>
+  <atom id="a1" elementType="C" x3="1.146600" y3="0.044300" z3="-0.043300"/>
+  <atom id="a2" elementType="C" x3="1.005900" y3="-1.275400" z3="-0.169100"/>
+  <atom id="a3" elementType="N" x3="-0.246300" y3="-1.763100" z3="-0.165600"/>
+  <atom id="a4" elementType="C" x3="-1.295600" y3="-0.926600" z3="-0.038500"/>
+  <atom id="a5" elementType="N" x3="-1.075300" y3="0.401100" z3="0.084800"/>
+  <atom id="a6" elementType="C" x3="-0.065100" y3="0.868900" z3="0.089400"/>
+  <atom id="a7" elementType="O" x3="-2.434200" y3="-1.365800" z3="-0.034800"/>
+  <atom id="a8" elementType="H" x3="1.871400" y3="-1.929800" z3="-0.270400"/>
+  <atom id="a9" elementType="H" x3="-0.401900" y3="-2.747400" z3="-0.257300"/>
+  <atom id="a10" elementType="H" x3="-1.879900" y3="0.990200" z3="0.177100"/>
+  <atom id="a11" elementType="H" x3="2.136800" y3="0.499000" z3="-0.039200"/>
+  <atom id="a12" elementType="N" x3="0.056200" y3="2.188900" z3="0.216000"/>
+  <atom id="a13" elementType="H" x3="0.554100" y3="2.595300" z3="-0.652500"/>
+  <atom id="a14" elementType="H" x3="0.627200" y3="2.420200" z3="1.103600"/>
+ </atomArray>
+ <bondArray>
+  <bond atomRefs2="a1 a2" order="2"/>
+  <bond atomRefs2="a6 a1" order="1"/>
+  <bond atomRefs2="a1 a11" order="1"/>
+  <bond atomRefs2="a2 a3" order="1"/>
+  <bond atomRefs2="a2 a8" order="1"/>
+  <bond atomRefs2="a3 a4" order="1"/>
+  <bond atomRefs2="a3 a9" order="1"/>
+  <bond atomRefs2="a4 a5" order="1"/>
+  <bond atomRefs2="a4 a7" order="2"/>
+  <bond atomRefs2="a5 a6" order="2"/>
+  <bond atomRefs2="a5 a10" order="1"/>
+  <bond atomRefs2="a12 a6" order="1"/>
+  <bond atomRefs2="a12 a13" order="1"/>
+  <bond atomRefs2="a12 a14" order="1"/>
+ </bondArray>
+ <list>
+  <propertyList>
+   <property dictRef="cml:molwt" title="molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="cml:molwt" units="unit:g">112.1099</scalar>
+   </property>
+   <property dictRef="chemwt:exact_molwt" title="exact molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="chemwt:exact_molwt" units="unit:g">112.0510868</scalar>
+   </property>
+   <property dictRef="cml:mpt" title="melting point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:mpt" units="unit:celsius">&gt; 300</scalar>
+   </property>
+  </propertyList>
+ </list>
+</molecule>

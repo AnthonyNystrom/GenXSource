@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project>
+  <objectives>
+    <rollovers>
+      <objective desc="Metaball based effect"/>
+      <objective>Basic shading/scheme dialog</objective>
+    </rollovers>
+  </objectives>
+  <logs>
+    <todo>
+      <rollovers>
+        <item desc="Incorporation of better device handling and creation support" priority="low" status="50%"/>
+        <item desc="Options to toggle chemical structures (cartoons etc.)"/>
+        <item desc="Adaptive marching cube support" status="80%"/>
+        <item desc="Optimize isosurface point collection?"/>
+        <item desc="Scheme support in shading window for all current rendering types"/>
+        <item desc="Edit/use scheme window outside of context"/>
+      </rollovers>
+      <item desc="Effect structures" status="complete"/>
+      <item desc="Effects tab" status="50%"/>
+      <item desc="MetaBlobs scheme-effect combo addition"/>
+      <item desc="Add some simple effects"/>
+      <item desc="Refactor: Data buffers and creation system"/>
+    </todo>
+    <change>
+      <changes at="03/04/07">
+        <change>Light setup preview generation</change>
+        <change>Effects structures</change>
+      </changes>
+    </change>
+  </logs>
+</project>

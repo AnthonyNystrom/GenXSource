@@ -1,0 +1,47 @@
+<run>
+<precisionModel type="FLOATING"/>
+
+<case>
+<desc>Two distinct points</desc>
+  <a>
+    POINT (80 60)
+  </a>
+  <b>
+    POINT (260 100)
+  </b>
+  <test>
+    <op name="intersection" arg1="A" arg2="B">
+      GEOMETRYCOLLECTION EMPTY
+          </op>
+  </test>
+</case>
+
+<case>
+  <a>
+    LINESTRING (80 40, 200 120, 120 240)
+  </a>
+  <b>
+    LINESTRING (300 120, 460 220, 140 340)
+  </b>
+  <test>
+    <op name="intersection" arg1="A" arg2="B">
+      GEOMETRYCOLLECTION EMPTY
+          </op>
+  </test>
+</case>
+
+<case>
+  <a>
+    POLYGON ((80 60, 340 100, 320 220, 140 280, 40 220, 80 60))
+  </a>
+  <b>
+    POLYGON ((560 60, 700 180, 540 260, 480 200, 560 60))
+  </b>
+  <test>
+    <op name="intersection" arg1="A" arg2="B">
+      GEOMETRYCOLLECTION EMPTY
+          </op>
+  </test>
+</case>
+
+</run>

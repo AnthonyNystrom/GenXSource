@@ -1,0 +1,134 @@
+<Configuration>
+  <SharedSolutionDisabledTemplatesManager>
+    <DisabledTemplates />
+  </SharedSolutionDisabledTemplatesManager>
+  <UnitTestRunner>
+    <CustomStartDirectory>
+    </CustomStartDirectory>
+    <UseShadowCopy>False</UseShadowCopy>
+    <UseCustomFolder>False</UseCustomFolder>
+    <EnableUnitTesting>True</EnableUnitTesting>
+    <Providers />
+  </UnitTestRunner>
+  <UserSolutionDisabledTemplatesManager>
+    <DisabledTemplates />
+  </UserSolutionDisabledTemplatesManager>
+  <FileStructureView>
+    <AutoScrollToSource>False</AutoScrollToSource>
+    <TrackCaretLocation>False</TrackCaretLocation>
+  </FileStructureView>
+  <ReFormatCode>
+    <ReorderMembers>False</ReorderMembers>
+    <OptimizeUsings>False</OptimizeUsings>
+    <RemoveRedundantThis>False</RemoveRedundantThis>
+    <ShortenReferences>False</ShortenReferences>
+  </ReFormatCode>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <EditorManager>
+    <RecentFiles>
+      <File id="D54623F7-B066-4642-8DD6-C95AFF9DA401/f:SimpleGUILayer.cs" caret="10078" scrollPosition="0|303" />
+      <File id="D54623F7-B066-4642-8DD6-C95AFF9DA401/f:Molecule.config" caret="0" scrollPosition="0|0" />
+      <File id="D54623F7-B066-4642-8DD6-C95AFF9DA401/f:IEntity.cs" caret="1213" scrollPosition="0|28" />
+      <File id="D54623F7-B066-4642-8DD6-C95AFF9DA401/f:IChemEntity.cs" caret="1213" scrollPosition="0|20" />
+      <File id="D54623F7-B066-4642-8DD6-C95AFF9DA401/f:BoundingBoxEntity.cs" caret="1637" scrollPosition="0|43" />
+      <File id="22796E1E-6A64-4B1E-953B-471513B3EAA0/f:DevEnvIDEWindow.cs" caret="3698" scrollPosition="0|75" />
+      <File id="D54623F7-B066-4642-8DD6-C95AFF9DA401/f:ChemRenderingContext3D.cs" caret="1016" scrollPosition="0|11" />
+      <File id="D54623F7-B066-4642-8DD6-C95AFF9DA401/f:Chem3DControl.cs" caret="618" scrollPosition="0|0" />
+      <File id="D54623F7-B066-4642-8DD6-C95AFF9DA401/f:SceneManager.cs" caret="14426" scrollPosition="0|350" />
+      <File id="d:Miscellaneous Files/f:MoleculeControl.layer.xml" caret="369" scrollPosition="0|0" />
+      <File id="D54623F7-B066-4642-8DD6-C95AFF9DA401/f:MoleculeControlLayer.cs" caret="0" scrollPosition="0|0" />
+    </RecentFiles>
+  </EditorManager>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Qualified:@NuGenSVisualLib.Rendering.Chem.ControlMode">
+      <Item value="SelectionMovement" priority="1" />
+      <Item value="SelectionRotation" priority="1" />
+      <Item value="ViewMovement" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NuGenSVisualLib.Rendering.Chem.ControlMode">
+      <Item value="Selection" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Drawing.Color.DarkTurquoise">
+      <Item value="ToArgb" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Single">
+      <Item value="MinValue" priority="3" />
+      <Item value="MaxValue" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NuGenSVisualLib.Rendering.Chem.Structures.AtomSelectionEntity">
+      <Item value="BoundingBox" priority="3" />
+      <Item value="Atom" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NuGenSVisualLib.Rendering.BoundingBox">
+      <Item value="Dimensions" priority="3" />
+      <Item value="Centre" priority="3" />
+      <Item value="Position" priority="14" />
+      <Item value="Extent" priority="13" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NuGenSVisualLib.Rendering.Chem.Structures.AtomEntity">
+      <Item value="Atom" priority="0" />
+      <Item value="Dimensions3D" priority="0" />
+      <Item value="BoundingBox" priority="2" />
+      <Item value="ItemRadius" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.DirectX.Vector3">
+      <Item value="X" priority="20" />
+      <Item value="Y" priority="10" />
+      <Item value="Z" priority="10" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NuGenSVisualLib.Rendering.Layers.LayoutRules">
+      <Item value="XAxisPositionValue" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@NuGenSVisualLib.Rendering.Layers.LayoutRules+Positioning">
+      <Item value="Center" priority="1" />
+      <Item value="Far" priority="0" />
+      <Item value="Near" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NuGenSVisualLib.Rendering.Layers.GUILayerItem">
+      <Item value="Update" priority="0" />
+      <Item value="OnMouseLeave" priority="0" />
+      <Item value="MouseClick" priority="1" />
+      <Item value="MouseEnter" priority="1" />
+      <Item value="MouseLeave" priority="0" />
+      <Item value="WantMouseClicks" priority="0" />
+      <Item value="Enabled" priority="1" />
+      <Item value="Visible" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Org.OpenScience.CDK.Smiles">
+      <Item value="SmilesParser" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.ICollection">
+      <Item value="Count" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CSGraphT.SupportClass.SetSupport">
+      <Item value="Count" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ChemDevEnv.ViewTab">
+      <Item value="ChemControl" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NuGenSVisualLib.Rendering.Chem.IChemControl">
+      <Item value="ControlMode" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NuGenSVisualLib.Rendering.BoundingBoxEntity">
+      <Item value="Init" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:T">
+      <Item value="Atom" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <SettingsComponent>
+    <string />
+    <integer>
+      <setting name="UsedSolutionBuilderID">0</setting>
+    </integer>
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles />
+    <RecentEdits />
+  </RecentFiles>
+</Configuration>

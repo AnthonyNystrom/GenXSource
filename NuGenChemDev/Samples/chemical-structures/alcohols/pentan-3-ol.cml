@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<molecule xmlns="http://www.xml-cml.org/schema/cml2/core" id="CS_pentan-3-ol">
+ <formula concise=" C 5 H 12 O 1 "/>
+ <identifier version="InChI/1">
+  <basic>1/C5H12O/c1-3-5(6)4-2/h5-6H,3-4H2,1-2H3</basic>
+ </identifier>
+ <name convention="IUPAC">Pentan-3-ol</name>
+ <atomArray>
+  <atom id="a1" elementType="H" x3="-1.974900" y3="0.076100" z3="-0.904900"/>
+  <atom id="a2" elementType="C" x3="-2.461200" y3="0.066200" z3="-1.884600"/>
+  <atom id="a3" elementType="H" x3="-2.131800" y3="0.954300" z3="-2.432300"/>
+  <atom id="a4" elementType="H" x3="-2.107200" y3="-0.818300" z3="-2.422200"/>
+  <atom id="a5" elementType="C" x3="-3.974100" y3="0.053300" z3="-1.722200"/>
+  <atom id="a6" elementType="H" x3="-4.251500" y3="-0.862700" z3="-1.189300"/>
+  <atom id="a7" elementType="H" x3="-4.269200" y3="0.898800" z3="-1.092100"/>
+  <atom id="a8" elementType="C" x3="-4.707900" y3="0.119100" z3="-3.065100"/>
+  <atom id="a9" elementType="H" x3="-4.368600" y3="0.999400" z3="-3.623000"/>
+  <atom id="a10" elementType="O" x3="-4.368200" y3="-1.041500" z3="-3.825500"/>
+  <atom id="a11" elementType="H" x3="-4.232700" y3="-0.765100" z3="-4.747600"/>
+  <atom id="a12" elementType="C" x3="-6.226200" y3="0.179800" z3="-2.856100"/>
+  <atom id="a13" elementType="H" x3="-6.570800" y3="-0.732100" z3="-2.356400"/>
+  <atom id="a14" elementType="H" x3="-6.476900" y3="1.022800" z3="-2.203800"/>
+  <atom id="a15" elementType="C" x3="-6.999900" y3="0.327300" z3="-4.158000"/>
+  <atom id="a16" elementType="H" x3="-6.674800" y3="1.213300" z3="-4.711700"/>
+  <atom id="a17" elementType="H" x3="-6.873400" y3="-0.546600" z3="-4.803300"/>
+  <atom id="a18" elementType="H" x3="-8.069000" y3="0.433000" z3="-3.952200"/>
+ </atomArray>
+ <bondArray>
+  <bond atomRefs2="a1 a2" order="1"/>
+  <bond atomRefs2="a2 a3" order="1"/>
+  <bond atomRefs2="a2 a4" order="1"/>
+  <bond atomRefs2="a2 a5" order="1"/>
+  <bond atomRefs2="a5 a6" order="1"/>
+  <bond atomRefs2="a5 a7" order="1"/>
+  <bond atomRefs2="a5 a8" order="1"/>
+  <bond atomRefs2="a8 a9" order="1"/>
+  <bond atomRefs2="a8 a10" order="1"/>
+  <bond atomRefs2="a8 a12" order="1"/>
+  <bond atomRefs2="a10 a11" order="1"/>
+  <bond atomRefs2="a12 a13" order="1"/>
+  <bond atomRefs2="a12 a14" order="1"/>
+  <bond atomRefs2="a12 a15" order="1"/>
+  <bond atomRefs2="a15 a16" order="1"/>
+  <bond atomRefs2="a15 a17" order="1"/>
+  <bond atomRefs2="a15 a18" order="1"/>
+ </bondArray>
+ <list>
+  <propertyList>
+   <property dictRef="cml:molwt" title="molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="cml:molwt" units="unit:g">88.1482</scalar>
+   </property>
+   <property dictRef="chemwt:exact_molwt" title="exact molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="chemwt:exact_molwt" units="unit:g">88.0888150</scalar>
+   </property>
+   <property dictRef="cml:bpt" title="boiling point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:bpt" units="unit:celsius">115</scalar>
+   </property>
+  </propertyList>
+ </list>
+</molecule>

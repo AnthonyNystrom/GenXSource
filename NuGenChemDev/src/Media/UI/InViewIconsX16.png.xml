@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="windows-1250"?>
+
+<resource url="InViewIconsX16.png" mime="Content-Type:image/png">
+  <areas>
+    <icon id="xAxis">
+      <coords id="face" u="0" v="0" w="16" h="16"/>
+      <coords id="disabled" u="0" v="16" w="16" h="16"/>
+      <coords id="highlight" u="0" v="32" w="16" h="16"/>
+    </icon>
+    <icon id="yAxis">
+      <coords id="face" u="16" v="0" w="16" h="16"/>
+      <coords id="disabled" u="16" v="16" w="16" h="16"/>
+      <coords id="highlight" u="16" v="32" w="16" h="16"/>
+    </icon>
+    <icon id="zAxis">
+      <coords id="face" u="32" v="0" w="16" h="16"/>
+      <coords id="disabled" u="32" v="16" w="16" h="16"/>
+      <coords id="highlight" u="32" v="32" w="16" h="16"/>
+    </icon>
+    <icon id="tick">
+      <coords id="face" u="64" v="0" w="16" h="16"/>
+      <coords id="disabled" u="64" v="16" w="16" h="16"/>
+      <coords id="highlight" u="64" v="32" w="16" h="16"/>
+    </icon>
+    <icon id="cross">
+      <coords id="face" u="80" v="0" w="16" h="16"/>
+      <coords id="disabled" u="80" v="16" w="16" h="16"/>
+      <coords id="highlight" u="80" v="32" w="16" h="16"/>
+    </icon>
+  </areas>
+</resource>

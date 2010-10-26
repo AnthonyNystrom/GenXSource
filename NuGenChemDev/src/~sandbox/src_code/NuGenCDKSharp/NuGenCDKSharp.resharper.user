@@ -1,0 +1,101 @@
+<Configuration>
+  <SharedSolutionDisabledTemplatesManager>
+    <DisabledTemplates />
+  </SharedSolutionDisabledTemplatesManager>
+  <UnitTestRunner>
+    <StartDirectory />
+    <UseShadowCopy>False</UseShadowCopy>
+  </UnitTestRunner>
+  <UserSolutionDisabledTemplatesManager>
+    <DisabledTemplates />
+  </UserSolutionDisabledTemplatesManager>
+  <FileStructureView>
+    <AutoScrollToSource>False</AutoScrollToSource>
+    <TrackCaretLocation>False</TrackCaretLocation>
+  </FileStructureView>
+  <ReFormatCode>
+    <ReorderMembers>False</ReorderMembers>
+    <OptimizeUsings>False</OptimizeUsings>
+    <RemoveRedundantThis>False</RemoveRedundantThis>
+    <ShortenReferences>False</ShortenReferences>
+  </ReFormatCode>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <EditorManager>
+    <RecentFiles>
+      <File id="5DAAB443-414C-423A-AB54-B7C7F927DD25/f:BioPolymer.cs" caret="0" scrollPosition="0|0" />
+      <File id="5DAAB443-414C-423A-AB54-B7C7F927DD25/f:GeometryTools.cs" caret="102129" scrollPosition="0|1763" />
+      <File id="5DAAB443-414C-423A-AB54-B7C7F927DD25/f:SmilesGenerator.cs" caret="22899" scrollPosition="0|444" />
+      <File id="5DAAB443-414C-423A-AB54-B7C7F927DD25/f:MoleculeGraphs.cs" caret="1421" scrollPosition="0|27" />
+      <File id="5DAAB443-414C-423A-AB54-B7C7F927DD25/f:SSSRFinder.cs" caret="1416" scrollPosition="0|15" />
+      <File id="5DAAB443-414C-423A-AB54-B7C7F927DD25/f:SimpleCycleBasis.cs" caret="1434" scrollPosition="0|16" />
+      <File id="5DAAB443-414C-423A-AB54-B7C7F927DD25/f:MinimalPathIterator.cs" caret="2529" scrollPosition="0|53" />
+      <File id="5DAAB443-414C-423A-AB54-B7C7F927DD25/f:IValencyChecker.cs" caret="1783" scrollPosition="0|27" />
+      <File id="5DAAB443-414C-423A-AB54-B7C7F927DD25/f:InvalidSmilesException.cs" caret="1344" scrollPosition="0|12" />
+      <File id="5DAAB443-414C-423A-AB54-B7C7F927DD25/f:HydrogenAdder.cs" caret="11608" scrollPosition="0|250" />
+      <File id="5DAAB443-414C-423A-AB54-B7C7F927DD25/f:ValencyHybridChecker.cs" caret="8968" scrollPosition="0|217" />
+      <File id="5DAAB443-414C-423A-AB54-B7C7F927DD25/f:ValencyChecker.cs" caret="15638" scrollPosition="0|404" />
+      <File id="5DAAB443-414C-423A-AB54-B7C7F927DD25/f:SaturationChecker.cs" caret="20096" scrollPosition="0|552" />
+      <File id="5DAAB443-414C-423A-AB54-B7C7F927DD25/f:SmilesParser.cs" caret="2926" scrollPosition="0|56" />
+      <File id="5DAAB443-414C-423A-AB54-B7C7F927DD25/f:IChemObject.cs" caret="1752" scrollPosition="0|20" />
+      <File id="5DAAB443-414C-423A-AB54-B7C7F927DD25/f:AllRingsFinder.cs" caret="4752" scrollPosition="0|30" />
+      <File id="5DAAB443-414C-423A-AB54-B7C7F927DD25/f:IMolecule.cs" caret="1314" scrollPosition="0|0" />
+      <File id="5DAAB443-414C-423A-AB54-B7C7F927DD25/f:AtomContainer.cs" caret="51969" scrollPosition="0|1363" />
+      <File id="5DAAB443-414C-423A-AB54-B7C7F927DD25/f:IAtomContainer.cs" caret="1465" scrollPosition="0|29" />
+      <File id="5DAAB443-414C-423A-AB54-B7C7F927DD25/f:Molecule.cs" caret="3694" scrollPosition="0|60" />
+      <File id="5DAAB443-414C-423A-AB54-B7C7F927DD25/f:ChemObject.cs" caret="0" scrollPosition="0|0" />
+      <File id="5DAAB443-414C-423A-AB54-B7C7F927DD25/f:ElectronContainer.cs" caret="3223" scrollPosition="0|47" />
+      <File id="5DAAB443-414C-423A-AB54-B7C7F927DD25/f:Bond.cs" caret="14040" scrollPosition="0|396" />
+      <File id="5DAAB443-414C-423A-AB54-B7C7F927DD25/f:SupportClass.cs" caret="55855" scrollPosition="0|1331" />
+      <File id="5DAAB443-414C-423A-AB54-B7C7F927DD25/f:SetOfAtomContainers.cs" caret="7927" scrollPosition="0|236" />
+      <File id="5DAAB443-414C-423A-AB54-B7C7F927DD25/f:SimpleCycle.cs" caret="1987" scrollPosition="0|34" />
+      <File id="d:Miscellaneous Files/f:CycleBasis.java" caret="4554" scrollPosition="0|128" />
+      <File id="d:Miscellaneous Files/f:BiconnectivityInspector.java" caret="2911" scrollPosition="0|85" />
+      <File id="5DAAB443-414C-423A-AB54-B7C7F927DD25/f:CycleBasis.cs" caret="7766" scrollPosition="0|126" />
+      <File id="5DAAB443-414C-423A-AB54-B7C7F927DD25/f:BiconnectivityInspector.cs" caret="2842" scrollPosition="0|53" />
+    </RecentFiles>
+  </EditorManager>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Qualified:NuGenCDKSharp.Path">
+      <Item value="Count" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@">
+      <Item value="AddRange" priority="2" />
+      <Item value="Capacity" priority="0" />
+      <Item value="Count" priority="0" />
+      <Item value="Remove" priority="0" />
+      <Item value="AtomCount" priority="0" />
+      <Item value="Add" priority="0" />
+      <Item value="MoveNext" priority="1" />
+      <Item value="Current" priority="0" />
+      <Item value="Equals" priority="0" />
+      <Item value="Reverse" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Org.OpenScience.CDK.RingSearch.CycleBasis">
+      <Item value="CycleBasis" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@CSGraphT.SupportClass">
+      <Item value="HashSetSupport" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:org._3pq.jgrapht.Edge">
+      <Item value="Weight" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Org.Openscience.CDK.Ringsearch.Cyclebasis.SimpleCycle">
+      <Item value="Equals" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Support.SupportClass.SetSupport">
+      <Item value="AddAll" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:org.openscience.cdk.graph.MinimalPathIterator.MyBreadthFirstIterator">
+      <Item value="MoveNext" priority="0" />
+      <Item value="Current" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.IList">
+      <Item value="Add" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Org.OpenScience.CDK.Interfaces.IAtomContainer[]">
+      <Item value="Length" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

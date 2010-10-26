@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<molecule xmlns="http://www.xml-cml.org/schema/cml2/core" id="CS_1H-pyrimidine-2_4-dione">
+ <formula concise=" C 4 H 4 N 2 O 2 "/>
+ <identifier version="InChI/1">
+  <basic>1/C4H4N2O2/c7-3-1-2-5-4(8)6-3/h1-2H,(H2,5,6,7,8)</basic>
+ </identifier>
+ <name convention="IUPAC">1H-Pyrimidine-2,4-dione</name>
+ <atomArray>
+  <atom id="a1" elementType="C" x3="1.291000" y3="0.486500" z3="-0.069500"/>
+  <atom id="a2" elementType="C" x3="1.101100" y3="-0.830300" z3="0.034600"/>
+  <atom id="a3" elementType="N" x3="-0.152300" y3="-1.321700" z3="0.103500"/>
+  <atom id="a4" elementType="C" x3="-1.247000" y3="-0.533200" z3="0.071900"/>
+  <atom id="a5" elementType="N" x3="-1.097500" y3="0.802700" z3="-0.032600"/>
+  <atom id="a6" elementType="C" x3="0.120100" y3="1.369700" z3="-0.106300"/>
+  <atom id="a7" elementType="O" x3="-2.362000" y3="-1.024700" z3="0.137300"/>
+  <atom id="a8" elementType="O" x3="0.280800" y3="2.575500" z3="-0.201200"/>
+  <atom id="a9" elementType="H" x3="1.958000" y3="-1.503200" z3="0.063500"/>
+  <atom id="a10" elementType="H" x3="-0.278400" y3="-2.311600" z3="0.181300"/>
+  <atom id="a11" elementType="H" x3="-1.909600" y3="1.386400" z3="-0.055900"/>
+  <atom id="a12" elementType="H" x3="2.295800" y3="0.903900" z3="-0.126500"/>
+ </atomArray>
+ <bondArray>
+  <bond atomRefs2="a1 a2" order="2"/>
+  <bond atomRefs2="a6 a1" order="1"/>
+  <bond atomRefs2="a1 a12" order="1"/>
+  <bond atomRefs2="a2 a3" order="1"/>
+  <bond atomRefs2="a2 a9" order="1"/>
+  <bond atomRefs2="a3 a4" order="1"/>
+  <bond atomRefs2="a3 a10" order="1"/>
+  <bond atomRefs2="a4 a5" order="1"/>
+  <bond atomRefs2="a4 a7" order="2"/>
+  <bond atomRefs2="a5 a6" order="1"/>
+  <bond atomRefs2="a5 a11" order="1"/>
+  <bond atomRefs2="a6 a8" order="2"/>
+ </bondArray>
+ <list>
+  <propertyList>
+   <property dictRef="cml:molwt" title="molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="cml:molwt" units="unit:g">112.0868</scalar>
+   </property>
+   <property dictRef="chemwt:exact_molwt" title="exact molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="chemwt:exact_molwt" units="unit:g">112.0272774</scalar>
+   </property>
+   <property dictRef="cml:mpt" title="melting point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:mpt" units="unit:celsius">&gt; 300</scalar>
+   </property>
+  </propertyList>
+ </list>
+</molecule>

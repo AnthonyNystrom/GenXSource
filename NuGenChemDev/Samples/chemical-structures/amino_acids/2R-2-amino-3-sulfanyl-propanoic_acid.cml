@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<molecule xmlns="http://www.xml-cml.org/schema/cml2/core" id="CS_2R-2-amino-3-sulfanyl-propanoic_acid">
+ <formula concise=" C 3 H 7 N 1 O 2 S 1 "/>
+ <identifier version="InChI/1">
+  <basic>1/C3H7NO2S/c4-2(1-7)3(5)6/h2,7H,1,4H2,(H,5,6)/t2-/m0/s1</basic>
+ </identifier>
+ <name convention="IUPAC">(2R)-2-Amino-3-sulfanyl-propanoic acid</name>
+ <atomArray>
+  <atom id="a1" elementType="H" x3="-4.118300" y3="-0.660900" z3="-0.810600"/>
+  <atom id="a2" elementType="C" x3="-3.885600" y3="0.118700" z3="-1.544500"/>
+  <atom id="a3" elementType="N" x3="-2.451800" y3="0.016400" z3="-1.849000"/>
+  <atom id="a4" elementType="H" x3="-2.272800" y3="0.298800" z3="-2.813700"/>
+  <atom id="a5" elementType="H" x3="-2.144000" y3="-0.953700" z3="-1.776500"/>
+  <atom id="a6" elementType="C" x3="-4.179400" y3="1.519200" z3="-0.993200"/>
+  <atom id="a7" elementType="H" x3="-3.494200" y3="1.761800" z3="-0.174700"/>
+  <atom id="a8" elementType="H" x3="-4.054300" y3="2.284000" z3="-1.767000"/>
+  <atom id="a9" elementType="S" x3="-5.871000" y3="1.649800" z3="-0.340000"/>
+  <atom id="a10" elementType="H" x3="-5.778000" y3="2.922000" z3="0.074700"/>
+  <atom id="a11" elementType="C" x3="-4.663900" y3="-0.140000" z3="-2.832900"/>
+  <atom id="a12" elementType="O" x3="-4.154700" y3="-0.267000" z3="-3.937700"/>
+  <atom id="a13" elementType="O" x3="-6.010100" y3="-0.209000" z3="-2.634800"/>
+  <atom id="a14" elementType="H" x3="-6.303800" y3="0.024600" z3="-1.728600"/>
+ </atomArray>
+ <bondArray>
+  <bond atomRefs2="a1 a2" order="1"/>
+  <bond atomRefs2="a2 a3" order="1"/>
+  <bond atomRefs2="a2 a6" order="1"/>
+  <bond atomRefs2="a2 a11" order="1"/>
+  <bond atomRefs2="a3 a4" order="1"/>
+  <bond atomRefs2="a3 a5" order="1"/>
+  <bond atomRefs2="a6 a7" order="1"/>
+  <bond atomRefs2="a6 a8" order="1"/>
+  <bond atomRefs2="a6 a9" order="1"/>
+  <bond atomRefs2="a9 a10" order="1"/>
+  <bond atomRefs2="a11 a12" order="2"/>
+  <bond atomRefs2="a11 a13" order="1"/>
+  <bond atomRefs2="a13 a14" order="1"/>
+ </bondArray>
+ <list>
+  <propertyList>
+   <property dictRef="cml:molwt" title="molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="cml:molwt" units="unit:g">121.1582</scalar>
+   </property>
+   <property dictRef="chemwt:exact_molwt" title="exact molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="chemwt:exact_molwt" units="unit:g">121.0197495</scalar>
+   </property>
+   <property dictRef="cml:mpt" title="melting point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:mpt" units="unit:celsius">230</scalar>
+   </property>
+  </propertyList>
+ </list>
+</molecule>

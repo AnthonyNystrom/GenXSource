@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<stage version="1.0.0.0" started="" ended="">
+  <!-- Link to the cvs basecode -->
+  <cvs tag="weekly-stable-0-9-0-0-debug" branch="HEAD"/>
+  
+  <!-- Previous stage -->
+  <pStage version="0.9.0.0">
+    <cvs tag="weekly-stable-0-9-0-0-debug" branch="HEAD"/>
+    <!-- Items rolled over from previous versions -->
+    <rollovers>
+      <targets>
+        <target gid="1.0.0.0:3" notes="Not complete"/>
+      </targets>
+    </rollovers>
+  </pStage>
+  
+  <!-- Targets for this stage -->
+  <targets>
+    <target desc="Get to the next stage" state="incomplete" datedd="" uid="0"/>
+  </targets>
+  
+  <!-- Outputs from this stage -->
+  <outputs>
+    <!-- Reference to code builds in cvs -->
+    <cvs tag="weekly-stable-1-0-0-0-debug" branch="HEAD"/>
+    <!-- Reference to assembly dump -->
+    <build type="debug"/>
+  </outputs>
+  
+  <!-- Logs from this stage -->
+  <logs>
+    <todo></todo>
+    <change></change>
+  </logs>
+</stage>

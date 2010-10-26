@@ -1,0 +1,432 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5DAAB443-414C-423A-AB54-B7C7F927DD25}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NuGenCDKSharp</RootNamespace>
+    <AssemblyName>NuGenCDKSharp</AssemblyName>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>NuGenCDEKey.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="JmolSharp, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\JmolSharp\bin\Debug\JmolSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DirectX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="NuGenJavax, Version=1.0.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\javax\bin\Release\NuGenJavax.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGenJmol, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\NuGenJmol\bin\Debug\NuGenJmol.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ABINITFormat.cs" />
+    <Compile Include="Aces2Format.cs" />
+    <Compile Include="ADFFormat.cs" />
+    <Compile Include="AdjacencyMatrix.cs" />
+    <Compile Include="AlchemyFormat.cs" />
+    <Compile Include="AllRingsFinder.cs" />
+    <Compile Include="AminoAcid.cs" />
+    <Compile Include="AminoAcidManipulator.cs" />
+    <Compile Include="AminoAcids.cs" />
+    <Compile Include="AromaticityCalculator.cs" />
+    <Compile Include="Atom.cs" />
+    <Compile Include="AtomContainer.cs" />
+    <Compile Include="AtomContainerManipulator.cs" />
+    <Compile Include="AtomEnumeration.cs" />
+    <Compile Include="AtomParity.cs" />
+    <None Include="AtomSetCollection.cs" />
+    <None Include="AtomSetCollectionReader.cs" />
+    <Compile Include="AtomType.cs" />
+    <Compile Include="AtomTypeFactory.cs" />
+    <Compile Include="AtomTypeHandler.cs" />
+    <Compile Include="AtomTypeManipulator.cs" />
+    <Compile Include="AtomTypeReader.cs" />
+    <Compile Include="BFSShortestPath.cs" />
+    <Compile Include="BGFFormat.cs" />
+    <Compile Include="BiconnectivityInspector.cs" />
+    <Compile Include="BioPolymer.cs" />
+    <Compile Include="Bond.cs" />
+    <Compile Include="BondTools.cs" />
+    <Compile Include="BooleanIOSetting.cs" />
+    <Compile Include="BSFormat.cs" />
+    <Compile Include="Bspt.cs" />
+    <Compile Include="CacaoCartesianFormat.cs" />
+    <Compile Include="CacaoInternalFormat.cs" />
+    <Compile Include="CaCheFormat.cs" />
+    <Compile Include="CanonicalLabeler.cs" />
+    <Compile Include="CDKBasedAtomTypeConfigurator.cs" />
+    <Compile Include="CDKConstants.cs" />
+    <Compile Include="CDKException.cs" />
+    <Compile Include="CDKSourceCodeFormat.cs" />
+    <Compile Include="CDKSourceCodeWriter.cs" />
+    <Compile Include="CDOAcceptedObjects.cs" />
+    <Compile Include="Chem3D_Cartesian_1Format.cs" />
+    <Compile Include="Chem3D_Cartesian_2Format.cs" />
+    <Compile Include="ChemDrawFormat.cs" />
+    <Compile Include="ChemFile.cs" />
+    <Compile Include="ChemFileCDO.cs" />
+    <Compile Include="ChemFileManipulator.cs" />
+    <Compile Include="ChemicalMMReader.cs" />
+    <Compile Include="ChemModel.cs" />
+    <Compile Include="ChemModelManipulator.cs" />
+    <Compile Include="ChemObject.cs" />
+    <Compile Include="ChemObjectChangeEvent.cs" />
+    <Compile Include="ChemSequence.cs" />
+    <Compile Include="ChemSequenceManipulator.cs" />
+    <Compile Include="ChemtoolFormat.cs" />
+    <Compile Include="CIFFormat.cs" />
+    <Compile Include="CIFReader.cs" />
+    <Compile Include="CMLCoreModule.cs" />
+    <Compile Include="CMLErrorHandler.cs" />
+    <Compile Include="CMLFormat.cs" />
+    <Compile Include="CMLHandler.cs" />
+    <Compile Include="CMLReactionModule.cs" />
+    <Compile Include="CMLReader.cs" />
+    <Compile Include="CMLResolver.cs" />
+    <Compile Include="CMLRSSFormat.cs" />
+    <Compile Include="CMLStack.cs" />
+    <Compile Include="ConectivityChecker.cs" />
+    <Compile Include="Convertor.cs" />
+    <Compile Include="CRK2DFormat.cs" />
+    <Compile Include="CRK3DFormat.cs" />
+    <Compile Include="Crystal.cs" />
+    <Compile Include="CrystalGeometryTools.cs" />
+    <Compile Include="CrystClustFormat.cs" />
+    <Compile Include="CrystClustReader.cs" />
+    <Compile Include="CrystClustWriter.cs" />
+    <Compile Include="CycleBasis.cs" />
+    <Compile Include="DaltonFormat.cs" />
+    <Compile Include="DataFeatures.cs" />
+    <Compile Include="DefaultChemObjectBuilder.cs" />
+    <Compile Include="DefaultChemObjectReader.cs" />
+    <Compile Include="DefaultChemObjectWriter.cs" />
+    <Compile Include="Dictionary.cs" />
+    <Compile Include="DictionaryDatabase.cs" />
+    <Compile Include="DictionaryHandler.cs" />
+    <Compile Include="DictRef.cs" />
+    <Compile Include="DMol3Format.cs" />
+    <Compile Include="DOCK5Format.cs" />
+    <Compile Include="ElectronContainer.cs" />
+    <Compile Include="Element.cs" />
+    <Compile Include="ElementPTFactory.cs" />
+    <Compile Include="ElementPTHandler.cs" />
+    <Compile Include="ElementPTReader.cs" />
+    <Compile Include="EntityResolver.cs" />
+    <Compile Include="Entry.cs" />
+    <Compile Include="EnzymeResidueLocator.cs" />
+    <Compile Include="FenskeHall_ZMatrixFormat.cs" />
+    <Compile Include="FingerprintFormat.cs" />
+    <Compile Include="FortranFormat.cs" />
+    <Compile Include="GamessFormat.cs" />
+    <Compile Include="GamessReader.cs" />
+    <Compile Include="Gaussian03Format.cs" />
+    <Compile Include="Gaussian03Reader.cs" />
+    <Compile Include="Gaussian90Format.cs" />
+    <Compile Include="Gaussian92Format.cs" />
+    <Compile Include="Gaussian94Format.cs" />
+    <Compile Include="Gaussian95Format.cs" />
+    <Compile Include="Gaussian98Format.cs" />
+    <Compile Include="Gaussian98Reader.cs" />
+    <Compile Include="GaussianInputFormat.cs" />
+    <Compile Include="GeometryTools.cs" />
+    <Compile Include="GhemicalMMFormat.cs" />
+    <Compile Include="GhemicalSPMFormat.cs" />
+    <Compile Include="GROMOS96Format.cs" />
+    <Compile Include="HINFormat.cs" />
+    <Compile Include="HINReader.cs" />
+    <Compile Include="HINWriter.cs" />
+    <Compile Include="HueckelAromaticityDetector.cs" />
+    <Compile Include="HydrogenAdder.cs" />
+    <Compile Include="IAminoAcid.cs" />
+    <Compile Include="IAtom.cs" />
+    <Compile Include="IAtomContainer.cs" />
+    <Compile Include="IAtomParity.cs" />
+    <Compile Include="IAtomType.cs" />
+    <Compile Include="IAtomTypeConfiguration.cs" />
+    <Compile Include="IBioPolymer.cs" />
+    <Compile Include="IBond.cs" />
+    <Compile Include="IChemFile.cs" />
+    <Compile Include="IChemFormat.cs" />
+    <Compile Include="IChemFormatMatcher.cs" />
+    <Compile Include="IChemicalDocumentObject.cs" />
+    <Compile Include="IChemModel.cs" />
+    <Compile Include="IChemObject.cs" />
+    <Compile Include="IChemObjectBuilder.cs" />
+    <Compile Include="IChemObjectChangeEvent.cs" />
+    <Compile Include="IChemObjectIO.cs" />
+    <Compile Include="IChemObjectIOListener.cs" />
+    <Compile Include="IChemObjectListener.cs" />
+    <Compile Include="IChemObjectReader.cs" />
+    <Compile Include="IChemObjectWriter.cs" />
+    <Compile Include="IChemSequence.cs" />
+    <Compile Include="ICMLConvention.cs" />
+    <Compile Include="ICMLModule.cs" />
+    <Compile Include="ICrystal.cs" />
+    <Compile Include="IDCreator.cs" />
+    <Compile Include="IElectronContainer.cs" />
+    <Compile Include="IElement.cs" />
+    <Compile Include="IGraphMatrix.cs" />
+    <Compile Include="IIsotope.cs" />
+    <Compile Include="ILonePair.cs" />
+    <Compile Include="IMapping.cs" />
+    <Compile Include="IMolecule.cs" />
+    <Compile Include="IMonomer.cs" />
+    <Compile Include="INChIContentProcessorTool.cs" />
+    <Compile Include="INChIFormat.cs" />
+    <Compile Include="INChIPlainTextFormat.cs" />
+    <Compile Include="INChIPlainTextReader.cs" />
+    <Compile Include="InputSource.cs" />
+    <Compile Include="IntegerIOSetting.cs" />
+    <Compile Include="InvalidSmilesException.cs" />
+    <Compile Include="InvPair.cs" />
+    <Compile Include="IOSetting.cs" />
+    <Compile Include="IPolymer.cs" />
+    <Compile Include="IPseudoAtom.cs" />
+    <Compile Include="IQueryAtom.cs" />
+    <Compile Include="IQueryBond.cs" />
+    <Compile Include="IReaction.cs" />
+    <Compile Include="IReaderListener.cs" />
+    <Compile Include="IResourceFormat.cs" />
+    <Compile Include="IRing.cs" />
+    <Compile Include="IRingSet.cs" />
+    <Compile Include="ISetOfAtomContainers.cs" />
+    <Compile Include="ISetOfMolecules.cs" />
+    <Compile Include="ISetOfReactions.cs" />
+    <Compile Include="ISingleElectron.cs" />
+    <Compile Include="Isotope.cs" />
+    <Compile Include="IsotopeFactory.cs" />
+    <Compile Include="IsotopeHandler.cs" />
+    <Compile Include="IsotopeReader.cs" />
+    <Compile Include="IStrand.cs" />
+    <Compile Include="IValencyChecker.cs" />
+    <Compile Include="JaguarFormat.cs" />
+    <Compile Include="JMEFormat.cs" />
+    <Compile Include="JMEReader.cs" />
+    <None Include="JmolAdapter.cs" />
+    <Compile Include="JMOLANIMATIONConvention.cs" />
+    <Compile Include="LonePair.cs" />
+    <Compile Include="MACiEFormat.cs" />
+    <Compile Include="MACiEReader.cs" />
+    <Compile Include="MacroModelFormat.cs" />
+    <Compile Include="Mapping.cs" />
+    <Compile Include="MathTools.cs" />
+    <Compile Include="MDLFormat.cs" />
+    <Compile Include="MDLMolConvention.cs" />
+    <Compile Include="MDLReader.cs" />
+    <Compile Include="MDLRXNFormat.cs" />
+    <Compile Include="MDLRXNReader.cs" />
+    <Compile Include="MDLRXNV3000Format.cs" />
+    <Compile Include="MDLRXNV3000Reader.cs" />
+    <Compile Include="MDLRXNWriter.cs" />
+    <Compile Include="MDLV3000Format.cs" />
+    <Compile Include="MDLV3000Reader.cs" />
+    <Compile Include="MDLWriter.cs" />
+    <Compile Include="MinimalPathIterator.cs" />
+    <Compile Include="MMODFormat.cs" />
+    <Compile Include="Mol2Format.cs" />
+    <Compile Include="Mol2Reader.cs" />
+    <Compile Include="Mol2Writer.cs" />
+    <Compile Include="Molecule.cs" />
+    <Compile Include="MoleculeGraphs.cs" />
+    <Compile Include="Monomer.cs" />
+    <Compile Include="MOPAC2002Format.cs" />
+    <Compile Include="MOPAC7Format.cs" />
+    <Compile Include="MOPAC93Format.cs" />
+    <Compile Include="MOPAC97Format.cs" />
+    <Compile Include="MOPAC97Reader.cs" />
+    <Compile Include="MorganNumbersTools.cs" />
+    <Compile Include="MPQCFormat.cs" />
+    <Compile Include="NoSuchAtomTypeException.cs" />
+    <Compile Include="NWChemFormat.cs" />
+    <Compile Include="OWLFile.cs" />
+    <Compile Include="Path.cs" />
+    <Compile Include="PathTools.cs" />
+    <Compile Include="PCModelFormat.cs" />
+    <Compile Include="PDBAtom.cs" />
+    <Compile Include="PDBConvention.cs" />
+    <Compile Include="PDBFormat.cs" />
+    <Compile Include="PDBMLFormat.cs" />
+    <Compile Include="PDBMonomer.cs" />
+    <Compile Include="PDBPolymer.cs" />
+    <Compile Include="PDBReader.cs" />
+    <Compile Include="PDBStrand.cs" />
+    <Compile Include="PDBStructure.cs" />
+    <Compile Include="PeriodicTableElement.cs" />
+    <Compile Include="PhysicalConstants.cs" />
+    <Compile Include="PMPConvention.cs" />
+    <Compile Include="PMPFormat.cs" />
+    <Compile Include="Point.cs" />
+    <Compile Include="Polymer.cs" />
+    <Compile Include="POVRayFormat.cs" />
+    <Compile Include="PQSChemFormat.cs" />
+    <Compile Include="Primes.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PseudoAtom.cs" />
+    <Compile Include="PubChemFormat.cs" />
+    <Compile Include="QChemFormat.cs" />
+    <Compile Include="RawCopyFormat.cs" />
+    <Compile Include="Reaction.cs" />
+    <Compile Include="ReactionManipulator.cs" />
+    <Compile Include="ReaderEvent.cs" />
+    <Compile Include="ReaderFactory.cs" />
+    <Compile Include="RebondTool.cs" />
+    <None Include="Resolver.cs" />
+    <Compile Include="RGraph.cs" />
+    <Compile Include="Ring.cs" />
+    <Compile Include="RingPartitioner.cs" />
+    <Compile Include="RingSet.cs" />
+    <Compile Include="RingSetManipulator.cs" />
+    <Compile Include="RingSizeComparator.cs" />
+    <Compile Include="RMap.cs" />
+    <Compile Include="RNode.cs" />
+    <Compile Include="SaturationChecker.cs" />
+    <Compile Include="SDFFormat.cs" />
+    <Compile Include="SetOfAtomContainers.cs" />
+    <Compile Include="SetOfAtomContainersManipulator.cs" />
+    <Compile Include="SetOfMolecules.cs" />
+    <Compile Include="SetOfMoleculesManipulator.cs" />
+    <Compile Include="SetOfReactions.cs" />
+    <Compile Include="SetOfReactionsManipulator.cs" />
+    <Compile Include="ShelXFormat.cs" />
+    <Compile Include="SimpleCycle.cs" />
+    <Compile Include="SimpleCycleBasis.cs" />
+    <Compile Include="SingleElectron.cs" />
+    <None Include="SmarterJmolAdapter.cs" />
+    <Compile Include="SMARTSFormat.cs" />
+    <Compile Include="SMILESFIXFormat.cs" />
+    <Compile Include="SMILESFormat.cs" />
+    <Compile Include="SmilesGenerator.cs" />
+    <None Include="SMILESWriter.cs" />
+    <Compile Include="SmilesParser.cs" />
+    <Compile Include="SpanningTree.cs" />
+    <Compile Include="SpartanFormat.cs" />
+    <Compile Include="SSSRFinder.cs" />
+    <Compile Include="Strand.cs" />
+    <Compile Include="StringIOSetting.cs" />
+    <Compile Include="Structure.cs" />
+    <Compile Include="SupportClass.cs" />
+    <Compile Include="SVGFormat.cs" />
+    <Compile Include="SybylDescriptorFormat.cs" />
+    <Compile Include="TinkerMM2Format.cs" />
+    <Compile Include="TinkerXYZFormat.cs" />
+    <Compile Include="TurboMoleFormat.cs" />
+    <Compile Include="TXTBasedAtomTypeConfigurator.cs" />
+    <Compile Include="UniChemXYZFormat.cs" />
+    <Compile Include="UniversalIsomorphismTester.cs" />
+    <Compile Include="UnsupportedChemObjectException.cs" />
+    <Compile Include="ValencyChecker.cs" />
+    <Compile Include="ValencyHybridChecker.cs" />
+    <Compile Include="VASPFormat.cs" />
+    <Compile Include="VASPReader.cs" />
+    <Compile Include="ViewmolFormat.cs" />
+    <Compile Include="WriterFactory.cs" />
+    <Compile Include="XEDFormat.cs" />
+    <Compile Include="XYZFormat.cs" />
+    <Compile Include="XYZReader.cs" />
+    <Compile Include="XYZWriter.cs" />
+    <Compile Include="YasaraFormat.cs" />
+    <Compile Include="ZindoFormat.cs" />
+    <Compile Include="ZMatrixFormat.cs" />
+    <Compile Include="ZMatrixReader.cs" />
+    <Compile Include="ZMatrixTools.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="chemicalElements.xml" />
+    <EmbeddedResource Include="hybridization_atomtypes.xml" />
+    <EmbeddedResource Include="isotopes.xml" />
+    <EmbeddedResource Include="jmol_atomtypes.txt" />
+    <EmbeddedResource Include="mm2_atomtypes.xml" />
+    <EmbeddedResource Include="mmff94_atomtypes.xml" />
+    <EmbeddedResource Include="mol2_atomtypes.xml" />
+    <EmbeddedResource Include="pdb_atomtypes.xml" />
+    <EmbeddedResource Include="structgen_atomtypes.xml" />
+    <EmbeddedResource Include="valency2_atomtypes.xml" />
+    <EmbeddedResource Include="valency_atomtypes.xml" />
+    <EmbeddedResource Include="whim_weights.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="cml1_0_1.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="cml1_0_1.xsx">
+      <DependentUpon>cml1_0_1.xsd</DependentUpon>
+    </None>
+    <EmbeddedResource Include="cml23.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="cml23.xsx">
+      <DependentUpon>cml23.xsd</DependentUpon>
+    </None>
+    <EmbeddedResource Include="list_aminoacids.cml" />
+    <None Include="NuGenCDEKey.pfx" />
+    <EmbeddedResource Include="cmlAll.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmlCore.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="io-formats.set" />
+    <EmbeddedResource Include="log4j.properties" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CSGraphT\CSGraphT.csproj">
+      <Project>{D18F0875-AD63-4744-A3B2-A8CE00239165}</Project>
+      <Name>CSGraphT</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

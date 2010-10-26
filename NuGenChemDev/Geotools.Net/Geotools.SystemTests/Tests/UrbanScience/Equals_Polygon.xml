@@ -1,0 +1,12 @@
+<run>
+<precisionModel type="FLOATING"/>
+
+<case>
+  <a>
+    POLYGON ((120 300, 260 300, 260 200, 120 200, 120 300))
+  </a>  
+  <test>
+    <op name="Dimension" arg1="A">2</op>
+  </test>
+</case>
+</run>

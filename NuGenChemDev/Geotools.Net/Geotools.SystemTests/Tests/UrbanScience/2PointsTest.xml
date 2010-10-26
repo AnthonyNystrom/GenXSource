@@ -1,0 +1,64 @@
+<run>
+<precisionModel type="FLOATING"/>
+
+<case>
+  <a>
+    POINT (60 40)
+  </a>
+
+  <b>
+    POINT (200 180)
+  </b>
+<test>
+  <op name="relate" arg1="A" arg2="B" arg3="FF0FFF0F2">
+    true
+  </op>
+</test>
+<test>
+  <op name="getboundary" arg1="A">
+    GEOMETRYCOLLECTION EMPTY
+  </op>
+</test>
+<test>
+  <op name="isvalid" arg1="A">
+    true
+  </op>
+</test>
+<test>
+  <op name="issimple" arg1="A">
+    true
+  </op>
+</test>
+<test>
+  <op name="convexhull" arg1="A">
+    POINT (60 40)
+  </op>
+</test>
+<test>
+  <op name="intersection" arg1="A" arg2="B">
+    GEOMETRYCOLLECTION EMPTY
+  </op>
+</test>
+<test>
+  <op name="disjoint" arg1="A" arg2="B">
+    true
+  </op>
+</test>
+<test>
+  <op name="union" arg1="A" arg2="B">
+    MULTIPOINT (60 40, 200 180)
+  </op>
+</test>
+<test>
+  <op name="difference" arg1="A" arg2="B">
+    POINT (60 40)
+  </op>
+</test>
+<test>
+  <op name="symdifference" arg1="A" arg2="B">
+    MULTIPOINT (60 40, 200 180)
+  </op>
+</test>
+</case>
+
+</run>

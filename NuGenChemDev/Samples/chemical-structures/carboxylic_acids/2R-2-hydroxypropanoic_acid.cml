@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<molecule xmlns="http://www.xml-cml.org/schema/cml2/core" id="CS_2R-2-hydroxypropanoic_acid">
+ <formula concise=" C 3 H 6 O 3 "/>
+ <identifier version="InChI/1">
+  <basic>1/C3H6O3/c1-2(4)3(5)6/h2,4H,1H3,(H,5,6)/t2-/m1/s1</basic>
+ </identifier>
+ <name convention="IUPAC">(2R)-2-Hydroxypropanoic acid</name>
+ <atomArray>
+  <atom id="a1" elementType="H" x3="-1.912700" y3="0.119300" z3="-1.153400"/>
+  <atom id="a2" elementType="C" x3="-2.733600" y3="-0.386100" z3="-1.671600"/>
+  <atom id="a3" elementType="H" x3="-2.313600" y3="-1.002100" z3="-2.472500"/>
+  <atom id="a4" elementType="H" x3="-3.212100" y3="-1.070800" z3="-0.963900"/>
+  <atom id="a5" elementType="C" x3="-3.740200" y3="0.606600" z3="-2.232000"/>
+  <atom id="a6" elementType="H" x3="-3.247200" y3="1.262600" z3="-2.956900"/>
+  <atom id="a7" elementType="C" x3="-4.345400" y3="1.465700" z3="-1.138000"/>
+  <atom id="a8" elementType="O" x3="-3.730300" y3="2.178900" z3="-0.359000"/>
+  <atom id="a9" elementType="O" x3="-5.698600" y3="1.393300" z3="-1.150400"/>
+  <atom id="a10" elementType="H" x3="-6.066700" y3="1.957400" z3="-0.438000"/>
+  <atom id="a11" elementType="O" x3="-4.766400" y3="-0.126200" z3="-2.904100"/>
+  <atom id="a12" elementType="H" x3="-5.621000" y3="0.219100" z3="-2.590400"/>
+ </atomArray>
+ <bondArray>
+  <bond atomRefs2="a1 a2" order="1"/>
+  <bond atomRefs2="a2 a3" order="1"/>
+  <bond atomRefs2="a2 a4" order="1"/>
+  <bond atomRefs2="a2 a5" order="1"/>
+  <bond atomRefs2="a5 a6" order="1"/>
+  <bond atomRefs2="a5 a7" order="1"/>
+  <bond atomRefs2="a5 a11" order="1"/>
+  <bond atomRefs2="a7 a8" order="2"/>
+  <bond atomRefs2="a7 a9" order="1"/>
+  <bond atomRefs2="a9 a10" order="1"/>
+  <bond atomRefs2="a11 a12" order="1"/>
+ </bondArray>
+ <list>
+  <propertyList>
+   <property dictRef="cml:molwt" title="molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="cml:molwt" units="unit:g">90.0779</scalar>
+   </property>
+   <property dictRef="chemwt:exact_molwt" title="exact molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="chemwt:exact_molwt" units="unit:g">90.0316941</scalar>
+   </property>
+  </propertyList>
+ </list>
+</molecule>

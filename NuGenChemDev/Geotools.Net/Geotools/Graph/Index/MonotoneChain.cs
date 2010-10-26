@@ -1,0 +1,96 @@
+/*
+ *  Copyright (C) 2002 Urban Science Applications, Inc. (translated from Java Topology Suite, 
+ *  Copyright 2001 Vivid Solutions)
+ *
+ *  This library is free software; you can redistribute it and/or
+ *  modify it under the terms of the GNU Lesser General Public
+ *  License as published by the Free Software Foundation; either
+ *  version 2.1 of the License, or (at your option) any later version.
+ *
+ *  This library is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ *  Lesser General Public License for more details.
+ *
+ *  You should have received a copy of the GNU Lesser General Public
+ *  License along with this library; if not, write to the Free Software
+ *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ *
+ */
+
+#region Using
+using System;
+#endregion
+
+namespace Geotools.Graph.Index
+{
+	/// <summary>
+	/// Summary description for MonotoneChain.
+	/// </summary>
+	internal class MonotoneChain
+	{
+		MonotoneChainEdge _mce;
+		int _chainIndex;
+		int _geomIndex;
+
+		#region Constructors
+		/// <summary>
+		/// Initializes a new instance of the MonotoneChain class.
+		/// </summary>
+		public MonotoneChain( MonotoneChainEdge mce, int chainIndex, int geomIndex ) 
+		{
+			_mce = mce;
+			_chainIndex = chainIndex;
+			_geomIndex = geomIndex;
+		}
+
+		#endregion
+
+		#region Properties
+		/// <summary>
+		/// Returns the MonotoneChainEdge.
+		/// </summary>
+		public MonotoneChainEdge MonotoneChainEdge
+		{
+			get
+			{
+				return _mce;
+			}
+		}
+		/// <summary>
+		/// Returns the ChainIndex.
+		/// </summary>
+		public int ChainIndex
+		{
+			get
+			{
+				return _chainIndex;
+			}
+		}
+
+		/// <summary>
+		/// Returns the geometry index.
+		/// </summary>
+		public int GeomIndex
+		{
+			get
+			{
+				return _geomIndex;
+			}
+		}
+		#endregion
+
+		#region Methods
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="mc"></param>
+		/// <param name="si"></param>
+		public void ComputeIntersections(MonotoneChain mc, SegmentIntersector si)
+		{
+			_mce.ComputeIntersectsForChain( _chainIndex, mc.MonotoneChainEdge, mc.ChainIndex, si);
+		}
+		#endregion
+
+	}
+}

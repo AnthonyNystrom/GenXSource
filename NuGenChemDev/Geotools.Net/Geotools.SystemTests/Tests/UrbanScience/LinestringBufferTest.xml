@@ -1,0 +1,21 @@
+<run>
+<precisionModel type="FLOATING"/>
+
+<case>
+<desc>Linestring Buffer Test</desc>
+  <a>
+    LINESTRING (20 40, 180 60, 180 120)
+  </a>
+  <test>
+    <op name="getboundary" arg1="A">
+      MULTIPOINT (20 40, 180 120)
+          </op>
+  </test>
+  <test>
+    <op name="convexhull" arg1="A">
+      POLYGON ((20 40, 180 120, 180 60, 20 40))
+          </op>
+  </test>
+</case>
+
+</run>

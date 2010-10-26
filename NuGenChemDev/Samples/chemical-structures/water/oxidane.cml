@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<molecule xmlns="http://www.xml-cml.org/schema/cml2/core" id="CS_oxidane">
+ <formula concise=" H 2 O 1 "/>
+ <identifier version="InChI/1">
+  <basic>1/H2O/h1H2</basic>
+ </identifier>
+ <name convention="IUPAC">Oxidane</name>
+ <atomArray>
+  <atom id="a1" elementType="H" x3="-1.971800" y3="-0.042300" z3="-1.021600"/>
+  <atom id="a2" elementType="O" x3="-2.436900" y3="0.017000" z3="-1.869500"/>
+  <atom id="a3" elementType="H" x3="-3.374000" y3="-0.019400" z3="-1.625600"/>
+ </atomArray>
+ <bondArray>
+  <bond atomRefs2="a1 a2" order="1"/>
+  <bond atomRefs2="a2 a3" order="1"/>
+ </bondArray>
+ <list>
+  <propertyList>
+   <property dictRef="cml:molwt" title="molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="cml:molwt" units="unit:g">18.0153</scalar>
+   </property>
+   <property dictRef="chemwt:exact_molwt" title="exact molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="chemwt:exact_molwt" units="unit:g">18.0105647</scalar>
+   </property>
+   <property dictRef="cml:mpt" title="melting point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:mpt" units="unit:celsius">0</scalar>
+   </property>
+   <property dictRef="cml:bpt" title="boiling point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:bpt" units="unit:celsius">100</scalar>
+   </property>
+  </propertyList>
+ </list>
+</molecule>

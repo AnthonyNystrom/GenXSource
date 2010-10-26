@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<effect>
+  <description>
+    <p>Textured spheres allow for perlin generated textures to be used for diffuse colour
+       and normal map. The normal map is used for lighting, the height can be used for alpha
+       based bloom brightness pass.</p>
+    <p>This effect needs to be alpha enabled so that it can be blended over electron orbitals.</p>
+  </description>
+</effect>

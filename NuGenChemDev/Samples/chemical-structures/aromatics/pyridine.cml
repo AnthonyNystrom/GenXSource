@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<molecule xmlns="http://www.xml-cml.org/schema/cml2/core" id="CS_pyridine">
+ <formula concise=" C 5 H 5 N 1 "/>
+ <identifier version="InChI/1">
+  <basic>1/C5H5N/c1-2-4-6-5-3-1/h1-5H</basic>
+ </identifier>
+ <name convention="IUPAC">Pyridine</name>
+ <atomArray>
+  <atom id="a1" elementType="C" x3="1.105200" y3="0.600300" z3="-0.357300"/>
+  <atom id="a2" elementType="C" x3="0.104500" y3="0.929400" z3="-1.178500"/>
+  <atom id="a3" elementType="C" x3="0.850100" y3="-0.324700" z3="0.756700"/>
+  <atom id="a4" elementType="C" x3="-0.378100" y3="-0.820200" z3="0.928800"/>
+  <atom id="a5" elementType="C" x3="-1.456300" y3="-0.435300" z3="0.004300"/>
+  <atom id="a6" elementType="N" x3="-1.206200" y3="0.366300" z3="-0.949800"/>
+  <atom id="a7" elementType="H" x3="2.102400" y3="1.012000" z3="-0.509400"/>
+  <atom id="a8" elementType="H" x3="0.267400" y3="1.612600" z3="-2.011200"/>
+  <atom id="a9" elementType="H" x3="1.657700" y3="-0.601400" z3="1.433900"/>
+  <atom id="a10" elementType="H" x3="-0.584400" y3="-1.506800" z3="1.749200"/>
+  <atom id="a11" elementType="H" x3="-2.462300" y3="-0.832100" z3="0.133400"/>
+ </atomArray>
+ <bondArray>
+  <bond atomRefs2="a1 a2" order="2"/>
+  <bond atomRefs2="a1 a3" order="1"/>
+  <bond atomRefs2="a1 a7" order="1"/>
+  <bond atomRefs2="a2 a6" order="1"/>
+  <bond atomRefs2="a2 a8" order="1"/>
+  <bond atomRefs2="a3 a4" order="2"/>
+  <bond atomRefs2="a3 a9" order="1"/>
+  <bond atomRefs2="a4 a5" order="1"/>
+  <bond atomRefs2="a4 a10" order="1"/>
+  <bond atomRefs2="a5 a6" order="2"/>
+  <bond atomRefs2="a5 a11" order="1"/>
+ </bondArray>
+ <list>
+  <propertyList>
+   <property dictRef="cml:molwt" title="molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="cml:molwt" units="unit:g">79.0999</scalar>
+   </property>
+   <property dictRef="chemwt:exact_molwt" title="exact molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="chemwt:exact_molwt" units="unit:g">79.0421992</scalar>
+   </property>
+   <property dictRef="cml:mpt" title="melting point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:mpt" units="unit:celsius">-42</scalar>
+   </property>
+   <property dictRef="cml:bpt" title="boiling point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:bpt" units="unit:celsius">115</scalar>
+   </property>
+  </propertyList>
+ </list>
+</molecule>

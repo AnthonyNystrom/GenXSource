@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual C# Express 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DEffectLib", "DEffectLib\DEffectLib.csproj", "{A9710A18-73CB-407D-B0C5-40050484EA69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{ED44C48F-1D21-4845-9061-E934CB16C139}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A9710A18-73CB-407D-B0C5-40050484EA69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9710A18-73CB-407D-B0C5-40050484EA69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9710A18-73CB-407D-B0C5-40050484EA69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9710A18-73CB-407D-B0C5-40050484EA69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED44C48F-1D21-4845-9061-E934CB16C139}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED44C48F-1D21-4845-9061-E934CB16C139}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED44C48F-1D21-4845-9061-E934CB16C139}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED44C48F-1D21-4845-9061-E934CB16C139}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,192 @@
+;D(+)-Sucrose; cane or beet sugar.  
+;beta-D-Fructofuranosyl-alpha-D-glucopyranoside.  
+forcefield mm+
+sys 0
+view 40 0.17811 55 15 -0.8737095 0.2075825 0.4399332 0.1351957 -0.7651278 0.6295249 0.4672834 0.609499 0.6404351 5.4789 -4.104 -59.453
+seed -1109
+mol 1 "b-D-Fru"
+atom 1 O1 O O2 - -0.65 6.877931 2.333831 2.417298 2 2 s 12 s
+atom 2 C1 C C4 - 0.15 7.014814 1.398224 3.454091 4 1 s 3 s 13 s 14 s
+atom 3 C2 C C4 - 0.35 6.754287 -0.01352129 2.913452 4 2 s 4 s 5 s 11 s
+atom 4 O2 O O2 - -0.65 7.624101 -0.4704163 1.894709 2 3 s 24 s
+atom 5 C3 C C4 - 0.15 5.306003 -0.1852061 2.424545 4 3 s 6 s 9 s 15 s
+atom 6 C4 C C4 - 0.15 4.657907 -1.0737 3.48019 4 5 s 7 s 10 s 45 s
+atom 7 C5 C C4 - 0.1 5.848102 -1.767161 4.140348 4 6 s 8 s 11 s 16 s
+atom 8 C6 C C4 - 0.05 6.149293 -3.179089 3.624186 4 7 s 17 s 41 s 42 s
+atom 9 O3 O O2 - -0.65 5.272547 -0.842539 1.183067 2 5 s 18 s
+atom 10 O4 O O2 - -0.65 4.021955 -0.2480549 4.423618 2 6 s 44 s
+atom 11 O5 O O2 - -0.4 6.971537 -0.9335266 3.962678 2 7 s 3 s
+atom 12 HO1 H HO - 0.4 7.054755 3.184325 2.781151 1 1 s
+atom 13 H1A H H - 0.1 6.255475 1.665661 4.224482 1 2 s
+atom 14 H1B H H - 0.1 8.021956 1.527854 3.911944 1 2 s
+atom 15 H3 H H - 0.1 4.764606 0.7781065 2.273886 1 5 s
+atom 16 H5 H H - 0.1 5.695934 -1.838124 5.243877 1 7 s
+atom 17 O6B O O2 - 0 6.372987 -3.161522 2.240615 2 8 s 43 s
+atom 18 HO3 H HO - 0.4 4.373369 -0.8620726 0.9017585 1 9 s
+atom 19 O5 O O2 - -0.4 9.604569 -0.4947317 3.012348 2 20 s 24 s
+atom 20 C5 C C4 - 0.1 9.816101 -1.893084 3.033399 4 19 s 21 s 25 s 30 s
+atom 21 C4 C C4 - 0.15 10.60031 -2.360596 1.802614 4 20 s 22 s 26 s 31 s
+atom 22 C3 C C4 - 0.15 9.849321 -1.961397 0.532787 4 21 s 23 s 27 s 32 s
+atom 23 C2 C C4 - 0.15 9.6356 -0.4500826 0.5731675 4 22 s 24 s 28 s 33 s
+atom 24 C1 C C4 - 0.35 8.950863 0.0003709144 1.867492 4 23 s 19 s 29 s 4 s
+atom 25 H5 H H - 0.1 8.819335 -2.390225 3.036341 1 20 s
+atom 26 H4 H H - 0.1 11.63457 -1.942549 1.804371 1 21 s
+atom 27 H3 H H - 0.1 8.881112 -2.509189 0.4418733 1 22 s
+atom 28 H2 H H - 0.1 10.61434 0.07411902 0.4592702 1 23 s
+atom 29 H1 H H - 0.1 8.968045 1.112015 1.90194 1 24 s
+atom 30 C6 C C4 - 0.05 10.5164 -2.229106 4.355788 4 20 s 34 s 35 s 36 s
+atom 31 O4 O O2 - -0.65 10.72004 -3.760251 1.83298 2 21 s 37 s
+atom 32 O3 O O2 - -0.65 10.62536 -2.296928 -0.5890158 2 22 s 38 s
+atom 33 O2 O O2 - -0.65 8.851535 -0.06218473 -0.5265981 2 23 s 39 s
+atom 34 H6A H H - 0.1 9.93463 -1.859473 5.232094 1 30 s
+atom 35 O6 O O2 - -0.65 11.76921 -1.598103 4.397367 2 30 s 40 s
+atom 36 H6B H H - 0.1 10.69557 -3.323279 4.465681 1 30 s
+atom 37 HO4 H HO - 0.4 11.24737 -3.997541 1.089247 1 31 s
+atom 38 HO3 H HO - 0.4 10.17145 -1.956354 -1.341134 1 32 s
+atom 39 HO2 H HO - 0.4 7.957278 -0.2787875 -0.3235193 1 33 s
+atom 40 HO6 H HO - 0.4 12.17272 -1.827864 5.216932 1 35 s
+atom 41 - H H - 0 7.061507 -3.604597 4.103339 1 8 s
+atom 42 - H H - 0 5.289783 -3.866067 3.800924 1 8 s
+atom 43 - H HO - 0 6.748174 -3.990909 1.99898 1 17 s
+atom 44 - H HO - 0 3.553111 -0.8082626 5.018456 1 10 s
+atom 45 - H H - 0 3.882099 -1.768447 3.081539 1 6 s
+endmol 1
+selection _C6 2
+selectatom 8 molecule 1
+selectatom 30 molecule 1
+endselection _C6
+selection _HO1_ 1
+selectatom 12 molecule 1
+endselection _HO1_
+selection _O1_ 1
+selectatom 1 molecule 1
+endselection _O1_
+selection _C1_ 1
+selectatom 2 molecule 1
+endselection _C1_
+selection _H1A_ 1
+selectatom 13 molecule 1
+endselection _H1A_
+selection _H1B_ 1
+selectatom 14 molecule 1
+endselection _H1B_
+selection _O2_ 1
+selectatom 4 molecule 1
+endselection _O2_
+selection _C2_ 1
+selectatom 3 molecule 1
+endselection _C2_
+selection _HO3_ 1
+selectatom 18 molecule 1
+endselection _HO3_
+selection _O3_ 1
+selectatom 9 molecule 1
+endselection _O3_
+selection _C3_ 1
+selectatom 5 molecule 1
+endselection _C3_
+selection _H3_ 1
+selectatom 15 molecule 1
+endselection _H3_
+selection _O4_ 1
+selectatom 10 molecule 1
+endselection _O4_
+selection _C4_ 1
+selectatom 6 molecule 1
+endselection _C4_
+selection _C5_ 1
+selectatom 7 molecule 1
+endselection _C5_
+selection _O5_ 1
+selectatom 11 molecule 1
+endselection _O5_
+selection _H5_ 1
+selectatom 16 molecule 1
+endselection _H5_
+selection _H6A_ 1
+selectatom 17 molecule 1
+endselection _H6A_
+selection _C1 1
+selectatom 24 molecule 1
+endselection _C1
+selection _HO2 1
+selectatom 39 molecule 1
+endselection _HO2
+selection _O2 1
+selectatom 33 molecule 1
+endselection _O2
+selection _C2 1
+selectatom 23 molecule 1
+endselection _C2
+selection _HO3 1
+selectatom 38 molecule 1
+endselection _HO3
+selection _O3 1
+selectatom 32 molecule 1
+endselection _O3
+selection _C3 1
+selectatom 22 molecule 1
+endselection _C3
+selection _HO4 1
+selectatom 37 molecule 1
+endselection _HO4
+selection _O4 1
+selectatom 31 molecule 1
+endselection _O4
+selection _C4 1
+selectatom 21 molecule 1
+endselection _C4
+selection _C5 1
+selectatom 20 molecule 1
+endselection _C5
+selection _O5 1
+selectatom 19 molecule 1
+endselection _O5
+selection _HO6 1
+selectatom 40 molecule 1
+endselection _HO6
+selection _O6 1
+selectatom 35 molecule 1
+endselection _O6
+selection _H6A 1
+selectatom 34 molecule 1
+endselection _H6A
+selection _H6B 1
+selectatom 36 molecule 1
+endselection _H6B
+selection _H1 1
+selectatom 29 molecule 1
+endselection _H1
+selection _H2 1
+selectatom 28 molecule 1
+endselection _H2
+selection _H3 1
+selectatom 27 molecule 1
+endselection _H3
+selection _H4 1
+selectatom 26 molecule 1
+endselection _H4
+selection _H5 1
+selectatom 25 molecule 1
+endselection _H5
+selection _OL 1
+selectatom 4 molecule 1
+endselection _OL
+selection _CL1 1
+selectatom 3 molecule 1
+endselection _CL1
+selection _CL2 1
+selectatom 2 molecule 1
+endselection _CL2
+selection _CR1 1
+selectatom 24 molecule 1
+endselection _CR1
+selection _CR2 1
+selectatom 23 molecule 1
+endselection _CR2
+selection _CR2P 1
+selectatom 19 molecule 1
+endselection _CR2P
+selection _CR2PP 1
+selectatom 29 molecule 1
+endselection _CR2PP

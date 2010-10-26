@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="NuGenSVisualLib.Rendering.TwoD.RenderingContext2D">
+    <Position X="8.25" Y="2.5" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>RenderingContext2D.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="NuGenSVisualLib.Rendering.ThreeD.RenderingContext3D">
+    <Position X="8.25" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>RenderingContext3D.cs</FileName>
+      <HashCode>AAAAAAAAAIACAACAAAAAAAAAAEABAABAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="renderSource3D" Hidden="true" />
+      <Field Name="view3D" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="NuGenSVisualLib.Rendering.RenderingContext" FixedFromPoint="true">
+      <Path>
+        <Point X="7" Y="2.001" />
+        <Point X="8.25" Y="2.001" />
+      </Path>
+    </InheritanceLine>
+  </Class>
+  <Class Name="NuGenSVisualLib.Rendering.ThreeD.RenderingSource3D">
+    <Position X="3" Y="5.25" Width="2" />
+    <TypeIdentifier>
+      <FileName>RenderingSource3D.cs</FileName>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAggAAgA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="bounds" Hidden="true" />
+      <Field Name="origin" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NuGenSVisualLib.Rendering.TwoD.RenderingView2D">
+    <Position X="0.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>RenderingView2D.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAADACAAAwAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="centreX" Hidden="true" />
+      <Field Name="centreY" Hidden="true" />
+      <Field Name="scale" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NuGenSVisualLib.Rendering.ThreeD.RenderingView3D">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>RenderingView3D.cs</FileName>
+      <HashCode>ABAAEAAAAAAAEIAAAQCAAAAAAAIAACAAAQAgAAAQAAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="projection" Hidden="true" />
+      <Field Name="rotation" Hidden="true" />
+      <Field Name="scroll" Hidden="true" />
+      <Field Name="view" Hidden="true" />
+      <Field Name="world" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NuGenSVisualLib.Rendering.ThreeD.RenderingView3D_Orth">
+    <Position X="0.5" Y="6.75" Width="2" />
+    <TypeIdentifier>
+      <FileName>RenderingView3D.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="NuGenSVisualLib.Rendering.ThreeD.RenderingView3D_Orth.ViewProjTemplate" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>RenderingView3D.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+  </Class>
+  <Class Name="NuGenSVisualLib.Rendering.ThreeD.RenderingView3DPer">
+    <Position X="2.75" Y="7.75" Width="2" />
+    <TypeIdentifier>
+      <FileName>RenderingView3D.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NuGenSVisualLib.Rendering.ThreeD.ChemRenderingContext3DDX9">
+    <Position X="11.25" Y="2.5" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>ChemRenderingContext3D.cs</FileName>
+      <HashCode>AQAAAAIAgDACAAAAAAGAAAAAEACABAAAABAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="atomRenderer" Hidden="true" />
+      <Field Name="axis" Hidden="true" />
+      <Field Name="bondRenderer" Hidden="true" />
+      <Field Name="chemRenderingSource" Hidden="true" />
+      <Field Name="outputDescription" Hidden="true" />
+      <Field Name="settings" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="NuGenSVisualLib.Rendering.ThreeD.DX9.RenderingContext3DDX9">
+    <Position X="11.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <FileName>RenderingContext3DDX9.cs</FileName>
+      <HashCode>KCBAAAAGACAAAAAAQBAQAJQAAAAAACEAABAAABAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="device" Hidden="true" />
+      <Field Name="hasFocus" Hidden="true" />
+      <Field Name="isActive" Hidden="true" />
+      <Field Name="isDeviceLost" Hidden="true" />
+      <Field Name="isWindowActive" Hidden="true" />
+      <Field Name="presentParams" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="NuGenSVisualLib.Rendering.ThreeD.ChemRenderingSource3D">
+    <Position X="5.75" Y="5" Width="2" />
+    <TypeIdentifier>
+      <FileName>ChemRenderingSource3D.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAABAAIAgAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="file" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NuGenSVisualLib.Rendering.RenderingContext">
+    <Position X="5.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>RenderingContext.cs</FileName>
+      <HashCode>AAAAAAAAACACAAAAQgAAAAIAAIABAAAAARAAAAABIAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="background" Hidden="true" />
+      <Field Name="renderSource" Hidden="true" />
+      <Field Name="targetRenderArea" Hidden="true" />
+      <Field Name="view" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <Lollipop Position="0.21" />
+  </Class>
+  <Class Name="NuGenSVisualLib.Rendering.TwoD.RenderingContext2DGDI">
+    <Position X="8.25" Y="4.5" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>RenderingContext2DGDI.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NuGenSVisualLib.Rendering.TwoD.ChemRenderingContext2DGDI">
+    <Position X="11.25" Y="4.75" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>ChemRenderingContext2DGDI.cs</FileName>
+      <HashCode>AAAAAAAAACAAAAAAQAAAAAAAAAAAAAAAADAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NuGenSVisualLib.Rendering.TwoD.RenderingSource2D">
+    <Position X="5.75" Y="7.5" Width="2" />
+    <TypeIdentifier>
+      <FileName>RenderingSource2D.cs</FileName>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAggAAgA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="bounds" Hidden="true" />
+      <Field Name="origin" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NuGenSVisualLib.Rendering.TwoD.ChemRenderingSource2D">
+    <Position X="8.5" Y="7.5" Width="2" />
+    <TypeIdentifier>
+      <FileName>ChemRenderingSource2D.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAABAAICgAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="file" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="NuGenSVisualLib.Rendering.IRenderingContext">
+    <Position X="3" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <FileName>IRenderingContext.cs</FileName>
+      <HashCode>AAAAAAAAAAACAAAAQAAAAAIAAAABAAAAABAAAAABAAA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="RenderSource" />
+      <Property Name="View" />
+    </ShowAsAssociation>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+  </Interface>
+  <Interface Name="NuGenSVisualLib.Rendering.IChemRenderingContext" Collapsed="true">
+    <Position X="5.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>IChemRenderingContext.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="NuGenSVisualLib.Rendering.IRenderingSource">
+    <Position X="3" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <FileName>IRenderingSource.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="NuGenSVisualLib.Rendering.IRenderingView" Collapsed="true">
+    <Position X="0.5" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>IRenderingView.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="NuGenSVisualLib.Rendering.IChemRenderingSource">
+    <Position X="3" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <FileName>IChemRenderingSource.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="NuGenSVisualLib.IControlHandler">
+    <Position X="4.25" Y="10" Width="2" />
+    <TypeIdentifier>
+      <FileName>IControlHandler.cs</FileName>
+      <HashCode>AAAAAAAAAACAAIAAAAAAAAAAABIAAAAAIAAAAAACAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+</ClassDiagram>

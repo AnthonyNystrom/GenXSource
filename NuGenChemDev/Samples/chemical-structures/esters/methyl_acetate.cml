@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<molecule xmlns="http://www.xml-cml.org/schema/cml2/core" id="CS_methyl_acetate">
+ <formula concise=" C 3 H 6 O 2 "/>
+ <identifier version="InChI/1">
+  <basic>1/C3H6O2/c1-3(4)5-2/h1-2H3</basic>
+ </identifier>
+ <name convention="IUPAC">Methyl acetate</name>
+ <atomArray>
+  <atom id="a1" elementType="C" x3="1.799400" y3="-0.378000" z3="0.012500"/>
+  <atom id="a2" elementType="C" x3="0.447700" y3="0.276600" z3="0.002300"/>
+  <atom id="a3" elementType="O" x3="0.286000" y3="1.390800" z3="0.474000"/>
+  <atom id="a4" elementType="O" x3="-0.570100" y3="-0.546900" z3="-0.263100"/>
+  <atom id="a5" elementType="C" x3="-1.839900" y3="0.100600" z3="-0.097700"/>
+  <atom id="a6" elementType="H" x3="2.580900" y3="0.378100" z3="-0.154500"/>
+  <atom id="a7" elementType="H" x3="1.854500" y3="-1.135200" z3="-0.783700"/>
+  <atom id="a8" elementType="H" x3="1.967200" y3="-0.863000" z3="0.985500"/>
+  <atom id="a9" elementType="H" x3="-1.919300" y3="0.965900" z3="-0.773500"/>
+  <atom id="a10" elementType="H" x3="-1.972700" y3="0.430300" z3="0.944000"/>
+  <atom id="a11" elementType="H" x3="-2.633700" y3="-0.619200" z3="-0.345900"/>
+ </atomArray>
+ <bondArray>
+  <bond atomRefs2="a1 a2" order="1"/>
+  <bond atomRefs2="a1 a6" order="1"/>
+  <bond atomRefs2="a1 a7" order="1"/>
+  <bond atomRefs2="a1 a8" order="1"/>
+  <bond atomRefs2="a2 a3" order="2"/>
+  <bond atomRefs2="a2 a4" order="1"/>
+  <bond atomRefs2="a4 a5" order="1"/>
+  <bond atomRefs2="a5 a9" order="1"/>
+  <bond atomRefs2="a5 a10" order="1"/>
+  <bond atomRefs2="a5 a11" order="1"/>
+ </bondArray>
+ <list>
+  <propertyList>
+   <property dictRef="cml:molwt" title="molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="cml:molwt" units="unit:g">74.0785</scalar>
+   </property>
+   <property dictRef="chemwt:exact_molwt" title="exact molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="chemwt:exact_molwt" units="unit:g">74.0367794</scalar>
+   </property>
+   <property dictRef="cml:mpt" title="melting point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:mpt" units="unit:celsius">-98</scalar>
+   </property>
+   <property dictRef="cml:bpt" title="boiling point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:bpt" units="unit:celsius">57</scalar>
+   </property>
+  </propertyList>
+ </list>
+</molecule>

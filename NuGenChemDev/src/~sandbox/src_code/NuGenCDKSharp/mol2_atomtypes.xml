@@ -1,0 +1,70 @@
+<atomTypeList xmlns="http://www.xml-cml.org/schema/cml2/core"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.xml-cml.org/schema/cml2/core ../../io/cml/data/cmlAll.xsd"
+
+  xmlns:cvs="https://www.cvshome.org/"
+  xmlns:cdk="http://cdk.sf.net/dict/cdk/"
+
+  id="mol2" title="MOL2 AtomTypes">
+
+  <metadataList>
+    <metadata name="cvs:last-change-by" content="$Author: egonw $"/>
+    <metadata name="cvs:date" content="$Date: 2005-09-15 14:49:01 +0200 (Thu, 15 Sep 2005) $"/>
+    <metadata name="cvs:revision" content="$Revision: 4914 $"/>
+  </metadataList>
+  
+  <atomType id="C.3" title="1">
+    <atom elementType="C"/>
+    <scalar dataType="xsd:string" dictRef="cdk:hybridization">sp3</scalar>
+  </atomType>
+  <atomType id="C.2" title="2">
+    <atom elementType="C"/>
+    <scalar dataType="xsd:string" dictRef="cdk:hybridization">sp2</scalar>
+  </atomType>
+  <atomType id="C.ar" title="3">
+    <atom elementType="C"/>
+  </atomType>
+  <atomType id="C.1" title="4">
+    <atom elementType="C"/>
+    <scalar dataType="xsd:string" dictRef="cdk:hybridization">sp1</scalar>
+  </atomType>
+  <atomType id="N.3" title="5">
+    <atom elementType="N"/>
+    <scalar dataType="xsd:string" dictRef="cdk:hybridization">sp3</scalar>
+  </atomType>
+  <atomType id="N.2" title="6">
+    <atom elementType="N"/>
+    <scalar dataType="xsd:string" dictRef="cdk:hybridization">sp2</scalar>
+  </atomType>
+  <atomType id="N.1" title="7">
+    <atom elementType="N"/>
+    <scalar dataType="xsd:string" dictRef="cdk:hybridization">sp1</scalar>
+  </atomType>
+  <atomType id="O.3" title="8">
+    <atom elementType="O"/>
+    <scalar dataType="xsd:string" dictRef="cdk:hybridization">sp3</scalar>
+  </atomType>
+  <atomType id="O.2" title="9">
+    <atom elementType="O"/>
+    <scalar dataType="xsd:string" dictRef="cdk:hybridization">sp2</scalar>
+  </atomType>
+  <atomType id="P.3" title="12">
+    <atom elementType="P"/>
+    <scalar dataType="xsd:string" dictRef="cdk:hybridization">sp3</scalar>
+  </atomType>
+  <atomType id="H" title="13">
+    <atom elementType="H"/>
+  </atomType>
+  <atomType id="N.pl3" title="19">
+    <atom elementType="N"/>
+  </atomType>
+  <atomType id="N.4" title="31">
+    <atom elementType="N" formalCharge="1"/>
+    <scalar dataType="xsd:string" dictRef="cdk:hybridization">sp3</scalar>
+  </atomType>
+  <atomType id="C.cat" title="33">
+    <!-- "only used in a guadinium group" -->
+    <atom elementType="C" formalCharge="1"/>
+  </atomType>
+</atomTypeList>
+

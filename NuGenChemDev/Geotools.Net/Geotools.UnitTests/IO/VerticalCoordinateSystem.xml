@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<CS_VerticalCoordinateSystem>
+                <CS_Info AuthorityCode="5701" Abbreviation="ODN" Authority="EPSG" Name="Newlyn"/>
+                <CS_AxisInfo Name="Up" Orientation="UP"/>
+                <CS_VerticalDatum DatumType="2005">
+                    <CS_Info AuthorityCode="5101" Abbreviation="ODN" Authority="EPSG" Name="Ordnance Datum Newlyn"/>
+                </CS_VerticalDatum>
+                <CS_LinearUnit MetersPerUnit="1">
+                    <CS_Info AuthorityCode="9001" Abbreviation="m" Authority="EPSG" Name="metre"/>
+                </CS_LinearUnit>
+            </CS_VerticalCoordinateSystem>
+
+            

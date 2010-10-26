@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<molecule xmlns="http://www.xml-cml.org/schema/cml2/core" id="CS_but-1-ene">
+ <formula concise=" C 4 H 8 "/>
+ <identifier version="InChI/1">
+  <basic>1/C4H8/c1-3-4-2/h3H,1,4H2,2H3</basic>
+ </identifier>
+ <name convention="IUPAC">But-1-ene</name>
+ <atomArray>
+  <atom id="a1" elementType="C" x3="1.485400" y3="-0.399800" z3="-0.477200"/>
+  <atom id="a2" elementType="C" x3="0.477700" y3="0.573000" z3="0.169600"/>
+  <atom id="a3" elementType="C" x3="-0.757600" y3="-0.182100" z3="0.580500"/>
+  <atom id="a4" elementType="C" x3="-1.963400" y3="0.091200" z3="0.072300"/>
+  <atom id="a5" elementType="H" x3="-0.662400" y3="-0.979000" z3="1.317800"/>
+  <atom id="a6" elementType="H" x3="1.760900" y3="-1.185500" z3="0.242300"/>
+  <atom id="a7" elementType="H" x3="2.390300" y3="0.150100" z3="-0.776600"/>
+  <atom id="a8" elementType="H" x3="1.032500" y3="-0.863900" z3="-1.366100"/>
+  <atom id="a9" elementType="H" x3="0.935400" y3="1.031900" z3="1.059100"/>
+  <atom id="a10" elementType="H" x3="-2.100000" y3="0.879300" z3="-0.667200"/>
+  <atom id="a11" elementType="H" x3="-2.831000" y3="-0.481200" z3="0.398300"/>
+  <atom id="a12" elementType="H" x3="0.232300" y3="1.366000" z3="-0.552800"/>
+ </atomArray>
+ <bondArray>
+  <bond atomRefs2="a2 a1" order="1"/>
+  <bond atomRefs2="a1 a6" order="1"/>
+  <bond atomRefs2="a1 a7" order="1"/>
+  <bond atomRefs2="a1 a8" order="1"/>
+  <bond atomRefs2="a2 a3" order="1"/>
+  <bond atomRefs2="a2 a9" order="1"/>
+  <bond atomRefs2="a2 a12" order="1"/>
+  <bond atomRefs2="a3 a5" order="1"/>
+  <bond atomRefs2="a4 a3" order="2"/>
+  <bond atomRefs2="a4 a10" order="1"/>
+  <bond atomRefs2="a4 a11" order="1"/>
+ </bondArray>
+ <list>
+  <propertyList>
+   <property dictRef="cml:molwt" title="molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="cml:molwt" units="unit:g">56.1063</scalar>
+   </property>
+   <property dictRef="chemwt:exact_molwt" title="exact molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="chemwt:exact_molwt" units="unit:g">56.0626003</scalar>
+   </property>
+   <property dictRef="cml:mpt" title="melting point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:mpt" units="unit:celsius">-185</scalar>
+   </property>
+   <property dictRef="cml:bpt" title="boiling point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:bpt" units="unit:celsius">-6</scalar>
+   </property>
+  </propertyList>
+ </list>
+</molecule>

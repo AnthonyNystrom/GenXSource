@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<molecule xmlns="http://www.xml-cml.org/schema/cml2/core" id="CS_morpholine">
+ <formula concise=" C 4 H 9 N 1 O 1 "/>
+ <identifier version="InChI/1">
+  <basic>1/C4H9NO/c1-3-6-4-2-5-1/h5H,1-4H2</basic>
+ </identifier>
+ <name convention="IUPAC">Morpholine</name>
+ <atomArray>
+  <atom id="a1" elementType="C" x3="1.446200" y3="0.403500" z3="-0.043200"/>
+  <atom id="a2" elementType="C" x3="0.285400" y3="1.020800" z3="-0.849200"/>
+  <atom id="a3" elementType="O" x3="0.969400" y3="-0.061000" z3="1.227200"/>
+  <atom id="a4" elementType="C" x3="-0.042000" y3="-1.064000" z3="1.059400"/>
+  <atom id="a5" elementType="C" x3="-1.238600" y3="-0.482000" z3="0.279900"/>
+  <atom id="a6" elementType="N" x3="-0.773800" y3="0.013700" z3="-1.026100"/>
+  <atom id="a7" elementType="H" x3="2.218300" y3="1.169000" z3="0.125800"/>
+  <atom id="a8" elementType="H" x3="-0.111600" y3="1.894700" z3="-0.309900"/>
+  <atom id="a9" elementType="H" x3="0.368200" y3="-1.929400" z3="0.516800"/>
+  <atom id="a10" elementType="H" x3="-1.687200" y3="0.340900" z3="0.857500"/>
+  <atom id="a11" elementType="H" x3="0.654000" y3="1.342900" z3="-1.835000"/>
+  <atom id="a12" elementType="H" x3="-0.381800" y3="-1.395000" z3="2.052300"/>
+  <atom id="a13" elementType="H" x3="-1.993700" y3="-1.268000" z3="0.126700"/>
+  <atom id="a14" elementType="H" x3="-1.602100" y3="0.443400" z3="-1.572200"/>
+  <atom id="a15" elementType="H" x3="1.889000" y3="-0.429700" z3="-0.610000"/>
+ </atomArray>
+ <bondArray>
+  <bond atomRefs2="a1 a2" order="1"/>
+  <bond atomRefs2="a1 a3" order="1"/>
+  <bond atomRefs2="a1 a7" order="1"/>
+  <bond atomRefs2="a1 a15" order="1"/>
+  <bond atomRefs2="a2 a6" order="1"/>
+  <bond atomRefs2="a2 a8" order="1"/>
+  <bond atomRefs2="a2 a11" order="1"/>
+  <bond atomRefs2="a3 a4" order="1"/>
+  <bond atomRefs2="a4 a5" order="1"/>
+  <bond atomRefs2="a4 a9" order="1"/>
+  <bond atomRefs2="a4 a12" order="1"/>
+  <bond atomRefs2="a5 a6" order="1"/>
+  <bond atomRefs2="a5 a10" order="1"/>
+  <bond atomRefs2="a5 a13" order="1"/>
+  <bond atomRefs2="a6 a14" order="1"/>
+ </bondArray>
+ <list>
+  <propertyList>
+   <property dictRef="cml:molwt" title="molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="cml:molwt" units="unit:g">87.1204</scalar>
+   </property>
+   <property dictRef="chemwt:exact_molwt" title="exact molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="chemwt:exact_molwt" units="unit:g">87.0684139</scalar>
+   </property>
+   <property dictRef="cml:mpt" title="melting point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:mpt" units="unit:celsius">-6</scalar>
+   </property>
+   <property dictRef="cml:bpt" title="boiling point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:bpt" units="unit:celsius">129</scalar>
+   </property>
+  </propertyList>
+ </list>
+</molecule>

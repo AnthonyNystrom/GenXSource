@@ -1,0 +1,107 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NuGenSVisualLib_05", "NuGenSVisualLib\NuGenSVisualLib_05.csproj", "{D54623F7-B066-4642-8DD6-C95AFF9DA401}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B315C6F4-FC3B-4578-A4BA-33B32B5AE216}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChemDevEnv", "ChemDevEnv\ChemDevEnv.csproj", "{22796E1E-6A64-4B1E-953B-471513B3EAA0}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{DA9740E6-98D5-4407-AB94-7EE18BA0213C}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logs", "Logs", "{9244D177-05D6-4550-B12E-644372046B12}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+	ProjectSection(SolutionItems) = preProject
+		..\logs\log-1.1.2.1.xml = ..\logs\log-1.1.2.1.xml
+		..\logs\log-1.1.2.2.xml = ..\logs\log-1.1.2.2.xml
+		..\logs\log-1.1.2.3.xml = ..\logs\log-1.1.2.3.xml
+		..\logs\log-1.1.2.4.xml = ..\logs\log-1.1.2.4.xml
+		..\logs\log-1.1.2.5.xml = ..\logs\log-1.1.2.5.xml
+		..\logs\log-1.1.2.6.xml = ..\logs\log-1.1.2.6.xml
+		..\logs\log-1.1.2.7.xml = ..\logs\log-1.1.2.7.xml
+		..\logs\NuGenBioChemVF-1.1.3.1.xml = ..\logs\NuGenBioChemVF-1.1.3.1.xml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NuGenCDKSharp", "NuGenCDKSharp\NuGenCDKSharp.csproj", "{5DAAB443-414C-423A-AB54-B7C7F927DD25}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSGraphT", "CSGraphT\CSGraphT.csproj", "{D18F0875-AD63-4744-A3B2-A8CE00239165}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D54623F7-B066-4642-8DD6-C95AFF9DA401}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D54623F7-B066-4642-8DD6-C95AFF9DA401}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D54623F7-B066-4642-8DD6-C95AFF9DA401}.Debug|x86.ActiveCfg = Debug|x86
+		{D54623F7-B066-4642-8DD6-C95AFF9DA401}.Debug|x86.Build.0 = Debug|x86
+		{D54623F7-B066-4642-8DD6-C95AFF9DA401}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D54623F7-B066-4642-8DD6-C95AFF9DA401}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D54623F7-B066-4642-8DD6-C95AFF9DA401}.Release|x86.ActiveCfg = Release|x86
+		{D54623F7-B066-4642-8DD6-C95AFF9DA401}.Release|x86.Build.0 = Release|x86
+		{22796E1E-6A64-4B1E-953B-471513B3EAA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22796E1E-6A64-4B1E-953B-471513B3EAA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22796E1E-6A64-4B1E-953B-471513B3EAA0}.Debug|x86.ActiveCfg = Debug|x86
+		{22796E1E-6A64-4B1E-953B-471513B3EAA0}.Debug|x86.Build.0 = Debug|x86
+		{22796E1E-6A64-4B1E-953B-471513B3EAA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22796E1E-6A64-4B1E-953B-471513B3EAA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22796E1E-6A64-4B1E-953B-471513B3EAA0}.Release|x86.ActiveCfg = Release|x86
+		{22796E1E-6A64-4B1E-953B-471513B3EAA0}.Release|x86.Build.0 = Release|x86
+		{DA9740E6-98D5-4407-AB94-7EE18BA0213C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA9740E6-98D5-4407-AB94-7EE18BA0213C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA9740E6-98D5-4407-AB94-7EE18BA0213C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DA9740E6-98D5-4407-AB94-7EE18BA0213C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA9740E6-98D5-4407-AB94-7EE18BA0213C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA9740E6-98D5-4407-AB94-7EE18BA0213C}.Release|x86.ActiveCfg = Release|Any CPU
+		{5DAAB443-414C-423A-AB54-B7C7F927DD25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DAAB443-414C-423A-AB54-B7C7F927DD25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DAAB443-414C-423A-AB54-B7C7F927DD25}.Debug|x86.ActiveCfg = Debug|x86
+		{5DAAB443-414C-423A-AB54-B7C7F927DD25}.Debug|x86.Build.0 = Debug|x86
+		{5DAAB443-414C-423A-AB54-B7C7F927DD25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DAAB443-414C-423A-AB54-B7C7F927DD25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DAAB443-414C-423A-AB54-B7C7F927DD25}.Release|x86.ActiveCfg = Release|x86
+		{5DAAB443-414C-423A-AB54-B7C7F927DD25}.Release|x86.Build.0 = Release|x86
+		{D18F0875-AD63-4744-A3B2-A8CE00239165}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D18F0875-AD63-4744-A3B2-A8CE00239165}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D18F0875-AD63-4744-A3B2-A8CE00239165}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D18F0875-AD63-4744-A3B2-A8CE00239165}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D18F0875-AD63-4744-A3B2-A8CE00239165}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D18F0875-AD63-4744-A3B2-A8CE00239165}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9244D177-05D6-4550-B12E-644372046B12} = {B315C6F4-FC3B-4578-A4BA-33B32B5AE216}
+	EndGlobalSection
+EndGlobal

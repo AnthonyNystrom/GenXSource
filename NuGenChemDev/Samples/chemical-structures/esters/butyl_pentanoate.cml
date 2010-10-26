@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<molecule xmlns="http://www.xml-cml.org/schema/cml2/core" id="CS_butyl_pentanoate">
+ <formula concise=" C 9 H 18 O 2 "/>
+ <identifier version="InChI/1">
+  <basic>1/C9H18O2/c1-3-5-7-9(10)11-8-6-4-2/h3-8H2,1-2H3</basic>
+ </identifier>
+ <name convention="IUPAC">Butyl pentanoate</name>
+ <atomArray>
+  <atom id="a1" elementType="C" x3="0.463600" y3="0.271700" z3="0.197700"/>
+  <atom id="a2" elementType="O" x3="0.337000" y3="1.114400" z3="1.071900"/>
+  <atom id="a3" elementType="O" x3="-0.566700" y3="-0.405300" z3="-0.315800"/>
+  <atom id="a4" elementType="C" x3="-1.812400" y3="-0.019100" z3="0.282800"/>
+  <atom id="a5" elementType="H" x3="-1.999200" y3="1.052000" z3="0.109000"/>
+  <atom id="a6" elementType="H" x3="-1.789700" y3="-0.219700" z3="1.365300"/>
+  <atom id="a7" elementType="C" x3="-2.946700" y3="-0.843000" z3="-0.362000"/>
+  <atom id="a8" elementType="C" x3="1.805900" y3="-0.078900" z3="-0.381000"/>
+  <atom id="a9" elementType="C" x3="-4.310900" y3="-0.459600" z3="0.253600"/>
+  <atom id="a10" elementType="H" x3="-2.753000" y3="-1.913300" z3="-0.193300"/>
+  <atom id="a11" elementType="H" x3="-2.961700" y3="-0.646300" z3="-1.444800"/>
+  <atom id="a12" elementType="H" x3="-4.503800" y3="0.610900" z3="0.084800"/>
+  <atom id="a13" elementType="H" x3="-4.295100" y3="-0.656200" z3="1.336500"/>
+  <atom id="a14" elementType="C" x3="-5.443500" y3="-1.285100" z3="-0.393200"/>
+  <atom id="a15" elementType="H" x3="-5.269600" y3="-2.358200" z3="-0.222900"/>
+  <atom id="a16" elementType="H" x3="-5.478500" y3="-1.090100" z3="-1.475600"/>
+  <atom id="a17" elementType="H" x3="1.792500" y3="0.117500" z3="-1.463700"/>
+  <atom id="a18" elementType="H" x3="2.001100" y3="-1.148800" z3="-0.212800"/>
+  <atom id="a19" elementType="C" x3="2.922500" y3="0.758500" z3="0.280500"/>
+  <atom id="a20" elementType="H" x3="2.723900" y3="1.827800" z3="0.110600"/>
+  <atom id="a21" elementType="C" x3="4.297200" y3="0.390800" z3="-0.320900"/>
+  <atom id="a22" elementType="H" x3="2.932700" y3="0.559900" z3="1.363200"/>
+  <atom id="a23" elementType="H" x3="4.499800" y3="-0.677900" z3="-0.152000"/>
+  <atom id="a24" elementType="C" x3="5.414300" y3="1.227000" z3="0.339300"/>
+  <atom id="a25" elementType="H" x3="4.291100" y3="0.589200" z3="-1.403700"/>
+  <atom id="a26" elementType="H" x3="5.439900" y3="1.030500" z3="1.421600"/>
+  <atom id="a27" elementType="H" x3="5.231000" y3="2.298500" z3="0.168900"/>
+  <atom id="a28" elementType="H" x3="6.385500" y3="0.953400" z3="-0.099700"/>
+  <atom id="a29" elementType="H" x3="-6.407200" y3="-1.000600" z3="0.055500"/>
+ </atomArray>
+ <bondArray>
+  <bond atomRefs2="a1 a2" order="2"/>
+  <bond atomRefs2="a1 a3" order="1"/>
+  <bond atomRefs2="a1 a8" order="1"/>
+  <bond atomRefs2="a3 a4" order="1"/>
+  <bond atomRefs2="a4 a5" order="1"/>
+  <bond atomRefs2="a4 a6" order="1"/>
+  <bond atomRefs2="a4 a7" order="1"/>
+  <bond atomRefs2="a7 a9" order="1"/>
+  <bond atomRefs2="a7 a10" order="1"/>
+  <bond atomRefs2="a7 a11" order="1"/>
+  <bond atomRefs2="a8 a17" order="1"/>
+  <bond atomRefs2="a8 a18" order="1"/>
+  <bond atomRefs2="a8 a19" order="1"/>
+  <bond atomRefs2="a9 a12" order="1"/>
+  <bond atomRefs2="a9 a13" order="1"/>
+  <bond atomRefs2="a9 a14" order="1"/>
+  <bond atomRefs2="a14 a15" order="1"/>
+  <bond atomRefs2="a14 a16" order="1"/>
+  <bond atomRefs2="a14 a29" order="1"/>
+  <bond atomRefs2="a19 a20" order="1"/>
+  <bond atomRefs2="a19 a21" order="1"/>
+  <bond atomRefs2="a19 a22" order="1"/>
+  <bond atomRefs2="a21 a23" order="1"/>
+  <bond atomRefs2="a21 a24" order="1"/>
+  <bond atomRefs2="a21 a25" order="1"/>
+  <bond atomRefs2="a24 a26" order="1"/>
+  <bond atomRefs2="a24 a27" order="1"/>
+  <bond atomRefs2="a24 a28" order="1"/>
+ </bondArray>
+ <list>
+  <propertyList>
+   <property dictRef="cml:molwt" title="molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="cml:molwt" units="unit:g">158.2380</scalar>
+   </property>
+   <property dictRef="chemwt:exact_molwt" title="exact molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="chemwt:exact_molwt" units="unit:g">158.1306798</scalar>
+   </property>
+  </propertyList>
+ </list>
+</molecule>

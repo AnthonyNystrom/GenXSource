@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+            <CS_ProjectedCoordinateSystem>
+                <CS_Info AuthorityCode="27700" Abbreviation="British National Grid" Authority="EPSG" Name="OSGB 1936 / British National Grid"/>
+                <CS_AxisInfo Name="E" Orientation="EAST"/>
+                <CS_AxisInfo Name="N" Orientation="NORTH"/>
+                <CS_GeographicCoordinateSystem>
+                    <CS_Info AuthorityCode="4277" Authority="EPSG" Name="OSGB 1936"/>
+                    <CS_AxisInfo Name="Lat" Orientation="NORTH"/>
+                    <CS_AxisInfo Name="Long" Orientation="EAST"/>
+                    <CS_HorizontalDatum DatumType="1001">
+                        <CS_Info AuthorityCode="6277" Authority="EPSG" Name="OSGB_1936"/>
+                        <CS_Ellipsoid SemiMajorAxis="6377563.396" SemiMinorAxis="6356256.90923729" InverseFlattening="299.3249646" IvfDefinitive="1">
+                            <CS_Info AuthorityCode="7001" Authority="EPSG" Name="Airy 1830"/>
+                            <CS_LinearUnit MetersPerUnit="1">
+                                <CS_Info AuthorityCode="9001" Abbreviation="m" Authority="EPSG" Name="metre"/>
+                            </CS_LinearUnit>
+                        </CS_Ellipsoid>
+                        <CS_WGS84ConversionInfo Dx="375" Dy="-111" Dz="431" Ex="0" Ey="0" Ez="0" Ppm="0"/>
+                    </CS_HorizontalDatum>
+                    <CS_AngularUnit RadiansPerUnit="1.745329">
+                        <CS_Info AuthorityCode="9108" Authority="EPSG" Name="DMSH"/>
+                    </CS_AngularUnit>
+                    <CS_PrimeMeridian Longitude="0">
+                        <CS_Info AuthorityCode="8901" Authority="EPSG" Name="Greenwich"/>
+                        <CS_AngularUnit RadiansPerUnit="1.7453292">
+                            <CS_Info AuthorityCode="9110" Authority="EPSG" Name="DDD.MMSSsss"/>
+                        </CS_AngularUnit>
+                    </CS_PrimeMeridian>
+                </CS_GeographicCoordinateSystem>
+                <CS_LinearUnit MetersPerUnit="1">
+                    <CS_Info AuthorityCode="9001" Abbreviation="m" Authority="EPSG" Name="metre"/>
+                </CS_LinearUnit>
+                <CS_Projection ClassName="Transverse_Mercator">
+                    <CS_Info/>
+                    <CS_ProjectionParameter Name="latitude_of_origin" Value="49"/>
+                    <CS_ProjectionParameter Name="central_meridian" Value="-2"/>
+                    <CS_ProjectionParameter Name="scale_factor" Value="0.999601272"/>
+                    <CS_ProjectionParameter Name="false_easting" Value="400000"/>
+                    <CS_ProjectionParameter Name="false_northing" Value="-100000"/>
+                </CS_Projection>
+            </CS_ProjectedCoordinateSystem>
+            

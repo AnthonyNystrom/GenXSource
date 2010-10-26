@@ -1,0 +1,9 @@
+DATUM[
+    "OSGB 1936",
+    SPHEROID[
+        "Airy 1830",6377563.396,299.3249646,
+        AUTHORITY["EPSG","7001"]
+    ]
+    TOWGS84[0,0,0,0,0,0,0],
+    AUTHORITY["EPSG","6277"]
+]

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layer id="">
+  <enabled/>
+  <resources>
+    <rz id="xAxisIcon">file://Media/UI/InViewIconsX16.png:areas:icon:xAxis</rz>
+  </resources>
+  <layout>
+    <icon id="xAxisIcon" rz="xAxisIcon">
+      <position>10, 10</position>
+      <size>16, 16</size>
+      <highlight/>
+      <enabled/>
+    </icon>
+  </layout>
+</layer>

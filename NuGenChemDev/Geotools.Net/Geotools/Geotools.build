@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<project name="Main" default="Debug">
+    <property name="debug" value="true"/>   
+	<property name="bin.dir" value="bin"/>
+	<property name="build.dir" value="bin"/>
+	<property name="project.name" value="Geotools"/>
+	<property name="project.FormalName" value="Geotools"/>
+	
+	<!-- directory where temp .resources files are placed -->
+	<property name="resbuild.dir" value="ResBuild"/>
+	
+	<!-- directory where .resx files are -->
+	<property name="resources.dir" value="Resources"/>
+
+    
+    <!--
+    	Calls all sub-nant tasks to do a debug build
+    -->
+ 	<target name="Debug" description="Compiles a debug version">
+		<property name="Debug" value="true"/>
+		<property name="bin.dir" value="bin\Debug"/>
+		<call target="build"/>
+	</target>
+
+
+  	<!--
+    	Calls all sub-nant tasks to do a release build
+    -->
+	<target name="Release" description="Compiles a release version">
+		<property name="Debug" value="false"/>
+		<property name="bin.dir" value="bin\Release"/>
+		<call target="build"/>
+	</target>
+  
+	
+  	<!--
+    	Removes all resources, .pdb, .dll files that get generated during a build
+    	The sub-tasks get to clean their own files rather than this task cleaning
+    	up for everyone.
+    -->
+    <target name="clean" description="Removes temporary files generated during compilation.">
+        <delete verbose="true"  failonerror="false">
+            <fileset basedir="bin\Debug">
+                <includes name="${project.name}.dll"/>
+                <includes name="${project.name}.pdb"/>
+                <includes name="${project.name}.xml"/>
+           </fileset>
+        </delete>
+        <delete verbose="true"  failonerror="false">
+            <fileset basedir="bin\Release">
+                <includes name="${project.name}.dll"/>
+                <includes name="${project.name}.pdb"/>
+           </fileset>
+        </delete>
+        
+    </target>
+
+
+
+	<!--
+		This compiles the Geotools.dll		
+	-->
+    <target name="build" description="Compiles the system (defaults to a debug build).">
+		
+		 <mkdir dir="bin\Debug"/>
+		 <mkdir dir="bin\Release"/>
+		 
+		 <copy todir="${bin.dir}">
+			<fileset basedir="..\bin">
+				<includes name="*.dll"/>
+			</fileset>
+         </copy>
+
+		 
+		<!-- compile UrbanScience.dll -->
+        <csc target="library" output="${bin.dir}\${project.name}.dll"  doc="${bin.dir}\${project.name}.xml" debug="${Debug}">
+            <sources basedir=".">
+				<includes name="**.cs"/>
+           </sources>
+			<references basedir="bin\Debug">
+            <includes name="System.dll"/>
+		<includes name="DevelopmentStatus.dll"/>
+		    </references>
+<!--
+            <arg value="/warnaserror"/>
+-->
+            <arg value="/nologo"/>
+            <arg value="/nowarn:1591"/>
+        </csc>
+        
+
+        
+    </target> 
+</project>

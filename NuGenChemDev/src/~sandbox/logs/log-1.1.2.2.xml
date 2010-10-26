@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project>
+  <objectives>
+    <objective desc="Improved Volume Support" status="complete"/>
+    <objective desc="'Blobs' effect implementation" satus="complete"/>
+  </objectives>
+  <logs>
+    <todo>
+      <rollovers>
+        <item desc="Incorporation of better device handling and creation support" priority="low" status="50%"/>
+        <item desc="Options to toggle chemical structures (cartoons etc.)"/>
+        <item desc="Loading molecule feedback"/>
+        <item desc="Detect when shading descriptions change" priority="low"/>
+      </rollovers>
+      <item desc="Adaptive marching cube support" status="80%"/>
+      <item desc="Blending support for polygonised volumes" status="80%"/>
+      <item status="complete" desc="Indexed support for polygonised volumes"/>
+      <item desc="Optimize isosurface point collection?"/>
+      <item status="complete" desc="Blobs effect prototype working"/>
+    </todo>
+    <change>
+      <changes at="06/02/07">
+        <change>Implemented basic adaptive maching cubes and blending, not quite complete</change>
+      </changes>
+      <changes at="08/02/07">
+        <change>Effect framework changed to new version</change>
+        <change>Completed 'blobs' effect prototype</change>
+      </changes>
+    </change>
+  </logs>
+</project>

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<molecule xmlns="http://www.xml-cml.org/schema/cml2/core" id="CS_acetaldehyde">
+ <formula concise=" C 2 H 4 O 1 "/>
+ <identifier version="InChI/1">
+  <basic>1/C2H4O/c1-2-3/h2H,1H3</basic>
+ </identifier>
+ <name convention="IUPAC">Acetaldehyde</name>
+ <atomArray>
+  <atom id="a1" elementType="H" x3="-1.920600" y3="0.013100" z3="-0.972300"/>
+  <atom id="a2" elementType="C" x3="-2.566300" y3="0.028900" z3="-1.854600"/>
+  <atom id="a3" elementType="H" x3="-2.386000" y3="0.947700" z3="-2.420300"/>
+  <atom id="a4" elementType="H" x3="-2.345800" y3="-0.835500" z3="-2.486700"/>
+  <atom id="a5" elementType="C" x3="-3.996500" y3="-0.034500" z3="-1.418200"/>
+  <atom id="a6" elementType="H" x3="-4.276500" y3="-0.928700" z3="-0.838900"/>
+  <atom id="a7" elementType="O" x3="-4.819400" y3="0.832800" z3="-1.674000"/>
+ </atomArray>
+ <bondArray>
+  <bond atomRefs2="a1 a2" order="1"/>
+  <bond atomRefs2="a2 a3" order="1"/>
+  <bond atomRefs2="a2 a4" order="1"/>
+  <bond atomRefs2="a2 a5" order="1"/>
+  <bond atomRefs2="a5 a6" order="1"/>
+  <bond atomRefs2="a5 a7" order="2"/>
+ </bondArray>
+ <list>
+  <propertyList>
+   <property dictRef="cml:molwt" title="molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="cml:molwt" units="unit:g">44.0526</scalar>
+   </property>
+   <property dictRef="chemwt:exact_molwt" title="exact molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="chemwt:exact_molwt" units="unit:g">44.0262147</scalar>
+   </property>
+   <property dictRef="cml:mpt" title="melting point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:mpt" units="unit:celsius">-125</scalar>
+   </property>
+   <property dictRef="cml:bpt" title="boiling point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:bpt" units="unit:celsius">21</scalar>
+   </property>
+  </propertyList>
+ </list>
+</molecule>

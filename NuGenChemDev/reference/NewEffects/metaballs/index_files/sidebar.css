@@ -1,0 +1,21 @@
+#sidebarnav {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+#sidebarnav img {
+	border: 0px;
+}
+#sidebarnav div { clear: both; }
+#sidebarnav div img {
+	float: left;
+	margin-top: 1px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 1px;
+}
+#sidebar-adsense {
+	clear: both;
+	padding-left: 33px;
+	padding-top: 30px;
+}

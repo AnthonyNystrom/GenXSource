@@ -1,0 +1,78 @@
+<run>
+<precisionModel type="FLOATING"/>
+
+<case>
+  <desc>Dimension of a Geometry type - Point </desc>	
+  <a>
+    POINT(200 280)
+  </a>
+<test>
+  <op name="Dimension" arg1="A">0</op>
+</test>
+</case>
+<case>
+  <desc>Dimension of a Geometry type - LineString</desc>	
+  <a>
+    LINESTRING(200 280, 280 280)
+  </a>
+<test>
+  <op name="Dimension" arg1="A">1</op>
+</test>
+</case>
+<case>
+  <desc>Dimension of a Geometry type - Polygon</desc>	
+  <a>
+    POLYGON((200 280, 280 280, 320 240, 320 180, 280 140, 200 140, 160 180, 160 240, 200 280))
+  </a>
+<test>
+  <op name="numpoints" arg1="A">9</op>
+</test>
+</case>
+<case>
+  <desc>Number of Points in a Linestring</desc>	
+  <a>
+    LINESTRING (80 280, 220 280, 280 200, 380 180, 380 240, 480 240, 480 320, 380 320, 380 360, 480 360, 
+    540 320, 540 240, 480 180, 320 160, 140 160, 60 160, 60 260)
+  </a>
+<test>
+  <op name="numpoints" arg1="A">17</op>
+</test>
+</case>
+<case>
+  <desc>Number of Points in a MultiPoint</desc>	
+  <a>
+    MULTIPOINT (120 280, 180 260, 120 240, 160 220, 180 200, 
+    200 200, 240 240, 240 260, 200 320, 240 320, 260 280, 280 240, 240 200, 
+    120 160, 80 220, 100 280, 140 320, 180 340, 280 340, 320 300, 320 260, 320 200, 
+    260 180, 180 160, 240 120, 260 140, 280 140)
+  </a>
+<test>
+  <op name="numpoints" arg1="A">27</op>
+</test>
+</case>
+<case>
+  <desc>Number of Points in a MultiLineString</desc>	
+  <a>
+    MULTILINESTRING ((340 320, 460 300, 460 240, 480 180, 440 160, 380 120, 320 180, 260 240, 360 240, 360 200, 
+    400 200, 420 240, 420 280, 380 280, 360 260, 340 260, 340 280, 320 280, 320 260, 300 260, 
+    280 260, 260 260, 260 280),(260 380, 320 340, 220 320, 300 320, 340 320))
+  </a>
+<test>
+  <op name="numpoints" arg1="A">28</op>
+</test>
+</case>
+<case>
+  <desc>Number of Points in a MultiPolygon</desc>	
+  <a>
+    MULTIPOLYGON (((160 360, 460 360, 460 40, 160 40, 160 360), 
+    (220 340, 180 300, 220 260, 260 300, 220 340), 
+    (340 340, 380 340, 400 320, 400 280, 380 260, 340 260, 320 280, 320 320, 340 340), 
+    (220 240, 320 240, 300 200, 200 200, 220 240), 
+    (340 200, 400 200, 400 160, 340 160, 340 200), 
+    (200 160, 280 160, 280 100, 200 100, 200 160)))
+  </a>
+<test>
+  <op name="numpoints" arg1="A">34</op>
+</test>
+</case>
+</run>

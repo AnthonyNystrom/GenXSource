@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<molecule xmlns="http://www.xml-cml.org/schema/cml2/core" id="CS_4S-2_4-dimethylhexane">
+ <formula concise=" C 8 H 18 "/>
+ <identifier version="InChI/1">
+  <basic>1/C8H18/c1-5-8(4)6-7(2)3/h7-8H,5-6H2,1-4H3/t8-/m0/s1</basic>
+ </identifier>
+ <name convention="IUPAC">(4S)-2,4-Dimethylhexane</name>
+ <atomArray>
+  <atom id="a1" elementType="H" x3="-2.025300" y3="0.081200" z3="-1.043600"/>
+  <atom id="a2" elementType="C" x3="-2.566000" y3="-0.062500" z3="-1.984100"/>
+  <atom id="a3" elementType="H" x3="-2.225400" y3="0.707300" z3="-2.683900"/>
+  <atom id="a4" elementType="H" x3="-2.267100" y3="-1.038800" z3="-2.375000"/>
+  <atom id="a5" elementType="C" x3="-4.076500" y3="0.012500" z3="-1.762700"/>
+  <atom id="a6" elementType="H" x3="-4.363600" y3="-0.832600" z3="-1.127300"/>
+  <atom id="a7" elementType="C" x3="-4.419500" y3="1.293900" z3="-1.003600"/>
+  <atom id="a8" elementType="H" x3="-3.886800" y3="1.340600" z3="-0.048700"/>
+  <atom id="a9" elementType="H" x3="-4.151400" y3="2.184800" z3="-1.580800"/>
+  <atom id="a10" elementType="H" x3="-5.490300" y3="1.346800" z3="-0.783800"/>
+  <atom id="a11" elementType="C" x3="-4.896500" y3="-0.060000" z3="-3.065900"/>
+  <atom id="a12" elementType="H" x3="-5.940300" y3="0.143600" z3="-2.802400"/>
+  <atom id="a13" elementType="H" x3="-4.604800" y3="0.758100" z3="-3.734700"/>
+  <atom id="a14" elementType="C" x3="-4.812300" y3="-1.411400" z3="-3.810300"/>
+  <atom id="a15" elementType="H" x3="-4.404300" y3="-2.169200" z3="-3.132200"/>
+  <atom id="a16" elementType="C" x3="-6.218900" y3="-1.871900" z3="-4.204600"/>
+  <atom id="a17" elementType="H" x3="-6.870400" y3="-1.936100" z3="-3.327400"/>
+  <atom id="a18" elementType="H" x3="-6.682500" y3="-1.180100" z3="-4.915300"/>
+  <atom id="a19" elementType="H" x3="-6.207000" y3="-2.865200" z3="-4.660800"/>
+  <atom id="a20" elementType="C" x3="-3.905000" y3="-1.306400" z3="-5.053000"/>
+  <atom id="a21" elementType="H" x3="-4.444800" y3="-0.823000" z3="-5.874600"/>
+  <atom id="a22" elementType="H" x3="-3.045400" y3="-0.665900" z3="-4.842200"/>
+  <atom id="a23" elementType="C" x3="-3.372800" y3="-2.648200" z3="-5.536700"/>
+  <atom id="a24" elementType="H" x3="-2.850900" y3="-3.178200" z3="-4.734400"/>
+  <atom id="a25" elementType="H" x3="-4.172900" y3="-3.291400" z3="-5.912100"/>
+  <atom id="a26" elementType="H" x3="-2.663800" y3="-2.499100" z3="-6.356200"/>
+ </atomArray>
+ <bondArray>
+  <bond atomRefs2="a1 a2" order="1"/>
+  <bond atomRefs2="a2 a3" order="1"/>
+  <bond atomRefs2="a2 a4" order="1"/>
+  <bond atomRefs2="a2 a5" order="1"/>
+  <bond atomRefs2="a5 a6" order="1"/>
+  <bond atomRefs2="a5 a7" order="1"/>
+  <bond atomRefs2="a5 a11" order="1"/>
+  <bond atomRefs2="a7 a8" order="1"/>
+  <bond atomRefs2="a7 a9" order="1"/>
+  <bond atomRefs2="a7 a10" order="1"/>
+  <bond atomRefs2="a11 a12" order="1"/>
+  <bond atomRefs2="a11 a13" order="1"/>
+  <bond atomRefs2="a11 a14" order="1"/>
+  <bond atomRefs2="a14 a15" order="1"/>
+  <bond atomRefs2="a14 a16" order="1"/>
+  <bond atomRefs2="a14 a20" order="1"/>
+  <bond atomRefs2="a16 a17" order="1"/>
+  <bond atomRefs2="a16 a18" order="1"/>
+  <bond atomRefs2="a16 a19" order="1"/>
+  <bond atomRefs2="a20 a21" order="1"/>
+  <bond atomRefs2="a20 a22" order="1"/>
+  <bond atomRefs2="a20 a23" order="1"/>
+  <bond atomRefs2="a23 a24" order="1"/>
+  <bond atomRefs2="a23 a25" order="1"/>
+  <bond atomRefs2="a23 a26" order="1"/>
+ </bondArray>
+ <list>
+  <propertyList>
+   <property dictRef="cml:molwt" title="molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="cml:molwt" units="unit:g">114.2285</scalar>
+   </property>
+   <property dictRef="chemwt:exact_molwt" title="exact molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="chemwt:exact_molwt" units="unit:g">114.1408506</scalar>
+   </property>
+   <property dictRef="cml:bpt" title="boiling point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:bpt" units="unit:celsius">108</scalar>
+   </property>
+  </propertyList>
+ </list>
+</molecule>

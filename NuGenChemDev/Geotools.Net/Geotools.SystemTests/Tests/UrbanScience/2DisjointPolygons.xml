@@ -1,0 +1,74 @@
+<run>
+<precisionModel type="FLOATING"/>
+
+<case>
+  <a>
+    POLYGON ((40 20, 40 140, 260 160, 260 60, 260 20, 40 20))
+  </a>
+
+  <b>
+    POLYGON ((400 140, 420 40, 600 80, 600 120, 400 140))
+  </b>
+<test>
+  <op name="disjoint" arg1="A" arg2="B">
+    true
+  </op>
+</test>
+<test>
+  <op name="overlaps" arg1="A" arg2="B">
+    false
+  </op>
+</test>
+<test>
+  <op name="touches" arg1="A" arg2="B">
+    false
+  </op>
+</test>
+<test>
+  <op name="crosses" arg1="A" arg2="B">
+    false
+  </op>
+</test>
+<test>
+  <op name="within" arg1="A" arg2="B">
+    false
+  </op>
+</test>
+<test>
+  <op name="contains" arg1="A" arg2="B">
+    false
+  </op>
+</test>
+<test>
+  <op name="equals" arg1="A" arg2="B">
+    false
+  </op>
+</test>
+<test>
+  <op name="intersects" arg1="A" arg2="B">
+    false
+  </op>
+</test>
+<test>
+  <op name="isempty" arg1="A" arg2="B">
+    false
+  </op>
+</test>
+<test>
+  <op name="isvalid" arg1="A" arg2="B">
+    true
+  </op>
+</test>
+<test>
+  <op name="issimple" arg1="A" arg2="B">
+    true
+  </op>
+</test>
+<test>
+  <op name="intersection" arg1="A" arg2="B">
+    GEOMETRYCOLLECTION EMPTY
+  </op>
+</test>
+</case>
+
+</run>

@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<molecule xmlns="http://www.xml-cml.org/schema/cml2/core" id="CS_2R-2_6-diaminohexanoic_acid">
+ <formula concise=" C 6 H 14 N 2 O 2 "/>
+ <identifier version="InChI/1">
+  <basic>1/C6H14N2O2/c7-4-2-1-3-5(8)6(9)10/h5H,1-4,7-8H2,(H,9,10)/t5-/m1/s1</basic>
+ </identifier>
+ <name convention="IUPAC">(2R)-2,6-Diaminohexanoic acid</name>
+ <atomArray>
+  <atom id="a1" elementType="H" x3="-2.804400" y3="0.897700" z3="-2.247800"/>
+  <atom id="a2" elementType="C" x3="-3.725300" y3="0.488700" z3="-1.819700"/>
+  <atom id="a3" elementType="C" x3="-4.684200" y3="0.292200" z3="-2.989000"/>
+  <atom id="a4" elementType="O" x3="-5.477900" y3="1.143300" z3="-3.362900"/>
+  <atom id="a5" elementType="O" x3="-4.579700" y3="-0.924800" z3="-3.588300"/>
+  <atom id="a6" elementType="H" x3="-3.892100" y3="-1.493900" z3="-3.182000"/>
+  <atom id="a7" elementType="C" x3="-4.289900" y3="1.480500" z3="-0.790100"/>
+  <atom id="a8" elementType="H" x3="-4.484900" y3="2.433400" z3="-1.294200"/>
+  <atom id="a9" elementType="H" x3="-3.522700" y3="1.689600" z3="-0.036300"/>
+  <atom id="a10" elementType="C" x3="-5.575100" y3="1.027500" z3="-0.086500"/>
+  <atom id="a11" elementType="H" x3="-6.339500" y3="0.772100" z3="-0.827400"/>
+  <atom id="a12" elementType="H" x3="-5.389800" y3="0.125000" z3="0.503700"/>
+  <atom id="a13" elementType="C" x3="-6.110700" y3="2.121700" z3="0.834000"/>
+  <atom id="a14" elementType="H" x3="-5.345000" y3="2.386800" z3="1.571800"/>
+  <atom id="a15" elementType="H" x3="-6.312700" y3="3.026300" z3="0.249400"/>
+  <atom id="a16" elementType="C" x3="-7.383100" y3="1.678200" z3="1.548700"/>
+  <atom id="a17" elementType="H" x3="-8.162800" y3="1.429900" z3="0.821300"/>
+  <atom id="a18" elementType="H" x3="-7.189700" y3="0.781100" z3="2.144900"/>
+  <atom id="a19" elementType="N" x3="-7.859100" y3="2.740000" z3="2.426300"/>
+  <atom id="a20" elementType="H" x3="-8.608100" y3="2.382500" z3="3.018300"/>
+  <atom id="a21" elementType="H" x3="-8.267800" y3="3.491300" z3="1.871200"/>
+  <atom id="a22" elementType="N" x3="-3.381600" y3="-0.806300" z3="-1.218800"/>
+  <atom id="a23" elementType="H" x3="-2.793100" y3="-0.650400" z3="-0.399700"/>
+  <atom id="a24" elementType="H" x3="-4.216100" y3="-1.267100" z3="-0.856000"/>
+ </atomArray>
+ <bondArray>
+  <bond atomRefs2="a1 a2" order="1"/>
+  <bond atomRefs2="a2 a3" order="1"/>
+  <bond atomRefs2="a2 a7" order="1"/>
+  <bond atomRefs2="a2 a22" order="1"/>
+  <bond atomRefs2="a3 a4" order="2"/>
+  <bond atomRefs2="a3 a5" order="1"/>
+  <bond atomRefs2="a5 a6" order="1"/>
+  <bond atomRefs2="a7 a8" order="1"/>
+  <bond atomRefs2="a7 a9" order="1"/>
+  <bond atomRefs2="a7 a10" order="1"/>
+  <bond atomRefs2="a10 a11" order="1"/>
+  <bond atomRefs2="a10 a12" order="1"/>
+  <bond atomRefs2="a10 a13" order="1"/>
+  <bond atomRefs2="a13 a14" order="1"/>
+  <bond atomRefs2="a13 a15" order="1"/>
+  <bond atomRefs2="a13 a16" order="1"/>
+  <bond atomRefs2="a16 a17" order="1"/>
+  <bond atomRefs2="a16 a18" order="1"/>
+  <bond atomRefs2="a16 a19" order="1"/>
+  <bond atomRefs2="a19 a20" order="1"/>
+  <bond atomRefs2="a19 a21" order="1"/>
+  <bond atomRefs2="a22 a23" order="1"/>
+  <bond atomRefs2="a22 a24" order="1"/>
+ </bondArray>
+ <list>
+  <propertyList>
+   <property dictRef="cml:molwt" title="molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="cml:molwt" units="unit:g">146.1876</scalar>
+   </property>
+   <property dictRef="chemwt:exact_molwt" title="exact molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="chemwt:exact_molwt" units="unit:g">146.1055277</scalar>
+   </property>
+   <property dictRef="cml:mpt" title="melting point">
+    <!-- decomposition -->
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:mpt" units="unit:celsius">215</scalar>
+   </property>
+  </propertyList>
+ </list>
+</molecule>

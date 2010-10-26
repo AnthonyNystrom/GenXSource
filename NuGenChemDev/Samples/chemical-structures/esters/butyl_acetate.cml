@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<molecule xmlns="http://www.xml-cml.org/schema/cml2/core" id="CS_butyl_acetate">
+ <formula concise=" C 6 H 12 O 2 "/>
+ <identifier version="InChI/1">
+  <basic>1/C6H12O2/c1-3-4-5-8-6(2)7/h3-5H2,1-2H3</basic>
+ </identifier>
+ <name convention="IUPAC">Butyl acetate</name>
+ <atomArray>
+  <atom id="a1" elementType="C" x3="2.539400" y3="0.691100" z3="0.276200"/>
+  <atom id="a2" elementType="O" x3="2.416700" y3="1.534500" z3="1.150300"/>
+  <atom id="a3" elementType="O" x3="1.508800" y3="0.014300" z3="-0.237100"/>
+  <atom id="a4" elementType="C" x3="0.263500" y3="0.401000" z3="0.362000"/>
+  <atom id="a5" elementType="H" x3="0.077200" y3="1.472200" z3="0.188200"/>
+  <atom id="a6" elementType="H" x3="0.286600" y3="0.200500" z3="1.444400"/>
+  <atom id="a7" elementType="C" x3="-0.871600" y3="-0.422400" z3="-0.282300"/>
+  <atom id="a8" elementType="C" x3="3.882500" y3="0.343900" z3="-0.299300"/>
+  <atom id="a9" elementType="C" x3="-2.235200" y3="-0.038300" z3="0.333900"/>
+  <atom id="a10" elementType="H" x3="-0.678200" y3="-1.492700" z3="-0.113600"/>
+  <atom id="a11" elementType="H" x3="-0.886900" y3="-0.225800" z3="-1.365100"/>
+  <atom id="a12" elementType="H" x3="-2.427800" y3="1.032300" z3="0.165200"/>
+  <atom id="a13" elementType="H" x3="-2.219100" y3="-0.234800" z3="1.416900"/>
+  <atom id="a14" elementType="C" x3="-3.368600" y3="-0.863400" z3="-0.312300"/>
+  <atom id="a15" elementType="H" x3="-3.195100" y3="-1.936500" z3="-0.141900"/>
+  <atom id="a16" elementType="H" x3="-3.404000" y3="-0.668400" z3="-1.394600"/>
+  <atom id="a17" elementType="H" x3="3.884400" y3="0.545000" z3="-1.380800"/>
+  <atom id="a18" elementType="H" x3="4.093100" y3="-0.722300" z3="-0.128900"/>
+  <atom id="a19" elementType="H" x3="-4.331900" y3="-0.578300" z3="0.136900"/>
+  <atom id="a20" elementType="H" x3="4.666000" y3="0.948200" z3="0.181800"/>
+ </atomArray>
+ <bondArray>
+  <bond atomRefs2="a1 a2" order="2"/>
+  <bond atomRefs2="a1 a3" order="1"/>
+  <bond atomRefs2="a1 a8" order="1"/>
+  <bond atomRefs2="a3 a4" order="1"/>
+  <bond atomRefs2="a4 a5" order="1"/>
+  <bond atomRefs2="a4 a6" order="1"/>
+  <bond atomRefs2="a4 a7" order="1"/>
+  <bond atomRefs2="a7 a9" order="1"/>
+  <bond atomRefs2="a7 a10" order="1"/>
+  <bond atomRefs2="a7 a11" order="1"/>
+  <bond atomRefs2="a8 a17" order="1"/>
+  <bond atomRefs2="a8 a18" order="1"/>
+  <bond atomRefs2="a8 a20" order="1"/>
+  <bond atomRefs2="a9 a12" order="1"/>
+  <bond atomRefs2="a9 a13" order="1"/>
+  <bond atomRefs2="a9 a14" order="1"/>
+  <bond atomRefs2="a14 a15" order="1"/>
+  <bond atomRefs2="a14 a16" order="1"/>
+  <bond atomRefs2="a14 a19" order="1"/>
+ </bondArray>
+ <list>
+  <propertyList>
+   <property dictRef="cml:molwt" title="molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="cml:molwt" units="unit:g">116.1583</scalar>
+   </property>
+   <property dictRef="chemwt:exact_molwt" title="exact molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="chemwt:exact_molwt" units="unit:g">116.0837296</scalar>
+   </property>
+   <property dictRef="cml:mpt" title="melting point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:mpt" units="unit:celsius">-78</scalar>
+   </property>
+   <property dictRef="cml:bpt" title="boiling point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:bpt" units="unit:celsius">125</scalar>
+   </property>
+  </propertyList>
+ </list>
+</molecule>

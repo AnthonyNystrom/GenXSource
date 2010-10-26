@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<molecule xmlns="http://www.xml-cml.org/schema/cml2/core" id="CS_ethoxyethane">
+ <formula concise=" C 4 H 10 O 1 "/>
+ <identifier version="InChI/1">
+  <basic>1/C4H10O/c1-3-5-4-2/h3-4H2,1-2H3</basic>
+ </identifier>
+ <name convention="IUPAC">Ethoxyethane</name>
+ <atomArray>
+  <atom id="a1" elementType="H" x3="-2.045300" y3="0.027600" z3="-1.023900"/>
+  <atom id="a2" elementType="C" x3="-2.612500" y3="-0.029000" z3="-1.957200"/>
+  <atom id="a3" elementType="H" x3="-2.297400" y3="0.789800" z3="-2.611100"/>
+  <atom id="a4" elementType="H" x3="-2.356100" y3="-0.961100" z3="-2.469800"/>
+  <atom id="a5" elementType="C" x3="-4.101900" y3="0.043700" z3="-1.691000"/>
+  <atom id="a6" elementType="H" x3="-4.406700" y3="-0.789600" z3="-1.048900"/>
+  <atom id="a7" elementType="H" x3="-4.346300" y3="0.986700" z3="-1.190300"/>
+  <atom id="a8" elementType="O" x3="-4.793400" y3="-0.033000" z3="-2.944400"/>
+  <atom id="a9" elementType="C" x3="-6.214800" y3="0.029000" z3="-2.769100"/>
+  <atom id="a10" elementType="H" x3="-6.547000" y3="-0.804300" z3="-2.140800"/>
+  <atom id="a11" elementType="H" x3="-6.486400" y3="0.972300" z3="-2.283100"/>
+  <atom id="a12" elementType="C" x3="-6.872300" y3="-0.057400" z3="-4.130900"/>
+  <atom id="a13" elementType="H" x3="-6.537100" y3="0.761900" z3="-4.774000"/>
+  <atom id="a14" elementType="H" x3="-6.596400" y3="-0.988800" z3="-4.634500"/>
+  <atom id="a15" elementType="H" x3="-7.961600" y3="-0.012800" z3="-4.043700"/>
+ </atomArray>
+ <bondArray>
+  <bond atomRefs2="a1 a2" order="1"/>
+  <bond atomRefs2="a2 a3" order="1"/>
+  <bond atomRefs2="a2 a4" order="1"/>
+  <bond atomRefs2="a2 a5" order="1"/>
+  <bond atomRefs2="a5 a6" order="1"/>
+  <bond atomRefs2="a5 a7" order="1"/>
+  <bond atomRefs2="a5 a8" order="1"/>
+  <bond atomRefs2="a8 a9" order="1"/>
+  <bond atomRefs2="a9 a10" order="1"/>
+  <bond atomRefs2="a9 a11" order="1"/>
+  <bond atomRefs2="a9 a12" order="1"/>
+  <bond atomRefs2="a12 a13" order="1"/>
+  <bond atomRefs2="a12 a14" order="1"/>
+  <bond atomRefs2="a12 a15" order="1"/>
+ </bondArray>
+ <list>
+  <propertyList>
+   <property dictRef="cml:molwt" title="molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="cml:molwt" units="unit:g">74.1216</scalar>
+   </property>
+   <property dictRef="chemwt:exact_molwt" title="exact molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="chemwt:exact_molwt" units="unit:g">74.0731649</scalar>
+   </property>
+   <property dictRef="cml:mpt" title="melting point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:mpt" units="unit:celsius">-116</scalar>
+   </property>
+   <property dictRef="cml:bpt" title="boiling point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:bpt" units="unit:celsius">35</scalar>
+   </property>
+  </propertyList>
+ </list>
+</molecule>

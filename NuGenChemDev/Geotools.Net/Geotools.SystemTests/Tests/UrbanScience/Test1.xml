@@ -1,0 +1,137 @@
+<run>
+  <desc>This is test file number 1</desc>
+<precisionModel type="FIXED" scale="1.0" offsetx="0.0" offsety="0.0"/>
+
+<case>
+  <desc>Multiline and Polygon</desc>
+  <a>
+    MULTILINESTRING ((40 100, 80 80, 100 60, 160 40, 180 60), 
+      (60 120, 80 100, 100 100, 160 100, 200 100))
+  </a>
+
+  <b>
+    POLYGON ((20 20, 20 160, 40 180, 60 180, 80 200, 80 220, 100 220, 100 200, 100 180, 120 160, 
+        120 140, 120 120, 100 100, 80 80, 20 20))
+  </b>
+<test>
+  <op name="relate" arg1="A" arg2="B" arg3="1010F0212">
+    true
+  </op>
+</test>
+<test>
+  <op name="getboundary" arg1="A">
+    MULTIPOINT (40 100, 60 120, 180 60, 200 100)
+  </op>
+</test>
+<test>
+  <op name="convexhull" arg1="A">
+    POLYGON ((160 40, 100 60, 40 100, 60 120, 200 100, 180 60, 160 40))
+  </op>
+</test>
+<test>
+  <op name="intersection" arg1="A" arg2="B">
+    MULTILINESTRING ((40 100, 80 80), 
+      (60 120, 80 100, 100 100))
+  </op>
+</test>
+<test>
+  <op name="union" arg1="A" arg2="B">
+    GEOMETRYCOLLECTION (LINESTRING (80 80, 100 60, 160 40, 180 60), 
+      LINESTRING (100 100, 160 100, 200 100), 
+      POLYGON ((20 20, 20 160, 40 180, 60 180, 80 200, 80 220, 100 220, 100 200, 100 180, 120 160, 
+          120 140, 120 120, 100 100, 80 80, 20 20)))
+  </op>
+</test>
+<test>
+  <op name="difference" arg1="A" arg2="B">
+    MULTILINESTRING ((80 80, 100 60, 160 40, 180 60), 
+      (100 100, 160 100, 200 100))
+  </op>
+</test>
+<test>
+  <op name="symdifference" arg1="A" arg2="B">
+    GEOMETRYCOLLECTION (LINESTRING (80 80, 100 60, 160 40, 180 60), 
+      LINESTRING (100 100, 160 100, 200 100), 
+      POLYGON ((20 20, 20 160, 40 180, 60 180, 80 200, 80 220, 100 220, 100 200, 100 180, 120 160, 
+          120 140, 120 120, 100 100, 80 80, 20 20)))
+  </op>
+</test>
+</case>
+
+<case>
+  <desc>Overlapping Polygons</desc>
+  <a>
+    POLYGON ((20 20, 200 20, 200 160, 20 160, 20 20))
+  </a>
+
+  <b>
+    POLYGON ((120 220, 120 100, 280 100, 280 140, 240 200, 120 220))
+  </b>
+<test>
+  <op name="relate" arg1="A" arg2="B" arg3="212101212">
+    true
+  </op>
+</test>
+<test>
+  <op name="getboundary" arg1="A">
+    MULTILINESTRING ((20 20, 200 20, 200 160, 20 160, 20 20))
+  </op>
+</test>
+<test>
+  <op name="convexhull" arg1="A">
+    POLYGON ((20 20, 20 160, 200 160, 200 20, 20 20))
+  </op>
+</test>
+<test>
+  <op name="intersection" arg1="A" arg2="B">
+    POLYGON ((120 160, 200 160, 200 100, 120 100, 120 160))
+  </op>
+</test>
+<test>
+  <op name="union" arg1="A" arg2="B">
+    POLYGON ((200 100, 200 20, 20 20, 20 160, 120 160, 120 220, 240 200, 280 140, 280 100, 200 100))
+  </op>
+</test>
+<test>
+  <op name="difference" arg1="A" arg2="B">
+    POLYGON ((200 100, 200 20, 20 20, 20 160, 120 160, 120 100, 200 100))
+  </op>
+</test>
+<test>
+  <op name="symdifference" arg1="A" arg2="B">
+    MULTIPOLYGON (((200 100, 200 20, 20 20, 20 160, 120 160, 120 100, 200 100)), 
+      ((200 100, 200 160, 120 160, 120 220, 240 200, 280 140, 280 100, 200 100)))
+  </op>
+</test>
+</case>
+
+<case>
+  <desc>A Single Point</desc>
+  <a>
+    POINT (50 50)
+  </a>
+
+<test>
+  <op name="getboundary" arg1="A">
+    GEOMETRYCOLLECTION EMPTY
+  </op>
+</test>
+</case>
+
+<case>
+  <desc>A Point and a Polygon</desc>
+  <a>
+    POINT (50 50)
+  </a>
+
+  <b>
+    POLYGON ((20 20, 140 20, 140 60, 60 80, 40 120, 20 20))
+  </b>
+<test>
+  <op name="relate" arg1="A" arg2="B" arg3="0FFFFF212">
+    true
+  </op>
+</test>
+</case>
+
+</run>

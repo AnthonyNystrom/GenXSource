@@ -1,0 +1,255 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{22796E1E-6A64-4B1E-953B-471513B3EAA0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ChemDevEnv</RootNamespace>
+    <AssemblyName>ChemDevEnv</AssemblyName>
+    <ManifestCertificateThumbprint>7B1CF779F1DD506B57FB3A50F449B4C8CFF68F9A</ManifestCertificateThumbprint>
+    <ManifestKeyFile>ChemDevEnv_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>false</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <TargetZone>LocalIntranet</TargetZone>
+    <PublishUrl>G:\NuGenBioChemVF\new\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Janus.Data.v3, Version=3.5.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf" />
+    <Reference Include="Janus.Windows.ButtonBar.v3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\My Documents\Visual Studio 2005\Controls\Janus WinForms Controls v3\Janus.Windows.ButtonBar.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Common.v3, Version=3.5.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
+    <Reference Include="Janus.Windows.ExplorerBar.v3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\My Documents\Visual Studio 2005\Controls\Janus WinForms Controls v3\Janus.Windows.ExplorerBar.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.GridEX.v3, Version=3.5.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
+    <Reference Include="Janus.Windows.Ribbon.v3, Version=3.5.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Andrew\Documents\Visual Studio 2005\Controls\Janus WinForms Controls v3\Janus.Windows.Ribbon.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.UI.v3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\My Documents\Visual Studio 2005\Controls\Janus WinForms Controls v3\Janus.Windows.UI.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DirectX.Direct3D, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="NuGenCDKSharp, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\NuGenCDKSharp\bin\Debug\NuGenCDKSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="OcTree, Version=1.0.2710.20370, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Octree\release\OcTree.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AtomWrapper.cs" />
+    <Compile Include="DevEnvIDEWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevEnvIDEWindow.Designer.cs">
+      <DependentUpon>DevEnvIDEWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoadingProgressDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadingProgressDlg.Designer.cs">
+      <DependentUpon>LoadingProgressDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MeasurementSettingsDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MeasurementSettingsDlg.Designer.cs">
+      <DependentUpon>MeasurementSettingsDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MoleculePropertyWrapper.cs" />
+    <Compile Include="OptionsWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OptionsWindow.Designer.cs">
+      <DependentUpon>OptionsWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PathTool.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DevEnvIDEWindow.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DevEnvIDEWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadingProgressDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LoadingProgressDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsWindow.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OptionsWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewTab.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ViewTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelcomeForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WelcomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RecentFiles.cs" />
+    <Compile Include="Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash.Designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewTab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewTab.Designer.cs">
+      <DependentUpon>ViewTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WelcomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelcomeForm.Designer.cs">
+      <DependentUpon>WelcomeForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Recording.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rec-Play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BaseApplicationManifest Include="Properties\app.manifest" />
+    <None Include="Resources\Rec-Stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NuGenSVisualLib\NuGenSVisualLib_05.csproj">
+      <Project>{D54623F7-B066-4642-8DD6-C95AFF9DA401}</Project>
+      <Name>NuGenSVisualLib_05</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MeasurementSettingsDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MeasurementSettingsDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DefaultGlobalSettings.xml" />
+    <EmbeddedResource Include="Splash.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\big_banner_11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Script-Load.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Script-New.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Script-Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Script-Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Resources\Script-Play.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

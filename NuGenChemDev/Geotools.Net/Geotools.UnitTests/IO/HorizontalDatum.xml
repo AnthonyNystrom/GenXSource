@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<CS_HorizontalDatum DatumType="1001">
+  <CS_Info AuthorityCode="6277" Authority="EPSG" Name="OSGB_1936"/>
+    <CS_Ellipsoid SemiMajorAxis="6377563.396" SemiMinorAxis="6356256.90923729" InverseFlattening="299.3249646" IvfDefinitive="1">
+      <CS_Info AuthorityCode="7001" Authority="EPSG" Name="Airy 1830"/>
+      <CS_LinearUnit MetersPerUnit="1">
+        <CS_Info AuthorityCode="9001" Abbreviation="m" Authority="EPSG" Name="metre"/>
+      </CS_LinearUnit>
+    </CS_Ellipsoid>
+    <CS_WGS84ConversionInfo Dx="375" Dy="-111" Dz="431" Ex="0" Ey="0" Ez="0" Ppm="0"/>
+</CS_HorizontalDatum>

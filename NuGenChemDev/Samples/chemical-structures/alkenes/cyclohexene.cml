@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<molecule xmlns="http://www.xml-cml.org/schema/cml2/core" id="CS_cyclohexene">
+ <formula concise=" C 6 H 10 "/>
+ <identifier version="InChI/1">
+  <basic>1/C6H10/c1-2-4-6-5-3-1/h1-2H,3-6H2</basic>
+ </identifier>
+ <name convention="IUPAC">Cyclohexene</name>
+ <atomArray>
+  <atom id="a1" elementType="H" x3="-1.961800" y3="-0.064300" z3="-1.047200"/>
+  <atom id="a2" elementType="C" x3="-2.497600" y3="0.070400" z3="-1.992300"/>
+  <atom id="a3" elementType="H" x3="-3.222900" y3="-0.748800" z3="-2.058100"/>
+  <atom id="a4" elementType="C" x3="-1.516100" y3="-0.018700" z3="-3.159900"/>
+  <atom id="a5" elementType="H" x3="-0.608300" y3="0.547200" z3="-2.926500"/>
+  <atom id="a6" elementType="H" x3="-1.211900" y3="-1.061600" z3="-3.293500"/>
+  <atom id="a7" elementType="C" x3="-2.082700" y3="0.504400" z3="-4.443200"/>
+  <atom id="a8" elementType="H" x3="-1.549700" y3="0.276300" z3="-5.359200"/>
+  <atom id="a9" elementType="C" x3="-3.208300" y3="1.227400" z3="-4.506600"/>
+  <atom id="a10" elementType="H" x3="-3.571600" y3="1.554300" z3="-5.474300"/>
+  <atom id="a11" elementType="C" x3="-3.999700" y3="1.619400" z3="-3.297700"/>
+  <atom id="a12" elementType="H" x3="-4.285500" y3="2.673100" z3="-3.374400"/>
+  <atom id="a13" elementType="H" x3="-4.928900" y3="1.040300" z3="-3.289900"/>
+  <atom id="a14" elementType="C" x3="-3.241100" y3="1.400900" z3="-1.989500"/>
+  <atom id="a15" elementType="H" x3="-2.523300" y3="2.215700" z3="-1.840100"/>
+  <atom id="a16" elementType="H" x3="-3.938000" y3="1.441800" z3="-1.146300"/>
+ </atomArray>
+ <bondArray>
+  <bond atomRefs2="a1 a2" order="1"/>
+  <bond atomRefs2="a2 a3" order="1"/>
+  <bond atomRefs2="a2 a4" order="1"/>
+  <bond atomRefs2="a2 a14" order="1"/>
+  <bond atomRefs2="a4 a5" order="1"/>
+  <bond atomRefs2="a4 a6" order="1"/>
+  <bond atomRefs2="a4 a7" order="1"/>
+  <bond atomRefs2="a7 a8" order="1"/>
+  <bond atomRefs2="a7 a9" order="2"/>
+  <bond atomRefs2="a9 a10" order="1"/>
+  <bond atomRefs2="a9 a11" order="1"/>
+  <bond atomRefs2="a11 a12" order="1"/>
+  <bond atomRefs2="a11 a13" order="1"/>
+  <bond atomRefs2="a11 a14" order="1"/>
+  <bond atomRefs2="a14 a15" order="1"/>
+  <bond atomRefs2="a14 a16" order="1"/>
+ </bondArray>
+ <list>
+  <propertyList>
+   <property dictRef="cml:molwt" title="molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="cml:molwt" units="unit:g">82.1436</scalar>
+   </property>
+   <property dictRef="chemwt:exact_molwt" title="exact molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="chemwt:exact_molwt" units="unit:g">82.0782503</scalar>
+   </property>
+   <property dictRef="cml:mpt" title="melting point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:mpt" units="unit:celsius">-104</scalar>
+   </property>
+   <property dictRef="cml:bpt" title="boiling point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:bpt" units="unit:celsius">82</scalar>
+   </property>
+  </propertyList>
+ </list>
+</molecule>

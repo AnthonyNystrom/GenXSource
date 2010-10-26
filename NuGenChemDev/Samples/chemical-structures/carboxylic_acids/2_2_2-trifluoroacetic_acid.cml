@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<molecule xmlns="http://www.xml-cml.org/schema/cml2/core" id="CS_2_2_2-trifluoroacetic_acid">
+ <formula concise=" C 2 H 1 O 2 F 3 "/>
+ <identifier version="InChI/1">
+  <basic>1/C2HF3O2/c3-2(4,5)1(6)7/h(H,6,7)</basic>
+ </identifier>
+ <name convention="IUPAC">2,2,2-Trifluoroacetic acid</name>
+ <atomArray>
+  <atom id="a1" elementType="C" x3="0.754200" y3="-0.084000" z3="0.179500"/>
+  <atom id="a2" elementType="C" x3="-0.585600" y3="0.557100" z3="-0.066400"/>
+  <atom id="a3" elementType="O" x3="-0.756300" y3="1.757700" z3="0.068300"/>
+  <atom id="a4" elementType="O" x3="-1.585900" y3="-0.243000" z3="-0.439700"/>
+  <atom id="a5" elementType="F" x3="1.657400" y3="0.862900" z3="0.549900"/>
+  <atom id="a6" elementType="F" x3="1.180200" y3="-0.693400" z3="-0.959600"/>
+  <atom id="a7" elementType="F" x3="0.638300" y3="-1.009400" z3="1.169700"/>
+  <atom id="a8" elementType="H" x3="-1.302400" y3="-1.147900" z3="-0.501800"/>
+ </atomArray>
+ <bondArray>
+  <bond atomRefs2="a1 a2" order="1"/>
+  <bond atomRefs2="a1 a5" order="1"/>
+  <bond atomRefs2="a1 a6" order="1"/>
+  <bond atomRefs2="a1 a7" order="1"/>
+  <bond atomRefs2="a2 a3" order="2"/>
+  <bond atomRefs2="a2 a4" order="1"/>
+  <bond atomRefs2="a4 a8" order="1"/>
+ </bondArray>
+ <list>
+  <propertyList>
+   <property dictRef="cml:molwt" title="molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="cml:molwt" units="unit:g">114.0233</scalar>
+   </property>
+   <property dictRef="chemwt:exact_molwt" title="exact molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="chemwt:exact_molwt" units="unit:g">113.9928639</scalar>
+   </property>
+   <property dictRef="cml:mpt" title="melting point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:mpt" units="unit:celsius">-15</scalar>
+   </property>
+   <property dictRef="cml:bpt" title="boiling point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:bpt" units="unit:celsius">72</scalar>
+   </property>
+  </propertyList>
+ </list>
+</molecule>

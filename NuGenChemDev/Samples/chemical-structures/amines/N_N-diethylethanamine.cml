@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<molecule xmlns="http://www.xml-cml.org/schema/cml2/core" id="CS_N_N-diethylethanamine">
+ <formula concise=" C 6 H 15 N 1 "/>
+ <identifier version="InChI/1">
+  <basic>1/C6H15N/c1-4-7(5-2)6-3/h4-6H2,1-3H3</basic>
+ </identifier>
+ <name convention="IUPAC">N,N-Diethylethanamine</name>
+ <atomArray>
+  <atom id="a1" elementType="C" x3="2.206400" y3="0.501900" z3="-0.915900"/>
+  <atom id="a2" elementType="C" x3="1.440000" y3="0.305700" z3="0.410000"/>
+  <atom id="a3" elementType="N" x3="0.005600" y3="0.071600" z3="0.137000"/>
+  <atom id="a4" elementType="C" x3="-0.619900" y3="-0.858000" z3="1.102100"/>
+  <atom id="a5" elementType="C" x3="-0.377800" y3="-2.318500" z3="0.663700"/>
+  <atom id="a6" elementType="C" x3="-0.760000" y3="1.325200" z3="-0.033800"/>
+  <atom id="a7" elementType="C" x3="-1.882400" y3="1.122800" z3="-1.074700"/>
+  <atom id="a8" elementType="H" x3="3.277600" y3="0.636000" z3="-0.702900"/>
+  <atom id="a9" elementType="H" x3="1.837000" y3="1.384100" z3="-1.458300"/>
+  <atom id="a10" elementType="H" x3="2.073000" y3="-0.389800" z3="-1.546600"/>
+  <atom id="a11" elementType="H" x3="1.568800" y3="1.187800" z3="1.056200"/>
+  <atom id="a12" elementType="H" x3="1.887100" y3="-0.561800" z3="0.917300"/>
+  <atom id="a13" elementType="H" x3="-1.708800" y3="-0.707200" z3="1.139200"/>
+  <atom id="a14" elementType="H" x3="-0.213900" y3="-0.693300" z3="2.112100"/>
+  <atom id="a15" elementType="H" x3="-0.794800" y3="-2.468100" z3="-0.343500"/>
+  <atom id="a16" elementType="H" x3="-0.880500" y3="-2.999600" z3="1.366900"/>
+  <atom id="a17" elementType="H" x3="0.696300" y3="-2.552300" z3="0.646300"/>
+  <atom id="a18" elementType="H" x3="-0.111400" y3="2.130300" z3="-0.409300"/>
+  <atom id="a19" elementType="H" x3="-1.188700" y3="1.647300" z3="0.927700"/>
+  <atom id="a20" elementType="H" x3="-1.437300" y3="0.807900" z3="-2.030400"/>
+  <atom id="a21" elementType="H" x3="-2.419800" y3="2.071600" z3="-1.222400"/>
+  <atom id="a22" elementType="H" x3="-2.596300" y3="0.356300" z3="-0.741000"/>
+ </atomArray>
+ <bondArray>
+  <bond atomRefs2="a1 a2" order="1"/>
+  <bond atomRefs2="a1 a8" order="1"/>
+  <bond atomRefs2="a1 a9" order="1"/>
+  <bond atomRefs2="a1 a10" order="1"/>
+  <bond atomRefs2="a2 a3" order="1"/>
+  <bond atomRefs2="a2 a11" order="1"/>
+  <bond atomRefs2="a2 a12" order="1"/>
+  <bond atomRefs2="a3 a4" order="1"/>
+  <bond atomRefs2="a3 a6" order="1"/>
+  <bond atomRefs2="a4 a5" order="1"/>
+  <bond atomRefs2="a4 a13" order="1"/>
+  <bond atomRefs2="a4 a14" order="1"/>
+  <bond atomRefs2="a5 a15" order="1"/>
+  <bond atomRefs2="a5 a16" order="1"/>
+  <bond atomRefs2="a5 a17" order="1"/>
+  <bond atomRefs2="a6 a7" order="1"/>
+  <bond atomRefs2="a6 a18" order="1"/>
+  <bond atomRefs2="a6 a19" order="1"/>
+  <bond atomRefs2="a7 a20" order="1"/>
+  <bond atomRefs2="a7 a21" order="1"/>
+  <bond atomRefs2="a7 a22" order="1"/>
+ </bondArray>
+ <list>
+  <propertyList>
+   <property dictRef="cml:molwt" title="molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="cml:molwt" units="unit:g">101.1900</scalar>
+   </property>
+   <property dictRef="chemwt:exact_molwt" title="exact molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="chemwt:exact_molwt" units="unit:g">101.1204495</scalar>
+   </property>
+   <property dictRef="cml:mpt" title="melting point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:mpt" units="unit:celsius">-115</scalar>
+   </property>
+   <property dictRef="cml:bpt" title="boiling point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:bpt" units="unit:celsius">89</scalar>
+   </property>
+  </propertyList>
+ </list>
+</molecule>

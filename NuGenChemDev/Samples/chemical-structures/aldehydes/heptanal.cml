@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<molecule xmlns="http://www.xml-cml.org/schema/cml2/core" id="CS_heptanal">
+ <formula concise=" C 7 H 14 O 1 "/>
+ <identifier version="InChI/1">
+  <basic>1/C7H14O/c1-2-3-4-5-6-7-8/h7H,2-6H2,1H3</basic>
+ </identifier>
+ <name convention="IUPAC">Heptanal</name>
+ <atomArray>
+  <atom id="a1" elementType="C" x3="-1.513400" y3="-0.743700" z3="1.651200"/>
+  <atom id="a2" elementType="C" x3="-2.852400" y3="-1.331500" z3="1.304500"/>
+  <atom id="a3" elementType="O" x3="-2.991200" y3="-2.541700" z3="1.234000"/>
+  <atom id="a4" elementType="C" x3="-0.967600" y3="0.049000" z3="0.443800"/>
+  <atom id="a5" elementType="H" x3="-1.626600" y3="-0.071300" z3="2.515000"/>
+  <atom id="a6" elementType="H" x3="-3.685100" y3="-0.678900" z3="1.045400"/>
+  <atom id="a7" elementType="H" x3="-0.893200" y3="-0.631700" z3="-0.414700"/>
+  <atom id="a8" elementType="H" x3="-1.677600" y3="0.853100" z3="0.196500"/>
+  <atom id="a9" elementType="C" x3="0.405800" y3="0.671900" z3="0.791500"/>
+  <atom id="a10" elementType="H" x3="-0.811600" y3="-1.550000" z3="1.913100"/>
+  <atom id="a11" elementType="H" x3="0.237400" y3="1.372800" z3="1.623700"/>
+  <atom id="a12" elementType="H" x3="1.114400" y3="-0.101300" z3="1.124500"/>
+  <atom id="a13" elementType="C" x3="1.008300" y3="1.468500" z3="-0.392300"/>
+  <atom id="a14" elementType="C" x3="2.017600" y3="0.657900" z3="-1.242500"/>
+  <atom id="a15" elementType="H" x3="1.570300" y3="2.318200" z3="0.025800"/>
+  <atom id="a16" elementType="H" x3="0.204500" y3="1.866600" z3="-1.029800"/>
+  <atom id="a17" elementType="H" x3="2.396800" y3="1.320100" z3="-2.036200"/>
+  <atom id="a18" elementType="C" x3="1.403600" y3="-0.590700" z3="-1.910300"/>
+  <atom id="a19" elementType="H" x3="2.865000" y3="0.346200" z3="-0.612600"/>
+  <atom id="a20" elementType="H" x3="1.158000" y3="-1.348100" z3="-1.152000"/>
+  <atom id="a21" elementType="H" x3="2.138300" y3="-1.021700" z3="-2.606900"/>
+  <atom id="a22" elementType="H" x3="0.498600" y3="-0.313800" z3="-2.471500"/>
+ </atomArray>
+ <bondArray>
+  <bond atomRefs2="a1 a2" order="1"/>
+  <bond atomRefs2="a1 a4" order="1"/>
+  <bond atomRefs2="a1 a5" order="1"/>
+  <bond atomRefs2="a1 a10" order="1"/>
+  <bond atomRefs2="a2 a3" order="2"/>
+  <bond atomRefs2="a2 a6" order="1"/>
+  <bond atomRefs2="a4 a7" order="1"/>
+  <bond atomRefs2="a4 a8" order="1"/>
+  <bond atomRefs2="a4 a9" order="1"/>
+  <bond atomRefs2="a9 a11" order="1"/>
+  <bond atomRefs2="a9 a12" order="1"/>
+  <bond atomRefs2="a9 a13" order="1"/>
+  <bond atomRefs2="a13 a14" order="1"/>
+  <bond atomRefs2="a13 a15" order="1"/>
+  <bond atomRefs2="a13 a16" order="1"/>
+  <bond atomRefs2="a14 a17" order="1"/>
+  <bond atomRefs2="a14 a18" order="1"/>
+  <bond atomRefs2="a14 a19" order="1"/>
+  <bond atomRefs2="a18 a20" order="1"/>
+  <bond atomRefs2="a18 a21" order="1"/>
+  <bond atomRefs2="a18 a22" order="1"/>
+ </bondArray>
+ <list>
+  <propertyList>
+   <property dictRef="cml:molwt" title="molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="cml:molwt" units="unit:g">114.1855</scalar>
+   </property>
+   <property dictRef="chemwt:exact_molwt" title="exact molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="chemwt:exact_molwt" units="unit:g">114.1044651</scalar>
+   </property>
+   <property dictRef="cml:mpt" title="melting point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:mpt" units="unit:celsius">-43</scalar>
+   </property>
+   <property dictRef="cml:bpt" title="boiling point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:bpt" units="unit:celsius">154</scalar>
+   </property>
+  </propertyList>
+ </list>
+</molecule>

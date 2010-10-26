@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project>
+  <objectives>
+    <objective>Basic shading/scheme dialog</objective>
+    <rollovers>
+      <objective desc="Metaball based effect"/>
+    </rollovers>
+  </objectives>
+  <logs>
+    <todo>
+      <rollovers>
+        <item desc="Incorporation of better device handling and creation support" priority="low" status="50%"/>
+        <item desc="Options to toggle chemical structures (cartoons etc.)"/>
+        <item desc="Adaptive marching cube support" status="80%"/>
+        <item desc="Optimize isosurface point collection?"/>
+      </rollovers>
+      <item desc="Scheme support in shading window for all current rendering types"/>
+      <item desc="Loading schemes and effects etc from xml config" status="complete"/>
+      <item desc="Lighting structutures for scheme window" status="complete"/>
+      <item desc="Light preview control" status="complete"/>
+      <item desc="Edit/use scheme window outside of context"/>
+    </todo>
+    <change>
+      <changes at="20/03/07">
+        <change>Added some base path support</change>
+      </changes>
+      <changes at="21/03/07">
+        <change>Added basic atom sprite scheme</change>
+        <change>Better sprite scheme support</change>
+      </changes>
+      <changes at="22/03/07">
+        <change>Added requirements gague control</change>
+      </changes>
+    </change>
+  </logs>
+</project>

@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<molecule xmlns="http://www.xml-cml.org/schema/cml2/core" id="CS_N_N-dimethylmethanamine">
+ <formula concise=" C 3 H 9 N 1 "/>
+ <identifier version="InChI/1">
+  <basic>1/C3H9N/c1-4(2)3/h1-3H3</basic>
+ </identifier>
+ <name convention="IUPAC">N,N-Dimethylmethanamine</name>
+ <atomArray>
+  <atom id="a1" elementType="C" x3="1.407100" y3="-0.004600" z3="-0.100300"/>
+  <atom id="a2" elementType="N" x3="-0.017100" y3="-0.220000" z3="-0.420800"/>
+  <atom id="a3" elementType="C" x3="-0.669100" y3="-1.108100" z3="0.561000"/>
+  <atom id="a4" elementType="C" x3="-0.742400" y3="1.056600" z3="-0.567900"/>
+  <atom id="a5" elementType="H" x3="1.508200" y3="0.504800" z3="0.869900"/>
+  <atom id="a6" elementType="H" x3="1.930100" y3="-0.971500" z3="-0.055700"/>
+  <atom id="a7" elementType="H" x3="-1.711000" y3="-1.294800" z3="0.261100"/>
+  <atom id="a8" elementType="H" x3="-0.658800" y3="-0.646900" z3="1.560100"/>
+  <atom id="a9" elementType="H" x3="-0.265500" y3="1.669200" z3="-1.347400"/>
+  <atom id="a10" elementType="H" x3="-0.735300" y3="1.612400" z3="0.381800"/>
+  <atom id="a11" elementType="H" x3="1.876500" y3="0.611800" z3="-0.881400"/>
+  <atom id="a12" elementType="H" x3="-0.138700" y3="-2.071000" z3="0.603200"/>
+  <atom id="a13" elementType="H" x3="-1.784100" y3="0.862100" z3="-0.863700"/>
+ </atomArray>
+ <bondArray>
+  <bond atomRefs2="a1 a2" order="1"/>
+  <bond atomRefs2="a1 a5" order="1"/>
+  <bond atomRefs2="a1 a6" order="1"/>
+  <bond atomRefs2="a1 a11" order="1"/>
+  <bond atomRefs2="a2 a3" order="1"/>
+  <bond atomRefs2="a2 a4" order="1"/>
+  <bond atomRefs2="a3 a7" order="1"/>
+  <bond atomRefs2="a3 a8" order="1"/>
+  <bond atomRefs2="a3 a12" order="1"/>
+  <bond atomRefs2="a4 a9" order="1"/>
+  <bond atomRefs2="a4 a10" order="1"/>
+  <bond atomRefs2="a4 a13" order="1"/>
+ </bondArray>
+ <list>
+  <propertyList>
+   <property dictRef="cml:molwt" title="molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="cml:molwt" units="unit:g">59.1103</scalar>
+   </property>
+   <property dictRef="chemwt:exact_molwt" title="exact molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="chemwt:exact_molwt" units="unit:g">59.0734993</scalar>
+   </property>
+   <property dictRef="cml:mpt" title="melting point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:mpt" units="unit:celsius">-117</scalar>
+   </property>
+   <property dictRef="cml:bpt" title="boiling point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:bpt" units="unit:celsius">3</scalar>
+   </property>
+  </propertyList>
+ </list>
+</molecule>

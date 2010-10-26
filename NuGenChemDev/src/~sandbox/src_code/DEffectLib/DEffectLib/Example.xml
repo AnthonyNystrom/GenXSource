@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<effect name="metaball">
+	<param name="wvpMatrix" type="MATRIX4x4"/>
+	<param name="eyePos" type="FLOAT3"/>
+
+	<shaders>
+		<vshader id="v1">
+			<input name="position" type="FLOAT4" map="POSITION"/>
+			<input name="color" type="FLOAT3" map="COLOR"/>
+			<input name="normal" type="FLOAT3" map="NORMAL"/>
+
+			<output name="position" type="FLOAT4" map="POSITION"/>
+			<output name="color" type="FLOAT3" map="COLOR"/>
+			<output name="edgeValue" type="FLOAT" map="TEXCOORD0"/>
+
+			<process name="transformation" mode="required">
+				<line>OUT.position = mul(IN.position, PARAM.wvpMatrix);</line>
+			</process>
+			<process name="colorizing">
+				<line>OUT.color = IN.color;</line>
+			</process>
+			<process name="edgeHighlighting">
+				<line>OUT.edgeValue = dot(PARAM.eyePos, IN.normal);</line>
+			</process>
+		</vshader>
+		<pshader id="p1">
+			<input name="color" type="FLOAT3" map="COLOR"/>
+			<input name="edgeValue" type="FLOAT" map="TEXCOORD0"/>
+
+			<process name="colourize">
+				<line>OUT += IN.color;</line>
+			</process>
+			<process name="colourEdges" req="2.0">
+				<line>OUT += float4(IN.edgeValue, 0, 0, 0);</line>
+			</process>
+		</pshader>
+	</shaders>
+
+	<technique name="metaball">
+		<pass>
+			<data>Geometry|Diffuse</data>
+			<target>RT0</target>
+			<vshader>v1</vshader>
+			<pshader>p1</pshader>
+		</pass>
+	</technique>
+	<technique name="simple">
+		<pass>
+			<target>RT0</target>
+			<vshader processes="transformation,colorizing">v1</vshader>
+			<pshader processes="colourize">p1</pshader>
+		</pass>
+	</technique>
+</effect>

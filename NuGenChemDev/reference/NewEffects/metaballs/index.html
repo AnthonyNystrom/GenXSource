@@ -1,0 +1,303 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><!-- InstanceBegin template="/Templates/document-page.dwt" codeOutsideHTMLIsLocked="false" -->
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><!-- InstanceBeginEditable name="doctitle" --><title>[Exaflop.org] The Marching Cubes Algorithm</title><!-- InstanceEndEditable -->
+
+
+
+
+<link href="index_files/sidebar.css" rel="stylesheet" type="text/css"><!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+
+
+<link href="index_files/doc-style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="index_files/sidebar_support.js"></script></head><body onload="setupMenu()" background="index_files/notepad-back.jpg" bgcolor="#ffffff">
+<div id="content">
+<!-- InstanceBeginEditable name="content" -->
+
+    <h1 align="center"><strong>The Marching Cubes Algorithm</strong></h1>
+    <p align="right"><strong>By James Sharman</strong></p>
+    <h3>Introduction</h3>
+    <p>Computer rendering techniques have always concentrated on
+    visualising simple primitive structures, more complex
+    structures can then be created by combining these simple
+    'primitives' to shape a more complex model. Unfortunately the
+    real world has never been very forgiving and some types of
+    data do not translate very easily. The Marching Cubes
+    algorithm was designed by William E. Lorensen and Harvey E.
+    Cline to extract surface information from a 3d field of
+    values. The input data set can represent anything from
+    medical imaging data to geological scans.</p>
+    <p>This is also a very graphically intensive page you may
+    have to wait a short while for all images to load. While you
+    are waiting you might want to take a quick look at the
+    following related references from the <a href="http://www.exaflop.org/docs/cgafaq/">Comp.Graphics.Algorithms
+    Frequently Asked Questions</a>. </p>
+    <ul>
+        <li><a href="http://www.exaflop.org/docs/cgafaq/cga5.html#What%20is%20the%20marching%20cubes%20algorithm?">What
+            is the marching cubes algorithm?</a></li>
+        <li><a href="http://www.exaflop.org/docs/cgafaq/cga5.html#What%20is%20the%20status%20of%20the%20patent%20on%20the%20%22marching%20cubes%22%20algorithm?">What
+            is the status of the patent on the "marching
+            cubes" algorithm?</a></li>
+    </ul>
+    <h3>The Input Data</h3>
+    <p>For the Marching Cubes algorithm to work we need to
+    provide some basic information, the main question we will
+    need to ask of out data in order to reconstruct the surface
+    is "Is the point at &lt;X,Y,Z&gt; inside or outside of
+    the object?". In order to produce test code we need some
+    sample data and preferably another way of visualising the
+    data for comparison. Appropriate test data has been selected
+    and the graphical representation of its original form is
+    shown bellow. If you want to know more about the actual test
+    data and the reason for its selection then read the section
+    on "<a href="#The%20Test%20Data">The Test Data</a>" a
+    the end of the document.</p>
+    <p align="center"><img src="index_files/mc_blobs.gif" height="256" width="256"></p>
+    <h3 align="left">The Basic Principle</h3>
+    <p align="left">The basic principle behind the marching cubes
+    algorithm is to subdivide space into a series of small cubes.
+    The algorithm then instructs us to 'march' through each of
+    the cubes testing the corner points and replacing the cube
+    with an appropriate set of polygons. The sum total of all
+    polygons generated will be a surface that <u>approximates</u>
+    the one the data set describes. </p>
+    <p align="left">To explain the algorithm let us first look at
+    a 2 dimensional equivalent. The diagram bellow on the left
+    shows a grid of squares equivalent to the cubes from the 3d
+    algorithm (many people refer to the cubes as 'cells' or
+    voxels). A solid circle has been drawn which is the shape we
+    are going to approximate using lines (instead of polygons).</p>
+    <p align="left">The first step is to calculate the corners
+    that are inside the shape (represented by the green dots). We
+    can now insert some vertices, since we know which points are
+    inside and which are outside we can guess that a vertex
+    should be positioned approximately halfway between an inside
+    corner and any outside corners that are connected by the edge
+    of a cell. The central diagram bellow shows the discussed
+    vertices as small red dots and the diagram on the right shows
+    the matching surface formed by joining the vertices with
+    lines.</p>
+    <div align="center"><center><table border="0">
+        <tbody><tr>
+            <td align="center" width="165"><img src="index_files/mc1.gif" align="left" height="154" hspace="0" width="158"></td>
+            <td align="center" width="165"><img src="index_files/mc2.gif" height="154" width="158"></td>
+            <td align="center" width="165"><img src="index_files/mc3.gif" align="right" height="154" hspace="0" width="158"></td>
+        </tr>
+    </tbody></table>
+    </center></div><p align="left">We can see that the resulting
+    surface has given us a fairly decent representation of the
+    circle, unfortunately we can also see that the shape suffers
+    from some kind of spatial aliasing, we shall look at ways of
+    dealing with this later.</p>
+    <h3 align="left">Working In 3D</h3>
+    <p align="left">Now we understand the basic principle we can
+    go on to look at how the principle can be made to work in 3
+    dimensions. We are now of course dealing with cube's that
+    have 8 corners and therefore a potential 256 possible
+    combinations of corner status. However to simplify the
+    algorithm we can reduce the complexity by taking into account
+    cell combinations that duplicate under the following
+    conditions.</p>
+    <ul>
+        <li>Rotation by any degree over any of the 3 primary axis</li>
+        <li>Mirroring the shape across any of the 3 primary axis </li>
+        <li>Inverting the state of all corners and flipping the
+            normals of the relating polygons. </li>
+    </ul>
+    <p>Taking this into account we can resolve the original 256
+    combinations of cell state down to a total of 15
+    combinations, with this number it is then easy to create
+    predefined polygon sets for making the appropriate surface
+    approximation. The image bellow gives an example data set
+    covering all of the 15 possible combinations. The blue
+    spheres denote corners that have tested as inside the shape
+    and the green arrows denote the surface normals of the
+    relevant triangles.</p>
+    <p align="center"><img src="index_files/cubes1.gif" height="277" width="447"></p>
+    <h3 align="left">Implementation</h3>
+    <p align="left">We now have all of the basic information we
+    need to reconstruct the surface apart from the sample
+    density. The Sample density is essentially the number of
+    cubes along each axis we intend to divide the volume into,
+    this relates directly to the output quality. Since our test
+    object occupies a roughly cube shaped volume of space this
+    will be the same dumber of divisions along each axis. Bellow
+    are some sample outputs from the algorithm at 12,20 and 50
+    subdivisions, this is equal to 1728, 8000 and 125000 cells
+    respectively. </p>
+    <p align="center"><img src="index_files/mc_blobs_12.gif" height="256" width="256"><img src="index_files/mc_blobs_20.gif" height="256" width="256"><img src="index_files/mc_blobs_50.gif" height="256" width="256"></p>
+    <h3 align="left">Analysis Of The Results</h3>
+    <p align="left">Immediately we can see the approximate shape
+    of our test shape even at the lowest sampling frequency, at
+    the top end we can see quite a bit of detail. Unfortunately
+    we are also seeing the same kind of spatial aliasing as we
+    saw in the 2D example, however this has shown us that the
+    algorithm is working properly. The results are not however as
+    good as we would like, it is now time to look beyond the
+    basic algorithm at ways to improve the quality of the
+    reconstructed surface.</p>
+    <h3 align="left">Possible Methods For Improvement</h3>
+    <p align="left">We could at any stage apply conventional
+    smoothing to the mesh, this would of course improve the look
+    but what is more important at this stage is to improve the
+    accuracy of the surface. If we look back at our original 2D
+    test we can see that many of the assumed vertices are a
+    significant distance from the actual surface. Since we know
+    that all the vertices are on an edge between a corner known
+    to be inside the shape and a corner known to be outside the
+    shape we can move the vertex along this edge to the actual
+    surface point. This extension to the algorithm is referred to
+    as "Adaptive Marching Cubes". The Diagrams bellow
+    show our 2D example with the new vertex positions and with
+    the new surface, a far better fit.</p>
+    <div align="center"><center><table border="0">
+        <tbody><tr>
+            <td width="165"><img src="index_files/mca1.gif" height="154" width="158"></td>
+            <td width="165"><img src="index_files/mca2.gif" align="right" height="154" hspace="0" width="158"></td>
+        </tr>
+    </tbody></table>
+    </center></div><h3 align="left">Implementation Considerations</h3>
+    <p align="left">There are two main methods we can use to
+    calculate the new vertex positions for our 3D mesh, we can
+    either do it mathematically or by successive approximation.
+    We can only perform this operation mathematically if we have
+    at least some understanding of the structure we are
+    representing, if we can only determine if a point lies inside
+    or outside the shape this is not going to help. If however we
+    have a good understanding of the maths involved we can
+    directly calculate the new vertex position, this is normally
+    the case when the structure is represented as a field of
+    values where the surface is defined by a threshold, if for
+    example, given corner on our circle we can return the
+    distance from the centre, the threshold would then be the
+    radios of the circle. It is not necessary to go into the
+    maths necessary to do this since it can differ from model to
+    model, for a more generic approach consider the use of
+    successive approximation.</p>
+    <p align="left">Successive approximation has the advantage
+    that we don't need to no anything else about the model, we
+    still only need to be able to ask the question is point
+    &lt;x,y,z&gt; inside or outside of the shape? Since we know
+    that one of the ends of the edge is inside the shape and one
+    is outside we can check an additional point between those
+    two, we should now have a region half the size in which we
+    know the surface resides. Repeating this process recursively
+    only a few more times gives a very accurate result.</p>
+    <p align="left">The two images bellow show the output of the
+    algorithm with the adaptive extensions, as you can see the
+    reconstructed surface is a lot more convincing and follows
+    the contours of the original shape far better.</p>
+    <p align="center"><img src="index_files/mc_blobs_12a.gif" height="256" width="256"><img src="index_files/mc_blobs_20a.gif" height="256" width="256"></p>
+    <h3 align="left">Conclusion</h3>
+    <p align="left">As we can see the adaptive algorithm has
+    produced a very close approximation to the original surface,
+    if we were to add conventional smoothing to this polygons we
+    would have an image that is near perfect at only 20
+    subdivisions. There are other ways of extending this
+    algorithm that will be discussed in later documents although
+    the marching cubes algorithm does suffer from its fixed
+    subdivision of space. In later documents we will also go on
+    to look at methods that involve non regular spatial
+    subdivisions to improve the accuracy of the resulting image
+    without such high polygon counts.</p>
+    <h3 align="left"><a name="The Test Data" id="The Test Data">The Test Data</a></h3>
+    <p align="left">For those who are interested this section
+    describes what the test data was along with the platform I
+    used to draw the results. It was important to be able to
+    produce direct comparisons between the original data and the
+    results in order to establish the accuracy of the algorithm
+    (and the robustness of the test implementation). The Freeware
+    raytracing package POVRAY includes primitives to ray-trace
+    'Blobs', any given blob can be defined by the expression:</p>
+    <p align="center"><sup><strong><img src="index_files/mc_eq1.gif" height="64" width="226"></strong></sup></p>
+    <p align="left">The surface of the shape is defined as where
+    the sum total of power influence exerted by all the blobs in
+    the shape is equal to a given threshold value. If you want to
+    know more about blobs then visit <a href="http://www.povray.org/" target="_blank">www.povray.org</a> and download
+    the source code, then examine the file blob.c (there are some
+    good explanations in the comments). The main benefits of
+    using POVRAY blobs as the test data was that it was very easy
+    to produce a comparatively complex shape and we had a ready
+    made platform for producing a near perfect visualisation of
+    the original data. The various images testing different
+    configurations were also rendered using POVRAY (but this time
+    with the triangle primitive), this allowed us to guarantee
+    that the images were drawn under exactly the same conditions
+    (Scale,Surface Properties,Camera model and Illumination) with
+    only the actual surface changing. The end result was a
+    perfect set of images for comparing the output of the
+    algorithm.</p>
+    <h3 align="left">Further Reading</h3>
+    <p align="left">"Marching Cubes: A High Resolution 3D
+    Surface Construction Algorithm",<br>
+    William E. Lorensen and Harvey E. Cline,<br>
+    Computer Graphics (Proceedings of SIGGRAPH '87), Vol. 21, No.
+    4, pp. 163-169.</p>
+
+<!-- InstanceEndEditable -->
+</div>
+
+<div id="sidebar"><!-- #BeginLibraryItem "/Library/sidebar-css.lbi" -->
+<div id="sidebarnav">
+<a href="http://www.exaflop.org/"><img style="margin-bottom: 15px;" src="index_files/exlogo5.gif" alt="Exaflop logo"></a>
+<div>
+    <img src="index_files/exbut_n.gif" alt="">
+    <a href="http://www.exaflop.org/"><img src="index_files/ebar_n.gif" alt="Home/News"></a>
+</div><div>
+    <a title="Open/Close Documents Folder" onclick="switchMenu('document-subfolders','document-expander');">
+	 <img id="document-expander" src="index_files/exbut_p.gif" alt="">
+	</a>
+    <a href="http://www.exaflop.org/docs"><img src="index_files/ebar_d.gif" alt="Documents" border="0"></a>
+</div>
+<div id="document-subfolders" style="display: none;">
+<div>
+    <img src="index_files/exbut_c.gif" alt="">
+    <img src="index_files/exbut_nn.gif" alt="">
+    <a href="http://www.exaflop.org/docs?SECT=gfx"><img src="index_files/ebar_d_graphics.gif" alt="Graphics" border="0"></a>
+</div><div>
+  <img src="index_files/exbut_c.gif" alt="">
+  <img src="index_files/exbut_nn.gif" alt="">
+  <a href="http://www.exaflop.org/docs?SECT=computing"><img src="index_files/ebar_d_computing.gif" alt="Computing" border="0"></a>
+</div><div>
+  <img src="index_files/exbut_c.gif" alt="">
+  <img src="index_files/exbut_nn.gif" alt="">
+  <a href="http://www.exaflop.org/docs?SECT=gamedev"><img src="index_files/ebar_d_gamedev.gif" alt="Game Dev" border="0"></a>
+</div><div>
+  <img src="index_files/exbut_l.gif" alt="">
+  <img src="index_files/exbut_nn.gif" alt="">
+  <a href="http://www.exaflop.org/docs?SECT=thoughts"><img src="index_files/ebar_d_thoughts.gif" alt="Thoughts" border="0"></a>
+</div>
+</div><!-- document-subfolders -->
+<div>
+   <img src="index_files/exbut_n.gif" alt="">
+   <a href="http://www.exaflop.org/glossary/"><img src="index_files/ebar_g.gif" alt="Glossary"></a>
+</div><div>
+    <img src="index_files/exbut_n.gif" alt="">
+    <a href="http://www.exaflop.org/homepages/"><img src="index_files/ebar_h.gif" alt="Homepages"></a>
+</div><div>
+    <img src="index_files/exbut_n.gif" alt="">
+    <a href="http://www.exaflop.org/feeds.html"><img src="index_files/ebar_feeds.gif" alt="Feeds/RSS"></a>
+</div><div style="margin-left: 23px; padding-top: 20px; float: none;">
+	<a href="http://www.exaflop.org/racing-blog/" title="The Racing Blog - Rants about motor racing...">
+	<img src="index_files/rb_badge.gif" alt="The Racing Blog" height="40" width="140"></a>
+</div>
+</div><!-- sidebarnav -->
+<!-- #EndLibraryItem --><div id="sidebar-adsense"><!-- #BeginLibraryItem "/Library/Adsense-sidebar.lbi" -->
+<script type="text/javascript"><!--
+google_ad_client = "pub-9410520216686213";
+google_ad_width = 120;
+google_ad_height = 600;
+google_ad_format = "120x600_as";
+google_ad_type = "text_image";
+google_ad_channel ="";
+google_color_border = "000000";
+google_color_bg = "F0F0F0";
+google_color_link = "0000FF";
+google_color_url = "008000";
+google_color_text = "000000";
+//--></script>
+<script type="text/javascript" src="index_files/show_ads.js">
+</script><iframe name="google_ads_frame" src="index_files/ads.htm" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" frameborder="0" height="600" scrolling="no" width="120"></iframe><!-- #EndLibraryItem --></div></div>
+
+<!-- InstanceEnd --></body></html>

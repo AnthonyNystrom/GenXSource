@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project>
+  <objectives>
+    <objective desc="Metaball based effect"/>
+  </objectives>
+  <logs>
+    <todo>
+      <rollovers>
+        <item desc="Incorporation of better device handling and creation support" priority="low" status="50%"/>
+        <item desc="Options to toggle chemical structures (cartoons etc.)"/>
+        <item desc="Adaptive marching cube support" status="80%"/>
+        <item desc="Optimize isosurface point collection?"/>
+      </rollovers>
+    </todo>
+    <change>
+      <changes at="19/02/07">
+        <change>Added NuGenNoiseLib wrapper for noiselib</change>
+      </changes>
+      <changes at="21/02/07">
+        <change>Introduced new rendering scheme system</change>
+      </changes>
+    </change>
+  </logs>
+</project>

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Segoe UI" Size="9" />
+  <Class Name="NuGenSVisualLib.Rendering.Chem.MetaballBufferedData">
+    <Position X="3.5" Y="3" Width="2" />
+    <TypeIdentifier>
+      <FileName>AtomMetaballs.cs</FileName>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NuGenSVisualLib.Rendering.Chem.MetaballIData">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AtomMetaballs.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NuGenSVisualLib.Rendering.Chem.AtomMetaballsBufferCreator">
+    <Position X="3.25" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>AtomMetaballs.cs</FileName>
+      <HashCode>AAAgAAAAAAAIAAAAiAAAAAAAAAAAAABAAAAAAAAAQAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NuGenSVisualLib.Rendering.Chem.AtomBufferCreator">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>IAtomRenderer.cs</FileName>
+      <HashCode>AAAggACAQwAIAAAAiAAAgAAAQAAAgABAAIABgAAAQAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="allowsArrayFill" Hidden="true" />
+      <Field Name="allowsListArrayFill" Hidden="true" />
+      <Field Name="allowsListFill" Hidden="true" />
+      <Field Name="allowsOverwrite" Hidden="true" />
+      <Field Name="allowsSingleFill" Hidden="true" />
+      <Field Name="requiresIntermediateData" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="NuGenSVisualLib.Rendering.Chem.AtomBufferedData">
+    <Position X="7.75" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>IAtomRenderer.cs</FileName>
+      <HashCode>EgAARAACAkAAAAQAAAAABAAQAAAAAAAABgAAAIAAAEA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="device" Hidden="true" />
+      <Field Name="final" Hidden="true" />
+      <Field Name="iBuffers" Hidden="true" />
+      <Field Name="numAtoms" Hidden="true" />
+      <Field Name="reqInter" Hidden="true" />
+      <Field Name="vBuffers" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="NuGenSVisualLib.Rendering.Chem.AtomBufferedData.VertexData" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>IAtomRenderer.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="NuGenSVisualLib.Rendering.Chem.AtomBufferedData.IndexData" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>IAtomRenderer.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+  </Class>
+</ClassDiagram>

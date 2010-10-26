@@ -1,0 +1,58 @@
+<run>
+<precisionModel type="FLOATING"/>
+
+<case>
+  <desc>Boundary of a polygon with no hole</desc>
+  <a>
+    POLYGON ((20 20, 100 20, 160 160, 40 100, 20 20))
+  </a>
+
+<test>
+  <op name="getboundary" arg1="A">
+    MULTILINESTRING ((20 20, 100 20, 160 160, 40 100, 20 20))
+  </op>
+</test>
+<test>
+  <op name="convexhull" arg1="A">
+    POLYGON ((20 20, 40 100, 160 160, 100 20, 20 20))
+  </op>
+</test>
+</case>
+
+<case>
+  <desc>Boundary of a Point</desc>
+  <a>
+    POINT (100 100)
+  </a>
+
+<test>
+  <op name="getboundary" arg1="A">
+    GEOMETRYCOLLECTION EMPTY
+  </op>
+</test>
+<test>
+  <op name="convexhull" arg1="A">
+    POINT (100 100)
+  </op>
+</test>
+</case>
+
+<case>
+  <desc>Boundary of a LineString</desc>
+  <a>
+    LINESTRING (20 20, 40 60, 40 80)
+  </a>
+
+<test>
+  <op name="getboundary" arg1="A">
+    MULTIPOINT (20 20, 40 80)
+  </op>
+</test>
+<test>
+  <op name="convexhull" arg1="A">
+    POLYGON ((20 20, 40 80, 40 60, 20 20))
+  </op>
+</test>
+</case>
+
+</run>

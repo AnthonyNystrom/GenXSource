@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<molecule xmlns="http://www.xml-cml.org/schema/cml2/core" id="CS_oxolane">
+ <formula concise=" C 4 H 8 O 1 "/>
+ <identifier version="InChI/1">
+  <basic>1/C4H8O/c1-2-4-5-3-1/h1-4H2</basic>
+ </identifier>
+ <name convention="IUPAC">Oxolan</name>
+ <atomArray>
+  <atom id="a1" elementType="C" x3="-0.052687" y3="1.103167" z3="-0.089304"/>
+  <atom id="a2" elementType="C" x3="-1.320821" y3="0.238481" z3="0.044032"/>
+  <atom id="a3" elementType="O" x3="-0.910782" y3="-0.978664" z3="-0.585627"/>
+  <atom id="a4" elementType="C" x3="0.373810" y3="-1.291000" z3="-0.036832"/>
+  <atom id="a5" elementType="C" x3="1.095839" y3="0.073677" z3="-0.005391"/>
+  <atom id="a6" elementType="H" x3="0.007733" y3="1.879290" z3="0.688812"/>
+  <atom id="a7" elementType="H" x3="-0.045589" y3="1.571209" z3="-1.085833"/>
+  <atom id="a8" elementType="H" x3="-2.198168" y3="0.690655" z3="-0.442288"/>
+  <atom id="a9" elementType="H" x3="-1.536559" y3="0.050591" z3="1.107146"/>
+  <atom id="a10" elementType="H" x3="0.910263" y3="-2.045879" z3="-0.631017"/>
+  <atom id="a11" elementType="H" x3="0.239480" y3="-1.656928" z3="0.992863"/>
+  <atom id="a12" elementType="H" x3="1.757910" y3="0.183284" z3="-0.878151"/>
+  <atom id="a13" elementType="H" x3="1.679581" y3="0.182116" z3="0.921590"/>
+ </atomArray>
+ <bondArray>
+  <bond atomRefs2="a1 a2" order="1"/>
+  <bond atomRefs2="a2 a3" order="1"/>
+  <bond atomRefs2="a3 a4" order="1"/>
+  <bond atomRefs2="a4 a5" order="1"/>
+  <bond atomRefs2="a5 a1" order="1"/>
+  <bond atomRefs2="a1 a6" order="1"/>
+  <bond atomRefs2="a1 a7" order="1"/>
+  <bond atomRefs2="a2 a8" order="1"/>
+  <bond atomRefs2="a2 a9" order="1"/>
+  <bond atomRefs2="a4 a10" order="1"/>
+  <bond atomRefs2="a4 a11" order="1"/>
+  <bond atomRefs2="a5 a12" order="1"/>
+  <bond atomRefs2="a5 a13" order="1"/>
+ </bondArray>
+ <list>
+  <propertyList>
+   <property dictRef="cml:molwt" title="molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="cml:molwt" units="unit:g">72.1057</scalar>
+   </property>
+   <property dictRef="chemwt:exact_molwt" title="exact molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="chemwt:exact_molwt" units="unit:g">72.0575149</scalar>
+   </property>
+   <property dictRef="cml:mpt" title="melting point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:mpt" units="unit:celsius">-108</scalar>
+   </property>
+   <property dictRef="cml:bpt" title="boiling point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:bpt" units="unit:celsius">65</scalar>
+   </property>
+  </propertyList>
+ </list>
+</molecule>

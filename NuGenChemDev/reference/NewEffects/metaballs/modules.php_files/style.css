@@ -1,0 +1,145 @@
+<STYLE type=text/css>
+
+a:link,a:active,a:visited,a.postlink {COLOR: #ffff99; TEXT-DECORATION: none;}
+
+A:hover {COLOR: #ffffff; TEXT-DECORATION: underline}
+pre { font-family: monospace; font-size: 9pt;}
+
+BODY 
+{
+  margin-left: 0;   margin-right: 0;
+  margin-top: 0;    margin-bottom: 0;   
+  scrollbar-face-color:       #797570;
+  scrollbar-shadow-color:     #292520;
+  scrollbar-highlight-color:  #898580;
+  scrollbar-3dlight-color:    #a9a5a0; 
+  scrollbar-darkshadow-color: #191510;
+  scrollbar-track-color:      #595550;
+  scrollbar-arrow-color:      #c9c5c0; 
+  font-size: 10pt ;
+  font-family: Verdana,Arial,Helvetica;
+	background : #262a5b ;
+	color : yellow;
+}
+
+.boxcontent
+{
+   font-family:Verdana, Arial, Helvetica, sans-serif;
+   color:#000000;
+   font-size:12px;
+}
+
+.newstitle
+{ 
+   background-color:#662935;
+   border-width:1px;
+   border-top:white;
+   border-color:#000000;
+   border-bottom: 1px solid #ffffff;
+}
+
+tlinks,
+a.tlinks:link, 
+a.tlinks:visited, 
+a.tlinks:active 
+{
+   font-family:Verdana, Arial, Helvetica, sans-serif;
+   color:#ffcc00;
+   TEXT-DECORATION: none;
+}
+
+.content
+{
+   font-family:Verdana, Arial, Helvetica, sans-serif;
+   color:#ffffff;
+   font-size:12px;
+}
+
+.option
+{
+   font-family:Verdana, Arial, Helvetica, sans-serif;
+   font-size:13px;
+}
+
+.tiny
+{
+   font-family:Verdana, Arial, Helvetica, sans-serif;
+   font-size:9px;
+}
+
+TD 
+{ font-family: Verdana,Arial,Helvetica;
+  font-size: 8pt; }
+
+DIV 
+{ font-family: Verdana,Arial,Helvetica;
+  font-size: 10pt; }
+
+P 
+{ FONT-FAMILY: Verdana,Helvetica; 
+  FONT-SIZE: 12px }
+
+.title
+{
+BACKGROUND: none; 
+COLOR: #ffcc00; 
+FONT-SIZE: 16px; 
+FONT-WEIGHT: bold; 
+FONT-FAMILY: Verdana, Helvetica; 
+TEXT-DECORATION: none
+}
+
+INPUT		{    FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 12px;
+             BORDER: 1px solid #000000;  BORDER-TOP-COLOR: #000000;
+             BORDER-LEFT-COLOR: #000000; BORDER-BOTTOM-COLOR: #000000;
+             BORDER-RIGHT-COLOR: #000000}
+TEXTAREA	{FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 12px}
+FORM 		{FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 9px}
+
+a.main_menu:link, 
+a.main_menu:visited, 
+a.main_menu:active 
+{
+color: LightBlue; 
+TEXT-DECORATION: none; 
+font-size: 8pt ; 
+font-family: Arial,Verdana,Helvetica 
+} 
+
+a.main_menu:hover 
+{
+BACKGROUND: Orange;
+color: #000000; 
+TEXT-DECORATION: none; 
+font-size: 8pt ; 
+font-family: Arial,Verdana,Helvetica 
+} 
+
+a.cfxblocks:link, 
+a.cfxblocks:visited, 
+a.cfxblocks:active 
+{
+color: LightBlue; 
+TEXT-DECORATION: none;  
+font-size: 7pt ;
+font-family: Verdana,Arial,Helvetica 
+} 
+
+.newstxt  
+{ BACKGROUND: none; COLOR: #ffffff; 
+  FONT-FAMILY: Verdana, Helvetica; }
+
+a.headline:link, 
+a.headline:visited, 
+a.headline:active 
+{ color: #ffdd22; FONT-FAMILY: verdana,arial; }
+
+select {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	border: 1px solid #556677;
+	vertical-align : middle;
+	border-style: solid;
+}
+
+</STYLE>

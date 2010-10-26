@@ -1,0 +1,49 @@
+<run>
+<precisionModel type="FLOATING"/>
+
+<case>
+<desc>Test Run</desc>
+  <a>
+    POLYGON ((20 20, 120 20, 140 100, 40 140, 20 140, 20 20))
+  </a>
+  <b>
+    LINESTRING (80 60, 260 60)
+  </b>
+  <test>
+    <op name="relate" arg1="A" arg2="B" arg3="1020F1102">true</op>
+  </test>
+  <test>
+    <op name="getboundary" arg1="A">
+      MULTILINESTRING ((20 20, 120 20, 140 100, 40 140, 20 140, 20 20))
+          </op>
+  </test>
+  <test>
+    <op name="convexhull" arg1="A">
+      POLYGON ((20 20, 20 140, 40 140, 140 100, 120 20, 20 20))
+          </op>
+  </test>
+  <test>
+    <op name="intersection" arg1="A" arg2="B">
+      LINESTRING (80 60, 130 60)
+          </op>
+  </test>
+  <test>
+    <op name="union" arg1="A" arg2="B">
+      GEOMETRYCOLLECTION (LINESTRING (130 60, 260 60), 
+        POLYGON ((130 60, 120 20, 20 20, 20 140, 40 140, 140 100, 130 60)))
+          </op>
+  </test>
+  <test>
+    <op name="difference" arg1="A" arg2="B">
+      POLYGON ((130 60, 120 20, 20 20, 20 140, 40 140, 140 100, 130 60))
+          </op>
+  </test>
+  <test>
+    <op name="symdifference" arg1="A" arg2="B">
+      GEOMETRYCOLLECTION (LINESTRING (130 60, 260 60), 
+        POLYGON ((130 60, 120 20, 20 20, 20 140, 40 140, 140 100, 130 60)))
+          </op>
+  </test>
+</case>
+
+</run>

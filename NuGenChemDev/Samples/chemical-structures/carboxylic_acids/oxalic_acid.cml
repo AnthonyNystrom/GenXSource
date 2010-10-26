@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<molecule xmlns="http://www.xml-cml.org/schema/cml2/core" id="CS_oxalic_acid">
+ <formula concise=" C 2 H 2 O 4 "/>
+ <identifier version="InChI/1">
+  <basic>1/C2H2O4/c3-1(4)2(5)6/h(H,3,4)(H,5,6)</basic>
+ </identifier>
+ <name convention="IUPAC">Oxalic acid</name>
+ <atomArray>
+  <atom id="a1" elementType="O" x3="-1.849500" y3="0.872400" z3="-1.613200"/>
+  <atom id="a2" elementType="C" x3="-2.634500" y3="0.004700" z3="-1.969900"/>
+  <atom id="a3" elementType="O" x3="-2.322300" y3="-1.078900" z3="-2.724400"/>
+  <atom id="a4" elementType="H" x3="-1.367800" y3="-1.070400" z3="-2.948000"/>
+  <atom id="a5" elementType="C" x3="-4.111000" y3="0.004200" z3="-1.616900"/>
+  <atom id="a6" elementType="O" x3="-4.895800" y3="-0.863700" z3="-1.973700"/>
+  <atom id="a7" elementType="O" x3="-4.423400" y3="1.087600" z3="-0.862200"/>
+  <atom id="a8" elementType="H" x3="-5.377900" y3="1.079000" z3="-0.638700"/>
+ </atomArray>
+ <bondArray>
+  <bond atomRefs2="a1 a2" order="2"/>
+  <bond atomRefs2="a2 a3" order="1"/>
+  <bond atomRefs2="a2 a5" order="1"/>
+  <bond atomRefs2="a3 a4" order="1"/>
+  <bond atomRefs2="a5 a6" order="2"/>
+  <bond atomRefs2="a5 a7" order="1"/>
+  <bond atomRefs2="a7 a8" order="1"/>
+ </bondArray>
+ <list>
+  <propertyList>
+   <property dictRef="cml:molwt" title="molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="cml:molwt" units="unit:g">90.0349</scalar>
+   </property>
+   <property dictRef="chemwt:exact_molwt" title="exact molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="chemwt:exact_molwt" units="unit:g">89.9953085</scalar>
+   </property>
+   <property dictRef="cml:mpt" title="melting point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:mpt" units="unit:celsius">189</scalar>
+   </property>
+  </propertyList>
+ </list>
+</molecule>

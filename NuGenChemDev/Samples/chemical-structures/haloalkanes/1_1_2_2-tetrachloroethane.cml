@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<molecule xmlns="http://www.xml-cml.org/schema/cml2/core" id="CS_1_1_2_2-tetrachloroethane">
+ <formula concise=" C 2 H 2 Cl 4 "/>
+ <identifier version="InChI/1">
+  <basic>1/C2H2Cl4/c3-1(4)2(5)6/h1-2H</basic>
+ </identifier>
+ <name convention="IUPAC">1,1,2,2-Tetrachloroethane</name>
+ <atomArray>
+  <atom id="a1" elementType="C" x3="0.709500" y3="0.079500" z3="-0.291900"/>
+  <atom id="a2" elementType="C" x3="-0.709500" y3="-0.079500" z3="0.291900"/>
+  <atom id="a3" elementType="Cl" x3="1.390200" y3="1.636900" z3="0.194000"/>
+  <atom id="a4" elementType="Cl" x3="1.755000" y3="-1.215500" z3="0.304100"/>
+  <atom id="a5" elementType="Cl" x3="-1.755000" y3="1.215500" z3="-0.304100"/>
+  <atom id="a6" elementType="Cl" x3="-1.390200" y3="-1.636900" z3="-0.194000"/>
+  <atom id="a7" elementType="H" x3="0.664500" y3="0.031400" z3="-1.390200"/>
+  <atom id="a8" elementType="H" x3="-0.664500" y3="-0.031400" z3="1.390200"/>
+ </atomArray>
+ <bondArray>
+  <bond atomRefs2="a1 a2" order="1"/>
+  <bond atomRefs2="a1 a3" order="1"/>
+  <bond atomRefs2="a1 a4" order="1"/>
+  <bond atomRefs2="a1 a7" order="1"/>
+  <bond atomRefs2="a2 a5" order="1"/>
+  <bond atomRefs2="a2 a6" order="1"/>
+  <bond atomRefs2="a2 a8" order="1"/>
+ </bondArray>
+ <list>
+  <propertyList>
+   <property dictRef="cml:molwt" title="molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="cml:molwt" units="unit:g">167.8493</scalar>
+   </property>
+   <property dictRef="chemwt:exact_molwt" title="exact molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="chemwt:exact_molwt" units="unit:g">165.8910608</scalar>
+   </property>
+   <property dictRef="cml:mpt" title="melting point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:mpt" units="unit:celsius">-43</scalar>
+   </property>
+   <property dictRef="cml:bpt" title="boiling point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:bpt" units="unit:celsius">146</scalar>
+   </property>
+  </propertyList>
+ </list>
+</molecule>

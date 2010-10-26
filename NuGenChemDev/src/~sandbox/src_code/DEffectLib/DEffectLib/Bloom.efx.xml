@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<effect name="metaball">
+  <renderTarget name="RTscene" expire="frame"/>
+  <renderTarget name="RTbright" expire="frame" scale="0.5,0.5"/>
+  <renderTarget name="RTblur" expire="frame" scale="0.5,0.5"/>
+  
+  <condition name="blurFactor" required="true">
+    <value>5</value>
+    <value>7</value>
+    <value>9</value>
+  </condition>
+
+  <param name="brightnessThreshhold" type="FLOAT" value="0.7"/>
+
+	<shaders>
+		<pshader id="pBright">
+			<input name="texCoord0" type="FLOAT2" map="TEXCOORD0"/>
+
+			<process name="brightnessCulling">
+				<line>float4 brightness = tex2D(PARAMS.BrightSource,texCoord0);</line>
+        <line>if (brightness > PARAMS.brightnessThreshhold) OUT += brightness;</line>
+			</process>
+		</pshader>
+    <pshader name="pBlur">
+      
+    </pshader>
+    <pshader name="pFinal">
+      <input name="texCoord" type="FLOAT2" map="TEXCOORD0"/>
+
+      <process>
+        <line>OUT += tex2D(SceneSource, texCoord) + tex2D(BloomSource, texCoord);</line>
+      </process>
+    </pshader>
+	</shaders>
+
+	<technique name="brightPass">
+    <sampler name="BrightSource" src="TPARAMS.1"/>
+		<pass>
+			<vshader>VSHADER(POSITION,TEXCOORD0)</vshader><!-- Generic passthrough -->
+			<pshader>pBright</pshader>
+		</pass>
+	</technique>
+  <technique name="blurPass">
+    <sampler name="BlurSource" src="TPARAMS.1"/>
+    <pass>
+      <vshader>VSHADER(POSITION,TEXCOORD0)</vshader>
+      <pshader>pBlur()</pshader>
+    </pass>
+    <pass>
+      <vshader>VSHADER(POSITION,TEXCOORD0)</vshader>
+      <pshader>pBlur()</pshader>
+    </pass>
+  </technique>
+  <technique name="finalPass">
+    <sampler name="SceneSource" src="TPARAMS.1"/>
+    <sampler name="BloomSource" src="TPARAMS.2"/>
+    <pass>
+      <vshader>VSHADER(POSITION,TEXCOORD0)</vshader>
+      <pshader>pFinal</pshader>
+    </pass>
+  </technique>
+  
+  <script>
+    <logic>
+      render(alphaBrightSources:bool):
+      RenderScene(RT1,NULL);
+      RenderFSEffect(RT2,brightPass(RT1));
+      RenderFSEffect(RT3,blurPass(RT2));
+      RenderFSEffect(RT0,finalPass(RT1,RT3));
+    </logic>
+  </script>
+</effect>

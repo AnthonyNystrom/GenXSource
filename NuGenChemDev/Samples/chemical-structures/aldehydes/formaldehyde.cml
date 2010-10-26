@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<molecule xmlns="http://www.xml-cml.org/schema/cml2/core" id="CS_formaldehyde">
+ <formula concise=" C 1 H 2 O 1 "/>
+ <identifier version="InChI/1">
+  <basic>1/CH2O/c1-2/h1H2</basic>
+ </identifier>
+ <name convention="IUPAC">Formaldehyde</name>
+ <atomArray>
+  <atom id="a1" elementType="H" x3="-2.133800" y3="-0.052700" z3="-1.056200"/>
+  <atom id="a2" elementType="C" x3="-2.617500" y3="0.103900" z3="-2.032700"/>
+  <atom id="a3" elementType="H" x3="-1.932800" y3="0.289900" z3="-2.874600"/>
+  <atom id="a4" elementType="O" x3="-3.831100" y3="0.073100" z3="-2.172600"/>
+ </atomArray>
+ <bondArray>
+  <bond atomRefs2="a1 a2" order="1"/>
+  <bond atomRefs2="a2 a3" order="1"/>
+  <bond atomRefs2="a2 a4" order="2"/>
+ </bondArray>
+ <list>
+  <propertyList>
+   <property dictRef="cml:molwt" title="molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="cml:molwt" units="unit:g">30.0260</scalar>
+   </property>
+   <property dictRef="chemwt:exact_molwt" title="exact molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="chemwt:exact_molwt" units="unit:g">30.0105647</scalar>
+   </property>
+   <property dictRef="cml:bpt" title="boiling point">
+    <scalar dataType="xsd:decimal" errorValue="1.0" dictRef="cml:bpt" units="unit:celsius">-20</scalar>
+   </property>
+  </propertyList>
+ </list>
+</molecule>

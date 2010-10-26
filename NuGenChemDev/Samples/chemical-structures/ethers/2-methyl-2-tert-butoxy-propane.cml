@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<molecule xmlns="http://www.xml-cml.org/schema/cml2/core" id="CS_2-methyl-2-tert-butoxy-propane">
+ <formula concise=" C 8 H 18 O 1 "/>
+ <identifier version="InChI/1">
+  <basic>1/C8H18O/c1-7(2,3)9-8(4,5)6/h1-6H3</basic>
+ </identifier>
+ <name convention="IUPAC">2-Methyl-2-tert-butoxy-propane</name>
+ <atomArray>
+  <atom id="a1" elementType="C" x3="-1.978200" y3="0.070000" z3="-1.043400"/>
+  <atom id="a2" elementType="C" x3="-0.480000" y3="-0.229700" z3="-1.162200"/>
+  <atom id="a3" elementType="H" x3="-0.308200" y3="-1.204600" z3="-1.631000"/>
+  <atom id="a4" elementType="H" x3="0.017700" y3="0.506600" z3="-1.802200"/>
+  <atom id="a5" elementType="H" x3="0.022600" y3="-0.228100" z3="-0.189200"/>
+  <atom id="a6" elementType="C" x3="-2.605600" y3="-1.031700" z3="-0.178400"/>
+  <atom id="a7" elementType="H" x3="-2.623300" y3="-1.988700" z3="-0.709800"/>
+  <atom id="a8" elementType="H" x3="-2.056800" y3="-1.169300" z3="0.758900"/>
+  <atom id="a9" elementType="H" x3="-3.636600" y3="-0.805700" z3="0.098300"/>
+  <atom id="a10" elementType="C" x3="-2.133000" y3="1.443700" z3="-0.379600"/>
+  <atom id="a11" elementType="H" x3="-1.622700" y3="1.479000" z3="0.588400"/>
+  <atom id="a12" elementType="H" x3="-1.715000" y3="2.237000" z3="-1.007200"/>
+  <atom id="a13" elementType="H" x3="-3.179700" y3="1.693000" z3="-0.193000"/>
+  <atom id="a14" elementType="O" x3="-2.457900" y3="-0.003900" z3="-2.414800"/>
+  <atom id="a15" elementType="C" x3="-3.730900" y3="0.513100" z3="-2.893300"/>
+  <atom id="a16" elementType="C" x3="-4.940400" y3="0.154200" z3="-2.021600"/>
+  <atom id="a17" elementType="H" x3="-4.980400" y3="-0.920800" z3="-1.821200"/>
+  <atom id="a18" elementType="H" x3="-4.915900" y3="0.664800" z3="-1.056600"/>
+  <atom id="a19" elementType="H" x3="-5.880200" y3="0.439500" z3="-2.505700"/>
+  <atom id="a20" elementType="C" x3="-3.657000" y3="2.027100" z3="-3.133900"/>
+  <atom id="a21" elementType="H" x3="-3.699400" y3="2.598100" z3="-2.205000"/>
+  <atom id="a22" elementType="H" x3="-2.721500" y3="2.302500" z3="-3.631400"/>
+  <atom id="a23" elementType="H" x3="-4.490700" y3="2.378100" z3="-3.750700"/>
+  <atom id="a24" elementType="C" x3="-3.913900" y3="-0.165200" z3="-4.255100"/>
+  <atom id="a25" elementType="H" x3="-3.075200" y3="0.057100" z3="-4.923500"/>
+  <atom id="a26" elementType="H" x3="-3.937000" y3="-1.255100" z3="-4.150000"/>
+  <atom id="a27" elementType="H" x3="-4.837500" y3="0.146600" z3="-4.754300"/>
+ </atomArray>
+ <bondArray>
+  <bond atomRefs2="a1 a2" order="1"/>
+  <bond atomRefs2="a1 a6" order="1"/>
+  <bond atomRefs2="a1 a10" order="1"/>
+  <bond atomRefs2="a1 a14" order="1"/>
+  <bond atomRefs2="a2 a3" order="1"/>
+  <bond atomRefs2="a2 a4" order="1"/>
+  <bond atomRefs2="a2 a5" order="1"/>
+  <bond atomRefs2="a6 a7" order="1"/>
+  <bond atomRefs2="a6 a8" order="1"/>
+  <bond atomRefs2="a6 a9" order="1"/>
+  <bond atomRefs2="a10 a11" order="1"/>
+  <bond atomRefs2="a10 a12" order="1"/>
+  <bond atomRefs2="a10 a13" order="1"/>
+  <bond atomRefs2="a14 a15" order="1"/>
+  <bond atomRefs2="a15 a16" order="1"/>
+  <bond atomRefs2="a15 a20" order="1"/>
+  <bond atomRefs2="a15 a24" order="1"/>
+  <bond atomRefs2="a16 a17" order="1"/>
+  <bond atomRefs2="a16 a18" order="1"/>
+  <bond atomRefs2="a16 a19" order="1"/>
+  <bond atomRefs2="a20 a21" order="1"/>
+  <bond atomRefs2="a20 a22" order="1"/>
+  <bond atomRefs2="a20 a23" order="1"/>
+  <bond atomRefs2="a24 a25" order="1"/>
+  <bond atomRefs2="a24 a26" order="1"/>
+  <bond atomRefs2="a24 a27" order="1"/>
+ </bondArray>
+ <list>
+  <propertyList>
+   <property dictRef="cml:molwt" title="molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="cml:molwt" units="unit:g">130.2279</scalar>
+   </property>
+   <property dictRef="chemwt:exact_molwt" title="exact molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="chemwt:exact_molwt" units="unit:g">130.1357652</scalar>
+   </property>
+  </propertyList>
+ </list>
+</molecule>

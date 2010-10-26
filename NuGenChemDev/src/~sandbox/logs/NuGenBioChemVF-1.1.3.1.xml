@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project>
+  <objectives>
+    <objective desc="Unified bloom and shadow mapping effect"/>
+  </objectives>
+  <logs>
+    <todo>
+      <item desc="Sharable resources support - such as entity vBuffers etc."/>
+      <item desc="Improve the bloom effect"/>
+      <item desc="OcTree selection working"/>
+      <item desc="Improve rotation - possibly show axis on side of view?"/>
+    </todo>
+    <change>
+    </change>
+  </logs>
+</project>

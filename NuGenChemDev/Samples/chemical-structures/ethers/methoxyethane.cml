@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<molecule xmlns="http://www.xml-cml.org/schema/cml2/core" id="CS_methoxyethane">
+ <formula concise=" C 3 H 8 O 1 "/>
+ <identifier version="InChI/1">
+  <basic>1/C3H8O/c1-3-4-2/h3H2,1-2H3</basic>
+ </identifier>
+ <name convention="IUPAC">Methoxyethane</name>
+ <atomArray>
+  <atom id="a1" elementType="H" x3="-2.044400" y3="0.029700" z3="-1.039600"/>
+  <atom id="a2" elementType="C" x3="-2.592700" y3="-0.016100" z3="-1.984800"/>
+  <atom id="a3" elementType="H" x3="-2.321700" y3="0.853100" z3="-2.591600"/>
+  <atom id="a4" elementType="H" x3="-2.267800" y3="-0.902700" z3="-2.537600"/>
+  <atom id="a5" elementType="C" x3="-4.087700" y3="-0.054500" z3="-1.743400"/>
+  <atom id="a6" elementType="H" x3="-4.346800" y3="-0.936600" z3="-1.147800"/>
+  <atom id="a7" elementType="H" x3="-4.401400" y3="0.844900" z3="-1.202500"/>
+  <atom id="a8" elementType="O" x3="-4.753700" y3="-0.113900" z3="-3.011200"/>
+  <atom id="a9" elementType="C" x3="-6.175600" y3="-0.152700" z3="-2.855900"/>
+  <atom id="a10" elementType="H" x3="-6.475000" y3="-1.042700" z3="-2.293200"/>
+  <atom id="a11" elementType="H" x3="-6.530000" y3="0.750100" z3="-2.348200"/>
+  <atom id="a12" elementType="H" x3="-6.631200" y3="-0.197200" z3="-3.848500"/>
+ </atomArray>
+ <bondArray>
+  <bond atomRefs2="a1 a2" order="1"/>
+  <bond atomRefs2="a2 a3" order="1"/>
+  <bond atomRefs2="a2 a4" order="1"/>
+  <bond atomRefs2="a2 a5" order="1"/>
+  <bond atomRefs2="a5 a6" order="1"/>
+  <bond atomRefs2="a5 a7" order="1"/>
+  <bond atomRefs2="a5 a8" order="1"/>
+  <bond atomRefs2="a8 a9" order="1"/>
+  <bond atomRefs2="a9 a10" order="1"/>
+  <bond atomRefs2="a9 a11" order="1"/>
+  <bond atomRefs2="a9 a12" order="1"/>
+ </bondArray>
+ <list>
+  <propertyList>
+   <property dictRef="cml:molwt" title="molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="cml:molwt" units="unit:g">60.0950</scalar>
+   </property>
+   <property dictRef="chemwt:exact_molwt" title="exact molecular weight">
+    <scalar dataType="xsd:decimal" dictRef="chemwt:exact_molwt" units="unit:g">60.0575149</scalar>
+   </property>
+  </propertyList>
+ </list>
+</molecule>

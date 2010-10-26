@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project>
+  <objectives>
+    <objective desc="Basic Volume Support" status="complete"/>
+  </objectives>
+  <logs>
+    <todo>
+      <item desc="Incorporation of better device handling and creation support" priority="low" status="50%"/>
+      <item desc="Options to toggle chemical structures (cartoons etc.)"/>
+      <item desc="Loading molecule feedback"/>
+      <item desc="Detect when shading descriptions change" priority="low"/>
+    </todo>
+    <change>
+      <changes at="29-01-07">
+        <change>Updated device code</change>
+      </changes>
+      <changes at="06-02-07">
+        <change>Completed basic working metaball prototype code</change>
+      </changes>
+    </change>
+  </logs>
+</project>
