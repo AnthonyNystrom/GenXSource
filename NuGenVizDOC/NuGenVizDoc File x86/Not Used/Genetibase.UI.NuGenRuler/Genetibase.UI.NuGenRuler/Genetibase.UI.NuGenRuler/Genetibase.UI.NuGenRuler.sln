@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genetibase.UI.NuGenRuler", "Genetibase.UI.NuGenRuler.csproj", "{A6A2F3F6-DB6E-4D05-9C6E-BE823C17FF19}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Sample", "..\Sample\Sample.vbproj", "{EBAB376C-9D91-42D7-849C-44111D87CD86}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6A2F3F6-DB6E-4D05-9C6E-BE823C17FF19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6A2F3F6-DB6E-4D05-9C6E-BE823C17FF19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6A2F3F6-DB6E-4D05-9C6E-BE823C17FF19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6A2F3F6-DB6E-4D05-9C6E-BE823C17FF19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBAB376C-9D91-42D7-849C-44111D87CD86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBAB376C-9D91-42D7-849C-44111D87CD86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBAB376C-9D91-42D7-849C-44111D87CD86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBAB376C-9D91-42D7-849C-44111D87CD86}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

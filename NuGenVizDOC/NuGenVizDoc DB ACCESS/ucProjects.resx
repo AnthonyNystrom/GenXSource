@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="DSTBLPROJECTS.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 92</value>
+  </metadata>
+  <metadata name="TSTBLPROJECTS.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>153, 92</value>
+  </metadata>
+  <data name="GridEXLayout1.LayoutString" xml:space="preserve">
+    <value>&lt;GridEXLayoutData&gt;&lt;RootTable&gt;&lt;AllowAddNew&gt;True&lt;/AllowAddNew&gt;&lt;Caption&gt;TBLProjects&lt;/Caption&gt;&lt;Columns Collection="true"&gt;&lt;Column0 ID="datCreation"&gt;&lt;Caption&gt;datCreation&lt;/Caption&gt;&lt;DataMember&gt;datCreation&lt;/DataMember&gt;&lt;DefaultGroupFormatString&gt;d&lt;/DefaultGroupFormatString&gt;&lt;EditType&gt;CalendarCombo&lt;/EditType&gt;&lt;FormatString&gt;d&lt;/FormatString&gt;&lt;Key&gt;datCreation&lt;/Key&gt;&lt;Position&gt;0&lt;/Position&gt;&lt;/Column0&gt;&lt;Column1 ID="datUpdate"&gt;&lt;Caption&gt;datUpdate&lt;/Caption&gt;&lt;DataMember&gt;datUpdate&lt;/DataMember&gt;&lt;DefaultGroupFormatString&gt;d&lt;/DefaultGroupFormatString&gt;&lt;EditType&gt;CalendarCombo&lt;/EditType&gt;&lt;FormatString&gt;d&lt;/FormatString&gt;&lt;Key&gt;datUpdate&lt;/Key&gt;&lt;Position&gt;1&lt;/Position&gt;&lt;/Column1&gt;&lt;Column2 ID="intKey"&gt;&lt;Caption&gt;intKey&lt;/Caption&gt;&lt;DataMember&gt;intKey&lt;/DataMember&gt;&lt;Key&gt;intKey&lt;/Key&gt;&lt;Position&gt;2&lt;/Position&gt;&lt;/Column2&gt;&lt;Column3 ID="intProjectCodeLanguageKey"&gt;&lt;Caption&gt;intProjectCodeLanguageKey&lt;/Caption&gt;&lt;DataMember&gt;intProjectCodeLanguageKey&lt;/DataMember&gt;&lt;Key&gt;intProjectCodeLanguageKey&lt;/Key&gt;&lt;Position&gt;3&lt;/Position&gt;&lt;/Column3&gt;&lt;Column4 ID="intProjectID"&gt;&lt;Caption&gt;intProjectID&lt;/Caption&gt;&lt;DataMember&gt;intProjectID&lt;/DataMember&gt;&lt;Key&gt;intProjectID&lt;/Key&gt;&lt;Position&gt;4&lt;/Position&gt;&lt;/Column4&gt;&lt;Column5 ID="intProjectPlatformKey"&gt;&lt;Caption&gt;intProjectPlatformKey&lt;/Caption&gt;&lt;DataMember&gt;intProjectPlatformKey&lt;/DataMember&gt;&lt;Key&gt;intProjectPlatformKey&lt;/Key&gt;&lt;Position&gt;5&lt;/Position&gt;&lt;/Column5&gt;&lt;Column6 ID="intProjectUILanguageKey"&gt;&lt;Caption&gt;intProjectUILanguageKey&lt;/Caption&gt;&lt;DataMember&gt;intProjectUILanguageKey&lt;/DataMember&gt;&lt;Key&gt;intProjectUILanguageKey&lt;/Key&gt;&lt;Position&gt;6&lt;/Position&gt;&lt;/Column6&gt;&lt;Column7 ID="intProjectUserKey"&gt;&lt;Caption&gt;intProjectUserKey&lt;/Caption&gt;&lt;DataMember&gt;intProjectUserKey&lt;/DataMember&gt;&lt;Key&gt;intProjectUserKey&lt;/Key&gt;&lt;Position&gt;7&lt;/Position&gt;&lt;/Column7&gt;&lt;Column8 ID="memDataFive"&gt;&lt;Caption&gt;memDataFive&lt;/Caption&gt;&lt;DataMember&gt;memDataFive&lt;/DataMember&gt;&lt;Key&gt;memDataFive&lt;/Key&gt;&lt;Position&gt;8&lt;/Position&gt;&lt;/Column8&gt;&lt;Column9 ID="memDataFour"&gt;&lt;Caption&gt;memDataFour&lt;/Caption&gt;&lt;DataMember&gt;memDataFour&lt;/DataMember&gt;&lt;Key&gt;memDataFour&lt;/Key&gt;&lt;Position&gt;9&lt;/Position&gt;&lt;/Column9&gt;&lt;Column10 ID="memDataOne"&gt;&lt;Caption&gt;memDataOne&lt;/Caption&gt;&lt;DataMember&gt;memDataOne&lt;/DataMember&gt;&lt;Key&gt;memDataOne&lt;/Key&gt;&lt;Position&gt;10&lt;/Position&gt;&lt;/Column10&gt;&lt;Column11 ID="memDataThree"&gt;&lt;Caption&gt;memDataThree&lt;/Caption&gt;&lt;DataMember&gt;memDataThree&lt;/DataMember&gt;&lt;Key&gt;memDataThree&lt;/Key&gt;&lt;Position&gt;11&lt;/Position&gt;&lt;/Column11&gt;&lt;Column12 ID="memDataTwo"&gt;&lt;Caption&gt;memDataTwo&lt;/Caption&gt;&lt;DataMember&gt;memDataTwo&lt;/DataMember&gt;&lt;Key&gt;memDataTwo&lt;/Key&gt;&lt;Position&gt;12&lt;/Position&gt;&lt;/Column12&gt;&lt;Column13 ID="memProjectNotes"&gt;&lt;Caption&gt;memProjectNotes&lt;/Caption&gt;&lt;DataMember&gt;memProjectNotes&lt;/DataMember&gt;&lt;Key&gt;memProjectNotes&lt;/Key&gt;&lt;Position&gt;13&lt;/Position&gt;&lt;/Column13&gt;&lt;Column14 ID="strProjectIdentity"&gt;&lt;Caption&gt;strProjectIdentity&lt;/Caption&gt;&lt;DataMember&gt;strProjectIdentity&lt;/DataMember&gt;&lt;Key&gt;strProjectIdentity&lt;/Key&gt;&lt;Position&gt;14&lt;/Position&gt;&lt;/Column14&gt;&lt;Column15 ID="strProjectVersion"&gt;&lt;Caption&gt;strProjectVersion&lt;/Caption&gt;&lt;DataMember&gt;strProjectVersion&lt;/DataMember&gt;&lt;Key&gt;strProjectVersion&lt;/Key&gt;&lt;Position&gt;15&lt;/Position&gt;&lt;/Column15&gt;&lt;Column16 ID="memColorCollection"&gt;&lt;Caption&gt;memColorCollection&lt;/Caption&gt;&lt;DataMember&gt;memColorCollection&lt;/DataMember&gt;&lt;Key&gt;memColorCollection&lt;/Key&gt;&lt;Position&gt;16&lt;/Position&gt;&lt;/Column16&gt;&lt;Column17 ID="memDocument"&gt;&lt;Caption&gt;memDocument&lt;/Caption&gt;&lt;DataMember&gt;memDocument&lt;/DataMember&gt;&lt;Key&gt;memDocument&lt;/Key&gt;&lt;Position&gt;17&lt;/Position&gt;&lt;/Column17&gt;&lt;Column18 ID="memFlags"&gt;&lt;Caption&gt;memFlags&lt;/Caption&gt;&lt;DataMember&gt;memFlags&lt;/DataMember&gt;&lt;Key&gt;memFlags&lt;/Key&gt;&lt;Position&gt;18&lt;/Position&gt;&lt;/Column18&gt;&lt;Column19 ID="memTag"&gt;&lt;Caption&gt;memTag&lt;/Caption&gt;&lt;DataMember&gt;memTag&lt;/DataMember&gt;&lt;Key&gt;memTag&lt;/Key&gt;&lt;Position&gt;19&lt;/Position&gt;&lt;/Column19&gt;&lt;Column20 ID="memText"&gt;&lt;Caption&gt;memText&lt;/Caption&gt;&lt;DataMember&gt;memText&lt;/DataMember&gt;&lt;Key&gt;memText&lt;/Key&gt;&lt;Position&gt;20&lt;/Position&gt;&lt;/Column20&gt;&lt;Column21 ID="memWritingInstruments"&gt;&lt;Caption&gt;memWritingInstruments&lt;/Caption&gt;&lt;DataMember&gt;memWritingInstruments&lt;/DataMember&gt;&lt;Key&gt;memWritingInstruments&lt;/Key&gt;&lt;Position&gt;21&lt;/Position&gt;&lt;/Column21&gt;&lt;/Columns&gt;&lt;GroupCondition ID="" /&gt;&lt;Key&gt;TBLProjects&lt;/Key&gt;&lt;/RootTable&gt;&lt;/GridEXLayoutData&gt;</value>
+  </data>
+</root>

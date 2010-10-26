@@ -1,0 +1,530 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="Genetibase.Debug.AManifestResource" Collapsed="true">
+    <Position X="52.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AManifestResource.cs</FileName>
+      <HashCode>AAAAIEAAAAAAAAAAAAAAAAQAAEAASAAAIAABAABAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.AModule" Collapsed="true">
+    <Position X="54.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AManifestResource.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAIAAAAAAAABAEAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.AFile" Collapsed="true">
+    <Position X="50.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AManifestResource.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAEQAAAAgQQAAAAAAACAAAAAAEAEAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.BaseNode" Collapsed="true">
+    <Position X="24.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AsmexNode.cs</FileName>
+      <HashCode>CSACEAgaBQABAQsSgCAAAQAAQNgIATA5AohaRAQIIKg=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.AsmView" Collapsed="true">
+    <Position X="56" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AsmView.cs</FileName>
+      <HashCode>AEAAAAAAACAIAEAAAQCAAQQCAAEJEAEBAAAAgAAAEAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.FindDialog" Collapsed="true">
+    <Position X="52.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>FindDialog.cs</FileName>
+      <HashCode>AEAAAABAICIAAFEAAACAAMJDAgBIAEgIACAAAAEAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.GACPicker" Collapsed="true">
+    <Position X="56" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>GACPicker.cs</FileName>
+      <HashCode>IIAAAgAAECAAAAAAAACAAIACAQAAAMEIAAAAAAAARAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.InfoDialog" Collapsed="true">
+    <Position X="50.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>InfoDialog.cs</FileName>
+      <HashCode>AAgAAAAAADAAACAAAACAAAACBAAAABAIAAIAAEIAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.MainFrame" Collapsed="true">
+    <Position X="52.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>MainFrame.cs</FileName>
+      <HashCode>ACQACQAAASAChIIgAACARAALCgJQACFQgAAVBAAGAAE=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.FindState" Collapsed="true">
+    <Position X="54.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>MainFrame.cs</FileName>
+      <HashCode>gAAAAhBQAgGgBCECQABACIAECgAAAAQAAAAQAAEAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.NamespaceMaker" Collapsed="true">
+    <Position X="54.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>NamespaceMaker.cs</FileName>
+      <HashCode>AAAAIAAAAAAAAAAASAACAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.TypeNode" Collapsed="true">
+    <Position X="10" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Nodes.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAGgAAAAAAAABAAgAAAAAAAAIAAAAABA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.RelationshipNode" Collapsed="true">
+    <Position X="16.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Nodes.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEhAAAAAAAQIAAAAABA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.NamespaceNode" Collapsed="true">
+    <Position X="23.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Nodes.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAIAAAAABA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.AsmNode" Collapsed="true">
+    <Position X="30.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Nodes.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAABAAgAAAAAAIAIAAAAABA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.AsmRefNode" Collapsed="true">
+    <Position X="37" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Nodes.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAABAAgAAAAAAAAIAEAAABA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.ModuleNode" Collapsed="true">
+    <Position X="41.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Nodes.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAABAAgAAAAAAIAIAAAAABA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.FileRegionNode" Collapsed="true">
+    <Position X="46" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Nodes.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAIAAAAABA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.TableNode" Collapsed="true">
+    <Position X="1" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Nodes.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAgAAAgAAAABAAgAAAAAAAAIAAAAABA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.RowNode" Collapsed="true">
+    <Position X="5.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Nodes.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAAAgAAABAAAAAAAAAABA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.MDHeapNode" Collapsed="true">
+    <Position X="12.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Nodes.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAIAAAAABA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.FileNode" Collapsed="true">
+    <Position X="19" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Nodes.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAABA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.ConsNode" Collapsed="true">
+    <Position X="25.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Nodes.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAABAAgAAAAAAAAIAAAAABA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.MethodNode" Collapsed="true">
+    <Position X="32.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Nodes.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAABAAgAAAAAAAAIAAAAIBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.ParamNode" Collapsed="true">
+    <Position X="39.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Nodes.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAIAAAAIBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.PropNode" Collapsed="true">
+    <Position X="43.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Nodes.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAIAAAAIBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.EventNode" Collapsed="true">
+    <Position X="48.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Nodes.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAIAAAAIBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.FieldNode" Collapsed="true">
+    <Position X="3.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Nodes.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAIAAAAABA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.ErrorNode" Collapsed="true">
+    <Position X="7.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Nodes.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAABA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.ObjNode" Collapsed="true">
+    <Position X="14.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Nodes.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAgAAAAAAAAIAAAAABA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.ManResNode" Collapsed="true">
+    <Position X="21.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Nodes.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAABAAgAAAAAAAAIAAAAABA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.ResNode" Collapsed="true">
+    <Position X="28" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Nodes.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAABA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.FolderNode" Collapsed="true">
+    <Position X="34.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Nodes.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAgIAAAAABA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.FileViewer.DOSStub" Collapsed="true">
+    <Position X="23" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Headers.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAEAI=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.FileViewer.DataDir" Collapsed="true">
+    <Position X="25.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Headers.cs</FileName>
+      <HashCode>AAAAAAAABAAAgAAEAAAAIAYAAAAAAAAAAAQAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.FileViewer.PEHeader" Collapsed="true">
+    <Position X="36.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Headers.cs</FileName>
+      <HashCode>MAAAEgRAEY0gTohIAEuAAReAQAEAgD5AESmiBCAAAIY=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.FileViewer.COFFHeader" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Headers.cs</FileName>
+      <HashCode>AAAAEAAgwAAAAAAECAADAQAAkAABAAAAAAAAAAQAAAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.FileViewer.SectionHeader" Collapsed="true">
+    <Position X="7.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Headers.cs</FileName>
+      <HashCode>gIAQEAAgAAAACAIWiAAAIAQAAAACAAEAAAAAAAUAAQA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.FileViewer.OSHeaders" Collapsed="true">
+    <Position X="14" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Headers.cs</FileName>
+      <HashCode>AIAAAAAQAAAAAAAIAAACAAAACQAAAAgAAAAAAAAACAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.FileViewer.ImportAddress" Collapsed="true">
+    <Position X="59.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Headers.cs</FileName>
+      <HashCode>AAAAAAAEAAAAAAAEABAAIAQAAAAAAQAAAACAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.FileViewer.ImportDirectoryEntry" Collapsed="true">
+    <Position X="18.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Headers.cs</FileName>
+      <HashCode>AAAABAAAAAAAAAAAAAABIASAAAAAAAAAAAAiAARAAQA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.FileViewer.ExportDirTable" Collapsed="true">
+    <Position X="20.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Headers.cs</FileName>
+      <HashCode>JAQCAACABAYCAACAFAAAIAQABEgAAEAAAAQAAgQAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.FileViewer.ExportRecord" Collapsed="true">
+    <Position X="50.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Headers.cs</FileName>
+      <HashCode>AAABIAAAAAAAAAAEABAAAAQAAAAAEAACAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.FileViewer.ImpExports" Collapsed="true">
+    <Position X="57.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Headers.cs</FileName>
+      <HashCode>hAAAAAAgAAAAAAAAAAAAAAABSAAAAAAAEEAAAAAgAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.FileViewer.Relocation" Collapsed="true">
+    <Position X="59.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Headers.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAQEAAAAAAAAAAAAABAAAQAAAIAAgAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.FileViewer.RelocationBlock" Collapsed="true">
+    <Position X="2.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Headers.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAEAEAAAAAEAAAACAACAAAAAACAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.FileViewer.Relocations" Collapsed="true">
+    <Position X="9.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Headers.cs</FileName>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.FileViewer.MDStringHeap" Collapsed="true">
+    <Position X="29.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>MDStringHeap.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.FileViewer.MDBlob" Collapsed="true">
+    <Position X="54.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>MDStringHeap.cs</FileName>
+      <HashCode>AAAAAACABAAAAAAEAAAAAABAAAAAAAAABAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.FileViewer.MDBlobHeap" Collapsed="true">
+    <Position X="32" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>MDStringHeap.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.FileViewer.MDGUID" Collapsed="true">
+    <Position X="56" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>MDStringHeap.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAEAAIAABAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.FileViewer.MDGUIDHeap" Collapsed="true">
+    <Position X="34.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>MDStringHeap.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.FileViewer.COR20Header" Collapsed="true">
+    <Position X="27.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>MetaData.cs</FileName>
+      <HashCode>ICAAFAAAJEAAAQgAARAAAACAQgQAAFIEAAAAAKIAgAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.FileViewer.StorageSigAndHeader" Collapsed="true">
+    <Position X="38.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>MetaData.cs</FileName>
+      <HashCode>AAAAEAAABAQAAAAAAAAAAAQAAEAAAEAAQAAAAAAAAAI=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.FileViewer.MDStreamHeader" Collapsed="true">
+    <Position X="5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>MetaData.cs</FileName>
+      <HashCode>AAAAAAAAAAgAgAAAAAAAIAYAAAAAAAAAAQAAAAAAhAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.FileViewer.MetaDataHeaders" Collapsed="true">
+    <Position X="11.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>MetaData.cs</FileName>
+      <HashCode>CAEgAAACAAAAAgAAALAAAIAAAAAAAQAAAAIAAAAAABA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.FileViewer.MetaDataTableHeader" Collapsed="true">
+    <Position X="16.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>MetaData.cs</FileName>
+      <HashCode>AAgAAAACBAwAQBIAAAAAEIAAAEAAAEAAAAhAEgAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.FileViewer.ModHeaders" Collapsed="true">
+    <Position X="52.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ModHeaders.cs</FileName>
+      <HashCode>CAAAwAACAAAAEAAAAAAAAAAABAAECAAAAAAAAAIAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.FileViewer.MModule" Collapsed="true">
+    <Position X="59.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ModHeaders.cs</FileName>
+      <HashCode>gAAAUAAAggCAAAEAAAAgAAAAAAEAAACAUIACEAACEAI=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.FileViewer.ModException" Collapsed="true">
+    <Position X="50.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ModHeaders.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.FileViewer.Region" Collapsed="true">
+    <Position X="19.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Region.cs</FileName>
+      <HashCode>AAIAAAAAACAAgACEAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.FileViewer.MDHeap" Collapsed="true">
+    <Position X="32" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Region.cs</FileName>
+      <HashCode>AAAAIAAABACAABAECAAAEAQAAAAAAAAAAAAAAAAAIAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Genetibase.Debug.FileViewer.ColDesc" Collapsed="true">
+    <Position X="59.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>TableStream.cs</FileName>
+      <HashCode>AAAAIAAAAAAAAAQAAAAAAAQAAAAAAAAAAQAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.FileViewer.Table" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="57.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>TableStream.cs</FileName>
+      <HashCode>AAAIAAAAAAAAAFSECAAAACQAAAAAAAAAAQAwAAAAABA=</HashCode>
+    </TypeIdentifier>
+    <NestedTypes>
+      <Class Name="Genetibase.Debug.FileViewer.Table.Enumerator" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>TableStream.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+    </NestedTypes>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Genetibase.Debug.FileViewer.Row" Collapsed="true">
+    <Position X="54.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>TableStream.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAgAFCAAAQAgAAAAAAAAAAQAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.FileViewer.TableCell" Collapsed="true">
+    <Position X="59.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>TableStream.cs</FileName>
+      <HashCode>AAAAAAAIBAAAAAQAAAAAAAAAAAAAIBAAAAAQAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.FileViewer.RID" Collapsed="true">
+    <Position X="52.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>TableStream.cs</FileName>
+      <HashCode>AAAAAAAAAAAACAQEAAAAAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.FileViewer.CodedToken" Collapsed="true">
+    <Position X="57.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>TableStream.cs</FileName>
+      <HashCode>AAAAAAAAAAAACAQEAAAAAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.FileViewer.MDTables" Collapsed="true">
+    <Position X="57.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>TableStream.cs</FileName>
+      <HashCode>AEAAAAQEAAAIEAAAEAAARAAAYgAAAAAEABRAJAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.ObjViewer.ObjViewer" Collapsed="true">
+    <Position X="56" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ObjViewer.cs</FileName>
+      <HashCode>AQAAEAAQGCAACAAAAECAAAACAAAAAAAIAAAAAABAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.ObjViewer.ObjViewerAttribute" Collapsed="true">
+    <Position X="57.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ObjViewer.cs</FileName>
+      <HashCode>AAAAoAgAAAAAAAgAEAAABAQAAAAAAAAAAAAAAAAAgAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.Properties.Resources" Collapsed="true">
+    <Position X="50.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.Debug.Properties.Settings" Collapsed="true">
+    <Position X="56" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Genetibase.Debug.FileViewer.Types" Collapsed="true">
+    <Position X="50.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>TableStream.cs</FileName>
+      <HashCode>C0QAAAICJSHkAAIEQAUgARQCK2Ak1IgAQiIQTRGDgAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+</ClassDiagram>

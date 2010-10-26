@@ -1,0 +1,281 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3C7016C0-0303-48AA-BF36-F764929FCEB7}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>RibbonPad</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>Off</OptionStrict>
+    <RootNamespace>Notepad</RootNamespace>
+    <StartupObject>Notepad.My.MyApplication</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <MyType>WindowsForms</MyType>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>RibbonPad.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032</NoWarn>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>RibbonPad.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032</NoWarn>
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Agilix.Ink, Version=2.0.0.1454, Culture=neutral, PublicKeyToken=e7aae1a23b4b7f5a">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Documents and Settings\Anthony Nystrom\My Documents\Visual Studio 2005\Controls\Agilix InfiNotes\Agilix.Ink.dll</HintPath>
+    </Reference>
+    <Reference Include="Agilix.Ink.Native, Version=0.0.0.0, Culture=neutral, PublicKeyToken=e7aae1a23b4b7f5a" />
+    <Reference Include="DevComponents.DotNetBar">
+      <Name>DevComponents.DotNetBar</Name>
+    </Reference>
+    <Reference Include="DevExpress.Utils3, Version=3.2.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Common Files\DevExpress\.NET.v3\DevExpress.Utils3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors3, Version=3.2.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar3, Version=2.7.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Ink, Version=1.7.2600.2180, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+      <HintPath>C:\WINNT\Microsoft.NET\Framework\v1.0.3617\System.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Drawing.Design">
+      <Name>System.Drawing.Design</Name>
+      <HintPath>C:\WINNT\Microsoft.NET\Framework\v1.0.3617\System.Drawing.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AiresBackground.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BalloonSearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ColorPicker.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form11024.Designer.vb">
+      <DependentUpon>Form11024.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form11024.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1640.Designer.vb">
+      <DependentUpon>Form1640.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1640.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQ.designer.vb">
+      <DependentUpon>FormQ.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormQ.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQ1024.Designer.vb" />
+    <Compile Include="FormQ1024.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Container.designer.vb">
+      <DependentUpon>Form_Container.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Container.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Firms.Designer.vb">
+      <DependentUpon>Form_Firms.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Firms.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Splash.Designer.vb">
+      <DependentUpon>Form_Splash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Splash.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDocument.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IDocumentUI.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Win32.vb" />
+    <EmbeddedResource Include="BalloonSearch.resx">
+      <DependentUpon>BalloonSearch.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColorPicker.resx">
+      <DependentUpon>ColorPicker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form11024.resx">
+      <DependentUpon>Form11024.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1640.resx">
+      <DependentUpon>Form1640.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQ.resx">
+      <DependentUpon>FormQ.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQ1024.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Container.resx">
+      <DependentUpon>Form_Container.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Firms.resx">
+      <DependentUpon>Form_Firms.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Splash.resx">
+      <DependentUpon>Form_Splash.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDocument.resx">
+      <DependentUpon>frmDocument.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.dotNetBarManager1.xml" />
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Info.png" />
+    <EmbeddedResource Include="licenses.licx" />
+    <EmbeddedResource Include="Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Application.myapp" />
+    <Content Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="Resources\Window.png" />
+    <Content Include="Resources\Window_Splash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Settings.settings" />
+  </ItemGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties XMLCommentsActionBuild="-1" XMLCommentsOutputFile="" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

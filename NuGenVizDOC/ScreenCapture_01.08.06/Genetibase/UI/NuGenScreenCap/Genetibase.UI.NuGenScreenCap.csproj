@@ -1,0 +1,174 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A32727BD-9E65-441F-BEC7-825AFBC0567E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Genetibase.UI</RootNamespace>
+    <AssemblyName>Genetibase.UI.NuGenScreenCap</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Extra\BoxFilterCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Extra\BoxFilterCtrl.designer.cs">
+      <DependentUpon>BoxFilterCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extra\ContentAlignmentCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Extra\ContentAlignmentCtrl.Designer.cs">
+      <DependentUpon>ContentAlignmentCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extra\frmBF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Extra\frmBF.designer.cs">
+      <DependentUpon>frmBF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extra\frmCA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Extra\frmCA.designer.cs">
+      <DependentUpon>frmCA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extra\frmFE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Extra\frmFE.designer.cs">
+      <DependentUpon>frmFE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extra\frmWaterMark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Extra\frmWaterMark.Designer.cs">
+      <DependentUpon>frmWaterMark.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extra\RibbonButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Extra\RibbonControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Extra\RibbonPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenScreenCap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NuGenScreenCap.Designer.cs">
+      <DependentUpon>NuGenScreenCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ScreenCapture.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Extra\BoxFilterCtrl.resx">
+      <DependentUpon>BoxFilterCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Extra\ContentAlignmentCtrl.resx">
+      <DependentUpon>ContentAlignmentCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Extra\frmBF.resx">
+      <DependentUpon>frmBF.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Extra\frmCA.resx">
+      <DependentUpon>frmCA.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Extra\frmFE.resx">
+      <DependentUpon>frmFE.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Extra\frmWaterMark.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWaterMark.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenScreenCap.bmp" />
+    <EmbeddedResource Include="NuGenScreenCap.resx">
+      <DependentUpon>NuGenScreenCap.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Resources\Cancel.png" />
+    <None Include="Resources\OK.png" />
+    <None Include="Resources\text_align_left.png" />
+    <Compile Include="Extra\frmFR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Extra\frmFR.designer.cs" />
+    <EmbeddedResource Include="Extra\frmFR.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+    <ProjectReference Include="..\Drawing\Effects\Genetibase.UI.Drawing.Effects.csproj">
+      <Project>{1EE2EF36-F3F1-430B-8273-0A89B430008D}</Project>
+      <Name>Genetibase.UI.Drawing.Effects</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fliphor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flipver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RotateLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RotateRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\load_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\font.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

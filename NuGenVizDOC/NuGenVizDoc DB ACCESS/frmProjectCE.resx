@@ -1,0 +1,820 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="TSTBLPROJECTS.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>580, 91</value>
+  </metadata>
+  <metadata name="DSTBLPROJECTS.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>444, 91</value>
+  </metadata>
+  <metadata name="ContextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>140, 128</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="DeleteProjectToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 22</value>
+  </data>
+  <data name="DeleteProjectToolStripMenuItem.Text" xml:space="preserve">
+    <value>Delete Project</value>
+  </data>
+  <data name="ContextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 26</value>
+  </data>
+  <data name="&gt;&gt;ContextMenuStrip1.Name" xml:space="preserve">
+    <value>ContextMenuStrip1</value>
+  </data>
+  <data name="&gt;&gt;ContextMenuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="GridEX1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="GridEX1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="GridEXLayout1.LayoutString" xml:space="preserve">
+    <value>&lt;GridEXLayoutData&gt;&lt;RootTable&gt;&lt;Key&gt;TBLProjects&lt;/Key&gt;&lt;Caption&gt;TBLProjects&lt;/Caption&gt;&lt;Columns Collection="true"&gt;&lt;Column0 ID="strProjectIdentity"&gt;&lt;Caption&gt;Identity&lt;/Caption&gt;&lt;CardCaption&gt;True&lt;/CardCaption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;strProjectIdentity&lt;/DataMember&gt;&lt;Key&gt;strProjectIdentity&lt;/Key&gt;&lt;Position&gt;0&lt;/Position&gt;&lt;/Column0&gt;&lt;Column1 ID="strProjectVersion"&gt;&lt;Caption&gt;Version&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;strProjectVersion&lt;/DataMember&gt;&lt;Key&gt;strProjectVersion&lt;/Key&gt;&lt;Position&gt;1&lt;/Position&gt;&lt;/Column1&gt;&lt;Column2 ID="datCreation"&gt;&lt;Caption&gt;Creation&lt;/Caption&gt;&lt;DataTypeCode&gt;DateTime&lt;/DataTypeCode&gt;&lt;DataMember&gt;datCreation&lt;/DataMember&gt;&lt;DefaultGroupFormatString&gt;d&lt;/DefaultGroupFormatString&gt;&lt;EditType&gt;CalendarCombo&lt;/EditType&gt;&lt;FormatString&gt;d&lt;/FormatString&gt;&lt;Key&gt;datCreation&lt;/Key&gt;&lt;Position&gt;2&lt;/Position&gt;&lt;/Column2&gt;&lt;Column3 ID="datUpdate"&gt;&lt;Caption&gt;Last Update&lt;/Caption&gt;&lt;DataTypeCode&gt;DateTime&lt;/DataTypeCode&gt;&lt;DataMember&gt;datUpdate&lt;/DataMember&gt;&lt;DefaultGroupFormatString&gt;d&lt;/DefaultGroupFormatString&gt;&lt;EditType&gt;CalendarCombo&lt;/EditType&gt;&lt;FormatString&gt;d&lt;/FormatString&gt;&lt;Key&gt;datUpdate&lt;/Key&gt;&lt;Position&gt;3&lt;/Position&gt;&lt;/Column3&gt;&lt;Column4 ID="intProjectCodeLanguageKey"&gt;&lt;Caption&gt;Code Language&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;intProjectCodeLanguageKey&lt;/DataMember&gt;&lt;Key&gt;intProjectCodeLanguageKey&lt;/Key&gt;&lt;Position&gt;4&lt;/Position&gt;&lt;/Column4&gt;&lt;Column5 ID="intProjectUILanguageKey"&gt;&lt;Caption&gt;UI Language&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;intProjectUILanguageKey&lt;/DataMember&gt;&lt;Key&gt;intProjectUILanguageKey&lt;/Key&gt;&lt;Position&gt;5&lt;/Position&gt;&lt;/Column5&gt;&lt;Column6 ID="intProjectPlatformKey"&gt;&lt;Caption&gt;Platform&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;intProjectPlatformKey&lt;/DataMember&gt;&lt;Key&gt;intProjectPlatformKey&lt;/Key&gt;&lt;Position&gt;6&lt;/Position&gt;&lt;/Column6&gt;&lt;/Columns&gt;&lt;GroupCondition ID="" /&gt;&lt;/RootTable&gt;&lt;RowWithErrorsFormatStyle&gt;&lt;PredefinedStyle&gt;RowWithErrorsFormatStyle&lt;/PredefinedStyle&gt;&lt;/RowWithErrorsFormatStyle&gt;&lt;LinkFormatStyle&gt;&lt;PredefinedStyle&gt;LinkFormatStyle&lt;/PredefinedStyle&gt;&lt;/LinkFormatStyle&gt;&lt;CardCaptionFormatStyle&gt;&lt;PredefinedStyle&gt;CardCaptionFormatStyle&lt;/PredefinedStyle&gt;&lt;/CardCaptionFormatStyle&gt;&lt;GroupByBoxFormatStyle&gt;&lt;PredefinedStyle&gt;GroupByBoxFormatStyle&lt;/PredefinedStyle&gt;&lt;/GroupByBoxFormatStyle&gt;&lt;GroupByBoxInfoFormatStyle&gt;&lt;PredefinedStyle&gt;GroupByBoxInfoFormatStyle&lt;/PredefinedStyle&gt;&lt;/GroupByBoxInfoFormatStyle&gt;&lt;GroupRowFormatStyle&gt;&lt;PredefinedStyle&gt;GroupRowFormatStyle&lt;/PredefinedStyle&gt;&lt;/GroupRowFormatStyle&gt;&lt;HeaderFormatStyle&gt;&lt;PredefinedStyle&gt;HeaderFormatStyle&lt;/PredefinedStyle&gt;&lt;/HeaderFormatStyle&gt;&lt;PreviewRowFormatStyle&gt;&lt;PredefinedStyle&gt;PreviewRowFormatStyle&lt;/PredefinedStyle&gt;&lt;/PreviewRowFormatStyle&gt;&lt;RowFormatStyle&gt;&lt;PredefinedStyle&gt;RowFormatStyle&lt;/PredefinedStyle&gt;&lt;/RowFormatStyle&gt;&lt;SelectedFormatStyle&gt;&lt;PredefinedStyle&gt;SelectedFormatStyle&lt;/PredefinedStyle&gt;&lt;/SelectedFormatStyle&gt;&lt;SelectedInactiveFormatStyle&gt;&lt;PredefinedStyle&gt;SelectedInactiveFormatStyle&lt;/PredefinedStyle&gt;&lt;/SelectedInactiveFormatStyle&gt;&lt;WatermarkImage /&gt;&lt;AlternatingColors&gt;True&lt;/AlternatingColors&gt;&lt;Font&gt;Microsoft Sans Serif, 8.25pt&lt;/Font&gt;&lt;VisualStyle&gt;Office2003&lt;/VisualStyle&gt;&lt;AllowDelete&gt;True&lt;/AllowDelete&gt;&lt;AllowEdit&gt;False&lt;/AllowEdit&gt;&lt;CardWidth&gt;288&lt;/CardWidth&gt;&lt;View&gt;CardView&lt;/View&gt;&lt;/GridEXLayoutData&gt;</value>
+  </data>
+  <data name="GridEX1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>327, 0</value>
+  </data>
+  <data name="GridEX1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>307, 579</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="GridEX1.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;GridEX1.Name" xml:space="preserve">
+    <value>GridEX1</value>
+  </data>
+  <data name="&gt;&gt;GridEX1.Type" xml:space="preserve">
+    <value>Janus.Windows.GridEX.GridEX, Janus.Windows.GridEX.v3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf</value>
+  </data>
+  <data name="&gt;&gt;GridEX1.Parent" xml:space="preserve">
+    <value>UiGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;GridEX1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <assembly alias="Janus.Windows.CalendarCombo.v3" name="Janus.Windows.CalendarCombo.v3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf" />
+  <data name="CalendarCombo2.DateFormat" type="Janus.Windows.CalendarCombo.DateFormat, Janus.Windows.CalendarCombo.v3">
+    <value>Long</value>
+  </data>
+  <data name="CalendarCombo2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>120, 225</value>
+  </data>
+  <data name="CalendarCombo2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 20</value>
+  </data>
+  <data name="CalendarCombo2.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="&gt;&gt;CalendarCombo2.Name" xml:space="preserve">
+    <value>CalendarCombo2</value>
+  </data>
+  <data name="&gt;&gt;CalendarCombo2.Type" xml:space="preserve">
+    <value>Janus.Windows.CalendarCombo.CalendarCombo, Janus.Windows.CalendarCombo.v3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf</value>
+  </data>
+  <data name="&gt;&gt;CalendarCombo2.Parent" xml:space="preserve">
+    <value>UiGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;CalendarCombo2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="CalendarCombo1.DateFormat" type="Janus.Windows.CalendarCombo.DateFormat, Janus.Windows.CalendarCombo.v3">
+    <value>Long</value>
+  </data>
+  <data name="CalendarCombo1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>120, 199</value>
+  </data>
+  <data name="CalendarCombo1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 20</value>
+  </data>
+  <data name="CalendarCombo1.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;CalendarCombo1.Name" xml:space="preserve">
+    <value>CalendarCombo1</value>
+  </data>
+  <data name="&gt;&gt;CalendarCombo1.Type" xml:space="preserve">
+    <value>Janus.Windows.CalendarCombo.CalendarCombo, Janus.Windows.CalendarCombo.v3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf</value>
+  </data>
+  <data name="&gt;&gt;CalendarCombo1.Parent" xml:space="preserve">
+    <value>UiGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;CalendarCombo1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Label9.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 225</value>
+  </data>
+  <data name="Label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 13</value>
+  </data>
+  <data name="Label9.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="Label9.Text" xml:space="preserve">
+    <value>Estimated End Date</value>
+  </data>
+  <data name="&gt;&gt;Label9.Name" xml:space="preserve">
+    <value>Label9</value>
+  </data>
+  <data name="&gt;&gt;Label9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label9.Parent" xml:space="preserve">
+    <value>UiGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;Label9.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="Label8.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 199</value>
+  </data>
+  <data name="Label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
+  </data>
+  <data name="Label8.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="Label8.Text" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
+  <data name="&gt;&gt;Label8.Name" xml:space="preserve">
+    <value>Label8</value>
+  </data>
+  <data name="&gt;&gt;Label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label8.Parent" xml:space="preserve">
+    <value>UiGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;Label8.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Scribble1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="Scribble1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 330</value>
+  </data>
+  <data name="Scribble1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>317, 246</value>
+  </data>
+  <data name="Scribble1.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;Scribble1.Name" xml:space="preserve">
+    <value>Scribble1</value>
+  </data>
+  <data name="&gt;&gt;Scribble1.Type" xml:space="preserve">
+    <value>Agilix.Ink.Scribble.Scribble, Agilix.Ink, Version=2.0.0.1454, Culture=neutral, PublicKeyToken=e7aae1a23b4b7f5a</value>
+  </data>
+  <data name="&gt;&gt;Scribble1.Parent" xml:space="preserve">
+    <value>UiGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;Scribble1.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="EditBox7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>128, 304</value>
+  </data>
+  <data name="EditBox7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 20</value>
+  </data>
+  <data name="EditBox7.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;EditBox7.Name" xml:space="preserve">
+    <value>EditBox7</value>
+  </data>
+  <data name="&gt;&gt;EditBox7.Type" xml:space="preserve">
+    <value>Janus.Windows.GridEX.EditControls.EditBox, Janus.Windows.GridEX.v3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf</value>
+  </data>
+  <data name="&gt;&gt;EditBox7.Parent" xml:space="preserve">
+    <value>UiGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;EditBox7.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="EditBox6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>100, 278</value>
+  </data>
+  <data name="EditBox6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 20</value>
+  </data>
+  <data name="EditBox6.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;EditBox6.Name" xml:space="preserve">
+    <value>EditBox6</value>
+  </data>
+  <data name="&gt;&gt;EditBox6.Type" xml:space="preserve">
+    <value>Janus.Windows.GridEX.EditControls.EditBox, Janus.Windows.GridEX.v3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf</value>
+  </data>
+  <data name="&gt;&gt;EditBox6.Parent" xml:space="preserve">
+    <value>UiGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;EditBox6.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="EditBox5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 252</value>
+  </data>
+  <data name="EditBox5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>237, 20</value>
+  </data>
+  <data name="EditBox5.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;EditBox5.Name" xml:space="preserve">
+    <value>EditBox5</value>
+  </data>
+  <data name="&gt;&gt;EditBox5.Type" xml:space="preserve">
+    <value>Janus.Windows.GridEX.EditControls.EditBox, Janus.Windows.GridEX.v3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf</value>
+  </data>
+  <data name="&gt;&gt;EditBox5.Parent" xml:space="preserve">
+    <value>UiGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;EditBox5.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="EditBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 55</value>
+  </data>
+  <data name="EditBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>237, 137</value>
+  </data>
+  <data name="EditBox4.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;EditBox4.Name" xml:space="preserve">
+    <value>EditBox4</value>
+  </data>
+  <data name="&gt;&gt;EditBox4.Type" xml:space="preserve">
+    <value>Janus.Windows.GridEX.EditControls.EditBox, Janus.Windows.GridEX.v3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf</value>
+  </data>
+  <data name="&gt;&gt;EditBox4.Parent" xml:space="preserve">
+    <value>UiGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;EditBox4.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="Label7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 304</value>
+  </data>
+  <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 13</value>
+  </data>
+  <data name="Label7.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="Label7.Text" xml:space="preserve">
+    <value>Project Code Language</value>
+  </data>
+  <data name="&gt;&gt;Label7.Name" xml:space="preserve">
+    <value>Label7</value>
+  </data>
+  <data name="&gt;&gt;Label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label7.Parent" xml:space="preserve">
+    <value>UiGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;Label7.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="Label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 278</value>
+  </data>
+  <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 13</value>
+  </data>
+  <data name="Label6.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="Label6.Text" xml:space="preserve">
+    <value>Project Language</value>
+  </data>
+  <data name="&gt;&gt;Label6.Name" xml:space="preserve">
+    <value>Label6</value>
+  </data>
+  <data name="&gt;&gt;Label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label6.Parent" xml:space="preserve">
+    <value>UiGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;Label6.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="Label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 252</value>
+  </data>
+  <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 13</value>
+  </data>
+  <data name="Label5.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="Label5.Text" xml:space="preserve">
+    <value>Project Platform</value>
+  </data>
+  <data name="&gt;&gt;Label5.Name" xml:space="preserve">
+    <value>Label5</value>
+  </data>
+  <data name="&gt;&gt;Label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label5.Parent" xml:space="preserve">
+    <value>UiGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;Label5.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="Label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 55</value>
+  </data>
+  <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 13</value>
+  </data>
+  <data name="Label4.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>Project Notes</value>
+  </data>
+  <data name="&gt;&gt;Label4.Name" xml:space="preserve">
+    <value>Label4</value>
+  </data>
+  <data name="&gt;&gt;Label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label4.Parent" xml:space="preserve">
+    <value>UiGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;Label4.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="Label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 3</value>
+  </data>
+  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 13</value>
+  </data>
+  <data name="Label3.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>Project Identity</value>
+  </data>
+  <data name="&gt;&gt;Label3.Name" xml:space="preserve">
+    <value>Label3</value>
+  </data>
+  <data name="&gt;&gt;Label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label3.Parent" xml:space="preserve">
+    <value>UiGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 29</value>
+  </data>
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 13</value>
+  </data>
+  <data name="Label2.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>Project Version</value>
+  </data>
+  <data name="&gt;&gt;Label2.Name" xml:space="preserve">
+    <value>Label2</value>
+  </data>
+  <data name="&gt;&gt;Label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label2.Parent" xml:space="preserve">
+    <value>UiGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="EditBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 29</value>
+  </data>
+  <data name="EditBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>237, 20</value>
+  </data>
+  <data name="EditBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;EditBox3.Name" xml:space="preserve">
+    <value>EditBox3</value>
+  </data>
+  <data name="&gt;&gt;EditBox3.Type" xml:space="preserve">
+    <value>Janus.Windows.GridEX.EditControls.EditBox, Janus.Windows.GridEX.v3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf</value>
+  </data>
+  <data name="&gt;&gt;EditBox3.Parent" xml:space="preserve">
+    <value>UiGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;EditBox3.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="EditBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 3</value>
+  </data>
+  <data name="EditBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>237, 20</value>
+  </data>
+  <data name="EditBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;EditBox2.Name" xml:space="preserve">
+    <value>EditBox2</value>
+  </data>
+  <data name="&gt;&gt;EditBox2.Type" xml:space="preserve">
+    <value>Janus.Windows.GridEX.EditControls.EditBox, Janus.Windows.GridEX.v3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf</value>
+  </data>
+  <data name="&gt;&gt;EditBox2.Parent" xml:space="preserve">
+    <value>UiGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;EditBox2.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="UiButton2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="UiButton2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>241, 0</value>
+  </data>
+  <data name="UiButton2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 29</value>
+  </data>
+  <data name="UiButton2.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="UiButton2.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="&gt;&gt;UiButton2.Name" xml:space="preserve">
+    <value>UiButton2</value>
+  </data>
+  <data name="&gt;&gt;UiButton2.Type" xml:space="preserve">
+    <value>Janus.Windows.EditControls.UIButton, Janus.Windows.UI.v3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf</value>
+  </data>
+  <data name="&gt;&gt;UiButton2.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;UiButton2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="UiButton5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="UiButton5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>327, 0</value>
+  </data>
+  <data name="UiButton5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>307, 29</value>
+  </data>
+  <data name="UiButton5.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="UiButton5.Text" xml:space="preserve">
+    <value>Card View Off</value>
+  </data>
+  <data name="&gt;&gt;UiButton5.Name" xml:space="preserve">
+    <value>UiButton5</value>
+  </data>
+  <data name="&gt;&gt;UiButton5.Type" xml:space="preserve">
+    <value>Janus.Windows.EditControls.UIButton, Janus.Windows.UI.v3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf</value>
+  </data>
+  <data name="&gt;&gt;UiButton5.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;UiButton5.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="UiButton4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="UiButton4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>153, 0</value>
+  </data>
+  <data name="UiButton4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 29</value>
+  </data>
+  <data name="UiButton4.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="UiButton4.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="&gt;&gt;UiButton4.Name" xml:space="preserve">
+    <value>UiButton4</value>
+  </data>
+  <data name="&gt;&gt;UiButton4.Type" xml:space="preserve">
+    <value>Janus.Windows.EditControls.UIButton, Janus.Windows.UI.v3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf</value>
+  </data>
+  <data name="&gt;&gt;UiButton4.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;UiButton4.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="UiButton3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="UiButton3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 0</value>
+  </data>
+  <data name="UiButton3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 29</value>
+  </data>
+  <data name="UiButton3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="UiButton3.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="&gt;&gt;UiButton3.Name" xml:space="preserve">
+    <value>UiButton3</value>
+  </data>
+  <data name="&gt;&gt;UiButton3.Type" xml:space="preserve">
+    <value>Janus.Windows.EditControls.UIButton, Janus.Windows.UI.v3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf</value>
+  </data>
+  <data name="&gt;&gt;UiButton3.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;UiButton3.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="UiButton1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="UiButton1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="UiButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 29</value>
+  </data>
+  <data name="UiButton1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="UiButton1.Text" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="&gt;&gt;UiButton1.Name" xml:space="preserve">
+    <value>UiButton1</value>
+  </data>
+  <data name="&gt;&gt;UiButton1.Type" xml:space="preserve">
+    <value>Janus.Windows.EditControls.UIButton, Janus.Windows.UI.v3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf</value>
+  </data>
+  <data name="&gt;&gt;UiButton1.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;UiButton1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="Panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 579</value>
+  </data>
+  <data name="Panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>634, 29</value>
+  </data>
+  <data name="Panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;Panel1.Name" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Panel1.Parent" xml:space="preserve">
+    <value>UiGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;Panel1.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="UiGroupBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="UiGroupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="UiGroupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>634, 608</value>
+  </data>
+  <data name="UiGroupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;UiGroupBox1.Name" xml:space="preserve">
+    <value>UiGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;UiGroupBox1.Type" xml:space="preserve">
+    <value>Janus.Windows.EditControls.UIGroupBox, Janus.Windows.UI.v3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf</value>
+  </data>
+  <data name="&gt;&gt;UiGroupBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;UiGroupBox1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>634, 608</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Project Properties</value>
+  </data>
+  <data name="&gt;&gt;TSTBLPROJECTS.Name" xml:space="preserve">
+    <value>TSTBLPROJECTS</value>
+  </data>
+  <data name="&gt;&gt;TSTBLPROJECTS.Type" xml:space="preserve">
+    <value>C1.Data.C1DataTableSource, C1.Data.2, Version=2.0.20053.0, Culture=neutral, PublicKeyToken=900b028620cd3a1b</value>
+  </data>
+  <data name="&gt;&gt;DSTBLPROJECTS.Name" xml:space="preserve">
+    <value>DSTBLPROJECTS</value>
+  </data>
+  <data name="&gt;&gt;DSTBLPROJECTS.Type" xml:space="preserve">
+    <value>C1.Data.C1DataSet, C1.Data.2, Version=2.0.20053.0, Culture=neutral, PublicKeyToken=900b028620cd3a1b</value>
+  </data>
+  <data name="&gt;&gt;DeleteProjectToolStripMenuItem.Name" xml:space="preserve">
+    <value>DeleteProjectToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;DeleteProjectToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmProjectCE</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

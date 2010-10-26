@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet>
+  <view uin="e56r11o5f5uo8pk_v">
+    <property name="$name" value="UtilityLibrary" />
+    <property name="$defaultDiagram" value="True" />
+    <property name="$metaclass" value="Package Diagram" />
+    <reference referencedUin="design:view:::356q64r5frgel3i_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="csharp:e_class:src:StationeryBuilder:Genetibase.UI.RulerControl" />
+    </reference>
+  </view>
+</nodeSet>

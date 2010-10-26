@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet>
+  <view uin="qe6npokqe99i0is_v">
+    <property name="$name" value="System" />
+    <property name="$defaultDiagram" value="True" />
+    <property name="$metaclass" value="Package Diagram" />
+    <reference referencedUin="design:view:::he6npokqelokain_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="msil:e_class:lib:System.Drawing:System.Drawing.Color" />
+      <reference referencedUin="msil:e_class:lib:System.Drawing:System.Drawing.Rectangle" />
+    </reference>
+  </view>
+</nodeSet>

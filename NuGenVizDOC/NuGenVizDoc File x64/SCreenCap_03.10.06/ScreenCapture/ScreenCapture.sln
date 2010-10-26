@@ -1,0 +1,43 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genetibase.UI.NuGenScreenCap", "..\Genetibase\UI\NuGenScreenCap\Genetibase.UI.NuGenScreenCap.csproj", "{A32727BD-9E65-441F-BEC7-825AFBC0567E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genetibase.UI.Drawing.Effects", "..\Genetibase\UI\Drawing\Effects\Genetibase.UI.Drawing.Effects.csproj", "{1EE2EF36-F3F1-430B-8273-0A89B430008D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScreenCapture", "ScreenCapture.csproj", "{8EF25ABF-3511-403C-B0E7-E118A4BB9519}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genetibase.UI.Drawing", "..\Genetibase\UI\Drawing\Genetibase.UI.Drawing.csproj", "{3661F49D-0E21-41B3-9DF1-8A5A9102CDF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capture", "..\Capture\Capture.csproj", "{9202B459-2B11-443D-8261-5533EF62A234}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A32727BD-9E65-441F-BEC7-825AFBC0567E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A32727BD-9E65-441F-BEC7-825AFBC0567E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A32727BD-9E65-441F-BEC7-825AFBC0567E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A32727BD-9E65-441F-BEC7-825AFBC0567E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EE2EF36-F3F1-430B-8273-0A89B430008D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EE2EF36-F3F1-430B-8273-0A89B430008D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EE2EF36-F3F1-430B-8273-0A89B430008D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EE2EF36-F3F1-430B-8273-0A89B430008D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EF25ABF-3511-403C-B0E7-E118A4BB9519}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EF25ABF-3511-403C-B0E7-E118A4BB9519}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EF25ABF-3511-403C-B0E7-E118A4BB9519}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EF25ABF-3511-403C-B0E7-E118A4BB9519}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3661F49D-0E21-41B3-9DF1-8A5A9102CDF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3661F49D-0E21-41B3-9DF1-8A5A9102CDF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3661F49D-0E21-41B3-9DF1-8A5A9102CDF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3661F49D-0E21-41B3-9DF1-8A5A9102CDF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9202B459-2B11-443D-8261-5533EF62A234}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9202B459-2B11-443D-8261-5533EF62A234}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9202B459-2B11-443D-8261-5533EF62A234}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9202B459-2B11-443D-8261-5533EF62A234}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

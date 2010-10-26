@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet>
+  <view uin="0c6uq83telfuy3i_v">
+    <property name="$name" value="Ink" />
+    <property name="$defaultDiagram" value="True" />
+    <property name="$metaclass" value="Package Diagram" />
+    <reference referencedUin="design:view:::dd6tva6tekq631h_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="msil:e_class:lib:Agilix.Ink:Agilix.Ink.Scribble.Scribble" />
+      <reference referencedUin="msil:e_class:lib:agilix.ink:Agilix.Ink.Scribble.Scribble" />
+      <reference referencedUin="msil:e_class:lib:agilix.ink:Agilix.Ink.Scribble.ScribbleBox" />
+      <reference referencedUin="msil:e_class:lib:agilix.ink:Agilix.Ink.Scribble.ScribbleContainer" />
+      <reference referencedUin="msil:e_class:lib:agilix.ink:Agilix.Ink.Scribble.ScribbleToolbar" />
+    </reference>
+    <reference referencedUin="msil:e_class:lib:agilix.ink:Agilix.Ink.Doodle">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="design:view:::0p45keb7o_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="msil:e_class:lib:agilix.ink:Agilix.Ink.Note.Note" />
+      <reference referencedUin="msil:e_class:lib:agilix.ink:Agilix.Ink.Note.NoteBox" />
+      <reference referencedUin="msil:e_class:lib:agilix.ink:Agilix.Ink.Note.NoteToolbar" />
+    </reference>
+  </view>
+</nodeSet>

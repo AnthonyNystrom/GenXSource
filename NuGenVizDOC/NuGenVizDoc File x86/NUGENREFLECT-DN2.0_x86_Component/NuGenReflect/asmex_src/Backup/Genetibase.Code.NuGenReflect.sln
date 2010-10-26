@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genetibase.Debug.NuGenReflect", "Genetibase.Debug.NuGenReflect.csproj", "{831F528E-1F16-413F-9D55-1A852D7D6CB3}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		ObjViewer = ObjViewer
+		Release = Release
+		test = test
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{831F528E-1F16-413F-9D55-1A852D7D6CB3}.Debug.ActiveCfg = Debug|.NET
+		{831F528E-1F16-413F-9D55-1A852D7D6CB3}.Debug.Build.0 = Debug|.NET
+		{831F528E-1F16-413F-9D55-1A852D7D6CB3}.ObjViewer.ActiveCfg = ObjViewer|.NET
+		{831F528E-1F16-413F-9D55-1A852D7D6CB3}.ObjViewer.Build.0 = ObjViewer|.NET
+		{831F528E-1F16-413F-9D55-1A852D7D6CB3}.Release.ActiveCfg = Release|.NET
+		{831F528E-1F16-413F-9D55-1A852D7D6CB3}.Release.Build.0 = Release|.NET
+		{831F528E-1F16-413F-9D55-1A852D7D6CB3}.test.ActiveCfg = test|.NET
+		{831F528E-1F16-413F-9D55-1A852D7D6CB3}.test.Build.0 = test|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

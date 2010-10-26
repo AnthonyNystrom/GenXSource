@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet>
+  <view uin="hd6s0e9te4wz02p_v">
+    <property name="$name" value="System" />
+    <property name="$defaultDiagram" value="True" />
+    <property name="$metaclass" value="Package Diagram" />
+    <reference referencedUin="design:view:::jc6r5hbtefio3es_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="msil:e_class:lib:System:System.ComponentModel.IContainer" />
+      <reference referencedUin="msil:e_class:lib:System:System.ComponentModel.Container" />
+    </reference>
+  </view>
+</nodeSet>

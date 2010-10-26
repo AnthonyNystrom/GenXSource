@@ -1,0 +1,169 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4F3FB073-FD8C-46A6-981A-B7FD9F7C9D54}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IAP_App</RootNamespace>
+    <AssemblyName>IAP App</AssemblyName>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommandTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommandTab.Designer.cs">
+      <DependentUpon>CommandTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommandTabButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommandTabButton.Designer.cs">
+      <DependentUpon>CommandTabButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommandTabSection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommandTabSection.Designer.cs">
+      <DependentUpon>CommandTabSection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommandTabSectionButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommandTabSectionButton.Designer.cs">
+      <DependentUpon>CommandTabSectionButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StatusTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StatusTab.Designer.cs">
+      <DependentUpon>StatusTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Window.Designer.cs">
+      <DependentUpon>Window.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommandTab.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CommandTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommandTabButton.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CommandTabButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommandTabSection.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CommandTabSection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommandTabSectionButton.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CommandTabSectionButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatusTab.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StatusTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Window.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Window.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkSpace.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WorkSpace.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="WorkSpace.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkSpace.Designer.cs">
+      <DependentUpon>WorkSpace.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\App.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sample.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IAP Core\IAP Core.csproj">
+      <Project>{8AA63395-386E-41D0-845F-2CF34A07289B}</Project>
+      <Name>IAP Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

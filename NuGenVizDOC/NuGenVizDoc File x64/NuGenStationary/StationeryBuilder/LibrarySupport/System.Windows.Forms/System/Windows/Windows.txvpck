@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet>
+  <view uin="vi5fvyzheqiy17r_v">
+    <property name="$name" value="Windows" />
+    <property name="$defaultDiagram" value="True" />
+    <property name="$metaclass" value="Package Diagram" />
+    <reference referencedUin="design:view:::oi5d556iee80aqg_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="msil:e_class:lib:System.Windows.Forms:System.Windows.Forms.Form" />
+      <reference referencedUin="msil:e_class:lib:System.Windows.Forms:System.Windows.Forms.TabPage" />
+      <reference referencedUin="msil:e_class:lib:System.Windows.Forms:System.Windows.Forms.TabControl" />
+      <reference referencedUin="msil:e_class:lib:System.Windows.Forms:System.Windows.Forms.Label" />
+      <reference referencedUin="msil:e_class:lib:System.Windows.Forms:System.Windows.Forms.GroupBox" />
+      <reference referencedUin="msil:e_class:lib:System.Windows.Forms:System.Windows.Forms.Panel" />
+      <reference referencedUin="msil:e_class:lib:System.Windows.Forms:System.Windows.Forms.ComboBox" />
+      <reference referencedUin="msil:e_class:lib:System.Windows.Forms:System.Windows.Forms.TextBox" />
+      <reference referencedUin="msil:e_class:lib:System.Windows.Forms:System.Windows.Forms.Button" />
+      <reference referencedUin="msil:e_class:lib:System.Windows.Forms:System.Windows.Forms.TrackBar" />
+      <reference referencedUin="msil:e_class:lib:System.Windows.Forms:System.Windows.Forms.ImageList" />
+      <reference referencedUin="msil:e_class:lib:System.Windows.Forms:System.Windows.Forms.OpenFileDialog" />
+      <reference referencedUin="msil:e_class:lib:System.Windows.Forms:System.Windows.Forms.MainMenu" />
+      <reference referencedUin="msil:e_class:lib:System.Windows.Forms:System.Windows.Forms.MenuItem" />
+      <reference referencedUin="msil:e_class:lib:System.Windows.Forms:System.Windows.Forms.ColorDialog" />
+      <reference referencedUin="msil:e_class:lib:System.Windows.Forms:System.Windows.Forms.SaveFileDialog" />
+      <reference referencedUin="msil:e_class:lib:System.Windows.Forms:System.Windows.Forms.CheckBox" />
+    </reference>
+  </view>
+</nodeSet>

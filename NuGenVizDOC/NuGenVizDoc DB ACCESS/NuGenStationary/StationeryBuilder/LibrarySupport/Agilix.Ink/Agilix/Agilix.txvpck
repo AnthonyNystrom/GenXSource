@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet>
+  <view uin="7c6wg2xsezu0fio_v">
+    <property name="$name" value="Agilix" />
+    <property name="$defaultDiagram" value="True" />
+    <property name="$metaclass" value="Package Diagram" />
+    <reference referencedUin="design:view:::0c6uq83telfuy3i_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="design:view:::dd6tva6tekq631h_v" />
+      <reference referencedUin="msil:e_class:lib:agilix.ink:Agilix.Ink.Doodle" />
+      <reference referencedUin="design:view:::0p45keb7o_v" />
+    </reference>
+  </view>
+</nodeSet>

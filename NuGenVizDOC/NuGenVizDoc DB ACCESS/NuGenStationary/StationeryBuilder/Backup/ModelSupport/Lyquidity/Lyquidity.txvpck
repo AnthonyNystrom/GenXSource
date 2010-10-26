@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet>
+  <view uin="q56truh5f0ycapl_v">
+    <property name="$name" value="Lyquidity" />
+    <property name="$defaultDiagram" value="True" />
+    <property name="$metaclass" value="Package Diagram" />
+    <reference referencedUin="design:view:::e56r11o5f5uo8pk_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="design:view:::356q64r5frgel3i_v" />
+    </reference>
+  </view>
+</nodeSet>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet>
+  <view uin="0p45keb7o_v">
+    <property name="$name" value="Note" />
+    <property name="$defaultDiagram" value="True" />
+    <property name="$metaclass" value="Package Diagram" />
+    <reference referencedUin="msil:e_class:lib:agilix.ink:Agilix.Ink.Note.Note">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="msil:e_class:lib:agilix.ink:Agilix.Ink.Note.NoteBox">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="msil:e_class:lib:agilix.ink:Agilix.Ink.Note.NoteToolbar">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+  </view>
+</nodeSet>

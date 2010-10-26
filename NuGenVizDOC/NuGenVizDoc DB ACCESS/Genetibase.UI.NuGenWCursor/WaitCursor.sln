@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaitCursor", "WaitCursor.csproj", "{E015626E-710D-4065-8D70-5E6FA61ED2AB}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{E015626E-710D-4065-8D70-5E6FA61ED2AB}.Debug.ActiveCfg = Debug|.NET
+		{E015626E-710D-4065-8D70-5E6FA61ED2AB}.Debug.Build.0 = Debug|.NET
+		{E015626E-710D-4065-8D70-5E6FA61ED2AB}.Release.ActiveCfg = Release|.NET
+		{E015626E-710D-4065-8D70-5E6FA61ED2AB}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

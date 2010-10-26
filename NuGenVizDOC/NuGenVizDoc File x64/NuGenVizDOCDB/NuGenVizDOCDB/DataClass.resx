@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="SchemaDef1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 54</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="SchemaDef1.DummyImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAtJREFUGFdjYAAC
+        AAAFAAGq1chRAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="SchemaDef1.SerializedSchemaXML" xml:space="preserve">
+    <value>VERSION117:&lt;?xml version="1.0"?&gt;&lt;Schema&gt;&lt;DataSetDefs&gt;&lt;DataSetDef Name="DSTBLPROJECTS"&gt;&lt;CacheProperties /&gt;&lt;FieldDefaults /&gt;&lt;TableViews&gt;&lt;TableView Name="TBLProjectCodeLanguage" TableName="TBLProjectCodeLanguage"&gt;&lt;Fields&gt;&lt;TableViewField TableFieldName="intKey" Name="intKey" DataType="Int32" PrimaryKey="true" AllowDbNull="false" Unique="true" /&gt;&lt;TableViewField TableFieldName="memNotes" Name="memNotes" DataType="String" /&gt;&lt;TableViewField TableFieldName="strCodeLanguage" Name="strCodeLanguage" DataType="String" MaxLength="50" /&gt;&lt;/Fields&gt;&lt;DesignInfo&gt;&lt;Left&gt;50&lt;/Left&gt;&lt;Top&gt;50&lt;/Top&gt;&lt;Width&gt;150&lt;/Width&gt;&lt;Height&gt;100&lt;/Height&gt;&lt;/DesignInfo&gt;&lt;RowType /&gt;&lt;InternalFetchIndex&gt;0&lt;/InternalFetchIndex&gt;&lt;/TableView&gt;&lt;TableView Name="TBLProjectPlatform" TableName="TBLProjectPlatform"&gt;&lt;Fields&gt;&lt;TableViewField TableFieldName="intKey" Name="intKey" DataType="Int32" PrimaryKey="true" AllowDbNull="false" Unique="true" /&gt;&lt;TableViewField TableFieldName="memNotes" Name="memNotes" DataType="String" /&gt;&lt;TableViewField TableFieldName="strPlatform" Name="strPlatform" DataType="String" MaxLength="50" /&gt;&lt;/Fields&gt;&lt;DesignInfo&gt;&lt;Left&gt;150&lt;/Left&gt;&lt;Top&gt;150&lt;/Top&gt;&lt;Width&gt;150&lt;/Width&gt;&lt;Height&gt;100&lt;/Height&gt;&lt;/DesignInfo&gt;&lt;RowType /&gt;&lt;InternalFetchIndex&gt;1&lt;/InternalFetchIndex&gt;&lt;/TableView&gt;&lt;TableView Name="TBLProjects" TableName="TBLProjects"&gt;&lt;Fields&gt;&lt;TableViewField TableFieldName="datCreation" Name="datCreation" DataType="DateTime" /&gt;&lt;TableViewField TableFieldName="datUpdate" Name="datUpdate" DataType="DateTime" /&gt;&lt;TableViewField TableFieldName="intKey" Name="intKey" DataType="Int32" PrimaryKey="true" AllowDbNull="false" Unique="true" AutoIncrement="ClientAndServer" AutoIncrementSeed="-1" AutoIncrementStep="-1" /&gt;&lt;TableViewField TableFieldName="intProjectCodeLanguageKey" Name="intProjectCodeLanguageKey" DataType="String" MaxLength="50" /&gt;&lt;TableViewField TableFieldName="intProjectID" Name="intProjectID" DataType="String" MaxLength="50" /&gt;&lt;TableViewField TableFieldName="intProjectPlatformKey" Name="intProjectPlatformKey" DataType="String" MaxLength="50" /&gt;&lt;TableViewField TableFieldName="intProjectUILanguageKey" Name="intProjectUILanguageKey" DataType="String" MaxLength="50" /&gt;&lt;TableViewField TableFieldName="intProjectUserKey" Name="intProjectUserKey" DataType="String" MaxLength="50" /&gt;&lt;TableViewField TableFieldName="memColorCollection" Name="memColorCollection" DataType="String" /&gt;&lt;TableViewField TableFieldName="memDataFive" Name="memDataFive" DataType="String" /&gt;&lt;TableViewField TableFieldName="memDataFour" Name="memDataFour" DataType="String" /&gt;&lt;TableViewField TableFieldName="memDataOne" Name="memDataOne" DataType="String" /&gt;&lt;TableViewField TableFieldName="memDataThree" Name="memDataThree" DataType="String" /&gt;&lt;TableViewField TableFieldName="memDataTwo" Name="memDataTwo" DataType="String" /&gt;&lt;TableViewField TableFieldName="memDocument" Name="memDocument" DataType="String" /&gt;&lt;TableViewField TableFieldName="memFlags" Name="memFlags" DataType="String" /&gt;&lt;TableViewField TableFieldName="memProjectNotes" Name="memProjectNotes" DataType="String" /&gt;&lt;TableViewField TableFieldName="memTag" Name="memTag" DataType="String" /&gt;&lt;TableViewField TableFieldName="memText" Name="memText" DataType="String" /&gt;&lt;TableViewField TableFieldName="memWritingInstruments" Name="memWritingInstruments" DataType="String" /&gt;&lt;TableViewField TableFieldName="strProjectIdentity" Name="strProjectIdentity" DataType="String" MaxLength="50" /&gt;&lt;TableViewField TableFieldName="strProjectVersion" Name="strProjectVersion" DataType="String" MaxLength="50" /&gt;&lt;TableViewField TableFieldName="datEntDate" Name="datEntDate" DataType="DateTime" /&gt;&lt;TableViewField TableFieldName="datEtmCompletion" Name="datEtmCompletion" DataType="DateTime" /&gt;&lt;TableViewField TableFieldName="datEtmStart" Name="datEtmStart" DataType="DateTime" /&gt;&lt;TableViewField TableFieldName="datStartDate" Name="datStartDate" DataType="DateTime" /&gt;&lt;/Fields&gt;&lt;DesignInfo&gt;&lt;Left&gt;250&lt;/Left&gt;&lt;Top&gt;250&lt;/Top&gt;&lt;Width&gt;150&lt;/Width&gt;&lt;Height&gt;100&lt;/Height&gt;&lt;/DesignInfo&gt;&lt;RowType /&gt;&lt;InternalFetchIndex&gt;2&lt;/InternalFetchIndex&gt;&lt;/TableView&gt;&lt;TableView Name="TBLProjectUILanguage" TableName="TBLProjectUILanguage"&gt;&lt;Fields&gt;&lt;TableViewField TableFieldName="intKey" Name="intKey" DataType="Int32" PrimaryKey="true" AllowDbNull="false" Unique="true" /&gt;&lt;TableViewField TableFieldName="memNotes" Name="memNotes" DataType="String" /&gt;&lt;TableViewField TableFieldName="strUILanguage" Name="strUILanguage" DataType="String" MaxLength="50" /&gt;&lt;/Fields&gt;&lt;DesignInfo&gt;&lt;Left&gt;350&lt;/Left&gt;&lt;Top&gt;350&lt;/Top&gt;&lt;Width&gt;150&lt;/Width&gt;&lt;Height&gt;100&lt;/Height&gt;&lt;/DesignInfo&gt;&lt;RowType /&gt;&lt;InternalFetchIndex&gt;3&lt;/InternalFetchIndex&gt;&lt;/TableView&gt;&lt;TableView Name="TBLStates" TableName="TBLStates"&gt;&lt;Fields&gt;&lt;TableViewField TableFieldName="intKey" Name="intKey" DataType="Int32" PrimaryKey="true" AllowDbNull="false" Unique="true" /&gt;&lt;TableViewField TableFieldName="strState" Name="strState" DataType="String" MaxLength="50" /&gt;&lt;TableViewField TableFieldName="strStateAbbreviation" Name="strStateAbbreviation" DataType="String" MaxLength="50" /&gt;&lt;/Fields&gt;&lt;DesignInfo&gt;&lt;Left&gt;450&lt;/Left&gt;&lt;Top&gt;450&lt;/Top&gt;&lt;Width&gt;150&lt;/Width&gt;&lt;Height&gt;100&lt;/Height&gt;&lt;/DesignInfo&gt;&lt;RowType /&gt;&lt;InternalFetchIndex&gt;4&lt;/InternalFetchIndex&gt;&lt;/TableView&gt;&lt;TableView Name="TBLUsers" TableName="TBLUsers"&gt;&lt;Fields&gt;&lt;TableViewField TableFieldName="intKey" Name="intKey" DataType="Int32" PrimaryKey="true" AllowDbNull="false" Unique="true" /&gt;&lt;TableViewField TableFieldName="intStateKey" Name="intStateKey" DataType="String" MaxLength="50" /&gt;&lt;TableViewField TableFieldName="strAddress" Name="strAddress" DataType="String" MaxLength="50" /&gt;&lt;TableViewField TableFieldName="strEmail" Name="strEmail" DataType="String" MaxLength="50" /&gt;&lt;TableViewField TableFieldName="strExtension" Name="strExtension" DataType="String" MaxLength="50" /&gt;&lt;TableViewField TableFieldName="strIM" Name="strIM" DataType="String" MaxLength="50" /&gt;&lt;TableViewField TableFieldName="strName" Name="strName" DataType="String" MaxLength="50" /&gt;&lt;TableViewField TableFieldName="strPassword" Name="strPassword" DataType="String" MaxLength="50" /&gt;&lt;TableViewField TableFieldName="strPhone" Name="strPhone" DataType="String" MaxLength="50" /&gt;&lt;TableViewField TableFieldName="strPosition" Name="strPosition" DataType="String" MaxLength="50" /&gt;&lt;TableViewField TableFieldName="strURL" Name="strURL" DataType="String" MaxLength="50" /&gt;&lt;TableViewField TableFieldName="strUserName" Name="strUserName" DataType="String" MaxLength="50" /&gt;&lt;TableViewField TableFieldName="strZIP" Name="strZIP" DataType="String" MaxLength="50" /&gt;&lt;/Fields&gt;&lt;DesignInfo&gt;&lt;Left&gt;550&lt;/Left&gt;&lt;Top&gt;550&lt;/Top&gt;&lt;Width&gt;150&lt;/Width&gt;&lt;Height&gt;100&lt;/Height&gt;&lt;/DesignInfo&gt;&lt;RowType /&gt;&lt;InternalFetchIndex&gt;5&lt;/InternalFetchIndex&gt;&lt;/TableView&gt;&lt;/TableViews&gt;&lt;/DataSetDef&gt;&lt;/DataSetDefs&gt;&lt;Tables&gt;&lt;dbtable Name="TBLProjectCodeLanguage" ConnectionName="Connection" DbTableName="TBLProjectCodeLanguage"&gt;&lt;Fields&gt;&lt;dbtable DbFieldName="intKey" PrimaryKey="true" AllowDbNull="false" Name="intKey" DataType="Int32" NativeDbType="3"&gt;&lt;Unique&gt;true&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="memNotes" Name="memNotes" DataType="String" NativeDbType="130"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="strCodeLanguage" Name="strCodeLanguage" DataType="String" NativeDbType="130" MaxLength="50"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;/Fields&gt;&lt;DesignInfo&gt;&lt;Left&gt;10&lt;/Left&gt;&lt;Top&gt;10&lt;/Top&gt;&lt;Width&gt;150&lt;/Width&gt;&lt;Height&gt;100&lt;/Height&gt;&lt;/DesignInfo&gt;&lt;/dbtable&gt;&lt;dbtable Name="TBLProjectPlatform" ConnectionName="Connection" DbTableName="TBLProjectPlatform"&gt;&lt;Fields&gt;&lt;dbtable DbFieldName="intKey" PrimaryKey="true" AllowDbNull="false" Name="intKey" DataType="Int32" NativeDbType="3"&gt;&lt;Unique&gt;true&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="memNotes" Name="memNotes" DataType="String" NativeDbType="130"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="strPlatform" Name="strPlatform" DataType="String" NativeDbType="130" MaxLength="50"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;/Fields&gt;&lt;DesignInfo&gt;&lt;Left&gt;20&lt;/Left&gt;&lt;Top&gt;20&lt;/Top&gt;&lt;Width&gt;150&lt;/Width&gt;&lt;Height&gt;100&lt;/Height&gt;&lt;/DesignInfo&gt;&lt;/dbtable&gt;&lt;dbtable Name="TBLProjects" ConnectionName="Connection" DbTableName="TBLProjects"&gt;&lt;Fields&gt;&lt;dbtable DbFieldName="datCreation" Name="datCreation" DataType="DateTime" NativeDbType="7"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="datUpdate" Name="datUpdate" DataType="DateTime" NativeDbType="7"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="intKey" PrimaryKey="true" AllowDbNull="false" Name="intKey" DataType="Int32" NativeDbType="3" AutoIncrement="ClientAndServer" AutoIncrementSeed="-1" AutoIncrementStep="-1"&gt;&lt;Unique&gt;true&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="intProjectCodeLanguageKey" Name="intProjectCodeLanguageKey" DataType="String" NativeDbType="130" MaxLength="50"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="intProjectID" Name="intProjectID" DataType="String" NativeDbType="130" MaxLength="50"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="intProjectPlatformKey" Name="intProjectPlatformKey" DataType="String" NativeDbType="130" MaxLength="50"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="intProjectUILanguageKey" Name="intProjectUILanguageKey" DataType="String" NativeDbType="130" MaxLength="50"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="intProjectUserKey" Name="intProjectUserKey" DataType="String" NativeDbType="130" MaxLength="50"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="memColorCollection" UpdateLocate="false" Name="memColorCollection" DataType="String" NativeDbType="130"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="memDataFive" UpdateLocate="false" Name="memDataFive" DataType="String" NativeDbType="130"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="memDataFour" UpdateLocate="false" Name="memDataFour" DataType="String" NativeDbType="130"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="memDataOne" UpdateLocate="false" Name="memDataOne" DataType="String" NativeDbType="130"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="memDataThree" UpdateLocate="false" Name="memDataThree" DataType="String" NativeDbType="130"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="memDataTwo" UpdateLocate="false" Name="memDataTwo" DataType="String" NativeDbType="130"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="memDocument" UpdateLocate="false" Name="memDocument" DataType="String" NativeDbType="130"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="memFlags" UpdateLocate="false" Name="memFlags" DataType="String" NativeDbType="130"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="memProjectNotes" UpdateLocate="false" Name="memProjectNotes" DataType="String" NativeDbType="130"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="memTag" UpdateLocate="false" Name="memTag" DataType="String" NativeDbType="130"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="memText" UpdateLocate="false" Name="memText" DataType="String" NativeDbType="130"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="memWritingInstruments" UpdateLocate="false" Name="memWritingInstruments" DataType="String" NativeDbType="130"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="strProjectIdentity" Name="strProjectIdentity" DataType="String" NativeDbType="130" MaxLength="50"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="strProjectVersion" Name="strProjectVersion" DataType="String" NativeDbType="130" MaxLength="50"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="datEntDate" Name="datEntDate" DataType="DateTime" NativeDbType="7"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="datEtmCompletion" Name="datEtmCompletion" DataType="DateTime" NativeDbType="7"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="datEtmStart" Name="datEtmStart" DataType="DateTime" NativeDbType="7"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="datStartDate" Name="datStartDate" DataType="DateTime" NativeDbType="7"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;/Fields&gt;&lt;DesignInfo&gt;&lt;Left&gt;30&lt;/Left&gt;&lt;Top&gt;30&lt;/Top&gt;&lt;Width&gt;150&lt;/Width&gt;&lt;Height&gt;100&lt;/Height&gt;&lt;/DesignInfo&gt;&lt;/dbtable&gt;&lt;dbtable Name="TBLProjectUILanguage" ConnectionName="Connection" DbTableName="TBLProjectUILanguage"&gt;&lt;Fields&gt;&lt;dbtable DbFieldName="intKey" PrimaryKey="true" AllowDbNull="false" Name="intKey" DataType="Int32" NativeDbType="3"&gt;&lt;Unique&gt;true&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="memNotes" Name="memNotes" DataType="String" NativeDbType="130"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="strUILanguage" Name="strUILanguage" DataType="String" NativeDbType="130" MaxLength="50"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;/Fields&gt;&lt;DesignInfo&gt;&lt;Left&gt;40&lt;/Left&gt;&lt;Top&gt;40&lt;/Top&gt;&lt;Width&gt;150&lt;/Width&gt;&lt;Height&gt;100&lt;/Height&gt;&lt;/DesignInfo&gt;&lt;/dbtable&gt;&lt;dbtable Name="TBLStates" ConnectionName="Connection" DbTableName="TBLStates"&gt;&lt;Fields&gt;&lt;dbtable DbFieldName="intKey" PrimaryKey="true" AllowDbNull="false" Name="intKey" DataType="Int32" NativeDbType="3"&gt;&lt;Unique&gt;true&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="strState" Name="strState" DataType="String" NativeDbType="130" MaxLength="50"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="strStateAbbreviation" Name="strStateAbbreviation" DataType="String" NativeDbType="130" MaxLength="50"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;/Fields&gt;&lt;DesignInfo&gt;&lt;Left&gt;50&lt;/Left&gt;&lt;Top&gt;50&lt;/Top&gt;&lt;Width&gt;150&lt;/Width&gt;&lt;Height&gt;100&lt;/Height&gt;&lt;/DesignInfo&gt;&lt;/dbtable&gt;&lt;dbtable Name="TBLUsers" ConnectionName="Connection" DbTableName="TBLUsers"&gt;&lt;Fields&gt;&lt;dbtable DbFieldName="intKey" PrimaryKey="true" AllowDbNull="false" Name="intKey" DataType="Int32" NativeDbType="3"&gt;&lt;Unique&gt;true&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="intStateKey" Name="intStateKey" DataType="String" NativeDbType="130" MaxLength="50"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="strAddress" Name="strAddress" DataType="String" NativeDbType="130" MaxLength="50"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="strEmail" Name="strEmail" DataType="String" NativeDbType="130" MaxLength="50"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="strExtension" Name="strExtension" DataType="String" NativeDbType="130" MaxLength="50"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="strIM" Name="strIM" DataType="String" NativeDbType="130" MaxLength="50"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="strName" Name="strName" DataType="String" NativeDbType="130" MaxLength="50"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="strPassword" Name="strPassword" DataType="String" NativeDbType="130" MaxLength="50"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="strPhone" Name="strPhone" DataType="String" NativeDbType="130" MaxLength="50"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="strPosition" Name="strPosition" DataType="String" NativeDbType="130" MaxLength="50"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="strURL" Name="strURL" DataType="String" NativeDbType="130" MaxLength="50"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="strUserName" Name="strUserName" DataType="String" NativeDbType="130" MaxLength="50"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;dbtable DbFieldName="strZIP" Name="strZIP" DataType="String" NativeDbType="130" MaxLength="50"&gt;&lt;Unique&gt;false&lt;/Unique&gt;&lt;/dbtable&gt;&lt;/Fields&gt;&lt;DesignInfo&gt;&lt;Left&gt;60&lt;/Left&gt;&lt;Top&gt;60&lt;/Top&gt;&lt;Width&gt;150&lt;/Width&gt;&lt;Height&gt;100&lt;/Height&gt;&lt;/DesignInfo&gt;&lt;/dbtable&gt;&lt;/Tables&gt;&lt;Connections&gt;&lt;oledb Name="Connection"&gt;&lt;SqlInfo IdentityColumnLastValueSelect="SELECT @@IDENTITY"&gt;&lt;ChangedByUserPersist&gt;false&lt;/ChangedByUserPersist&gt;&lt;/SqlInfo&gt;&lt;ConnectionString&gt;Provider=Microsoft.Jet.OLEDB.4.0;Password="";Data Source=C:\Documents and Settings\Anthony Nystrom\Desktop\NuGenVizDoc\bin\NuGenVizDocDB.mdb;Persist Security Info=True&lt;/ConnectionString&gt;&lt;/oledb&gt;&lt;/Connections&gt;&lt;/Schema&gt;</value>
+  </data>
+  <data name="SchemaDef1.SerializedDesignTimeOptionsXML" xml:space="preserve">
+    <value>&lt;C1DATADESIGN&gt;&lt;OPTIONS INCLUDEVERSION="True" RECREATEDODLL="True" SNKFILE="" DELAYSIGNING="False" /&gt;&lt;/C1DATADESIGN&gt;</value>
+  </data>
+  <metadata name="table_TBLProjectCodeLanguage.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 91</value>
+  </metadata>
+  <metadata name="table_TBLProjectPlatform.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 128</value>
+  </metadata>
+  <metadata name="table_TBLProjects.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 165</value>
+  </metadata>
+  <metadata name="table_TBLProjectUILanguage.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 202</value>
+  </metadata>
+  <metadata name="dataset_DSTBLPROJECTS.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 239</value>
+  </metadata>
+  <metadata name="table_TBLStates.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 276</value>
+  </metadata>
+  <metadata name="table_TBLUsers.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>345, 313</value>
+  </metadata>
+  <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+</root>

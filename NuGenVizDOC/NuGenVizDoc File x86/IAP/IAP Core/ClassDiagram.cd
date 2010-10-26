@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Font Name="Tahoma" Size="8.25" />
+  <Comment CommentText="&#xD;&#xA; IAP Core Class Diagram">
+    <Position X="0.751" Y="3.125" Height="0.51" Width="1.46" />
+  </Comment>
+  <Class Name="IAP_Core.ImageOperations">
+    <Position X="7.25" Y="0.5" Width="3.5" />
+    <TypeIdentifier>
+      <FileName>ImageOperations.cs</FileName>
+      <HashCode>AQAAAEABAAAAAAgAAAgAAAEAgCAAABAAIAAAAAEAAAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IAP_Core.Image">
+    <Position X="3.25" Y="0.5" Width="3.5" />
+    <TypeIdentifier>
+      <FileName>Image.cs</FileName>
+      <HashCode>AAABgJAABAAAAAUAQAgAAEAIMAABAEIAAAgQAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IAP_Core.IAPImage">
+    <Position X="0.5" Y="6.75" Width="3" />
+    <TypeIdentifier>
+      <FileName>IAPImage.cs</FileName>
+      <NewMemberFileName>Image.cs</NewMemberFileName>
+      <HashCode>gCAAAIAAABAAwAIAgACAAAAgAAAAIEAgAAAAAAEAAAA=</HashCode>
+    </TypeIdentifier>
+    <NestedTypes>
+      <Class Name="IAP_Core.IAPImage.AdaptiveHuffmanTree" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>IAPImage.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="IAP_Core.IAPImage.AdaptiveHuffmanTreeNode" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>IAPImage.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Enum Name="IAP_Core.IAPImage.AdaptiveHuffmanTreeNodeType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>IAPImage.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+  </Class>
+  <Class Name="IAP_Core.BmpImage">
+    <Position X="4" Y="6.75" Width="2" />
+    <TypeIdentifier>
+      <FileName>BmpImage.cs</FileName>
+      <NewMemberFileName>Image.cs</NewMemberFileName>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IAP_Core.ComplexImage">
+    <Position X="6.5" Y="6.75" Width="3.25" />
+    <TypeIdentifier>
+      <FileName>ComplexImage.cs</FileName>
+      <HashCode>AAYAAAAAAQAABBACAAAAAAAAAAAAAAAABAAQAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <NestedTypes>
+      <Struct Name="IAP_Core.ComplexImage.Complex" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ComplexImage.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+  </Class>
+</ClassDiagram>

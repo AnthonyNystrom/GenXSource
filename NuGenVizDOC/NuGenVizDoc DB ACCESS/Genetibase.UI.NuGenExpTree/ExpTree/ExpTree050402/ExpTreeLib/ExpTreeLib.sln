@@ -1,0 +1,25 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ExpTreeLib", "ExpTreeLib.vbproj", "{CC9EAF98-42B9-47F4-9D99-4847E8A0B967}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "sample", "..\sample\sample.vbproj", "{3A63AA93-A8FC-4B0E-8297-D9876E8A7033}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC9EAF98-42B9-47F4-9D99-4847E8A0B967}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC9EAF98-42B9-47F4-9D99-4847E8A0B967}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC9EAF98-42B9-47F4-9D99-4847E8A0B967}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC9EAF98-42B9-47F4-9D99-4847E8A0B967}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A63AA93-A8FC-4B0E-8297-D9876E8A7033}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A63AA93-A8FC-4B0E-8297-D9876E8A7033}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A63AA93-A8FC-4B0E-8297-D9876E8A7033}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A63AA93-A8FC-4B0E-8297-D9876E8A7033}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

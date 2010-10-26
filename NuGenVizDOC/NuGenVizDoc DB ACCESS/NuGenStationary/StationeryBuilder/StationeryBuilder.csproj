@@ -1,0 +1,194 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{09DA3187-E5E0-43FB-89AC-A89EFD9780B1}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Genetibase.UI.NuGenSBuilder</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Genetibase.UI</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="agilix.ink">
+      <Name>agilix.ink</Name>
+      <HintPath>c:\program files\agilix\infinotes\include\agilix.ink.dll</HintPath>
+      <AssemblyFolderKey>hklm\dn\agilix infinotes</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="Agilix.Ink.Native">
+      <Name>Agilix.Ink.Native</Name>
+      <HintPath>C:\Program Files\Agilix\InfiNotes\Include\Agilix.Ink.Native.dll</HintPath>
+      <AssemblyFolderKey>hklm\dn\agilix infinotes</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="Microsoft.Ink">
+      <Name>Microsoft.Ink</Name>
+      <HintPath>..\..\..\..\..\..\Program Files\Agilix\InfiNotes\Include\Microsoft.Ink.dll</HintPath>
+      <AssemblyFolderKey>hklm\dn\agilix infinotes</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="Microsoft.mshtml">
+      <Name>Microsoft.mshtml</Name>
+      <HintPath>C:\Program Files\ComponentOne Studio.NET\bin\Microsoft.mshtml.dll</HintPath>
+      <AssemblyFolderKey>hklm\c1studio</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImageComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RulerControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StationerySettings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="blueparchment.jpg" />
+    <EmbeddedResource Include="BlueWeave.JPG" />
+    <EmbeddedResource Include="brownparchment.jpg" />
+    <EmbeddedResource Include="Crest.gif" />
+    <EmbeddedResource Include="dkredparchment.jpg" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="goldparchment.jpg" />
+    <EmbeddedResource Include="greenparchment.jpg" />
+    <EmbeddedResource Include="GreenWeave.jpg" />
+    <EmbeddedResource Include="ImageComboBox.resx">
+      <DependentUpon>ImageComboBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="licenses.licx" />
+    <EmbeddedResource Include="PaperNatural.gif" />
+    <EmbeddedResource Include="parchment.jpg" />
+    <EmbeddedResource Include="pinkparchment.jpg" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="purpleparchment.jpg" />
+    <EmbeddedResource Include="redparchment.jpg" />
+    <EmbeddedResource Include="Ruler.bmp" />
+    <EmbeddedResource Include="RulerControl.resx">
+      <DependentUpon>RulerControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="slateparchment.jpg" />
+    <Content Include="dropper.ico" />
+    <None Include="ModelSupport\Lyquidity\Lyquidity.txvpck" />
+    <None Include="ModelSupport\Lyquidity\UtilityLibrary\Controls\Controls.txvpck" />
+    <None Include="ModelSupport\Lyquidity\UtilityLibrary\UtilityLibrary.txvpck" />
+    <None Include="ModelSupport\StationeryBuilder\StationeryBuilder.txvpck" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandManagerLayoutFile LayoutType="Janus.Windows.UI.CommandBars.UICommandManager" LayoutVersion="1.1">
+    <BottomRebar ID="Bottom" />
+    <Commands Collection="true">
+        <Command0 ID="Command0">
+            <Key>Command0</Key>
+            <Name>Command0</Name>
+            <Text>100%</Text>
+        </Command0>
+        <Command1 ID="Command1">
+            <Key>Command1</Key>
+            <Name>Command1</Name>
+            <Text>90%</Text>
+        </Command1>
+        <Command2 ID="Command2">
+            <Key>Command2</Key>
+            <Name>Command2</Name>
+            <Text>80%</Text>
+        </Command2>
+        <Command3 ID="Command3">
+            <Key>Command3</Key>
+            <Name>Command3</Name>
+            <Text>70%</Text>
+        </Command3>
+        <Command4 ID="Command4">
+            <Key>Command4</Key>
+            <Name>Command4</Name>
+            <Text>60%</Text>
+        </Command4>
+        <Command5 ID="Command5">
+            <Key>Command5</Key>
+            <Name>Command5</Name>
+            <Text>50%</Text>
+        </Command5>
+        <Command6 ID="Command6">
+            <Key>Command6</Key>
+            <Name>Command6</Name>
+            <Text>40%</Text>
+        </Command6>
+        <Command7 ID="Command7">
+            <Key>Command7</Key>
+            <Name>Command7</Name>
+            <Text>30%</Text>
+        </Command7>
+        <Command8 ID="Command8">
+            <Key>Command8</Key>
+            <Name>Command8</Name>
+            <Text>20%</Text>
+        </Command8>
+        <Command9 ID="Command9">
+            <Key>Command9</Key>
+            <Name>Command9</Name>
+            <Text>10%</Text>
+        </Command9>
+    </Commands>
+    <ContextMenus Collection="true">
+        <ContextMenu1 ID="ContextMenu1">
+            <Commands Collection="true">
+                <Command0 ID="Command0">
+                    <BaseCommand>Command0</BaseCommand>
+                    <Key>Command0</Key>
+                    <Name>Command01</Name>
+                </Command0>
+                <Command1 ID="Command1">
+                    <BaseCommand>Command1</BaseCommand>
+                    <Key>Command1</Key>
+                    <Name>Command11</Name>
+                </Command1>
+                <Command2 ID="Command2">
+                    <BaseCommand>Command2</BaseCommand>
+                    <Key>Command2</Key>
+                    <Name>Command21</Name>
+                </Command2>
+                <Command3 ID="Command3">
+                    <BaseCommand>Command3</BaseCommand>
+                    <Key>Command3</Key>
+                    <Name>Command31</Name>
+                </Command3>
+                <Command4 ID="Command4">
+                    <BaseCommand>Command4</BaseCommand>
+                    <Key>Command4</Key>
+                    <Name>Command41</Name>
+                </Command4>
+                <Command5 ID="Command5">
+                    <BaseCommand>Command5</BaseCommand>
+                    <Key>Command5</Key>
+                    <Name>Command51</Name>
+                </Command5>
+                <Command6 ID="Command6">
+                    <BaseCommand>Command6</BaseCommand>
+                    <Key>Command6</Key>
+                    <Name>Command61</Name>
+                </Command6>
+                <Command7 ID="Command7">
+                    <BaseCommand>Command7</BaseCommand>
+                    <Key>Command7</Key>
+                    <Name>Command71</Name>
+                </Command7>
+                <Command8 ID="Command8">
+                    <BaseCommand>Command8</BaseCommand>
+                    <Key>Command8</Key>
+                    <Name>Command81</Name>
+                </Command8>
+                <Command9 ID="Command9">
+                    <BaseCommand>Command9</BaseCommand>
+                    <Key>Command9</Key>
+                    <Name>Command91</Name>
+                </Command9>
+                <OriginalCommands Collection="true" />
+            </Commands>
+            <Key>ContextMenu1</Key>
+            <VisualStyle>Office2003</VisualStyle>
+            <UseThemes>True</UseThemes>
+        </ContextMenu1>
+    </ContextMenus>
+    <LeftRebar ID="Left" />
+    <RightRebar ID="Right" />
+    <TopRebar ID="Top" />
+</CommandManagerLayoutFile>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet>
+  <view uin="dd6tva6tekq631h_v">
+    <property name="$name" value="Scribble" />
+    <property name="$defaultDiagram" value="True" />
+    <property name="$metaclass" value="Package Diagram" />
+    <reference referencedUin="msil:e_class:lib:Agilix.Ink:Agilix.Ink.Scribble.Scribble">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="msil:e_class:lib:agilix.ink:Agilix.Ink.Scribble.Scribble">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="msil:e_class:lib:agilix.ink:Agilix.Ink.Scribble.ScribbleBox">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="msil:e_class:lib:agilix.ink:Agilix.Ink.Scribble.ScribbleContainer">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="msil:e_class:lib:agilix.ink:Agilix.Ink.Scribble.ScribbleToolbar">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+  </view>
+</nodeSet>

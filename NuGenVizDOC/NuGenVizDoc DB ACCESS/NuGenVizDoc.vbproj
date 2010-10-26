@@ -1,0 +1,227 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3C7016C0-0303-48AA-BF36-F764929FCEB7}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>Website.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>NuGenVizDoc</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>On</OptionStrict>
+    <RootNamespace>NuGenVizDoc</RootNamespace>
+    <StartupObject>NuGenVizDoc.My.MyApplication</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <MyType>WindowsForms</MyType>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetZone>LocalIntranet</TargetZone>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>NuGenVizDoc.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>0</WarningLevel>
+    <NoWarn>
+    </NoWarn>
+    <DebugType>full</DebugType>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>NuGenVizDoc.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>0</WarningLevel>
+    <NoWarn>
+    </NoWarn>
+    <DebugType>none</DebugType>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Agilix.Ink, Version=2.0.0.1454, Culture=neutral, PublicKeyToken=e7aae1a23b4b7f5a">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Documents and Settings\Anthony Nystrom\My Documents\Visual Studio 2005\Controls\Agilix InfiNotes\Agilix.Ink.dll</HintPath>
+    </Reference>
+    <Reference Include="Agilix.Ink.Native, Version=0.0.0.0, Culture=neutral, PublicKeyToken=e7aae1a23b4b7f5a" />
+    <Reference Include="Microsoft.Ink, Version=1.7.2600.2180, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Form_Splash.Designer.vb">
+      <DependentUpon>Form_Splash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Splash.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCapture.Designer.vb">
+      <DependentUpon>frmCapture.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCapture.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDwnCnt.Designer.vb">
+      <DependentUpon>frmDwnCnt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDwnCnt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuGenPrim.Designer.vb">
+      <DependentUpon>frmNuGenPrim.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmNuGenPrim.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Win32.vb" />
+    <EmbeddedResource Include="Form_Splash.resx">
+      <DependentUpon>Form_Splash.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCapture.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCapture.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDwnCnt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDwnCnt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNuGenPrim.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmNuGenPrim.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Genetibase.UI.NuGenAbout\Genetibase.UI.NuGenAbout.vbproj">
+      <Project>{F0446399-F6EE-4625-87C2-A3DB29640C71}</Project>
+      <Name>Genetibase.UI.NuGenAbout</Name>
+    </ProjectReference>
+    <ProjectReference Include="Genetibase.UI.NuGenRulerX\Genetibase.UI.NuGenRulerX\Genetibase.UI.NuGenRulerX.csproj">
+      <Project>{B6121865-AE2B-422D-B3B1-CEE2F8710252}</Project>
+      <Name>Genetibase.UI.NuGenRulerX</Name>
+    </ProjectReference>
+    <ProjectReference Include="NuGenPP_04.18.06b\RAC Infinotes PrintPreview\InfinoteC1PrintPreview2005\InfinoteC1PrintPreview2005.vbproj">
+      <Project>{171D0517-DB1E-4DCB-9546-0669462DFAA1}</Project>
+      <Name>InfinoteC1PrintPreview2005</Name>
+    </ProjectReference>
+    <ProjectReference Include="NuGenPP_04.18.06b\RAC Infinotes PrintPreview\InfiNotePrintPreview2005\InfiNotePrintPreview2005.vbproj">
+      <Project>{57D27E19-BC63-42BD-9845-56510C66C8CF}</Project>
+      <Name>InfiNotePrintPreview2005</Name>
+    </ProjectReference>
+    <ProjectReference Include="SCreenCap_03.10.06\Genetibase\UI\NuGenScreenCap\Genetibase.UI.NuGenScreenCap.csproj">
+      <Project>{A32727BD-9E65-441F-BEC7-825AFBC0567E}</Project>
+      <Name>Genetibase.UI.NuGenScreenCap</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="Website.ico" />
+    <None Include="Resources\NuGenVizCap_LOGO_VEC.png" />
+  </ItemGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties XMLCommentsOutputFile="" XMLCommentsActionBuild="-1" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <SubType>Designer</SubType>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenVizDoc.plsk" />
+    <Reference Include="C1.C1PrintDocument.Classic.2, Version=2.0.20062.327, Culture=neutral, PublicKeyToken=1a6f4158ebe6d3b8, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1PrintPreview.Classic.2, Version=2.0.20062.327, Culture=neutral, PublicKeyToken=3af768410ba0a64f, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar, Version=5.8.0.0, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04" />
+    <Reference Include="Janus.Windows.Common.v2, Version=2.0.1194.0, Culture=neutral, PublicKeyToken=21d5517571b185bf" />
+    <Reference Include="Janus.Windows.ExplorerBar.v2, Version=2.0.1194.0, Culture=neutral, PublicKeyToken=21d5517571b185bf" />
+    <Reference Include="Janus.Windows.GridEX.v2, Version=2.0.1194.0, Culture=neutral, PublicKeyToken=21d5517571b185bf" />
+    <Reference Include="Janus.Windows.UI.v2, Version=2.0.1194.0, Culture=neutral, PublicKeyToken=21d5517571b185bf" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="Xheo.Licensing">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>c:\windows\assembly\gac\xheo.licensing\2.1.5000.0__798276055709c98a\xheo.licensing.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

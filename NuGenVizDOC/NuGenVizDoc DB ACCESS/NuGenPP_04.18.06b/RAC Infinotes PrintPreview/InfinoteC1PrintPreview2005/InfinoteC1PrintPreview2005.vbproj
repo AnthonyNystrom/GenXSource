@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{171D0517-DB1E-4DCB-9546-0669462DFAA1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Genetibase.UI</RootNamespace>
+    <AssemblyName>Genetibase.UI.NuGenPDirectC12005</AssemblyName>
+    <MyType>Empty</MyType>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Agilix.Ink, Version=2.0.0.1454, Culture=neutral, PublicKeyToken=e7aae1a23b4b7f5a" />
+    <Reference Include="Agilix.Ink.Native, Version=0.0.0.0, Culture=neutral, PublicKeyToken=e7aae1a23b4b7f5a" />
+    <Reference Include="C1.C1PrintDocument.Classic.2, Version=2.0.20062.327, Culture=neutral, PublicKeyToken=1a6f4158ebe6d3b8" />
+    <Reference Include="C1.Win.C1PrintPreview.Classic.2, Version=2.0.20062.327, Culture=neutral, PublicKeyToken=3af768410ba0a64f" />
+    <Reference Include="Microsoft.Ink, Version=1.7.2600.2180, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="NuGenC1NotePreviewer.vb" />
+    <Compile Include="NuGenC1PrintPreviewDialog.Designer.vb">
+      <DependentUpon>NuGenC1PrintPreviewDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenC1PrintPreviewDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenC1ScribblePreviewer.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="NuGenC1PrintPreviewDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenC1PrintPreviewDialog.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\InfiNotePrintPreview2005\InfiNotePrintPreview2005.vbproj">
+      <Project>{57D27E19-BC63-42BD-9845-56510C66C8CF}</Project>
+      <Name>InfiNotePrintPreview2005</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

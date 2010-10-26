@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet>
+  <view uin="oi5d556iee80aqg_v">
+    <property name="$name" value="Forms" />
+    <property name="$defaultDiagram" value="True" />
+    <property name="$metaclass" value="Package Diagram" />
+    <reference referencedUin="msil:e_class:lib:System.Windows.Forms:System.Windows.Forms.Form">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="msil:e_class:lib:System.Windows.Forms:System.Windows.Forms.TabPage">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="msil:e_class:lib:System.Windows.Forms:System.Windows.Forms.TabControl">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="msil:e_class:lib:System.Windows.Forms:System.Windows.Forms.Label">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="msil:e_class:lib:System.Windows.Forms:System.Windows.Forms.GroupBox">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="msil:e_class:lib:System.Windows.Forms:System.Windows.Forms.Panel">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="msil:e_class:lib:System.Windows.Forms:System.Windows.Forms.ComboBox">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="msil:e_class:lib:System.Windows.Forms:System.Windows.Forms.TextBox">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="msil:e_class:lib:System.Windows.Forms:System.Windows.Forms.Button">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="msil:e_class:lib:System.Windows.Forms:System.Windows.Forms.TrackBar">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="msil:e_class:lib:System.Windows.Forms:System.Windows.Forms.ImageList">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="msil:e_class:lib:System.Windows.Forms:System.Windows.Forms.OpenFileDialog">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="msil:e_class:lib:System.Windows.Forms:System.Windows.Forms.MainMenu">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="msil:e_class:lib:System.Windows.Forms:System.Windows.Forms.MenuItem">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="msil:e_class:lib:System.Windows.Forms:System.Windows.Forms.ColorDialog">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="msil:e_class:lib:System.Windows.Forms:System.Windows.Forms.SaveFileDialog">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="msil:e_class:lib:System.Windows.Forms:System.Windows.Forms.CheckBox">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+  </view>
+</nodeSet>
