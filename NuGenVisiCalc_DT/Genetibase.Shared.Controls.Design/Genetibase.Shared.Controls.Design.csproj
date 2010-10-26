@@ -1,0 +1,197 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C4E55216-11FF-4CEF-AF80-7E4EE90BC518}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Genetibase.Shared.Controls.Design</RootNamespace>
+    <AssemblyName>Genetibase.Shared.Controls.Design</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Genetibase.Shared.Controls.Design.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Genetibase.Shared.Controls.Design.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NuGenApplicationCommandCollectionEditor.cs" />
+    <Compile Include="NuGenBlendSelectorDesigner.cs" />
+    <Compile Include="NuGenCalendarActionList.cs" />
+    <Compile Include="NuGenCalendarDesigner.cs" />
+    <Compile Include="NuGenContextMenusEditor.cs" />
+    <Compile Include="NuGenDateItemCollectionEditor.cs" />
+    <Compile Include="NuGenDirectorySelectorDesigner.cs" />
+    <Compile Include="NuGenEditorServiceContext.cs" />
+    <Compile Include="NuGenContextMenusForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenContextMenusForm.Designer.cs">
+      <DependentUpon>NuGenContextMenusForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenFontBoxDesigner.cs" />
+    <Compile Include="NuGenFontSizeBoxDesigner.cs" />
+    <Compile Include="NuGenMatrixLabelDesigner.cs" />
+    <Compile Include="NuGenMiniBarControlDesigner.cs" />
+    <Compile Include="NuGenMinibarDesigner.cs" />
+    <Compile Include="NuGenOpenFileSelectorDesigner.cs" />
+    <Compile Include="NuGenPanelExDesigner.cs" />
+    <Compile Include="NuGenPinpointListEditor.cs" />
+    <Compile Include="NuGenPinpointWindowDesigner.cs" />
+    <Compile Include="NuGenProgressBarDesigner.cs" />
+    <Compile Include="NuGenRadioButtonDesigner.cs" />
+    <Compile Include="NuGenScrollBarDesigner.cs" />
+    <Compile Include="NuGenScrollButtonDesigner.cs" />
+    <Compile Include="NuGenSegDisplayDesigner.cs" />
+    <Compile Include="NuGenSpacerDesigner.cs" />
+    <Compile Include="NuGenSplitButtonDesigner.cs" />
+    <Compile Include="NuGenSwitchButtonDesigner.cs" />
+    <Compile Include="NuGenTitleDesigner.cs" />
+    <Compile Include="NuGenTitlePanelDesigner.cs" />
+    <Compile Include="NuGenUIItemsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenUIItemsForm.Designer.cs">
+      <DependentUpon>NuGenUIItemsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenBevelDesigner.cs" />
+    <Compile Include="NuGenButtonDesigner.cs" />
+    <Compile Include="NuGenCheckBoxDesigner.cs" />
+    <Compile Include="NuGenControlReflectorActionList.cs" />
+    <Compile Include="NuGenControlReflectorDesigner.cs" />
+    <Compile Include="NuGenDriveComboDesigner.cs" />
+    <Compile Include="NuGenDropDownDesigner.cs" />
+    <Compile Include="NuGenFileSelectorDesigner.cs" />
+    <Compile Include="NuGenGradientPanelActionList.cs" />
+    <Compile Include="NuGenGradientPanelDesigner.cs" />
+    <Compile Include="NuGenGroupBoxDesigner.cs" />
+    <Compile Include="NuGenLabelDesigner.cs">
+    </Compile>
+    <Compile Include="NuGenLinkLabelActionList.cs" />
+    <Compile Include="NuGenLinkLabelDesigner.cs" />
+    <Compile Include="NuGenNavigationBarActionList.cs" />
+    <Compile Include="NuGenNavigationBarDesigner.cs" />
+    <Compile Include="NuGenNavigationPaneDesigner.cs" />
+    <Compile Include="NuGenOrientationControlActionList.cs" />
+    <Compile Include="NuGenOrientationControlDesigner.cs" />
+    <Compile Include="NuGenPageDesignerBase.cs" />
+    <Compile Include="NuGenPageHostDesignerBase.cs" />
+    <Compile Include="NuGenPanelActionList.cs" />
+    <Compile Include="NuGenPanelDesigner.cs" />
+    <Compile Include="NuGenPictureBoxActionList.cs" />
+    <Compile Include="NuGenPictureBoxDesigner.cs" />
+    <Compile Include="NuGenPrintPreviewDesigner.cs" />
+    <Compile Include="NuGenSpinDesigner.cs" />
+    <Compile Include="NuGenCloseButtonDesigner.cs" />
+    <Compile Include="NuGenSwitcherActionList.cs" />
+    <Compile Include="NuGenSwitcherDesigner.cs" />
+    <Compile Include="NuGenSwitchPageDesigner.cs" />
+    <Compile Include="NuGenTabControlActionList.cs" />
+    <Compile Include="NuGenTabControlDesigner.cs" />
+    <Compile Include="NuGenTabPageDesigner.cs" />
+    <Compile Include="NuGenTaskBoxDesigner.cs" />
+    <Compile Include="NuGenTextBoxDesigner.cs" />
+    <Compile Include="NuGenToolTipInfoEditor.cs" />
+    <Compile Include="NuGenToolTipInfoEditorUI.ContentTextBox.cs" />
+    <Compile Include="NuGenToolTipInfoEditorUI.cs" />
+    <Compile Include="NuGenToolTipInfoEditorUI.DialogFlowLayoutPanel.cs" />
+    <Compile Include="NuGenToolTipInfoEditorUI.EditorPictureBox.cs" />
+    <Compile Include="NuGenToolTipInfoEditorUI.EditorTableLayout.cs" />
+    <Compile Include="NuGenToolTipInfoEditorUI.HeaderTextBox.cs" />
+    <Compile Include="NuGenToolTipInfoEditorUI.MainBlock.cs" />
+    <Compile Include="NuGenToolTipInfoEditorUI.RemarksBlock.cs" />
+    <Compile Include="NuGenToolTipInfoEditorUI.SizeBlock.cs" />
+    <Compile Include="NuGenToolTipInfoEditorUI.SizeSpin.cs" />
+    <Compile Include="NuGenTrackBarActionList.cs" />
+    <Compile Include="NuGenTrackBarDesigner.cs" />
+    <Compile Include="NuGenTreeNodeCollectionEditor.cs" />
+    <Compile Include="NuGenTreeNodeCollectionEditor.DragDropService.cs" />
+    <Compile Include="NuGenTreeNodeCollectionEditor.EditorForm.cs" />
+    <Compile Include="NuGenTreeNodeCollectionEditor.ServiceProvider.cs" />
+    <Compile Include="NuGenTreeNodeCollectionEditor.TreeView.cs" />
+    <Compile Include="NuGenTreeViewActionList.cs" />
+    <Compile Include="NuGenTreeViewDesigner.cs" />
+    <Compile Include="NuGenUISnapDesigner.cs" />
+    <Compile Include="NuGenWatermarkActionList.cs" />
+    <Compile Include="NuGenWatermarkDesigner.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenUIItemsEditor.cs" />
+    <Compile Include="NuGenCommandManagerDesigner.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Genetibase.Shared.Controls\Genetibase.Shared.Controls.csproj">
+      <Project>{7AFBEE90-61C7-46A9-95B8-67373C1C6F4D}</Project>
+      <Name>Genetibase.Shared.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Genetibase.Shared.Design\Genetibase.Shared.Design.csproj">
+      <Project>{50EE44FC-D51B-471E-A199-15621498ECA7}</Project>
+      <Name>Genetibase.Shared.Design</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Genetibase.Shared\Genetibase.Shared.csproj">
+      <Project>{A7A02558-58A0-4333-BFAF-77CB49DE17F0}</Project>
+      <Name>Genetibase.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Genetibase.Win32\Genetibase.Win32.csproj">
+      <Project>{8E94E64C-52F7-4865-ACF1-3FEC8F61B531}</Project>
+      <Name>Genetibase.Win32</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
