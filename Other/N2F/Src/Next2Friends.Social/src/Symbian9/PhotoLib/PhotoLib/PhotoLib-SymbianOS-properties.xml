@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NDSProject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" supplier="Nokia">
+  <activeMmpFile>group\PhotoLib.mmp</activeMmpFile>
+  <updateMmpFile>true</updateMmpFile>
+  <updateUidCppFile>true</updateUidCppFile>
+  <pkgFile />
+  <pkgUpdate>false</pkgUpdate>
+  <pkgGeneration>false</pkgGeneration>
+  <projectProperty name="testDir" label="Test" value="tsrc" description="Directory for unit tests / test application files" type="input" pattern="Filename" role="Directory" persistedAs="directory.test" />
+  <projectProperty name="sisDir" label="Install" value="sis" description="Directory for installation files" type="input" pattern="Filename" role="Directory" persistedAs="directory.sis" />
+  <projectProperty name="gfxDir" label="Graphics" value="gfx" description="Directory for application graphics" type="input" pattern="Filename" role="Directory" persistedAs="directory.icons" />
+  <projectProperty name="dataDir" label="Data" value="data" description="Directory for resource files" type="input" pattern="Filename" role="Directory" persistedAs="directory.data" />
+  <projectProperty name="groupDir" label="Group" value="group" description="Directory for Symbian project files" type="input" pattern="Filename" role="Directory" persistedAs="directory.group" />
+  <projectProperty name="sourceDir" label="Source" value="src" description="Directory for C++ source files" type="input" pattern="Filename" role="Directory" persistedAs="directory.src" />
+  <projectProperty name="incDir" label="Include" value="inc" description="Directory for C++ header files" type="input" pattern="Filename" role="Directory" persistedAs="directory.inc" />
+  <projectProperty name="copyright" label="Copyright notice" value="Your copyright notice" description="Your copyright notice" type="input" pattern="FreeText" role="None" persistedAs="file.copyright" />
+  <projectProperty name="vendorName" label="Vendor Name" value="Vendor Name" description="Your vendor name" type="input" pattern="FreeText" role="None" persistedAs="project.vendorName" />
+  <projectProperty name="author" label="Author" value="" description="Name of the author" type="input" pattern="FreeText" role="None" persistedAs="file.author" />
+  <projectProperty name="libUid" label="Lib UID" value="0xe7dd32fa" description="Lib UID. Defaults to a random development time UID. Release UIDs provided by Symbian." type="input" pattern="UID" role="Symbian9UID" persistedAs="project.uid3" />
+  <projectProperty name="libBasename" label="Base Name" value="Photo" description="Base name for files and classes" type="input" pattern="VariableName" role="ProjectName" persistedAs="project.basename" />
+  <lang>EN</lang>
+  <updateContextHelp>true</updateContextHelp>
+</NDSProject>

@@ -1,0 +1,223 @@
+/* RadWindow monochrome skin */
+
+iframe.RadWContentFrame
+{
+	background: #fff; /* Mozilla overlay */
+}
+
+.RadWContentFrame
+{
+	scrollbar-face-color: #BACBF4;
+	scrollbar-highlight-color: #FFFFFF;
+	scrollbar-shadow-color: #7E9FD2;
+	scrollbar-3dlight-color: #E6EEFC;
+	scrollbar-arrow-color: #4D6185;
+	scrollbar-track-color: #F7F7F3;
+	scrollbar-darkshadow-color: #C6D1DC;		
+}
+
+.RadWStatus
+{
+	height: 20px;
+	background: url('CssImg/RadWStatus.gif') repeat-x;
+}
+
+.RadWStatus input
+{
+	font: normal 10px Verdana, Arial, Sans-Serif !important;
+	cursor: default;
+	color: #000;
+	margin-top: 2px;
+}
+
+.RadWModalImage
+{
+	background: url('Img/ModalImageBg.gif');
+}
+
+.RadWStatusRow
+{
+	background: #dbdbdb;
+}
+
+.RadWDragHelper
+{		
+	border: solid 1px solid #ccc;
+	background: #ccc;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50); /* IE */
+	-moz-opacity: 0.5; /* Mozilla */
+	opacity: 0.5; /* CSS3 */
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	z-index: 50000;
+	overflow: hidden;
+}
+
+.RadWMinimizedPageLoaded
+{
+	width: 60px;
+	height: 25px;
+	border: solid 1px #e34a4e;
+	background: url('CssImg/RadWWrapperHeaderCenter.gif') repeat-x;
+}
+
+.RadWMinimizedActive,
+.RadWMinimizedOver
+{
+	width: 60px;
+	height: 25px;
+	border: solid 1px #4071c5;
+	background: transparent url('CssImg/RadWWrapperHeaderCenter.gif') repeat-x;
+}
+
+.RadWMinimizedInactive
+{
+	width: 60px;
+	height: 25px;
+	border: solid 1px #4071c5;
+	background: #979797 url('CssImg/RadWWrapperHeaderCenter.gif') repeat-x;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=63); /* IE */
+	-moz-opacity: 0.6; /* Moz */
+	opacity: 0.6; /* Moz */
+}
+
+.RadWLoadingWrapper
+{
+	width: 80px;
+	height: 100%;
+	vertical-align: middle;
+	text-align: center;	
+	font: normal 11px Verdana, Arial, Tahoma, Sans-Serif;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=99); /* IE */
+}
+
+.RadWIcon
+{
+	margin: 3px 2px 0px 2px;
+	cursor: default;
+	vertical-align: middle;
+}
+
+.RadWTitleText
+{
+	font: bold 11px Verdana, Arial, Sans-Serif;
+	color: #fff;
+	vertical-align: middle;		
+}
+
+.RadWButton
+{
+	cursor: default;
+	margin-top: 3px;
+	margin-right: 1px;
+	vertical-align: top;
+}
+
+.RadWWrapperActive
+{
+	background: #fff;
+	font-size: 0px;	
+	border-left: solid 2px #a6a6a6;
+	border-top: solid 2px #a6a6a6;
+	border-right: solid 2px #a6a6a6 !important;
+	border-bottom: solid 2px #a6a6a6 !important;
+	/*filter: progid:DXImageTransform.Microsoft.Shadow(direction=140,color=#404040,strength=3); */
+}
+
+.RadWWrapperInactive
+{
+	background-color: #CFE2FB;
+	font-size: 0px;	
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=90); /* IE */
+	-moz-opacity: 0.9; /* Moz */
+	opacity: 0.9; /* CSS3 */
+}
+
+.RadWWrapperModal
+{	
+	border-right: solid 1px #404040;
+	border-bottom: solid 1px #404040;
+	border-left: solid 1px #d4d0c8;
+	border-top: solid 1px #d4d0c8;
+	font-size: 0px;
+	/*filter: progid:DXImageTransform.Microsoft.Shadow(direction=140,color=#404040,strength=3); */
+}
+
+.RadWTitleRow
+{
+	cursor: default;		
+}
+
+.RadWWrapperHeaderLeft
+{
+	width: 2px;
+	background: #a6a6a6;
+	height: 27px;
+}
+
+.RadWHeaderTopResizer
+{
+	font-size: 0px;
+	height: 2px;
+	background: #7c7c7c;
+}
+
+.RadWWrapperHeaderCenter
+{
+	text-align: left;
+	height: 25px;
+	font: normal 11px Verdana, Arial, Sans-serif; /* always set a value */
+	color: #fff;
+	background: #a6a6a6 url('CssImg/RadWWrapperHeaderCenter.gif') repeat-x bottom;
+}
+
+.RadWWrapperHeaderRight
+{
+	width: 2px;
+	background: #a6a6a6;
+	height: 27px;
+}
+
+.RadWWrapperBodyLeft
+{
+	width: 3px;
+	background: #a6a6a6;
+}
+
+.RadWWrapperBodyCenter
+{
+	width: 100%;
+	height: 100%;
+}
+
+.RadWWrapperBodyRight
+{
+	width: 3px;
+	background: #a6a6a6;
+}
+
+/* Mozilla 1.5 Fix */
+.RadWWrapperBodyLeft:before
+{
+	content: " ";
+	display: block;
+	width: 3px;
+}
+
+/* Mozilla 1.5 Fix */
+.RadWWrapperBodyRight:before
+{
+	content: " ";
+	display: block;
+	width: 3px;
+}
+
+.RadWWrapperFooterLeft,
+.RadWWrapperFooterCenter,
+.RadWWrapperFooterRight
+{
+	background: #a6a6a6;
+	font-size: 0px;
+	height: 3px;
+} 

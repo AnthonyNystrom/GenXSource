@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <graphics>
+    <image id="1" name="EGCommerceLogo">
+      commercelogo.png
+    </image>
+    <image id="2" name="EGApplicationIcon">
+      icon.png
+    </image>
+    <image id="3" name="EGOpBtnBack">
+      menu-btn-back-unfocused.png
+    </image>
+    <image id="4" name="EGOpBtnBackPressed">
+      menu-btn-back-focused.png
+    </image>
+    <image id="5" name="EGCommentsIcon">
+      comments.png
+    </image>
+    <image id="6" name="EGCredentialsIcon">
+      credentials.png
+    </image>
+    <image id="7" name="EGDraftsIcon">
+      drafts.png
+    </image>
+    <image id="8" name="EGNewPostIcon">
+      new_post.png
+    </image>
+    <image id="9" name="EGOutboxIcon">
+      outbox.png
+    </image>
+    <image id="10" name="EGRecentUploads">
+      recent_uploads.png
+    </image>
+    <image id="11" name="EGRecentPosts">
+      recent_posts.png
+    </image>
+    <image id="12" name="EGUpload">
+      upload.png
+    </image>
+    <image id="13" name="EGTextBoxFocusedBg">
+      textbox-focused.png
+    </image>
+    <image id="14" name="EGTextBoxUnfocusedBg">
+      textbox-unfocused.png
+    </image>
+  </graphics>
+
+  <colors>
+    <color id ="0" name="ECNotFound">
+      [00][ff][00]
+    </color>
+    <color id ="1" name="ECCredentialsFocusedBack">
+      [ff][ff][ff]
+    </color>
+    <color id ="2" name="ECCredentialsUnfocusedBack">
+      [dc][dc][dc]
+    </color>
+    <color id ="3" name="ECCredentialsLabel">
+      [02][57][ae]
+    </color>
+    <color id ="4" name="ECOperationsFocusedButtonText">
+      [02][57][ae]
+    </color>
+    <color id ="5" name="ECOperationsUnfocusedButtonText">
+      [ff][ff][ff]
+    </color>
+  </colors>
+</resources>

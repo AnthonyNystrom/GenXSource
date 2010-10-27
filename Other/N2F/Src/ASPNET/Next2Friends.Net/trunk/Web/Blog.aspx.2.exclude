@@ -1,0 +1,46 @@
+﻿<%@ Page Language="C#" MasterPageFile="~/View.master" AutoEventWireup="true" CodeFile="Blog.aspx.cs" Inherits="Blog" %>
+<asp:Content ID="Content2" ContentPlaceHolderID="LeftColContentHolder" runat="Server">
+</asp:Content>
+<asp:Content ID="Content1" ContentPlaceHolderID="RightColContentHolder" runat="Server">
+
+    <script language="javascript" src="js/blog.js"></script>
+<!-- box start -->
+				<div class="profile_box">
+					<h2><%=BlogTitle %></h2>
+					<p><small><%=BlogCreationDt %></small></p>
+					
+					<p>
+					    <%=BlogBody %>
+					</p>
+				</div>
+				<!-- box end -->
+				<!-- box start -->
+				<!-- box start -->
+                    <div class="profile_box">
+                        <a name="comments"></a>
+                            <h4 class="box_title collapsible">
+                            Comments <span id="spanNumberOfComments3">(<%=NumberOfComments %>)</span></h4>
+                            <p class="add_profile_comments">
+                    
+                            <a href="<%=PostCommentString %>">
+
+                            Post comment</a></p><br />
+                            
+					<div id="divNewCommentHolder">
+                    <div id="divNewComment" style="display: none; width: 100%;">
+                        <p class="align_right">
+                            <textarea rows="5" id="txtNewComment" style="width: 100%;"></textarea><br />
+                            <a href="javascript:cancelShowPostComment();void(0);">cancel</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+                            <a id="saveComment" href="">post</a></p>
+                    </div>
+                    </div>
+                    <div class="collapsible_div">
+					    <ol class="profile_commentlist">
+    					
+                            <%=BlogCommentsHTML %>
+					    </ol>
+					</div>
+				    </div>
+				    
+				    <!-- box end -->
+</asp:Content>

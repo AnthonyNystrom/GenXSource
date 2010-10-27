@@ -1,0 +1,105 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EBC41808-A652-4AA3-BD00-BBB6BD45E8A6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Netron.Cobalt.IDE</RootNamespace>
+    <AssemblyName>Netron.Cobalt.IDE</AssemblyName>
+    <ApplicationIcon>Cobalt.IDE.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HTTP\Guide\Framework\BrowserAddin.cs" />
+    <EmbeddedResource Include="HTTP\Guide\Framework\ImmediateTemplate.cs" />
+    <Compile Include="HTTP\Guide\Framework\ISample.cs" />
+    <Compile Include="HTTP\Guide\Framework\ScriptExecutor.cs" />
+    <EmbeddedResource Include="HTTP\Guide\Framework\ScriptTemplate.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Startup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cobalt.Core\Cobalt.Core.csproj">
+      <Project>{6C521E72-8B2E-4311-85A0-26846D669B99}</Project>
+      <Name>Cobalt.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Diagramming.Core\Netron.Diagramming.Core.csproj">
+      <Project>{96AEBBEE-4203-45F3-BCF5-7B73BF256BDA}</Project>
+      <Name>Netron.Diagramming.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Diagramming.Win\Netron.Diagramming.Win.csproj">
+      <Project>{1D15C2A9-7D08-4BA6-B307-BDE0CA8AF1CB}</Project>
+      <Name>Netron.Diagramming.Win</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Neon\Netron.Neon.csproj">
+      <Project>{4FBE4352-5718-421D-95F7-2187A932F475}</Project>
+      <Name>Netron.Neon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Xeon\Netron.Xeon.csproj">
+      <Project>{37AF0385-5824-489C-9C52-78874C6455FD}</Project>
+      <Name>Netron.Xeon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Cobalt.IDE.ico" />
+    <Content Include="HTTP\Guide\API\index.htm" />
+    <Content Include="HTTP\Guide\images\NetronFuture.png" />
+    <Content Include="HTTP\Guide\index.htm" />
+    <Content Include="HTTP\Guide\Samples.htm" />
+    <Content Include="HTTP\Start\Welcome.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="HTTP\Guide\Samples\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+</Project>

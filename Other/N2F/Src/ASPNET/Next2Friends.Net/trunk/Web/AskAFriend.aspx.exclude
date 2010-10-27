@@ -1,0 +1,94 @@
+c<%@ Page AutoEventWireup="true" Debug="true" CodeFile="AskAFriend.aspx.cs" Inherits="AskAFriendPage"  Language="C#" MasterPageFile="Main.master" Title="Untitled Page" %>
+<%@ Import Namespace="Next2Friends.Data" %>
+
+<asp:Content ID="Content1" runat="Server" ContentPlaceHolderID="ContentPlaceHolder1">
+<script type="text/javascript" src="js/AskAFriend.js"></script>
+
+<!-- middle start -->
+	<div id="middle" class="clearfix">
+
+		<!--subnav start -->
+		<ul id="subnav" class="clearfix">
+			<li><a href="AskAFriend.aspx">Play!</a></li>
+			<%if (IsLoggedIn){%>
+			<li><a href="MyAskAFriend.aspx"><img src="images/BtnMyQuestions.gif" /></a></li>
+			<li><a href="AAFUpload.aspx"><img src="images/btnNewQuestion.gif" /></a></li>
+			<%}else{%>
+			<li><a href="Signup.aspx"><img src="images/btnNewQuestion.gif" /></a></li>
+			<%} %>
+		</ul>
+		<!-- subnav end -->
+
+		
+		<!-- page start -->
+		<div class="page clearfix fullPageBkg">
+		
+			<!-- aaf start -->
+			<div class="aaf_leftcol">
+				<h3 class="aaf_question_large" id="h3Question"><%=InitialAAF.Question %></h3>
+				
+				<ul class="aaf_answers clearfix" id="ulSelection">
+                    <%=InitialAAF.HTML %>
+				</ul>
+				
+				<p class="bookmark_this" id="pBookmarks">
+					<%=InitialAAF.Bookmarks %>
+				</p>
+				
+				<h3 class="aaf_comments_heading">Comments</h3>
+				<p><%if (IsLoggedIn)
+                 { %><a href="javascript:showPostComment();void(0);"><%}
+                 else
+                 { %><a href="<%=LoginUrl %>"><%} %>Add comments</a></p>
+                    <div id="divNewComment" style="display:none;width:530px;">
+                        <%=InitialAAF.CommentPost%>
+                    </div>
+                    
+				<ol class="aaf_commentlist" id="olComments">
+                        <%=InitialAAF.Comments %>
+				</ol>
+			</div>
+
+			<!-- aaf end -->
+
+			<!-- right start -->
+			<div class="aaf_rightcol">
+			
+				<div class="dont_like_this">
+					<strong>Don't like this question?</strong>
+					Skipping questions helps N2F display only fun and interesting stuff!
+				</div><!--/aaf dont like this -->
+				
+				<%if(IsPermalink){ %>
+				    <a href="AskAFriend.aspx">
+				<%}else{ %>
+				    <a href="javascript:ajaxSkipQuestion();void(0);">
+				<%} %>
+				    <img src="images/btn-skip.gif" id="iSkip" alt="skip" class="bottomSpace" />
+                </a>
+				
+				<div class="dont_like_this what-is-aaf">
+					<strong>What is this page?</strong>
+					<a href="FAQ.aspx#4_1">Find out what Ask-A-Friend is and how you use it on your mobile device &raquo;</a>
+				</div>
+              
+				<span id="spanLastAAF"><%=InitialAAF.LastAAF%></span>
+				
+				<!--/aaf next -->
+				
+
+			</div>
+			<!-- right end -->
+			
+		
+		</div>
+		<!-- page end -->
+
+
+
+	</div>
+
+	<!-- middle end -->
+
+
+</asp:Content>

@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GLStereoPlayerAX", "GLStereoPlayerAX.vcproj", "{4FE0D24D-E005-465E-A491-1526F0153BBB}"
+EndProject
+Global
+	GlobalSection(DPCodeReviewSolutionGUID) = preSolution
+		DPCodeReviewSolutionGUID = {00000000-0000-0000-0000-000000000000}
+	EndGlobalSection
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{4FE0D24D-E005-465E-A491-1526F0153BBB}.Debug.ActiveCfg = Debug|Win32
+		{4FE0D24D-E005-465E-A491-1526F0153BBB}.Debug.Build.0 = Debug|Win32
+		{4FE0D24D-E005-465E-A491-1526F0153BBB}.Release.ActiveCfg = Release|Win32
+		{4FE0D24D-E005-465E-A491-1526F0153BBB}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

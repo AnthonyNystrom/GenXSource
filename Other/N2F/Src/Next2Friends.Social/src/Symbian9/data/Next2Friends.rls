@@ -1,0 +1,28 @@
+/*
+============================================================================
+ Name        : Next2Friends.rls
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : String localization file
+============================================================================
+*/
+
+//  LOCALISATION STRINGS
+
+//d:Caption string for app.
+rls_string qtn_hewb_caption_string "Next2Friends"
+
+//d:Short caption string for app.
+rls_string qtn_hewb_short_caption_string "Next2Friends"
+
+//d:First item in "Options" menu pane, "hello" event.
+rls_string qtn_hewb_command1 "Hello"
+
+//d:Third item in "Options" menu pane, "exit" event.
+rls_string qtn_hewb_exit "Exit"
+
+//d:When user requests ENext2FriendsCommand1 event, text below is shown.
+rls_string qtn_hewb_command1_text "Hello world!"
+
+// End of File

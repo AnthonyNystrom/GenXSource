@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://services.next2friends.com/n2fwebservices/CommentService.asmx?wsdl" docRef="http://services.next2friends.com/n2fwebservices/CommentService.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://services.next2friends.com/n2fwebservices/CommentService.asmx" xmlns:q1="http://www.next2friends.com/" binding="q1:CommentServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://services.next2friends.com/n2fwebservices/CommentService.asmx" xmlns:q2="http://www.next2friends.com/" binding="q2:CommentServiceSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

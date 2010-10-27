@@ -1,0 +1,229 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D9E550E8-5160-4DB9-8490-8EDC2E4FA750}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>FacScan</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FacScan</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib">
+      <Name>mscorlib</Name>
+      <HintPath>mscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+      <HintPath>System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+      <HintPath>System.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+      <HintPath>System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+      <HintPath>System.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ColumnNumberNotEqualException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DatabaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DBMergeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrawImageClass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GeneForm9999.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImageOptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImageTextPositionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImageViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportSigScan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadSeqFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadSeqState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainOptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyStringUtilClass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NewSeq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransFactor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WizardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="AboutForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatabaseForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DatabaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dataForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>dataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneForm9999.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GeneForm9999.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageOptionForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ImageOptionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageTextPositionForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ImageTextPositionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageViewForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ImageViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportSigScan.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ImportSigScan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadSeqFile.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LoadSeqFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainOptionForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainOptionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewSeq.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NewSeq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WizardForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Program.cs" />
+    <Compile Include="WizardForm.Designer.cs">
+      <DependentUpon>WizardForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

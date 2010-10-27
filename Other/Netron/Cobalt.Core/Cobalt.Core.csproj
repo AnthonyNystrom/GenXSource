@@ -1,0 +1,364 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6C521E72-8B2E-4311-85A0-26846D669B99}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>Cobalt.IDE.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Netron.Cobalt.Core</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Netron.Cobalt</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Cobalt.IDE.ico" />
+    <Content Include="Data_Schema.ico" />
+    <EmbeddedResource Include="DOM\UI\OutputControl\Empty.gif" />
+    <EmbeddedResource Include="DOM\UI\OutputControl\Exclamation.gif" />
+    <EmbeddedResource Include="DOM\UI\OutputControl\Info.gif" />
+    <EmbeddedResource Include="DOM\UI\OutputControl\Question.gif" />
+    <Compile Include="Addins\AddinInfo.cs" />
+    <Compile Include="DOM\Application.Addins.cs" />
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\Ungroup.png" />
+    <EmbeddedResource Include="Resources\Talking.gif" />
+    <None Include="Resources\StraightLines.png" />
+    <None Include="Resources\StandardArrow.png" />
+    <None Include="Resources\SendToBackHS.png" />
+    <None Include="Resources\SendBackwardHS.png" />
+    <None Include="Resources\Scribble.png" />
+    <None Include="Resources\saveHS.png" />
+    <None Include="Resources\RighsRestrictedHS.png" />
+    <None Include="Resources\PublishToWebHS.png" />
+    <None Include="Resources\PropertiesHS.png" />
+    <None Include="Resources\PrintPreviewHS.png" />
+    <None Include="Resources\Polygon.png" />
+    <None Include="Resources\PasteHS.png" />
+    <None Include="Resources\openfolderHS.png" />
+    <None Include="Resources\NetronFuture.png" />
+    <EmbeddedResource Include="Resources\Netron EULA.htm" />
+    <None Include="Resources\LineWeights.png" />
+    <None Include="Resources\LineFill.png" />
+    <None Include="Resources\LineCaps.png" />
+    <None Include="Resources\LayoutShapes.png" />
+    <None Include="Resources\Information.bmp" />
+    <None Include="Resources\info.png" />
+    <None Include="Resources\images.aspx.jpg" />
+    <None Include="Resources\Image1.png" />
+    <None Include="Resources\HomeHS.png" />
+    <None Include="Resources\Help.png" />
+    <None Include="Resources\Group.png" />
+    <None Include="Resources\GoRtlHS.png" />
+    <None Include="Resources\GoLtrHS.png" />
+    <None Include="Resources\FontDialogHS.png" />
+    <None Include="Resources\eps_closedHS.png" />
+    <None Include="Resources\Edit_UndoHS.png" />
+    <None Include="Resources\Edit_RedoHS.png" />
+    <None Include="Resources\DrawRectangle.png" />
+    <None Include="Resources\Drawing.png" />
+    <None Include="Resources\DrawEllipse.png" />
+    <None Include="Resources\DrawComplexRectangle.png" />
+    <None Include="Resources\DocumentHS.png" />
+    <None Include="Resources\DiagramIcon.ico" />
+    <None Include="Resources\DeleteHS.png" />
+    <None Include="Resources\Data_Schema.ico" />
+    <None Include="Resources\DashStyles.png" />
+    <None Include="Resources\CutHS.png" />
+    <None Include="Resources\copyright.gif" />
+    <None Include="Resources\CopyHS.png" />
+    <None Include="Resources\ConnectorMover.png" />
+    <None Include="Resources\Connection.png" />
+    <EmbeddedResource Include="Resources\CanvasBackground.png" />
+    <None Include="Resources\BucketFill.bmp" />
+    <None Include="Resources\BringToFrontHS.png" />
+    <None Include="Resources\BringForwardHS.png" />
+    <None Include="Resources\Book_openHS.png" />
+    <None Include="Resources\AlignVerticalCenter.png" />
+    <None Include="Resources\AlignTop.png" />
+    <None Include="Resources\AlignTableCellMiddleLeftJust.bmp" />
+    <None Include="Resources\AlignRight.png" />
+    <None Include="Resources\AlignLeft.png" />
+    <None Include="Resources\AlignHorizontalCenter.png" />
+    <None Include="Resources\AlignBottom.png" />
+    <EmbeddedResource Include="Resources\AboutTemplate.htm" />
+    <Compile Include="Addins\Configuration\AddinConfiguration.cs" />
+    <Compile Include="Addins\Configuration\ApplicationConfigurationHandler.cs" />
+    <Compile Include="Declarations\AddinConfigurationException.cs" />
+    <Compile Include="Declarations\Delegates\EventArguments.cs" />
+    <Compile Include="DOM\Application.cs" />
+    <Compile Include="DOM\Application.Menus.cs" />
+    <Compile Include="DOM\Application.Status.cs" />
+    <Compile Include="DOM\Application.Tabs.cs" />
+    <Compile Include="DOM\Application.ToolBars.cs" />
+    <Compile Include="DOM\UI\BrowserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DOM\UI\BrowserForm.Designer.cs">
+      <DependentUpon>BrowserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DOM\UI\DiagramForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DOM\UI\DiagramForm.Designer.cs">
+      <DependentUpon>DiagramForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DOM\UI\DocumentProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DOM\UI\DocumentProperties.Designer.cs">
+      <DependentUpon>DocumentProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DOM\UI\ITab.cs" />
+    <Compile Include="DOM\UI\OutputControl\NOutput.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DOM\UI\OutputControl\OutputChannel.cs" />
+    <Compile Include="DOM\UI\OutputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DOM\UI\PropertyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DOM\UI\PropertyForm.Designer.cs">
+      <DependentUpon>PropertyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DOM\UI\Settings\ApplicationSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DOM\UI\Settings\ApplicationSettings.Designer.cs">
+      <DependentUpon>ApplicationSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DOM\UI\Settings\DefaultSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DOM\UI\Settings\DefaultSettings.Designer.cs">
+      <DependentUpon>DefaultSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DOM\UI\Settings\ISettings.cs" />
+    <Compile Include="DOM\UI\ShapesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DOM\UI\ShapesForm.Designer.cs">
+      <DependentUpon>ShapesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DOM\UI\ShellControl\CommandHistory.cs" />
+    <Compile Include="DOM\UI\ShellControl\ShellControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DOM\UI\ShellControl\ShellTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DOM\UI\ShellForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DOM\UI\ShellForm.Designer.cs">
+      <DependentUpon>ShellForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SamplePlugin.cs" />
+    <Compile Include="Addins\IAddin.cs" />
+    <Compile Include="Workbenches\Workbenches.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DOM\UI\BrowserForm.resx">
+      <DependentUpon>BrowserForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DOM\UI\DiagramForm.resx">
+      <DependentUpon>DiagramForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DOM\UI\DocumentProperties.resx">
+      <DependentUpon>DocumentProperties.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DOM\UI\OutputControl\NOutput.resx">
+      <DependentUpon>NOutput.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DOM\UI\OutputForm.resx">
+      <DependentUpon>OutputForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DOM\UI\PropertyForm.resx">
+      <DependentUpon>PropertyForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DOM\UI\Settings\ApplicationSettings.resx">
+      <DependentUpon>ApplicationSettings.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DOM\UI\Settings\DefaultSettings.resx">
+      <DependentUpon>DefaultSettings.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DOM\UI\ShapesForm.resx">
+      <DependentUpon>ShapesForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DOM\UI\ShellControl\ShellControl.resx">
+      <DependentUpon>ShellControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DOM\UI\ShellControl\ShellTextBox.resx">
+      <DependentUpon>ShellTextBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DOM\UI\ShellForm.resx">
+      <DependentUpon>ShellForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Diagramming.Core\Netron.Diagramming.Core.csproj">
+      <Project>{96AEBBEE-4203-45F3-BCF5-7B73BF256BDA}</Project>
+      <Name>Netron.Diagramming.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Diagramming.Win\Netron.Diagramming.Win.csproj">
+      <Project>{1D15C2A9-7D08-4BA6-B307-BDE0CA8AF1CB}</Project>
+      <Name>Netron.Diagramming.Win</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Neon\Netron.Neon.csproj">
+      <Project>{4FBE4352-5718-421D-95F7-2187A932F475}</Project>
+      <Name>Netron.Neon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Xeon\Netron.Xeon.csproj">
+      <Project>{37AF0385-5824-489C-9C52-78874C6455FD}</Project>
+      <Name>Netron.Xeon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoMessage", "GeoMessage\GeoMessage.csproj", "{1062ECD3-F5A8-4F53-9A77-EF54091CE02C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoMessage.Tests", "GeoMessage.Tests\GeoMessage.Tests.csproj", "{4FE75DA2-EB6E-46F3-9A24-026321E009B2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CB48CD1D-B61E-4DB4-87AF-D7B3B5C337A4}"
+	ProjectSection(SolutionItems) = preProject
+		GeoMessage.vsmdi = GeoMessage.vsmdi
+		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = GeoMessage.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1062ECD3-F5A8-4F53-9A77-EF54091CE02C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1062ECD3-F5A8-4F53-9A77-EF54091CE02C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1062ECD3-F5A8-4F53-9A77-EF54091CE02C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1062ECD3-F5A8-4F53-9A77-EF54091CE02C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FE75DA2-EB6E-46F3-9A24-026321E009B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FE75DA2-EB6E-46F3-9A24-026321E009B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FE75DA2-EB6E-46F3-9A24-026321E009B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FE75DA2-EB6E-46F3-9A24-026321E009B2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

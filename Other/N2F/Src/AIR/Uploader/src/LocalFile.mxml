@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Box xmlns:mx="http://www.adobe.com/2006/mxml"
+	xmlns:n2f="*"
+	xmlns:qs="qs.controls.*" creationComplete="OnCreated( event )"
+	paddingLeft="5" paddingTop="5" paddingRight="5" paddingBottom="5"
+	contextMenu="{menu}" doubleClick="{Preview( event )}" mouseEnabled="true"
+	dataChange="OnDataChange( event )" doubleClickEnabled="true">
+
+	<mx:Metadata>
+		[ Event( name="action", type="ItemEvent" ) ]
+		[ Event( name="Rotate", type="ItemEvent" ) ]
+	</mx:Metadata>
+
+	<mx:Script>
+		<![CDATA[
+			import mx.controls.Alert;
+			import com.next2friends.PhotoItem;
+
+			[Bindable] private var menu : ContextMenu = new ContextMenu();
+			[Bindable] private var imageUrl : String = null;
+
+			private function OnCreated( event : Event ) : void
+			{
+//				AddMenuItem( menu, "Delete", Delete );
+				AddMenuItem( menu, "Rotate clockwise", RotateC );
+				AddMenuItem( menu, "Rotate anti-clockwise", RotateAC );
+			}
+
+			private function AddMenuItem( menu : ContextMenu, text : String, onSelect : Function ) : void
+			{
+				var item : ContextMenuItem = new ContextMenuItem( text );
+				item.addEventListener( ContextMenuEvent.MENU_ITEM_SELECT, onSelect );
+				menu.customItems.push( item );
+			}
+
+			private function OnDataChange( event : Event ) : void
+			{
+				imageUrl = Url( data as File );
+			}
+
+			private function Preview( event : Event ) : void
+			{
+				if ( image.loader.error == null ) dispatchEvent( new ItemEvent( "Preview", data ) );
+				else Alert.show( "There was an error retrieving this image: " + image.loader.error );
+			}
+
+			private function RotateC( event : Event ) : void
+			{
+				dispatchEvent( new ItemEvent( "Rotate", data, 90 ) );
+			}
+
+			private function RotateAC( event : Event ) : void
+			{
+				dispatchEvent( new ItemEvent( "Rotate", data, -90 ) );
+			}
+
+			[Bindable(event="propertyChange")] private function Url( file : File ) : String
+			{
+				return ( file != null ) ? file.url : null;
+			}
+
+			[Bindable(event="propertyChange")] private function Name( file : File ) : String
+			{
+				return ( file != null ) ? file.name : null;
+			}
+		]]>
+	</mx:Script>
+
+	<n2f:ThumbnailView id="image" width="100%" height="100%" toolTip="{Name(data as File) + '\nDouble-click for preview'}"
+		maxImageWidth="240" maxImageHeight="160"
+		url="{imageUrl}" thumbnail="{image.height &lt;= 200}">
+	</n2f:ThumbnailView>
+
+</mx:Box>

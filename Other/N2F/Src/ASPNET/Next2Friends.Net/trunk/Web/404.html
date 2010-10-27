@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Next2Friends</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link href="styleB.css" rel="stylesheet" type="text/css" />
+</head>
+<body >
+<div id="page">
+<form name="aspnetForm" method="post" action="Settings.aspx" id="aspnetForm" enctype="multipart/form-data">
+	<div>
+		<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+		<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+		<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJODM3MjQ3NjMyD2QWAmYPZBYCZg8WAh4HZW5jdHlwZQUTbXVsdGlwYXJ0L2Zvcm0tZGF0YWQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgYFJ2N0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkY2hiTmV3TWVzc2FnZQUqY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRjaGJOZXdBQUZDb21tZW50BS1jdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJGNoYk5ld0ZyaWVuZFJlcXVlc3QFLGN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkY2hiU3Vic2NyaWJlckV2ZW50BS5jdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJGNoYk5ld1Byb2ZpbGVDb21tZW50BSdjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJGNoYk5ld3NMZXR0ZXKoXncsBhRKChy7TJRAH81iYeWoIA==" />
+	</div>
+
+	<script type="text/javascript">
+	//<![CDATA[
+	var theForm = document.forms['aspnetForm'];
+	if (!theForm) {
+	theForm = document.aspnetForm;
+	}
+	function __doPostBack(eventTarget, eventArgument) {
+	if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+	theForm.__EVENTTARGET.value = eventTarget;
+	theForm.__EVENTARGUMENT.value = eventArgument;
+	theForm.submit();
+	}
+	}
+	//]]>
+	</script>
+
+
+
+	<!--/header start -->
+	<div id="header">
+		<a href="http://www.next2friends.com">
+			<img src="images/logo.gif" alt="Next2Friends" id="logo" />
+		</a>
+		<ul id="nav">
+			<li><a href="index.aspx" ><span>Home</span></a></li>
+			<li><a href="FriendRequest.aspx?lf=1" ><span>Friends</span></a></li>
+			<li><a href="Community.aspx" ><span>Community</span></a></li>
+			<li><a href="Video.aspx" ><span>Videos</span></a></li>
+			<li><a href="Photo.aspx" ><span>Photos</span></a></li>
+			<li><a href="AskAFriend.aspx" ><span>Ask-a-Friend</span></a></li>
+		</ul>
+		<p id="header_nav">
+			<a href='inbox.aspx'>Comosicus (0)</a> | 
+			<a id="ctl00_btnLogout" href="javascript:__doPostBack('ctl00$btnLogout','')">Logout </a> | 
+			<a href="Settings.aspx">Settings</a> |
+			<a href="help.aspx">Help</a>
+		</p>
+		<div id="searchform">
+			<input name="ctl00$txtSearchMain" type="text" id="ctl00_txtSearchMain" class="form_txt" style="width:150px;" />
+			in
+			<select name="ctl00$drpSearchMain" id="ctl00_drpSearchMain" class="form_txt">
+				<option value="Videos">Videos</option>
+				<option value="Photos">Photos</option>
+				<option value="People">People</option>
+				<option value="NSpot">NSpot</option>
+			</select>
+			<input type="submit" name="ctl00$btnSearch" value="Search" id="ctl00_btnSearch" class="form_btn" />
+		</div>
+		<p id="upload">
+			Upload: <a href="Upload.aspx" title="Video">
+			<img src="images/icon-video.gif" alt="Video" class="video" /></a> <a href="Upload.aspx" title="Photo">
+			<img src="images/icon-image.gif" alt="Image" class="image" /></a>
+		</p>
+	</div>
+	<!-- header end -->
+
+	<!-- middle start -->
+	<div id="middle" class="clearfix">
+		<!--subnav start -->
+		<ul id="subnav" class="clearfix">
+		</ul>
+		<!-- subnav end -->
+
+		<!-- page start -->
+		<div class="page clearfix">
+			<!-- signup col start -->
+			<div class="signup_col">
+				<h2>"Hey, where's my page?"</h2>
+				<p>
+					It looks like something is missing here, so that you ended on the dreaded 404 page. This could
+					be because of a dead link, of a file that was moved or because of some other reason that
+					neither you nor us have any control over. 
+				</p>
+				<h3>"Oh, no! What shoud I do now?"</h3>
+				<p>
+					Your best bet, at the moment, would be to use our search engine (on the top right side of the page).
+					However, if by any freak occurence, you end up on the same 404 page, don't search again or you'll be
+					caught in an endless loop.
+				</p>
+				<p>
+					You could also start with our <a href="index.aspx">homepage</a>. Here you'll find all the latest
+					and hottest stuff from our website. If you want more specific content, you can check the main areas:
+					<a href="FriendRequest.aspx?lf=1" >Friends</a>, <a href="Community.aspx" >Community</a>, 
+					<a href="Video.aspx" >Videos</a>, <a href="Photo.aspx" >Photos</a>, or even 
+					<a href="AskAFriend.aspx" >Ask-a-Friend</a>.
+				</p>
+				<h3>Report a wrong link</h3>
+				<p>
+					If you truly believe a page should be here, for example, you followed a link by one of the staff members 
+					who must have made a typo, please report the problem as soon as possible. 
+					The <a href="#">contact</a> page is the perfect place to do such a thing. We appreciate the help
+					our users are providing.
+				</p>
+			</div>
+		<!-- page end -->
+		</div>
+	</div>
+
+	<!-- footer start -->
+	<div id="footer">
+		<p id="credits">
+			Copyright Next2Friends 2007 | Footer Menu | Privacy Policy
+		</p>
+	</div>
+	<!-- footer end -->
+
+	<div>
+		<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWDwK1gd4gAr6dhroKArOyoMwEAoaejs8JAtuBtekOAtiBocQNAo/S8e4GAv2f4I4CAtCP6q4CAsSukOsMAu3NkekDAqiRwf0FAqHQ8dUOAsjoncADAqiRot8KzApwVansfZ4vzmWQ5SfczXKD+A8=" />
+	</div>
+</form>
+</div>
+<!--page end -->
+</body>
+</html>

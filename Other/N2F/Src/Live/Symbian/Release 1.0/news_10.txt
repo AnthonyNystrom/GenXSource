@@ -1,0 +1,10 @@
+1.0	version:
+
+. Changed Broadcast… menu to Broadcast
+. Moved Quality setting on main menu with radio button menu ( I went crazy for do it )
+. N2F default user removed. Now is empty. A message is showed if an user start broadcast and nickname is empty
+. Removed GetInfo cmd
+. replaced icon ban with string text quality
+. Removed Adjust video now are temporany setting. When exit from app lose changes
+. Changes about video buffering system. When di buffering is over 180KB the send function split buffer to send.
+. fixed bug exit app on N73,N75,N80... it was a bad path of background bitmap

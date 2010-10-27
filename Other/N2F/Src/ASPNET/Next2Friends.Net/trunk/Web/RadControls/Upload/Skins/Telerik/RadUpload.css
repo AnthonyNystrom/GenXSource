@@ -1,0 +1,113 @@
+/* r.a.d.upload Telerik skin */
+
+.RadUploadTable
+{
+	font: normal 11px Arial, Verdana, Sans-serif;
+	color: #605e4e;
+	background: #f8f8f8;
+	border: 1px solid #f0f0f0;
+	border-right: 2px solid #e4e4e4;
+	border-bottom: 2px solid #e4e4e4;
+}
+
+.RadUploadTable td
+{
+	padding: 4px 0px;
+}
+
+.RadUploadButtonArea
+{
+	/**/
+}
+
+.RadUploadButton,
+.radUploadButtonMedium
+{
+	background: transparent url('Img/button.gif') repeat-x;
+	border: 0px;
+	border-left: 1px solid #dadada;
+	border-right: 1px solid #dadada;
+	height: 22px;
+	width: 114px;
+	font: 11px Arial, Verdana, Sans-serif;
+	color: #7c7c7c;
+}
+
+.RadUploadButtonDisabled
+{
+	background: transparent url('Img/button.gif') repeat-x;
+	border: 0px;
+	border-left: 1px solid #dadada;
+	border-right: 1px solid #dadada;
+	height: 22px;
+	width: 114px;
+	font: 11px Arial, Verdana, Sans-serif;
+	color: #7c7c7c;
+	filter:alpha(opacity=30);
+	-moz-opacity:0.5;
+	opacity: 0.5;
+}
+
+.RadUploadFileSelector
+{
+	/* checkbox */
+}
+
+.RadUploadInputField
+{
+	width: 150px;
+	border: solid 1px #dadada;
+	border-right: 0px;
+	vertical-align: top;
+	height: 18px;
+}
+
+input.RealFileInput
+{
+	position: relative;
+	-moz-opacity: 0;
+	filter: alpha(opacity: 0);
+	opacity: 0;
+	z-index: 2; 
+}
+
+.RadUploadSelectButton
+{
+	border: 0px;
+	border-right: 1px solid #dadada;
+	background: transparent url('Img/button.gif') repeat-x;
+	font: 11px Arial, Verdana, Sans-serif;
+	color: #7c7c7c;
+	height: 22px;
+	width: 57px;
+}
+
+.RadUploadRemoveButton
+{
+	border: 0px;
+	border-right: 1px solid #dadada;
+	border-left: 1px solid #dadada;
+	background: transparent url('Img/button.gif');
+	font: 11px Arial, Verdana, Sans-serif;
+	color: #7c7c7c;
+	height: 22px;
+	width: 57px;
+}
+
+.RadUploadClearButton
+{
+	border: 0px;
+	border-right: 1px solid #dadada;
+	border-left: 1px solid #dadada;
+	background: transparent url('Img/button.gif');
+	font: 11px Arial, Verdana, Sans-serif;
+	color: #7c7c7c;
+	height: 22px;
+	width: 66px;
+	float: right;
+}
+
+input.NoSkinnedFileUnput
+{
+	border: solid 1x #1f1f1f;
+}

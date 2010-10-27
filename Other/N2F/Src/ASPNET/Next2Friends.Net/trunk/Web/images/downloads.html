@@ -1,0 +1,389 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Next2Friends</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link href="styleB.css" rel="stylesheet" type="text/css" />
+</head>
+<body >
+<div id="page">
+<form name="aspnetForm" method="post" action="Settings.aspx" id="aspnetForm" enctype="multipart/form-data">
+	<div>
+		<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+		<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+		<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJODM3MjQ3NjMyD2QWAmYPZBYCZg8WAh4HZW5jdHlwZQUTbXVsdGlwYXJ0L2Zvcm0tZGF0YWQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgYFJ2N0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkY2hiTmV3TWVzc2FnZQUqY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRjaGJOZXdBQUZDb21tZW50BS1jdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJGNoYk5ld0ZyaWVuZFJlcXVlc3QFLGN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkY2hiU3Vic2NyaWJlckV2ZW50BS5jdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJGNoYk5ld1Byb2ZpbGVDb21tZW50BSdjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJGNoYk5ld3NMZXR0ZXKoXncsBhRKChy7TJRAH81iYeWoIA==" />
+	</div>
+
+	<script type="text/javascript">
+	//<![CDATA[
+	var theForm = document.forms['aspnetForm'];
+	if (!theForm) {
+	theForm = document.aspnetForm;
+	}
+	function __doPostBack(eventTarget, eventArgument) {
+	if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+	theForm.__EVENTTARGET.value = eventTarget;
+	theForm.__EVENTARGUMENT.value = eventArgument;
+	theForm.submit();
+	}
+	}
+	//]]>
+	</script>
+
+
+
+	<script type="text/javascript" src="/N2FWeb/ajaxpro/prototype.ashx"></script>
+	<script type="text/javascript" src="/N2FWeb/ajaxpro/core.ashx"></script>
+	
+	<script type="text/javascript" src="/N2FWeb/ajaxpro/ms.ashx"></script>
+	<script type="text/javascript" src="/N2FWeb/ajaxpro/converter.ashx"></script>
+	<script type="text/javascript" src="/N2FWeb/ajaxpro/Main,App_Web_wuse3hcc.ashx"></script>
+
+	<!--/header start -->
+	<div id="header">
+		<a href="http://www.next2friends.com">
+			<img src="images/logo.gif" alt="Next2Friends" id="logo" />
+		</a>
+		<ul id="nav">
+			<li><a href="index.aspx" ><span>Home</span></a></li>
+			<li><a href="FriendRequest.aspx?lf=1" ><span>Friends</span></a></li>
+			<li><a href="Community.aspx" ><span>Community</span></a></li>
+			<li><a href="Video.aspx" ><span>Videos</span></a></li>
+			<li><a href="Photo.aspx" ><span>Photos</span></a></li>
+			<li><a href="AskAFriend.aspx" ><span>Ask-a-Friend</span></a></li>
+		</ul>
+		<p id="header_nav">
+			<a href='inbox.aspx'>Comosicus (0)</a> | 
+			<a id="ctl00_btnLogout" href="javascript:__doPostBack('ctl00$btnLogout','')">Logout </a> | 
+			<a href="Settings.aspx">Settings</a> |
+			<a href="help.aspx">Help</a>
+		</p>
+		<div id="searchform">
+			<input name="ctl00$txtSearchMain" type="text" id="ctl00_txtSearchMain" class="form_txt" style="width:150px;" />
+			in
+			<select name="ctl00$drpSearchMain" id="ctl00_drpSearchMain" class="form_txt">
+				<option value="Videos">Videos</option>
+				<option value="Photos">Photos</option>
+				<option value="People">People</option>
+				<option value="NSpot">NSpot</option>
+			</select>
+			<input type="submit" name="ctl00$btnSearch" value="Search" id="ctl00_btnSearch" class="form_btn" />
+		</div>
+		<p id="upload">
+			Upload: <a href="Upload.aspx" title="Video">
+			<img src="images/icon-video.gif" alt="Video" class="video" /></a> <a href="Upload.aspx" title="Photo">
+			<img src="images/icon-image.gif" alt="Image" class="image" /></a>
+		</p>
+	</div>
+	<!-- header end -->
+
+	<!-- middle start -->
+	<div id="middle" class="clearfix">
+		<!--subnav start -->
+		<ul id="subnav" class="clearfix">
+		</ul>
+		<!-- subnav end -->
+
+		<!-- page start -->
+		<div class="page clearfix">
+			<!-- signup col start -->
+			<h2>Downloads</h2>
+			<p>
+				Find out if your phone is compatible with our service and what steps you must 
+				take to be Next2Friends. While our video streaming application works best on S60
+				3rd Edition compatible phones, we have solutions avaliable for any JAVA enabled phone.
+			</p>
+			<div class="signup_col">
+				<h3>S60 3rd Edition Phones</h3>
+				
+				<div class="profile_box">
+					<p>
+						Use these URLs to download the video streaming application to your cell phone:
+					</p>
+					<p class="codeText">
+						http://69.21.114.98/n2fweb/index.aspx
+						http://69.21.114.98/n2fweb/index.aspx
+					</p>
+					<p>
+						Use the following link to download the application to your desktop
+					</p>
+					<p class="codeText">
+						<a href="#">http://69.21.114.98/n2fweb/index.aspx</a>
+					</p>
+					
+				</div>
+				
+				<div class="phoneThumbnailBox">
+					<img alt="LG KS10" src="images/phones/lg-ks10.jpg" width="90" height="90" class="phoneThumbnail" />	
+					<h4>LG KS10</h4>
+				</div>
+				
+				<div class="phoneThumbnailBox">
+					<img alt="Nokia N82" src="images/phones/nokia-n82.jpg" width="90" height="90" class="phoneThumbnail" />	
+					<h4>Nokia N82</h4>
+				</div>
+				
+				<div class="phoneThumbnailBox">
+					<img alt="Nokia E51" src="images/phones/nokia-e51.jpg" width="90" height="90" class="phoneThumbnail" />	
+					<h4>Nokia E51</h4>
+				</div>
+				
+				<div class="phoneThumbnailBox">
+					<img alt="Nokia N95 8GB" src="images/phones/nokia-n95-8gb.jpg" width="90" height="90" class="phoneThumbnail" />	
+					<h4>Nokia N95 8GB</h4>
+				</div>
+				
+				<div class="phoneThumbnailBox">
+					<img alt="Nokia N81" src="images/phones/nokia-n81.jpg" width="90" height="90" class="phoneThumbnail" />	
+					<h4>Nokia N81</h4>
+				</div>
+				
+				<div class="phoneThumbnailBox">
+					<img alt="Nokia N81 8GB" src="images/phones/nokia-n81-8gb.jpg" width="90" height="90" class="phoneThumbnail" />	
+					<h4>Nokia N81 8GB</h4>
+				</div>
+				
+				<div class="phoneThumbnailBox">
+					<img alt="Nokia 6121" src="images/phones/nokia-6121.jpg" width="90" height="90" class="phoneThumbnail" />	
+					<h4>Nokia 6121</h4>
+				</div>
+				
+				<div class="phoneThumbnailBox">
+					<img alt="Nokia 6120" src="images/phones/nokia-6120.jpg" width="90" height="90" class="phoneThumbnail" />	
+					<h4>Nokia 6120</h4>
+				</div>
+				
+				<div class="phoneThumbnailBox">
+					<img alt="Nokia 5700" src="images/phones/nokia-5700.jpg" width="90" height="90" class="phoneThumbnail" />	
+					<h4>Nokia 5700</h4>
+				</div>
+				
+				<div class="phoneThumbnailBox">
+					<img alt="Nokia N77" src="images/phones/nokia-n77.jpg" width="90" height="90" class="phoneThumbnail" />	
+					<h4>Nokia N77</h4>
+				</div>
+				
+				<div class="phoneThumbnailBox">
+					<img alt="Nokia E90" src="images/phones/nokia-e90.jpg" width="90" height="90" class="phoneThumbnail" />	
+					<h4>Nokia E90</h4>
+				</div>
+				
+				<div class="phoneThumbnailBox">
+					<img alt="Nokia E61i" src="images/phones/nokia-e61i.jpg" width="90" height="90" class="phoneThumbnail" />	
+					<h4>Nokia E61i</h4>
+				</div>
+				
+				<div class="phoneThumbnailBox">
+					<img alt="Nokia E65" src="images/phones/nokia-e65.jpg" width="90" height="90" class="phoneThumbnail" />	
+					<h4>Nokia E65</h4>
+				</div>
+				
+				<div class="phoneThumbnailBox">
+					<img alt="Nokia 6110 Navigator" src="images/phones/nokia-6110-navigator.jpg" width="90" height="90" class="phoneThumbnail" />	
+					<h4>Nokia 6110 Navigator</h4>
+				</div>
+				
+				<div class="phoneThumbnailBox">
+					<img alt="Nokia N93i" src="images/phones/nokia-n93i.jpg" width="90" height="90" class="phoneThumbnail" />	
+					<h4>Nokia N93i</h4>
+				</div>
+				
+				<div class="phoneThumbnailBox">
+					<img alt="Nokia N76" src="images/phones/nokia-n76.jpg" width="90" height="90" class="phoneThumbnail" />	
+					<h4>Nokia N76</h4>
+				</div>
+				
+				<div class="phoneThumbnailBox">
+					<img alt="Nokia 6290" src="images/phones/nokia-6290.jpg" width="90" height="90" class="phoneThumbnail" />	
+					<h4>Nokia 6290</h4>
+				</div>
+				
+				<div class="phoneThumbnailBox">
+					<img alt="Nokia N75" src="images/phones/nokia-n75.jpg" width="90" height="90" class="phoneThumbnail" />	
+					<h4>Nokia N75</h4>
+				</div>
+				
+				<div class="phoneThumbnailBox">
+					<img alt="Nokia N95" src="images/phones/nokia-n95.jpg" width="90" height="90" class="phoneThumbnail" />	
+					<h4>Nokia N95</h4>
+				</div>
+				
+				<div class="phoneThumbnailBox">
+					<img alt="Nokia E62" src="images/phones/nokia-e62.jpg" width="90" height="90" class="phoneThumbnail" />	
+					<h4>Nokia E62</h4>
+				</div>
+				
+				<div class="phoneThumbnailBox">
+					<img alt="Nokia E50" src="images/phones/nokia-e50.jpg" width="90" height="90" class="phoneThumbnail" />	
+					<h4>Nokia E50</h4>
+				</div>
+				
+				<div class="phoneThumbnailBox">
+					<img alt="Nokia 5500 Sport" src="images/phones/nokia-5500-sport.jpg" width="90" height="90" class="phoneThumbnail" />	
+					<h4>Nokia 5500 Sport</h4>
+				</div>
+				
+				<div class="phoneThumbnailBox">
+					<img alt="Nokia N73" src="images/phones/nokia-n73.jpg" width="90" height="90" class="phoneThumbnail" />	
+					<h4>Nokia N73</h4>
+				</div>
+				
+				<div class="phoneThumbnailBox">
+					<img alt="Nokia N93" src="images/phones/nokia-n93.jpg" width="90" height="90" class="phoneThumbnail" />	
+					<h4>Nokia N93</h4>
+				</div>
+				
+				<div class="phoneThumbnailBox">
+					<img alt="Nokia N92" src="images/phones/nokia-n92.jpg" width="90" height="90" class="phoneThumbnail" />	
+					<h4>Nokia N92</h4>
+				</div>
+				
+				<div class="phoneThumbnailBox">
+					<img alt="Nokia N71" src="images/phones/nokia-n71.jpg" width="90" height="90" class="phoneThumbnail" />	
+					<h4>Nokia N71</h4>
+				</div>
+				
+				<div class="phoneThumbnailBox">
+					<img alt="Nokia N80" src="images/phones/nokia-n80.jpg" width="90" height="90" class="phoneThumbnail" />	
+					<h4>Nokia N80</h4>
+				</div>
+				
+				<div class="phoneThumbnailBox">
+					<img alt="Nokia E70" src="images/phones/nokia-e70.jpg" width="90" height="90" class="phoneThumbnail" />	
+					<h4>Nokia E70</h4>
+				</div>
+				
+				<div class="phoneThumbnailBox">
+					<img alt="Nokia E61" src="images/phones/nokia-e61.jpg" width="90" height="90" class="phoneThumbnail" />	
+					<h4>Nokia E61</h4>
+				</div>
+				
+				<div class="phoneThumbnailBox">
+					<img alt="Nokia E60" src="images/phones/nokia-e60.jpg" width="90" height="90" class="phoneThumbnail" />	
+					<h4>Nokia E60</h4>
+				</div>
+				
+				<div class="phoneThumbnailBox">
+					<img alt="Nokia 3250" src="images/phones/nokia-3250.jpg" width="90" height="90" class="phoneThumbnail" />	
+					<h4>Nokia 3250</h4>
+				</div>
+				
+				<div class="phoneThumbnailBox">
+					<img alt="Nokia N91" src="images/phones/nokia-n91.jpg" width="90" height="90" class="phoneThumbnail" />	
+					<h4>Nokia N91</h4>
+				</div>
+				
+				<div class="phoneThumbnailBox">
+					<img alt="Samsung SGH-i560" src="images/phones/samsung-sgh-i560.jpg" width="90" height="90" class="phoneThumbnail" />	
+					<h4>Samsung SGH-i560</h4>
+				</div>
+				
+				<div class="phoneThumbnailBox">
+					<img alt="Samsung SGH-i550" src="images/phones/samsung-sgh-i550.jpg" width="90" height="90" class="phoneThumbnail" />	
+					<h4>Samsung SGH-i550</h4>
+				</div>
+				
+				<div class="phoneThumbnailBox">
+					<img alt="Samsung SGH-i450" src="images/phones/samsung-sgh-i450.jpg" width="90" height="90" class="phoneThumbnail" />	
+					<h4>Samsung SGH-i450</h4>
+				</div>
+				
+				<div class="phoneThumbnailBox">
+					<img alt="Samsung SGH-i400" src="images/phones/samsung-sgh-i400.jpg" width="90" height="90" class="phoneThumbnail" />	
+					<h4>Samsung SGH-i400</h4>
+				</div>
+				
+				<div class="phoneThumbnailBox">
+					<img alt="Samsung SGH-i520" src="images/phones/samsung-sgh-i520.jpg" width="90" height="90" class="phoneThumbnail" />	
+					<h4>Samsung SGH-i520</h4>
+				</div>
+				
+				
+			</div>
+			<!-- signup col end -->
+			<div class="login_col">
+				<h3>Java Enabled Phones</h3>
+				<div class="profile_box">
+					<p>
+						You can be Next2Friends using any phone with Java support. Here is the way to do it:
+					</p>
+					<p>
+						Use the following URL to download the application to your phone:
+					</p>
+					<p class="codeText">
+						http://69.21.114.98/n2fweb/index.aspx
+					</p>
+					<p>
+						Use the following link to download the application to your desktop
+					</p>
+					<p class="codeText">
+						<a href="#">http://69.21.114.98/n2fweb/index.aspx</a>
+					</p>
+				</div>
+				<h3>Network Requirements</h3>
+				<div class="profile_box">
+					<h4>S60 3rd Edition phones</h4>
+					<ul class="bulleted">
+						<li>
+							Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+						</li>
+						<li>
+							Proin molestie, metus non fringilla pellentesque, nunc quam 
+							volutpat neque, et vulputate dolor nisi ut est.
+						</li>
+						<li>
+							Ut elit nibh, luctus eu, viverra ut, luctus a, magna.
+						</li>
+						<li>
+							Pellentesque metus tortor, suscipit sit amet, tincidunt ac, tempor non, est.
+						</li>
+						<li>
+							Mauris nibh justo, aliquet et, consequat ac, tempus id, ligula.
+						</li>
+					</ul>
+				</div>
+				<div class="profile_box">	
+					<h4>JAVA-Enabled phones</h4>
+					<ul class="bulleted">
+						<li>
+							Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+						</li>
+						<li>
+							Proin molestie, metus non fringilla pellentesque, nunc quam 
+							volutpat neque, et vulputate dolor nisi ut est.
+						</li>
+						<li>
+							Ut elit nibh, luctus eu, viverra ut, luctus a, magna.
+						</li>
+						<li>
+							Pellentesque metus tortor, suscipit sit amet, tincidunt ac, tempor non, est.
+						</li>
+						<li>
+							Mauris nibh justo, aliquet et, consequat ac, tempus id, ligula.
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="clearfix bottomSpace"></div>
+			<!-- login col start -->
+		<!-- page end -->
+		</div>
+	</div>
+
+	<!-- footer start -->
+	<div id="footer">
+		<p id="credits">
+			Copyright Next2Friends 2007 | Footer Menu | Privacy Policy
+		</p>
+	</div>
+	<!-- footer end -->
+
+	<div>
+		<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWDwK1gd4gAr6dhroKArOyoMwEAoaejs8JAtuBtekOAtiBocQNAo/S8e4GAv2f4I4CAtCP6q4CAsSukOsMAu3NkekDAqiRwf0FAqHQ8dUOAsjoncADAqiRot8KzApwVansfZ4vzmWQ5SfczXKD+A8=" />
+	</div>
+</form>
+</div>
+<!--page end -->
+</body>
+</html>

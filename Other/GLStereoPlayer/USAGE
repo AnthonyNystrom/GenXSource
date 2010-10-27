@@ -1,0 +1,64 @@
+GLStereoPlayer.exe - Standalone viewer program.
+
+    Launch:
+
+        Double click GLStereoPlayer.exe icon to launch the program.
+        Drop a movie or image file on the icon top open the file as a left source.
+        Ctrl + drop a movie or image file on the icon top open the file as a right source.
+        Drop a stereo setting file (.gsp) to open files and restore the settings.
+        Drop a gsp file name list as a simple text file to open a sequencial slide show.
+
+    Basic usage:
+
+        Select [File]->[Open Left...] to open a movie or image file.
+        Select [File]->[Open Right...] to open another file if you needed.
+        If you load a movie file, use a Play Control at the bottom side of the window.
+        (it's hidden by default. Move the mouse to the bottom side to show it)
+        Select [View]->[Format] to proper source stereo format, and select
+        [View]->[Stero Type] to render in a stereo rendering type you like.
+        When you want to exit the program, select [File]->[Exit].
+        If you save the stereo setting file (.gsp), you can restore all the setting in next time.
+
+    Mouse operations:
+
+        Left button:            Operate the Play Control.
+        Middle button drag:     Pan the view area.
+        Middle wheel drag:      Zoom up and down the view area.
+        Right button:           Show the context menu.
+
+    Keyboard short-cuts:
+
+        [Ctrl+L]        Open a left source file.
+        [Ctrl+R]        Open a right source file.
+        [Ctrl+O]        Open a stereo setting file.
+        [Ctrl+S]        Save the current settings as a stereo setting file.
+        [Alt+F4]        Exit the program.
+
+        [S]             Toggle show and hide the statistics information.
+        [P]             Toggle showing mode of the Play Control
+        [F]             Change the stereo source format in cycles.
+        [T]             Change the stereo rendering type in cycles.
+        [W]             Swap left and right side.
+        [A]             Toggle keep and free Aspect mode.
+        [+]             Increase the stereo view offset.
+        [-]             Decrease the stereo view offset.
+        [*]             Reset the stereo view offset.
+        [Ctrl+Arrow]    Pan the view area.
+        [Ctrl+PageUp]   Zoom up the view area.
+        [Ctrl+PageDown] Zoom down the view area.
+        [Ctrl+Home]     Reset pan and zoom of the view area.
+        [F9]            Resize the window to half size of the source.
+        [F10]           Resize the window to original size of the source.
+        [F11]           Resize the window to double size of the source.
+        [Alt+Enter]     Toggle full screen and window mode.
+
+        [Ctrl+Space]    Toggle Play and pause the movie.
+        [.]             Stop the movie (and rewind).
+        [Ctrl+F]        Toggle ForceSync (synchronizing anytime play and pause the movie) mode.
+        [L]             Toggle loop mode.
+
+        [Shift+Home]     Display the first page of the slide show.
+        [Shift+End]      Display the last page of the slide show.
+        [Shift+PageUp]   Display the previous page of the slide show.
+        [Shift+PageDown] Display the next page of the slide show.
+        [Ctrl+T]         Toggle fade transition.

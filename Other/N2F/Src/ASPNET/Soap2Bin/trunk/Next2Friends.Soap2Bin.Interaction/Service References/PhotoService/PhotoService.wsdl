@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.next2friends.com/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.next2friends.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Provides functionality to retrieve photos.</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.next2friends.com/">
+      <s:element name="GetPhotosForCollection">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="photoCollectionID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPhotosForCollectionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPhotosForCollectionResult" type="tns:ArrayOfWebPhoto" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfWebPhoto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="WebPhoto" nillable="true" type="tns:WebPhoto" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="WebPhoto">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedDT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetPhotoThumbnail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="photoID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPhotoThumbnailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPhotoThumbnailResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ArrayOfWebPhoto" nillable="true" type="tns:ArrayOfWebPhoto" />
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetPhotosForCollectionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPhotosForCollection" />
+  </wsdl:message>
+  <wsdl:message name="GetPhotosForCollectionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPhotosForCollectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPhotoThumbnailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPhotoThumbnail" />
+  </wsdl:message>
+  <wsdl:message name="GetPhotoThumbnailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPhotoThumbnailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPhotosForCollectionHttpGetIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="photoCollectionID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPhotosForCollectionHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfWebPhoto" />
+  </wsdl:message>
+  <wsdl:message name="GetPhotoThumbnailHttpGetIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="photoID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPhotoThumbnailHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPhotosForCollectionHttpPostIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="photoCollectionID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPhotosForCollectionHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfWebPhoto" />
+  </wsdl:message>
+  <wsdl:message name="GetPhotoThumbnailHttpPostIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="photoID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPhotoThumbnailHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="PhotoServiceSoap">
+    <wsdl:operation name="GetPhotosForCollection">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns top 10 photos for the collection with the specified &lt;tt&gt;photoCollectionID&lt;/tt&gt;.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br /&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br /&gt;&lt;tt&gt;BadCredentialsException&lt;/tt&gt; - If the member with the specified credentials does not exist.&lt;/p&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetPhotosForCollectionSoapIn" />
+      <wsdl:output message="tns:GetPhotosForCollectionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPhotoThumbnail">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns a Base64 encoded string representation of the thumbnail for the photo with the specified &lt;tt&gt;photoID&lt;/tt&gt;.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Parameters:&lt;/b&gt;&lt;br /&gt;&lt;tt&gt;nickname&lt;/tt&gt;&lt;br /&gt;&lt;tt&gt;password&lt;/tt&gt;&lt;br /&gt;&lt;tt&gt;photoID&lt;/tt&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br /&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br /&gt;&lt;tt&gt;BadCredentialsException&lt;/tt&gt; - If the member with the specified credentials does not exist.&lt;br /&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the photo with the specified &lt;tt&gt;photoID&lt;/tt&gt; does not exist.&lt;/p&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetPhotoThumbnailSoapIn" />
+      <wsdl:output message="tns:GetPhotoThumbnailSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="PhotoServiceHttpGet">
+    <wsdl:operation name="GetPhotosForCollection">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns top 10 photos for the collection with the specified &lt;tt&gt;photoCollectionID&lt;/tt&gt;.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br /&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br /&gt;&lt;tt&gt;BadCredentialsException&lt;/tt&gt; - If the member with the specified credentials does not exist.&lt;/p&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetPhotosForCollectionHttpGetIn" />
+      <wsdl:output message="tns:GetPhotosForCollectionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPhotoThumbnail">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns a Base64 encoded string representation of the thumbnail for the photo with the specified &lt;tt&gt;photoID&lt;/tt&gt;.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Parameters:&lt;/b&gt;&lt;br /&gt;&lt;tt&gt;nickname&lt;/tt&gt;&lt;br /&gt;&lt;tt&gt;password&lt;/tt&gt;&lt;br /&gt;&lt;tt&gt;photoID&lt;/tt&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br /&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br /&gt;&lt;tt&gt;BadCredentialsException&lt;/tt&gt; - If the member with the specified credentials does not exist.&lt;br /&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the photo with the specified &lt;tt&gt;photoID&lt;/tt&gt; does not exist.&lt;/p&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetPhotoThumbnailHttpGetIn" />
+      <wsdl:output message="tns:GetPhotoThumbnailHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="PhotoServiceHttpPost">
+    <wsdl:operation name="GetPhotosForCollection">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns top 10 photos for the collection with the specified &lt;tt&gt;photoCollectionID&lt;/tt&gt;.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br /&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br /&gt;&lt;tt&gt;BadCredentialsException&lt;/tt&gt; - If the member with the specified credentials does not exist.&lt;/p&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetPhotosForCollectionHttpPostIn" />
+      <wsdl:output message="tns:GetPhotosForCollectionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPhotoThumbnail">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns a Base64 encoded string representation of the thumbnail for the photo with the specified &lt;tt&gt;photoID&lt;/tt&gt;.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Parameters:&lt;/b&gt;&lt;br /&gt;&lt;tt&gt;nickname&lt;/tt&gt;&lt;br /&gt;&lt;tt&gt;password&lt;/tt&gt;&lt;br /&gt;&lt;tt&gt;photoID&lt;/tt&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br /&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br /&gt;&lt;tt&gt;BadCredentialsException&lt;/tt&gt; - If the member with the specified credentials does not exist.&lt;br /&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the photo with the specified &lt;tt&gt;photoID&lt;/tt&gt; does not exist.&lt;/p&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetPhotoThumbnailHttpPostIn" />
+      <wsdl:output message="tns:GetPhotoThumbnailHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PhotoServiceSoap" type="tns:PhotoServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPhotosForCollection">
+      <soap:operation soapAction="http://www.next2friends.com/GetPhotosForCollection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhotoThumbnail">
+      <soap:operation soapAction="http://www.next2friends.com/GetPhotoThumbnail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PhotoServiceSoap12" type="tns:PhotoServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPhotosForCollection">
+      <soap12:operation soapAction="http://www.next2friends.com/GetPhotosForCollection" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhotoThumbnail">
+      <soap12:operation soapAction="http://www.next2friends.com/GetPhotoThumbnail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PhotoServiceHttpGet" type="tns:PhotoServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetPhotosForCollection">
+      <http:operation location="/GetPhotosForCollection" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhotoThumbnail">
+      <http:operation location="/GetPhotoThumbnail" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PhotoServiceHttpPost" type="tns:PhotoServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetPhotosForCollection">
+      <http:operation location="/GetPhotosForCollection" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhotoThumbnail">
+      <http:operation location="/GetPhotoThumbnail" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PhotoService">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Provides functionality to retrieve photos.</wsdl:documentation>
+    <wsdl:port name="PhotoServiceSoap" binding="tns:PhotoServiceSoap">
+      <soap:address location="http://services.next2friends.com/n2fwebservices/PhotoService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PhotoServiceSoap12" binding="tns:PhotoServiceSoap12">
+      <soap12:address location="http://services.next2friends.com/n2fwebservices/PhotoService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PhotoServiceHttpGet" binding="tns:PhotoServiceHttpGet">
+      <http:address location="http://services.next2friends.com/n2fwebservices/PhotoService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PhotoServiceHttpPost" binding="tns:PhotoServiceHttpPost">
+      <http:address location="http://services.next2friends.com/n2fwebservices/PhotoService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

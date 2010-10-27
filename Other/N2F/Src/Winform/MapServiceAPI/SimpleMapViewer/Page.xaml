@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="SimpleMapViewer.Page"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="640" Height="480">
+    <Grid x:Name="LayoutRoot" Background="Black">
+        <Rectangle x:Name="MapBox" Margin="100,0,0,0" Width="540" Height="480" Fill="White"/>
+        
+        <Button x:Name="ButtonAddPin" Width="60" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,50,0,0" Content="Add Pin" Click="ButtonAddPin_Click"/>
+        <Button x:Name="ButtonRedraw" Width="60" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,80,0,0" Content="Redraw" Click="ButtonRedraw_Click"/>
+        <RadioButton HorizontalAlignment="Left" VerticalAlignment="Top" Content="Street" x:Name="RadioButtonStreets" Margin="20,110,0,0" GroupName="mapStyle" Foreground="White" Checked="RadioButtonStreets_Checked"/>
+        <RadioButton HorizontalAlignment="Left" Margin="20,130,0,0" x:Name="RadioButtonHybrid" VerticalAlignment="Top" Content="Hybrid" GroupName="mapStyle" Foreground="White" Checked="RadioButtonHybrid_Checked"/>
+        <RadioButton HorizontalAlignment="Left" Margin="20,150,0,0" x:Name="RadioButtonSatellight" VerticalAlignment="Top" Content="Satellight" GroupName="mapStyle" Foreground="White" Checked="RadioButtonSatellight_Checked"/>
+        <TextBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,180,0,0" Width="70" Height="20" Background="Black" Foreground="White" Text="Zoom"/>
+        <TextBox HorizontalAlignment="Left" VerticalAlignment="Top" x:Name="TextBoxZoom" Margin="60,180,0,0" Width="30" Height="20"/>
+        <TextBox HorizontalAlignment="Left" VerticalAlignment="Top" x:Name="TextBoxLatitude" Margin="10,200,0,0" Width="80" Height="20"/>
+        <TextBox HorizontalAlignment="Left" VerticalAlignment="Top" x:Name="TextBoxLongitude" Margin="10,220,0,0" Width="80" Height="20"/>
+        <TextBox HorizontalAlignment="Left" VerticalAlignment="Top" x:Name="TextBoxClicked" Margin="10,260,0,0" Width="80" Height="20"/>
+        <Button x:Name="ButtonSos" Width="60" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,300,0,0" Content="Sound" Click="ButtonSos_Click"/>
+        
+    </Grid>
+</UserControl>

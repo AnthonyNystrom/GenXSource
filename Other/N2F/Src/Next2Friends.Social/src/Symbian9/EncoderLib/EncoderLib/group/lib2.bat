@@ -1,0 +1,1 @@
+arm-none-symbianelf-ar

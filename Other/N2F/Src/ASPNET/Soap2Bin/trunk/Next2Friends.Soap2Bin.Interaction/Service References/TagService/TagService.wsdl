@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.next2friends.com/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.next2friends.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Provides functionality to process proximity tags.</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.next2friends.com/">
+      <s:element name="UploadTags">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tags" type="tns:TagUpdate" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TagUpdate">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="TagValidationString" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeviceTagID" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UploadTagsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadTagsResult" type="tns:ArrayOfTagConfirmation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfTagConfirmation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TagConfirmation" nillable="true" type="tns:TagConfirmation" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TagConfirmation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeviceID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ConfirmedByServer" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="UploadTagsSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadTags" />
+  </wsdl:message>
+  <wsdl:message name="UploadTagsSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadTagsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TagServiceSoap">
+    <wsdl:operation name="UploadTags">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Uploads the specified tag validation strings along with device identifiers.&lt;/p&gt;&lt;b&gt;Returns:&lt;/b&gt;&lt;br/&gt;An array of entities which denote whether the uploaded tags were confirmed by the server.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;tags&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt;.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the member with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:UploadTagsSoapIn" />
+      <wsdl:output message="tns:UploadTagsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="TagServiceHttpGet" />
+  <wsdl:portType name="TagServiceHttpPost" />
+  <wsdl:binding name="TagServiceSoap" type="tns:TagServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UploadTags">
+      <soap:operation soapAction="http://www.next2friends.com/UploadTags" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TagServiceSoap12" type="tns:TagServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UploadTags">
+      <soap12:operation soapAction="http://www.next2friends.com/UploadTags" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TagServiceHttpGet" type="tns:TagServiceHttpGet">
+    <http:binding verb="GET" />
+  </wsdl:binding>
+  <wsdl:binding name="TagServiceHttpPost" type="tns:TagServiceHttpPost">
+    <http:binding verb="POST" />
+  </wsdl:binding>
+  <wsdl:service name="TagService">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Provides functionality to process proximity tags.</wsdl:documentation>
+    <wsdl:port name="TagServiceSoap" binding="tns:TagServiceSoap">
+      <soap:address location="http://services.next2friends.com/n2fwebservices/TagService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TagServiceSoap12" binding="tns:TagServiceSoap12">
+      <soap12:address location="http://services.next2friends.com/n2fwebservices/TagService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TagServiceHttpGet" binding="tns:TagServiceHttpGet">
+      <http:address location="http://services.next2friends.com/n2fwebservices/TagService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TagServiceHttpPost" binding="tns:TagServiceHttpPost">
+      <http:address location="http://services.next2friends.com/n2fwebservices/TagService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

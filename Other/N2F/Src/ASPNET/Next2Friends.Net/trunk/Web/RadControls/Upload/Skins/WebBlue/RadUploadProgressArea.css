@@ -1,0 +1,72 @@
+/* r.a.d.upload webblue skin */
+
+.RadUploadProgressArea
+{
+	border: 0px;
+	/* height: 200px; */
+	width: 400px;
+	top: 100px;
+	left: 120px;
+	background: #f0f2f4;
+	z-index: 10000;
+	border: solid 1px #bcc3cb;
+	filter: progid:DXImageTransform.Microsoft.Shadow(direction=140,color=#bcc3cb,strength=2); 
+	cursor: default;
+	text-align: left;
+}
+
+.RadUploadProgressTable
+{
+	margin-left: 10px;
+	width: 92% !important;
+}
+
+.RadUploadProgressBarHolder
+{
+	text-align: left;
+}
+
+.RadUploadCurrentFileName,
+.RadUploadTimeData
+{
+	/*font: normal 10px Arial, Verdana, Sans-serif;*/
+	color: #447ec1;
+}
+
+.RadUploadFileCountProgressData,
+.RadUploadTotalProgressData
+{
+	/*font: bold 10px Arial, Verdana, Sans-serif;*/
+	color: black;
+}
+
+.RadUploadCancelButtonHolder
+{
+	vertical-align: bottom;
+}
+
+input.RadUploadCancelButton
+{
+	background: transparent url('Img/radUploadBtnMedium.gif') no-repeat;
+	border: 0px;
+	height: 21px;
+	width: 67px;
+	/*font: normal 11px Arial, Verdana, Sans-serif;*/
+	color: black;
+}
+.RadUploadProgressCancelledMessage
+{
+	font-weight: bold;
+	/*font-size: 11px;*/
+	padding-left: 50px;
+	
+}
+.RadUploadProgressCancelledIcon
+{
+	padding-left: 155px;
+	padding-top: 20px;
+}
+.RadUploadProgressBarHolder img
+{
+   height: 21px;
+}

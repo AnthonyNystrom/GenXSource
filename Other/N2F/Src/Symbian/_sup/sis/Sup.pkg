@@ -1,0 +1,28 @@
+; Sup.pkg
+;
+;Language - standard language definitions
+&EN
+
+;Standard SIS file header
+#{"Sup"},(0xeb83db8a),1,0,0
+
+;Localised Vendor name
+%{"Next2Friends-EN"}
+
+;Unique Vendor name
+:"Next2Friends"
+
+;Supports Series 60 v 3.0
+[0x101F7961], 0, 0, 0,{"Series60ProductID"}
+
+;Files to install
+"C:\Symbian\9.1\S60_3rd\epoc32\release\gcce\urel\Sup.exe"                 -"!:\sys\bin\Sup.exe"
+"C:\Symbian\9.1\S60_3rd\epoc32\data\z\resource\apps\Sup.rsc"               -"!:\resource\apps\Sup.rsc"
+"C:\Symbian\9.1\S60_3rd\epoc32\data\z\resource\apps\Sup_reg.mif"           -"!:\resource\apps\Sup_reg.mif"
+"C:\Symbian\9.1\S60_3rd\epoc32\data\z\private\10003a3f\apps\Sup_reg.rsc"   -"!:\private\10003a3f\import\apps\Sup_reg.rsc"
+"..\help\Sup_0xeb83db8a.hlp"                                     -"!:\resource\help\Sup_0xeb83db8a.hlp"
+"..\group\PrivacyStatement.txt"                                      -"!:\private\eb83db8a\PrivacyStatement.txt"
+
+;Required for application to be covered by backup/restore facility 
+"backup_registration.xml"     -"!:\private\eb83db8a\backup_registration.xml"
+"C:\Symbian\9.1\S60_3rd\epoc32\data\z\resource\apps\Sup.mbm" - "!:\resource\apps\Sup.mbm"

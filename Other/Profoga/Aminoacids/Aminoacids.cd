@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="TerraSoft.BioTech.ProFoGA.Aminoacids.Atom" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Atom.vb</FileName>
+      <HashCode>AAACBAIACAQAAAAAAAgAAAQCAABBAABAAAAAgAAAcAE=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="TerraSoft.BioTech.ProFoGA.Aminoacids.Bond">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Bond.vb</FileName>
+      <HashCode>AAEAAAAAAAAIAAAAAAAIAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TerraSoft.BioTech.ProFoGA.Aminoacids.Molecule" BaseTypeListCollapsed="true">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Molecule.vb</FileName>
+      <HashCode>wGQShAIGAIAAAAgCQABAAAQCEAFAAIBAAAAAgBACQAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Enum Name="TerraSoft.BioTech.ProFoGA.Aminoacids.AtomSpecialRole">
+    <Position X="2.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Atom.vb</FileName>
+      <HashCode>QGAAAAAEAAAAAAACAAAAAAAAAAEAAIBAAAAAAAEAAAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TerraSoft.BioTech.ProFoGA.Aminoacids.BondOrder">
+    <Position X="2.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Bond.vb</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAACAAAAAAEAAAGAAAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TerraSoft.BioTech.ProFoGA.Aminoacids.BondAngle">
+    <Position X="2.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Bond.vb</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAABAAAEAAAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Module Name="TerraSoft.BioTech.ProFoGA.Aminoacids.My.Resources.Resources">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAgAACEyBEQAAkQAQAUQAAEAAAICAAoA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Property Name="cmlreact" Hidden="true" />
+      <Property Name="Culture" Hidden="true" />
+      <Property Name="ResourceManager" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+  </Module>
+</ClassDiagram>

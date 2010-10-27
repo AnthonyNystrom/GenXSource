@@ -1,0 +1,49 @@
+
+
+                        GLStereoPlayer (glsp)
+
+                            Version 0.6.0
+
+---
+http://sourceforge.net/projects/glsp
+
+GLStereoPlayer is an OpenGL-based stereoscopic movie and image viewer application.
+
+It supports various input file formats via Microsoft DirectShow and Developer's Image
+Library (DevIL) libraries, and popular stereo rendering types including anagryph,
+horizontally and vertically split, interlaced, Sharp3D and quad buffer.
+
+GLStereoPlayer uses Microsoft DirectShow and Developer's Image Library (DevIL),
+so it supports various input file formats.  You can load two separate sources
+for stereoscopic rendering, and you can also load a single source which
+combines the two sources horizontally or vertically.  It also supports various
+stereoscopic rendering types such as anagryph, horizontal and vertical split,
+interlaced, Sharp3D  and quad buffer stereo.  So you need only a single
+content file for multiple types of stereoscopic hardware.
+
+GLStereoPlayer is consist of three programs.
+
+GLStereoPlayer.exe is a standalone viewer program.  It's easy to use,
+and it shows all what the GLStereoPlayer can do.
+
+GLSPCtrl.ocx is an ActiveX version of the GLStereoPlayer.  It realizes
+stereoscopic rendering inside other programs such as PowerPoint.
+With a GeoWall type stereoscopic hardware and a professional guraphic card
+which supports quad-buffer/clone-mode stereo, you can show a stereoscopic
+presentation!
+
+glutStereoPlayer.exe is a simple viewer program based on GLUT library.
+If you are a 3d graphics programmer, you can easily understand its source,
+and get understand how to integrate the GLStereoPlayer functionalities
+in your software.  GLStereoPlayer is also a good example to implement
+a movie texture in your OpenGL based software.  Hack the source!!
+
+This library is distributed under GNU LGPL version 2, which can be
+found in the file  "COPYING".
+
+If you need help with the programs,  just email to
+takahei at orihalcon.jp
+
+--
+Enjoy,
+Toshiyuki Takahei

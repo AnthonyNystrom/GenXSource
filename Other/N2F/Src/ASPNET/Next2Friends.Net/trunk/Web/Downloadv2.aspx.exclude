@@ -1,0 +1,124 @@
+﻿<%@ Page Language="C#" MasterPageFile="~/Main.master" AutoEventWireup="true" CodeFile="Downloadv2.aspx.cs" Inherits="Downloadv2" Title="Untitled Page" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+
+
+	<div id="middle" class="no_subnav clearfix">
+
+		<div class="getn2f">
+		
+			<div class="selection">
+				<h3>What is Your Phone?</h3>
+				<p>
+					<label for="make">Make</label>
+
+					    <select id='manu' onchange='getModels(this.value);'>
+                            <option value='' selected="selected">select</option>
+                            <option value='LG'>LG</option>
+                            <option value='Motorola'>Motorola</option>
+                            <option value='Nokia'>Nokia</option>
+                            <option value='Samsung'>Samsung</option>
+                            <option value='Sony Ericcson'>Sony Ericcson</option>
+                        </select>
+				</p>
+				<p>
+					<label for="model">Model</label>
+					<asp:DropDownList runat="server" ID="drpModel" disabled="disabled"></asp:DropDownList>
+				</p>
+				<p style="text-align:right;">
+				    <asp:Button runat="server" ID="btnSelectModel" CssClass="form_btn2" onclick="SelectModel" Text="proceed to download" />
+				</p>
+			</div>
+			
+			<%if (!IsDownload){ %>
+			
+			<div class="instruction">
+				<h2>Download Next2Friends App</h2>
+				<p>Here is some text to tell what we app we have, ie. Live, Ask a Friend, whatever and is some text and here I’m going to stop typing.</p>
+				<h4>To download:</h4>
+				<p>1. Select your phone made (<a href="#">can’t find your phone</a>?)<br />
+
+					2. Select the model<br />
+				3. and the download links will appear. Follow the links to install the app. </p>
+				<p>That’s it.</p>
+				<p>(<a href="#">need help</a>?)</p>
+			</div>
+			
+			<%}else { %>
+			
+			<div class="download">
+				<div class="box left">
+					<h3>Download by Browser</h3>
+					<p>Your app can be downloaded at:</p>
+					<a href="#" class="downloadlink">www.getn2f.com/1 <small>App pack v1.3 (12k)</small></a>		</div>
+
+				<img src="images/or.gif" alt="OR" class="or" />
+				<div class="box right">
+					<h3>Download by QR Code</h3>
+					<p>You can also download by scanning QR code if your camera phone support:</p>
+					<p class="qr-code"><img src="images/qr-sample.gif" alt="qr code" width="115" height="115" /></p>
+					<p class="whatisqr"><a href="#">What is QR Code?</a></p>
+				</div>
+
+			</div>
+			
+			<%} %>
+		
+		</div>
+
+		<!-- /download end -->
+		</div>
+		
+		<script type="text/javascript">
+
+function getModels(manu){
+
+    if($('#manu')[0].options[0].text=='select'){
+        $('#manu')[0].options[0]=null;
+        $('#ctl00_ContentPlaceHolder1_drpModel').removeAttr("disabled")
+    }
+    
+    var index = 0;
+    var models = document.getElementById('ctl00_ContentPlaceHolder1_drpModel');
+
+    if(manu==''){
+	    return;
+    }
+
+    models.options.length = 0;
+    models.style.visibility = 'visible';
+
+    for(var i=0;i<Devices.length;i++){
+	    if(Devices[i][0]==manu){
+    	
+		    models.options[index++] = new Option(Devices[i][1], Devices[i][3], true, false);
+	    }
+    }
+}
+
+<%=PhoneList %>
+
+function autoSet(ma,mo){
+
+    var manufacturer = document.getElementById('manu');
+    var models = document.getElementById('ctl00_ContentPlaceHolder1_drpModel');
+    
+    for(var i=0;i<manufacturer.length;i++){
+        if(manufacturer.options[i].value==ma){
+            manufacturer.selectedIndex=i;
+        }
+    }
+    
+    getModels(ma);
+    
+    for(var i=0;i<models.length;i++){
+        if(models.options[i].value==mo){
+            models.selectedIndex=i;
+        }
+    }
+}
+
+
+</script>
+</asp:Content>
+

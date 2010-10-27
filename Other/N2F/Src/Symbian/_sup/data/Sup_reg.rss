@@ -1,0 +1,24 @@
+/*
+============================================================================
+ Name        : Sup_reg.rss
+ Author      : Vitaly Vinogradov
+ Version     : 1.0.0
+ Copyright   : (c) Next2Friends, 2008
+ Description : Application registration resource file
+============================================================================
+*/
+
+#include <appinfo.rh>
+#include <Sup.rsg>
+
+UID2 KUidAppRegistrationResourceFile
+UID3 0xeb83db8a
+
+RESOURCE APP_REGISTRATION_INFO
+	{
+	app_file="Sup";
+	localisable_resource_file = "\\resource\\apps\\Sup";
+	localisable_resource_id = R_SUP_LOCALISABLE_APP_INFO;
+	embeddability=KAppNotEmbeddable;
+	newfile=KAppDoesNotSupportNewFile;
+	}

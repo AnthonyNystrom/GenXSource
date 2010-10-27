@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<title>Transparent custom corners and borders, CSS only: IE version | Lab | 456 Berea Street</title>
+<style type="text/css" media="screen,print,projection">
+html, body {
+	margin:0;
+	padding:0;
+	color:#000;
+	background:#fff url(bg.gif);
+}
+body {
+	padding:10px;
+	font:76%/135% "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
+	background: #333;
+}
+p {
+	margin:1em 0;
+}
+#labfooter {
+	text-align:center;
+	clear:both;
+}
+/* CSS for the box starts here
+================================================*/
+/* Insert the custom corners and borders for browsers with JavaScript on */
+.cb {
+	margin:0.5em 0;
+}
+.bt {
+	background:url(box.png) no-repeat 100% 0;
+	margin:0 0 0 18px;
+	height:17px;
+}
+.bt div {
+	height:17px;
+	width:18px;
+	position:relative;
+	left:-18px;
+	background:url(box.png) no-repeat 0 0;
+}
+.bb {
+	background:url(box.png) no-repeat 100% 100%;
+	margin:0 0 0 18px;
+	height:17px;
+}
+.bb div {
+	height:17px;
+	width:18px;
+	position:relative;
+	left:-18px;
+	background:url(box.png) no-repeat 0 100%;
+}
+.i1 {
+	padding:0 0 0 12px;
+	background:url(borders.png) repeat-y 0 0;
+}
+.i2 {
+	padding:0 12px 0 0;
+	background:url(borders.png) repeat-y 100% 0;
+}
+.i3 {
+	background:#fff;
+	border:1px solid #fff;
+	border-width:1px 0;
+	padding:0 10px;
+}
+/* CSS for the box ends here */
+
+.cb h1 {
+	margin:0 -10px;
+	padding:0.3em 10px;
+	background:#efece6;
+	font:bold 1.2em/1 Arial, Helvetica, sans-serif;
+}
+</style>
+<!--[if lt IE 7]>
+<style type="text/css">
+.i1 {height:1px;}
+
+.i1,
+.i2 {
+	background-image:url(borders.gif);
+}
+.bt,
+.bt div,
+.bb,
+.bb div {
+	background-image:url(box.gif);
+}
+
+</style>
+<![endif]-->
+</head>
+<body>
+<div class="cb">
+	<div class="bt">
+		<div></div>
+	</div>
+	<div class="i1">
+		<div class="i2">
+			<div class="i3">
+				<h1>Transparent custom corners and borders, CSS only: IE version</h1>
+				<p>For the background on this demo, read the related article: <a href="http://www.456bereastreet.com/archive/200505/transparent_custom_corners_and_borders/">Transparent custom corners and borders</a>.</p>
+				<p>Est etiam processus dynamicus qui sequitur mutationem! Qui sequitur mutationem consuetudium lectorum Mirum est notare quam! Mirum est notare quam littera gothica quam nunc putamus parum claram anteposuerit, tempor cum soluta nobis eleifend option congue nihil imperdiet doming, decima Eodem modo typi qui nunc nobis videntur parum clari fiant sollemnes. Nihil imperdiet doming id quod mazim placerat facer possim assum Typi non habent.</p>
+				<p>Tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer; parum clari fiant sollemnes in futurum. Et quinta decima Eodem modo typi qui; placerat facer possim assum Typi non habent claritatem insitam est usus legentis in iis; qui nunc nobis videntur parum clari fiant. Littera gothica quam nunc putamus parum claram anteposuerit litterarum formas? Qui nunc nobis videntur parum clari fiant sollemnes in futurum!</p>
+			</div>
+		</div>
+	</div>
+	<div class="bb">
+		<div></div>
+	</div>
+</div>
+</body>
+</html>

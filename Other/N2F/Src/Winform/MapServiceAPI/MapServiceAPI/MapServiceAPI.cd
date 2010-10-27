@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MapServiceAPI.jsstrings" Collapsed="true">
+    <Position X="14.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAIAAAAAAAAAAAAEIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MapServiceAPI.Map">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQkBMAAAAQAQCAAAEAgAABACAAAAAAAAACRAAAEIAgA=</HashCode>
+      <FileName>Map.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MapServiceAPI.MapShapes" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAAQAAAEEAAAAAAAAAAAAAAAABAAAAAAwA=</HashCode>
+      <FileName>MapShape.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MapServiceAPI.Marker">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAQgAAACAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Marker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MapServiceAPI.Polygon">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAgAAAAAABAAAAAAAAAAAAAAAACABAECAAAAA=</HashCode>
+      <FileName>Polygon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MapServiceAPI.PolyLine">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAABAAAAAAAAAAAAAAAAAABAECAAAAA=</HashCode>
+      <FileName>PolyLine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MapServiceAPI.Utility">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Utility.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="MapServiceAPI.LatLng">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAEAAAAAEAAAIBAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LatLng.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="MapServiceAPI.IMapShape" Collapsed="true">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IMapShape.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MapServiceAPI.IMapServiceJS">
+    <Position X="2.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQABAAAAAAAAADAAEAAIAAEgAACAAAAAAABAAg=</HashCode>
+      <FileName>IMapServiceJS.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="MapServiceAPI.MapStyle">
+    <Position X="9.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>MapStyle.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MapServiceAPI.MapService">
+    <Position X="7.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>MapType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

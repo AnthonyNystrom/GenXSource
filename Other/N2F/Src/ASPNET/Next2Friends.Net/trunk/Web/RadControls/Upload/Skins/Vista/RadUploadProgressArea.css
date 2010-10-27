@@ -1,0 +1,105 @@
+.RadUploadProgressArea
+{
+	border: 0px;
+	/* height: 200px; */
+	border: 1px solid #646f7a;
+	top: 100px;
+	width: 370px;
+	left: 120px;
+	background-color: #fff;
+	z-index:10000;
+	cursor: default;
+	text-align:left;
+	background: transparent url('Img/progressAreaBg.jpg') no-repeat -1px -1px;
+}
+
+.RadUploadProgressTable
+{
+	margin: 50px 18px 6px 18px;
+	table-layout: fixed;
+	width: 334px !important;
+}
+
+.RadUploadProgressBarHolder
+{
+	text-align: left;
+	border: 1px solid #686868;
+	padding: 0;
+	height: 13px;
+	line-height: 13px;
+	overflow: hidden;
+	background: transparent url('Img/progressRemaining.gif') repeat-x top left;
+}
+
+.RadUploadTotalProgressData
+{
+	font-family: SegoeUI, Arial, sans-Serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #626262;
+	padding-bottom: 10px;
+}
+
+.RadUploadCurrentFileName
+{
+	font-family: SegoeUI, Arial, sans-Serif;
+	font-size:14px;
+	color: #333;
+	font-weight: normal;
+	padding-top: 10px;
+}
+
+.RadUploadCurrentFileName span
+{
+	color: #0066cc;
+}
+
+.RadUploadFileCountProgressData
+{
+	font-family: SegoeUI, Arial, sans-Serif;
+	font-size: 11px;
+	font-weight:normal;
+	color: #626262;
+}
+
+.RadUploadTimeData
+{
+	font-family: SegoeUI, Arial, sans-Serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: green;
+}
+
+.RadUploadCancelButtonHolder
+{
+	vertical-align: bottom;
+}
+
+input.RadUploadCancelButton
+{
+	border: 0;
+	background-color: Transparent;
+	background-image: url(Img/radUploadBtnSmall.gif);
+	background-repeat: no-repeat;
+	font: bold 11px SegoeUI, Arial, sans-Serif;
+	color: #666;
+	height: 22px;
+	width: 68px;
+}
+.RadUploadProgressCancelledMessage
+{
+	font-weight: bold;
+	font-size: 11px;
+	padding-left: 50px;
+	
+}
+.RadUploadProgressCancelledIcon
+{
+	padding-left: 155px;
+	padding-top: 20px;
+}
+.RadUploadProgressBarHolder img
+{
+   height:13px;
+   margin: 0;
+}

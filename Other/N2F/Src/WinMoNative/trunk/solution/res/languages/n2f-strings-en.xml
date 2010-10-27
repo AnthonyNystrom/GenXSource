@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <strings>
+    <string id="0" name="ESNotFound">
+      Not-found-string
+    </string>
+    <string id="1" name="ESOperationUpload">
+      Upload
+    </string>
+    <string id="2" name="ESOperationCredentials">
+      Credentials
+    </string>
+    <string id="3" name="ESOperationExit">
+      Exit
+    </string>
+    <string id="4" name="ESOperationRecentUploads">
+      Recent uploads
+    </string>
+    <string id="5" name="ESCredentialsNameCaption">
+      Login:
+    </string>
+    <string id="6" name="ESCredentialsPassCaption">
+      Password:
+    </string>
+    <string id="7" name="ESCredentialsMenuCaption">
+      Menu
+    </string>
+    <string id="8" name="ESCredentialsLoginCaption">
+      Login
+    </string>
+    <string id="9" name="ESCredentialsExitItem">
+      Exit application
+    </string>
+    <string id="10" name="ESCredentialsLoginFailedMsg">
+      Login failed
+    </string>
+    <string id="11" name="ESCredentialsLoginFailedCap">
+      Login error
+    </string>
+    <string id="12" name="ESCredentialsHelpItem">
+      Help
+    </string>
+    <string id="13" name="ESCredentialsHelpCaption">
+      N2F Snap-Up Help
+    </string>
+    <string id="14" name="ESCredentialsHelpText">
+      Enter Your credentials to get access N2F Snap-UP service
+    </string>
+
+    <string id="40" name="ESOperationsMenuCaption">
+      Menu
+    </string>
+    <string id="41" name="ESOperationsHelpItem">
+      Help
+    </string>
+    <string id="42" name="ESOperationsExitItem">
+      Exit application
+    </string>
+    <string id="43" name="ESOperationsSNBodyText">
+      Do You really want to upload the following images:
+    </string>
+    <string id="44" name="ESOperationsSNTitle">
+      Upload confirmation
+    </string>
+    <string id="45" name="ESOperationsSNBtnYes">
+      Yes
+    </string>
+    <string id="46" name="ESOperationsSNBtnNo">
+      No
+    </string>
+    <string id="47" name="ESOperationsUpFailedMBText">
+      Failed to upload file
+    </string>
+    <string id="48" name="ESOperationsUpFailedMBCapt">
+      Upload error
+    </string>
+    <string id="49" name="ESOperationsHelpCaption">
+      N2F Snap-Up Help
+    </string>
+    <string id="50" name="ESOperationsHelpText">
+      Press "Upload" button to select image for upload. Press "Recent uploads" button to access recent uploads list.
+    </string>
+
+    <string id="80" name="ESRecentUploadsBackCaption">
+      Back
+    </string>
+    <string id="81" name="ESRecentUploadsMenuCaption">
+      Menu
+    </string>
+    <string id="82" name="ESRecentUplaodsHelpItem">
+      Help
+    </string>
+    <string id="83" name="ESRecentUploadsUploadItem">
+      Re-upload
+    </string>
+    <string id="84" name="ESRecentUploadsExitItem">
+      Exit
+    </string>
+    <string id="85" name="ESRecentUploadsSubTextFormat">
+      Created on %d-%d-%d
+    </string>
+    <string id="86" name="ESRecentUploadsUploadedText">
+      upload was done
+    </string>
+    <string id="87" name="ESRencetUploadsNUpldText">
+      upload was not finished
+    </string>
+    <string id="88" name="ESRecentUploadsHelpCaption">
+      N2F Snap-Up Help
+    </string>
+    <string id="89" name="ESRecentUploadsHelpText">
+      Select item and choose "Re-upload" action from menu to re-upload image.
+    </string>
+    
+   
+  </strings>
+</resources>

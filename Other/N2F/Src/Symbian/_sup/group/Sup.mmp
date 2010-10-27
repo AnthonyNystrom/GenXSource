@@ -1,0 +1,116 @@
+/*
+============================================================================
+ Name        : Sup.rss
+ Author      : Vitaly Vinogradov
+ Version     : 1.0.0
+ Copyright   : (c) Next2Friends, 2008
+ Description : Project specification file for Sup
+============================================================================
+*/
+TARGET                                  Sup.exe 
+TARGETTYPE                              exe 
+UID                                     0x100039CE 0xeb83db8a 
+SECUREID                                0xeb83db8a 
+EPOCSTACKSIZE                           0x5000 
+EPOCHEAPSIZE                            0x1000 0x200000 
+SOURCEPATH                              ..\data 
+START RESOURCE Sup.rss 
+  TARGETPATH                              \resource\apps 
+  HEADER                                   
+END  
+
+START RESOURCE Sup_reg.rss 
+  TARGETPATH                              \private\10003a3f\apps 
+END  
+
+
+SOURCEPATH                              ..\src 
+SOURCE                                  Supconnectionmanager.cpp 
+SOURCE                                  Supimagehandler.cpp 
+SOURCE                                  Supsplashscreenview.cpp 
+SOURCE                                  Supsplashscreenctrl.cpp 
+SOURCE                                  Supfilebrowserengine.cpp 
+SOURCE                                  Supapputils.cpp 
+SOURCE                                  Supappmainview.cpp 
+SOURCE                                  Supapploginview.cpp 
+SOURCE                                  Supappimagecartview.cpp 
+SOURCE                                  Supappfilebrowserview.cpp 
+SOURCE                                  Supuploadserviceprovider.cpp 
+SOURCE                                  Suploginserviceprovider.cpp 
+SOURCE                                  Sup.cpp 
+SOURCE                                  SupApplication.cpp 
+SOURCE                                  SupAppUi.cpp 
+SOURCE                                  SupDocument.cpp 
+
+SYSTEMINCLUDE                           \epoc32\include\xmldatabinding 
+SYSTEMINCLUDE                           \epoc32\include\xml 
+SYSTEMINCLUDE                           \epoc32\include\libc 
+USERINCLUDE                             ..\inc 
+USERINCLUDE                             ..\help 
+SYSTEMINCLUDE                           \epoc32\include 
+/* [+] */ LIBRARY                       insock.lib 
+/* [+] */ LIBRARY                       esock.lib 
+LIBRARY                                 commdb.lib 
+LIBRARY                                 BitmapTransforms.lib 
+LIBRARY                                 eikdlg.lib 
+LIBRARY                                 xmlframework.lib 
+LIBRARY                                 inetprotutil.lib 
+LIBRARY                                 flogger.lib 
+LIBRARY                                 aknskinsrv.lib 
+LIBRARY                                 aknskins.lib 
+LIBRARY                                 imut.lib 
+LIBRARY                                 etext.lib 
+LIBRARY                                 apgrfx.lib 
+LIBRARY                                 imageconversion.lib 
+LIBRARY                                 fbscli.lib 
+LIBRARY                                 senutils.lib 
+LIBRARY                                 senservdesc.lib 
+LIBRARY                                 senservconn.lib 
+LIBRARY                                 platformenv.lib 
+LIBRARY                                 apmime.lib 
+LIBRARY                                 commonui.lib 
+LIBRARY                                 egul.lib 
+LIBRARY                                 ws32.lib 
+LIBRARY                                 gdi.lib 
+LIBRARY                                 eikctl.lib 
+LIBRARY                                 eikcoctl.lib 
+LIBRARY                                 euser.lib 
+LIBRARY                                 apparc.lib 
+LIBRARY                                 cone.lib 
+LIBRARY                                 eikcore.lib 
+LIBRARY                                 avkon.lib 
+LIBRARY                                 commonengine.lib 
+LIBRARY                                 efsrv.lib 
+LIBRARY                                 estor.lib 
+LIBRARY                                 hlplch.lib 
+LIBRARY                                 bafl.lib 
+LIBRARY                                 charconv.lib 
+LANG                                    SC 
+VENDORID                                0 
+capability                              LocalServices NetworkServices ReadUserData UserEnvironment WriteUserData 
+START BITMAP Sup.mbm 
+  TARGETPATH                              \resource\apps 
+  HEADER                                   
+  SOURCEPATH                              ..\gfx 
+  source                                  c24 n2f_commercelogo_1.bmp 
+  source                                  c24 n2f_commercelogo_2.bmp 
+  source                                  c24 n2f_commercelogo_3.bmp 
+  source                                  c24 cart.bmp 
+  source                                  c24 cartmask.bmp 
+  source                                  c24 file.bmp 
+  source                                  c24 filemask.bmp 
+  source                                  c24 folder.bmp 
+  source                                  c24 foldermask.bmp 
+  source                                  c24 settings.bmp 
+  source                                  c24 settingsmask.bmp 
+  source                                  c24 camera.bmp 
+  source                                  c24 cameramask.bmp 
+  source                                  c24 card.bmp 
+  source                                  c24 cardmask.bmp 
+  source                                  c24 folderup.bmp 
+  source                                  c24 folderupmask.bmp 
+  source                                  c24 phone.bmp 
+  source                                  c24 phonemask.bmp 
+
+END  
+

@@ -1,0 +1,4 @@
+-libraryjars D:\SonyEricsson\JavaME_SDK_CLDC\PC_Emulation\WTK2\lib\midpapi20.jar;D:\SonyEricsson\JavaME_SDK_CLDC\PC_Emulation\WTK2\lib\cldcapi11.jar;D:\SonyEricsson\JavaME_SDK_CLDC\PC_Emulation\WTK2\lib\wma20.jar;D:\SonyEricsson\JavaME_SDK_CLDC\PC_Emulation\WTK2\lib\mmapi.jar;D:\SonyEricsson\JavaME_SDK_CLDC\PC_Emulation\WTK2\lib\jsr082.jar;D:\SonyEricsson\JavaME_SDK_CLDC\PC_Emulation\WTK2\lib\jsr75.jar;D:\SonyEricsson\JavaME_SDK_CLDC\PC_Emulation\WTK2\lib\j2me-ws.jar;D:\SonyEricsson\JavaME_SDK_CLDC\PC_Emulation\WTK2\lib\mobile3d.jar;D:\SonyEricsson\JavaME_SDK_CLDC\PC_Emulation\WTK2\lib\mascotv3.jar;D:\SonyEricsson\JavaME_SDK_CLDC\PC_Emulation\WTK2\lib\nokiaext.jar;D:\SonyEricsson\JavaME_SDK_CLDC\PC_Emulation\WTK2\lib\jsr234.jar
+-injars D:\SonyEricsson\JavaME_SDK_CLDC\PC_Emulation\WTK2\apps\Tag\bin\Tag.jar
+-outjar C:\DOCUME~1\OBRAZT~1\LOCALS~1\Temp\Tag.jar
+-keep public class * extends javax.microedition.midlet.MIDlet 

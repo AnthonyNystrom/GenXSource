@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.next2friends.com/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.next2friends.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Provides functionality to access Dashboard data.</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.next2friends.com/">
+      <s:element name="GetItems">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetItemsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetItemsResult" type="tns:ArrayOfDashboardItem" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDashboardItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DashboardItem" nillable="true" type="tns:DashboardItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DashboardItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AskQuestion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DateTime" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FeedItemType" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Friend1FullName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Friend2FullName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FriendNickname1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FriendNickname2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FriendWebMemberID1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FriendWebMemberID2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Text" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ThumbnailUrl" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ObjectID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="WebPhotoCollectionID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WebPhotoID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetThumbnail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="thumbnailUrl" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetThumbnailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetThumbnailResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVideos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVideosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetVideosResult" type="tns:ArrayOfDashboardVideo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDashboardVideo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DashboardVideo" nillable="true" type="tns:DashboardVideo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DashboardVideo">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:DashboadMedia" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="DashboadMedia" abstract="true">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DateTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nickname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Text" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ThumbnailUrl" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetPhotos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPhotosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPhotosResult" type="tns:ArrayOfDashboardPhoto" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDashboardPhoto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DashboardPhoto" nillable="true" type="tns:DashboardPhoto" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DashboardPhoto">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:DashboadMedia" />
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetWallComments">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWallCommentsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWallCommentsResult" type="tns:ArrayOfDashboardWallComment" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDashboardWallComment">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DashboardWallComment" nillable="true" type="tns:DashboardWallComment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DashboardWallComment">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DateTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nickname1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nickname2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Text" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetNewFriends">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNewFriendsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNewFriendsResult" type="tns:ArrayOfDashboardNewFriend" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDashboardNewFriend">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DashboardNewFriend" nillable="true" type="tns:DashboardNewFriend" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DashboardNewFriend">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DateTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nickname1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nickname2" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ArrayOfDashboardItem" nillable="true" type="tns:ArrayOfDashboardItem" />
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="ArrayOfDashboardVideo" nillable="true" type="tns:ArrayOfDashboardVideo" />
+      <s:element name="ArrayOfDashboardPhoto" nillable="true" type="tns:ArrayOfDashboardPhoto" />
+      <s:element name="ArrayOfDashboardWallComment" nillable="true" type="tns:ArrayOfDashboardWallComment" />
+      <s:element name="ArrayOfDashboardNewFriend" nillable="true" type="tns:ArrayOfDashboardNewFriend" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetItemsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetItems" />
+  </wsdl:message>
+  <wsdl:message name="GetItemsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetThumbnailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetThumbnail" />
+  </wsdl:message>
+  <wsdl:message name="GetThumbnailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetThumbnailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetVideosSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVideos" />
+  </wsdl:message>
+  <wsdl:message name="GetVideosSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVideosResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPhotosSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPhotos" />
+  </wsdl:message>
+  <wsdl:message name="GetPhotosSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPhotosResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWallCommentsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWallComments" />
+  </wsdl:message>
+  <wsdl:message name="GetWallCommentsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWallCommentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNewFriendsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNewFriends" />
+  </wsdl:message>
+  <wsdl:message name="GetNewFriendsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNewFriendsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetItemsHttpGetIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetItemsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfDashboardItem" />
+  </wsdl:message>
+  <wsdl:message name="GetThumbnailHttpGetIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="thumbnailUrl" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetThumbnailHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetVideosHttpGetIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetVideosHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfDashboardVideo" />
+  </wsdl:message>
+  <wsdl:message name="GetPhotosHttpGetIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPhotosHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfDashboardPhoto" />
+  </wsdl:message>
+  <wsdl:message name="GetWallCommentsHttpGetIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetWallCommentsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfDashboardWallComment" />
+  </wsdl:message>
+  <wsdl:message name="GetNewFriendsHttpGetIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetNewFriendsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfDashboardNewFriend" />
+  </wsdl:message>
+  <wsdl:message name="GetItemsHttpPostIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetItemsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfDashboardItem" />
+  </wsdl:message>
+  <wsdl:message name="GetThumbnailHttpPostIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="thumbnailUrl" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetThumbnailHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetVideosHttpPostIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetVideosHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfDashboardVideo" />
+  </wsdl:message>
+  <wsdl:message name="GetPhotosHttpPostIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPhotosHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfDashboardPhoto" />
+  </wsdl:message>
+  <wsdl:message name="GetWallCommentsHttpPostIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetWallCommentsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfDashboardWallComment" />
+  </wsdl:message>
+  <wsdl:message name="GetNewFriendsHttpPostIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetNewFriendsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfDashboardNewFriend" />
+  </wsdl:message>
+  <wsdl:portType name="DashboardServiceSoap">
+    <wsdl:operation name="GetItems">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns a list of current Dashboard items.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetItemsSoapIn" />
+      <wsdl:output message="tns:GetItemsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetThumbnail">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Gets the Base64 string representation of the thumbnail with the specified &lt;tt&gt;thumbnailUrl&lt;/tt&gt;.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;thumbnailUrl&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the resource located at the specified &lt;tt&gt;thumbnailUrl&lt;/tt&gt; is not an image.&lt;br/&gt;&lt;tt&gt;WebException&lt;/tt&gt; - If a resource at the specified &lt;tt&gt;thumbnailUrl&lt;/tt&gt; was not found.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetThumbnailSoapIn" />
+      <wsdl:output message="tns:GetThumbnailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVideos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns a list of videos from the Dashboard.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetVideosSoapIn" />
+      <wsdl:output message="tns:GetVideosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPhotos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns a list of photos from the Dashboard.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetPhotosSoapIn" />
+      <wsdl:output message="tns:GetPhotosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWallComments">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns a list of wall comments from the Dashboard.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetWallCommentsSoapIn" />
+      <wsdl:output message="tns:GetWallCommentsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewFriends">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns a list of New Friends notifications from the Dashboard.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetNewFriendsSoapIn" />
+      <wsdl:output message="tns:GetNewFriendsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="DashboardServiceHttpGet">
+    <wsdl:operation name="GetItems">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns a list of current Dashboard items.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetItemsHttpGetIn" />
+      <wsdl:output message="tns:GetItemsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetThumbnail">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Gets the Base64 string representation of the thumbnail with the specified &lt;tt&gt;thumbnailUrl&lt;/tt&gt;.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;thumbnailUrl&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the resource located at the specified &lt;tt&gt;thumbnailUrl&lt;/tt&gt; is not an image.&lt;br/&gt;&lt;tt&gt;WebException&lt;/tt&gt; - If a resource at the specified &lt;tt&gt;thumbnailUrl&lt;/tt&gt; was not found.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetThumbnailHttpGetIn" />
+      <wsdl:output message="tns:GetThumbnailHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVideos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns a list of videos from the Dashboard.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetVideosHttpGetIn" />
+      <wsdl:output message="tns:GetVideosHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPhotos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns a list of photos from the Dashboard.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetPhotosHttpGetIn" />
+      <wsdl:output message="tns:GetPhotosHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWallComments">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns a list of wall comments from the Dashboard.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetWallCommentsHttpGetIn" />
+      <wsdl:output message="tns:GetWallCommentsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewFriends">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns a list of New Friends notifications from the Dashboard.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetNewFriendsHttpGetIn" />
+      <wsdl:output message="tns:GetNewFriendsHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="DashboardServiceHttpPost">
+    <wsdl:operation name="GetItems">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns a list of current Dashboard items.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetItemsHttpPostIn" />
+      <wsdl:output message="tns:GetItemsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetThumbnail">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Gets the Base64 string representation of the thumbnail with the specified &lt;tt&gt;thumbnailUrl&lt;/tt&gt;.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;thumbnailUrl&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the resource located at the specified &lt;tt&gt;thumbnailUrl&lt;/tt&gt; is not an image.&lt;br/&gt;&lt;tt&gt;WebException&lt;/tt&gt; - If a resource at the specified &lt;tt&gt;thumbnailUrl&lt;/tt&gt; was not found.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetThumbnailHttpPostIn" />
+      <wsdl:output message="tns:GetThumbnailHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVideos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns a list of videos from the Dashboard.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetVideosHttpPostIn" />
+      <wsdl:output message="tns:GetVideosHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPhotos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns a list of photos from the Dashboard.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetPhotosHttpPostIn" />
+      <wsdl:output message="tns:GetPhotosHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWallComments">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns a list of wall comments from the Dashboard.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetWallCommentsHttpPostIn" />
+      <wsdl:output message="tns:GetWallCommentsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewFriends">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns a list of New Friends notifications from the Dashboard.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetNewFriendsHttpPostIn" />
+      <wsdl:output message="tns:GetNewFriendsHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DashboardServiceSoap" type="tns:DashboardServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetItems">
+      <soap:operation soapAction="http://www.next2friends.com/GetItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetThumbnail">
+      <soap:operation soapAction="http://www.next2friends.com/GetThumbnail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVideos">
+      <soap:operation soapAction="http://www.next2friends.com/GetVideos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhotos">
+      <soap:operation soapAction="http://www.next2friends.com/GetPhotos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWallComments">
+      <soap:operation soapAction="http://www.next2friends.com/GetWallComments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewFriends">
+      <soap:operation soapAction="http://www.next2friends.com/GetNewFriends" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DashboardServiceSoap12" type="tns:DashboardServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetItems">
+      <soap12:operation soapAction="http://www.next2friends.com/GetItems" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetThumbnail">
+      <soap12:operation soapAction="http://www.next2friends.com/GetThumbnail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVideos">
+      <soap12:operation soapAction="http://www.next2friends.com/GetVideos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhotos">
+      <soap12:operation soapAction="http://www.next2friends.com/GetPhotos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWallComments">
+      <soap12:operation soapAction="http://www.next2friends.com/GetWallComments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewFriends">
+      <soap12:operation soapAction="http://www.next2friends.com/GetNewFriends" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DashboardServiceHttpGet" type="tns:DashboardServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetItems">
+      <http:operation location="/GetItems" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetThumbnail">
+      <http:operation location="/GetThumbnail" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVideos">
+      <http:operation location="/GetVideos" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhotos">
+      <http:operation location="/GetPhotos" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWallComments">
+      <http:operation location="/GetWallComments" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewFriends">
+      <http:operation location="/GetNewFriends" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DashboardServiceHttpPost" type="tns:DashboardServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetItems">
+      <http:operation location="/GetItems" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetThumbnail">
+      <http:operation location="/GetThumbnail" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVideos">
+      <http:operation location="/GetVideos" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhotos">
+      <http:operation location="/GetPhotos" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWallComments">
+      <http:operation location="/GetWallComments" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewFriends">
+      <http:operation location="/GetNewFriends" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DashboardService">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Provides functionality to access Dashboard data.</wsdl:documentation>
+    <wsdl:port name="DashboardServiceSoap" binding="tns:DashboardServiceSoap">
+      <soap:address location="http://services.next2friends.com/n2fwebservices/DashboardService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="DashboardServiceSoap12" binding="tns:DashboardServiceSoap12">
+      <soap12:address location="http://services.next2friends.com/n2fwebservices/DashboardService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="DashboardServiceHttpGet" binding="tns:DashboardServiceHttpGet">
+      <http:address location="http://services.next2friends.com/n2fwebservices/DashboardService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="DashboardServiceHttpPost" binding="tns:DashboardServiceHttpPost">
+      <http:address location="http://services.next2friends.com/n2fwebservices/DashboardService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

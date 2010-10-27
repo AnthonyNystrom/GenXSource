@@ -1,0 +1,84 @@
+ {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+#TB_window {
+	FONT: 100% Arial, Helvetica, sans-serif; COLOR: #333333
+}
+#TB_secondLine {
+	FONT: 90% Arial, Helvetica, sans-serif; COLOR: #666666
+}
+#TB_window A:link {
+	COLOR: #666666
+}
+#TB_window A:visited {
+	COLOR: #666666
+}
+#TB_window A:hover {
+	COLOR: #000
+}
+#TB_window A:active {
+	COLOR: #666666
+}
+#TB_window A:unknown {
+	COLOR: #666666
+}
+#TB_overlay {
+	Z-INDEX: 100; FILTER: alpha(opacity=87); LEFT: 0px; WIDTH: 100%; POSITION: fixed; TOP: 0px; HEIGHT: 100%; BACKGROUND-COLOR: #000; moz-opacity: 0.87; opacity: 0.87
+}
+ HTML #TB_overlay {
+	POSITION: absolute; ; HEIGHT: expression(document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight : document.body.offsetHeight + 'px')
+}
+#TB_window {
+	PADDING-RIGHT: 10px; DISPLAY: none; PADDING-LEFT: 0px; Z-INDEX: 102; LEFT: 50%; PADDING-BOTTOM: 0px; PADDING-TOP: 10px; POSITION: fixed; TOP: 50%; TEXT-ALIGN: left
+}
+ HTML #TB_window {
+	; MARGIN-TOP: expression(0 - parseInt(this.offsetHeight / 2) + (TBWindowMargin = document.documentElement && document.documentElement.scrollTop || document.body.scrollTop) + 'px'); POSITION: absolute
+}
+#TB_window IMG#TB_Image {
+	DISPLAY: block
+}
+.display {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; BACKGROUND: #fff; PADDING-BOTTOM: 10px; PADDING-TOP: 10px
+}
+#TB_closeWindowButton {
+	RIGHT: 0px; BACKGROUND: url(images/close.png) no-repeat; WIDTH: 35px; POSITION: absolute; TOP: 0px; HEIGHT: 35px
+}
+#TB_prev A {
+	MARGIN-TOP: -37px; DISPLAY: block; BACKGROUND: url(images/go-prev.png) no-repeat; LEFT: 0px; WIDTH: 75px; POSITION: absolute; TOP: 50%; HEIGHT: 75px
+}
+#TB_next A {
+	MARGIN-TOP: -37px; DISPLAY: block; RIGHT: 10px; BACKGROUND: url(images/go-next.png) no-repeat; WIDTH: 75px; POSITION: absolute; TOP: 50%; HEIGHT: 75px
+}
+#TB_caption {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; FONT: 110%/120% Georgia, "Times New Roman", Times, serif; PADDING-TOP: 5px
+}
+#TB_caption SMALL {
+	DISPLAY: block; FONT: 90%/100% Arial, Helvetica, sans-serif; COLOR: #999999; PADDING-TOP: 3px
+}
+#TB_ajaxWindowTitle {
+	MARGIN-BOTTOM: 5px
+}
+#TB_title {
+	FONT: bold 110%/100% Georgia, "Times New Roman", Times, serif; COLOR: #333333; BORDER-BOTTOM: #ccc 1px dotted
+}
+#TB_ajaxContent {
+	CLEAR: both; PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; OVERFLOW: auto; PADDING-TOP: 10px; TEXT-ALIGN: left
+}
+.TB_modal#TB_ajaxContent {
+	PADDING-RIGHT: 15px; PADDING-LEFT: 15px; PADDING-BOTTOM: 15px; PADDING-TOP: 15px
+}
+#TB_load {
+	DISPLAY: none; Z-INDEX: 103; BACKGROUND: url(images/loading.gif) no-repeat center center; LEFT: 50%; MARGIN: -30px 0px 0px -30px; WIDTH: 60px; POSITION: fixed; TOP: 50%; HEIGHT: 60px
+}
+ HTML #TB_load {
+	; MARGIN-TOP: expression(0 - parseInt(this.offsetHeight / 2) + (TBWindowMargin = document.documentElement && document.documentElement.scrollTop || document.body.scrollTop) + 'px'); POSITION: absolute
+}
+#TB_HideSelect {
+	Z-INDEX: 99; FILTER: alpha(opacity=0); LEFT: 0px; WIDTH: 100%; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; POSITION: fixed; TOP: 0px; HEIGHT: 100%; BACKGROUND-COLOR: #fff; BORDER-BOTTOM-STYLE: none; moz-opacity: 0; opacity: 0
+}
+ HTML #TB_HideSelect {
+	POSITION: absolute; ; HEIGHT: expression(document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight : document.body.offsetHeight + 'px')
+}
+#TB_iframeContent {
+	CLEAR: both; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}

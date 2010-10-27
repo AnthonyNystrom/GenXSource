@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<molecule xmlns="http://www.xml-cml.org/schema/cml2/core" id="gly.pdb">
+	<atomArray>
+		<atom id="a1" elementType="N" x3="0.162000" y3="-0.202000" z3="0.000000" role="peptideN"/>
+		<atom id="a2" elementType="C" x3="1.612000" y3="-0.031000" z3="0.000000" role="skeletonC"/>
+		<atom id="a3" elementType="C" x3="1.985000" y3="1.432000" z3="0.000000" role="peptideC"/>
+		<atom id="a4" elementType="O" x3="1.137000" y3="2.319000" z3="0.000000" role="peptideO"/>
+		<atom id="a5" elementType="H" x3="-0.299000" y3="-1.179000" z3="0.000000" role="dehydrateNitrogenH"/>
+		<atom id="a6" elementType="H" x3="-0.513000" y3="0.641000" z3="0.000000" role="peptideH"/>
+		<atom id="a7" elementType="H" x3="2.055000" y3="-0.519000" z3="0.888000" role="skeletonH"/>
+		<atom id="a8" elementType="H" x3="2.055000" y3="-0.519000" z3="-0.888000"/>
+		<atom id="a9" elementType="O" x3="3.385000" y3="1.722000" z3="0.000000" role="dehydrateCarbonO"/>
+		<atom id="a10" elementType="H" x3="3.919000" y3="0.841000" z3="0.000000" role="dehydrateCarbonH"/>
+	</atomArray>
+	<bondArray>
+		<bond atomRefs2="a1 a2" order="1"/>
+		<bond atomRefs2="a2 a3" order="1"/>
+		<bond atomRefs2="a2 a7" order="1"/>
+		<bond atomRefs2="a2 a8" order="1"/>
+		<bond atomRefs2="a3 a4" order="2"/>
+		<bond atomRefs2="a1 a5" order="1"/>
+		<bond atomRefs2="a1 a6" order="1"/>
+		<bond atomRefs2="a3 a9" order="1"/>
+		<bond atomRefs2="a9 a10" order="1"/>
+	</bondArray>
+</molecule>

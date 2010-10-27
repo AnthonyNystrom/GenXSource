@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegistryMonitorDemo", "RegistryMonitorDemo.csproj", "{AEE3982F-56E2-4B72-A9A8-E0CA64D1ABFC}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegistryUtils", "..\RegistryMonitor\RegistryUtils.csproj", "{EA74FE0C-2CE0-41E8-9A36-0773F9313660}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{AEE3982F-56E2-4B72-A9A8-E0CA64D1ABFC}.Debug.ActiveCfg = Debug|.NET
+		{AEE3982F-56E2-4B72-A9A8-E0CA64D1ABFC}.Debug.Build.0 = Debug|.NET
+		{AEE3982F-56E2-4B72-A9A8-E0CA64D1ABFC}.Release.ActiveCfg = Release|.NET
+		{AEE3982F-56E2-4B72-A9A8-E0CA64D1ABFC}.Release.Build.0 = Release|.NET
+		{EA74FE0C-2CE0-41E8-9A36-0773F9313660}.Debug.ActiveCfg = Debug|.NET
+		{EA74FE0C-2CE0-41E8-9A36-0773F9313660}.Debug.Build.0 = Debug|.NET
+		{EA74FE0C-2CE0-41E8-9A36-0773F9313660}.Release.ActiveCfg = Release|.NET
+		{EA74FE0C-2CE0-41E8-9A36-0773F9313660}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

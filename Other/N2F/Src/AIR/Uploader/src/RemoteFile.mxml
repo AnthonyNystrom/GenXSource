@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Box xmlns:mx="http://www.adobe.com/2006/mxml"
+	xmlns:n2f="*"
+	dataChange="OnDataChange( event )" creationComplete="OnCreated( event )"
+	paddingLeft="5" paddingTop="5" paddingRight="5" paddingBottom="5"
+	doubleClick="{Preview( event )}" doubleClickEnabled="true" mouseEnabled="true" contextMenu="{menu}">
+
+	<mx:Metadata>
+		[ Event( name="action", type="ItemEvent" ) ]
+		[ Event( name="Rotate", type="ItemEvent" ) ]
+	</mx:Metadata>
+
+	<mx:Script>
+		<![CDATA[
+			import mx.controls.Alert;
+			import com.next2friends.PhotoItem;
+
+			[Bindable] public var upload : Upload = null;
+			[Bindable] private var menu : ContextMenu = new ContextMenu();
+			[Bindable] private var imageUrl : String = null;
+
+			private function OnCreated( event : Event ) : void
+			{
+				AddMenuItem( menu, "Delete", Delete );
+				AddMenuItem( menu, "Rotate clockwise", RotateC );
+				AddMenuItem( menu, "Rotate anti-clockwise", RotateAC );
+			}
+
+			private function AddMenuItem( menu : ContextMenu, text : String, onSelect : Function ) : void
+			{
+				var item : ContextMenuItem = new ContextMenuItem( text );
+				item.addEventListener( ContextMenuEvent.MENU_ITEM_SELECT, onSelect );
+				menu.customItems.push( item );
+			}
+
+			private function OnDataChange( event : Event ) : void
+			{
+				imageUrl = Url( data );
+/*
+				setTimeout( function() : void
+				{
+					var remove : Function = function() : void
+					{
+						upload.removeEventListener( Event.COMPLETE, onComplete );
+						upload.removeEventListener( HTTPStatusEvent.HTTP_STATUS, onError );
+						upload = null;
+					}
+
+					var onComplete : Function = function( event : Event ) : void
+					{
+						remove();
+					};
+
+					var onError : Function = function( event : Event ) : void
+					{
+						remove();
+						Alert.show( "An error occurred uploading " + imageUrl );
+					}
+
+					upload = Upload.uploads[ imageUrl ] as Upload;
+
+					if ( upload != null )
+					{
+						upload.addEventListener( Event.COMPLETE, onComplete );
+						upload.addEventListener( HTTPStatusEvent.HTTP_STATUS, onError );
+					}
+				}, 1000 );*/
+			}
+
+			private function Preview( event : Event ) : void
+			{
+				if ( image.loader.error == null ) dispatchEvent( new ItemEvent( "Preview", data ) );
+				else Alert.show( "There was an error retrieving this image: " + image.loader.error );
+			}
+
+			private function Delete( event : Event ) : void
+			{
+				dispatchEvent( new ItemEvent( "Delete", data ) );
+			}
+
+			private function Rename( event : Event ) : void
+			{
+				dispatchEvent( new ItemEvent( "Rename", data ) );
+			}
+
+			private function RotateC( event : Event ) : void
+			{
+				dispatchEvent( new ItemEvent( "Rotate", data, 90 ) );
+			}
+
+			private function RotateAC( event : Event ) : void
+			{
+				dispatchEvent( new ItemEvent( "Rotate", data, -90 ) );
+			}
+
+			private function OnRender( event : Event ) : void
+			{
+				if ( upload == null )
+				{
+					var remove : Function = function() : void
+					{
+						upload.removeEventListener( Event.COMPLETE, onComplete );
+						upload.removeEventListener( HTTPStatusEvent.HTTP_STATUS, onError );
+						upload = null;
+					}
+
+					var onComplete : Function = function( event : Event ) : void
+					{
+						remove();
+					};
+
+					var onError : Function = function( event : Event ) : void
+					{
+						remove();
+						Alert.show( "An error occurred uploading " + imageUrl );
+					}
+
+					upload = Upload.uploads[ imageUrl ] as Upload;
+
+					if ( upload != null )
+					{
+						upload.addEventListener( Event.COMPLETE, onComplete );
+						upload.addEventListener( HTTPStatusEvent.HTTP_STATUS, onError );
+					}
+				}
+			}
+
+			[Bindable(event="propertyChange")] private function Url( file : Object ) : String
+			{
+				if ( file is PhotoItem ) return file.ThumbnailURL;
+				return file.url;
+			}
+
+			[Bindable(event="propertyChange")] private function Name( file : Object ) : String
+			{
+				if ( file is PhotoItem ) return file.WebPhotoID;
+				return file.name;
+			}
+		]]>
+	</mx:Script>
+
+	<mx:Fade id="fade" />
+
+	<mx:Canvas width="100%" height="100%">
+
+		<n2f:ThumbnailView id="image" width="100%" height="100%" render="OnRender( event )"
+			toolTip="{image.loader.error == null ? 'Double-click for preview' : 'ERROR: ' + image.loader.error}"
+			maxImageWidth="240" maxImageHeight="160"
+			url="{imageUrl}" thumbnail="true" alpha="{upload != null ? 0.5 : 1.0}">
+		</n2f:ThumbnailView>
+
+		<mx:Canvas width="100%" height="100%"
+			visible="{upload != null}" clipContent="true" hideEffect="{fade}">
+			<mx:ProgressBar id="progress" width="100%" source="{upload}" includeInLayout="false" label="">
+<!--				<mx:filters>
+					<mx:DropShadowFilter alpha="0.5" angle="45" distance="5" blurX="10" blurY="10" />
+				</mx:filters>-->
+			</mx:ProgressBar>
+		</mx:Canvas>
+
+	</mx:Canvas>
+
+</mx:Box>

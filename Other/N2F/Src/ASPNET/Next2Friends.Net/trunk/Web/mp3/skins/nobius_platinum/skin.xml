@@ -1,0 +1,66 @@
+
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<skin version="1.0.0">
+
+	<layout>
+
+		<image src="background.png" x="0" y="0"></image>
+		<image src="fft_background.png" x="155" y="20"></image>
+		<image src="albumart_background.png" x="11" y="10"></image>
+
+		<font id="TEXT" 	charW="6"  charH="8" chars="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&amp;*()-_+=[]{}|\/:;,.&lt;&gt;?' " src="font.png"></font>
+		<font id="DIGITS" 	charW="12" charH="14" chars="0123456789:" src="digits.png"></font>
+		
+		<button id="PLAY" 		frameH="42" x="116" y="82" src="b_play.png"></button>
+		<button id="STOP" 		frameH="21" x="160" y="91" src="b_stop.png"></button>
+		<button id="NEXT" 		frameH="21" x="183" y="89" src="b_next.png"></button>
+		<button id="PAUSE" 		frameH="21" x="92"  y="91" src="b_pause.png"></button>
+		<button id="PREV" 		frameH="21" x="69"  y="89" src="b_prev.png"></button>
+		<button id="REPEAT" 	frameH="12" x="232"  y="90" src="b_small.png"></button>
+		<button id="SHUFFLE" 	frameH="12" x="248"  y="90" src="b_small.png"></button>
+		<button id="MUTE" 		frameH="12" x="248"  y="129" src="b_small.png"></button>
+		
+		<display id="SONGINFO" width="166" height="8"  x="88" y="58" font="TEXT"    defaultText="E-PHONIC MP3-PLAYER - GET YOUR OWN FREE SKINNABLE MP3-PLAYER AT WWW.E-PHONIC.COM/MP3PLAYER"></display>
+		<display id="SONGTIME" width="200" height="20" x="88" y="28" font="DIGITS"  defaultText="00:00"></display>
+
+		<visualization width="99" height="29" x="155" y="20" color="0xFF79D1FF" clickList="fft, scope, wave, peak">
+			<fft src="fft.png" blur="0"></fft>
+			<scope src="scope.png" blur="8"></scope>
+			<wave src="wave.png" blur="0"></wave>
+			<peak src="peak.png" blur="0"></peak>
+		</visualization>
+
+		<slider id="TRANSPORT" x="7" y="129">
+			<background src="transport_bg.png"></background>
+			<handle src="transport_handle.png" frameH="12"></handle>
+			<indicator src="transport_loaded.png"></indicator>
+		</slider>
+		
+		<slider id="VOLUME" x="184" y="129">
+			<background src="volume_bg.png"></background>
+			<handle src="handle.png" frameH="12"></handle>
+			<indicator src="volume_loaded.png"></indicator>
+		</slider>
+		
+		<slider id="PLAYLIST" x="248" y="153" orientation="vertical">
+			<background src="scrollbar_bg.png"></background>
+			<handle src="handle.png" frameH="12"></handle>
+			<indicator src="scrollbar_indicator.png"></indicator>
+		</slider>	
+		
+		<playlist width="255" height="50" x="7" y="156" font="TEXT">
+			<button frameH="10" txtX="7" txtY="1" src="b_playlist.png"></button>
+		</playlist>
+		
+		<albumart x="12" y="11" width="68" height="68">
+			<default src="albumart_default.png"></default>
+			<loading src="albumart_loading.png"></loading>
+			<error src="albumart_error.png"></error>
+		</albumart>		
+				
+		<ephonic_icon x="8" y="91"></ephonic_icon>
+
+	</layout>
+
+</skin>

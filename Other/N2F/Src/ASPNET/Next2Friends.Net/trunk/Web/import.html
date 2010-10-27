@@ -1,0 +1,422 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="ctl00_MasterHeader">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link href="StyleB.css" rel="stylesheet" type="text/css" />
+	<link rel="shortcut icon" href="http://www.n2fstaticx3.com/favicon.ico" type="image/x-icon" />
+	<link rel="icon" href="http://www.n2fstaticx3.com/favicon.ico" type="image/x-icon" />
+    <script type="text/javascript" src="./lib/jquery.js"></script>
+<title>
+	Next2Friends Beta - dashboard
+</title></head>
+<body  id='Feed'>
+
+<div id="page">
+
+ 
+        <!--/header start -->
+        <div id="header">
+
+            <a href="http://www.next2friends.com">
+                <img src="./images/logo.gif" alt="Next2Friends" id="logo" /></a>
+         <div style="position:absolute;right:0px;top:30px;" id="pSearch">
+         <form name="aspnetForm" method="post" action="dashboard" id="aspnetForm">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTkxOTE5ODU3NA9kFgJmD2QWAgIBD2QWBGYPD2QWAh4Kb25LZXlQcmVzcwVUamF2YXNjcmlwdDppZiAoZXZlbnQua2V5Q29kZSA9PSAxMyl7IF9fZG9Qb3N0QmFjaygnY3RsMDAkYnRuTG9naW4nLCcnKTtyZXR1cm4gZmFsc2V9ZAIBDw9kFgIfAAVUamF2YXNjcmlwdDppZiAoZXZlbnQua2V5Q29kZSA9PSAxMyl7IF9fZG9Qb3N0QmFjaygnY3RsMDAkYnRuTG9naW4nLCcnKTtyZXR1cm4gZmFsc2V9ZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAQUTY3RsMDAkY2hiUmVtZW1iZXJNZUMhbcxr1qjS/4hMkJApacrUbMea" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script type="text/javascript" src="./ajaxpro/prototype.ashx"></script>
+<script type="text/javascript" src="./ajaxpro/core.ashx"></script>
+<script type="text/javascript" src="./ajaxpro/ms.ashx"></script>
+<script type="text/javascript" src="./ajaxpro/converter.ashx"></script>
+<script type="text/javascript" src="./ajaxpro/Main,App_Web_2xsmnlhu.ashx"></script>
+
+           
+			<input id="search" type="text" style="width:200px" value="" class="form_txt2" />
+			in
+			<select id="category" class="form_txt2" style="width:80px">
+
+				<option value="video" >video</option>
+				<option value="people" >people</option>
+			</select>
+			<div id="friendoptions" style="display:none;top:55px;z-index:500;">
+               <p>
+					<label>Email</label>
+					<input id="email" style="width:200px" value="" type="text" class="form_txt2" />
+
+				</p>
+				<p>
+					<label>Sex</label>
+					<select id="sex" class="form_txt2" style="width:90px">
+						<option value="-1">Any</option>
+						<option value="1" >Male</option>
+						<option value="0" >Female</option>
+
+					</select>
+				</p>
+				<p>
+					<label>Country</label>
+						<span id="sCountry"></span>
+				
+				</p>
+				<p>
+					<label>City</label>
+
+					<input id="city" type="text" class="form_txt2" value="" style="width:200px" />
+				</p>
+				<p>
+					<label>Profile keywords</label>
+					<textarea id="profile" cols="25" rows="3" class="form_txt2" style="width:200px"></textarea>
+				</p>
+				<p class="indent"><input id="avatar" type="checkbox" value="yes"  /> Avatar photo only</p>
+
+				<div class="arrow"></div>
+			</div>
+			<input id="searchButton" type="button" value="Search" class="form_btn2" />
+		<br/>
+		<a href="javascript:void(0);" style="position:absolute;top:25px;font-size:smaller;display:none;" id="advancedSearch">Advanced search</a>
+		</div>       
+            <ul id="nav">
+                <li><a href="/" ><span>Home</span></a></li>
+
+                
+                <li><a href="/community" ><span>Community</span></a></li>
+                <li><a href="/video" ><span>Videos</span></a></li>
+                <li><a href="/ask" ><span>Ask</span></a></li>
+                <li id="greenTab"><a href="/features" ><span>Mobile</span></a></li>
+            </ul>
+            
+            
+            <ul id="header_nav">
+             
+            
+			
+			<li>
+
+				<a  href="javascript:void(0);" class="profile_dropdown">Chat</a>
+				<ul  style="display:none;">
+					<li><a href="javascript:openChatWindow();void(0);">Windowed</a></li>
+					<li><a href="/chat/" target="_self" >Integrated</a></li>
+
+				</ul>
+			</li>
+			<li><a href="/users/Comosicus">Profile</a></li>
+
+			<li><a href="/friends">Friends</a></li>
+			<li><a href="/dashboard">Dashboard</a></li>
+		    <li><a href="/inbox" class="message_inbox" >Inbox (<div style="display:inline" id="spanInboxCount">0</div>)</a></li>
+			
+            <li class="last"><a href="javascript:__doPostBack('ctl00$ctl05','')">Logout</a></li>
+            
+		</ul>
+		
+				  
+            <p id="upload">My Media<a href="/myvideos" title="Video"><img src="./images/icon-video.gif" alt="" class="videos" /><span class="videos_span">Videos</span></a><a href="/myphotos" title="Photo">
+
+            <img src="./images/icon-image.gif" alt="" class="photos" /><span class="photos_span">Photos</span></a></p>                         
+        </div>
+
+        <!-- header end -->
+        
+
+	<div id="middle" class="clearfix no_subnav">
+	
+	<div class="profile_leftcol">
+
+		
+		<div class="profile_box">
+			<h3 class="profile_name">My Favorites</h3>		
+			<div class="collapsible_div">
+				You have no Favorites
+			</div>
+		</div>
+	</div>
+		
+	<div class="profile_rightcol">
+	
+	<!-- START NEW CONTENT -->
+	
+	<div class="contactBlock">
+		<div class="nameTag">
+			<ul>
+				<li>
+					<span>A</span>
+				</li>
+				<li class="selected">
+					<a href="#">B</a>
+				</li>
+				<li>
+					<a href="#">C</a>
+				</li>
+				<li>
+					<span>D</span>
+				</li>
+				<li>
+					<span>E</span>
+				</li>
+				<li>
+					<span>F</span>
+				</li>
+				<li>
+					<span>G</span>
+				</li>
+				<li>
+					<a href="#">H</a>
+				</li>
+				<li>
+					<span>I</span>
+				</li>
+				<li>
+					<span>J</span>
+				</li>
+				<li>
+					<span>K</span>
+				</li>
+				<li>
+					<a href="#">L</a>
+				</li>
+				<li>
+					<span>M</span>
+				</li>
+				<li>
+					<a href="#">N</a>
+				</li>
+				<li>
+					<span>O</span>
+				</li>
+				<li>
+					<a href="#">P</a>
+				</li>
+				<li>
+					<span>Q</span>
+				</li>
+				<li>
+					<span>R</span>
+				</li>
+				<li>
+					<a href="#">S</a>
+				</li>
+				<li>
+					<span>T</span>
+				</li>
+				<li>
+					<span>U</span>
+				</li>
+				<li>
+					<span>V</span>
+				</li>
+				<li>
+					<span>W</span>
+				</li>
+				<li>
+					<span>X</span>
+				</li>
+				<li>
+					<span>Y</span>
+				</li>
+				<li>
+					<span>Z</span>
+				</li>
+			</ul>
+		</div>
+		<div class="contactList">
+			<div class="contactHeader">
+				<span class="floatRight">Showing <strong>8</strong> of <strong>8</strong> contacts</span>
+				<input type="checkbox" /> Select All
+			</div>
+			<div class="subcatHolder">
+				<h2 class="subcatHeader"><span>B</span></h2>
+				
+				<div class="contactSubCat">
+					<div class="contactCheckBox">
+						<input type="checkbox" />
+					</div>
+					<div class="contactName">
+						<h3>Botley, Lawrence</h3>
+					</div>
+					<div class="contactDetails">
+						<p>
+							<strong>Nickname:</strong> <a href="#">Lawrence</a><br />
+							<strong>Location:</strong> US<br />
+							<strong>Gender:</strong> Male<br />
+							<strong>Age:</strong> 35
+						</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				
+				<h2 class="subcatHeader"><span>C</span></h2>
+				
+				<div class="contactSubCat">
+					<div class="contactCheckBox">
+						<input type="checkbox" />
+					</div>
+					<div class="contactName">
+						<h3>Candelaria, Jerry</h3>
+					</div>
+					<div class="contactDetails">
+						<p>
+							<strong>Nickname:</strong> <a href="#">Lawrence</a><br />
+							<strong>Location:</strong> US<br />
+							<strong>Gender:</strong> Male<br />
+							<strong>Age:</strong> 35
+						</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				
+				<h2 class="subcatHeader"><span>H</span></h2>
+				
+				<div class="contactSubCat">
+					<div class="contactCheckBox">
+						<input type="checkbox" />
+					</div>
+					<div class="contactName">
+						<h3>Hurt, William</h3>
+					</div>
+					<div class="contactDetails">
+						<p>
+							<strong>Nickname:</strong> <a href="#">Lawrence</a><br />
+							<strong>Location:</strong> US<br />
+							<strong>Gender:</strong> Male<br />
+							<strong>Age:</strong> 35
+						</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				
+				<h2 class="subcatHeader"><span>L</span></h2>
+				
+				<div class="contactSubCat">
+					<div class="contactCheckBox">
+						<input type="checkbox" />
+					</div>
+					<div class="contactName">
+						<h3>Lalji, Sonia</h3>
+					</div>
+					<div class="contactDetails">
+						<p>
+							<strong>Nickname:</strong> <a href="#">Lawrence</a><br />
+							<strong>Location:</strong> US<br />
+							<strong>Gender:</strong> Male<br />
+							<strong>Age:</strong> 35
+						</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				
+				<h2 class="subcatHeader"><span>N</span></h2>
+				
+				<div class="contactSubCat">
+					<div class="contactCheckBox">
+						<input type="checkbox" />
+					</div>
+					<div class="contactName">
+						<h3>Nystrom, Anthony</h3>
+					</div>
+					<div class="contactDetails">
+						<p>
+							<strong>Nickname:</strong> <a href="#">Lawrence</a><br />
+							<strong>Location:</strong> US<br />
+							<strong>Gender:</strong> Male<br />
+							<strong>Age:</strong> 35
+						</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				
+				<div class="contactSubCat">
+					<div class="contactCheckBox">
+						<input type="checkbox" />
+					</div>
+					<div class="contactName">
+						<h3>Nystrom, Kassandra</h3>
+					</div>
+					<div class="contactDetails">
+						<p>
+							<strong>Nickname:</strong> <a href="#">Lawrence</a><br />
+							<strong>Location:</strong> US<br />
+							<strong>Gender:</strong> Male<br />
+							<strong>Age:</strong> 35
+						</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				
+				
+			</div>
+		</div>
+		
+		<div class="contactInvite">
+			<p>
+				<textarea>To add contacts, click to the checkbox next to the person's name/email</textarea>
+			</p>
+			<p>
+				<input type="checkbox" /> Add a personal note
+			</p>
+			<p>
+				<input type="image" src="images/btn-addfriends.gif" width="127" height="24" />
+			</p>
+		</div>
+		
+		<div class="clear"></div>
+	</div>
+	
+	<div class="clear"></div>
+	
+	<!-- END NEW CONTENT -->
+	</div>	
+		
+</div>		
+				
+
+        <!-- footer start -->
+        <div id="footer">
+            <p id="credits">
+               Copyright Next2Friends 2008 | 
+               <a href="/PP.aspx">Privacy Policy</a> | 
+               <a href="/TOU.aspx">Terms of Use</a> |  
+               <a href="/Labs.aspx">Labs</a> | 
+               <a href="/Developers.aspx">Developers</a> | 
+               <a href="http://www.next2friendsblog.com">Blog</a> | 
+               <a href="/AboutUs.aspx">About Us</a>
+
+            </p>
+        </div>
+        <!-- footer end -->
+        
+    </form>
+    </div>
+    
+    <!--page end -->
+
+    <script type="text/javascript" src="./js/N2F.js"></script>
+    
+    <script type="text/javascript" src="./lib/jquery.bgiframe.js"></script>
+
+    <script type="text/javascript" src="./js/countries.js"></script>
+    <script type="text/javascript" src="./lib/jquery_global.js"></script>
+    
+
+</body>
+</html>

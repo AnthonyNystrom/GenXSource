@@ -1,0 +1,814 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DotNetLib.Windows.Forms</name>
+    </assembly>
+    <members>
+        <member name="T:DotNetLib.Windows.Forms.ContainerListViewItemCollection">
+            <summary>
+            Implements a strongly typed collection of <see cref="T:DotNetLib.Windows.Forms.ContainerListViewItem"/> elements.
+            </summary>
+            <remarks>
+            <b>ContainerListViewItemCollection</b> provides an <see cref="T:System.Collections.ArrayList"/>
+            that is strongly typed for <see cref="T:DotNetLib.Windows.Forms.ContainerListViewItem"/> elements.
+            </remarks>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewItemCollection.Add(DotNetLib.Windows.Forms.ContainerListViewItem)">
+            <summary>
+            Adds an existing <see cref="T:DotNetLib.Windows.Forms.ContainerListViewItem"/> object to the collection.
+            </summary>
+            <param name="item">The <b>ContainerListViewItem</b> object to add to the collection.</param>
+            <returns>The position into which the new element was inserted.</returns>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewItemCollection.Add(System.String)">
+            <summary>
+            Adds an item to the collection with the specified text.
+            </summary>
+            <param name="text">The text to display.</param>
+            <returns>The <see cref="T:DotNetLib.Windows.Forms.ContainerListViewItem"/> that was added to the collection.</returns>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewItemCollection.Add(System.String,System.Int32)">
+            <summary>
+            Adds an item to the collection with the specified text and image index.
+            </summary>
+            <param name="text">The text to display.</param>
+            <param name="imageIndex">The index of the image to display.</param>
+            <returns>The <see cref="T:DotNetLib.Windows.Forms.ContainerListViewItem"/> that was added to the collection.</returns>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewItemCollection.Add(System.String,System.Int32,System.Int32)">
+            <summary>
+            Adds an item to the collection with the specified properties.
+            </summary>
+            <param name="text">The text to display.</param>
+            <param name="imageIndex">The index of the image to display.</param>
+            <param name="selectedImageIndex">The index of the image to display when the item is selected.</param>
+            <returns>The <see cref="T:DotNetLib.Windows.Forms.ContainerListViewItem"/> that was added to the collection.</returns>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewItemCollection.Insert(System.Int32,DotNetLib.Windows.Forms.ContainerListViewItem)">
+            <summary>
+            Inserts an existing <see cref="T:DotNetLib.Windows.Forms.ContainerListViewItem"/> object to the collection at the specified index.
+            </summary>
+            <param name="index">The zero-based index location where the item is inserted.</param>
+            <param name="item">The <b>ContainerListViewItem</b> object to add to the collection.</param>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewItemCollection.Insert(System.Int32,System.String)">
+            <summary>
+            Inserts an item to the collection with the specified text at the specified index.
+            </summary>
+            <param name="index">The zero-based index location where the item is inserted.</param>
+            <param name="text">The text to display.</param>
+            <returns>The <see cref="T:DotNetLib.Windows.Forms.ContainerListViewItem"/> that was added to the collection.</returns>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewItemCollection.Insert(System.Int32,System.String,System.Int32)">
+            <summary>
+            Inserts an item to the collection with the specified text and image index at the specified index.
+            </summary>
+            <param name="index">The zero-based index location where the item is inserted.</param>
+            <param name="text">The text to display.</param>
+            <param name="imageIndex">The index of the image to display.</param>
+            <returns>The <see cref="T:DotNetLib.Windows.Forms.ContainerListViewItem"/> that was added to the collection.</returns>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewItemCollection.Insert(System.Int32,System.String,System.Int32,System.Int32)">
+            <summary>
+            Inserts an item to the collection with the specified properties at the specified index.
+            </summary>
+            <param name="index">The zero-based index location where the item is inserted.</param>
+            <param name="text">The text to display.</param>
+            <param name="imageIndex">The index of the image to display.</param>
+            <param name="selectedImageIndex">The index of the image to display when the item is selected.</param>
+            <returns>The <see cref="T:DotNetLib.Windows.Forms.ContainerListViewItem"/> that was added to the collection.</returns>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewItemCollection.Remove(DotNetLib.Windows.Forms.ContainerListViewItem)">
+            <summary>
+            Removes the specified <see cref="T:DotNetLib.Windows.Forms.ContainerListViewItem"/> from the collection.
+            </summary>
+            <param name="item">A <see cref="T:DotNetLib.Windows.Forms.ContainerListViewItem"/> to remove from the collection.</param>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewItemCollection.AddRange(DotNetLib.Windows.Forms.ContainerListViewItem[])">
+            <summary>
+            Adds an array of <see cref="T:DotNetLib.Windows.Forms.ContainerListViewItem"/> objects to the collection.
+            </summary>
+            <param name="items">An array of <see cref="T:DotNetLib.Windows.Forms.ContainerListViewItem"/> objects to add to the collection.</param>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewItemCollection.IndexOf(DotNetLib.Windows.Forms.ContainerListViewItem)">
+            <summary>
+            Returns the index within the collection of the specified item.
+            </summary>
+            <param name="item">A <see cref="T:DotNetLib.Windows.Forms.ContainerListViewItem"/> representing the item to locate in the collection.</param>
+            <returns>The zero-based index of the item's location in the collection.  If the item is not located in the collection the return value is negative one (-1).</returns>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewItemCollection.Contains(DotNetLib.Windows.Forms.ContainerListViewItem)">
+            <summary>
+            Determines whether the specified item is located in the collection.
+            </summary>
+            <param name="item">A <see cref="T:DotNetLib.Windows.Forms.ContainerListViewItem"/> representing the item to locate in the collection.</param>
+            <returns><b>true</b> if the column is contained in the collection; otherwise, <b>false</b>.</returns>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewItemCollection.Clear">
+            <summary>
+            Removes all items from the collection.
+            </summary>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewItemCollection.Sort(System.Collections.IComparer)">
+            <summary>
+            Sorts the elements using the specified comparer.
+            </summary>
+            <param name="comparer">The <see cref="T:System.Collections.IComparer"/> to use when comparing elements.</param>
+        </member>
+        <member name="P:DotNetLib.Windows.Forms.ContainerListViewItemCollection.Item(System.Int32)">
+            <summary>
+            Indicates the <see cref="T:DotNetLib.Windows.Forms.ContainerListViewItem"/> at the specified indexed
+            location in the collection.  In C#, this property is the indexer for the
+            <b>ContainerListViewItemCollection</b> class.
+            </summary>
+        </member>
+        <member name="T:DotNetLib.Windows.Forms.ContainerListViewColumnHeader">
+            <summary>
+            Represents a single column header in a <see cref="T:DotNetLib.Windows.Forms.ContainerListView"/> control.
+            </summary>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewColumnHeader.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DotNetLib.Windows.Forms.ContainerListViewColumnHeader"/> class.
+            </summary>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewColumnHeader.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DotNetLib.Windows.Forms.ContainerListViewColumnHeader"/> class with the specified text.
+            </summary>
+            <param name="text">The text to use in the column header.</param>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewColumnHeader.#ctor(System.String,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DotNetLib.Windows.Forms.ContainerListViewColumnHeader"/> class with the specified text and width.
+            </summary>
+            <param name="text">The text to use in the column header.</param>
+            <param name="width">The initial width of the colun header.</param>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewColumnHeader.#ctor(System.String,System.Int32,System.Windows.Forms.HorizontalAlignment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DotNetLib.Windows.Forms.ContainerListViewColumnHeader"/> class with the specified properties.
+            </summary>
+            <param name="text">The text to use in the column header.</param>
+            <param name="width">The initial width of the colun header.</param>
+            <param name="horizontalAlign">The horizontal alignment of the column header content, will default vertical alignment to middle</param>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewColumnHeader.#ctor(System.String,System.Int32,System.Drawing.ContentAlignment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DotNetLib.Windows.Forms.ContainerListViewColumnHeader"/> class with the specified properties.
+            </summary>
+            <param name="text">The text to use in the column header.</param>
+            <param name="width">The initial width of the colun header.</param>
+            <param name="contentAlign">The content alignment of the column header content</param>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewColumnHeader.AutoSizeWidth(System.Boolean)">
+            <summary>
+            Will automatically size the width of the column to fit the text
+            </summary>
+            <param name="includeItemWidths">If <b>true</b> will use the sizes the SubItems as well.  If <b>false</b> it will just use the text on the header.</param>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewColumnHeader.Clone">
+            <summary>
+            Creates an identity copy of the current <see cref="T:DotNetLib.Windows.Forms.ContainerListViewColumnHeader"/> that is not attached to any <see cref="T:DotNetLib.Windows.Forms.ContainerListView"/>.
+            </summary>
+            <returns>An object representing a copy of this <see cref="T:DotNetLib.Windows.Forms.ContainerListViewColumnHeader"/> object.</returns>
+        </member>
+        <member name="P:DotNetLib.Windows.Forms.ContainerListViewColumnHeader.Image">
+            <summary>
+            Gets or sets the <see cref="T:System.Drawing.Image"/> used to paint on the column header.
+            </summary>
+        </member>
+        <member name="P:DotNetLib.Windows.Forms.ContainerListViewColumnHeader.ForeColor">
+            <summary>
+            Gets or sets the Color used to paint the column header text.
+            </summary>
+        </member>
+        <member name="P:DotNetLib.Windows.Forms.ContainerListViewColumnHeader.Font">
+            <summary>
+            Gets or sets the Font used to paint the column header text.  If left null it will use the <see cref="T:DotNetLib.Windows.Forms.ContainerListView"/>'s Font property.
+            </summary>
+        </member>
+        <member name="P:DotNetLib.Windows.Forms.ContainerListViewColumnHeader.Text">
+            <summary>
+            Gets or sets the text of the column header.
+            </summary>
+        </member>
+        <member name="P:DotNetLib.Windows.Forms.ContainerListViewColumnHeader.ContentAlign">
+            <summary>
+            Gets or sets the alignment of the content for the column header.
+            </summary>
+        </member>
+        <member name="P:DotNetLib.Windows.Forms.ContainerListViewColumnHeader.Width">
+            <summary>
+            The width of the column header.
+            </summary>
+        </member>
+        <member name="P:DotNetLib.Windows.Forms.ContainerListViewColumnHeader.MinimumWidth">
+            <summary>
+            Gets or sets the minimum width a column is allowed to be.
+            </summary>
+        </member>
+        <member name="P:DotNetLib.Windows.Forms.ContainerListViewColumnHeader.MaximumWidth">
+            <summary>
+            Gets or sets the maximum width a column is allowed to be.
+            </summary>
+        </member>
+        <member name="P:DotNetLib.Windows.Forms.ContainerListViewColumnHeader.Visible">
+            <summary>
+            Gets or sets a value to indicate whether or not the column is being drawn actively or not.  Is not affected by the scrolling area.
+            </summary>
+        </member>
+        <member name="P:DotNetLib.Windows.Forms.ContainerListViewColumnHeader.SortDataType">
+            <summary>
+            Gets or sets the data type used for comparisons when sorting this column.
+            </summary>
+        </member>
+        <member name="P:DotNetLib.Windows.Forms.ContainerListViewColumnHeader.DefaultSortOrder">
+            <summary>
+            Gets or sets the <see cref="P:DotNetLib.Windows.Forms.ContainerListViewColumnHeader.SortOrder"/> that is used as the default when this column is first sorted.
+            </summary>
+        </member>
+        <member name="P:DotNetLib.Windows.Forms.ContainerListViewColumnHeader.ToolTip">
+            <summary>
+            Gets or sets the text of the tool tip for this column header.
+            </summary>
+        </member>
+        <member name="P:DotNetLib.Windows.Forms.ContainerListViewColumnHeader.CustomSortComparer">
+            <summary>
+            Gets or sets the custom IComparer, SortDataType must be set to <b>Custom</b> for this to be used
+            </summary>
+        </member>
+        <member name="P:DotNetLib.Windows.Forms.ContainerListViewColumnHeader.ListView">
+            <summary>
+            Gets the <see cref="T:DotNetLib.Windows.Forms.ContainerListView"/> that this header is attached to.
+            </summary>
+        </member>
+        <member name="P:DotNetLib.Windows.Forms.ContainerListViewColumnHeader.SortOrder">
+            <summary>
+            Gets the <see cref="P:DotNetLib.Windows.Forms.ContainerListViewColumnHeader.SortOrder"/> that this column is current being sorted by.  If value is <b>SortOrder.None</b> then it currently isn't being sorted by.
+            </summary>
+        </member>
+        <member name="P:DotNetLib.Windows.Forms.ContainerListViewColumnHeader.Index">
+            <summary>
+            Gets the index of this header in the containing <see cref="T:DotNetLib.Windows.Forms.ContainerListViewColumnHeaderCollection"/>.
+            </summary>
+        </member>
+        <member name="P:DotNetLib.Windows.Forms.ContainerListViewColumnHeader.DisplayIndex">
+            <summary>
+            Gets or sets the display index of this header.
+            </summary>
+        </member>
+        <member name="P:DotNetLib.Windows.Forms.ContainerListViewColumnHeader.Hovered">
+            <summary>
+            Gets or sets the value indicating whether or not this column is currently being tracked.
+            </summary>
+        </member>
+        <member name="P:DotNetLib.Windows.Forms.ContainerListViewColumnHeader.Pressed">
+            <summary>
+            Gets or sets the value indicating whether or not this column is currently being pressed.
+            </summary>
+        </member>
+        <member name="T:DotNetLib.Windows.Forms.SortDataType">
+            <summary>
+            Spefifies the data type to use for sorting the column
+            </summary>
+        </member>
+        <member name="F:DotNetLib.Windows.Forms.SortDataType.None">
+            <summary>
+            No sorting.
+            </summary>
+        </member>
+        <member name="F:DotNetLib.Windows.Forms.SortDataType.String">
+            <summary>
+            Sorts values as strings.
+            </summary>
+        </member>
+        <member name="F:DotNetLib.Windows.Forms.SortDataType.Integer">
+            <summary>
+            Sorts values as integers.
+            </summary>
+        </member>
+        <member name="F:DotNetLib.Windows.Forms.SortDataType.Double">
+            <summary>
+            Sorts values as doubles.
+            </summary>
+        </member>
+        <member name="F:DotNetLib.Windows.Forms.SortDataType.Date">
+            <summary>
+            Sorts values as DateTime.
+            </summary>
+            <remarks>
+            Uses DateTime.Parse to convert the text into a DateTime.  If it fails
+            it will revert back to string comparisons.  This will be very slow
+            sort due to the large number of exceptions being thrown.  If you expect
+            to have a mixture of dates and strings, write your own custom sorter.
+            </remarks>
+        </member>
+        <member name="F:DotNetLib.Windows.Forms.SortDataType.Custom">
+            <summary>
+            Indicates that the sort algorithm should use a user defined IComparer.
+            See the <b>CustomSortComparer</b> property. Handle exceptions yourself
+            as this control will not. Your IComparer will receive the two
+            <see cref="T:DotNetLib.Windows.Forms.ContainerListViewSubItem"/>s that need to be compared.
+            </summary>
+            <remarks>
+            Do not worry yourself with <b>SortOrder</b>, that will be handled by
+            the control automatically.  Your job is to simply sort them in order.
+            </remarks>
+        </member>
+        <member name="T:DotNetLib.Windows.Forms.GridLines">
+            <summary>
+            Specifies the grid line styles for controls displaying items in a table structure
+            </summary>
+        </member>
+        <member name="F:DotNetLib.Windows.Forms.GridLines.None">
+            <summary>
+            No grid lines
+            </summary>
+        </member>
+        <member name="F:DotNetLib.Windows.Forms.GridLines.Horizontal">
+            <summary>
+            Horizontal grid lines
+            </summary>
+        </member>
+        <member name="F:DotNetLib.Windows.Forms.GridLines.Vertical">
+            <summary>
+            Vertical grid lines
+            </summary>
+        </member>
+        <member name="F:DotNetLib.Windows.Forms.GridLines.Both">
+            <summary>
+            Both horizontal and vertical grid lines rendered.
+            </summary>
+        </member>
+        <member name="T:DotNetLib.Windows.Forms.ContainerListView">
+            <summary>
+            Provides a ListView control in detail mode that provides containers for each cell in a row/column.
+            The container can hold almost any object that derives directly or indirectly from Control.
+            </summary>
+        </member>
+        <member name="F:DotNetLib.Windows.Forms.ContainerListView._detailVisibleRect">
+            the visible portion of the header control
+        </member>
+        <member name="F:DotNetLib.Windows.Forms.ContainerListView._detailRect">
+            the visible portion of the detail area
+        </member>
+        <member name="F:DotNetLib.Windows.Forms.ContainerListView._headerColumnSizeRects">
+            each column header and the filler column
+        </member>
+        <member name="F:DotNetLib.Windows.Forms.ContainerListView._headerMenu">
+            each area that will allow column resizing
+        </member>
+        <member name="F:DotNetLib.Windows.Forms.ContainerListView._itemMenu">
+            each area that will allow column resizing
+        </member>
+        <member name="F:DotNetLib.Windows.Forms.ContainerListView._contextMenu">
+            each area that will allow column resizing
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListView.BeginUpdate">
+            <summary>
+            Halts drawing, sorting, filtering, and some internal functions
+            </summary>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListView.EndUpdate">
+            <summary>
+            Resumes everything that was halted when BeginUpdate was called
+            </summary>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListView.EnsureVisible">
+            <summary>
+            Ensures that the currently focused item is visible, will scroll as necessary
+            </summary>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListView.EnsureVisible(DotNetLib.Windows.Forms.ContainerListViewItem)">
+            <summary>
+            Ensures that the item is visible, will scroll as necessary
+            </summary>
+            <param name="item">The item you want to ensure visibility of</param>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListView.Sort">
+            <summary>
+            Refreshes the sort, uses the current sorting information
+            </summary>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListView.Sort(System.Int32,System.Boolean,System.Boolean)">
+            <summary>
+            Adds a column to the sort
+            </summary>
+            <param name="columnIdx">The column to add to the sort</param>
+            <param name="autoSortOrder">If true will determine the sort order automatically, if false will use the columns default sort order (or ascending if that isn't set)</param>
+            <param name="clearCurrentSort">Whether to clear the current sort before adding this one</param>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListView.Sort(System.Int32,System.Windows.Forms.SortOrder,System.Boolean)">
+            <summary>
+            Adds a column to the sort
+            </summary>
+            <param name="columnIdx">The column to add to the sort</param>
+            <param name="sortOrder">The order to sort the column by</param>
+            <param name="clearCurrentSort">Whether to clear the current sort before adding this one</param>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListView.SetFilter(System.Int32,System.String)">
+            <summary>
+            Recursively sets a simple text (case insensitive) filter to all items
+            </summary>
+            <param name="columnIdx">Which column you want this text filter to filter on</param>
+            <param name="filterText">The text you would like to filter on</param>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListView.SetFilter(DotNetLib.Windows.Forms.IFilter)">
+            <summary>
+            Recursively sets a custom filter to all items
+            </summary>
+            <param name="filter">The custom <see cref="T:DotNetLib.Windows.Forms.IFilter"/></param>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListView.ResetFilter">
+            <summary>
+            Recursively removes any custom applied filters to all items
+            </summary>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListView.AutoSizeColumnWidths(System.Boolean)">
+            <summary>
+            Resizes all of the columns to fit their text
+            </summary>
+            <param name="includeItemWidths"><b>True</b> if you want it to include the texts of the sub-items below it</param>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListView.RecalculateLayout(System.Boolean,System.Boolean)">
+            <summary>
+            Calculates the virtual rectangle of the header rectangle and it's specific columns
+            </summary>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListView.UpdateScrollbars">
+            <summary>
+            Updates the visibility and page sizes of the scroll bars
+            </summary>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListView.DrawBorder(System.Drawing.Graphics)">
+            <summary>
+            Called when the border of the control needs to be painted
+            </summary>
+            <param name="g">The graphics object to draw the border on</param>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListView.DrawBackground(System.Drawing.Graphics,System.Drawing.Rectangle)">
+            <summary>
+            Called when the background of the detail area needs to be painted
+            </summary>
+            <param name="g">The graphics object to draw the background on</param>
+            <param name="rect">The rectangle representing the portion of the control that needs to be painted</param>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListView.DrawGridLines(System.Drawing.Graphics,System.Drawing.Rectangle)">
+            <summary>
+            Called when grid lines need to be painted
+            </summary>
+            <param name="g">The graphics object to draw the grid lines on</param>
+            <param name="rect">The rectangle representing the portion of the control that needs to be painted</param>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListView.DrawGridLine(System.Drawing.Graphics,System.Drawing.Point,System.Drawing.Point)">
+            <summary>
+            Called when a grid line needs to be painted
+            </summary>
+            <param name="g">The graphics object to draw the grid line with</param>
+            <param name="start">The starting point of the grid line</param>
+            <param name="end">The ending point of the grid line</param>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListView.DrawHeaders(System.Drawing.Graphics,System.Drawing.Rectangle)">
+            <summary>
+            Draws the header control
+            </summary>
+            <param name="g">The graphics object to draw the header control on</param>
+            <param name="actRect">The actual position of the header control</param>
+            <param name="clipRect">The portion of the header control to redraw</param>
+        </member>
+        <member name="P:DotNetLib.Windows.Forms.ContainerListViewSubItem.ItemControl">
+            <summary>
+            Gets or sets the contained Control that will be drawn in this subitem
+            </summary>
+        </member>
+        <member name="P:DotNetLib.Windows.Forms.ContainerListViewSubItem.Text">
+            <summary>
+            Gets or sets the text that will be drawn in this subitem, ignored if you have <b>ItemControl</b> set to not null.
+            </summary>
+        </member>
+        <member name="P:DotNetLib.Windows.Forms.ContainerListViewSubItem.Item">
+            <summary>
+            Gets the <see cref="T:DotNetLib.Windows.Forms.ContainerListViewItem"/> this SubItem belongs to
+            </summary>
+        </member>
+        <member name="T:DotNetLib.Windows.Forms.Win32Constants">
+            <summary>
+            Summary description for Win32Constants.
+            </summary>
+        </member>
+        <member name="T:DotNetLib.Windows.Forms.ContainerListViewSelectedItemCollection">
+            <summary>
+            Implements a strongly typed collection of <see cref="T:DotNetLib.Windows.Forms.ContainerListViewItem"/> elements
+            that are currently selected in a <see cref="T:DotNetLib.Windows.Forms.ContainerListView"/>.
+            </summary>
+            <remarks>
+            <b>ContainerListViewSelectedItemCollection</b> provides an <see cref="T:System.Collections.ArrayList"/>
+            that is strongly typed for <see cref="T:DotNetLib.Windows.Forms.ContainerListViewItem"/> elements. The items
+            always are maintained sorted by the item's position in the list.
+            </remarks>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewSelectedItemCollection.Add(DotNetLib.Windows.Forms.ContainerListViewItem)">
+            <summary>
+            Selects existing <see cref="T:DotNetLib.Windows.Forms.ContainerListViewItem"/> object to the list.
+            </summary>
+            <param name="item">The <b>ContainerListViewItem</b> object to select.</param>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewSelectedItemCollection.Remove(DotNetLib.Windows.Forms.ContainerListViewItem)">
+            <summary>
+            Removes a <see cref="T:DotNetLib.Windows.Forms.ContainerListViewItem"/> object from the selected list.
+            </summary>
+            <param name="item">The <b>ContainerListViewItem</b> object you want to remove from being selected.</param>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewSelectedItemCollection.AddRange(DotNetLib.Windows.Forms.ContainerListViewItem[])">
+            <summary>
+            Adds an array of <see cref="T:DotNetLib.Windows.Forms.ContainerListViewItem"/> objects to the selected item collection.
+            </summary>
+            <param name="items">An array of <see cref="T:DotNetLib.Windows.Forms.ContainerListViewItem"/> objects to add to the collection.</param>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewSelectedItemCollection.IndexOf(DotNetLib.Windows.Forms.ContainerListViewItem)">
+            <summary>
+            Returns the index within the collection of the specified item.
+            </summary>
+            <param name="item">A <see cref="T:DotNetLib.Windows.Forms.ContainerListViewItem"/> representing the item to locate in the collection.</param>
+            <returns>The zero-based index of the item's location in the collection.  If the item is not located in the collection the return value is negative one (-1).</returns>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewSelectedItemCollection.Contains(DotNetLib.Windows.Forms.ContainerListViewItem)">
+            <summary>
+            Determines whether the specified item is located in the collection.
+            </summary>
+            <param name="item">A <see cref="T:DotNetLib.Windows.Forms.ContainerListViewItem"/> representing the item to locate in the collection.</param>
+            <returns><b>true</b> if the column is contained in the collection; otherwise, <b>false</b>.</returns>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewSelectedItemCollection.Clear">
+            <summary>
+            De-selects all the items.
+            </summary>
+        </member>
+        <member name="P:DotNetLib.Windows.Forms.ContainerListViewSelectedItemCollection.Item(System.Int32)">
+            <summary>
+            Indicates the <see cref="T:DotNetLib.Windows.Forms.ContainerListViewItem"/> at the specified indexed
+            location in the collection.  In C#, this property is the indexer for the
+            <b>ContainerListViewSelectedItemCollection</b> class.
+            </summary>
+        </member>
+        <member name="T:DotNetLib.Windows.Forms.ContainerListViewColumnHeaderCollection">
+            <summary>
+            Implements a strongly typed collection of <see cref="T:DotNetLib.Windows.Forms.ContainerListViewColumnHeader"/> elements.
+            </summary>
+            <remarks>
+            <b>ContainerListViewColumnHeaderCollection</b> provides an <see cref="T:System.Collections.ArrayList"/> 
+            that is strongly typed for <see cref="T:DotNetLib.Windows.Forms.ContainerListViewColumnHeader"/> elements.
+            </remarks>    
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewColumnHeaderCollection.Add(DotNetLib.Windows.Forms.ContainerListViewColumnHeader)">
+            <summary>
+            Adds an existing <see cref="T:DotNetLib.Windows.Forms.ContainerListViewColumnHeader"/> object to the collection.
+            </summary>
+            <param name="column">The <b>ContainerListViewColumnHeader</b> object to add to the collection.</param>
+            <returns>The position into which the new element was inserted.</returns>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewColumnHeaderCollection.Add(System.String)">
+            <summary>
+            Adds a column to the collection with the specified text.
+            </summary>
+            <param name="text">The text to display.</param>
+            <returns>The <see cref="T:DotNetLib.Windows.Forms.ContainerListViewColumnHeader"/> that was added to the collection.</returns>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewColumnHeaderCollection.Add(System.String,System.Int32)">
+            <summary>
+            Adds a column to the collection with the specified text and width.
+            </summary>
+            <param name="text">The text to display.</param>
+            <param name="width">The starting width.</param>
+            <returns>The <see cref="T:DotNetLib.Windows.Forms.ContainerListViewColumnHeader"/> that was added to the collection.</returns>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewColumnHeaderCollection.Add(System.String,System.Int32,System.Windows.Forms.HorizontalAlignment)">
+            <summary>
+            Adds a column to the collection with the specified properties.
+            </summary>
+            <param name="text">The text to display.</param>
+            <param name="width">The starting width.</param>
+            <param name="horizontalAlign">The horizontal alignment, will default vertical alignment to middle.</param>
+            <returns>The <see cref="T:DotNetLib.Windows.Forms.ContainerListViewColumnHeader"/> that was added to the collection.</returns>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewColumnHeaderCollection.Add(System.String,System.Int32,System.Drawing.ContentAlignment)">
+            <summary>
+            Adds a column to the collection with the specified properties.
+            </summary>
+            <param name="text">The text to display.</param>
+            <param name="width">The starting width.</param>
+            <param name="textAlign">The content alignment.</param>
+            <returns>The <see cref="T:DotNetLib.Windows.Forms.ContainerListViewColumnHeader"/> that was added to the collection.</returns>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewColumnHeaderCollection.Insert(System.Int32,DotNetLib.Windows.Forms.ContainerListViewColumnHeader)">
+            <summary>
+            Inserts an existing <see cref="T:DotNetLib.Windows.Forms.ContainerListViewColumnHeader"/> into the collection at the specified index.
+            </summary>
+            <param name="index">The zero-based index location where the column is inserted.</param>
+            <param name="column">The <see cref="T:DotNetLib.Windows.Forms.ContainerListViewColumnHeader"/> that represents the column to insert.</param>
+            <returns>The <see cref="T:DotNetLib.Windows.Forms.ContainerListViewColumnHeader"/> that was inserted into the collection.</returns>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewColumnHeaderCollection.Insert(System.Int32,System.String)">
+            <summary>
+            Creates a new header and inserts it into the collection at the specified index.
+            </summary>
+            <param name="index">The zero-based index location where the column is inserted.</param>
+            <param name="text">The text to display.</param>
+            <returns>The <see cref="T:DotNetLib.Windows.Forms.ContainerListViewColumnHeader"/> that was inserted into the collection.</returns>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewColumnHeaderCollection.Insert(System.Int32,System.String,System.Int32)">
+            <summary>
+            Creates a new header and inserts it into the collection at the specified index.
+            </summary>
+            <param name="index">The zero-based index location where the column is inserted.</param>
+            <param name="text">The text to display.</param>
+            <param name="width">The starting width.</param>
+            <returns>The <see cref="T:DotNetLib.Windows.Forms.ContainerListViewColumnHeader"/> that was inserted into the collection.</returns>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewColumnHeaderCollection.Insert(System.Int32,System.String,System.Int32,System.Windows.Forms.HorizontalAlignment)">
+            <summary>
+            Creates a new header and inserts it into the collection at the specified index.
+            </summary>
+            <param name="index">The zero-based index location where the column is inserted.</param>
+            <param name="text">The text to display.</param>
+            <param name="width">The starting width.</param>
+            <param name="horizontalAlign">The horizontal alignment of the text, will default vertical alignment to middle.</param>
+            <returns>The <see cref="T:DotNetLib.Windows.Forms.ContainerListViewColumnHeader"/> that was inserted into the collection.</returns>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewColumnHeaderCollection.Insert(System.Int32,System.String,System.Int32,System.Drawing.ContentAlignment)">
+            <summary>
+            Creates a new header and inserts it into the collection at the specified index.
+            </summary>
+            <param name="index">The zero-based index location where the column is inserted.</param>
+            <param name="text">The text to display.</param>
+            <param name="width">The starting width.</param>
+            <param name="textAlign">The content alignment.</param>
+            <returns>The <see cref="T:DotNetLib.Windows.Forms.ContainerListViewColumnHeader"/> that was inserted into the collection.</returns>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewColumnHeaderCollection.Remove(DotNetLib.Windows.Forms.ContainerListViewColumnHeader)">
+            <summary>
+            Removes the specified <see cref="T:DotNetLib.Windows.Forms.ContainerListViewColumnHeader"/> from the collection.
+            </summary>
+            <param name="column">A <see cref="T:DotNetLib.Windows.Forms.ContainerListViewColumnHeader"/> to remove from the collection.</param>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewColumnHeaderCollection.RemoveAt(System.Int32)">
+            <summary>
+            Removes the column at the specified location.
+            </summary>
+            <param name="index">The zero-based index of the column you want to remove.</param>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewColumnHeaderCollection.AddRange(DotNetLib.Windows.Forms.ContainerListViewColumnHeader[])">
+            <summary>
+            Adds an array of <see cref="T:DotNetLib.Windows.Forms.ContainerListViewColumnHeader"/> objects to the collection.
+            </summary>
+            <param name="columns">An array of <see cref="T:DotNetLib.Windows.Forms.ContainerListViewColumnHeader"/> objects to add to the collection.</param>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewColumnHeaderCollection.IndexOf(DotNetLib.Windows.Forms.ContainerListViewColumnHeader)">
+            <summary>
+            Returns the index within the collection of the specified column.
+            </summary>
+            <param name="column">A <see cref="T:DotNetLib.Windows.Forms.ContainerListViewColumnHeader"/> representing the column to locate in the collection.</param>
+            <returns>The zero-based index of the column's location in the collection.  If the column is not located in the collection the return value is negative one (-1).</returns>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewColumnHeaderCollection.Contains(DotNetLib.Windows.Forms.ContainerListViewColumnHeader)">
+            <summary>
+            Determines whether the specified column is located in the collection.
+            </summary>
+            <param name="column">A <see cref="T:DotNetLib.Windows.Forms.ContainerListViewColumnHeader"/> representing the column to locate in the collection.</param>
+            <returns><b>true</b> if the column is contained in the collection; otherwise, <b>false</b>.</returns>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewColumnHeaderCollection.Clear">
+            <summary>
+            Removes all columns from the collection.
+            </summary>
+        </member>
+        <member name="P:DotNetLib.Windows.Forms.ContainerListViewColumnHeaderCollection.Item(System.Int32)">
+            <summary>
+            Indicates the <see cref="T:DotNetLib.Windows.Forms.ContainerListViewColumnHeader"/> at the specified indexed
+            location in the collection.  In C#, this property is the indexer for the
+            <b>ContainerListViewColumnHeaderCollection</b> class.
+            </summary>
+        </member>
+        <member name="T:DotNetLib.Windows.Forms.IFilter">
+            <summary>
+            Exposes a method that can filter objects
+            </summary>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.IFilter.Belongs(System.Object)">
+            <summary>
+            Filters an object and returns a value indicating whether or not it should be included in the filter
+            </summary>
+            <param name="o"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DotNetLib.Windows.Forms.FilterStub">
+            <summary>
+            Represents a filter that always returns the same value
+            </summary>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.FilterStub.#ctor(System.Boolean)">
+            <summary>
+            Creates a new FilterStub that always returns this value
+            </summary>
+            <param name="value">The value to return in the filter</param>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.FilterStub.Belongs(System.Object)">
+            <summary>
+            Always returns the value passed in through the constructor
+            </summary>
+            <param name="o">The object to filter, completely ignore in this filter</param>
+            <returns>The value that was passed into the constructor.</returns>
+        </member>
+        <member name="T:DotNetLib.Windows.Forms.ContainerListViewItemFilter">
+            <summary>
+            Represents a basic string comparison for a single <see cref="T:DotNetLib.Windows.Forms.ContainerListViewColumnHeader"/> in a <see cref="T:DotNetLib.Windows.Forms.ContainerListView"/>.
+            </summary>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewItemFilter.#ctor(System.Int32,System.String)">
+            <summary>
+            Creates a new filter with the specified text and column index
+            </summary>
+            <param name="columnIdx">The index of the column this filter should work on.</param>
+            <param name="str">The text to filter for, it is case insensitive.</param>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewItemFilter.Belongs(System.Object)">
+            <summary>
+            Performs the filtering for the passed in <see cref="T:DotNetLib.Windows.Forms.ContainerListViewItem"/>.
+            </summary>
+            <param name="o">An object that should represent a <see cref="T:DotNetLib.Windows.Forms.ContainerListViewItem"/>.</param>
+            <returns></returns>
+        </member>
+        <member name="T:DotNetLib.Windows.Forms.ContainerListViewComparer">
+            <summary>
+            A fairly optimized IComparer for sorting strings based on different data types
+            </summary>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewComparer.#ctor(DotNetLib.Windows.Forms.ContainerListView)">
+            <summary>
+            Creates a new comparer for a <see cref="T:DotNetLib.Windows.Forms.ContainerListView"/>, will use current sort settings and
+            cache them locally.
+            </summary>
+            <param name="listView">The <see cref="T:DotNetLib.Windows.Forms.ContainerListView"/> that this comparer is for.</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:DotNetLib.Windows.Forms.ContainerListViewSubItemCollection" -->
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewSubItemCollection.Add(DotNetLib.Windows.Forms.ContainerListViewSubItem)">
+            <summary>
+            Adds an existing <see cref="T:DotNetLib.Windows.Forms.ContainerListViewSubItem"/> object to the collection.
+            </summary>
+            <param name="subItem">The <b>ContainerListViewSubItem</b> object to add to the collection.</param>
+            <returns>The position into which the new element was inserted.</returns>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewSubItemCollection.Insert(System.Int32,DotNetLib.Windows.Forms.ContainerListViewSubItem)">
+            <summary>
+            Inserts an existing <see cref="T:DotNetLib.Windows.Forms.ContainerListViewSubItem"/> object to the collection at the specified index.
+            </summary>
+            <param name="index">The zero-based index location where the item is inserted.</param>
+            <param name="subItem">The <b>ContainerListViewSubItem</b> object to add to the collection.</param>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewSubItemCollection.Remove(DotNetLib.Windows.Forms.ContainerListViewSubItem)">
+            <summary>
+            Removes the specified <see cref="T:DotNetLib.Windows.Forms.ContainerListViewItem"/> from the collection.
+            </summary>
+            <param name="subItem">A <see cref="T:DotNetLib.Windows.Forms.ContainerListViewSubItem"/> to remove from the collection.</param>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewSubItemCollection.RemoveAt(System.Int32)">
+            <summary>
+            Removes an item from the collection at the specified index.
+            </summary>
+            <param name="index">The zero-based index position of the item that is to be removed.</param>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewSubItemCollection.AddRange(DotNetLib.Windows.Forms.ContainerListViewSubItem[])">
+            <summary>
+            Adds an array of <see cref="T:DotNetLib.Windows.Forms.ContainerListViewSubItem"/> objects to the collection.
+            </summary>
+            <param name="subItems">An array of <see cref="T:DotNetLib.Windows.Forms.ContainerListViewSubItem"/> objects to add to the collection.</param>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewSubItemCollection.IndexOf(DotNetLib.Windows.Forms.ContainerListViewSubItem)">
+            <summary>
+            Returns the index within the collection of the specified sub item.
+            </summary>
+            <param name="item">A <see cref="T:DotNetLib.Windows.Forms.ContainerListViewSubItem"/> representing the item to locate in the collection.</param>
+            <returns>The zero-based index of the item's location in the collection.  If the item is not located in the collection the return value is negative one (-1).</returns>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewSubItemCollection.Contains(DotNetLib.Windows.Forms.ContainerListViewSubItem)">
+            <summary>
+            Determines whether the specified item is located in the collection.
+            </summary>
+            <param name="item">A <see cref="T:DotNetLib.Windows.Forms.ContainerListViewSubItem"/> representing the item to locate in the collection.</param>
+            <returns><b>true</b> if the column is contained in the collection; otherwise, <b>false</b>.</returns>
+        </member>
+        <member name="M:DotNetLib.Windows.Forms.ContainerListViewSubItemCollection.Clear">
+            <summary>
+            Removes all sub items from the collection.
+            </summary>
+        </member>
+        <member name="P:DotNetLib.Windows.Forms.ContainerListViewSubItemCollection.Item(System.Int32)">
+            <summary>
+            Indicates the <see cref="T:DotNetLib.Windows.Forms.ContainerListViewSubItem"/> at the specified indexed
+            location in the collection.  In C#, this property is the indexer for the
+            <b>ContainerListViewSubItemCollection</b> class.
+            </summary>
+        </member>
+    </members>
+</doc>

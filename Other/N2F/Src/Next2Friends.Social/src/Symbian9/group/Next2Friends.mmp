@@ -1,0 +1,56 @@
+/*
+============================================================================
+ Name        : Next2Friends.rss
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Project specification file for Next2Friends
+============================================================================
+*/
+
+TARGET            Next2Friends.exe
+TARGETTYPE        exe
+UID               0x100039CE 0xe2c9889d
+
+SECUREID	      0xe2c9889d
+EPOCSTACKSIZE	  0x5000
+
+SOURCEPATH        ..\src
+SOURCE            Next2Friends.cpp
+SOURCE            Next2FriendsApplication.cpp
+SOURCE            Next2FriendsAppView.cpp
+SOURCE            Next2FriendsAppUi.cpp
+SOURCE            Next2FriendsDocument.cpp
+
+SOURCEPATH        ..\data
+
+START RESOURCE    Next2Friends.rss
+HEADER
+TARGETPATH        \resource\apps
+END //RESOURCE
+
+START RESOURCE    Next2Friends_reg.rss
+TARGETPATH 	      \private\10003a3f\apps
+END //RESOURCE
+
+
+
+USERINCLUDE       ..\inc
+
+SYSTEMINCLUDE     \epoc32\include
+
+LIBRARY           euser.lib
+LIBRARY           apparc.lib
+LIBRARY           cone.lib
+LIBRARY           eikcore.lib
+LIBRARY           avkon.lib
+LIBRARY           commonengine.lib
+LIBRARY		  	  efsrv.lib
+LIBRARY           estor.lib
+
+LANG SC
+
+VENDORID	  	  0
+CAPABILITY	  	  ReadUserData
+// End of File
+

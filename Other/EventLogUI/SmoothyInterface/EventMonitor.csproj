@@ -1,0 +1,283 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B1C0E9B0-B574-4E36-8134-D9F4F07DAE01}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EventMonitor</RootNamespace>
+    <AssemblyName>EventMonitor</AssemblyName>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>SmoothyInterface.snk</AssemblyOriginatorKeyFile>
+    <ApplicationIcon>monitor.ico</ApplicationIcon>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Janus.Windows.Common.v3, Version=3.5.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf" />
+    <Reference Include="Janus.Windows.UI.v3, Version=3.5.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Enum\EventLogAccessType.cs" />
+    <Compile Include="Enum\LogColouringType.cs" />
+    <Compile Include="Enum\WindowType.cs" />
+    <Compile Include="Forms\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ConnectToComputer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ConnectToComputer.Designer.cs">
+      <DependentUpon>ConnectToComputer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EventLogViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\EventLogViewer.Designer.cs">
+      <DependentUpon>EventLogViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NuGenEventMonitorPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\NuGenEventMonitorPanel.Designer.cs">
+      <DependentUpon>NuGenEventMonitorPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NewEventLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewEventLog.Designer.cs">
+      <DependentUpon>NewEventLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Options.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Options.Designer.cs">
+      <DependentUpon>Options.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Progress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Progress.Designer.cs">
+      <DependentUpon>Progress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UnhandledException.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UnhandledException.Designer.cs">
+      <DependentUpon>UnhandledException.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\About.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ConnectToComputer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ConnectToComputer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EventLogViewer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EventLogViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NuGenEventMonitorPanel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenEventMonitorPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NewEventLog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NewEventLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Options.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Options.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Progress.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Progress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UnhandledException.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UnhandledException.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SmoothyInterface.snk" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Util\CellStyleHelper.cs" />
+    <Compile Include="Util\EventTypeDescription.cs" />
+    <Compile Include="Util\Win32_NTLogEvent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Util\WMIUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flag_orange.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flag_red.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\action_refresh_blue.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SuccessAudit.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FailureAudit.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\script_code_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Resources\script_code.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\door_out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\connect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tab_go.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_in.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\link_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flag_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\link_go.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\link_error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\afraid.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_refresh_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monitor-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="monitor.ico" />
+    <None Include="Resources\color_wheel.png" />
+    <None Include="Resources\color_swatch.png" />
+    <None Include="Properties\DataSources\SmoothyInterface.Properties.Settings.datasource" />
+    <None Include="Resources\page_gear.png" />
+    <None Include="Resources\page_copy.png" />
+    <None Include="Resources\page.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Component Include="External\BusyBarLib.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetPath)" "$(SolutionDir)bin"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

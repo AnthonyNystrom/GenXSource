@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<!-- ==============================================================================================
+Parameters provided to the template
+{0} - radWindow client ID //not generally needed 
+{1} - radWindowobject reference (allows to call radWindow methods such as Close, Restore, etc)
+{2} - Path to current skin folder (allows to access images, other resources)
+{3} - url to the Minimized Icon
+{4} - title text
+{5} - application path
+{6} – Text to show (in the alert, confirm, prompt);			
+=============================================================================================== -->
+<templates>
+	<splashtemplate>
+	<![CDATA[
+		<div style="height: 200px; width: 400px; border: solid 1px #808080; text-align: center; background-color: #fff; filter: progid:DXImageTransform.Microsoft.Shadow(direction=140,color=#404040,strength=3);">
+			<br /><br /><br />
+			<div style="font-weight: bold; color: #808080; font-size: 16px;">loading...</div>
+			<br />
+			<img src="{2}Img/splash.gif" height="62" width="62" alt="" />
+		</div>
+	]]>
+	</splashtemplate>
+	<minimizetemplate>
+		<![CDATA[				
+			<table border='0' style='display:inline' id='RadWMinimized{0}' class='RadWMinimizedActive' cellspacing='0' cellpadding='0'>
+			<tr class='RadWTitleRow'>
+				<td>
+					<img class='RadWIcon' src='{3}' align='absmiddle' border='0'>
+				</td>
+				<td style='vertical-align:middle;' nowrap><div style='padding:1px;width:40px;overflow:hidden' 
+				><span id='RadWMinimizedTitle{0}' onselectstart='return false;' class='RadWTitleText'>{4}</span></div></td>						
+				<td nowrap>
+					<img  class='RadWButton' style='vertical-align:middle;border:0' src='{2}Img/Restore.gif' id='RadWMinimizedRestore{0}' onclick='{1}.Restore()'/>
+				</td>	
+				<td nowrap>
+					<img class='RadWButton' style='vertical-align:middle;border:0' src='{2}Img/Close.gif' id='RadWMinimizedClose{0}' onclick='{1}.Close()'/>
+				</td>
+			</tr>
+			</table>	
+		]]>
+	</minimizetemplate>
+	<alerttemplate>		
+		<![CDATA[
+		<style>
+		body
+		{
+			background: white;				
+			font: normal 11px Arial, Verdana, Sans-serif;
+			overflow: hidden;
+			height: 100%;
+		}
+		
+		.Button
+		{
+			background: url({2}Img/modalBtnBg.gif);
+			border: 0px;
+			width: 78px;
+			height: 20px;
+			color: #333;
+			font: normal 11px Arial, Verdana, Sans-serif;
+			margin: 2px;	
+			margin-bottom: 8px;
+		}
+		
+		.FixedDiv
+		{
+			font: normal 11px Arial, Verdana, Sans-serif;
+			margin: 3px;
+			color: black;
+			text-align: center;
+		}												
+		</style>
+								
+			<div class='FixedDiv'>
+				<br /><br /><br />
+				<img align='absmiddle' style='vertical-align:middle;border:0' src='{2}Img/AlertIcon.gif' alt='' /> 
+				{6}
+			</div>
+			<center>
+				<button class="Button" onclick="GetRadWindow().Close()";>					
+					<script>
+						document.write(GetRadWindow().GetLocalizedString("Ok"));
+					</script>			
+				</button>
+			</center>
+			<embed src="{2}Img/alert.wav" height="0" width="0" style="display: none;"></embed>				
+		]]>
+	</alerttemplate>
+	<prompttemplate>
+		<![CDATA[			
+			<style>
+			body
+			{
+				background: white;				
+				font: normal 11px Arial, Verdana, Sans-serif;
+				overflow: hidden;
+			}
+			
+			.Button
+			{
+				background: url({2}Img/modalBtnBg.gif) no-repeat;
+				border: 0px;
+				width: 78px;
+				height: 20px;
+				color: #333;
+				font: normal 11px Arial, Verdana, Sans-serif;
+				margin-left: 3px;						
+			}
+			
+			.FixedDiv
+			{
+				font: normal 11px Arial, Verdana, Sans-serif;
+				margin: 3px;			
+				color: black;
+				text-align: center;
+			}
+			</style>
+			<div class='FixedDiv'>
+			<center>
+				<br />
+				<img align='absmiddle' style='vertical-align:middle;border:0' src='{2}Img/AlertIcon.gif'> 
+				{6}<br /><br />
+				<input type='textbox' style='width:200px' id='TextBox' style="border: solid 1px #333333;">
+				<embed src="{2}Img/alert.wav" height="0" width="0" style="display: none;"></embed>	
+			</center>
+			<br />
+			<center>
+				<button class="Button" onclick="GetRadWindow().ModalDialogCallBack(document.getElementById('TextBox').value);">
+					<script>
+						document.write(GetRadWindow().GetLocalizedString("Ok"));
+					</script>
+				</button>
+				<button class="Button" onclick="GetRadWindow().Close()">
+					<script>
+						document.write(GetRadWindow().GetLocalizedString("Cancel"));
+					</script>
+				</button>
+			</center>	
+			</div>	
+		]]>
+	</prompttemplate>
+	
+	<confirmtemplate>
+		<![CDATA[				
+			<style>
+			body
+			{
+				background: white;				
+				font: normal 11px Arial, Verdana, Sans-serif;
+				overflow: hidden;
+			}
+			
+			.Button
+			{
+				background: url({2}Img/modalBtnBg.gif) no-repeat;
+				border: 0px;
+				width: 78px;
+				height: 20px;
+				color: #333;
+				font: normal 11px Arial, Verdana, Sans-serif;
+				margin: 2px;
+				margin-left: 3px;						
+			}
+			
+			.FixedDiv
+			{
+				font: normal 11px Arial, Verdana, Sans-serif;
+				margin: 3px;
+				color: black;
+				text-align: center;
+			}
+			</style>
+			<div class='FixedDiv'>
+				<br />
+				<img align='absmiddle' style='vertical-align:middle;border:0' src='{2}Img/AlertIcon.gif' alt='' /> 
+				{6}
+				<embed src="{2}Img/alert.wav" height="0" width="0" style="display: none;"></embed>	
+			</div>
+			<br>
+			<center>
+				<button class="Button" onclick="GetRadWindow().ModalDialogCallBack(true)">
+					<script>
+						document.write(GetRadWindow().GetLocalizedString("Yes"));
+					</script>
+				</button>
+				<button class="Button" onclick="GetRadWindow().ModalDialogCallBack(false)">
+					<script>
+						document.write(GetRadWindow().GetLocalizedString("No"));
+					</script>
+				</button>
+			</center>		
+		]]>
+	</confirmtemplate>
+</templates>

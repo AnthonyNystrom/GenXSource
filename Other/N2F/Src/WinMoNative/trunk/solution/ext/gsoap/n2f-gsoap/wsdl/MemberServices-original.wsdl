@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.next2friends.com/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.next2friends.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Provides functionality to retrieve member-related data.</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.next2friends.com/">
+      <s:element name="GetEncryptionKey">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WebMemberID" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEncryptionKeyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEncryptionKeyResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMemberID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NickName" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMemberIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMemberIDResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTagID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WebMemberID" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTagIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTagIDResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckUserExists">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NickName" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckUserExistsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckUserExistsResult" type="s:boolean"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string"/>
+      <s:element name="boolean" type="s:boolean"/>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetEncryptionKeySoapIn">
+    <wsdl:part name="parameters" element="tns:GetEncryptionKey"/>
+  </wsdl:message>
+  <wsdl:message name="GetEncryptionKeySoapOut">
+    <wsdl:part name="parameters" element="tns:GetEncryptionKeyResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetMemberIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMemberID"/>
+  </wsdl:message>
+  <wsdl:message name="GetMemberIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMemberIDResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetTagIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTagID"/>
+  </wsdl:message>
+  <wsdl:message name="GetTagIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTagIDResponse"/>
+  </wsdl:message>
+  <wsdl:message name="CheckUserExistsSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckUserExists"/>
+  </wsdl:message>
+  <wsdl:message name="CheckUserExistsSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckUserExistsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetEncryptionKeyHttpGetIn">
+    <wsdl:part name="WebMemberID" type="s:string"/>
+    <wsdl:part name="Password" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetEncryptionKeyHttpGetOut">
+    <wsdl:part name="Body" element="tns:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetMemberIDHttpGetIn">
+    <wsdl:part name="NickName" type="s:string"/>
+    <wsdl:part name="Password" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetMemberIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetTagIDHttpGetIn">
+    <wsdl:part name="WebMemberID" type="s:string"/>
+    <wsdl:part name="Password" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetTagIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:string"/>
+  </wsdl:message>
+  <wsdl:message name="CheckUserExistsHttpGetIn">
+    <wsdl:part name="NickName" type="s:string"/>
+    <wsdl:part name="Password" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="CheckUserExistsHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean"/>
+  </wsdl:message>
+  <wsdl:message name="GetEncryptionKeyHttpPostIn">
+    <wsdl:part name="WebMemberID" type="s:string"/>
+    <wsdl:part name="Password" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetEncryptionKeyHttpPostOut">
+    <wsdl:part name="Body" element="tns:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetMemberIDHttpPostIn">
+    <wsdl:part name="NickName" type="s:string"/>
+    <wsdl:part name="Password" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetMemberIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetTagIDHttpPostIn">
+    <wsdl:part name="WebMemberID" type="s:string"/>
+    <wsdl:part name="Password" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetTagIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:string"/>
+  </wsdl:message>
+  <wsdl:message name="CheckUserExistsHttpPostIn">
+    <wsdl:part name="NickName" type="s:string"/>
+    <wsdl:part name="Password" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="CheckUserExistsHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean"/>
+  </wsdl:message>
+  <wsdl:portType name="MemberServicesSoap">
+    <wsdl:operation name="GetEncryptionKey">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns personal encryption key for the specified user.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;WebMemberID&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt;, or if the specified &lt;tt&gt;Password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt;.</wsdl:documentation>
+      <wsdl:input message="tns:GetEncryptionKeySoapIn"/>
+      <wsdl:output message="tns:GetEncryptionKeySoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns the unique identifier for the specified user.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;NickName&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt;, or if the specified &lt;tt&gt;Password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt;.</wsdl:documentation>
+      <wsdl:input message="tns:GetMemberIDSoapIn"/>
+      <wsdl:output message="tns:GetMemberIDSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetTagID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns the unique user identifier that used during tagging process.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;WebMemberID&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt;, or if the specified &lt;tt&gt;Password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt;.</wsdl:documentation>
+      <wsdl:input message="tns:GetTagIDSoapIn"/>
+      <wsdl:output message="tns:GetTagIDSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="CheckUserExists">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns &lt;tt&gt;true&lt;/tt&gt; if the user with the specified &lt;tt&gt;NickName&lt;/tt&gt; and &lt;tt&gt;Password&lt;/tt&gt; exists; otherwise, returns &lt;tt&gt;false&lt;/tt&gt;.&lt;/p&gt;</wsdl:documentation>
+      <wsdl:input message="tns:CheckUserExistsSoapIn"/>
+      <wsdl:output message="tns:CheckUserExistsSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="MemberServicesHttpGet">
+    <wsdl:operation name="GetEncryptionKey">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns personal encryption key for the specified user.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;WebMemberID&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt;, or if the specified &lt;tt&gt;Password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt;.</wsdl:documentation>
+      <wsdl:input message="tns:GetEncryptionKeyHttpGetIn"/>
+      <wsdl:output message="tns:GetEncryptionKeyHttpGetOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns the unique identifier for the specified user.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;NickName&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt;, or if the specified &lt;tt&gt;Password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt;.</wsdl:documentation>
+      <wsdl:input message="tns:GetMemberIDHttpGetIn"/>
+      <wsdl:output message="tns:GetMemberIDHttpGetOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetTagID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns the unique user identifier that used during tagging process.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;WebMemberID&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt;, or if the specified &lt;tt&gt;Password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt;.</wsdl:documentation>
+      <wsdl:input message="tns:GetTagIDHttpGetIn"/>
+      <wsdl:output message="tns:GetTagIDHttpGetOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="CheckUserExists">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns &lt;tt&gt;true&lt;/tt&gt; if the user with the specified &lt;tt&gt;NickName&lt;/tt&gt; and &lt;tt&gt;Password&lt;/tt&gt; exists; otherwise, returns &lt;tt&gt;false&lt;/tt&gt;.&lt;/p&gt;</wsdl:documentation>
+      <wsdl:input message="tns:CheckUserExistsHttpGetIn"/>
+      <wsdl:output message="tns:CheckUserExistsHttpGetOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="MemberServicesHttpPost">
+    <wsdl:operation name="GetEncryptionKey">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns personal encryption key for the specified user.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;WebMemberID&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt;, or if the specified &lt;tt&gt;Password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt;.</wsdl:documentation>
+      <wsdl:input message="tns:GetEncryptionKeyHttpPostIn"/>
+      <wsdl:output message="tns:GetEncryptionKeyHttpPostOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns the unique identifier for the specified user.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;NickName&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt;, or if the specified &lt;tt&gt;Password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt;.</wsdl:documentation>
+      <wsdl:input message="tns:GetMemberIDHttpPostIn"/>
+      <wsdl:output message="tns:GetMemberIDHttpPostOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetTagID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns the unique user identifier that used during tagging process.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;WebMemberID&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt;, or if the specified &lt;tt&gt;Password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt;.</wsdl:documentation>
+      <wsdl:input message="tns:GetTagIDHttpPostIn"/>
+      <wsdl:output message="tns:GetTagIDHttpPostOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="CheckUserExists">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns &lt;tt&gt;true&lt;/tt&gt; if the user with the specified &lt;tt&gt;NickName&lt;/tt&gt; and &lt;tt&gt;Password&lt;/tt&gt; exists; otherwise, returns &lt;tt&gt;false&lt;/tt&gt;.&lt;/p&gt;</wsdl:documentation>
+      <wsdl:input message="tns:CheckUserExistsHttpPostIn"/>
+      <wsdl:output message="tns:CheckUserExistsHttpPostOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MemberServicesSoap" type="tns:MemberServicesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetEncryptionKey">
+      <soap:operation soapAction="http://www.next2friends.com/GetEncryptionKey" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberID">
+      <soap:operation soapAction="http://www.next2friends.com/GetMemberID" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTagID">
+      <soap:operation soapAction="http://www.next2friends.com/GetTagID" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckUserExists">
+      <soap:operation soapAction="http://www.next2friends.com/CheckUserExists" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MemberServicesSoap12" type="tns:MemberServicesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetEncryptionKey">
+      <soap12:operation soapAction="http://www.next2friends.com/GetEncryptionKey" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberID">
+      <soap12:operation soapAction="http://www.next2friends.com/GetMemberID" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTagID">
+      <soap12:operation soapAction="http://www.next2friends.com/GetTagID" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckUserExists">
+      <soap12:operation soapAction="http://www.next2friends.com/CheckUserExists" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MemberServicesHttpGet" type="tns:MemberServicesHttpGet">
+    <http:binding verb="GET"/>
+    <wsdl:operation name="GetEncryptionKey">
+      <http:operation location="/GetEncryptionKey"/>
+      <wsdl:input>
+        <http:urlEncoded/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberID">
+      <http:operation location="/GetMemberID"/>
+      <wsdl:input>
+        <http:urlEncoded/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTagID">
+      <http:operation location="/GetTagID"/>
+      <wsdl:input>
+        <http:urlEncoded/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckUserExists">
+      <http:operation location="/CheckUserExists"/>
+      <wsdl:input>
+        <http:urlEncoded/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MemberServicesHttpPost" type="tns:MemberServicesHttpPost">
+    <http:binding verb="POST"/>
+    <wsdl:operation name="GetEncryptionKey">
+      <http:operation location="/GetEncryptionKey"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberID">
+      <http:operation location="/GetMemberID"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTagID">
+      <http:operation location="/GetTagID"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckUserExists">
+      <http:operation location="/CheckUserExists"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MemberServices">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Provides functionality to retrieve member-related data.</wsdl:documentation>
+    <wsdl:port name="MemberServicesSoap" binding="tns:MemberServicesSoap">
+      <soap:address location="http://next2friends.com:90/MemberServices.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="MemberServicesSoap12" binding="tns:MemberServicesSoap12">
+      <soap12:address location="http://next2friends.com:90/MemberServices.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="MemberServicesHttpGet" binding="tns:MemberServicesHttpGet">
+      <http:address location="http://next2friends.com:90/MemberServices.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="MemberServicesHttpPost" binding="tns:MemberServicesHttpPost">
+      <http:address location="http://next2friends.com:90/MemberServices.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

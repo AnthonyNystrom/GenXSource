@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SocialNetworkLib.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SocialNetworkLib_com_google_api_GoogleSearchService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://api.google.com/search/beta2</Value>
+    </Setting>
+    <Setting Name="SocialNetworkLib_WebReference_AskAFriend" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://services.next2friends.com/N2fWebServices/AskAFriend.asmx</Value>
+    </Setting>
+    <Setting Name="SocialNetworkLib_ws1_PhotoOrganise" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://69.21.114.101/n2fwebservices/photoorganise.asmx</Value>
+    </Setting>
+    <Setting Name="SocialNetworkLib_BTTagSend_BTTagSend" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://services.next2friends.com/n2fwebservices/BTTagSend.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

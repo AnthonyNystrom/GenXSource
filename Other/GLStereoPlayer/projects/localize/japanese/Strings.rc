@@ -1,0 +1,386 @@
+/////////////////////////////////////////////////////////////////////////////
+// Japanese resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE 17, 1
+#pragma code_page(932)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "ファイル(&F)"
+    BEGIN
+        MENUITEM "左眼用ファイルを開く(&L)...\tCtrl+L", ID_FILE_OPENLEFT
+        MENUITEM "右眼用ファイルを開く(&R)...\tCtrl+R", ID_FILE_OPENRIGHT
+        MENUITEM SEPARATOR
+        MENUITEM "設定ファイルを開く(&O)...\tCtrl+O",   ID_FILE_OPENSETTING
+        MENUITEM "設定ファイルを保存(&S)...\tCtrl+S",   ID_FILE_SAVESETTING
+        MENUITEM "設定変更を保存する",                  ID_FILE_SAVEMODIFIED
+        MENUITEM SEPARATOR
+        MENUITEM "最近使ったﾌｧｲﾙ",                      ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "ｱﾌﾟﾘｹｰｼｮﾝの終了(&X)",                 ID_APP_EXIT
+    END
+    POPUP "表示(&V)"
+    BEGIN
+        MENUITEM "ツールバー(&T)",                      ID_VIEW_TOOLBAR
+        MENUITEM "統計情報(&S)\tS",                     ID_VIEW_STATISTICS
+        POPUP "再生コントロール(&P)\tP"
+        BEGIN
+            MENUITEM "表示",                            ID_VIEW_PLAYCONTROL_SHOW
+            MENUITEM "自動表示",                        ID_VIEW_PLAYCONTROL_AUTO
+            MENUITEM "非表示",                          ID_VIEW_PLAYCONTROL_HIDE
+        END
+        MENUITEM "ステータスバー(&S)",                  ID_VIEW_STATUS_BAR
+        MENUITEM SEPARATOR
+        POPUP "フォーマット(&F)\tF"
+        BEGIN
+            MENUITEM "左右別ファイル",                  ID_VIEW_FORMAT_SEPARATED
+            MENUITEM "水平接合ファイル",                ID_VIEW_FORMAT_HORIZONTAL
+
+            MENUITEM "水平接合圧縮ファイル",            ID_VIEW_FORMAT_HORIZONTAL_COMP
+
+            MENUITEM "垂直接合ファイル",                ID_VIEW_FORMAT_VERTICAL
+            MENUITEM "垂直接合圧縮ファイル",            ID_VIEW_FORMAT_VERTICAL_COMP
+        END
+        POPUP "ステレオ方式(&T)\tT"
+        BEGIN
+            MENUITEM "左眼のみ表示",                    ID_VIEW_STEREO_LEFT
+            MENUITEM "右目画像のみ表示",                ID_VIEW_STEREO_RIGHT
+            MENUITEM "アナグリフ表示",                  ID_VIEW_STEREO_ANAGRYPH
+            MENUITEM "水平分割表示",                    ID_VIEW_STEREO_HORIZONTAL
+
+            MENUITEM "垂直分割表示",                    ID_VIEW_STEREO_VERTICAL
+            MENUITEM "水平インターリーブ",              ID_VIEW_STEREO_HORIZONTAL_INTERLEAVED
+
+            MENUITEM "垂直インターリーブ",              ID_VIEW_STEREO_VERTICAL_INTERLEAVED
+
+            MENUITEM "Sharp3D表示",                     ID_VIEW_STEREO_SHARP3D
+            MENUITEM "QuadBuffer表示",                  ID_VIEW_STEREO_QUADBUFFER
+        END
+        POPUP "アナグリフカラー"
+        BEGIN
+            MENUITEM "左眼用カラーの編集...",           ID_VIEW_LEFT_COLOR
+            MENUITEM "右眼用カラーの編集...",           ID_VIEW_RIGHT_COLOR
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "左右入れ替え\tW",                     ID_VIEW_SWAP
+        MENUITEM "アスペクト比を維持\tA",               ID_VIEW_KEEPASPECTRATIO
+        POPUP "視差オフセット"
+        BEGIN
+            MENUITEM "拡大\t+",                         ID_VIEW_OFFSET_INCREASE
+            MENUITEM "縮小\t-",                         ID_VIEW_OFFSET_DECREASE
+            MENUITEM "リセット\t*",                     ID_VIEW_OFFSET_RESET
+        END
+        POPUP "表示エリア"
+        BEGIN
+            MENUITEM "左にパン\tLeft Arrow",            ID_VIEW_PAN_LEFT
+            MENUITEM "右にパン\tRight Arrow",           ID_VIEW_PAN_RIGHT
+            MENUITEM "上にパン\tUp Arrow",              ID_VIEW_PAN_UP
+            MENUITEM "下にパン\tDown Arrow",            ID_VIEW_PAN_DOWN
+            MENUITEM SEPARATOR
+            MENUITEM "拡大\tPageUp",                    ID_VIEW_ZOOM_UP
+            MENUITEM "縮小\tPageDown",                  ID_VIEW_ZOOM_DOWN
+            MENUITEM SEPARATOR
+            MENUITEM "リセット\tHome",                  ID_VIEW_PANZOOM_RESET
+        END
+        POPUP "ウィンドウサイズ"
+        BEGIN
+            MENUITEM "50%",                             ID_VIEW_RESIZE_HALF
+            MENUITEM "100%",                            ID_VIEW_RESIZE_ORIGINAL
+            MENUITEM "200%",                            ID_VIEW_RESIZE_DOUBLE
+        END
+        MENUITEM "フルスクリーン\tAlt+Return",          ID_VIEW_FULLSCREEN
+    END
+    POPUP "再生(&P)"
+    BEGIN
+        MENUITEM "再生/一時停止\tSpace",                ID_PLAY_PLAYPAUSE
+        MENUITEM "停止\t.",                             ID_PLAY_STOP
+        MENUITEM "読み込み後に再生",                    ID_PLAY_PLAYONLOAD
+        MENUITEM SEPARATOR
+        POPUP "再生速度"
+        BEGIN
+            MENUITEM "25%",                             ID_PLAY_SPEED_25
+            MENUITEM "50%",                             ID_PLAY_SPEED_50
+            MENUITEM "100%",                            ID_PLAY_SPEED_100
+            MENUITEM "150%",                            ID_PLAY_SPEED_150
+            MENUITEM "200%",                            ID_PLAY_SPEED_200
+        END
+        MENUITEM "強制同期(&F)\tCtrl+F",                ID_PLAY_FORCESYNC
+        MENUITEM "繰り返し(&L)\tL",                     ID_PLAY_LOOP
+        MENUITEM SEPARATOR
+        POPUP "音量"
+        BEGIN
+            MENUITEM "上げる",                          ID_PLAY_VOLUME_UP
+            MENUITEM "下げる",                          ID_PLAY_VOLUME_DOWN
+            MENUITEM "無音",                            ID_PLAY_VOLUME_MUTE
+        END
+    END
+    POPUP "ヘルプ(&H)"
+    BEGIN
+        MENUITEM "GLStereoPlayer のﾊﾞｰｼﾞｮﾝ情報(&A)...", ID_APP_ABOUT
+    END
+END
+
+IDR_CONTEXTMENU MENU DISCARDABLE 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "左眼用ファイルを開く(&L)...\tCtrl+L", ID_FILE_OPENLEFT
+        MENUITEM "右眼用ファイルを開く(&R)...\tCtrl+R", ID_FILE_OPENRIGHT
+        MENUITEM SEPARATOR
+        MENUITEM "設定ファイルを開く(&O)...\tCtrl+O",   ID_FILE_OPENSETTING
+        MENUITEM "設定ファイルを保存(&S)...\tCtrl+S",   ID_FILE_SAVESETTING
+        MENUITEM "設定変更を保存する",                  ID_FILE_SAVEMODIFIED
+        MENUITEM SEPARATOR
+        POPUP "フォーマット(&F)\tF"
+        BEGIN
+            MENUITEM "左右別ファイル",                  ID_VIEW_FORMAT_SEPARATED
+            MENUITEM "水平接合ファイル",                ID_VIEW_FORMAT_HORIZONTAL
+
+            MENUITEM "水平接合圧縮ファイル",            ID_VIEW_FORMAT_HORIZONTAL_COMP
+
+            MENUITEM "垂直接合ファイル",                ID_VIEW_FORMAT_VERTICAL
+            MENUITEM "垂直接合圧縮ファイル",            ID_VIEW_FORMAT_VERTICAL_COMP
+
+        END
+        POPUP "ステレオ方式(&T)\tT"
+        BEGIN
+            MENUITEM "左眼のみ表示",                    ID_VIEW_STEREO_LEFT
+            MENUITEM "右目画像のみ表示",                ID_VIEW_STEREO_RIGHT
+            MENUITEM "アナグリフ表示",                  ID_VIEW_STEREO_ANAGRYPH
+            MENUITEM "水平分割表示",                    ID_VIEW_STEREO_HORIZONTAL
+
+            MENUITEM "垂直分割表示",                    ID_VIEW_STEREO_VERTICAL
+            MENUITEM "水平インターリーブ",              ID_VIEW_STEREO_HORIZONTAL_INTERLEAVED
+
+            MENUITEM "垂直インターリーブ",              ID_VIEW_STEREO_VERTICAL_INTERLEAVED
+
+            MENUITEM "Sharp3D表示",                     ID_VIEW_STEREO_SHARP3D
+            MENUITEM "QuadBuffer表示",                  ID_VIEW_STEREO_QUADBUFFER
+
+        END
+        POPUP "アナグリフカラー"
+        BEGIN
+            MENUITEM "左眼用カラーの編集...",           ID_VIEW_LEFT_COLOR
+            MENUITEM "右眼用カラーの編集...",           ID_VIEW_RIGHT_COLOR
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "左右入れ替え\tW",                     ID_VIEW_SWAP
+        MENUITEM "アスペクト比を維持\tA",               ID_VIEW_KEEPASPECTRATIO
+        POPUP "視差オフセット"
+        BEGIN
+            MENUITEM "拡大\t+",                         ID_VIEW_OFFSET_INCREASE
+            MENUITEM "縮小\t-",                         ID_VIEW_OFFSET_DECREASE
+            MENUITEM "リセット\t*",                     ID_VIEW_OFFSET_RESET
+        END
+        POPUP "表示エリア"
+        BEGIN
+            MENUITEM "左にパン\tLeft Arrow",            ID_VIEW_PAN_LEFT
+            MENUITEM "右にパン\tRight Arrow",           ID_VIEW_PAN_RIGHT
+            MENUITEM "上にパン\tUp Arrow",              ID_VIEW_PAN_UP
+            MENUITEM "下にパン\tDown Arrow",            ID_VIEW_PAN_DOWN
+            MENUITEM SEPARATOR
+            MENUITEM "拡大\tPageUp",                    ID_VIEW_ZOOM_UP
+            MENUITEM "縮小\tPageDown",                  ID_VIEW_ZOOM_DOWN
+            MENUITEM SEPARATOR
+            MENUITEM "リセット\tHome",                  ID_VIEW_PANZOOM_RESET
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "統計情報(&S)\tS",                     ID_VIEW_STATISTICS
+        POPUP "再生コントロール(&P)\tP"
+        BEGIN
+            MENUITEM "表示",                            ID_VIEW_PLAYCONTROL_SHOW
+            MENUITEM "自動表示",                        ID_VIEW_PLAYCONTROL_AUTO
+            MENUITEM "非表示",                          ID_VIEW_PLAYCONTROL_HIDE
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "再生/一時停止\tSpace",                ID_PLAY_PLAYPAUSE
+        MENUITEM "停止\t.",                             ID_PLAY_STOP
+        MENUITEM "読み込み後に再生",                    ID_PLAY_PLAYONLOAD
+        MENUITEM SEPARATOR
+        POPUP "再生速度"
+        BEGIN
+            MENUITEM "25%",                             ID_PLAY_SPEED_25
+            MENUITEM "50%",                             ID_PLAY_SPEED_50
+            MENUITEM "100%",                            ID_PLAY_SPEED_100
+            MENUITEM "150%",                            ID_PLAY_SPEED_150
+            MENUITEM "200%",                            ID_PLAY_SPEED_200
+        END
+        MENUITEM "強制同期(&F)\tCtrl+F",                ID_PLAY_FORCESYNC
+        MENUITEM "繰り返し(&L)\tL",                     ID_PLAY_LOOP
+        MENUITEM SEPARATOR
+        POPUP "音量"
+        BEGIN
+            MENUITEM "上げる",                          ID_PLAY_VOLUME_UP
+            MENUITEM "下げる",                          ID_PLAY_VOLUME_DOWN
+            MENUITEM "無音",                            ID_PLAY_VOLUME_MUTE
+        END
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_GLERROR_UNABLE_TO_GET_CD     "ClientDCの取得に失敗しました。");
+    ID_GLERROR_CHOOSEPIXELFORMAT    "ChoosePixelFormat()に失敗しました。"
+    ID_GLERROR_SELECTPIXELFORMAT    "SelectPixelFormat()に失敗しました。"
+    ID_GLERROR_WGLCREATECONTEXT     "wglCreateContext()に失敗しました。"
+    ID_GLERROR_WGLMAKECURRENTFAILD  "wglMakeCurrect()に失敗しました。"
+    ID_GLERROR_WGLDELETECONTEXT     "wglDeleteCotext()に失敗しました。"
+    ID_GLERROR_SWAPBUFFERS          "SwapBuffers()に失敗しました。"
+    ID_FILE_OPENLEFT                "左眼用ファイルを開く...\n左眼用ファイルを開く..."
+    ID_FILE_OPENRIGHT               "右眼用ファイルを開く...\n右眼用ファイルを開く..."
+    ID_FILE_OPENSETTING             "設定ファイルを開く...\n設定ファイルを開く..."
+    ID_FILE_SAVESETTING             "設定ファイルを保存...\n設定ファイルを保存..."
+    ID_VIEW_FORMAT_SEPARATED        "左右別ファイル\n左右別ファイル"
+    ID_VIEW_FORMAT_HORIZONTAL       "水平接合ファイル\n水平接合ファイル"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_FORMAT_HORIZONTAL_COMP  "水平接合圧縮ファイル\n水平接合圧縮ファイル"
+    ID_VIEW_FORMAT_VERTICAL         "垂直接合ファイル\n垂直接合ファイル"
+    ID_VIEW_FORMAT_VERTICAL_COMP    "垂直接合圧縮ファイル\n垂直接合圧縮ファイル"
+    ID_VIEW_CHANGE_FORMAT           "フォーマットを変更\nフォーマットを変更"
+    ID_VIEW_STEREO_LEFT             "左眼のみ表示\n左眼のみ表示"
+    ID_VIEW_STEREO_RIGHT            "右目画像のみ表示\n右目画像のみ表示"
+    ID_VIEW_STEREO_ANAGRYPH         "アナグリフ表示\nアナグリフ表示"
+    ID_VIEW_STEREO_HORIZONTAL       "水平分割表示\n水平分割表示"
+    ID_VIEW_STEREO_VERTICAL         "垂直分割表示\n垂直分割表示"
+    ID_VIEW_STEREO_HORIZONTAL_INTERLEAVED "水平インターリーブ表示\n水平インターリーブ表示"
+    ID_VIEW_STEREO_VERTICAL_INTERLEAVED "垂直インターリーブ表示\n垂直インターリーブ表示"
+    ID_VIEW_STEREO_SHARP3D          "Sharp3D表示\nSharp3D表示"
+    ID_VIEW_STEREO_QUADBUFFER       "QuadBuffer表示\nQuadBuffer表示"
+    ID_VIEW_CHANGE_STEREOTYPE       "ステレオ方式を変更\nステレオ方式を変更"
+    ID_VIEW_LEFT_COLOR              "左眼用カラーの編集...\n左眼用カラーの編集..."
+    ID_VIEW_RIGHT_COLOR             "右眼用カラーの編集...\n右眼用カラーの編集..."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_SWAP                    "左右入れ替え\n左右入れ替え"
+    ID_VIEW_KEEPASPECTRATIO         "アスペクト比を維持\nアスペクト比を維持"
+    ID_VIEW_OFFSET_INCREASE         "視差を拡大\n視差を拡大"
+    ID_VIEW_OFFSET_DECREASE         "視差を縮小\n視差を縮小"
+    ID_VIEW_OFFSET_RESET            "視差をリセット\n視差をリセット"
+    ID_VIEW_PAN_LEFT                "左にパン\n左にパン"
+    ID_VIEW_PAN_RIGHT               "右にパン\n右にパン"
+    ID_VIEW_PAN_UP                  "上にパン\n上にパン"
+    ID_VIEW_PAN_DOWN                "下にパン\n下にパン"
+    ID_VIEW_ZOOM_UP                 "表示エリアを拡大\n表示エリアを拡大"
+    ID_VIEW_ZOOM_DOWN               "表示エリアを縮小\n表示エリアを縮小"
+    ID_VIEW_PANZOOM_RESET           "表示エリアをリセット\n表示エリアをリセット"
+    ID_VIEW_STATISTICS              "統計情報\n統計情報"
+    ID_VIEW_PLAYCONTROL_SHOW        "再生コントロールを表示\n再生コントロールを表示"
+    ID_VIEW_PLAYCONTROL_AUTO        "再生コントロールを自動表示\n再生コントロールを自動表示"
+    ID_VIEW_PLAYCONTROL_HIDE        "再生コントロールを隠す\n再生コントロールを隠す"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_PLAY_PLAYPAUSE               "再生/一時停止\n再生/一時停止"
+    ID_PLAY_STOP                    "停止\n停止"
+    ID_PLAY_PLAYONLOAD              "読み込み後に再生\n読み込み後に再生"
+    ID_PLAY_SPEED_25                "再生速度25%\n再生速度25%"
+    ID_PLAY_SPEED_50                "再生速度50%\n再生速度50%"
+    ID_PLAY_SPEED_100               "再生速度100%\n再生速度100%"
+    ID_PLAY_SPEED_150               "再生速度150%\n再生速度150%"
+    ID_PLAY_SPEED_200               "再生速度200%\n再生速度200%"
+    ID_PLAY_FORCESYNC               "強制同期\n強制同期"
+    ID_PLAY_LOOP                    "ループ再生\nループ再生"
+    ID_PLAY_VOLUME_UP               "音量を上げる\n音量を上げる"
+    ID_PLAY_VOLUME_DOWN             "音量を下げる\n音量を下げる"
+    ID_PLAY_VOLUME_MUTE             "無音\n無音"
+    IDS_ACTIVATE                    "アクティブ"
+    IDS_SOURCE_FILE_EXT             "サポートされているファイル|*.avi;*.wmv;*.mpg;*.mpeg;*.m1v;*.mov;*.bmp;*.bms;*.jpg;*.jpeg;*.jps;*.gif;*.gis;*.pbm;*.pgm;*.png;*.png;*.pns;*.psd;*.psp;*.bw;*.rgb;*.rgba;*.sgi;*.tga;*.tif;*.tiff;*.raw;*.gsp;*.txt|ムービーファイル|*.avi;*.wmv;*.mpg;*.mpeg;*.m1v;*.mov|画像ファイル|*.bmp;*.bms;*.jpg;*.jpeg;*.jps;*.gif;*.gis;*.pbm;*.pgm;*.png;*.png;*.pns;*.psd;*.psp;*.bw;*.rgb;*.rgba;*.sgi;*.tga;*.tif;*.tiff;*.raw|スライドショウファイル|*.gsp;*.txt|すべてのファイル (*.*)|*.*||"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_GLSTEREOPLAYER      "GLStereoPlayer Control"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_RESIZE_HALF     "50%にリサイズ\n50%にリサイズ"
+    ID_VIEW_RESIZE_ORIGINAL "100%にリサイズ\n100%にリサイズ"
+    ID_VIEW_RESIZE_DOUBLE   "200%にリサイズ\n200%にリサイズ"
+    ID_VIEW_FULLSCREEN      "全画面表示\n全画面表示"
+END
+
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "GLStereoPlayer\n\nuntitled\nGLStereoPlayer Setting Files (*.gsp)\n.gsp\nGLStereoPlayer.Document\nGLStereoPlayer Setting File"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "GLStereoPlayer"
+    AFX_IDS_IDLEMESSAGE     "ﾚﾃﾞｨ"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "上書"
+    ID_INDICATOR_REC        "記録"
+    ID_INDICATOR_KANA       "ｶﾅ"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_UNTITLED        "無題"
+    ID_APP_ABOUT            "ﾌﾟﾛｸﾞﾗﾑの情報、ﾊﾞｰｼﾞｮﾝそして著作権を表示\nﾊﾞｰｼﾞｮﾝ情報"
+    ID_APP_EXIT             "ｱﾌﾟﾘｹｰｼｮﾝを終了し、ﾌｧｲﾙの保存を指示\n終了"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "指定のﾌｧｲﾙを開く"
+    ID_FILE_MRU_FILE2       "指定のﾌｧｲﾙを開く"
+    ID_FILE_MRU_FILE3       "指定のﾌｧｲﾙを開く"
+    ID_FILE_MRU_FILE4       "指定のﾌｧｲﾙを開く"
+    ID_FILE_MRU_FILE5       "指定のﾌｧｲﾙを開く"
+    ID_FILE_MRU_FILE6       "指定のﾌｧｲﾙを開く"
+    ID_FILE_MRU_FILE7       "指定のﾌｧｲﾙを開く"
+    ID_FILE_MRU_FILE8       "指定のﾌｧｲﾙを開く"
+    ID_FILE_MRU_FILE9       "指定のﾌｧｲﾙを開く"
+    ID_FILE_MRU_FILE10      "指定のﾌｧｲﾙを開く"
+    ID_FILE_MRU_FILE11      "指定のﾌｧｲﾙを開く"
+    ID_FILE_MRU_FILE12      "指定のﾌｧｲﾙを開く"
+    ID_FILE_MRU_FILE13      "指定のﾌｧｲﾙを開く"
+    ID_FILE_MRU_FILE14      "指定のﾌｧｲﾙを開く"
+    ID_FILE_MRU_FILE15      "指定のﾌｧｲﾙを開く"
+    ID_FILE_MRU_FILE16      "指定のﾌｧｲﾙを開く"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "ﾂｰﾙ ﾊﾞｰの 表示/非表示\nﾂｰﾙ ﾊﾞｰの表示切り替え"
+    ID_VIEW_STATUS_BAR      "ｽﾃｰﾀｽ ﾊﾞｰの 表示/非表示\nｽﾃｰﾀｽ ﾊﾞｰの表示切り替え"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_ERROR_CANTLOADFILE   "ファイルの読み込みに失敗しました。"
+    ID_ERROR_CANTSAVEFILE   "ファイルの保存に失敗しました。"
+END
+
+#endif    // Japanese resources
+/////////////////////////////////////////////////////////////////////////////

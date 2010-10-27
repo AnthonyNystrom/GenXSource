@@ -1,0 +1,211 @@
+/* RadWindow winxp luna (default) skin */
+
+.RadWContentFrame
+{
+	scrollbar-face-color: #BACBF4;
+	scrollbar-highlight-color: #FFFFFF;
+	scrollbar-shadow-color: #7E9FD2;
+	scrollbar-3dlight-color: #E6EEFC;
+	scrollbar-arrow-color: #4D6185;
+	scrollbar-track-color: #F7F7F3;
+	scrollbar-darkshadow-color: #C6D1DC;		
+}
+.RadWStatus
+{
+	display: none;
+	font-family: Verdana, Arial, Sans-Serif;
+	font-size: 10px;
+	font-weight: normal;
+	height: 23px;
+	background-image: url(CssImg/RadWStatus.gif);
+	background-repeat: repeat-x;
+	background-color: #d4d0c8;
+	cursor: default;
+	border-left: solid 3px #0023d6;
+	border-right: solid 3px #0023d6;
+	border-bottom: solid 3px #0023d6;
+}
+.RadWModalImage
+{
+	background: url('Img/ModalImageBg.gif');
+}
+.RadWDragHelper
+{		
+	border : solid 3px #cccccc;	
+	border: dashed 1px gray;
+	background-color : #cccccc;	
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+	-moz-opacity: 0.5;
+	margin: 0px;
+	padding: 0px;	
+	position: absolute;
+	z-index: 50000;
+	overflow: hidden;	
+}
+.RadWMinimizedActive, .RadWMinimizedOver
+{
+	background: url(CssImg/RadWWrapperHeaderCenter.gif) repeat-x center top;
+	background-color: #d9e8fa;
+	width: 131px;
+	height: 17px;
+	border: solid 1px #757b91;
+	float: right;
+}
+.RadWMinimizedPageLoaded
+{
+	background: url(CssImg/RadWWrapperHeaderCenter.gif) repeat-x center top;
+	width: 331px;
+	height: 17px;
+	border: solid 1px #757b91;
+}
+.RadWMinimizedInactive
+{
+	background-color: #d9e8fa;
+	background: url(CssImg/RadWWrapperHeaderCenter.gif);
+	background-repeat: repeat-x;
+	width: 331px;
+	height: 17px;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=60);
+	-moz-opacity: 0.6;
+	border: solid 1px #757b91;
+}
+.RadWLoadingWrapper
+{
+	border: solid 1px #757b91;	
+	vertical-align: middle;
+	width: 80px;
+	height: 100%;
+	text-align: center;	
+	font-family: Verdana, Arial, Tahoma, Sans-Serif;
+	font-size: 11px;
+	font-weight: normal;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=99);
+}
+.RadWIcon
+{
+	display: none;
+}
+.RadWTitleText
+{
+	display: none;			
+}
+.RadWButton
+{
+	cursor: default;
+	vertical-align: top;
+	margin-right: 4px;
+	margin-left: 4px;
+	margin-top: 2px;
+}
+.RadWWrapperActive
+{
+	font-size: 0px;	
+	/**/
+}
+.RadWWrapperInactive
+{
+	font-size: 0px;	
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=60);
+	-moz-opacity: 0.6;
+}
+.RadWWrapperModal
+{	
+	/**/
+}
+.RadWTitleRow
+{
+	cursor: default;		
+}
+
+.RadWHeaderTopResizer
+{
+	height: 7px;
+	background: url(CssImg/RadWWrapperHeaderCenter.gif) repeat-x center top;
+}
+
+.RadWWrapperHeaderLeft
+{
+	width: 1px;
+	font-size: 1px;
+	height: 19px !important;
+	display: block;
+	background-color: #757b91;
+}
+
+.RadWWrapperHeaderCenter
+{
+	text-align: left;
+	height: 12px;
+	font-family: Verdana, Arial, Tahoma;
+	font-size: 1px; /* make sure you always set a value */
+	color: #fff;
+	background-color: #d9e8fa;
+}
+.RadWWrapperHeaderRight
+{
+	width: 1px;
+	height: 19px !important;
+	display: block;
+	background-color: #757b91;
+}
+.RadWWrapperBodyLeft
+{
+	width: 1px;
+	border-left: solid 1px #757b91;
+	background-color: #d9e8fa;
+}
+/* Mozilla 1.5 Fix */
+.RadWWrapperBodyLeft:before
+{
+	content: " ";
+	display: block;
+	width: 1px;
+}
+.RadWWrapperBodyCenter
+{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.RadWWrapperBodyRight
+{
+	width: 1px;
+	border-right:  solid 1px #757b91;
+	background-color: #d9e8fa;
+}
+/* Mozilla 1.5 Fix */
+.RadWWrapperBodyRight:before
+{
+	content: " ";
+	display: block;
+	width: 1px;
+}
+/* footer start */
+.RadWWrapperFooterLeft 
+{
+	width: 1px;
+	font-size: 0px;
+	height: 1px !important;
+	background-color: #757b91;
+	border-bottom: solid 1px #757b91;
+} 
+
+.RadWWrapperFooterCenter 
+{
+	width: 100% !important;
+	font-size: 0px;
+	height: 1px !important;
+	background-color: #bad1f2;
+	border-bottom: solid 1px #757b91;
+	
+} 
+.RadWWrapperFooterRight 
+{
+	width: 1px;
+	font-size: 0px;
+	height: 1px !important;
+	background-color: #757b91;
+	border-bottom: solid 1px #757b91;
+	
+} 
+/* footer end */

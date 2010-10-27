@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<backup_registration>
+  <passive_backup>
+    <!-- Backups all files under application's private folder -->
+    <include_directory name = "\" />
+  </passive_backup> 
+  <system_backup/>
+  <restore requires_reboot = "no"/>
+
+  <!-- 
+	C:\Data will be scheduled for backup automatically, 
+	if other public directories required uncomment following
+	block.
+   -->
+  <!--
+  <public_backup>
+        <include_directory name="c:\cities\" />
+        <include_directory name="e:\cities\" />
+  </public_backup> 
+  -->
+</backup_registration>

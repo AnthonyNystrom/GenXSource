@@ -1,0 +1,22 @@
+; Next2Friends.pkg
+;
+;Language - standard language definitions
+&EN
+
+;Standard SIS file header
+#{"Next2Friends"},(0xe2c9889d),1,0,0
+
+;Localised Vendor name
+%{"Vendor Name-EN"}
+
+;Unique Vendor name
+:"Vendor Name"
+
+;Supports Series 60 v 3.0
+[0x101F7961], 0, 0, 0, {"Series60ProductID"}
+
+;Files to install
+"..\..\..\epoc32\release\armv5\urel\Next2Friends.exe"                 -"!:\sys\bin\Next2Friends.exe"
+"..\..\..\epoc32\data\z\resource\apps\Next2Friends.rsc"               -"!:\resource\apps\Next2Friends.rsc"
+"..\..\..\epoc32\data\z\resource\apps\Next2Friends_reg.mif"               -"!:\resource\apps\Next2Friends_reg.mif"
+"..\..\..\epoc32\data\z\private\10003a3f\apps\Next2Friends_reg.rsc"   -"!:\private\10003a3f\import\apps\Next2Friends_reg.rsc"

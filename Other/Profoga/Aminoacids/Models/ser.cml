@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSpy v2006 U (http://www.altova.com) by George Schizas (TerraSoft) -->
+<molecule xmlns="http://www.xml-cml.org/schema/cml2/core" id="ser.pdb">
+	<atomArray>
+		<atom id="a1" elementType="N" x3="0.043000" y3="-0.056000" z3="0.000000" role="peptideN"/>
+		<atom id="a2" elementType="C" x3="1.502000" y3="-0.020000" z3="0.000000" role="skeletonC"/>
+		<atom id="a3" elementType="C" x3="2.009000" y3="1.402000" z3="0.000000" role="peptideC"/>
+		<atom id="a4" elementType="O" x3="1.244000" y3="2.367000" z3="0.000000" role="peptideO"/>
+		<atom id="a5" elementType="C" x3="2.073000" y3="-0.829000" z3="-1.192000"/>
+		<atom id="a6" elementType="O" x3="1.824000" y3="-0.207000" z3="-2.457000"/>
+		<atom id="a7" elementType="H" x3="-0.552000" y3="0.845000" z3="0.000000" role="peptideH"/>
+		<atom id="a8" elementType="H" x3="-0.507000" y3="-0.986000" z3="0.000000" role="dehydrateNitrogenH"/>
+		<atom id="a9" elementType="H" x3="1.854000" y3="-0.486000" z3="0.939000" role="skeletonH"/>
+		<atom id="a10" elementType="H" x3="3.168000" y3="-0.947000" z3="-1.072000"/>
+		<atom id="a11" elementType="H" x3="1.675000" y3="-1.862000" z3="-1.203000"/>
+		<atom id="a12" elementType="H" x3="0.871000" y3="-0.178000" z3="-2.580000"/>
+		<atom id="a13" elementType="O" x3="3.430000" y3="1.562000" z3="0.000000" role="dehydrateCarbonO"/>
+		<atom id="a14" elementType="H" x3="3.880000" y3="0.636000" z3="0.000000" role="dehydrateCarbonH"/>
+	</atomArray>
+	<bondArray>
+		<bond atomRefs2="a1 a2" order="1"/>
+		<bond atomRefs2="a2 a3" order="1"/>
+		<bond atomRefs2="a2 a5" order="1"/>
+		<bond atomRefs2="a2 a9" order="1"/>
+		<bond atomRefs2="a3 a4" order="2"/>
+		<bond atomRefs2="a5 a6" order="1"/>
+		<bond atomRefs2="a5 a10" order="1"/>
+		<bond atomRefs2="a5 a11" order="1"/>
+		<bond atomRefs2="a6 a12" order="1"/>
+		<bond atomRefs2="a1 a7" order="1"/>
+		<bond atomRefs2="a1 a8" order="1"/>
+		<bond atomRefs2="a3 a13" order="1"/>
+		<bond atomRefs2="a13 a14" order="1"/>
+	</bondArray>
+</molecule>

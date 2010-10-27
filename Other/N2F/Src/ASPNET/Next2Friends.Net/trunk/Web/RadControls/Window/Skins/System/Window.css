@@ -1,0 +1,247 @@
+/* RadWindow System skin */
+
+iframe.RadWContentFrame
+{
+	background: #fff; /* Mozilla overlay */
+}
+
+.RadWContentFrame
+{
+	scrollbar-face-color: #BACBF4;
+	scrollbar-highlight-color: #FFFFFF;
+	scrollbar-shadow-color: #7E9FD2;
+	scrollbar-3dlight-color: #E6EEFC;
+	scrollbar-arrow-color: #4D6185;
+	scrollbar-track-color: #F7F7F3;
+	scrollbar-darkshadow-color: #C6D1DC;		
+}
+
+.RadWStatus
+{
+	display: none !important; /* this skin does not have status bar support */
+}
+
+.RadWModalImage
+{
+	background: url('Img/ModalImageBg.gif');
+}
+
+.RadWStatusRow
+{
+	background-color: #fff;
+}
+
+.RadWDragHelper
+{		
+	border : solid 1px #ccc;	
+	background: #ccc;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50); /* IE */
+	-moz-opacity: 0.5; /* Moz */
+	opacity: 0.5; /* CSS3 */
+	margin: 0px;
+	padding: 0px;	
+	position: absolute;
+	z-index: 50000;
+	overflow: hidden;	
+}
+
+.RadWMinimizedActive,
+.RadWMinimizedOver
+{
+	width: 60px;
+	height: 24px;
+	background: url('CssImg/RadWWrapperHeaderCenter.gif') repeat-x;
+	border: solid 1px #828282;
+}
+
+.RadWMinimizedPageLoaded
+{
+	width: 60px;
+	height: 24px;
+	background: #c4c4c4 url('CssImg/RadWWrapperHeaderCenter.gif') repeat-x;
+	border: solid 1px #4b89d9;
+}
+
+.RadWMinimizedInactive
+{
+	width: 60px;
+	height: 23px;
+	background: #c4c4c4 url('CssImg/RadWWrapperHeaderCenter.gif') repeat-x;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=60); /* IE */
+	-moz-opacity: 0.6; /* Moz */
+	opacity: 0.6; /* CSS3 */
+	border-left: solid 1px #828282;
+	border-right: solid 1px #828282;
+}
+
+.RadWLoadingWrapper
+{
+	width: 80px;
+	height: 100%;
+	vertical-align: middle;
+	text-align: center;	
+	font: normal 11px Verdana, Arial, Sans-Serif;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=99); /* IE */
+}
+
+.RadWIcon
+{
+	margin-left: 2px;	
+	margin-right: 2px;
+	cursor: default;
+}
+
+.RadWTitleText
+{
+	font: bold 11px Verdana, Arial, Sans-Serif;
+	color: #222;
+	vertical-align: middle;				
+}
+
+.RadWButton
+{
+	cursor: default;
+	margin-top: 3px;
+	margin-right: 2px;
+	vertical-align: top;
+}
+
+.RadWWrapperActive
+{
+	font-size: 0px;	
+	background: transparent;
+	/*filter: progid:DXImageTransform.Microsoft.Shadow(direction=140,color=#808080,strength=10); */
+}
+
+.RadWWrapperInactive
+{
+	font-size: 0px;	
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=90); /* IE */
+	-moz-opacity: 0.9; /* Moz */
+	opacity: 0.9; /* CSS3 */
+}
+
+.RadWWrapperModal
+{	
+	/* filter: progid:DXImageTransform.Microsoft.Shadow(direction=140,color=#808080,strength=10); */
+}
+
+.RadWTitleRow
+{
+	cursor: default;		
+}
+
+.RadWTitleRow TD
+{
+	padding: 0px;
+}
+
+.RadWWrapperHeaderLeft
+{
+	width: 11px;
+	height: 24px !important;
+	display: block;
+	background: transparent url('CssImg/RadWWrapperHeaderLeft.png') no-repeat;
+}
+
+.RadWHeaderTopResizer
+{
+	font-size: 0px;
+	height: 2px;
+	background: #c4c4c4 url('CssImg/RadWWrapperHeaderCenter.gif') repeat-x top;
+}
+
+.RadWWrapperHeaderCenter
+{
+	text-align: left;
+	height: 22px;
+	font-family: Verdana, Arial, Sans-serif;
+	font-size: medium; /* make sure you always set a value */
+	color: #fff;
+	background: #c4c4c4 url('CssImg/RadWWrapperHeaderCenter.gif') repeat-x bottom;
+	vertical-align: bottom;
+}
+
+.RadWWrapperHeaderRight
+{
+	width: 11px;
+	height: 24px !important;
+	display: block;
+	background: url('CssImg/RadWWrapperHeaderRight.png') no-repeat;
+}
+
+.RadWWrapperBodyLeft
+{
+	width: 3px;
+	border-left: solid 1px #c1c6d0;
+	background: #eef2fb;
+}
+
+/* Mozilla 1.5 Fix */
+.RadWWrapperBodyLeft:before
+{
+	content: " ";
+	display: block;
+	width: 3px;
+}
+
+.RadWWrapperBodyCenter
+{
+	width: 100%;
+	height: 100%;
+}
+
+.RadWWrapperBodyRight
+{
+	width: 3px;
+	border-right: solid 1px #c1c6d0;
+	background: #eef2fb;
+}
+
+/* Mozilla 1.5 Fix */
+.RadWWrapperBodyRight:before
+{
+	content: " ";
+	display: block;
+	width: 3px;
+}
+
+/* footer start */
+.RadWWrapperFooterLeft 
+{
+	width: 11px;
+	height: 27px !important;
+	display: block;
+	padding: 0px;
+	background: url('CssImg/RadWWrapperFooterLeft.png') no-repeat;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale src='CssImg/RadWWrapperFooterLeft.png'); /* IE */
+	font-size: 0px;
+	_position: relative; /*IE*/
+	_top: -1px; /*IE*/
+} 
+
+.RadWWrapperFooterCenter 
+{
+	width: 100%;
+	height: 27px;
+	background: url('CssImg/RadWWrapperFooterCenter.gif') repeat-x;
+	font-size: 0px;
+	padding: 0px;
+	line-height: 0px;
+	_position: relative; /*IE*/
+	_top: -1px; /*IE*/
+}
+
+.RadWWrapperFooterRight 
+{
+	width: 26px;
+	height: 27px !important;
+	display: block;
+	background: url('CssImg/RadWWrapperFooterRight.png') no-repeat;
+	font-size: 0px;
+	padding: 0px;
+	_position: relative; /*IE*/
+	_top: -1px; /*IE*/
+} 
+
+/* footer end */

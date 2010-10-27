@@ -1,0 +1,342 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head id="ctl00_MasterHeader">
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link href="./style.css" rel="stylesheet" type="text/css"><link href="./StyleB.css" rel="stylesheet" type="text/css"><link rel="shortcut icon" href="http://www.n2fstaticx3.com/favicon.ico" type="image/x-icon"><link rel="icon" href="http://www.n2fstaticx3.com/favicon.ico" type="image/x-icon">
+    <script type="text/javascript" src="/lib/jquery.js"></script>
+<title>
+	Next2Friends.com
+</title></head><body>
+
+<div id="page">
+        
+        <!--/header start -->
+        <div id="header">
+
+            <a href="http://www.next2friends.com">
+                <img src="./images/logo.gif" alt="Next2Friends" id="logo"></a>
+         <div style="position: absolute; right: 0px; top: 30px;" id="pSearch">
+         <form name="aspnetForm" method="post" action="settings.aspx" id="aspnetForm">
+<div>
+<input name="__EVENTTARGET" id="__EVENTTARGET" value="" type="hidden">
+<input name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" type="hidden">
+<input name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE2MTIyNTQ0OTUPZBYCZg9kFgICAQ9kFgZmDw9kFgIeCm9uS2V5UHJlc3MFVGphdmFzY3JpcHQ6aWYgKGV2ZW50LmtleUNvZGUgPT0gMTMpeyBfX2RvUG9zdEJhY2soJ2N0bDAwJGJ0bkxvZ2luJywnJyk7cmV0dXJuIGZhbHNlfWQCAQ8PZBYCHwAFVGphdmFzY3JpcHQ6aWYgKGV2ZW50LmtleUNvZGUgPT0gMTMpeyBfX2RvUG9zdEJhY2soJ2N0bDAwJGJ0bkxvZ2luJywnJyk7cmV0dXJuIGZhbHNlfWQCBQ9kFggCCA8PFgQeCENzc0NsYXNzBRJmb3JtX3R4dCBmb3JtZXJyb3IeBF8hU0ICAmRkAgkPDxYEHwEFEmZvcm1fdHh0IGZvcm1lcnJvch8CAgJkZAIKDw8WBB8BBQhmb3JtX3R4dB8CAgJkZAILDw8WBB8BBQhmb3JtX3R4dB8CAgJkZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WCQUTY3RsMDAkY2hiUmVtZW1iZXJNZQUnY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRjaGJOZXdNZXNzYWdlBSpjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJGNoYk5ld0FBRkNvbW1lbnQFLWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkY2hiTmV3RnJpZW5kUmVxdWVzdAUsY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRjaGJTdWJzY3JpYmVyRXZlbnQFLmN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkY2hiTmV3UHJvZmlsZUNvbW1lbnQFMmN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkY2hiTm90aWZ5TmV3UGhvdG9Db21tZW50BTJjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJGNoYk5vdGlmeU5ld1ZpZGVvQ29tbWVudAUnY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRjaGJOZXdzTGV0dGVycctwkqMafh429XogLB9g22LZ7NI=" type="hidden">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script type="text/javascript" src="/ajaxpro/prototype.ashx"></script>
+<script type="text/javascript" src="/ajaxpro/core.ashx"></script>
+<script type="text/javascript" src="/ajaxpro/ms.ashx"></script>
+<script type="text/javascript" src="/ajaxpro/converter.ashx"></script>
+<script type="text/javascript" src="/ajaxpro/Main,App_Web_main.master.cdcab7d2.oh6y-hzh.ashx"></script>
+<script type="text/javascript" src="/ajaxpro/ChatCtrl,App_Web_vd0euahb.ashx"></script>
+
+           
+			<input id="search" style="width: 200px;" value="" class="form_txt2" type="text">
+
+			in
+			<select id="category" class="form_txt2" style="width: 80px;">
+				<option value="video">video</option>
+				<option value="people">people</option>
+			</select>
+			<div id="friendoptions" style="display: none; top: 55px; z-index: 500;">
+               <p>
+					<label>Email</label>
+
+					<input id="email" style="width: 200px;" value="" class="form_txt2" type="text">
+				</p>
+				<p>
+					<label>Sex</label>
+					<select id="sex" class="form_txt2" style="width: 90px;">
+						<option value="-1">Any</option>
+						<option value="1">Male</option>
+
+						<option value="0">Female</option>
+					</select>
+				</p>
+				<p>
+					<label>Country</label>
+						<span id="sCountry"><select id="country" class="form_txt2" style="width: 200px;" name="country"><option selected="selected" value="All">All Countries</option><option value="US">United States</option><option value="GB">United Kingdom</option><option value="AF">Afghanistan</option><option value="AL">Albania</option><option value="DZ">Algeria</option><option value="AS">American Samoa</option><option value="AD">Andorra</option><option value="AO">Angola</option><option value="AI">Anguilla</option><option value="AQ">Antarctica</option><option value="AG">Antigua And Barbuda</option><option value="AR">Argentina</option><option value="AM">Armenia</option><option value="AW">Aruba</option><option value="AU">Australia</option><option value="AT">Austria</option><option value="AZ">Azerbaijan</option><option value="BS">Bahamas</option><option value="BH">Bahrain</option><option value="BD">Bangladesh</option><option value="BB">Barbados</option><option value="BY">Belarus</option><option value="BE">Belgium</option><option value="BZ">Belize</option><option value="BJ">Benin</option><option value="BM">Bermuda</option><option value="BT">Bhutan</option><option value="BO">Bolivia</option><option value="BA">Bosnia And Herzegovina</option><option value="BW">Botswana</option><option value="BV">Bouvet Island</option><option value="BR">Brazil</option><option value="IO">British Indian Ocean Territory</option><option value="BN">Brunei Darussalam</option><option value="BG">Bulgaria</option><option value="BF">Burkina Faso</option><option value="BI">Burundi</option><option value="KH">Cambodia</option><option value="CM">Cameroon</option><option value="CA">Canada</option><option value="CV">Cape Verde</option><option value="KY">Cayman Islands</option><option value="CF">Central African Republic</option><option value="TD">Chad</option><option value="CL">Chile</option><option value="CN">China</option><option value="CO">Colombia</option><option value="KM">Comoros</option><option value="CG">Congo</option><option value="CD">Congo, The Democratic Republic Of The</option><option value="CK">Cook Islands</option><option value="CR">Costa Rica</option><option value="CI">Cote D'ivoire</option><option value="HR">Croatia</option><option value="CU">Cuba</option><option value="CY">Cyprus</option><option value="CZ">Czech Republic</option><option value="DK">Denmark</option><option value="DJ">Djibouti</option><option value="DM">Dominica</option><option value="DO">Dominican Republic</option><option value="EC">Ecuador</option><option value="EG">Egypt</option><option value="SV">El Salvador</option><option value="GQ">Equatorial Guinea</option><option value="ER">Eritrea</option><option value="EE">Estonia</option><option value="ET">Ethiopia</option><option value="FK">Falkland Islands (Malvinas)</option><option value="FO">Faroe Islands</option><option value="FJ">Fiji</option><option value="FI">Finland</option><option value="FR">France</option><option value="GF">French Guiana</option><option value="PF">French Polynesia</option><option value="TF">French Southern Territories</option><option value="GA">Gabon</option><option value="GM">Gambia</option><option value="GE">Georgia</option><option value="DE">Germany</option><option value="GH">Ghana</option><option value="GI">Gibraltar</option><option value="GR">Greece</option><option value="GL">Greenland</option><option value="GD">Grenada</option><option value="GP">Guadeloupe</option><option value="GU">Guam</option><option value="GT">Guatemala</option><option value="GN">Guinea</option><option value="GW">Guinea-bissau</option><option value="GY">Guyana</option><option value="HT">Haiti</option><option value="HM">Heard Island And Mcdonald Islands</option><option value="VA">Holy See (Vatican City State)</option><option value="HN">Honduras</option><option value="HK">Hong Kong</option><option value="HU">Hungary</option><option value="IS">Iceland</option><option value="IN">India</option><option value="ID">Indonesia</option><option value="IR">Iran, Islamic Republic Of</option><option value="IQ">Iraq</option><option value="IE">Ireland</option><option value="IL">Israel</option><option value="IT">Italy</option><option value="JM">Jamaica</option><option value="JP">Japan</option><option value="JO">Jordan</option><option value="KZ">Kazakhstan</option><option value="KE">Kenya</option><option value="KI">Kiribati</option><option value="KP">Korea, North</option><option value="KR">Korea, South</option><option value="KW">Kuwait</option><option value="KG">Kyrgyzstan</option><option value="LA">Lao People's Democratic Republic</option><option value="LV">Latvia</option><option value="LB">Lebanon</option><option value="LS">Lesotho</option><option value="LR">Liberia</option><option value="LY">Libyan Arab Jamahiriya</option><option value="LI">Liechtenstein</option><option value="LT">Lithuania</option><option value="LU">Luxembourg</option><option value="MO">Macao</option><option value="MK">Macedonia, The Former Yugoslav Republic Of</option><option value="MG">Madagascar</option><option value="MW">Malawi</option><option value="MY">Malaysia</option><option value="MV">Maldives</option><option value="ML">Mali</option><option value="MT">Malta</option><option value="MH">Marshall Islands</option><option value="MQ">Martinique</option><option value="MR">Mauritania</option><option value="MU">Mauritius</option><option value="YT">Mayotte</option><option value="MX">Mexico</option><option value="FM">Micronesia, Federated States Of</option><option value="MD">Moldova, Republic Of</option><option value="MC">Monaco</option><option value="MN">Mongolia</option><option value="MS">Montserrat</option><option value="MA">Morocco</option><option value="MZ">Mozambique</option><option value="MM">Myanmar</option><option value="NA">Namibia</option><option value="NR">Nauru</option><option value="NP">Nepal</option><option value="NL">Netherlands</option><option value="AN">Netherlands Antilles</option><option value="NC">New Caledonia</option><option value="NZ">New Zealand</option><option value="NI">Nicaragua</option><option value="NE">Niger</option><option value="NG">Nigeria</option><option value="NU">Niue</option><option value="NF">Norfolk Island</option><option value="MP">Northern Mariana Islands</option><option value="NO">Norway</option><option value="OM">Oman</option><option value="PK">Pakistan</option><option value="PW">Palau</option><option value="PS">Palestinian Territory, Occupied</option><option value="PA">Panama</option><option value="PG">Papua New Guinea</option><option value="PY">Paraguay</option><option value="PE">Peru</option><option value="PH">Philippines</option><option value="PN">Pitcairn</option><option value="PL">Poland</option><option value="PT">Portugal</option><option value="PR">Puerto Rico</option><option value="QA">Qatar</option><option value="RE">Reunion</option><option value="RO">Romania</option><option value="RU">Russian Federation</option><option value="RW">Rwanda</option><option value="KN">Saint Kitts And Nevis</option><option value="LC">Saint Lucia</option><option value="VC">Saint Vincent And The Grenadines</option><option value="WS">Samoa</option><option value="SM">San Marino</option><option value="ST">Sao Tome And Principe</option><option value="SA">Saudi Arabia</option><option value="SN">Senegal</option><option value="CS">Serbia And Montenegro</option><option value="SC">Seychelles</option><option value="SL">Sierra Leone</option><option value="SG">Singapore</option><option value="SK">Slovakia</option><option value="SI">Slovenia</option><option value="SB">Solomon Islands</option><option value="SO">Somalia</option><option value="ZA">South Africa</option><option value="ES">Spain</option><option value="LK">Sri Lanka</option><option value="SD">Sudan</option><option value="SR">Suriname</option><option value="SZ">Swaziland</option><option value="SE">Sweden</option><option value="CH">Switzerland</option><option value="SY">Syrian Arab Republic</option><option value="TW">Taiwan</option><option value="TJ">Tajikistan</option><option value="TZ">Tanzania, United Republic Of</option><option value="TH">Thailand</option><option value="TL">Timor-leste</option><option value="TG">Togo</option><option value="TK">Tokelau</option><option value="TO">Tonga</option><option value="TT">Trinidad And Tobago</option><option value="TN">Tunisia</option><option value="TR">Turkey</option><option value="TM">Turkmenistan</option><option value="TC">Turks And Caicos Islands</option><option value="TV">Tuvalu</option><option value="UG">Uganda</option><option value="UA">Ukraine</option><option value="AE">United Arab Emirates</option><option value="UM">United States Minor Outlying Islands</option><option value="UY">Uruguay</option><option value="UZ">Uzbekistan</option><option value="VU">Vanuatu</option><option value="VE">Venezuela</option><option value="VN">Viet Nam</option><option value="VG">Virgin Islands, British</option><option value="VI">Virgin Islands, U.s.</option><option value="YE">Yemen</option><option value="YU">Yugoslavia</option><option value="ZM">Zambia</option><option value="ZW">Zimbabwe</option></select></span>
+
+				
+				</p>
+				<p>
+					<label>City</label>
+					<input id="city" class="form_txt2" value="" style="width: 200px;" type="text">
+				</p>
+				<p>
+					<label>Profile keywords</label>
+					<textarea id="profile" cols="25" rows="3" class="form_txt2" style="width: 200px;"></textarea>
+
+				</p>
+				<p class="indent"><input id="avatar" value="yes" type="checkbox"> Avatar photo only</p>
+
+				<div class="arrow"></div>
+			</div>
+			<input id="searchButton" value="Search" class="form_btn2" type="button">
+		<br>
+		<a href="javascript:void(0);" style="position: absolute; top: 25px; font-size: smaller; display: none;" id="advancedSearch">Advanced search</a>
+
+		</form></div>       
+            <ul id="nav">
+                <li><a href="/"><span>Home</span></a></li>
+                
+                <li><a href="/community"><span>Community</span></a></li>
+                <li><a href="/video"><span>Videos</span></a></li>
+                <li><a href="/ask"><span>Ask</span></a></li>
+                <li id="greenTab"><a href="/features"><span>Mobile</span></a></li>
+
+            </ul>
+            
+            
+            <ul id="header_nav">
+             
+            
+			
+			<li>
+				<a href="javascript:void(0);" class="profile_dropdown">Chat</a>
+				<ul id="chatDropDown" style="display: none;">
+					<li id="chatWin"><a href="javascript:openChatWin();void(0);">Windowed</a></li>
+					<li id="chatInt"><a href="javascript:chatLogin();closeDropDown();void(0);">Integrated</a></li>
+
+					<li id="chatAuto"><a href="javascript:toggleAutoLogin();void(0);">Auto Login&nbsp;<input id="chkAutoChat" type="checkbox"></a></li>
+                    <li id="chatLogOut" style="display: none;"><a href="javascript:chatLogoutEx();closeDropDown();">Log out of Chat</a></li>
+				</ul>
+			</li>
+			<li><a href="/users/Comosicus">Profile</a></li>
+			<li><a href="/friends">Friends</a></li>
+			<li><a href="/dashboard">Dashboard</a></li>
+
+		    <li><a href="/inbox" class="message_inbox">Inbox (<div style="display: inline;" id="spanInboxCount">0</div>)</a></li>
+			
+            <li class="last"><a href="javascript:__doPostBack('ctl00$ctl05','')">Logout</a></li>
+            
+		</ul>
+		
+				  
+            <p id="upload">My Media<a href="/myvideos" title="Video"><img src="./images/icon-video.gif" alt="" class="videos"><span class="videos_span">Videos</span></a><a href="/myphotos" title="Photo">
+            <img src="./images/icon-image.gif" alt="" class="photos"><span class="photos_span">Photos</span></a></p>                         
+        </div>
+
+        <!-- header end -->
+        
+    <!-- middle start -->
+	<div id="middle" class="no_subnavclearfix">
+
+
+		<!-- page start -->
+		<div class="page clearfix fullPageBkg">
+		
+<!-- CHANGES START HERE -->
+		
+				<h2>Change your Next2Friends Settings</h2>
+
+				<p>You can change your settings below. Once you are happy you can click save.</p>
+
+		
+				<div class="settings_area_large">
+					<div class="top"></div>
+
+					<div class="firstHalfColumn">
+					<p><span class="bottomSpace" style="font-weight: bold;">General Settings</span></p>
+						    <p>
+							    <input id="ctl00_ContentPlaceHolder1_chbNewMessage" name="ctl00$ContentPlaceHolder1$chbNewMessage" checked="checked" type="checkbox">
+
+								<label for="notify">Notify me by email on new Message</label>
+							</p>
+							<p>
+							    <input id="ctl00_ContentPlaceHolder1_chbNewAAFComment" name="ctl00$ContentPlaceHolder1$chbNewAAFComment" checked="checked" type="checkbox">
+								<label for="notify">Notify me by email on new AAF Comment</label>
+							</p>
+							<p>
+							    <input id="ctl00_ContentPlaceHolder1_chbNewFriendRequest" name="ctl00$ContentPlaceHolder1$chbNewFriendRequest" checked="checked" type="checkbox">
+
+								<label for="notify">Notify me by email on new Friend Request</label>
+							</p>
+							<p>
+							    <input id="ctl00_ContentPlaceHolder1_chbSubscriberEvent" name="ctl00$ContentPlaceHolder1$chbSubscriberEvent" checked="checked" type="checkbox">
+								<label for="notify">Notify me by email on new Subscriber Event</label>
+							</p>
+							<p>
+								<input id="ctl00_ContentPlaceHolder1_chbNewProfileComment" name="ctl00$ContentPlaceHolder1$chbNewProfileComment" checked="checked" type="checkbox">
+
+								<label for="notify">Notify me by email on new profile comment</label>
+							</p>
+							<p>
+								<input id="ctl00_ContentPlaceHolder1_chbNotifyNewPhotoComment" name="ctl00$ContentPlaceHolder1$chbNotifyNewPhotoComment" checked="checked" type="checkbox">
+								<label for="notify">Notify me by email on new Photo comment</label>
+							</p>
+							<p>
+								<input id="ctl00_ContentPlaceHolder1_chbNotifyNewVideoComment" name="ctl00$ContentPlaceHolder1$chbNotifyNewVideoComment" checked="checked" type="checkbox">
+
+								<label for="notify">Notify me by email on new Video comment</label>
+							</p>
+							<p class="indent">
+							    <input id="ctl00_ContentPlaceHolder1_chbNewsLetter" name="ctl00$ContentPlaceHolder1$chbNewsLetter" checked="checked" type="checkbox">
+								<label for="notify">Receive News Letter</label>
+							</p>
+						
+					</div>
+					<div class="secondHalfColumn">
+
+						<p>
+							<span class="floatedWarning">Invalid Email address</span>
+							<strong>Update Email Address</strong>
+							
+						</p>
+						<p>
+							<label>Email</label>
+							<input name="ctl00$ContentPlaceHolder1$txtEmail" id="ctl00_ContentPlaceHolder1_txtEmail" class="form_txt formerror" type="text">
+						</p>
+						<p>
+							<span class="floatedWarning">Old password is incorrect</span>
+							<strong>Update Password</strong>
+						</p>
+
+						<p>
+							<label>Old Password</label>
+                             <input name="ctl00$ContentPlaceHolder1$txtOldPassword" id="ctl00_ContentPlaceHolder1_txtOldPassword" class="form_txt formerror" type="password">   
+						</p>
+						<p>
+							<label>New Password</label>
+							<input name="ctl00$ContentPlaceHolder1$txtNewPassword" id="ctl00_ContentPlaceHolder1_txtNewPassword" class="form_txt" type="password">  
+						</p>
+						<p>
+
+							<label>Repeat Password</label>
+                            <input name="ctl00$ContentPlaceHolder1$txtConfirmPassword" id="ctl00_ContentPlaceHolder1_txtConfirmPassword" class="form_txt" type="password">  
+						</p>
+						<p class="right">
+							Your password needs to be at least 7 characters long
+						</p>
+					</div>
+					<div class="clear"></div>
+					<p class="align_right" style="margin-right: 30px;">
+							<input value="Save" class="form_btn" onclick="__doPostBack('ctl00$ContentPlaceHolder1$btnSave', '');return false;" type="button">
+							<input name="ctl00$ContentPlaceHolder1$btnSave" value="Save" id="ctl00_ContentPlaceHolder1_btnSave" class="hiddenButton" type="submit">
+					</p>
+
+					<div class="bottom"></div>
+
+				</div>
+			
+	</div>
+	</div>
+
+
+        <!-- footer start -->
+        <div id="footer">
+            <p id="credits">
+
+               Copyright Next2Friends 2008 | 
+               <a href="/privacypolicy">Privacy Policy</a> | 
+               <a href="/termsofuse">Terms of Use</a> |  
+               <a href="/labs">Labs</a> | 
+               <a href="/developers">Developers</a> | 
+               <a href="http://www.next2friendsblog.com">Blog</a> | 
+               <a href="/feedback">Feedback</a> | 
+               <a href="/opportunities">Business Opportunities</a> | 
+               <a href="/howto">How To</a> | 
+               <a href="/aboutus">About Us</a>
+
+            </p>
+        </div>
+        <!-- footer end -->
+        
+    
+    
+<link href="/StyleB.css" rel="stylesheet" type="text/css">
+<script language="javascript" type="text/javascript" src="/lib/jquery.js"></script>
+<script type="text/javascript" src="/js/util.js"></script>
+<script type="text/javascript" src="/lib/ui.draggable.js"></script>
+<script language="javascript" type="text/javascript" src="/js/ChatCtrl.js"></script>
+
+<script language="javascript" type="text/javascript">
+    chatMode = -1;
+    autoLoadChatMode = -1;
+</script>
+<div class="chatFriendList" id="chatFriendList" style="display: none;">
+	<h2 id="chatFriendListTitle">
+		<a href="javascript:minimizeFriendList();"><img src="./images/minimize.gif" alt="minimize" height="16" width="16"></a>
+		Online Friends
+	</h2>
+	
+	<div class="chatOnlineFriends" id="chatFriends">
+	
+	    <div id="chatOnlineFriends">
+		    <div class="chatFriendEntry" id="fEntrySrc" style="display: none;">
+			    <img id="fAvator" src="" alt="" height="25" width="25">
+
+			    <h3 id="fNick"></h3>
+			    <p id="fPM">				
+			    </p>
+		    </div>
+		</div>
+        <div id="chatOfflineFriends">
+	        <div class="chatFriendEntry chatFriendEntryOffline" id="ofEntrySrc" style="display: none;">
+			    <img id="ofAvator" src="" alt="" height="25" width="25">
+			    <h3 id="ofNick"></h3>
+
+			    <p id="ofPM">				
+			    </p>
+		    </div>
+	    </div>
+	</div>
+	
+</div>
+
+<div id="cWins">
+	<div class="chatConversation" id="cWinSrc" style="display: none;">
+		<div class="chatWindowHeader" id="chatWindowHeader">
+
+			<a href="#" id="wClose"><img src="./images/close.gif" alt="close" height="16" width="16"></a>
+			<a href="#" id="wMin"><img src="./images/minimize.gif" alt="minimize" height="16" width="16"></a>
+			<img id="wAvator" src="" alt="" class="avatar" height="25" width="25">
+			<h3 id="wNick"></h3>
+			<p id="wPM">				
+			</p>
+		</div>
+		<div id="collapseDiv">
+		    <div class="conversationPanel" id="wPanel">
+
+    		
+			    <div class="chatEntry" style="visibility: hidden; display: none;">
+				    <h3>
+					    <span class="entryTime">a</span>
+					    <span class="partner">b</span>
+				    </h3>
+				    <p>	b 
+				    </p>
+			    </div>
+
+			    <div id="chatScroll"></div>
+		    </div>
+		    <div class="chatInput">
+			    <input id="wInput" type="text">
+		    </div>
+		</div>
+	</div>
+
+</div>       
+    </div>
+
+    
+    <!--page end -->
+
+</body></html>

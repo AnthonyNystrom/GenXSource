@@ -1,0 +1,192 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EA75F609-F047-4EDA-BD98-C2FE49E0D4BE}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Genetibase.Debug.NuGenSpy</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Genetibase.Debug</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\Genetibase.Debug.NuGenDView\Genetibase.Debug.NuGenDView.csproj">
+      <Name>Genetibase.Debug.NuGenDView</Name>
+      <Project>{7F611DC2-F926-4CC3-95DF-62B6E870D997}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\intruder\intruder.vcproj">
+      <Name>intruder</Name>
+      <Project>{75059BBF-4A64-4007-BE6F-0F0EC4E26718}</Project>
+      <Package>{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}</Package>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ControlEvent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EventTrackInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GenerateEventAssembly.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HighlightTrackTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MethodsTab.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MethodUtils\MethodDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MethodUtils\MethodEditingConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MethodUtils\MethodEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MethodUtils\MethodPropertyDescriptor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MethodUtils\MethodUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MethodUtils\ParameterPropertyDescriptor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MethodUtils\ReturnParameterDescriptor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NuGenSpyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SnoopCarrier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SnoopControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WindowFinder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XPropertyGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="EventTrackInfo.resx">
+      <DependentUpon>EventTrackInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HighlightTrackTreeView.resx">
+      <DependentUpon>HighlightTrackTreeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenSpyControl.resx">
+      <DependentUpon>NuGenSpyControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Eye.cur" />
+    <EmbeddedResource Include="Resources\Methods.bmp" />
+    <EmbeddedResource Include="SnoopCarrier.resx">
+      <DependentUpon>SnoopCarrier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SnoopControl.resx">
+      <DependentUpon>SnoopControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowFinder.resx">
+      <DependentUpon>WindowFinder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XPropertyGrid.resx">
+      <DependentUpon>XPropertyGrid.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

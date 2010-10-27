@@ -1,0 +1,107 @@
+﻿<Canvas xmlns="http://schemas.microsoft.com/client/2007" 
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+				xmlns:local="clr-namespace:Next2Friends.Swoosher;assembly=ClientBin/Next2Friends.Swoosher.dll"
+				Width="1" Height="1">
+
+	<Canvas.Resources>
+
+		<Storyboard x:Name="showProgress">
+			<DoubleAnimation Duration="0:0:0.5" To="1.0"
+											 Storyboard.TargetName="progress"
+											 Storyboard.TargetProperty="Opacity"/>
+		</Storyboard>
+
+		<Storyboard x:Name="getSize" Completed="getSize_Completed">
+			<DoubleAnimation Duration="0:0:0.1" From="0.0" To="0.0"
+											 Storyboard.TargetName="progress"
+											 Storyboard.TargetProperty="Opacity"/>
+		</Storyboard>
+
+		<Storyboard x:Name="showContent">
+			<DoubleAnimation Duration="0:0:0.5" To="0.0"
+											 Storyboard.TargetName="progress"
+											 Storyboard.TargetProperty="Opacity"/>
+			<DoubleAnimation Duration="0:0:0.5" To="1.0"
+											 Storyboard.TargetName="content"
+											 Storyboard.TargetProperty="Opacity"/>
+		</Storyboard>
+
+		<Storyboard x:Name="highlightContent">
+			<DoubleAnimation Duration="0:0:0.5" To="1.0"
+											 Storyboard.TargetName="selectableContent"
+											 Storyboard.TargetProperty="Opacity"/>
+		</Storyboard>
+
+		<Storyboard x:Name="dimContent">
+			<DoubleAnimation Duration="0:0:1" To="0.5"
+											 Storyboard.TargetName="selectableContent"
+											 Storyboard.TargetProperty="Opacity"/>
+		</Storyboard>
+
+		<Storyboard x:Name="enter">
+			<DoubleAnimation Duration="0:0:0" To="1.0"
+											 Storyboard.TargetName="selection"
+											 Storyboard.TargetProperty="Opacity"/>
+<!--			<DoubleAnimation Duration="0:0:0.5" To="0.5"
+											 Storyboard.TargetName="webImage"
+											 Storyboard.TargetProperty="Opacity"/>-->
+		</Storyboard>
+
+		<Storyboard x:Name="leave">
+			<DoubleAnimation Duration="0:0:0.5" To="0.0"
+											 Storyboard.TargetName="selection"
+											 Storyboard.TargetProperty="Opacity"/>
+<!--			<DoubleAnimation Duration="0:0:0.5" To="0.0"
+											 Storyboard.TargetName="webImage"
+											 Storyboard.TargetProperty="Opacity"/>-->
+		</Storyboard>
+
+		<Storyboard x:Name="webEnter">
+<!--			<DoubleAnimation Duration="0:0:0" To="1.0"
+											 Storyboard.TargetName="webImage"
+											 Storyboard.TargetProperty="Opacity"/>-->
+			<DoubleAnimation Duration="0:0:0" To="1.0"
+											 Storyboard.TargetName="selection"
+											 Storyboard.TargetProperty="Opacity"/>
+		</Storyboard>
+
+		<Storyboard x:Name="webLeave">
+<!--			<DoubleAnimation Duration="0:0:0.5" To="0.5"
+											 Storyboard.TargetName="webImage"
+											 Storyboard.TargetProperty="Opacity"/>-->
+		</Storyboard>
+
+	</Canvas.Resources>
+
+	<local:ProgressBar Name="progress" Canvas.Top="0.5" Opacity="0" />
+
+	<Canvas Name="content" Opacity="0">
+
+		<Rectangle Name="outline" Stroke="Black" Canvas.Top="-0.06" Canvas.Left="-0.06" StrokeThickness="0.02"
+							 Width="1.12" Height="1.12" IsHitTestVisible="False" Opacity="0.3"/>
+
+		<Canvas Name="selectableContent" Cursor="Hand"
+						MouseEnter="image_MouseEnter"
+						MouseLeave="image_MouseLeave"
+						MouseLeftButtonDown="image_MouseLeftButtonDown"
+						MouseLeftButtonUp="image_MouseLeftButtonUp"
+						>
+
+			<Image Name="image" Canvas.Left="0" Canvas.Top="0" IsHitTestVisible="True"
+						 ImageFailed="image_Failed"/>
+<!--
+			<Image Name="webImage" Source="Globe.png" Canvas.Top="0.01" Canvas.Left="0.01" Width="0.1" Height="0.1"
+						 Opacity="0" Cursor="Hand"/>
+-->
+			<Rectangle Name="border" Stroke="White" Canvas.Top="-0.04" Canvas.Left="-0.04" StrokeThickness="0.04"
+								 Width="1.08" Height="1.08" Cursor="Hand"/>
+
+		</Canvas>
+
+		<Rectangle Name="selection" Stroke="#75B2EF" Canvas.Top="-0.08" Canvas.Left="-0.08" StrokeThickness="0.04"
+							 Width="1.16" Height="1.16" RadiusX="0.02" RadiusY="0.02" IsHitTestVisible="False"
+							 Opacity="0"/>
+
+	</Canvas>
+
+</Canvas>

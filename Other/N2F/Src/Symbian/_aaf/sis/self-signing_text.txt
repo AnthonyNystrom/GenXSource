@@ -1,0 +1,2 @@
+makekeys -cert -password next2friends -len 1024 -dname "CN=Aaf OU=Development OR=Next2Friends CO=US EM=contact@next2friends.com" aaf.key aaf.cer
+signsis aaf.sis aaf.sis aaf.cer aaf.key next2friends

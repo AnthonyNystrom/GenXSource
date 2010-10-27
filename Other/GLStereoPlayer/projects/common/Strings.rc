@@ -1,0 +1,424 @@
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "Open &Left...\tCtrl+L",           ID_FILE_OPENLEFT
+        MENUITEM "Open &Right...\tCtrl+R",          ID_FILE_OPENRIGHT
+        MENUITEM SEPARATOR
+        MENUITEM "&Open Settings...\tCtrl+O",       ID_FILE_OPENSETTING
+        MENUITEM "&Save Settings...\tCtrl+S",       ID_FILE_SAVESETTING
+        MENUITEM "Save Changes",                    ID_FILE_SAVEMODIFIED
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                     ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                           ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                        ID_VIEW_TOOLBAR
+        MENUITEM "&Statistics\tS",                  ID_VIEW_STATISTICS
+        POPUP "&Play Control\tP"
+        BEGIN
+            MENUITEM "Show",                        ID_VIEW_PLAYCONTROL_SHOW
+            MENUITEM "Auto",                        ID_VIEW_PLAYCONTROL_AUTO
+            MENUITEM "Hide",                        ID_VIEW_PLAYCONTROL_HIDE
+        END
+        MENUITEM "&Status Bar",                     ID_VIEW_STATUS_BAR
+        MENUITEM SEPARATOR
+        POPUP "&Format\tF"
+        BEGIN
+            MENUITEM "Separated",                   ID_VIEW_FORMAT_SEPARATED
+            MENUITEM "Horizontally Combined",       ID_VIEW_FORMAT_HORIZONTAL
+
+            MENUITEM "Horizontally Combined and Compressed", 
+                                                    ID_VIEW_FORMAT_HORIZONTAL_COMP
+
+            MENUITEM "Vertically Combined",         ID_VIEW_FORMAT_VERTICAL
+            MENUITEM "Vertically Combined and Compressed", 
+                                                    ID_VIEW_FORMAT_VERTICAL_COMP
+
+        END
+        POPUP "Stereo &Type\tT"
+        BEGIN
+            MENUITEM "Left Only",                   ID_VIEW_STEREO_LEFT
+            MENUITEM "Right Only",                  ID_VIEW_STEREO_RIGHT
+            MENUITEM "Anagryph",                    ID_VIEW_STEREO_ANAGRYPH
+            MENUITEM "Horizontally Splitted",       ID_VIEW_STEREO_HORIZONTAL
+
+            MENUITEM "Vertically Splitted",         ID_VIEW_STEREO_VERTICAL
+            MENUITEM "Horizontally Interleaved",    ID_VIEW_STEREO_HORIZONTAL_INTERLEAVED
+
+            MENUITEM "Vertically Interleaved",      ID_VIEW_STEREO_VERTICAL_INTERLEAVED
+
+            MENUITEM "Sharp3D",                     ID_VIEW_STEREO_SHARP3D
+            MENUITEM "Quad Buffer",                 ID_VIEW_STEREO_QUADBUFFER
+
+        END
+        POPUP "Anagryph Color"
+        BEGIN
+            MENUITEM "Edit Left Color...",          ID_VIEW_LEFT_COLOR
+            MENUITEM "Edit Right Color...",         ID_VIEW_RIGHT_COLOR
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "S&wap Left/Right\tW",             ID_VIEW_SWAP
+        MENUITEM "Keep &Aspect Ratio\tA",           ID_VIEW_KEEPASPECTRATIO
+        POPUP "Offset"
+        BEGIN
+            MENUITEM "Increase\t+",                 ID_VIEW_OFFSET_INCREASE
+            MENUITEM "Decrease\t-",                 ID_VIEW_OFFSET_DECREASE
+            MENUITEM "Reset\t*",                    ID_VIEW_OFFSET_RESET
+        END
+        POPUP "Viewing Area"
+        BEGIN
+            MENUITEM "Pan Left\tCtrl+Left Arrow",        ID_VIEW_PAN_LEFT
+            MENUITEM "Pan Right\tCtrl+Right Arrow",      ID_VIEW_PAN_RIGHT
+            MENUITEM "Pan Up\tCtrl+Up Arrow",            ID_VIEW_PAN_UP
+            MENUITEM "Pan Down\tCtrl+Down Arrow",        ID_VIEW_PAN_DOWN
+            MENUITEM SEPARATOR
+            MENUITEM "Zoom Up\tCtrl+PageUp",             ID_VIEW_ZOOM_UP
+            MENUITEM "Zoom Down\tCtrl+PageDown",         ID_VIEW_ZOOM_DOWN
+            MENUITEM SEPARATOR
+            MENUITEM "Reset\tCtrl+Home",                 ID_VIEW_PANZOOM_RESET
+        END
+        MENUITEM SEPARATOR
+        POPUP "Resize Window"
+        BEGIN
+            MENUITEM "Half Size\tF9",               ID_VIEW_RESIZE_HALF
+            MENUITEM "Original Size\tF10",          ID_VIEW_RESIZE_ORIGINAL
+            MENUITEM "Double Size\tF11",            ID_VIEW_RESIZE_DOUBLE
+        END
+        MENUITEM "Full Screen\tAlt+Return",         ID_VIEW_FULLSCREEN
+    END
+    POPUP "&Play"
+    BEGIN
+        MENUITEM "Play/Pause\tCtrl+Space",          ID_PLAY_PLAYPAUSE
+        MENUITEM "Stop\t.",                         ID_PLAY_STOP
+        MENUITEM "Play On Load",                    ID_PLAY_PLAYONLOAD
+        MENUITEM SEPARATOR
+        POPUP "Replay Speed"
+        BEGIN
+            MENUITEM "25%",                         ID_PLAY_SPEED_25
+            MENUITEM "50%",                         ID_PLAY_SPEED_50
+            MENUITEM "100%",                        ID_PLAY_SPEED_100
+            MENUITEM "150%",                        ID_PLAY_SPEED_150
+            MENUITEM "200%",                        ID_PLAY_SPEED_200
+        END
+        MENUITEM "&Force Sync\tCtrl+F",             ID_PLAY_FORCESYNC
+        MENUITEM "&Loop\tL",                        ID_PLAY_LOOP
+        MENUITEM SEPARATOR
+        POPUP "Volume"
+        BEGIN
+            MENUITEM "Up",                          ID_PLAY_VOLUME_UP
+            MENUITEM "Down",                        ID_PLAY_VOLUME_DOWN
+            MENUITEM "Mute",                        ID_PLAY_VOLUME_MUTE
+        END
+    END
+    POPUP "&SlideShow"
+    BEGIN
+        MENUITEM "First\tShift+Home",               ID_SLIDE_FIRST
+        MENUITEM "Last\tShift+End",                 ID_SLIDE_LAST
+        MENUITEM "Previous\tShift+PageUp",          ID_SLIDE_PREV
+        MENUITEM "Next\tShift+PageDown",            ID_SLIDE_NEXT
+        MENUITEM SEPARATOR
+        MENUITEM "Fade Transition\tCtrl+T",         ID_SLIDE_FADE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About GLStereoPlayer...",        ID_APP_ABOUT
+    END
+END
+
+IDR_CONTEXTMENU MENU DISCARDABLE 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "Open &Left...\tCtrl+L",           ID_FILE_OPENLEFT
+        MENUITEM "Open &Right...\tCtrl+R",          ID_FILE_OPENRIGHT
+        MENUITEM SEPARATOR
+        MENUITEM "&Open Settings...\tCtrl+O",       ID_FILE_OPENSETTING
+        MENUITEM "&Save Settings...\tCtrl+S",       ID_FILE_SAVESETTING
+        MENUITEM "Save Changes",                    ID_FILE_SAVEMODIFIED
+        MENUITEM SEPARATOR
+        POPUP "&Format\tF"
+        BEGIN
+            MENUITEM "Separated",                   ID_VIEW_FORMAT_SEPARATED
+            MENUITEM "Horizontally Combined",       ID_VIEW_FORMAT_HORIZONTAL
+
+            MENUITEM "Horizontally Combined and Compressed", 
+                                                    ID_VIEW_FORMAT_HORIZONTAL_COMP
+
+            MENUITEM "Vertically Combined",         ID_VIEW_FORMAT_VERTICAL
+            MENUITEM "Vertically Combined and Compressed", 
+                                                    ID_VIEW_FORMAT_VERTICAL_COMP
+
+        END
+        POPUP "Stereo &Type\tT"
+        BEGIN
+            MENUITEM "Left Only",                   ID_VIEW_STEREO_LEFT
+            MENUITEM "Right Only",                  ID_VIEW_STEREO_RIGHT
+            MENUITEM "Anagryph",                    ID_VIEW_STEREO_ANAGRYPH
+            MENUITEM "Horizontally Splitted",       ID_VIEW_STEREO_HORIZONTAL
+
+            MENUITEM "Vertically Splitted",         ID_VIEW_STEREO_VERTICAL
+            MENUITEM "Horizontally Interleaved",    ID_VIEW_STEREO_HORIZONTAL_INTERLEAVED
+
+            MENUITEM "Vertically Interleaved",      ID_VIEW_STEREO_VERTICAL_INTERLEAVED
+
+            MENUITEM "Sharp3D",                     ID_VIEW_STEREO_SHARP3D
+            MENUITEM "Quad Buffer",                 ID_VIEW_STEREO_QUADBUFFER
+
+        END
+        POPUP "Anagryph Color"
+        BEGIN
+            MENUITEM "Edit Left Color...",          ID_VIEW_LEFT_COLOR
+            MENUITEM "Edit Right Color...",         ID_VIEW_RIGHT_COLOR
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "S&wap Left/Right\tW",             ID_VIEW_SWAP
+        MENUITEM "Keep &Aspect Ratio\tA",           ID_VIEW_KEEPASPECTRATIO
+        POPUP "Offset"
+        BEGIN
+            MENUITEM "Increase\t+",                 ID_VIEW_OFFSET_INCREASE
+            MENUITEM "Decrease\t-",                 ID_VIEW_OFFSET_DECREASE
+            MENUITEM "Reset\t*",                    ID_VIEW_OFFSET_RESET
+        END
+        POPUP "Viewing Area"
+        BEGIN
+            MENUITEM "Pan Left\tLeft Arrow",        ID_VIEW_PAN_LEFT
+            MENUITEM "Pan Right\tRight Arrow",      ID_VIEW_PAN_RIGHT
+            MENUITEM "Pan Up\tUp Arrow",            ID_VIEW_PAN_UP
+            MENUITEM "Pan Down\tDown Arrow",        ID_VIEW_PAN_DOWN
+            MENUITEM SEPARATOR
+            MENUITEM "Zoom Up\tPageUp",             ID_VIEW_ZOOM_UP
+            MENUITEM "Zoom Down\tPageDown",         ID_VIEW_ZOOM_DOWN
+            MENUITEM SEPARATOR
+            MENUITEM "Reset\tHome",                 ID_VIEW_PANZOOM_RESET
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Statistics\tS",                  ID_VIEW_STATISTICS
+        POPUP "&Play Control\tP"
+        BEGIN
+            MENUITEM "Show",                        ID_VIEW_PLAYCONTROL_SHOW
+            MENUITEM "Auto",                        ID_VIEW_PLAYCONTROL_AUTO
+            MENUITEM "Hide",                        ID_VIEW_PLAYCONTROL_HIDE
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Play/Pause\tSpace",               ID_PLAY_PLAYPAUSE
+        MENUITEM "Stop\t.",                         ID_PLAY_STOP
+        MENUITEM "Play On Load",                    ID_PLAY_PLAYONLOAD
+        MENUITEM SEPARATOR
+        POPUP "Replay Speed"
+        BEGIN
+            MENUITEM "25%",                         ID_PLAY_SPEED_25
+            MENUITEM "50%",                         ID_PLAY_SPEED_50
+            MENUITEM "100%",                        ID_PLAY_SPEED_100
+            MENUITEM "150%",                        ID_PLAY_SPEED_150
+            MENUITEM "200%",                        ID_PLAY_SPEED_200
+        END
+        MENUITEM "&Force Sync\tCtrl+F",             ID_PLAY_FORCESYNC
+        MENUITEM "&Loop\tL",                        ID_PLAY_LOOP
+        MENUITEM SEPARATOR
+        POPUP "Volume"
+        BEGIN
+            MENUITEM "Up",                          ID_PLAY_VOLUME_UP
+            MENUITEM "Down",                        ID_PLAY_VOLUME_DOWN
+            MENUITEM "Mute",                        ID_PLAY_VOLUME_MUTE
+        END
+        MENUITEM SEPARATOR
+        POPUP "&SlideShow"
+        BEGIN
+            MENUITEM "First\tShift+Home",               ID_SLIDE_FIRST
+            MENUITEM "Last\tShift+End",                 ID_SLIDE_LAST
+            MENUITEM "Previous\tShift+PageUp",          ID_SLIDE_PREV
+            MENUITEM "Next\tShift+PageDown",            ID_SLIDE_NEXT
+            MENUITEM SEPARATOR
+            MENUITEM "Fade Transition\tCtrl+T",         ID_SLIDE_FADE
+        END
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_GLERROR_UNABLE_TO_GET_CD "Unable to get a ClientDC."
+    ID_GLERROR_CHOOSEPIXELFORMAT "ChoosePixelFormat() failed."
+    ID_GLERROR_SELECTPIXELFORMAT "SelectPixelFormat() failed."
+    ID_GLERROR_WGLCREATECONTEXT "wglCreateContext() failed."
+    ID_GLERROR_WGLMAKECURRENTFAILD "wglMakeCurrect() failed."
+    ID_GLERROR_WGLDELETECONTEXT "wglDeleteCotext() failed."
+    ID_GLERROR_SWAPBUFFERS  "SwapBuffers() failed."
+    ID_FILE_OPENLEFT        "Open a left source file...\nOpen Left File..."
+    ID_FILE_OPENRIGHT       "Open a right source file...\nOpen Right File..."
+    ID_FILE_OPENSETTING     "Open a settings file...\nOpen Settings File..."
+    ID_FILE_SAVESETTING     "Save a settings file...\nSave Settings File..."
+    ID_FILE_SAVEMODIFIED     "Save modified settings when exit.\nSave Modified Settings when Exit.\n"
+    ID_VIEW_FORMAT_SEPARATED "Separated sources\nSeparated sources"
+    ID_VIEW_FORMAT_HORIZONTAL 
+                            "Horizontally combined source\nHorizontally Combined source"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_FORMAT_HORIZONTAL_COMP 
+                            "Horizontally combined and compressed source\nHorizontally Combined and Compressed source"
+    ID_VIEW_FORMAT_VERTICAL "Vertically combined source\nVertically Combined source"
+    ID_VIEW_FORMAT_VERTICAL_COMP 
+                            "Vertically combined and compressed source\nVertically Combined and Compressed source"
+    ID_VIEW_CHANGE_FORMAT   "Change format\tChange Format"
+    ID_VIEW_STEREO_LEFT     "Left only\nLeft Only"
+    ID_VIEW_STEREO_RIGHT    "Right only\nRight Only"
+    ID_VIEW_STEREO_ANAGRYPH "Anagryph\nAnagryph"
+    ID_VIEW_STEREO_HORIZONTAL_INTERLEAVED 
+                            "Horizontally interleaved\nHorizontally Interleaved"
+    ID_VIEW_STEREO_VERTICAL_INTERLEAVED 
+                            "Vertically interleaved\nVertically Interleaved"
+    ID_VIEW_STEREO_SHARP3D  "Sharp3D\nSharp3D"
+    ID_VIEW_STEREO_HORIZONTAL "Horizontally splitted\nHorizontally Splitted"
+    ID_VIEW_STEREO_VERTICAL "Vertically splitted\nVertically Splitted"
+    ID_VIEW_STEREO_QUADBUFFER "Quad buffer\nQuad Buffer"
+    ID_VIEW_CHANGE_STEREOTYPE "Change stereo type\nChange Stereo Type"
+    ID_VIEW_LEFT_COLOR      "Edit left color...\nEdit Left Color..."
+    ID_VIEW_RIGHT_COLOR     "Edit right color...\nEdit Right Color..."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_SWAP            "Swap left/right\nSwap Left/Right"
+    ID_VIEW_KEEPASPECTRATIO "Keep aspect ratio\nKeep Aspect Ratio"
+    ID_VIEW_OFFSET_INCREASE "Increase offset\nIncrease Offset"
+    ID_VIEW_OFFSET_DECREASE "Decrease offset\nDecrease Offset"
+    ID_VIEW_OFFSET_RESET    "Reset offset\nReset Offset"
+    ID_VIEW_PAN_LEFT        "Pan left\nPan Left"
+    ID_VIEW_PAN_RIGHT       "Pan right\nPan Right"
+    ID_VIEW_PAN_UP          "Pan up\nPan Up"
+    ID_VIEW_PAN_DOWN        "Pan down\nPan Down"
+    ID_VIEW_ZOOM_UP         "Zoom up\nZoom Up"
+    ID_VIEW_ZOOM_DOWN       "Zoom down\nZoom Down"
+    ID_VIEW_PANZOOM_RESET   "Reset pan and zoom\nReset Pan and Zoom"
+    ID_VIEW_STATISTICS      "Show or hide the statistics\nToggle Statistics"
+    ID_VIEW_PLAYCONTROL_SHOW "Show the play control\nShow the Play Control"
+    ID_VIEW_PLAYCONTROL_AUTO 
+                            "Automatically toggle the play control\nAutomatically toggle the Play Control"
+    ID_VIEW_PLAYCONTROL_HIDE "Hide the play control\nHide the Play Control"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_PLAY_PLAYPAUSE       "Play/Pause\nPlay/Pause"
+    ID_PLAY_STOP            "Stop\nStop"
+    ID_PLAY_PLAYONLOAD      "Play on load\nPlay On Load"
+    ID_PLAY_SPEED_25        "Play in 25% speed\nPlay in 25% speed"
+    ID_PLAY_SPEED_50        "Play in 50% speed\nPlay in 50% speed"
+    ID_PLAY_SPEED_100       "Play in 100% speed\nPlay in 100% speed"
+    ID_PLAY_SPEED_150       "Play in 150% speed\nPlay in 150% speed"
+    ID_PLAY_SPEED_200       "Play in 200% speed\nPlay in 200% speed"
+    ID_PLAY_FORCESYNC       "Toggle to force synchronization\nToggle Force Sync"
+    ID_PLAY_LOOP            "Toggle loop\nToggle Loop"
+    ID_PLAY_VOLUME_UP       "Volume up\nVolume Up"
+    ID_PLAY_VOLUME_DOWN     "Volume down\nVolume Down"
+    ID_PLAY_VOLUME_MUTE     "Mute volume\nMute Volume"
+    ID_SLIDE_FIRST          "First slide\nFirst Slide"
+    ID_SLIDE_LAST           "Last slide\nLast Slide"
+    ID_SLIDE_PREV           "Previous slide\nPrevious Slide"
+    ID_SLIDE_NEXT           "Next slide\nNext Slide"
+    ID_SLIDE_FADE           "Fade transition\nFade Transition"
+    IDS_ACTIVATE            "Activate"
+    IDS_SOURCE_FILE_EXT     "Supported Files|*.avi;*.wmv;*.mpg;*.mpeg;*.m1v;*.mov;*.bmp;*.bms;*.jpg;*.jpeg;*.jps;*.gif;*.gis;*.pbm;*.pgm;*.png;*.png;*.pns;*.psd;*.psp;*.bw;*.rgb;*.rgba;*.sgi;*.tga;*.tif;*.tiff;*.raw;*.gsl;*.txt|Movie Files|*.avi;*.wmv;*.mpg;*.mpeg;*.m1v;*.mov|Image Files|*.bmp;*.bms;*.jpg;*.jpeg;*.jps;*.gif;*.gis;*.pbm;*.pgm;*.png;*.png;*.pns;*.psd;*.psp;*.bw;*.rgb;*.rgba;*.sgi;*.tga;*.tif;*.tiff;*.raw|Slide Show Files|*.gsp;*.txt|All Files (*.*)|*.*||"
+    IDS_SETTING_FILE_EXT    "Setting Files (*.gsp;*.xml)|*.gsp;*.xml|All Files (*.*)|*.*||"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_GLSTEREOPLAYER      "GLStereoPlayer Control"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_RESIZE_HALF     "Resize to half size\nResize to Half size"
+    ID_VIEW_RESIZE_ORIGINAL "Resize to original size\nResize to Original size"
+    ID_VIEW_RESIZE_DOUBLE   "Resize to double size\nResize to Double size"
+    ID_VIEW_FULLSCREEN      "Toggle full screen\nToggle Full Screen"
+END
+
+// For Application
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "GLStereoPlayer\n\nunnamed\nGLStereoPlayer Setting Files (*.gsp)\n.gsp\nGLStereoPlayer.Document\nGLStereoPlayer Setting File"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "GLStereoPlayer"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_ERROR_CANTLOADFILE   "Can not load the file."
+    ID_ERROR_CANTSAVEFILE   "Can not save the file."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////

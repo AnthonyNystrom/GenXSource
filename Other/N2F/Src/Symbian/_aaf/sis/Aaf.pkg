@@ -1,0 +1,31 @@
+; Aaf.pkg
+;
+;Language - standard language definitions
+&EN
+
+;Standard SIS file header
+#{"Aaf"},(0xe2536f82),1,0,0
+
+;Localised Vendor name
+%{"Next2Friends-EN"}
+
+;Unique Vendor name
+:"Next2Friends"
+
+;Supports Series 60 v 3.0
+[0x101F7961], 0, 0, 0,{"Series60ProductID"}
+
+;Files to install
+"C:\Symbian\9.1\S60_3rd\epoc32\release\gcce\urel\Aaf.exe"                 -"!:\sys\bin\Aaf.exe"
+"C:\Symbian\9.1\S60_3rd\epoc32\data\z\resource\apps\Aaf.rsc"               -"!:\resource\apps\Aaf.rsc"
+"C:\Symbian\9.1\S60_3rd\epoc32\data\z\resource\apps\Aaf_reg.mif"           -"!:\resource\apps\Aaf_reg.mif"
+"C:\Symbian\9.1\S60_3rd\epoc32\data\z\private\10003a3f\apps\Aaf_reg.rsc"   -"!:\private\10003a3f\import\apps\Aaf_reg.rsc"
+"..\help\Aaf_0xe2536f82.hlp"                                     -"!:\resource\help\Aaf_0xe2536f82.hlp"
+"..\group\PrivacyStatement.txt"                                      -"!:\private\e2536f82\PrivacyStatement.txt"
+
+; camera snap image sound                       
+"..\data\Camera_2_8kHz.wav" - "!:\private\e2536f82\Camera_2_8kHz.wav"
+
+;Required for application to be covered by backup/restore facility 
+"backup_registration.xml"     -"!:\private\e2536f82\backup_registration.xml"
+"C:\Symbian\9.1\S60_3rd\epoc32\data\z\resource\apps\Aaf.mbm" - "!:\resource\apps\Aaf.mbm"

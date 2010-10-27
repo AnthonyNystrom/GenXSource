@@ -1,0 +1,129 @@
+/*
+============================================================================
+ Name        : Aaf.hrh
+ Author      : Vitaly Vinogradov
+ Version     :
+ Copyright   : (c) Next2Friends, 2008
+ Description : Enumerations used in the application UI
+============================================================================
+*/
+
+#ifndef __AAF_HRH__
+#define __AAF_HRH__
+
+#define _UID3 0xe2536f82
+
+// Aaf enumerate command codes
+enum TAafIds
+	{
+	ESetIAP = 1,
+	EHelp,
+	EAbout,
+	
+	// General CBA
+	EAafSoftkeyContinue,
+	
+	// Main view listbox itmes
+	EAskQuestion,
+	EMakePhoto,
+	EUseMainCamera,
+	EUseSecondaryCamera,
+	EFileBrowserView,
+	EImageCartView,
+	EPrivateQuestions,
+	EResponses,
+	ECredentialsView,
+	EInviteFriend,
+	
+	// "Upload Images" view menu items
+	EUploadImagEAafload,
+	EUploadImagesFileBrowser,
+	
+	// "File Browser" view menu items
+	EFileBrowserGotoUpload,
+	EFileBrowserAddtoUpload,
+	EFileBrowserOpen,
+	EFileBrowserFileProperties,
+	EFileBrowserPreview,
+	EFileBrowserSelect,
+	
+	// "Upload Image Card" view menu items
+	EUploadImageAskQuestion,
+	EUploadImageCartFileBrowser,
+	EUploadImageCartPreview,
+	EUploadImageCartSelect,
+	EUploadImageCartDeselect,
+	EUploadImageCartRemoveSelected,
+	EUploadImageCartRemoveAll,
+	
+	// "Make a photo" view menu items
+	EMakePhotoCapture,
+	EMakePhotoNew,
+	EMakePhotoSave,
+	EMakePhotoZoomIn,
+	EMakePhotoZoomOut,
+	EMakePhotoResolution,
+	EMakePhotoRes640x480,
+	EMakePhotoRes480x320,
+	EMakePhotoRes320x240,
+	
+	// Private questions view
+	EPQuestionsRefresh,
+	EPQuestionDetails,
+	
+	// Responses view
+	EMyQuestionsRefresh,
+	EMyQuestionDetails,
+	EMyQuestionComments,
+	
+	// Comments view
+	EQuestionCommentsRefresh,
+	EQuestionCommentDetails,
+	
+	// Ask a question form
+	EAskQuestionSubmit,
+	EAskQuestionNext
+	};
+	
+	
+enum TQuestionForm
+    {
+    EQuestionText = 0x200,
+    EQuestionType,
+    EQuestionDuration,
+    EQuestionPrivate,
+    ECustomResponseA,
+    ECustomResponseB
+    };
+ 
+enum TDataViewDialog
+	{
+	EPrivateQuestionText = 1,
+	EPrivateQuestionDate,
+	EPrivateQuestionNickname,
+	
+	EUserQuestionText,
+	
+	EQuestionCommentText,
+	EQuestionCommentNickname,
+	EQuestionCommentData	
+	};
+	
+// File browser engine enums
+enum TFileBrowserDirectories
+    {
+    EFileBrowserSounds = 1,
+	EFileBrowserPictures,
+	EFileBrowserVideos,
+	EFileBrowserDirNoChange
+    };
+
+enum TFileBrowserSizeDate
+    {
+    EFileBrowserSize = 1,
+	EFileBrowserDate,
+	EFileBrowserToggle,
+	EFileBrowserSizeDateNoChange
+    };
+
+#endif // __AAF_HRH__

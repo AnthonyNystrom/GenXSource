@@ -1,0 +1,186 @@
+using System;
+using System.ComponentModel;
+using System.Data;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Web;
+using System.Web.SessionState;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.HtmlControls;
+using System.Net;
+using System.Text;
+using System.Xml;
+using System.IO;
+using System.Text.RegularExpressions;
+using Improsys.ContactImporter;
+using Next2Friends.Data;
+
+namespace asp.net
+{
+	/// <summary>
+	/// Summary description for WebForm1.
+	/// </summary>
+	public partial class ContactImport : System.Web.UI.Page
+	{
+		public string[] nameArray=new string[0];
+		public string[] emailArray=new string[0];
+        public string[] emArray = new string[0];
+        public bool[] IsFriendArray = new bool[0];
+        public bool[] IsMemberArray = new bool[0];
+		
+		public String strHidden = "";
+		public String primKey = "";
+		public bool valid=false;
+		ContactImporter ci = null;
+		String user="";
+        public Member member;
+		
+		protected void Page_Load(object sender, System.EventArgs e)
+		{
+
+            Utility.RememberMeLogin();
+
+
+            member = (Member)Session["Member"];
+
+            if (member == null)
+            {
+                Server.Transfer("/signup.aspx");
+            }
+
+			if(Request["captext"]!=null && Request["type"]=="qq.com")
+			{
+				user_id.Text  = Request["user_id"];
+				emailCat.SelectedValue = Request["type"];
+				String pa	= Request["pass"];
+				String ts = Request["ts"];
+				String p = Request["p"];
+				String starttime = Request["starttime"];
+				String type = Request["type"];
+				String ca = Request["captext"];
+				
+				ci = (ContactImporter)Session["qq"];
+				ci.setCaptch(Request["captext"]);
+				ci.setData(p,ts,starttime,ca);
+				ci.login();
+				valid=ci.logged_in;
+				if(valid)
+				{
+					ci.getcontacts();
+					this.nameArray=ci.nameArray;
+					this.emailArray=ci.emailArray;
+				}
+			}
+			// Put user code to initialize the page here
+		}
+		
+
+		#region Web Form Designer generated code
+		override protected void OnInit(EventArgs e)
+		{
+			//
+			// CODEGEN: This call is required by the ASP.NET Web Form Designer.
+			//
+			InitializeComponent();
+			base.OnInit(e);
+		}
+		
+		/// <summary>
+		/// Required method for Designer support - do not modify
+		/// the contents of this method with the code editor.
+		/// </summary>
+		private void InitializeComponent()
+		{    
+
+		}
+		#endregion
+		//login to yahoo by parsing the value from login page and by encrypting password
+		
+		
+		//Grab address book button was pressed and a method was called for an specific email type
+		protected void Button1_Click(object sender, System.EventArgs e)
+		{
+			
+			if(this.user_id.Text=="" || this.pass.Text=="")
+				return;
+			Regex isNumeric = new Regex(@"^\d+$");
+			if(Request["captext"]==null && emailCat.SelectedValue == "qq.com")
+			{
+				ci=new ContactImporter(user_id.Text,pass.Text,emailCat.SelectedValue);
+				ci.captcha();
+				Session["qq"]=ci;
+				primKey = ci.getPrimkey();
+
+			}
+			else
+			{
+				ci=new ContactImporter(user_id.Text,pass.Text,emailCat.SelectedValue);
+				ci.login();
+				valid=ci.logged_in;
+				if(valid)
+				{
+					ci.getcontacts();
+				
+					this.nameArray=ci.nameArray;
+					this.emailArray=ci.emailArray;
+				}
+
+                List<Next2Friends.Data.ContactImport> Contacts = new List<Next2Friends.Data.ContactImport>();
+
+                if (emailArray.Length > 0)
+                {
+                    Contacts = Next2Friends.Data.ContactImport.JoinEmailsWithMembers(member.MemberID, emailArray);
+                }
+
+                List<Member> Friends = Member.GetAllFriendsByMemberID(member.MemberID);
+
+                IsMemberArray = new bool[emailArray.Length];
+                IsFriendArray = new bool[emailArray.Length];
+
+
+                for (int i = 0; i < emailArray.Length; i++)
+                {
+                    bool IsMember = false;
+                    bool IsFriend = false;
+
+                    for (int j = 0; j < Contacts.Count; j++)
+                    {
+                        if (emailArray[i] == Contacts[j].Email)
+                        {
+                            IsMember = true;
+                        }
+                    }
+
+                    for (int j = 0; j < Friends.Count; j++)
+                    {
+                        if (emailArray[i] == Friends[j].Email)
+                        {
+                            IsFriend = true;
+                        }
+                    }
+
+                    IsMemberArray[i] = IsMember;
+                    IsFriendArray[i] = IsFriend;
+                }
+
+			}
+
+		}
+		//Get address page for hotmail.com and msn.com
+	
+	
+		private void Button2_Click(object sender, System.EventArgs e)
+		{
+			
+		}
+
+        protected override void OnPreRender(EventArgs e)
+        {
+            Utility.RememberMeLogin();
+
+            base.OnPreRender(e);
+        }
+
+	}
+}

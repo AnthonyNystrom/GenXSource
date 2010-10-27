@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{c252feb5-a946-4202-b1d4-9916a0590387};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2CE12D2E-714D-417D-83F9-C42662464492}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>ExternalMessaging</AssemblyName>
+    <RootNamespace>ExternalMessaging</RootNamespace>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>ExternalMessagingKey.snk</AssemblyOriginatorKeyFile>
+    <PermissionLevel>2</PermissionLevel>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildBinPath)\SqlServer.targets" />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Net, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.configuration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AAF.cs" />
+    <Compile Include="AAFComment.cs" />
+    <Compile Include="Comment.cs" />
+    <Compile Include="ContactImport.cs" />
+    <Compile Include="ContentInvite.cs" />
+    <Compile Include="FeedBack.cs" />
+    <Compile Include="MemberAccount.cs" />
+    <Compile Include="NewFriendContent.cs" />
+    <Compile Include="Enumerations.cs" />
+    <Compile Include="NewSubscriberContent.cs" />
+    <Compile Include="ProfileInvite.cs" />
+    <Compile Include="MemberInvite.cs" />
+    <Compile Include="ForgottenPassword.cs" />
+    <Compile Include="FriendRequest.cs" />
+    <Compile Include="MemberComment.cs" />
+    <Compile Include="MemberSettings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Message.cs" />
+    <Compile Include="Photo.cs" />
+    <Compile Include="PhotoComment.cs" />
+    <Compile Include="Referral.cs" />
+    <Compile Include="RijndaelEncryption.cs" />
+    <Compile Include="MemberStatusText.cs" />
+    <Compile Include="System.Web\HttpUtility.cs" />
+    <Compile Include="Twitter\ActionType.cs" />
+    <Compile Include="Twitter\ObjectType.cs" />
+    <Compile Include="Twitter\OutputFormatType.cs" />
+    <Compile Include="Twitter\TwitterPublisher.cs" />
+    <Compile Include="Twitter\TwitterService.cs" />
+    <Compile Include="Utility.cs" />
+    <Compile Include="MailHelper.cs" />
+    <Compile Include="MergeHelper.cs" />
+    <Compile Include="Parameters.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Member.cs" />
+    <Compile Include="Templates.cs" />
+    <Compile Include="Video.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VideoComment.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Templates\NewMember.html" />
+    <EmbeddedResource Include="Templates\ForgottenPassword.html" />
+    <EmbeddedResource Include="Templates\NewVideoComment.html" />
+    <EmbeddedResource Include="Templates\NewPhotoComment.html" />
+    <EmbeddedResource Include="Templates\NewAAFComment.html" />
+    <EmbeddedResource Include="Templates\NewMessage.html" />
+    <EmbeddedResource Include="Templates\NewLiveBroadcast.html" />
+    <EmbeddedResource Include="Templates\NewFriendRequest.html" />
+    <EmbeddedResource Include="Templates\AcceptedFriendRequest.html" />
+    <EmbeddedResource Include="Templates\NewMemberInvite.html" />
+    <EmbeddedResource Include="Templates\NewExternalMessage.html" />
+    <EmbeddedResource Include="Templates\NewProfileInvite.html" />
+    <EmbeddedResource Include="Templates\NewSubscriberContent.html" />
+    <EmbeddedResource Include="Templates\NewThreadComment.html" />
+    <EmbeddedResource Include="Templates\NewBlogComment.html" />
+    <EmbeddedResource Include="Templates\NewMemberComment.html" />
+    <EmbeddedResource Include="Templates\NewFriendContent.html" />
+    <EmbeddedResource Include="Templates\NewContentInvite.html" />
+    <EmbeddedResource Include="Templates\ImportInvite.html" />
+    <EmbeddedResource Include="Templates\NewPhotoSelf.html" />
+    <EmbeddedResource Include="Templates\NewStreamSelf.html" />
+    <Content Include="Test Scripts\Test.sql">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <None Include="ExternalMessagingKey.snk" />
+  </ItemGroup>
+</Project>

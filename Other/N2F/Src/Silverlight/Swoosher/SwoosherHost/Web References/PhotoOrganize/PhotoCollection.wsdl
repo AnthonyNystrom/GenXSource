@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://next2friends.com/" xmlns:s1="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://next2friends.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://next2friends.com/">
+      <s:import namespace="http://tempuri.org/" />
+      <s:element name="Hello">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCollections">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCollectionsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCollectionsResult" type="tns:ArrayOfPhotoCollectionItem" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPhotoCollectionItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PhotoCollectionItem" nillable="true" type="s1:PhotoCollectionItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetPhotosByCollection">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="webPhotoCollectionID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPhotosByCollectionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPhotosByCollectionResult" type="tns:ArrayOfPhotoItem" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPhotoItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PhotoItem" nillable="true" type="s1:PhotoItem" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:complexType name="PhotoCollectionItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="WebPhotoCollectionID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PhotoItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="WebPhotoID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MainPhotoURL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ThumbnailURL" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloSoapIn">
+    <wsdl:part name="parameters" element="tns:Hello" />
+  </wsdl:message>
+  <wsdl:message name="HelloSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapIn">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCollectionsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCollections" />
+  </wsdl:message>
+  <wsdl:message name="GetCollectionsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCollectionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPhotosByCollectionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPhotosByCollection" />
+  </wsdl:message>
+  <wsdl:message name="GetPhotosByCollectionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPhotosByCollectionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="PhotoCollectionSoap">
+    <wsdl:operation name="Hello">
+      <wsdl:input message="tns:HelloSoapIn" />
+      <wsdl:output message="tns:HelloSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginSoapIn" />
+      <wsdl:output message="tns:LoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCollections">
+      <wsdl:input message="tns:GetCollectionsSoapIn" />
+      <wsdl:output message="tns:GetCollectionsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPhotosByCollection">
+      <wsdl:input message="tns:GetPhotosByCollectionSoapIn" />
+      <wsdl:output message="tns:GetPhotosByCollectionSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PhotoCollectionSoap" type="tns:PhotoCollectionSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Hello">
+      <soap:operation soapAction="http://next2friends.com/Hello" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://next2friends.com/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCollections">
+      <soap:operation soapAction="http://next2friends.com/GetCollections" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhotosByCollection">
+      <soap:operation soapAction="http://next2friends.com/GetPhotosByCollection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PhotoCollectionSoap12" type="tns:PhotoCollectionSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Hello">
+      <soap12:operation soapAction="http://next2friends.com/Hello" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap12:operation soapAction="http://next2friends.com/Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCollections">
+      <soap12:operation soapAction="http://next2friends.com/GetCollections" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhotosByCollection">
+      <soap12:operation soapAction="http://next2friends.com/GetPhotosByCollection" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PhotoCollection">
+    <wsdl:port name="PhotoCollectionSoap" binding="tns:PhotoCollectionSoap">
+      <soap:address location="http://localhost:5000/SwoosherTest/PhotoCollection.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PhotoCollectionSoap12" binding="tns:PhotoCollectionSoap12">
+      <soap12:address location="http://localhost:5000/SwoosherTest/PhotoCollection.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

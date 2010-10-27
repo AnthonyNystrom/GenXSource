@@ -1,0 +1,375 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4FBE4352-5718-421D-95F7-2187A932F475}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Netron.Neon</RootNamespace>
+    <AssemblyName>Netron.Neon</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="OfficePickers\ColorPicker\ComboBoxColorPicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OfficePickers\ColorPicker\ComboBoxColorPicker.designer.cs">
+      <DependentUpon>ComboBoxColorPicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OfficePickers\ColorPicker\OfficeColorPicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OfficePickers\ColorPicker\OfficeColorPicker.designer.cs">
+      <DependentUpon>OfficeColorPicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OfficePickers\ColorPicker\SelectableColor.cs" />
+    <Compile Include="OfficePickers\ColorPicker\ToolStripColorPicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OfficePickers\LinePickers\OfficeLineCapPicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OfficePickers\LinePickers\OfficeLineCapPicker.designer.cs">
+      <DependentUpon>OfficeLineCapPicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OfficePickers\LinePickers\OfficeLineStylePicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OfficePickers\LinePickers\OfficeLineStylePicker.designer.cs">
+      <DependentUpon>OfficeLineStylePicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OfficePickers\LinePickers\OfficeLineWidthPicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OfficePickers\LinePickers\OfficeLineWidthPicker.designer.cs">
+      <DependentUpon>OfficeLineWidthPicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OfficePickers\LinePickers\SelectableLineCaps.cs" />
+    <Compile Include="OfficePickers\LinePickers\SelectableLineStyles.cs" />
+    <Compile Include="OfficePickers\LinePickers\SelectableLineWidths.cs" />
+    <Compile Include="OfficePickers\LinePickers\ToolStripLineCapPicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OfficePickers\LinePickers\ToolStripLineStylePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OfficePickers\LinePickers\ToolStripLineWidthPicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OfficePickers\Util\ArtPalette.cs" />
+    <Compile Include="OfficePickers\Util\ConnectionCaps.cs" />
+    <Compile Include="OfficePickers\Util\ContextMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OfficePickers\Util\ContextMenuForm.designer.cs">
+      <DependentUpon>ContextMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OfficePickers\Util\CustomCaps.cs" />
+    <Compile Include="OfficePickers\Util\CustomColors.cs" />
+    <Compile Include="OfficePickers\Util\CustomLines.cs" />
+    <Compile Include="OfficePickers\Util\CustomLineWidthDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OfficePickers\Util\CustomStyles.cs" />
+    <Compile Include="OfficePickers\Util\GradientPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OfficePickers\Util\LineWeightForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OfficePickers\Util\LineWeightForm.Designer.cs">
+      <DependentUpon>LineWeightForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OfficePickers\Util\ToolStripPickerDisplayType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WinFormsUI\Components\DragForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsUI\Components\MdiClientController.cs" />
+    <Compile Include="WinFormsUI\Controls\InertButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinFormsUI\Docking\AutoHidePane.cs" />
+    <Compile Include="WinFormsUI\Docking\AutoHidePaneCollection.cs" />
+    <Compile Include="WinFormsUI\Docking\AutoHideStateCollection.cs" />
+    <Compile Include="WinFormsUI\Docking\AutoHideStripBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinFormsUI\Docking\AutoHideStripVS2003.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinFormsUI\Docking\AutoHideTab.cs" />
+    <Compile Include="WinFormsUI\Docking\AutoHideTabCollection.cs" />
+    <Compile Include="WinFormsUI\Docking\AutoHideTabVS2003.cs" />
+    <Compile Include="WinFormsUI\Docking\AutoHideWindow.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinFormsUI\Docking\AutoHideWindowSplitter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinFormsUI\Docking\DisplayingDockList.cs" />
+    <Compile Include="WinFormsUI\Docking\DockAreasEditor.cs" />
+    <Compile Include="WinFormsUI\Docking\DockContent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsUI\Docking\DockContentCollection.cs" />
+    <Compile Include="WinFormsUI\Docking\DockContentHandler.cs" />
+    <Compile Include="WinFormsUI\Docking\DockHelper.cs" />
+    <Compile Include="WinFormsUI\Docking\DockIndicator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsUI\Docking\DockList.cs" />
+    <Compile Include="WinFormsUI\Docking\DockOutline.cs" />
+    <Compile Include="WinFormsUI\Docking\DockOutlineBase.cs" />
+    <Compile Include="WinFormsUI\Docking\DockPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WinFormsUI\Docking\DockPaneCaptionBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinFormsUI\Docking\DockPaneCaptionVS2003.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinFormsUI\Docking\DockPaneCollection.cs" />
+    <Compile Include="WinFormsUI\Docking\DockPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinFormsUI\Docking\DockPanelExtender.cs" />
+    <Compile Include="WinFormsUI\Docking\DockPanelPersist.cs" />
+    <Compile Include="WinFormsUI\Docking\DockPaneSplitter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinFormsUI\Docking\DockPaneStripBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinFormsUI\Docking\DockPaneStripVS2003.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinFormsUI\Docking\DockPaneTab.cs" />
+    <Compile Include="WinFormsUI\Docking\DockPaneTabCollection.cs" />
+    <Compile Include="WinFormsUI\Docking\DockPaneTabVS2003.cs" />
+    <Compile Include="WinFormsUI\Docking\DockWindow.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinFormsUI\Docking\DockWindowCollection.cs" />
+    <Compile Include="WinFormsUI\Docking\DockWindowSplitter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinFormsUI\Docking\DragHandler.cs" />
+    <Compile Include="WinFormsUI\Docking\DragHandlerBase.cs" />
+    <Compile Include="WinFormsUI\Docking\DummyControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinFormsUI\Docking\Enums.cs" />
+    <Compile Include="WinFormsUI\Docking\EventArgs.cs" />
+    <Compile Include="WinFormsUI\Docking\FloatWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormsUI\Docking\FloatWindowCollection.cs" />
+    <Compile Include="WinFormsUI\Docking\Interfaces.cs" />
+    <Compile Include="WinFormsUI\Docking\Measures.cs" />
+    <Compile Include="WinFormsUI\Docking\NestedDockingStatus.cs" />
+    <Compile Include="WinFormsUI\Docking\SplitterBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinFormsUI\Docking\SplitterOutline.cs" />
+    <Compile Include="WinFormsUI\Helpers\DrawHelper.cs" />
+    <Compile Include="WinFormsUI\Helpers\Localization.cs" />
+    <Compile Include="WinFormsUI\Helpers\LocalWindowsHook.cs" />
+    <Compile Include="WinFormsUI\Helpers\ResourceHelper.cs" />
+    <Compile Include="WinFormsUI\Helpers\Win32Helper.cs" />
+    <Compile Include="WinFormsUI\NetronExtender\ColorMixer.cs" />
+    <Compile Include="WinFormsUI\NetronExtender\DrawUtil.cs" />
+    <Compile Include="WinFormsUI\NetronExtender\Extender.cs" />
+    <Compile Include="WinFormsUI\NetronExtender\FromBase\AutoHideStripFromBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinFormsUI\NetronExtender\FromBase\AutoHideTabFromBase.cs" />
+    <Compile Include="WinFormsUI\NetronExtender\FromBase\DockPaneCaptionFromBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinFormsUI\NetronExtender\FromBase\DockPaneStripFromBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinFormsUI\NetronExtender\FromBase\DockPaneTabFromBase.cs" />
+    <Compile Include="WinFormsUI\NetronExtender\Override\AutoHideStripOverride.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinFormsUI\NetronExtender\Override\DockPaneStripOverride.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinFormsUI\Win32\Enums.cs" />
+    <Compile Include="WinFormsUI\Win32\Gdi32.cs" />
+    <Compile Include="WinFormsUI\Win32\Kernel32.cs" />
+    <Compile Include="WinFormsUI\Win32\Structs.cs" />
+    <Compile Include="WinFormsUI\Win32\User32.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WinFormsUI\Docking\DockPanel.resx">
+      <DependentUpon>DockPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsUI\Docking\DockWindow.resx">
+      <DependentUpon>DockWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsUI\Strings.resX">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="OfficePickers\ColorPicker\ComboBoxColorPicker.bmp" />
+    <EmbeddedResource Include="OfficePickers\ColorPicker\OfficeColorPicker.bmp" />
+    <EmbeddedResource Include="OfficePickers\ColorPicker\ToolStripColorPicker.bmp" />
+    <EmbeddedResource Include="OfficePickers\LinePickers\OfficeLineCapPicker.resx">
+      <DependentUpon>OfficeLineCapPicker.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OfficePickers\LinePickers\OfficeLineStylePicker.resx">
+      <DependentUpon>OfficeLineStylePicker.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OfficePickers\LinePickers\OfficeLineWidthPicker.resx">
+      <DependentUpon>OfficeLineWidthPicker.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OfficePickers\LinePickers\ToolStripLineCapPicker.resx">
+      <DependentUpon>ToolStripLineCapPicker.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OfficePickers\LinePickers\ToolStripLineStylePicker.resx">
+      <DependentUpon>ToolStripLineStylePicker.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OfficePickers\LinePickers\ToolStripLineWidthPicker.resx">
+      <DependentUpon>ToolStripLineWidthPicker.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OfficePickers\Util\GradientPanel.bmp" />
+    <EmbeddedResource Include="OfficePickers\LinePickers\ComboBoxLineCapPicker.bmp" />
+    <EmbeddedResource Include="OfficePickers\LinePickers\ComboBoxLineStylePicker.bmp" />
+    <EmbeddedResource Include="OfficePickers\LinePickers\ComboBoxLineWidthPicker.bmp" />
+    <EmbeddedResource Include="OfficePickers\LinePickers\OfficeLineCapPicker.bmp" />
+    <EmbeddedResource Include="OfficePickers\LinePickers\OfficeLineStylePicker.bmp" />
+    <EmbeddedResource Include="OfficePickers\LinePickers\OfficeLineWidthPicker.bmp" />
+    <EmbeddedResource Include="OfficePickers\LinePickers\ToolStripLineCapPicker.bmp" />
+    <EmbeddedResource Include="OfficePickers\LinePickers\ToolStripLineStylePicker.bmp" />
+    <EmbeddedResource Include="OfficePickers\LinePickers\ToolStripLineWidthPicker.bmp" />
+    <Content Include="WinFormsUI\Controls\CodeDoc\InertButton.xml" />
+    <Content Include="WinFormsUI\Docking\CodeDoc\AutoHidePane.xml" />
+    <Content Include="WinFormsUI\Docking\CodeDoc\AutoHidePaneCollection.xml" />
+    <Content Include="WinFormsUI\Docking\CodeDoc\AutoHideStripBase.xml" />
+    <Content Include="WinFormsUI\Docking\CodeDoc\AutoHideStripVS2003.xml" />
+    <Content Include="WinFormsUI\Docking\CodeDoc\AutoHideTab.xml" />
+    <Content Include="WinFormsUI\Docking\CodeDoc\AutoHideTabCollection.xml" />
+    <Content Include="WinFormsUI\Docking\CodeDoc\DisplayingDockList.xml" />
+    <Content Include="WinFormsUI\Docking\CodeDoc\DockContent.xml" />
+    <Content Include="WinFormsUI\Docking\CodeDoc\DockContentCollection.xml" />
+    <Content Include="WinFormsUI\Docking\CodeDoc\DockContentHandler.xml" />
+    <Content Include="WinFormsUI\Docking\CodeDoc\DockList.xml" />
+    <Content Include="WinFormsUI\Docking\CodeDoc\DockPane.xml" />
+    <Content Include="WinFormsUI\Docking\CodeDoc\DockPaneCaptionBase.xml" />
+    <Content Include="WinFormsUI\Docking\CodeDoc\DockPaneCaptionVS2003.xml" />
+    <Content Include="WinFormsUI\Docking\CodeDoc\DockPaneCollection.xml" />
+    <Content Include="WinFormsUI\Docking\CodeDoc\DockPanel.xml" />
+    <Content Include="WinFormsUI\Docking\CodeDoc\DockPanelExtender.xml" />
+    <Content Include="WinFormsUI\Docking\CodeDoc\DockPaneStripBase.xml" />
+    <Content Include="WinFormsUI\Docking\CodeDoc\DockPaneStripVS2003.xml" />
+    <Content Include="WinFormsUI\Docking\CodeDoc\DockPaneTab.xml" />
+    <Content Include="WinFormsUI\Docking\CodeDoc\DockPaneTabCollection.xml" />
+    <Content Include="WinFormsUI\Docking\CodeDoc\DockWindow.xml" />
+    <Content Include="WinFormsUI\Docking\CodeDoc\DockWindowCollection.xml" />
+    <Content Include="WinFormsUI\Docking\CodeDoc\Enums.xml" />
+    <Content Include="WinFormsUI\Docking\CodeDoc\EventArgs.xml" />
+    <Content Include="WinFormsUI\Docking\CodeDoc\FloatWindow.xml" />
+    <Content Include="WinFormsUI\Docking\CodeDoc\FloatWindowCollection.xml" />
+    <Content Include="WinFormsUI\Docking\CodeDoc\Interfaces.xml" />
+    <Content Include="WinFormsUI\Docking\CodeDoc\NestedDockingStatus.xml" />
+    <EmbeddedResource Include="OfficePickers\ColorPicker\ComboBoxColorPicker.resx">
+      <DependentUpon>ComboBoxColorPicker.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OfficePickers\ColorPicker\OfficeColorPicker.resx">
+      <DependentUpon>OfficeColorPicker.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OfficePickers\ColorPicker\ToolStripColorPicker.resx">
+      <DependentUpon>ToolStripColorPicker.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OfficePickers\Util\ContextMenuForm.resx">
+      <DependentUpon>ContextMenuForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OfficePickers\Util\LineWeightForm.resx">
+      <DependentUpon>LineWeightForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormsUI\Resources\MdiClientController.bmp" />
+    <EmbeddedResource Include="WinFormsUI\Resources\DockPaneStrip.ScrollRightEnabled.bmp" />
+    <EmbeddedResource Include="WinFormsUI\Resources\DockPaneStrip.ScrollRightDisabled.bmp" />
+    <EmbeddedResource Include="WinFormsUI\Resources\DockPaneStrip.ScrollLeftEnabled.bmp" />
+    <EmbeddedResource Include="WinFormsUI\Resources\DockPaneStrip.ScrollLeftDisabled.bmp" />
+    <EmbeddedResource Include="WinFormsUI\Resources\DockPaneStrip.CloseEnabled.bmp" />
+    <EmbeddedResource Include="WinFormsUI\Resources\DockPaneStrip.CloseDisabled.bmp" />
+    <EmbeddedResource Include="WinFormsUI\Resources\DockPanel.bmp" />
+    <EmbeddedResource Include="WinFormsUI\Resources\DockPaneCaption.CloseEnabled.bmp" />
+    <EmbeddedResource Include="WinFormsUI\Resources\DockPaneCaption.CloseDisabled.bmp" />
+    <EmbeddedResource Include="WinFormsUI\Resources\DockPaneCaption.AutoHideYes.bmp" />
+    <EmbeddedResource Include="WinFormsUI\Resources\DockPaneCaption.AutoHideNo.bmp" />
+    <EmbeddedResource Include="WinFormsUI\Resources\DockIndicator.PanelTop.bmp" />
+    <EmbeddedResource Include="WinFormsUI\Resources\DockIndicator.PanelTop.Active.bmp" />
+    <EmbeddedResource Include="WinFormsUI\Resources\DockIndicator.PanelRight.bmp" />
+    <EmbeddedResource Include="WinFormsUI\Resources\DockIndicator.PanelRight.Active.bmp" />
+    <EmbeddedResource Include="WinFormsUI\Resources\DockIndicator.PanelLeft.bmp" />
+    <EmbeddedResource Include="WinFormsUI\Resources\DockIndicator.PanelLeft.Active.bmp" />
+    <EmbeddedResource Include="WinFormsUI\Resources\DockIndicator.PanelFill.bmp" />
+    <EmbeddedResource Include="WinFormsUI\Resources\DockIndicator.PanelFill.Active.bmp" />
+    <EmbeddedResource Include="WinFormsUI\Resources\DockIndicator.PanelBottom.bmp" />
+    <EmbeddedResource Include="WinFormsUI\Resources\DockIndicator.PanelBottom.Active.bmp" />
+    <EmbeddedResource Include="WinFormsUI\Resources\DockIndicator.PaneDiamond.Top.bmp" />
+    <EmbeddedResource Include="WinFormsUI\Resources\DockIndicator.PaneDiamond.Right.bmp" />
+    <EmbeddedResource Include="WinFormsUI\Resources\DockIndicator.PaneDiamond.Left.bmp" />
+    <EmbeddedResource Include="WinFormsUI\Resources\DockIndicator.PaneDiamond.HotSpotIndex.bmp" />
+    <EmbeddedResource Include="WinFormsUI\Resources\DockIndicator.PaneDiamond.HotSpot.bmp" />
+    <EmbeddedResource Include="WinFormsUI\Resources\DockIndicator.PaneDiamond.Fill.bmp" />
+    <EmbeddedResource Include="WinFormsUI\Resources\DockIndicator.PaneDiamond.Bottom.bmp" />
+    <EmbeddedResource Include="WinFormsUI\Resources\DockIndicator.PaneDiamond.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,2 @@
+makekeys -cert -password next2friends -len 1024 -dname "CN=Next2Friends OU=Development OR=Next2Friends CO=UK EM=contact@next2friends.com" next2friends.key next2friends.cer
+signsis sup.sis sup.sis sup.cer sup.key next2friends

@@ -1,0 +1,183 @@
+ {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+BODY {
+	BACKGROUND: url(images/gradient-bg.gif) #96a3ab repeat-x; FONT: 75%/160% Arial, Helvetica, sans-serif; COLOR: #333333
+}
+P {
+	PADDING-BOTTOM: 1em
+}
+A {
+	COLOR: #0066cb; TEXT-DECORATION: none
+}
+IMG {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+A:hover {
+	TEXT-DECORATION: underline
+}
+#page {
+	BACKGROUND: url(images/main-bg.jpg) no-repeat center top; WIDTH: 100%
+}
+H1 {
+	BACKGROUND: url(images/logo.gif) no-repeat; MARGIN-LEFT: 20px; WIDTH: 234px; TEXT-INDENT: -900%; HEIGHT: 46px
+}
+#corner {
+	BACKGROUND: url(images/corner.gif) no-repeat; LEFT: 0px; WIDTH: 103px; TEXT-INDENT: -900%; POSITION: absolute; TOP: 0px; HEIGHT: 99px
+}
+#header {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 24px; FONT-SIZE: 110%; PADDING-BOTTOM: 0px; MARGIN: 0px auto; WIDTH: 898px; COLOR: #fff; PADDING-TOP: 16px; HEIGHT: 355px
+}
+#header H2 {
+	MARGIN: 100px 0px 0px 135px; FONT: 150%/100% Arial, Helvetica, sans-serif
+}
+#header UL {
+	PADDING-BOTTOM: 10px; MARGIN: 10px 0px 0px 135px; LIST-STYLE-TYPE: none
+}
+#header LI {
+	PADDING-LEFT: 14px; BACKGROUND: url(images/intro-bullet.gif) no-repeat 2px center
+}
+#header P {
+	PADDING-LEFT: 135px; LINE-HEIGHT: 130%
+}
+.gallery {
+	PADDING-RIGHT: 0px; MARGIN-TOP: 8px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN-LEFT: -10px; LINE-HEIGHT: 100%; PADDING-TOP: 0px
+}
+.gallery IMG {
+	MARGIN-RIGHT: 9px
+}
+.gallery A IMG {
+	BORDER-RIGHT: #000 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #000 1px solid; PADDING-LEFT: 3px; BACKGROUND: #5e656b; PADDING-BOTTOM: 3px; BORDER-LEFT: #000 1px solid; PADDING-TOP: 3px; BORDER-BOTTOM: #000 1px solid
+}
+.gallery A:hover IMG {
+	BACKGROUND: #fff
+}
+.wrap {
+	PADDING-RIGHT: 24px; PADDING-LEFT: 24px; PADDING-BOTTOM: 20px; MARGIN: 0px auto; WIDTH: 850px; PADDING-TOP: 20px
+}
+#content {
+	BACKGROUND: url(images/content-bg.gif) #fff repeat-x left bottom
+}
+#content H2 {
+	PADDING-BOTTOM: 10px; FONT: 200%/100% Georgia, "Times New Roman", Times, serif; COLOR: #0066cb
+}
+.left-col {
+	FLOAT: left; WIDTH: 406px
+}
+#contactForm P {
+	CLEAR: both; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 8px; PADDING-TOP: 8px
+}
+#contactForm LABEL {
+	FLOAT: left; WIDTH: 153px; PADDING-TOP: 3px
+}
+#contactForm .txtfield {
+	BORDER-RIGHT: #cccccc 1px solid; PADDING-RIGHT: 4px; BORDER-TOP: #cccccc 1px solid; PADDING-LEFT: 4px; BACKGROUND: #fff; PADDING-BOTTOM: 4px; BORDER-LEFT: #cccccc 1px solid; WIDTH: 240px; PADDING-TOP: 4px; BORDER-BOTTOM: #cccccc 1px solid
+}
+#contactForm .dropdown {
+	BORDER-RIGHT: #cccccc 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #cccccc 1px solid; PADDING-LEFT: 0px; BACKGROUND: #fff; PADDING-BOTTOM: 4px; BORDER-LEFT: #cccccc 1px solid; WIDTH: 250px; PADDING-TOP: 4px; BORDER-BOTTOM: #cccccc 1px solid
+}
+.submit {
+	MARGIN-LEFT: 305px
+}
+.red {
+	COLOR: #ff6600
+}
+.warning {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; BACKGROUND: url(images/warning-arrow.gif) #fcf7b8 no-repeat right bottom; MARGIN-BOTTOM: 10px; PADDING-BOTTOM: 22px; PADDING-TOP: 3px
+}
+.message {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 24px; BACKGROUND: url(images/check.gif) #e3f3ca no-repeat 7px 7px; PADDING-BOTTOM: 3px; PADDING-TOP: 3px
+}
+.note {
+	FONT-SIZE: 95%; COLOR: #8c8b8b
+}
+.right-col {
+	FLOAT: right; WIDTH: 406px
+}
+#content UL {
+	LIST-STYLE-TYPE: none
+}
+#content LI {
+	PADDING-LEFT: 14px; BACKGROUND: url(images/bullet.gif) no-repeat 2px center
+}
+#box {
+	FONT-SIZE: 90%; BACKGROUND: url(images/laptop-bg.gif) no-repeat; MARGIN-BOTTOM: 16px; WIDTH: 406px; COLOR: #fff; LINE-HEIGHT: 160%; POSITION: relative; HEIGHT: 161px
+}
+.laptop {
+	DISPLAY: block; RIGHT: 0px; WIDTH: 200px; POSITION: absolute; TOP: 0px; HEIGHT: 140px
+}
+.laptop-specs {
+	PADDING-RIGHT: 5px; DISPLAY: block; PADDING-LEFT: 10px; BACKGROUND: url(images/laptop-specs.gif) no-repeat; LEFT: 125px; PADDING-BOTTOM: 5px; WIDTH: 204px; PADDING-TOP: 8px; POSITION: absolute; TOP: 15px; HEIGHT: 120px
+}
+.ipod {
+	DISPLAY: block; LEFT: 28px; WIDTH: 90px; POSITION: absolute; TOP: 28px; HEIGHT: 105px
+}
+.ipod-specs {
+	PADDING-RIGHT: 10px; DISPLAY: block; PADDING-LEFT: 16px; BACKGROUND: url(images/ipod-specs.gif) no-repeat; LEFT: 113px; PADDING-BOTTOM: 5px; WIDTH: 188px; PADDING-TOP: 8px; POSITION: absolute; TOP: 30px; HEIGHT: 86px
+}
+#referbox {
+	MARGIN: 10px 0px; POSITION: relative
+}
+#referbox .top {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 10px; BACKGROUND: url(images/refer-box-top.gif) no-repeat; PADDING-BOTTOM: 5px; MARGIN: 0px; CURSOR: pointer; LINE-HEIGHT: 100%; PADDING-TOP: 8px
+}
+#referbox .top SPAN {
+	DISPLAY: block; RIGHT: 5px; BACKGROUND: url(images/referbox-arrow.gif) no-repeat; WIDTH: 16px; POSITION: absolute; TOP: 7px; HEIGHT: 16px
+}
+#referbox .middle {
+	PADDING-RIGHT: 10px; DISPLAY: block; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; WIDTH: 386px; PADDING-TOP: 10px; BACKGROUND-COLOR: #e6e7e8
+}
+#referbox LABEL {
+	FLOAT: left; WIDTH: 143px; PADDING-TOP: 3px
+}
+#referbox .txtfield {
+	BORDER-RIGHT: #cccccc 1px solid; PADDING-RIGHT: 4px; BORDER-TOP: #cccccc 1px solid; PADDING-LEFT: 4px; BACKGROUND: #fff; PADDING-BOTTOM: 4px; BORDER-LEFT: #cccccc 1px solid; WIDTH: 220px; PADDING-TOP: 4px; BORDER-BOTTOM: #cccccc 1px solid
+}
+#referbox .bottom {
+	BACKGROUND: url(images/refer-box-bottom.gif) no-repeat left bottom; CURSOR: pointer; HEIGHT: 4px
+}
+#winner-box {
+	BACKGROUND: url(images/winner-pic.gif) no-repeat right top
+}
+#winner-box H3 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 5px; MARGIN: 0px; FONT: bold 150%/100% Arial, Helvetica, sans-serif; PADDING-TOP: 0px
+}
+#winner-box P {
+	WIDTH: 245px
+}
+#footer {
+	BACKGROUND: url(images/footer-bg.gif) #fff repeat-x left bottom
+}
+H3 {
+	FONT: bold 130%/160% Arial, Helvetica, sans-serif
+}
+#footer .about {
+	PADDING-LEFT: 100px; BACKGROUND: url(images/about-bg.gif) no-repeat 10px top; FLOAT: left; WIDTH: 306px
+}
+#footer .contact {
+	PADDING-LEFT: 100px; BACKGROUND: url(images/contact-bg.gif) no-repeat 10px top; FLOAT: right; WIDTH: 306px
+}
+#footer .contact A {
+	PADDING-RIGHT: 20px; PADDING-LEFT: 0px; BACKGROUND: url(images/arrow.gif) no-repeat right center; PADDING-BOTTOM: 2px; PADDING-TOP: 2px
+}
+#copyright {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 95%; BACKGROUND: url(images/copyright-bg.gif) repeat-x; PADDING-BOTTOM: 10px; MARGIN: 1px auto 0px; WIDTH: 898px; PADDING-TOP: 10px; TEXT-ALIGN: center
+}
+#copyright A {
+	COLOR: #333333
+}
+#copyright A:visited {
+	COLOR: #333333
+}
+.clearfix:unknown {
+	CLEAR: both; DISPLAY: block; VISIBILITY: hidden; HEIGHT: 0px; content: "."
+}
+.clearfix {
+	DISPLAY: inline-block
+}
+ HTML .clearfix {
+	HEIGHT: 1%
+}
+.clearfix {
+	DISPLAY: block
+}

@@ -1,0 +1,227 @@
+/* r.a.d.window default skin */
+
+iframe.RadWContentFrame
+{
+	background: #fff; /* Mozilla overlay */
+}
+
+.RadWContentFrame
+{
+	scrollbar-face-color: #BACBF4;
+	scrollbar-highlight-color: #FFFFFF;
+	scrollbar-shadow-color: #7E9FD2;
+	scrollbar-3dlight-color: #E6EEFC;
+	scrollbar-arrow-color: #4D6185;
+	scrollbar-track-color: #F7F7F3;
+	scrollbar-darkshadow-color: #C6D1DC;		
+	
+}
+
+.RadWStatus
+{
+	height: 21px;
+	background: url('CssImg/RadWStatus.gif') repeat-x;
+}
+
+.RadWModalImage
+{
+	background: url('Img/ModalImageBg.gif');
+}
+
+.RadWStatusRow
+{
+	background-color: #cfe2fb;
+}
+
+.RadWStatus input
+{
+	font: normal 10px Arial, Verdana, Sans-Serif !important;
+	cursor: default;
+	color: #000;
+	margin-left: 2px;
+	margin-top: 2px;
+}
+
+.RadWDragHelper
+{		
+	border: solid 1px solid #ccc;
+	background: #ccc;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50); /* IE */
+	-moz-opacity: 0.5; /* Mozilla */
+	opacity: 0.5; /* CSS3 */
+	margin: 0px;
+	padding: 0px;	
+	position: absolute;
+	z-index: 50000;
+	overflow: hidden;	
+}
+
+.RadWMinimizedPageLoaded
+{
+	width: 60px;
+	height: 25px;
+	border: solid 1px #e34a4e;
+	background: url('CssImg/RadWWrapperHeaderCenter.gif') repeat-x;
+}
+
+.RadWMinimizedActive,
+.RadWMinimizedOver
+{
+	width: 60px;
+	height: 25px;
+	border: solid 1px #f3ba0f;
+	background: transparent url('CssImg/RadWWrapperHeaderCenter.gif') repeat-x;
+}
+
+.RadWMinimizedInactive
+{
+	border: solid 1px #f3ba0f;
+	background-color:;
+	background: #f3ba0f url('CssImg/RadWWrapperHeaderCenter.gif') repeat-x;
+	width: 60px;
+	height: 25px;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=63); /* IE */
+	-moz-opacity: 0.6; /* Moz */
+	opacity: 0.6; /* CSS3 */
+}
+
+.RadWLoadingWrapper
+{
+	width: 80px;
+	height: 100%;
+	vertical-align: middle;
+	text-align: center;	
+	font: normal 11px Verdana, Arial, Sans-Serif;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=99); /* IE */
+}
+
+.RadWIcon
+{
+	margin-left: 2px;	
+	margin-right: 2px;
+	cursor: default;
+	margin-top: 3px;
+	vertical-align: middle;
+}
+
+.RadWTitleText
+{
+	font: bold 11px Verdana, Arial, Sans-Serif;
+	color: #fff;
+	vertical-align: middle;
+}
+
+.RadWButton
+{
+	cursor: default;
+	vertical-align: top;
+	margin-top: 3px;
+	margin-right: 2px;
+}
+
+.RadWWrapperActive
+{
+	background-color: #fff;
+	font-size: 0px;	
+	/* filter: progid:DXImageTransform.Microsoft.Shadow(direction=140,color=#404040,strength=3); */
+	border-top: solid 1px #4071c5;
+}
+
+.RadWWrapperInactive
+{
+	background: #CFE2FB;
+	font-size: 0px;	
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=90); /* IE */
+	-moz-opacity: 0.9; /* Moz */
+	opacity: 0.9; /* CSS3 */
+}
+
+.RadWWrapperModal
+{	
+	border-right: solid 1px #404040;
+	border-bottom: solid 1px #404040;
+	border-left: solid 1px #d4d0c8;
+	border-top: solid 1px #d4d0c8;
+	font-size: 0px;
+	/* filter: progid:DXImageTransform.Microsoft.Shadow(direction=140,color=#404040,strength=3); */
+}
+
+.RadWTitleRow
+{
+	cursor: default;		
+}
+
+.RadWWrapperHeaderLeft
+{
+	width: 2px;
+	background-color: #6194eb;
+	height: 27px;
+}
+
+.RadWHeaderTopResizer
+{
+	height: 2px;
+	font-size: 0px;
+	background: #3c6cbd;
+}
+
+.RadWWrapperHeaderCenter
+{
+	height: 25px;
+	text-align: left;
+	font: normal 11px Verdana, Arial, Sans-serif;
+	color: #fff;
+	background: #0a246a url('CssImg/RadWWrapperHeaderCenter.gif') repeat-x bottom;
+}
+
+.RadWWrapperHeaderRight
+{
+	width: 2px;
+	background: #6194eb;
+	height: 27px;
+}
+
+.RadWWrapperBodyLeft
+{
+	width: 3px;
+	font-size: 0px;
+	background: #6194eb;
+}
+
+.RadWWrapperBodyCenter
+{
+	width: 100%;
+	height: 100%;
+}
+
+.RadWWrapperBodyRight
+{
+	width: 3px;
+	font-size: 0px;
+	background: #6194eb;
+}
+
+/* Mozilla 1.5 Fix */
+.RadWWrapperBodyLeft:before
+{
+	content: " ";
+	display: block;
+	width: 3px;
+}
+
+/* Mozilla 1.5 Fix */
+.RadWWrapperBodyRight:before
+{
+	content: " ";
+	display: block;
+	width: 3px;
+}
+
+.RadWWrapperFooterLeft,
+.RadWWrapperFooterCenter,
+.RadWWrapperFooterRight
+{
+	font-size: 0px;
+	background: #6194eb;
+	height: 3px;
+}

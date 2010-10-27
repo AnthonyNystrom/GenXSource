@@ -1,0 +1,95 @@
+﻿.rtop,.rbottom{display:block;background-color:Transparent;}
+.rtop *,.rbottom *{display:block;height: 1px;overflow: hidden;background: #509DEB}
+.r1{margin: 0 4px}
+.r2{margin: 0 2px}
+.r3{margin: 0 1px}
+.r4{margin: 0 1px;height: 1px}
+
+.rs1{margin: 0 2px}
+.rs2{margin: 0 1px}
+.rtopdark,.rbottomdark{display:block;background-color:Transparent;}
+.rtopdark *,.rbottomdark *{display:block;height: 1px;overflow: hidden;background: #509DEB}
+
+.rtoponlyborder,.rbottomonlyborder{display:block;background-color:Transparent;}
+.rtoponlyborder *,.rbottomonlyborder *{display:block;height: 1px;overflow: hidden;background: #509DEB;}
+
+#chatParentDiv
+{
+position:absolute;
+height:150px;
+left: 0px;
+top: 430px;
+background-color:transparent;
+padding: 0px;
+visibility:visible;
+display:inline;
+}
+
+/* header
+--------------------------------------------------------------------------------- */
+#header {
+	height: 225px;
+	width: 922px;
+	margin: 0 auto;
+	position: relative;
+}
+
+/* nav */
+#nav {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	bottom: 0px;
+	left: 20px;
+	font-weight: bold;
+}
+#nav li {
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+#nav a {
+	float: left;
+	background: url(../images/navleft1.gif) no-repeat left top;
+	margin: 0;
+	padding: 0 4px 0 10px;
+	text-decoration: none;
+}
+#nav a span {
+	float:  left;
+	display: block;
+	background: url(../images/navright1.gif) no-repeat right top;
+	padding: 5px 15px 4px 6px;
+	color: #000000;
+	text-transform: uppercase;
+}
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+#nav a span {
+	float: none;
+}
+/* End IE5-Mac hack */
+#nav a: hover span {
+	color: #FF9834;
+}
+#nav a:hover, #nav .current {
+	background-position: 0% -36px;
+}
+#nav a:hover span, #nav .current span {
+	background-position: 100% -36px;
+}
+
+
+.left {
+	background: url(../images/navleft.gif) no-repeat left top;
+	height:20px;
+	display:inline;
+	width:10px;
+}
+.right {
+	background: url(../images/navright.gif) no-repeat right top;
+	height:20px;
+	display:inline;
+	width:100%;
+	font-weight: bold;
+}

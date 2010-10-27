@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NDSProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="1.0" supplier="Nokia">
+  <activeMmpFile>group\Aaf.mmp</activeMmpFile>
+  <updateMmpFile>false</updateMmpFile>
+  <updateUidCppFile>true</updateUidCppFile>
+  <pkgFile>sis\Aaf.pkg</pkgFile>
+  <pkgUpdate>true</pkgUpdate>
+  <pkgGeneration>true</pkgGeneration>
+  <projectProperty name="vendorName" label="Vendor Name" value="Next2Friends" type="input" pattern="FreeText" role="None" persistedAs="vendorName" />
+  <projectProperty name="uid3" label="Application UID" value="0xe2536f82" description="Application UID. Development time UIDs between 0x00000000 - 0x0fffffff. Release UIDs provided by Symbian." type="input" pattern="UID" role="UID" persistedAs="project.uid3" />
+  <projectProperty name="basename" label="Base Name" value="Aaf" description="Base name for files and classes" type="input" pattern="VariableName" role="ProjectName" persistedAs="project.basename" />
+  <lang>EN</lang>
+  <bldInfFile />
+  <copyExportsFlag>false</copyExportsFlag>
+  <securityProperty defaultCertificateName="" autoSign="false" />
+</NDSProject>

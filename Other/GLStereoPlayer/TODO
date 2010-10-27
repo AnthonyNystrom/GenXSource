@@ -1,0 +1,23 @@
+Version 0.6.0
+
+* I know you need a detail documents...
+
+* Localization.  Almost all the string resources are strings.rc file,
+  maintain this file and translate it into different languages.
+  Then make a dll file named localize.dll and put the same directory as
+  GLStereoPlayer.exe and GLSPCtrl.ocx.
+
+* ActiveX version stores the file path only as an absolute file path.
+  Because it's difficult for ActiveX component to know its client enough,
+  we can't determine the relative source file path via the clients' document file path.
+  So if you use the GLStereoPlayer in PowerPoint, don't move the movie and image file,
+  or keep the same absolute file path in different environment.
+
+* Use a shader for fast gray scale conversion in Anagryph rendering.
+
+* In PowerPoint, each ActiveX instance is loaded on RAM, and there are no way
+  to know whether if it is shown or hidden. So each ActiveX instance can't unload
+  movie or image data, and it consumes lots of memory...
+
+* Implement CGLStereoPlayerCtrl::OnDrawMetafile to draw the captured image.
+

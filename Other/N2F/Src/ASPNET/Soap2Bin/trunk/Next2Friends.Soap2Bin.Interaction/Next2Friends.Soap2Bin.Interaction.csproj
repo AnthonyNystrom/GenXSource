@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A3C5600F-F81D-4F8B-B8D5-861E5CBAD6CC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Next2Friends.Soap2Bin.Interaction</RootNamespace>
+    <AssemblyName>Next2Friends.Soap2Bin.Interaction</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Next2Friends.Soap2Bin.Interaction.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AskService\AttachPhotoGateway.cs" />
+    <Compile Include="AskService\CompleteQuestionGateway.cs" />
+    <Compile Include="AskService\GetQuestionGateway.cs" />
+    <Compile Include="AskService\GetQuestionIDsGateway.cs" />
+    <Compile Include="AskService\GetQuestionsGateway.cs" />
+    <Compile Include="AskService\GetResponseGateway.cs" />
+    <Compile Include="AskService\SkipQuestionGateway.cs" />
+    <Compile Include="AskService\SubmitQuestionGateway.cs" />
+    <Compile Include="AskService\VoteForQuestionGateway.cs" />
+    <Compile Include="BlogService\GetEntryGateway.cs" />
+    <Compile Include="CommentService\AddCommentGateway.cs" />
+    <Compile Include="CommentService\EditCommentGateway.cs" />
+    <Compile Include="CommentService\GetCommentGateway.cs" />
+    <Compile Include="CommentService\GetCommentIDsGateway.cs" />
+    <Compile Include="CommentService\GetCommentsGateway.cs" />
+    <Compile Include="CommentService\HasNewCommentsGateway.cs" />
+    <Compile Include="CommentService\RemoveCommentGateway.cs" />
+    <Compile Include="DashboardService\GetItemsGateway.cs" />
+    <Compile Include="DashboardService\GetNewFriendsGateway.cs" />
+    <Compile Include="DashboardService\GetPhotosGateway.cs" />
+    <Compile Include="DashboardService\GetThumbnailGateway.cs" />
+    <Compile Include="DashboardService\GetVideosGateway.cs" />
+    <Compile Include="DashboardService\GetWallCommentsGateway.cs" />
+    <Compile Include="DataService.cs" />
+    <Compile Include="HttpProcessor.cs" />
+    <Compile Include="HttpService.cs" />
+    <Compile Include="IGateway.cs" />
+    <Compile Include="MemberService\CreateUserGateway.cs" />
+    <Compile Include="MemberService\GetMemberStatusTextGateway.cs" />
+    <Compile Include="MemberService\SetMemberStatusTextGateway.cs" />
+    <Compile Include="MemberService\CheckUserExistsGateway.cs" />
+    <Compile Include="MemberService\GetEncryptionKeyGateway.cs" />
+    <Compile Include="MemberService\GetMemberIDGateway.cs" />
+    <Compile Include="MemberService\GetTagIDGateway.cs" />
+    <Compile Include="MemberService\RemindPasswordGateway.cs" />
+    <Compile Include="PhotoService\GetPhotosForCollectionGateway.cs" />
+    <Compile Include="PhotoService\GetPhotoThumbnailGateway.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AskService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\BlogService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CommentService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DashboardService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MemberService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PhotoService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SnapUpService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TagService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SnapUpService\DeviceUploadPhotoGateway.cs" />
+    <Compile Include="Soap2BinHandler.cs" />
+    <Compile Include="StringProcessor.cs" />
+    <Compile Include="TagService\UploadTagsGateway.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AskService\" />
+    <WCFMetadataStorage Include="Service References\BlogService\" />
+    <WCFMetadataStorage Include="Service References\CommentService\" />
+    <WCFMetadataStorage Include="Service References\DashboardService\" />
+    <WCFMetadataStorage Include="Service References\MemberService\" />
+    <WCFMetadataStorage Include="Service References\PhotoService\" />
+    <WCFMetadataStorage Include="Service References\SnapUpService\" />
+    <WCFMetadataStorage Include="Service References\TagService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Next2Friends.Soap2Bin.Core\Next2Friends.Soap2Bin.Core.csproj">
+      <Project>{F891580B-9326-434C-91BA-DB94F1FA5524}</Project>
+      <Name>Next2Friends.Soap2Bin.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AskService\AskService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AskService\AskService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AskService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AskService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AskService\Next2Friends.Soap2Bin.Interaction.AskService.AskQuestion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AskService\Next2Friends.Soap2Bin.Interaction.AskService.AskQuestionConfirm.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AskService\Next2Friends.Soap2Bin.Interaction.AskService.AskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AskService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\DashboardService\DashboardService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DashboardService\DashboardService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DashboardService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DashboardService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DashboardService\Next2Friends.Soap2Bin.Interaction.DashboardService.DashboardNewFriend.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DashboardService\Next2Friends.Soap2Bin.Interaction.DashboardService.DashboardPhoto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DashboardService\Next2Friends.Soap2Bin.Interaction.DashboardService.DashboardVideo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DashboardService\Next2Friends.Soap2Bin.Interaction.DashboardService.DashboardWallComment.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DashboardService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\MemberService\MemberService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MemberService\MemberService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MemberService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MemberService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MemberService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SnapUpService\SnapUpService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SnapUpService\SnapUpService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SnapUpService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SnapUpService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SnapUpService\Next2Friends.Soap2Bin.Interaction.SnapUpService.PhotoCollectionItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SnapUpService\Next2Friends.Soap2Bin.Interaction.SnapUpService.PhotoItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SnapUpService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\TagService\TagService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TagService\TagService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TagService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TagService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BlogService\BlogService.wsdl" />
+    <None Include="Service References\DashboardService\Next2Friends.Soap2Bin.Interaction.DashboardService.DashboardItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TagService\Next2Friends.Soap2Bin.Interaction.TagService.TagConfirmation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TagService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BlogService\BlogService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BlogService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BlogService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BlogService\Next2Friends.Soap2Bin.Interaction.BlogService.BlogEntry.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BlogService\Next2Friends.Soap2Bin.Interaction.BlogService.BlogPhoto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BlogService\Next2Friends.Soap2Bin.Interaction.BlogService.BlogVideo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BlogService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CommentService\CommentService.disco" />
+    <None Include="Service References\CommentService\CommentService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CommentService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CommentService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CommentService\Next2Friends.Soap2Bin.Interaction.CommentService.WebComment.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CommentService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\PhotoService\PhotoService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PhotoService\PhotoService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PhotoService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PhotoService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PhotoService\Next2Friends.Soap2Bin.Interaction.PhotoService.WebPhoto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PhotoService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

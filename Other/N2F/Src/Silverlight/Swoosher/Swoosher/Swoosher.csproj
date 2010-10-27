@@ -1,0 +1,124 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{84A9E2BC-198F-41B2-8A49-277C2624082C}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Next2Friends.Swoosher</RootNamespace>
+    <AssemblyName>Next2Friends.Swoosher</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>ClientBin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>ClientBin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="agclr" />
+    <Reference Include="mscorlib" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="system.Xml.core" />
+    <Reference Include="system.silverlight" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BoundingBox.cs" />
+    <Compile Include="BSPImage.cs" />
+    <Compile Include="BSPTree.cs" />
+    <Compile Include="Arrow.xaml.cs">
+      <DependentUpon>Arrow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Collision.cs" />
+    <Compile Include="Frustum.cs" />
+    <Compile Include="Physics.cs" />
+    <Compile Include="Loading.xaml.cs">
+      <DependentUpon>Loading.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Media3D\Camera.cs" />
+    <Compile Include="Media3D\DoubleUtil.cs" />
+    <Compile Include="Media3D\Extensions.cs" />
+    <Compile Include="Media3D\M3DUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Media3D\Matrix3D.cs" />
+    <Compile Include="Media3D\Point3D.cs" />
+    <Compile Include="Media3D\Point4D.cs" />
+    <Compile Include="Media3D\Quaternion.cs" />
+    <Compile Include="Media3D\Rect3D.cs" />
+    <Compile Include="Media3D\Size3D.cs" />
+    <Compile Include="Media3D\Vector3D.cs" />
+    <Compile Include="Plane.cs" />
+    <Compile Include="ProgressBar.xaml.cs">
+      <DependentUpon>ProgressBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SelectableImage.xaml.cs">
+      <DependentUpon>SelectableImage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Swoosher.xaml.cs">
+      <DependentUpon>Swoosher.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Trackball.cs" />
+    <Compile Include="Types.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Swoosher.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SelectableImage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ProgressBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Loading.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Arrow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\Silverlight\Microsoft.Silverlight.Csharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <WebProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

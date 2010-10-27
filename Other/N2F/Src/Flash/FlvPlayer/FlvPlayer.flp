@@ -1,0 +1,96 @@
+﻿<flash_project name="FlvPlayer" version="1">
+    <project_folder name="images" expanded="false">
+        <project_file path="./images/logo.gif" filetype="gif" />
+        <project_file path="./images/logo.swf" filetype="swf" />
+    </project_folder>
+    <project_folder name="com" expanded="true">
+        <project_folder name="jeroenwijering" expanded="true">
+            <project_folder name="feeds" expanded="false">
+                <project_file path="./com/jeroenwijering/feeds/AbstractParser.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/feeds/ATOMParser.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/feeds/FeedListener.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/feeds/FeedManager.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/feeds/RSSParser.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/feeds/XSPFParser.as" filetype="as" />
+            </project_folder>
+            <project_folder name="players" expanded="true">
+                <project_file path="./com/jeroenwijering/players/._AbstractModel.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/players/._AbstractView.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/players/._CallbackView.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/players/._EqualizerView.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/players/._ImageModel.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/players/._JavascriptView.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/players/._PlaylistView.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/players/._RotatorController.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/players/AbstractController.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/players/AbstractModel.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/players/AbstractPlayer.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/players/AbstractView.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/players/AlternativeClipView.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/players/AudioView.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/players/CallbackView.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/players/CaptionsParser.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/players/CaptionsView.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/players/ControlbarView.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/players/DisplayView.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/players/EqualizerView.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/players/FLVModel.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/players/ImageModel.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/players/ImageRotator.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/players/InputView.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/players/JavascriptView.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/players/MediaPlayer.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/players/MP3Model.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/players/OverlayView.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/players/PlayerController.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/players/PlaylistView.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/players/RotatorController.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/players/RotatorView.as" filetype="as" />
+            </project_folder>
+            <project_folder name="utils" expanded="false">
+                <project_file path="./com/jeroenwijering/utils/Animations.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/utils/BandwidthCheck.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/utils/Draw.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/utils/ImageLoader.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/utils/ListParser.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/utils/Randomizer.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/utils/Scroller.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/utils/StringMagic.as" filetype="as" />
+                <project_file path="./com/jeroenwijering/utils/XMLParser.as" filetype="as" />
+            </project_folder>
+        </project_folder>
+        <project_folder name="robertpenner" expanded="false">
+            <project_folder name="easing" expanded="false">
+                <project_file path="./com/robertpenner/easing/Back.as" filetype="as" />
+                <project_file path="./com/robertpenner/easing/Bounce.as" filetype="as" />
+                <project_file path="./com/robertpenner/easing/Circ.as" filetype="as" />
+                <project_file path="./com/robertpenner/easing/Cubic.as" filetype="as" />
+                <project_file path="./com/robertpenner/easing/easing_readme.txt" filetype="txt" />
+                <project_file path="./com/robertpenner/easing/Elastic.as" filetype="as" />
+                <project_file path="./com/robertpenner/easing/Expo.as" filetype="as" />
+                <project_file path="./com/robertpenner/easing/Linear.as" filetype="as" />
+                <project_file path="./com/robertpenner/easing/Quad.as" filetype="as" />
+                <project_file path="./com/robertpenner/easing/Quart.as" filetype="as" />
+                <project_file path="./com/robertpenner/easing/Quint.as" filetype="as" />
+                <project_file path="./com/robertpenner/easing/Sine.as" filetype="as" />
+            </project_folder>
+        </project_folder>
+        <project_folder name="rapierdev" expanded="false">
+            <project_folder name="data" expanded="false">
+                <project_file path="./com/rapierdev/data/ExecutionLoader.as" filetype="as" />
+                <project_file path="./com/rapierdev/data/XML2Object.as" filetype="as" />
+                <project_file path="./com/rapierdev/data/XMLManager.as" filetype="as" />
+            </project_folder>
+            <project_file path="./com/rapierdev/Delegate.as" filetype="as" />
+        </project_folder>
+        <project_file path="./com/logob.gif" filetype="gif" />
+    </project_folder>
+    <project_folder name="zigo" expanded="false">
+        <project_file path="./zigo/tweenManager.as" filetype="as" />
+    </project_folder>
+    <project_file path="./easing_equations.as" filetype="as" />
+    <project_file path="./flvplayer.fla" filetype="fla" profile="" />
+    <project_file path="./lmc_tween.as" filetype="as" />
+    <project_file path="./MovieClip.as" filetype="as" />
+    <project_file path="./TextField.as" filetype="as" />
+</flash_project>

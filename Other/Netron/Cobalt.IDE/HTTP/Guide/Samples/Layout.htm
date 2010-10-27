@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/SampleTemplate.dwt" codeOutsideHTMLIsLocked="false" -->
+	<head>
+	<!-- InstanceBeginEditable name="doctitle" -->
+	<title>The Netron Library - Quick guide</title>
+	<!-- InstanceEndEditable -->
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<link href="/Templates/style.css" rel="stylesheet" type="text/css">
+	<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+	</head>
+	<body>
+	<table width="1024" height="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr >
+        <th height="15" colspan="2" align="left" valign="top"><table width="1024" border="0" cellpadding="0" cellspacing="0" bgcolor="#192D4F">
+          <tr align="center" >
+            <td width="20" class="menu"><img src="/Guide/images/1x1.gif" alt="Empty" width="1" height="1"></td>
+            <td width="100" class="menu"><a href="/Guide/index.htm">&nbsp;&nbsp;&nbsp;Home&nbsp; &nbsp;&nbsp; </a></td>
+            <td width="100"  class="menu"><a href="/Guide/Samples.htm">&nbsp;&nbsp;&nbsp;Samples&nbsp;&nbsp;&nbsp;</a></td>
+            <td width="100" class="menu"><a href="/Guide/API/index.html">&nbsp;&nbsp;&nbsp;API&nbsp;&nbsp;&nbsp;</a></td>
+            <td width="100" class="menu"></td>
+            <td width="100" class="menu"></td>
+            <td width="100" class="menu"></td>
+            <td width="100" class="menu"></td>
+          </tr>
+        </table></th>
+      </tr>
+      <tr >
+        <th height="37" colspan="2" align="left" valign="top" background="/images/NetronFutureSmall.png" class="graybottomborder">&nbsp;</th>
+      </tr>
+      <tr>
+        <td width="2%"><img src="/Guide/images/1x1.gif" alt="Empty" width="20" height="600"></td>
+        <td width="98%" height="437" valign="top"><p>&nbsp;</p>
+        <span class="SampleTitle"><!-- InstanceBeginEditable name="Title" -->Use layout algorithms <!-- InstanceEndEditable --></span>
+		<p><!-- InstanceBeginEditable name="Description" -->These samples describe how you can lay out a diagram. <!-- InstanceEndEditable -->		</p>
+		<!-- InstanceBeginEditable name="SampleContent" -->
+		<p>The following code examplifies how you can create a random tree based on a utility function inside the Layout namespace. Via the static LAyoutSettings class you set various properties of the layout algorithms. Finally, the Layout method of the diagram control will lay out the nodes with the given layout algorithm. Easy, isn't it? </p>
+		<p>Note also the TreeOrientation enumeration; you can lay out the nodes in four directions without any extra coding. </p>
+		<form name="myform">
+          <p>&nbsp;</p>
+		  <p>
+            <textarea name="code1" cols="126" rows="12" class="CodeTextArea" id="code1" >
+Bundle bundle = Netron.NetronLight.Layout.Tree.CreateRandomTree <SimpleEllipse>(this.DiagramControl.Size, 50);
+this.DiagramControl.Unwrap(bundle);
+Netron.NetronLight.Layout.LayoutSettings.TreeLayout.BreadthSpacing = 160;
+Netron.NetronLight.Layout.LayoutSettings.TreeLayout.DepthSpacing = 160;
+Netron.NetronLight.Layout.LayoutSettings.TreeLayout.TreeOrientation = TreeOrientation.BottomTop;
+this.DiagramControl.Layout(Netron.NetronLight.Win.LayoutType.ClassicTree);
+this.DiagramControl.Pan = new Point(500, 900);
+
+                </textarea>
+          </p>
+		  <p>
+            <input name="button" type="button" class="CodeButton" onClick="window.external.RunScript(myform.code1.value); return false;" value="Execute script" />
+          </p>
+	    </form>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<!-- InstanceEndEditable -->
+		<p>&nbsp;</p>
+        <p>&nbsp;</p>
+        </td>
+      </tr>
+      <tr >
+        <td colspan="2"><hr color="#192D4F" noshade="noshade"></td>
+      </tr>
+    </table>
+	</body>
+<!-- InstanceEnd --></html>

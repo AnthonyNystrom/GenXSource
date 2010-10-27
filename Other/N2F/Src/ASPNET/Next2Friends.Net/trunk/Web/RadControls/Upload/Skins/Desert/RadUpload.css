@@ -1,0 +1,115 @@
+/* r.a.d.upload Desert skin */
+.RadUploadTable
+{
+	font-family: Arial, Verdana, Sans-serif;
+	color: #777566;
+	font-size: 11px;
+}
+.RadUploadTable TD
+{
+	padding: 4px 0px;
+}
+.RadUploadButtonArea
+{
+
+}
+
+.RadUploadButton, .radUploadButtonMedium
+{
+	background-image: url(Img/button.gif);
+	background-repeat: repeat-x;
+	border: 0px;
+	border-left: 1px solid #d7d6c5;
+	border-right: 1px solid #d7d6c5;
+	height: 22px;
+	width: 114px;
+	background-color: transparent;
+	padding: 0px;
+	font: 11px Arial, Verdana, Sans-serif;
+	color: #969277;
+}
+
+.RadUploadButtonDisabled
+{
+	background-image: url(Img/button.gif);
+	background-repeat: repeat-x;
+	border: 0px;
+	border-left: 1px solid #d7d6c5;
+	border-right: 1px solid #d7d6c5;
+	height: 22px;
+	width: 114px;
+	background-color: transparent;
+	font: 11px Arial, Verdana, Sans-serif;
+	color: #969277;
+	filter:alpha(opacity=30);
+	-moz-opacity:0.5;
+	opacity: 0.5;
+}
+
+.RadUploadFileSelector
+{
+	/* checkbox */
+}
+
+.RadUploadInputField
+{
+	width: 150px;
+	border: solid 1px #d7c7b7;
+	border-right: 0px;
+	vertical-align: top;
+	height: 18px;
+}
+
+input.RealFileInput
+{
+	position: relative;
+	-moz-opacity: 0;
+	filter: alpha(opacity: 0);
+	opacity: 0;
+	z-index: 2;
+}
+
+.RadUploadSelectButton
+{
+	border: 0px;
+	border-right: 1px solid #d7d6c5;
+	background-color: Transparent;
+	background-image: url(Img/button.gif);
+	font: 11px Arial, Verdana, Sans-serif;
+	color: #969277;
+	height: 22px;
+	width: 57px;
+}
+
+.RadUploadRemoveButton
+{
+	border: 0px;
+	border-right: 1px solid #d7d6c5;
+	border-left: 1px solid #d7d6c5;
+	background-color: Transparent;
+	background-image: url(Img/button.gif);
+	font: 11px Arial, Verdana, Sans-serif;
+	color: #969277;
+	height: 22px;
+	width: 57px;
+}
+
+.RadUploadClearButton
+{
+	border: 0px;
+	border-right: 1px solid #d7d6c5;
+	border-left: 1px solid #d7d6c5;
+	background-color: Transparent;
+	background-image: url(Img/button.gif);
+	font: 11px Arial, Verdana, Sans-serif;
+	color: #969277;
+	height: 22px;
+	width: 66px;
+	float: right;
+}
+
+input.NoSkinnedFileUnput
+{
+	border: solid 1px #1f1f1f;
+}
+

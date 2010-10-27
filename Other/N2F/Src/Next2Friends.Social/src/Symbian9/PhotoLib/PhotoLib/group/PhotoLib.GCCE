@@ -1,0 +1,630 @@
+
+include \Symbian\9.2\S60_3rd_FP1\epoc32\tools\compilation_config\\GCCE.mk
+
+
+# CWD \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\group\
+# MMPFile \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\group\PhotoLib.MMP
+# Target PhotoLib.lib
+# TargetType LIB
+# BasicTargetType LIB
+# MakefileType GNU
+
+ERASE = @erase 2>>nul
+
+ifeq "$(UNIX_SLASH_FOR_CC_ABS_PATHS)" "1"
+define absolutePaths
+$(subst \,/,$1)
+endef
+else
+define absolutePaths
+$1
+endef
+endif
+
+# EPOC DEFINITIONS
+
+EPOCBLD = \Symbian\9.2\S60_3rd_FP1\EPOC32\BUILD\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\group\PhotoLib\GCCE
+EPOCTRG = \Symbian\9.2\S60_3rd_FP1\EPOC32\RELEASE\ARMV5
+EPOCLIB = \Symbian\9.2\S60_3rd_FP1\EPOC32\RELEASE\ARMV5
+EPOCLINK = \Symbian\9.2\S60_3rd_FP1\EPOC32\RELEASE\ARMV5
+EPOCSTATLINK = \Symbian\9.2\S60_3rd_FP1\EPOC32\RELEASE\ARMV5
+EPOCASSPLINK = \Symbian\9.2\S60_3rd_FP1\EPOC32\RELEASE\MARM
+EPOCDATA = \Symbian\9.2\S60_3rd_FP1\EPOC32\DATA
+EPOCINC = \Symbian\9.2\S60_3rd_FP1\EPOC32\INCLUDE
+TRGDIR = 
+DATADIR = Z\System\Data
+
+EPOCBLDUREL = $(EPOCBLD)\UREL
+EPOCTRGUREL = $(EPOCTRG)\UREL
+EPOCLIBUREL = $(EPOCLIB)\UREL
+EPOCLINKUREL = $(EPOCLINK)\UREL
+EPOCSTATLINKUREL = $(EPOCSTATLINK)\UREL
+EPOCASSPLINKUREL = $(EPOCASSPLINK)\UREL
+
+EPOCBLDUDEB = $(EPOCBLD)\UDEB
+EPOCTRGUDEB = $(EPOCTRG)\UDEB
+EPOCLIBUDEB = $(EPOCLIB)\UREL
+EPOCLINKUDEB = $(EPOCLINK)\UREL
+EPOCSTATLINKUDEB = $(EPOCSTATLINK)\UDEB
+EPOCASSPLINKUDEB = $(EPOCASSPLINK)\UREL
+
+# EPOC PSEUDOTARGETS
+
+UREL : MAKEWORKUREL RESOURCEUREL
+
+UDEB : MAKEWORKUDEB RESOURCEUDEB
+
+ALL : UREL UDEB
+
+CLEAN CLEANALL : CLEANBUILD CLEANRELEASE CLEANLIBRARY
+
+
+
+WHAT WHATALL : WHATUREL WHATUDEB
+
+RESOURCE RESOURCEALL : RESOURCEUREL RESOURCEUDEB
+
+CLEANBUILD CLEANBUILDALL : CLEANBUILDUREL CLEANBUILDUDEB
+
+CLEANRELEASE CLEANRELEASEALL : CLEANRELEASEUREL CLEANRELEASEUDEB
+
+MAKEWORK MAKEWORKALL : MAKEWORKUREL MAKEWORKUDEB
+
+LISTING LISTINGALL : LISTINGUREL LISTINGUDEB
+
+MAKEWORK : MAKEWORKLIBRARY
+
+RESOURCEUREL RESOURCEUDEB : GENERIC_RESOURCE
+
+
+# must set both PATH and Path to make it work correctly
+Path:=D:\Symbian\9.2\S60_3rd_FP1\EPOC32\gcc\bin;$(Path)
+PATH:=$(Path)
+
+INCDIR =  $(INCLUDE_OPTION) \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\framework  $(INCLUDE_OPTION) \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\inc $(INCLUDE_OPTION) \Symbian\9.2\S60_3rd_FP1\EPOC32\include $(INCLUDE_OPTION) \Symbian\9.2\S60_3rd_FP1\epoc32\include\variant $(INCLUDE_OPTION) "D:\Program Files\CSL Arm Toolchain\bin\..\lib\gcc\arm-none-symbianelf\3.4.3\include"
+
+OTHEROPTIONS= $(THUMB_INSTRUCTION_SET)  $(SOFTVFPMODE_OPTION)  $(COMPILER_THUMB_DEFINES)  $(COMPILER_INTERWORK_DEFINES) 
+CCFLAGS += $(OTHEROPTIONS)
+CCDEFS = $(COMPILER_DEFINES)  -D__SYMBIAN32__ -D__SERIES60_31__ -D__SERIES60_3X__ -D__GCCE__ -D__EPOC32__ -D__MARM__ -D__EABI__ -D__MARM_ARMV5__ -D__SUPPORT_CPP_EXCEPTIONS__ $(PLATFORM_DEFINES)  -D__PRODUCT_INCLUDE__=\"/Symbian/9.2/S60_3rd_FP1/epoc32/include/variant/Symbian_OS_v9.2.hrh\" $(USERDEFS)
+
+CCUREL = $(CC)  $(SYMBIAN_UREL_CCFLAGS)  $(REL_OPTIMISATION) $(RUNTIME_SYMBOL_VISIBILITY_OPTION) $(CCFLAGS)  -DNDEBUG -D_UNICODE $(CCDEFS)
+CCUDEB = $(CC)  $(SYMBIAN_UDEB_CCFLAGS)  $(DEBUG_OPTIMISATION) $(RUNTIME_SYMBOL_VISIBILITY_OPTION) $(CCFLAGS)  -D_DEBUG -D_UNICODE $(CCDEFS)
+
+
+UREL : \
+	$(EPOCTRGUREL)\PhotoLib.lib
+
+UDEB : \
+	$(EPOCTRGUDEB)\PhotoLib.lib
+
+
+RESOURCEUREL : MAKEWORKUREL
+RESOURCEUDEB : MAKEWORKUDEB
+
+LIBRARY : MAKEWORKLIBRARY UREL UDEB
+
+ : 
+	perl -S emkdir.pl $@
+
+
+FREEZE : 
+
+CLEANLIBRARY :
+
+
+GENERIC_RESOURCE : GENERIC_MAKEWORK
+
+# REAL TARGET - BUILD VARIANT UREL
+
+WHATUREL : WHATGENERIC
+
+CLEANUREL : CLEANBUILDUREL CLEANRELEASEUREL
+
+CLEANBUILDUREL : 
+	@perl -S ermdir.pl "$(EPOCBLDUREL)"
+
+CLEANRELEASEUREL : CLEANGENERIC
+
+
+UREL_RELEASEABLES1= \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\RELEASE\ARMV5\UREL\PhotoLib.lib
+
+WHATUREL:
+	@echo $(UREL_RELEASEABLES1)
+
+CLEANRELEASEUREL:
+	-$(ERASE) $(UREL_RELEASEABLES1)
+
+LISTINGUREL : MAKEWORKUREL \
+	LISTINGURELVList \
+	LISTINGURELPhotoLibrarySis9 \
+	LISTINGURELPhotoLibrary \
+	LISTINGURELLibPhotoItem \
+	LISTINGURELPhotoLib
+
+LIBSUREL= \
+	$(EPOCLIB)\LIB\euser.dso \
+	$(EPOCLIB)\LIB\estor.dso \
+	$(STATIC_LIBS_LIST)
+
+VTBLEXPORTSUREL=
+
+OBJECTSUREL= \
+	$(EPOCBLDUREL)\VList.o \
+	$(EPOCBLDUREL)\PhotoLibrarySis9.o \
+	$(EPOCBLDUREL)\PhotoLibrary.o \
+	$(EPOCBLDUREL)\LibPhotoItem.o \
+	$(EPOCBLDUREL)\PhotoLib.o
+
+$(EPOCTRGUREL)\PhotoLib.lib : $(OBJECTSUREL)
+	$(AR)  $(ARCHIVER_CREATE_OPTION)  $(EPOCSTATLINKUREL)\PhotoLib.lib $(OBJECTSUREL)
+
+
+# REAL TARGET - BUILD VARIANT UDEB
+
+WHATUDEB : WHATGENERIC
+
+CLEANUDEB : CLEANBUILDUDEB CLEANRELEASEUDEB
+
+CLEANBUILDUDEB : 
+	@perl -S ermdir.pl "$(EPOCBLDUDEB)"
+
+CLEANRELEASEUDEB : CLEANGENERIC
+
+
+UDEB_RELEASEABLES1= \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\RELEASE\ARMV5\UDEB\PhotoLib.lib
+
+WHATUDEB:
+	@echo $(UDEB_RELEASEABLES1)
+
+CLEANRELEASEUDEB:
+	-$(ERASE) $(UDEB_RELEASEABLES1)
+
+LISTINGUDEB : MAKEWORKUDEB \
+	LISTINGUDEBVList \
+	LISTINGUDEBPhotoLibrarySis9 \
+	LISTINGUDEBPhotoLibrary \
+	LISTINGUDEBLibPhotoItem \
+	LISTINGUDEBPhotoLib
+
+LIBSUDEB= \
+	$(EPOCLIB)\LIB\euser.dso \
+	$(EPOCLIB)\LIB\estor.dso \
+	$(STATIC_LIBS_LIST)
+
+VTBLEXPORTSUDEB=
+
+OBJECTSUDEB= \
+	$(EPOCBLDUDEB)\VList.o \
+	$(EPOCBLDUDEB)\PhotoLibrarySis9.o \
+	$(EPOCBLDUDEB)\PhotoLibrary.o \
+	$(EPOCBLDUDEB)\LibPhotoItem.o \
+	$(EPOCBLDUDEB)\PhotoLib.o
+
+$(EPOCTRGUDEB)\PhotoLib.lib : $(OBJECTSUDEB)
+	$(AR)  $(ARCHIVER_CREATE_OPTION)  $(EPOCSTATLINKUDEB)\PhotoLib.lib $(OBJECTSUDEB)
+
+
+# SOURCES
+
+# Source VList.cpp
+
+$(EPOCBLDUREL)\VList.lis $(EPOCBLDUREL)\VList.o \
+$(EPOCBLDUDEB)\VList.lis $(EPOCBLDUDEB)\VList.o \
+: \
+	\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\inc\VList.h \
+	\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\framework\Allocator.h \
+	\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\framework\BaseTypes.h \
+	\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\framework\Config.h \
+	\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\framework\Utils.h \
+	$(PREFIXFILE) \
+	\Symbian\9.2\S60_3rd_FP1\epoc32\include\symcpp.h \
+	\Symbian\9.2\S60_3rd_FP1\epoc32\include\variant\Symbian_OS_v9.2.hrh
+
+$(EPOCBLDUREL)\VList.o : \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\vlist.cpp
+	@echo vlist.cpp
+	$(CCUREL)   $(CPP_LANG_OPTION) -include /Symbian/9.2/S60_3rd_FP1/EPOC32/INCLUDE/GCCE/GCCE.h  $(INCLUDE_OPTION) $(call absolutePaths,\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src $(INCDIR) $(OUTPUT_OPTION) $@ \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\vlist.cpp)
+
+LISTINGURELVList : $(EPOCBLDUREL)\VList.lis
+	perl -S ecopyfile.pl $? \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\VList.ARMV5.lst
+
+$(EPOCBLDUREL)\VList.lis : \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\vlist.cpp
+	$(CCUREL)  $(CPP_LANG_OPTION) -include /Symbian/9.2/S60_3rd_FP1/EPOC32/INCLUDE/GCCE/GCCE.h  $(ASSEMBLER_LISTING_OPTION) $(INCLUDE_OPTION) $(call absolutePaths,\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src $(INCDIR) $(OUTPUT_OPTION) $@ \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\vlist.cpp) 
+
+$(EPOCBLDUDEB)\VList.o : \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\vlist.cpp
+	@echo vlist.cpp
+	$(CCUDEB)   $(CPP_LANG_OPTION) -include /Symbian/9.2/S60_3rd_FP1/EPOC32/INCLUDE/GCCE/GCCE.h  $(INCLUDE_OPTION) $(call absolutePaths,\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src $(INCDIR) $(OUTPUT_OPTION) $@ \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\vlist.cpp)
+
+LISTINGUDEBVList : $(EPOCBLDUDEB)\VList.lis
+	perl -S ecopyfile.pl $? \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\VList.ARMV5.lst
+
+$(EPOCBLDUDEB)\VList.lis : \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\vlist.cpp
+	$(CCUDEB)  $(CPP_LANG_OPTION) -include /Symbian/9.2/S60_3rd_FP1/EPOC32/INCLUDE/GCCE/GCCE.h  $(ASSEMBLER_LISTING_OPTION) $(INCLUDE_OPTION) $(call absolutePaths,\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src $(INCDIR) $(OUTPUT_OPTION) $@ \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\vlist.cpp) 
+
+
+
+# Source PhotoLibrarySis9.cpp
+
+$(EPOCBLDUREL)\PhotoLibrarySis9.lis $(EPOCBLDUREL)\PhotoLibrarySis9.o \
+$(EPOCBLDUDEB)\PhotoLibrarySis9.lis $(EPOCBLDUDEB)\PhotoLibrarySis9.o \
+: \
+	\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\inc\LibPhotoItem.h \
+	\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\inc\PhotoLibrary.h \
+	\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\inc\PhotoLibrarySis9.h \
+	\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\inc\VList.h \
+	\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\framework\Allocator.h \
+	\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\framework\Application.h \
+	\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\framework\BaseTypes.h \
+	\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\framework\Config.h \
+	\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\framework\FileSystem.h \
+	\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\framework\IApplicationCore.h \
+	\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\framework\Utils.h \
+	$(PREFIXFILE) \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\AknControl.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\AknsConstants.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\AknsConstants.hrh \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\AknsItemData.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\AknsItemID.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\AknsItemID.inl \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\AknsRlEffect.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\AknsRlEffectContext.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\AknsRlParameter.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\Ecom\EComErrorCodes.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\Ecom\EComResolverParams.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\Ecom\EComResolverParams.inl \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\Ecom\Ecom.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\Ecom\ImplementationInformation.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\Ecom\ImplementationInformation.inl \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\FbsMessage.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\LineBreak.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\PathInfo.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\akncontrol.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\akndef.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\akndef.hrh \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\aknenv.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\aknfontcategory.hrh \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\aknfontidoffsets.hrh \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\aknintermediate.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\aknlayout.lag \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\aknlayout2id.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\aknscbut.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\aknscrlb.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\aknutils.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\apacmdln.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\apadef.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\apaflrec.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\apaid.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\apmstd.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\apparc.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\avkon.hrh \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\avkon.rsg \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\babitflags.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\badesca.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\baerrhan.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\bamdesca.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\barsc.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\basched.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\bidi.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\biditext.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\bitbase.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\bitdev.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\bitdev.inl \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\bitmap.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\bitstd.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\coeaui.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\coecntrl.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\coecobs.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\coecoloruse.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\coecontrolarray.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\coedef.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\coefont.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\coehelp.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\coeinput.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\coemain.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\coemain.inl \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\coemop.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\coetextdrawer.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\coeview.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\d32locd.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\d32locd.inl \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\e32base.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\e32base.inl \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\e32capability.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\e32cmn.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\e32cmn.inl \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\e32const.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\e32debug.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\e32def.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\e32des16.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\e32des8.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\e32err.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\e32event.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\e32hal.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\e32keys.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\e32ktran.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\e32ldr.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\e32lmsg.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\e32notif.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\e32std.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\e32std.inl \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\e32svr.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\eikalign.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\eikamnt.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\eikapp.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\eikappui.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\eikaufty.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\eikbctrl.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\eikbtgpc.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\eikbtgrp.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\eikcba.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\eikcmobs.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\eikcolor.hrh \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\eikctgrp.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\eikdef.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\eikdgfty.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\eikenv.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\eikfctry.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\eikimage.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\eiklbm.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\eiklibry.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\eikmenub.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\eikmenup.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\eikmobs.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\eikon.hrh \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\eiksbfrm.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\eiksbobs.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\eikscrlb.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\eiktxlbm.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\eikvcurs.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\f32file.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\f32file.inl \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\fbs.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\fldbase.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\fldbltin.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\fldinfo.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\fldset.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\fntstore.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\frmlaydt.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\frmparam.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\frmtlay.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\frmvis.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\gdi.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\gdi.inl \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\graphicsaccelerator.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\gulalign.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\gulbordr.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\gulcolor.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\guldef.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\gulftflg.hrh \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\gulutil.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\lafmain.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\lafpublc.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\lafpublc.hrh \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\openfont.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\partitions.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\s32buf.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\s32buf.inl \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\s32page.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\s32page.inl \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\s32share.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\s32share.inl \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\s32std.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\s32std.inl \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\s32stor.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\s32stor.inl \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\s32strm.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\s32strm.inl \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\tagma.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\txtetext.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\txtetext.inl \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\txtfmlyr.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\txtfmlyr.inl \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\txtfmstm.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\txtfrmat.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\txtfrmat.inl \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\txtstyle.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\txtstyle.inl \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\uikon.hrh \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\vwsdef.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\w32std.h \
+	\Symbian\9.2\S60_3rd_FP1\epoc32\include\symcpp.h \
+	\Symbian\9.2\S60_3rd_FP1\epoc32\include\variant\Symbian_OS_v9.2.hrh
+
+$(EPOCBLDUREL)\PhotoLibrarySis9.o : \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\photolibrarysis9.cpp
+	@echo photolibrarysis9.cpp
+	$(CCUREL)   $(CPP_LANG_OPTION) -include /Symbian/9.2/S60_3rd_FP1/EPOC32/INCLUDE/GCCE/GCCE.h  $(INCLUDE_OPTION) $(call absolutePaths,\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src $(INCDIR) $(OUTPUT_OPTION) $@ \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\photolibrarysis9.cpp)
+
+LISTINGURELPhotoLibrarySis9 : $(EPOCBLDUREL)\PhotoLibrarySis9.lis
+	perl -S ecopyfile.pl $? \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\PhotoLibrarySis9.ARMV5.lst
+
+$(EPOCBLDUREL)\PhotoLibrarySis9.lis : \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\photolibrarysis9.cpp
+	$(CCUREL)  $(CPP_LANG_OPTION) -include /Symbian/9.2/S60_3rd_FP1/EPOC32/INCLUDE/GCCE/GCCE.h  $(ASSEMBLER_LISTING_OPTION) $(INCLUDE_OPTION) $(call absolutePaths,\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src $(INCDIR) $(OUTPUT_OPTION) $@ \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\photolibrarysis9.cpp) 
+
+$(EPOCBLDUDEB)\PhotoLibrarySis9.o : \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\photolibrarysis9.cpp
+	@echo photolibrarysis9.cpp
+	$(CCUDEB)   $(CPP_LANG_OPTION) -include /Symbian/9.2/S60_3rd_FP1/EPOC32/INCLUDE/GCCE/GCCE.h  $(INCLUDE_OPTION) $(call absolutePaths,\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src $(INCDIR) $(OUTPUT_OPTION) $@ \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\photolibrarysis9.cpp)
+
+LISTINGUDEBPhotoLibrarySis9 : $(EPOCBLDUDEB)\PhotoLibrarySis9.lis
+	perl -S ecopyfile.pl $? \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\PhotoLibrarySis9.ARMV5.lst
+
+$(EPOCBLDUDEB)\PhotoLibrarySis9.lis : \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\photolibrarysis9.cpp
+	$(CCUDEB)  $(CPP_LANG_OPTION) -include /Symbian/9.2/S60_3rd_FP1/EPOC32/INCLUDE/GCCE/GCCE.h  $(ASSEMBLER_LISTING_OPTION) $(INCLUDE_OPTION) $(call absolutePaths,\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src $(INCDIR) $(OUTPUT_OPTION) $@ \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\photolibrarysis9.cpp) 
+
+
+
+# Source PhotoLibrary.cpp
+
+$(EPOCBLDUREL)\PhotoLibrary.lis $(EPOCBLDUREL)\PhotoLibrary.o \
+$(EPOCBLDUDEB)\PhotoLibrary.lis $(EPOCBLDUDEB)\PhotoLibrary.o \
+: \
+	\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\inc\PhotoLibrary.h \
+	\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\inc\PhotoLibrarySis9.h \
+	\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\inc\VList.h \
+	\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\framework\Allocator.h \
+	\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\framework\BaseTypes.h \
+	\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\framework\Config.h \
+	\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\framework\FileSystem.h \
+	\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\framework\Utils.h \
+	$(PREFIXFILE) \
+	\Symbian\9.2\S60_3rd_FP1\epoc32\include\symcpp.h \
+	\Symbian\9.2\S60_3rd_FP1\epoc32\include\variant\Symbian_OS_v9.2.hrh
+
+$(EPOCBLDUREL)\PhotoLibrary.o : \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\photolibrary.cpp
+	@echo photolibrary.cpp
+	$(CCUREL)   $(CPP_LANG_OPTION) -include /Symbian/9.2/S60_3rd_FP1/EPOC32/INCLUDE/GCCE/GCCE.h  $(INCLUDE_OPTION) $(call absolutePaths,\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src $(INCDIR) $(OUTPUT_OPTION) $@ \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\photolibrary.cpp)
+
+LISTINGURELPhotoLibrary : $(EPOCBLDUREL)\PhotoLibrary.lis
+	perl -S ecopyfile.pl $? \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\PhotoLibrary.ARMV5.lst
+
+$(EPOCBLDUREL)\PhotoLibrary.lis : \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\photolibrary.cpp
+	$(CCUREL)  $(CPP_LANG_OPTION) -include /Symbian/9.2/S60_3rd_FP1/EPOC32/INCLUDE/GCCE/GCCE.h  $(ASSEMBLER_LISTING_OPTION) $(INCLUDE_OPTION) $(call absolutePaths,\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src $(INCDIR) $(OUTPUT_OPTION) $@ \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\photolibrary.cpp) 
+
+$(EPOCBLDUDEB)\PhotoLibrary.o : \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\photolibrary.cpp
+	@echo photolibrary.cpp
+	$(CCUDEB)   $(CPP_LANG_OPTION) -include /Symbian/9.2/S60_3rd_FP1/EPOC32/INCLUDE/GCCE/GCCE.h  $(INCLUDE_OPTION) $(call absolutePaths,\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src $(INCDIR) $(OUTPUT_OPTION) $@ \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\photolibrary.cpp)
+
+LISTINGUDEBPhotoLibrary : $(EPOCBLDUDEB)\PhotoLibrary.lis
+	perl -S ecopyfile.pl $? \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\PhotoLibrary.ARMV5.lst
+
+$(EPOCBLDUDEB)\PhotoLibrary.lis : \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\photolibrary.cpp
+	$(CCUDEB)  $(CPP_LANG_OPTION) -include /Symbian/9.2/S60_3rd_FP1/EPOC32/INCLUDE/GCCE/GCCE.h  $(ASSEMBLER_LISTING_OPTION) $(INCLUDE_OPTION) $(call absolutePaths,\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src $(INCDIR) $(OUTPUT_OPTION) $@ \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\photolibrary.cpp) 
+
+
+
+# Source LibPhotoItem.cpp
+
+$(EPOCBLDUREL)\LibPhotoItem.lis $(EPOCBLDUREL)\LibPhotoItem.o \
+$(EPOCBLDUDEB)\LibPhotoItem.lis $(EPOCBLDUDEB)\LibPhotoItem.o \
+: \
+	\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\inc\LibPhotoItem.h \
+	\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\inc\PhotoLibrary.h \
+	\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\framework\BaseTypes.h \
+	\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\framework\Config.h \
+	\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\framework\FileSystem.h \
+	\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\framework\Utils.h \
+	$(PREFIXFILE) \
+	\Symbian\9.2\S60_3rd_FP1\epoc32\include\symcpp.h \
+	\Symbian\9.2\S60_3rd_FP1\epoc32\include\variant\Symbian_OS_v9.2.hrh
+
+$(EPOCBLDUREL)\LibPhotoItem.o : \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\libphotoitem.cpp
+	@echo libphotoitem.cpp
+	$(CCUREL)   $(CPP_LANG_OPTION) -include /Symbian/9.2/S60_3rd_FP1/EPOC32/INCLUDE/GCCE/GCCE.h  $(INCLUDE_OPTION) $(call absolutePaths,\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src $(INCDIR) $(OUTPUT_OPTION) $@ \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\libphotoitem.cpp)
+
+LISTINGURELLibPhotoItem : $(EPOCBLDUREL)\LibPhotoItem.lis
+	perl -S ecopyfile.pl $? \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\LibPhotoItem.ARMV5.lst
+
+$(EPOCBLDUREL)\LibPhotoItem.lis : \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\libphotoitem.cpp
+	$(CCUREL)  $(CPP_LANG_OPTION) -include /Symbian/9.2/S60_3rd_FP1/EPOC32/INCLUDE/GCCE/GCCE.h  $(ASSEMBLER_LISTING_OPTION) $(INCLUDE_OPTION) $(call absolutePaths,\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src $(INCDIR) $(OUTPUT_OPTION) $@ \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\libphotoitem.cpp) 
+
+$(EPOCBLDUDEB)\LibPhotoItem.o : \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\libphotoitem.cpp
+	@echo libphotoitem.cpp
+	$(CCUDEB)   $(CPP_LANG_OPTION) -include /Symbian/9.2/S60_3rd_FP1/EPOC32/INCLUDE/GCCE/GCCE.h  $(INCLUDE_OPTION) $(call absolutePaths,\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src $(INCDIR) $(OUTPUT_OPTION) $@ \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\libphotoitem.cpp)
+
+LISTINGUDEBLibPhotoItem : $(EPOCBLDUDEB)\LibPhotoItem.lis
+	perl -S ecopyfile.pl $? \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\LibPhotoItem.ARMV5.lst
+
+$(EPOCBLDUDEB)\LibPhotoItem.lis : \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\libphotoitem.cpp
+	$(CCUDEB)  $(CPP_LANG_OPTION) -include /Symbian/9.2/S60_3rd_FP1/EPOC32/INCLUDE/GCCE/GCCE.h  $(ASSEMBLER_LISTING_OPTION) $(INCLUDE_OPTION) $(call absolutePaths,\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src $(INCDIR) $(OUTPUT_OPTION) $@ \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\libphotoitem.cpp) 
+
+
+
+# Source PhotoLib.cpp
+
+$(EPOCBLDUREL)\PhotoLib.lis $(EPOCBLDUREL)\PhotoLib.o \
+$(EPOCBLDUDEB)\PhotoLib.lis $(EPOCBLDUDEB)\PhotoLib.o \
+: \
+	\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\inc\PhotoLib.h \
+	\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\inc\PhotoLib.pan \
+	$(PREFIXFILE) \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\e32base.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\e32base.inl \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\e32capability.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\e32cmn.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\e32cmn.inl \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\e32const.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\e32def.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\e32des16.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\e32des8.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\e32err.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\e32std.h \
+	\Symbian\9.2\S60_3rd_FP1\EPOC32\include\e32std.inl \
+	\Symbian\9.2\S60_3rd_FP1\epoc32\include\symcpp.h \
+	\Symbian\9.2\S60_3rd_FP1\epoc32\include\variant\Symbian_OS_v9.2.hrh
+
+$(EPOCBLDUREL)\PhotoLib.o : \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\photolib.cpp
+	@echo photolib.cpp
+	$(CCUREL)   $(CPP_LANG_OPTION) -include /Symbian/9.2/S60_3rd_FP1/EPOC32/INCLUDE/GCCE/GCCE.h  $(INCLUDE_OPTION) $(call absolutePaths,\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src $(INCDIR) $(OUTPUT_OPTION) $@ \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\photolib.cpp)
+
+LISTINGURELPhotoLib : $(EPOCBLDUREL)\PhotoLib.lis
+	perl -S ecopyfile.pl $? \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\PhotoLib.ARMV5.lst
+
+$(EPOCBLDUREL)\PhotoLib.lis : \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\photolib.cpp
+	$(CCUREL)  $(CPP_LANG_OPTION) -include /Symbian/9.2/S60_3rd_FP1/EPOC32/INCLUDE/GCCE/GCCE.h  $(ASSEMBLER_LISTING_OPTION) $(INCLUDE_OPTION) $(call absolutePaths,\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src $(INCDIR) $(OUTPUT_OPTION) $@ \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\photolib.cpp) 
+
+$(EPOCBLDUDEB)\PhotoLib.o : \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\photolib.cpp
+	@echo photolib.cpp
+	$(CCUDEB)   $(CPP_LANG_OPTION) -include /Symbian/9.2/S60_3rd_FP1/EPOC32/INCLUDE/GCCE/GCCE.h  $(INCLUDE_OPTION) $(call absolutePaths,\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src $(INCDIR) $(OUTPUT_OPTION) $@ \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\photolib.cpp)
+
+LISTINGUDEBPhotoLib : $(EPOCBLDUDEB)\PhotoLib.lis
+	perl -S ecopyfile.pl $? \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\PhotoLib.ARMV5.lst
+
+$(EPOCBLDUDEB)\PhotoLib.lis : \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\photolib.cpp
+	$(CCUDEB)  $(CPP_LANG_OPTION) -include /Symbian/9.2/S60_3rd_FP1/EPOC32/INCLUDE/GCCE/GCCE.h  $(ASSEMBLER_LISTING_OPTION) $(INCLUDE_OPTION) $(call absolutePaths,\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src $(INCDIR) $(OUTPUT_OPTION) $@ \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\photolib.cpp) 
+
+
+
+ROMFILE:
+
+
+WHATGENERIC CLEANGENERIC :
+	@rem none
+
+# Rules to create all necessary directories
+
+GENERIC_MAKEWORK : \
+	\symbian\9.2\s60_3rd_fp1\epoc32\build\projects\next2friends\dev\brewwmsys\src\symbian9\photolib\photolib\group\photolib\gcce
+MAKEWORKLIBRARY : \
+	\symbian\9.2\s60_3rd_fp1\epoc32\release\armv5\lib
+MAKEWORKUDEB : \
+	\symbian\9.2\s60_3rd_fp1\epoc32\build\projects\next2friends\dev\brewwmsys\src\symbian9\photolib\photolib\group\photolib\gcce\udeb \
+	\symbian\9.2\s60_3rd_fp1\epoc32\release\armv5\udeb
+MAKEWORKUREL : \
+	\symbian\9.2\s60_3rd_fp1\epoc32\build\projects\next2friends\dev\brewwmsys\src\symbian9\photolib\photolib\group\photolib\gcce\urel \
+	\symbian\9.2\s60_3rd_fp1\epoc32\release\armv5\urel
+
+\symbian\9.2\s60_3rd_fp1\epoc32\build\projects\next2friends\dev\brewwmsys\src\symbian9\photolib\photolib\group\photolib\gcce \
+\symbian\9.2\s60_3rd_fp1\epoc32\build\projects\next2friends\dev\brewwmsys\src\symbian9\photolib\photolib\group\photolib\gcce\udeb \
+\symbian\9.2\s60_3rd_fp1\epoc32\build\projects\next2friends\dev\brewwmsys\src\symbian9\photolib\photolib\group\photolib\gcce\urel \
+\symbian\9.2\s60_3rd_fp1\epoc32\release\armv5\lib \
+\symbian\9.2\s60_3rd_fp1\epoc32\release\armv5\udeb \
+\symbian\9.2\s60_3rd_fp1\epoc32\release\armv5\urel \
+:
+	perl -S emkdir.pl $@
+
+CHECKSOURCE :
+	@echo \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\group\PhotoLib.MMP:18: Incorrect Case 'VList.cpp'.
+	@echo \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\group\PhotoLib.MMP:22: Incorrect Case 'PhotoLib.cpp'.
+	@echo \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\group\PhotoLib.MMP:19: Incorrect Case 'PhotoLibrarySis9.cpp'.
+	@echo \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\group\PhotoLib.MMP:10: Incorrect Case 'PhotoLib.lib'.
+	@perl -S checksource.pl --preprocess -- -D GCCE=_____GCCE -D EPOC32=_____EPOC32 -D MARM=_____MARM -D EABI=_____EABI -D GENERIC_MARM=_____GENERIC_MARM -D MARM_ARMV5=_____MARM_ARMV5 -include D:\Symbian\9.2\S60_3rd_FP1\epoc32\include\variant\Symbian_OS_v9.2.hrh -I D:\Symbian\9.2\S60_3rd_FP1\epoc32\include -I D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\group -I D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\group D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\group\PhotoLib.MMP
+	@echo \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\group\PhotoLib.MMP:14: Incorrect Path Delimiter '..\..\..\framework'.
+	@echo \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\group\PhotoLib.MMP:20: Incorrect Case 'PhotoLibrary.cpp'.
+	@echo \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\group\PhotoLib.MMP:21: Incorrect Case 'LibPhotoItem.cpp'.
+	@echo \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\group\PhotoLib.MMP:15: Incorrect Path Delimiter '..\inc'.
+	@echo \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\group\PhotoLib.MMP:17: Incorrect Path Delimiter '..\src'.
+	@echo \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\group\PhotoLib.MMP:16: Incorrect Path Delimiter '\epoc32\include'.
+
+CHECKSOURCEUREL :
+	@perl -S checksource.pl --preprocess -- -D__SYMBIAN32__ -D__SERIES60_31__ -D__SERIES60_3X__ -D__GCCE__ -D__EPOC32__ -D__MARM__ -D__EABI__ -D__MARM_ARMV5__ -DNDEBUG -D_UNICODE -D__SUPPORT_CPP_EXCEPTIONS__ -include D:\Symbian\9.2\S60_3rd_FP1\epoc32\include\variant\Symbian_OS_v9.2.hrh -include D:\Symbian\9.2\S60_3rd_FP1\epoc32\include\GCCE\GCCE.h -I D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src -I D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\framework -I D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\inc -I D:\Symbian\9.2\S60_3rd_FP1\EPOC32\include -I "\"D:\Program Files\CSL Arm Toolchain\bin\..\lib\gcc\arm-none-symbianelf\3.4.3\include\"" D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\PhotoLibrary.cpp
+	@perl -S checksource.pl --preprocess -- -D__SYMBIAN32__ -D__SERIES60_31__ -D__SERIES60_3X__ -D__GCCE__ -D__EPOC32__ -D__MARM__ -D__EABI__ -D__MARM_ARMV5__ -DNDEBUG -D_UNICODE -D__SUPPORT_CPP_EXCEPTIONS__ -include D:\Symbian\9.2\S60_3rd_FP1\epoc32\include\variant\Symbian_OS_v9.2.hrh -include D:\Symbian\9.2\S60_3rd_FP1\epoc32\include\GCCE\GCCE.h -I D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src -I D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\framework -I D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\inc -I D:\Symbian\9.2\S60_3rd_FP1\EPOC32\include -I "\"D:\Program Files\CSL Arm Toolchain\bin\..\lib\gcc\arm-none-symbianelf\3.4.3\include\"" D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\VList.cpp
+	@perl -S checksource.pl --preprocess -- -D__SYMBIAN32__ -D__SERIES60_31__ -D__SERIES60_3X__ -D__GCCE__ -D__EPOC32__ -D__MARM__ -D__EABI__ -D__MARM_ARMV5__ -DNDEBUG -D_UNICODE -D__SUPPORT_CPP_EXCEPTIONS__ -include D:\Symbian\9.2\S60_3rd_FP1\epoc32\include\variant\Symbian_OS_v9.2.hrh -include D:\Symbian\9.2\S60_3rd_FP1\epoc32\include\GCCE\GCCE.h -I D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src -I D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\framework -I D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\inc -I D:\Symbian\9.2\S60_3rd_FP1\EPOC32\include -I "\"D:\Program Files\CSL Arm Toolchain\bin\..\lib\gcc\arm-none-symbianelf\3.4.3\include\"" D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\PhotoLib.cpp
+	@perl -S checksource.pl --preprocess -- -D__SYMBIAN32__ -D__SERIES60_31__ -D__SERIES60_3X__ -D__GCCE__ -D__EPOC32__ -D__MARM__ -D__EABI__ -D__MARM_ARMV5__ -DNDEBUG -D_UNICODE -D__SUPPORT_CPP_EXCEPTIONS__ -include D:\Symbian\9.2\S60_3rd_FP1\epoc32\include\variant\Symbian_OS_v9.2.hrh -include D:\Symbian\9.2\S60_3rd_FP1\epoc32\include\GCCE\GCCE.h -I D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src -I D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\framework -I D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\inc -I D:\Symbian\9.2\S60_3rd_FP1\EPOC32\include -I "\"D:\Program Files\CSL Arm Toolchain\bin\..\lib\gcc\arm-none-symbianelf\3.4.3\include\"" D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\LibPhotoItem.cpp
+	@perl -S checksource.pl --preprocess -- -D__SYMBIAN32__ -D__SERIES60_31__ -D__SERIES60_3X__ -D__GCCE__ -D__EPOC32__ -D__MARM__ -D__EABI__ -D__MARM_ARMV5__ -DNDEBUG -D_UNICODE -D__SUPPORT_CPP_EXCEPTIONS__ -include D:\Symbian\9.2\S60_3rd_FP1\epoc32\include\variant\Symbian_OS_v9.2.hrh -include D:\Symbian\9.2\S60_3rd_FP1\epoc32\include\GCCE\GCCE.h -I D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src -I D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\framework -I D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\inc -I D:\Symbian\9.2\S60_3rd_FP1\EPOC32\include -I "\"D:\Program Files\CSL Arm Toolchain\bin\..\lib\gcc\arm-none-symbianelf\3.4.3\include\"" D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\PhotoLibrarySis9.cpp
+
+CHECKSOURCEUDEB :
+	@perl -S checksource.pl --preprocess -- -D__SYMBIAN32__ -D__SERIES60_31__ -D__SERIES60_3X__ -D__GCCE__ -D__EPOC32__ -D__MARM__ -D__EABI__ -D__MARM_ARMV5__ -D_DEBUG -D_UNICODE -D__SUPPORT_CPP_EXCEPTIONS__ -include D:\Symbian\9.2\S60_3rd_FP1\epoc32\include\variant\Symbian_OS_v9.2.hrh -include D:\Symbian\9.2\S60_3rd_FP1\epoc32\include\GCCE\GCCE.h -I D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src -I D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\framework -I D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\inc -I D:\Symbian\9.2\S60_3rd_FP1\EPOC32\include -I "\"D:\Program Files\CSL Arm Toolchain\bin\..\lib\gcc\arm-none-symbianelf\3.4.3\include\"" D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\PhotoLibrary.cpp
+	@perl -S checksource.pl --preprocess -- -D__SYMBIAN32__ -D__SERIES60_31__ -D__SERIES60_3X__ -D__GCCE__ -D__EPOC32__ -D__MARM__ -D__EABI__ -D__MARM_ARMV5__ -D_DEBUG -D_UNICODE -D__SUPPORT_CPP_EXCEPTIONS__ -include D:\Symbian\9.2\S60_3rd_FP1\epoc32\include\variant\Symbian_OS_v9.2.hrh -include D:\Symbian\9.2\S60_3rd_FP1\epoc32\include\GCCE\GCCE.h -I D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src -I D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\framework -I D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\inc -I D:\Symbian\9.2\S60_3rd_FP1\EPOC32\include -I "\"D:\Program Files\CSL Arm Toolchain\bin\..\lib\gcc\arm-none-symbianelf\3.4.3\include\"" D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\PhotoLibrarySis9.cpp
+	@perl -S checksource.pl --preprocess -- -D__SYMBIAN32__ -D__SERIES60_31__ -D__SERIES60_3X__ -D__GCCE__ -D__EPOC32__ -D__MARM__ -D__EABI__ -D__MARM_ARMV5__ -D_DEBUG -D_UNICODE -D__SUPPORT_CPP_EXCEPTIONS__ -include D:\Symbian\9.2\S60_3rd_FP1\epoc32\include\variant\Symbian_OS_v9.2.hrh -include D:\Symbian\9.2\S60_3rd_FP1\epoc32\include\GCCE\GCCE.h -I D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src -I D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\framework -I D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\inc -I D:\Symbian\9.2\S60_3rd_FP1\EPOC32\include -I "\"D:\Program Files\CSL Arm Toolchain\bin\..\lib\gcc\arm-none-symbianelf\3.4.3\include\"" D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\LibPhotoItem.cpp
+	@perl -S checksource.pl --preprocess -- -D__SYMBIAN32__ -D__SERIES60_31__ -D__SERIES60_3X__ -D__GCCE__ -D__EPOC32__ -D__MARM__ -D__EABI__ -D__MARM_ARMV5__ -D_DEBUG -D_UNICODE -D__SUPPORT_CPP_EXCEPTIONS__ -include D:\Symbian\9.2\S60_3rd_FP1\epoc32\include\variant\Symbian_OS_v9.2.hrh -include D:\Symbian\9.2\S60_3rd_FP1\epoc32\include\GCCE\GCCE.h -I D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src -I D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\framework -I D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\inc -I D:\Symbian\9.2\S60_3rd_FP1\EPOC32\include -I "\"D:\Program Files\CSL Arm Toolchain\bin\..\lib\gcc\arm-none-symbianelf\3.4.3\include\"" D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\PhotoLib.cpp
+	@perl -S checksource.pl --preprocess -- -D__SYMBIAN32__ -D__SERIES60_31__ -D__SERIES60_3X__ -D__GCCE__ -D__EPOC32__ -D__MARM__ -D__EABI__ -D__MARM_ARMV5__ -D_DEBUG -D_UNICODE -D__SUPPORT_CPP_EXCEPTIONS__ -include D:\Symbian\9.2\S60_3rd_FP1\epoc32\include\variant\Symbian_OS_v9.2.hrh -include D:\Symbian\9.2\S60_3rd_FP1\epoc32\include\GCCE\GCCE.h -I D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src -I D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\framework -I D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\inc -I D:\Symbian\9.2\S60_3rd_FP1\EPOC32\include -I "\"D:\Program Files\CSL Arm Toolchain\bin\..\lib\gcc\arm-none-symbianelf\3.4.3\include\"" D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\src\VList.cpp

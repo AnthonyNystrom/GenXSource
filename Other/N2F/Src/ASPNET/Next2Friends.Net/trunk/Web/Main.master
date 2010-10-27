@@ -1,0 +1,233 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Main.master.cs" Inherits="Main" %>
+<%@ Register src="~/chat/ChatCtrl.ascx" tagname="Chat" tagprefix="uc1" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+<%@ Register TagPrefix="N2F"  namespace="Next2Friends.WebControls"%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="MasterHeader" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="/style.css?v=9d" rel="stylesheet" type="text/css" />
+    <link href="/StyleB.css?v=9d" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="http://www.n2fstaticx3.com/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="http://www.n2fstaticx3.com/favicon.ico" type="image/x-icon" />
+    <script type="text/javascript" src="/lib/jquery.js"></script>    
+    <!--[if lte IE 6]>
+        <link rel="stylesheet" type="text/css" href="/ie6fixes.css?v=1" />
+        <script src="/js/ie7.js?v=1" type="text/javascript"></script>
+    <![endif]-->    
+</head>
+<body <%=N2FPageStyle %>>
+<div id="page">
+<!--/header start -->
+        <div id="header">
+            <a href="http://www.next2friends.com">
+                <img src="/images/logo.gif" alt="Next2Friends" id="logo" /></a>
+         <div style="position:absolute;right:0px;top:30px;" id="pSearch">
+         <form id="form1" runat="server">
+           
+			<input id="search" type="text" style="width:200px" value="<%=txtSearch %>" class="form_txt2" />
+			in
+			<select id="category" class="form_txt2" style="width:80px">
+				<option value="video" <%=IsVideoSelected %>>video</option>
+				<option value="people" <%=IsPeopleSelected %>>people</option>
+			</select>
+			<div id="friendoptions" style="display:none;top:55px;z-index:500;">
+               <p>
+					<label>Email</label>
+					<input id="email" style="width:200px" value="<%=txtEmail %>" type="text" class="form_txt2" />
+				</p>
+				<p>
+					<label>Sex</label>
+					<select id="sex" class="form_txt2" style="width:90px">
+						<option value="-1">Any</option>
+						<option value="1" <%=IsMaleSelected %>>Male</option>
+						<option value="0" <%=IsFemaleSelected %>>Female</option>
+					</select>
+				</p>
+				<p>
+					<label>Country</label>
+						<span id="sCountry"></span>
+				
+				</p>
+				<p>
+					<label>City</label>
+					<input id="city" type="text" class="form_txt2" value="<%=txtCity %>" style="width:200px" />
+				</p>
+				<p>
+					<label>Profile keywords</label>
+					<textarea id="profile" cols="25" rows="3" class="form_txt2" style="width:200px"><%=txtProfile %></textarea>
+				</p>
+				<p class="indent"><input id="avatar" type="checkbox" value="yes" <%=AvatarOnly %> /> Avatar photo only</p>
+
+				<div class="arrow"></div>
+			</div>
+			<input id="searchButton" type="button" value="Search" class="form_btn2" />
+			
+		<br/>
+		<a href="javascript:void(0);" style="position:absolute;top:25px;font-size:smaller;display:<%=DisplayAdvancedSearchLink%>;" id="advancedSearch">Advanced search</a>
+		</div>       
+            <ul id="nav">
+				
+                <li><a href="/" <%if (CurrentSection==SiteSection.Home){%>class="current"<%} %>><span>Home</span></a></li>
+                <%if (IsLoggedIn) { %> 
+                <li><a href="/dashboard" <%if (CurrentSection==SiteSection.Dashboard){%>class="current"<%} %>><span>Dashboard</span></a></li>
+                <li><a href="/users/<%=member.NickName %>" <%if (CurrentSection==SiteSection.Profile){%>class="current"<%} %>><span>Profile</span></a></li>
+                <%--<li><a href="/friends" <%if (CurrentSection==SiteSection.Friend){%>class="current"<%} %>><span>Friends</span></a></li>--%>
+              <%--  <%--<li><a href="Inbox.aspx" <%if (CurrentSection==SiteSection.Inbox){%>class="current"<%} %>><span>Inbox (<div style="display:inline" id="spanInboxCount"><%=ASP.global_asax.NewMessageCount%></div>)</span></a></li>--%>
+                <%--<li><a href="Inbox.aspx" <%if (CurrentSection==SiteSection.AskAFriend){%>class="current"<%} %>><span>Chat</span></a></li>--%><%} %>
+                <li><a href="/community" <%if (CurrentSection==SiteSection.Community){%>class="current"<%} %>><span>Community</span></a></li>
+                <li><a href="/video" <%if (CurrentSection==SiteSection.Video){%>class="current"<%} %>><span>Videos</span></a></li>
+                <li id="greenTab"><a href="/features" <%if (CurrentSection==SiteSection.DoMore){%>class="current"<%} %>><span>Download</span></a></li>
+				 
+            </ul>
+            <ul id="header_nav">
+            <%if (IsLoggedIn)
+             { %>
+             
+            <![if !IE | (IE 7)]>
+            <%if (N2FPageURL != "invite")
+              { %>
+			<li>
+				<a  href="javascript:chatLogin();void(0);" id="chatInt">Chat login</a>
+				<a  href="javascript:chatLogoutEx();void(0);" style="display:none" id="chatLogOut">Chat logout</a>				
+			</li>
+			<%} %>
+			<![endif]>
+			
+			    <li><a href="/inbox" class="message_inbox" >Inbox (<div style="display:inline" id="spanInboxCount"><%=ASP.global_asax.NewMessageCount%></div>)</a></li>
+			<%} %>
+			 <%if (!IsLoggedIn)
+      { %> 
+            <li><a href="/signup">Signup</a></li>
+			<li>
+				<a href="javascript:void(0);" class="display_login" id="aLogin">Login</a>
+				<div id="header_login" style="display:none;">
+					<p><label>Email</label> <asp:TextBox runat="server" ID="txtEmailLogin" CssClass="form_txt2" /></p>
+					<p><label>Password</label> <asp:TextBox TextMode="Password" runat="server" ID="txtPassword" CssClass="form_txt2"/></p>
+					<p class="indent"><asp:CheckBox runat="server" ID="chbRememberMe" /> Remember me</p>
+					<p class="indent"><input type="button" value="Login" class="form_btn2" onclick="__doPostBack('<%=btnLogin.UniqueID %>', '');return false;" />
+					<asp:Button runat="server" ID="btnLogin" OnClick="btnLogin_Click" CssClass="hiddenButton" Text="Login" />
+					</p>
+					<p class="indent"><small><a href="\ForgottenPassword.aspx">Forgot your password?</a><br /></small></p>
+				</div>
+			</li>
+			<script language="javascript" type="text/javascript">
+			
+			$("#aLogin").click(function(){
+    		    $("#header_login").toggle();
+	        });
+			
+			</script>
+			<%}
+      else
+      {%>
+            <li class="last"><asp:LinkButton runat="server" Text="Logout" OnClick="btnLogout_Click"></asp:LinkButton></li>
+            <%} %>
+		</ul>
+		
+				 <%if (IsLoggedIn) { %> 
+            <p id="upload">My Media<a href="/myvideos" title="Video"><img src="/images/icon-video.gif" alt="" class="videos" /><span class="videos_span">Videos</span></a><a href="/myphotos" title="Photo">
+            <img src="/images/icon-image.gif" alt="" class="photos" /><span class="photos_span">Photos</span></a></p>    <%} %>                     
+        </div>
+
+        <!-- header end -->
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>        
+    </form>
+    <![if !IE | (IE 7)]>
+    <%if (N2FPageURL != "invite") { %>
+    <uc1:Chat ID="ch1" runat="server"/>
+    <%} %>
+    <![endif]> 			
+    </div>
+    
+    <!--page end -->
+    <!-- footer start -->
+<div class="newFooterContainer">
+	<div class="newFooter">
+		
+		<ul class="bulleted" id="newFooterList1">
+			<li><a href="/aboutus">About Us</a></li>
+			<li><a href="/managementteam">Management Team</a></li>
+			<li><a href="/investors-partners">Investors and Partners</a></li>
+			<!--<li><a href="/careers">Careers</a></li>-->
+		</ul>
+		
+		<ul class="bulleted" id="newFooterList2">
+			<li><a href="http://www.next2friendsblog.com">Blog</a></li>
+			<li><a href="/news">News</a></li>
+			<li><a href="/events">Events</a></li>
+		</ul>
+		
+		<ul class="bulleted" id="newFooterList3">
+			<li><a href="/developers">Developers</a></li>
+			<li><a href="/labs">Labs</a></li>
+		</ul>
+		
+		<ul class="bulleted" id="newFooterList4">
+			<li><a href="/static/Maximise-Your-Ad-Spend.pdf">Maximise your ad spend</a></li>			
+		</ul>
+		
+		<ul class="bulleted" id="newFooterList4">
+			<li><a href="/static/White-Label-Solutions.pdf">White label solution</a></li>			
+		</ul>
+		
+		<ul class="bulleted" id="newFooterList5">
+			<li><a href="/termsofuse">Terms of Use</a></li>
+			<li><a href="/privacypolicy">Privacy Policy</a></li>
+			<li><a href="http://support.next2friends.com/">Support Forums</a></li>
+		</ul>	
+		
+		<div class="clear"></div>
+	</div>
+</div>
+        <!-- footer end -->
+    <script type="text/javascript" src="/js/countries.js"></script>
+    <script type="text/javascript" src="/js/N2F.js"></script>
+    <script type="text/javascript" src="/lib/jquery.bgiframe.js"></script>
+    
+    <script type="text/javascript" src="/lib/jquery_global.js"></script>
+    <script type="text/javascript">
+            <%if (!IsLoggedIn)
+          { %>
+            $(document).ready(function(){
+                   $("#header_login").bgiframe();
+                   
+            });
+          
+        <%}%>
+        
+
+    </script>
+	
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+<script type="text/javascript">
+_uacct = "UA-282101-5";
+urchinTracker();
+</script>
+	
+	
+
+<![if !IE | (IE 7)]>
+<%if (N2FPageURL != "invite")
+  { %>
+<ul class="chatBarHidden">
+    <li id="cWins">
+	    <div style="height:0px;width:0px;top:25px;display:block;position:absolute;"></div>		
+	</li>
+</ul>
+<ul class="chatBar" id="chatBar" style="display:none">
+	<li id="chatBarLiSrc" style="display:none">
+		<a href="#" id="chatBarBtnSrc" class="active"><span id="chatBarBtnTextSrc"></span></a>
+	</li>
+	<li id="friendListLi" style="display:none">
+		<a href="#" onclick="minRestoreFriendList();" id="friendListBtn" class="active">Friends</span></a>
+	</li>
+</ul>
+<%} %>
+<![endif]>  
+<%=AnnoyPopupMessage%>
+</body>
+</html>

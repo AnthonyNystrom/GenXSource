@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Next2Friends", "Next2Friends.vcproj", "{E0E8F6D5-F677-4920-B1F8-D89B3C9DB2FA}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Deb_S60_31_WINSCW = Deb_S60_31_WINSCW
+		Debug = Debug
+		Rel_S60_31_GCCE = Rel_S60_31_GCCE
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{E0E8F6D5-F677-4920-B1F8-D89B3C9DB2FA}.Deb_S60_31_WINSCW.ActiveCfg = Deb_S60_31_WINSCW|Win32
+		{E0E8F6D5-F677-4920-B1F8-D89B3C9DB2FA}.Deb_S60_31_WINSCW.Build.0 = Deb_S60_31_WINSCW|Win32
+		{E0E8F6D5-F677-4920-B1F8-D89B3C9DB2FA}.Debug.ActiveCfg = Debug|Win32
+		{E0E8F6D5-F677-4920-B1F8-D89B3C9DB2FA}.Debug.Build.0 = Debug|Win32
+		{E0E8F6D5-F677-4920-B1F8-D89B3C9DB2FA}.Rel_S60_31_GCCE.ActiveCfg = Rel_S60_31_GCCE|Win32
+		{E0E8F6D5-F677-4920-B1F8-D89B3C9DB2FA}.Rel_S60_31_GCCE.Build.0 = Rel_S60_31_GCCE|Win32
+		{E0E8F6D5-F677-4920-B1F8-D89B3C9DB2FA}.Release.ActiveCfg = Release|Win32
+		{E0E8F6D5-F677-4920-B1F8-D89B3C9DB2FA}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

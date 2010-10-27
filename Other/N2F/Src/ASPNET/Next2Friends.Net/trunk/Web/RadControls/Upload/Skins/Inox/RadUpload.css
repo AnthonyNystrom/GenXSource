@@ -1,0 +1,95 @@
+/* r.a.d.upload inox skin */
+
+.RadUploadTable
+{
+	background: #bcbcbc url('Img/RadUploadTableBg.gif') repeat-y center;
+	border: solid 1px #727272;
+	border-collapse: collapse !important;
+	filter: progid:DXImageTransform.Microsoft.Shadow(direction=140,color=#404040,strength=1); /* IE only */
+	margin: 4px 0px; /* vertical - horizontal margin */
+	width: 364px;
+	font: normal 11px Arial, Verdana, Sans-serif;
+	color: #494848;
+}
+.RadUploadTable td
+{
+	padding: 4px;
+}
+
+.RadUploadButtonArea
+{
+	background-color: transparent;
+}
+
+.RadUploadButton, 
+.radUploadButtonMedium, 
+.RadUploadRemoveButton
+{
+	background: transparent url('Img/radUploadBtnMedium.gif') no-repeat;
+	border: 0px;
+	height: 21px;
+	width: 89px;
+	font: normal 11px Arial, Verdana, Sans-serif;
+	color: #494848;
+}
+
+.RadUploadButtonDisabled
+{
+	background: transparent url('Img/radUploadBtnMedium.gif') no-repeat;
+	border: 0px;
+	height: 21px;
+	width: 89px;
+	font: normal 11px Arial, Verdana, Sans-serif;
+	color: #494848;
+	filter: alpha(opacity=30); /* IE */
+	-moz-opacity:0.5; /* Mozilla */
+	opacity: 0.5; /* CSS3 */
+}
+
+.RadUploadInputField
+{
+	background: transparent url('Img/RadUploadInputFieldBg.gif') no-repeat;
+	width: 140px;
+	_width: 150px; /* IE fix */
+	border: 0px;
+	vertical-align: top;
+	height: 17px;
+}
+
+input.RealFileInput
+{
+	position: relative;
+	-moz-opacity: 0;
+	filter: alpha(opacity: 0);
+	opacity: 0;
+	z-index: 2;
+}
+
+.RadUploadSelectButton
+{
+	background: transparent url('Img/select.gif') no-repeat;
+	border: 0px;
+	font: normal 11px Arial, Verdana, Sans-serif;
+	color: #494848;
+	height: 22px;
+	width: 81px;
+	_margin-top: 1px; /* IE fix */
+}
+
+.RadUploadClearButton
+{
+	border: 0px;
+	background-color: transparent;
+	background-image: url('Img/radUploadBtnSmall.gif');
+	background-repeat: no-repeat;
+	font: normal 11px Arial, Verdana, Sans-serif;
+	color: #494848;
+	height: 21px;
+	width: 66px;
+	float: right;
+}
+
+input.NoSkinnedFileUnput
+{
+	border: solid 1px #1f1f1f;
+}

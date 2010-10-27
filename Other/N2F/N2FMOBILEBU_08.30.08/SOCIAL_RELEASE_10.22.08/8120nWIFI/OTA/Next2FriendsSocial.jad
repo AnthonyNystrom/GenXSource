@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+MIDlet-Version: 1.0
+MIDlet-Jar-Size: 123262
+Created-By: 1.5.0_15-b04 (Sun Microsystems Inc.)
+RIM-COD-URL-2: http://www.getn2f.com/apps/8120nWIFI/Next2FriendsSocial-2.cod
+MicroEdition-Configuration: CLDC-1.1
+MIDlet-Jar-URL: Next2FriendsSocial.jar
+RIM-COD-Module-Dependencies: net_rim_cldc,net_rim_bbapi_invoke,net_rim_bluetooth
+RIM-COD-SHA1-2: cc 34 d9 6f 4d 45 7a d1 01 0d 28 94 5c bd 2c 10 fe c9 6e d5
+RIM-COD-URL-1: http://www.getn2f.com/apps/8120nWIFI/Next2FriendsSocial-1.cod
+RIM-COD-SHA1-1: df 90 e7 53 db f8 5b dd 2a cd 1f 20 ea 52 c0 69 70 e9 0b 87
+RIM-COD-Size-2: 63552
+RIM-COD-Size-1: 52384
+RIM-COD-Module-Name: Next2FriendsSocial
+MIDlet-Name: Next2FriendsSocial
+RIM-COD-Size: 85336
+RIM-COD-Creation-Time: 1222873801
+MIDlet-1: Next2FriendsSocial,/icon.png,App.App
+RIM-COD-URL: http://www.getn2f.com/apps/8120nWIFI/Next2FriendsSocial.cod
+RIM-COD-SHA1: 01 1f 3f da 81 5d 0a 55 d3 fb d5 c4 46 0c b1 a1 90 68 3b 09
+MIDlet-Permissions: javax.microedition.io.Connector.bluetooth.client, javax.microedition.io.Connector.bluetooth.server, javax.microedition.io.Connector.file.read, javax.microedition.io.Connector.file.write, javax.microedition.io.Connector.http, javax.microedition.media.control.VideoControl.getSnapshot
+MicroEdition-Profile: MIDP-2.0
+MIDlet-Vendor: Vendor
+Ant-Version: Apache Ant 1.7.0

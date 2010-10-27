@@ -1,0 +1,32 @@
+<loader version="1.0">
+	<application id="Next2Friends_Live">
+		<name >
+				Next2Friends Live
+		</name>
+		<description >
+			Broadcast Live
+		</description>
+		<version >
+			1.0.0.0
+		</version>
+			
+		<vendor >
+			Next2Friends Limited
+		</vendor>
+		<copyright >
+			Copyright (c) 2008 Next2Friends Limited
+		</copyright>
+		<fileset Java="1.34">
+			<directory >
+				
+			</directory>
+			<files >
+				Next2Friends_Live.cod
+
+			</files>
+
+		</fileset>
+
+	</application>
+
+</loader>

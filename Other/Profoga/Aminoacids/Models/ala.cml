@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<molecule xmlns="http://www.xml-cml.org/schema/cml2/core" id="ala.pdb">
+	<atomArray>
+		<atom id="a1" elementType="N" x3="0.039000" y3="-0.028000" z3="0.000000" role="peptideN"/>
+		<atom id="a2" elementType="C" x3="1.499000" y3="-0.043000" z3="0.000000" role="skeletonC"/>
+		<atom id="a3" elementType="C" x3="2.055000" y3="1.361000" z3="0.000000" role="peptideC"/>
+		<atom id="a4" elementType="O" x3="1.321000" y3="2.356000" z3="0.011000" role="peptideO"/>
+		<atom id="a5" elementType="C" x3="1.956000" y3="-0.866000" z3="-1.217000"/>
+		<atom id="a6" elementType="H" x3="-0.524000" y3="0.894000" z3="0.000000" role="dehydrateNitrogenH"/>
+		<atom id="a7" elementType="H" x3="-0.543000" y3="-0.938000" z3="0.000000" role="peptideH"/>
+		<atom id="a8" elementType="H" x3="1.847000" y3="-0.534000" z3="0.928000" role="skeletonH"/>
+		<atom id="a9" elementType="H" x3="3.058000" y3="-0.939000" z3="-1.274000"/>
+		<atom id="a10" elementType="H" x3="1.571000" y3="-1.903000" z3="-1.181000"/>
+		<atom id="a11" elementType="H" x3="1.610000" y3="-0.425000" z3="-2.172000"/>
+		<atom id="a12" elementType="O" x3="3.481000" y3="1.470000" z3="0.000000" role="dehydrateCarbonO"/>
+		<atom id="a13" elementType="H" x3="3.898000" y3="0.528000" z3="0.000000" role="dehydrateCarbonH"/>
+	</atomArray>
+	<bondArray>
+		<bond atomRefs2="a1 a2" order="1"/>
+		<bond atomRefs2="a2 a3" order="1"/>
+		<bond atomRefs2="a2 a5" order="1"/>
+		<bond atomRefs2="a2 a8" order="1"/>
+		<bond atomRefs2="a3 a4" order="2"/>
+		<bond atomRefs2="a5 a9" order="1"/>
+		<bond atomRefs2="a5 a10" order="1"/>
+		<bond atomRefs2="a5 a11" order="1"/>
+		<bond atomRefs2="a1 a6" order="1"/>
+		<bond atomRefs2="a1 a7" order="1"/>
+		<bond atomRefs2="a3 a12" order="1"/>
+		<bond atomRefs2="a12 a13" order="1"/>
+	</bondArray>
+</molecule>

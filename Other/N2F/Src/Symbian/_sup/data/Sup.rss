@@ -1,0 +1,786 @@
+/*
+============================================================================
+ Name        : Sup.rss
+ Author      : Vitaly Vinogradov
+ Version     : 1.0.0
+ Copyright   : (c) Next2Friends, 2008
+ Description : Application resource file
+============================================================================
+*/
+
+//  RESOURCE IDENTIFIER
+NAME HEWB    // 4 letter ID
+
+
+//  INCLUDES
+#include <eikon.rh>
+#include <avkon.rsg>
+#include <avkon.rh>
+#include <avkon.hrh>
+#include <avkon.mbg>
+#include <appinfo.rh>
+#include "sup.rsg"
+#include "sup.rls"
+#include "sup.mbg"
+#include "sup.hrh"
+
+//  RESOURCE DEFINITIONS
+
+// -----------------------------------------------------------------------------
+//
+//    Define the resource file signature
+//    This resource should be empty.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE RSS_SIGNATURE
+	{
+	}
+
+// -----------------------------------------------------------------------------
+//
+//    Default Document Name
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE TBUF r_default_document_name
+	{
+	buf="SUP";
+	}
+
+// -----------------------------------------------------------------------------
+//
+//    Define default menu, app pane and CBA key.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE EIK_APP_INFO
+	{
+	menubar = r_sup_menubar;
+	cba = R_AVKON_SOFTKEYS_OPTIONS_EXIT;
+	}
+
+
+// -----------------------------------------------------------------------------
+//
+//    Localizable application information
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE LOCALISABLE_APP_INFO r_sup_localisable_app_info
+	{
+	short_caption = qtn_sup_short_caption_string;
+	caption_and_icon = 
+	CAPTION_AND_ICON_INFO
+		{
+		caption = qtn_sup_caption_string;
+		number_of_icons = 1;
+		icon_file = "\\resource\\apps\\sup_reg.mif";
+		};
+	}
+	
+
+// -----------------------------------------------------------------------------
+//
+//   r_sup_menubar
+//   Menubar for Sup example
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_BAR r_sup_menubar
+	{
+	titles =
+		{
+		MENU_TITLE { menu_pane = r_sup_menu; }
+		};
+	}
+
+// -----------------------------------------------------------------------------
+//
+//   r_sup_menu
+//   Menu for "Options"
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_sup_menu
+	{
+	items =
+		{
+		MENU_ITEM
+			{
+			command = EHelp;
+			txt = qtn_help;
+			},
+		MENU_ITEM
+			{
+			command = EAbout;
+			txt = qtn_about;
+			},				
+		MENU_ITEM
+			{
+			command = EAknSoftkeyExit;
+			txt = qtn_sup_exit;
+			}
+		};
+	}
+
+// -----------------------------------------------------------------------------
+//
+//    Define standart CBA key.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE CBA r_sup_cba_standart
+	{
+	buttons = 
+		{
+		CBA_BUTTON { txt = qtn_sup_menu; id = EAknSoftkeyOptions; },
+		CBA_BUTTON { txt = qtn_sup_back; id = EAknSoftkeyBack; }
+		}; 
+	}
+
+// -----------------------------------------------------------------------------
+//
+//    Define start CBA key.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE CBA r_sup_cba_start
+	{
+	buttons = 
+		{
+		CBA_BUTTON { txt = qtn_sup_continue; id = ESupSoftkeyContinue;},
+		CBA_BUTTON { txt = qtn_sup_more; id = EAknSoftkeyOptions; }		
+		}; 
+	}
+	
+// -----------------------------------------------------------------------------
+//
+//    Define credentials edit CBA key.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE CBA r_sup_cba_credentials
+	{
+	buttons = 
+		{
+		CBA_BUTTON { txt = qtn_sup_continue; id = ESupSoftkeyContinue;},
+		CBA_BUTTON { txt = qtn_sup_cancel; id = EAknSoftkeyCancel; }		
+		}; 
+	}
+	
+// -----------------------------------------------------------------------------
+//
+//    Define CBA key for the main view
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE CBA r_sup_cba_mainview
+	{
+	buttons = 
+		{
+		CBA_BUTTON { txt = qtn_sup_more; id = EAknSoftkeyOptions; },
+		CBA_BUTTON { id = EAknSoftkeyEmpty; }
+		}; 
+	}
+
+
+// -----------------------------------------------------------------------------
+//
+//   r_sup_loginview_menubar
+//   Menubar for the login view
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_BAR r_sup_loginview_menubar
+	{
+	titles =
+		{
+		MENU_TITLE { menu_pane = r_sup_loginview_menu; }
+		};
+	}
+
+// -----------------------------------------------------------------------------
+//
+//   r_sup_loginview_menu
+//   Menu for 'More' (login view)
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_sup_loginview_menu
+	{
+	items =
+		{
+		// added the new 'Menu' menu command here
+		MENU_ITEM
+			{
+			command = ESetIAP;
+			txt = qtn_sup_set_iap;
+			},
+		MENU_ITEM
+			{
+			command = EHelp;
+			txt = qtn_help;
+			},
+		MENU_ITEM
+			{
+			command = EAbout;
+			txt = qtn_about;
+			},
+		MENU_ITEM
+			{
+			command = EAknSoftkeyExit;
+			txt = qtn_sup_exit;
+			}		
+		};
+	}
+// -----------------------------------------------------------------------------
+//
+//   r_sup_mainview_menubar
+//   Menubar for the main view screen
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_BAR r_sup_mainview_menubar
+	{
+	titles =
+		{
+		MENU_TITLE { menu_pane = r_sup_mainview_menu; }
+		};
+	}
+
+// -----------------------------------------------------------------------------
+//
+//   r_sup_mainview_menu
+//   Menu for 'More' (main view screen)
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_sup_mainview_menu
+	{
+	items =
+		{
+		// added the new 'Menu' menu command here
+		MENU_ITEM
+			{
+			command = EAknSoftkeySelect;
+			txt = qtn_sup_select;
+			},
+		MENU_ITEM
+			{
+			command = ESetIAP;
+			txt = qtn_sup_set_iap;
+			},		
+		MENU_ITEM
+			{
+			command = EHelp;
+			txt = qtn_help;
+			},
+		MENU_ITEM
+			{
+			command = EAbout;
+			txt = qtn_about;
+			},
+		MENU_ITEM
+			{
+			command = EAknSoftkeyExit;
+			txt = qtn_sup_exit;
+			}		
+		};
+	}
+	
+// -----------------------------------------------------------------------------
+//
+//   r_sup_filebrowser_menubar
+//   Menubar for 'File Browser'
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_BAR r_sup_filebrowser_menubar
+	{
+	titles =
+		{
+		MENU_TITLE { menu_pane = r_sup_filebrowser_menu; }
+		};
+	}
+
+// -----------------------------------------------------------------------------
+//
+//   r_sup_filebrowser_menu
+//   Menu for 'Menu' ('File Browser')
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_sup_filebrowser_menu
+	{
+	items =
+		{
+		// added the new 'Menu' menu command here
+		MENU_ITEM
+			{
+			command = EFileBrowserGotoUpload;
+			txt = qtn_filebrowser_goto_upload;
+			},				
+		MENU_ITEM
+			{
+			command = EFileBrowserAddtoUpload;
+			txt = qtn_filebrowser_addto_upload;
+			},
+		MENU_ITEM
+			{
+			command = EFileBrowserOpen;
+			txt = qtn_filebrowser_open_dir;
+			},
+		MENU_ITEM
+			{
+			command = EFileBrowserFileProperties;
+			txt = qtn_filebrowser_file_properties;
+			},
+		MENU_ITEM
+			{
+			command = EFileBrowserPreview;
+			txt = qtn_filebrowser_preview;
+			},
+		MENU_ITEM
+			{
+			command = EHelp;
+			txt = qtn_help;
+			},
+		MENU_ITEM
+			{
+			command = EAbout;
+			txt = qtn_about;
+			},
+		MENU_ITEM
+			{
+			command = EAknSoftkeyExit;
+			txt = qtn_sup_exit;
+			}		
+		};
+	}
+
+
+// -----------------------------------------------------------------------------
+//
+//   r_sup_upload_image_cart_menubar
+//   Menubar for 'Upload Image Cart'
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_BAR r_sup_upload_image_cart_menubar
+	{
+	titles =
+		{
+		MENU_TITLE { menu_pane = r_sup_upload_image_cart_menu; }
+		};
+	}
+
+// -----------------------------------------------------------------------------
+//
+//   r_sup_upload_image_cart_menu
+//   Menu for 'Menu' ('Upload Image Cart')
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_sup_upload_image_cart_menu
+	{
+	items =
+		{
+		// added the new 'Menu' menu command here
+		MENU_ITEM
+			{
+			command = EUploadImageCartUpload;
+			txt = qtn_upload_images_upload;
+			},				
+		MENU_ITEM
+			{
+			command = EUploadImageCartFileBrowser;
+			txt = qtn_upload_images_file_browser;
+			},
+		MENU_ITEM
+			{
+			command = EUploadImageCartPreview;
+			txt = qtn_filebrowser_preview;
+			},
+		MENU_ITEM
+			{
+			command = EUploadImageCartSelect;
+			txt = qtn_sup_select;
+			},
+		MENU_ITEM
+			{
+			command = EUploadImageCartDeselect;
+			txt = qtn_upload_images_deselect;
+			},
+		MENU_ITEM
+			{
+			command = EUploadImageCartRemoveSelected;
+			txt = qtn_upload_images_remove_selected;
+			},
+		MENU_ITEM
+			{
+			command = EUploadImageCartRemoveAll;
+			txt = qtn_upload_images_remove_all;
+			},
+		MENU_ITEM
+			{
+			command = EHelp;
+			txt = qtn_help;
+			},
+		MENU_ITEM
+			{
+			command = EAbout;
+			txt = qtn_about;
+			},
+		MENU_ITEM
+			{
+			command = EAknSoftkeyExit;
+			txt = qtn_sup_exit;
+			}			
+		};
+	}
+
+
+// -----------------------------------------------------------------------------
+//
+// About dialog resource.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE DIALOG r_about_query_dialog
+	{
+	flags = EGeneralQueryFlags | EEikDialogFlagNoBorder | EEikDialogFlagNoShadow;
+	buttons = R_AVKON_SOFTKEYS_OK_EMPTY;
+	items=
+		{
+		DLG_LINE 
+			{
+			type = EAknCtPopupHeadingPane;
+			id = EAknMessageQueryHeaderId;
+			itemflags = EEikDlgItemNonFocusing;
+			control = AVKON_HEADING
+				{
+				};
+			},
+		DLG_LINE
+			{
+			type = EAknCtMessageQuery;
+			id = EAknMessageQueryContentId;
+			control = AVKON_MESSAGE_QUERY
+				{
+				};
+			}
+		};
+	}
+
+// -----------------------------------------------------------------------------
+//
+// Privacy statement dialog resource.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE DIALOG r_privstmt_dialog 
+{
+	flags = EAknDialogGenericQueryFlags;
+	buttons = R_AVKON_SOFTKEYS_YES_NO;
+	items = {
+		DLG_LINE {
+			type = EAknCtPopupHeadingPane;
+			id = EAknMessageQueryHeaderId;
+			itemflags = EEikDlgItemNonFocusing;
+			control = AVKON_HEADING {
+				label = qtn_privacy_statement_header;
+			};
+		},
+		DLG_LINE {
+			type = EAknCtMessageQuery;
+			id = EAknMessageQueryContentId;
+			control = AVKON_MESSAGE_QUERY {
+			};
+		}
+	};
+}	
+
+// -----------------------------------------------------------------------------
+//
+// File properties dialog resource.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE DIALOG r_fileproperties_dialog
+ {
+	flags = EAknDialogGenericQueryFlags;
+	buttons = R_AVKON_SOFTKEYS_OK_EMPTY;
+	items = {
+		DLG_LINE {
+			type = EAknCtPopupHeadingPane;
+			id = EAknMessageQueryHeaderId;
+			itemflags = EEikDlgItemNonFocusing;
+			control = AVKON_HEADING 
+			{
+			};
+		},
+		DLG_LINE {
+			type = EAknCtMessageQuery;
+			id = EAknMessageQueryContentId;
+			control = AVKON_MESSAGE_QUERY 
+			{
+			};
+		}
+	};
+}	
+
+// -----------------------------------------------------------------------------
+//
+// Login view username text field.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE EDWIN r_login_box
+{
+	width = 20;
+	lines = 1;
+	maxlength = 20;
+	flags = EEikEdwinNoHorizScrolling | EEikEdwinResizable;
+	default_input_mode = EAknEditorTextInputMode;
+}
+
+// -----------------------------------------------------------------------------
+//
+// Login view password text field.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE SECRETED r_password_box
+{ 
+    num_letters = 20; 
+} 
+
+// -----------------------------------------------------------------------------
+//
+// Main view listbox control.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE LISTBOX r_mainview_listbox
+    {
+    flags = EAknListBoxSelectionList;
+    array_id = r_mainview_listbox_item_array;
+    }
+    
+// -----------------------------------------------------------------------------
+//
+// Main view listbox items.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE ARRAY r_mainview_listbox_item_array
+    {
+    items = 
+        { 
+        LBUF { txt = qtn_filebrowser;},
+        LBUF { txt = qtn_upload_imagecart_short;},
+        LBUF { txt = qtn_credentials;}
+        };
+    }
+ 
+// -----------------------------------------------------------------------------
+//
+// Generally used waitnote dialog.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE DIALOG r_waitnote
+{
+	flags = EAknWaitNoteFlags | EEikDialogFlagNotifyEsc;
+	buttons = R_AVKON_SOFTKEYS_CANCEL;
+	items =
+	{
+	  DLG_LINE
+	  {
+		  type = EAknCtNote;
+		  id = EGeneralNote;
+		  control = AVKON_NOTE
+		  {
+			  layout = EWaitLayout;
+			  animation = R_QGN_GRAF_WAIT_BAR_ANIM;
+		  };
+	  }
+	};
+}
+
+// -----------------------------------------------------------------------------
+//
+// Generally used failure dialog.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE DIALOG r_dialog_failure
+{
+	flags = EAknWarningNoteFlags;
+	buttons = R_AVKON_SOFTKEYS_EMPTY;
+	items =
+	{
+		DLG_LINE
+		{
+			type = EAknCtNote;
+			id = EGeneralNote;
+			control = AVKON_NOTE
+			{
+				layout = EGeneralLayout;
+				animation = R_QGN_NOTE_WARNING_ANIM;
+			};
+		}
+	};
+}
+
+RESOURCE DIALOG r_query_yes_no
+   {
+   flags = EGeneralQueryFlags;
+   buttons = R_AVKON_SOFTKEYS_YES_NO;
+   items =
+       {
+       DLG_LINE
+           {
+           type = EAknCtQuery;
+           id = EGeneralQuery;
+           control = AVKON_CONFIRMATION_QUERY
+               {
+               layout = EConfirmationQueryLayout;
+               };
+           }
+       };
+   }
+   
+// -----------------------------------------------------------------------------
+//
+// Main view listbox items icons.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE AKN_ICON_ARRAY r_mainview_icons 
+    { 
+    type = EAknIconArraySimple; 
+    bmpfile = "\\resource\\apps\\sup.mbm";
+ 
+    icons = 
+        { 
+        AKN_ICON 
+            { 
+            iconId = EMbmSupFolder;
+            maskId = EMbmSupFoldermask;
+            },
+        AKN_ICON 
+            { 
+            iconId = EMbmSupCart;
+            maskId = EMbmSupCartmask;
+            },
+       AKN_ICON 
+            { 
+            iconId = EMbmSupSettings;
+            maskId = EMbmSupSettingsmask;
+            }
+     //  AKN_ICON 
+  //          { 
+  //          iconId = EMbmSupExit; 
+  //          maskId = EMbmSupExitmask;
+  //          }
+        }; 
+    }
+    
+// -----------------------------------------------------------------------------
+//
+// File browser view listbox items icons.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE AKN_ICON_ARRAY r_browserview_icons 
+    { 
+    type = EAknIconArraySimple; 
+    bmpfile = "\\resource\\apps\\sup.mbm";
+ 
+    icons = 
+        { 
+        AKN_ICON 
+            { 
+            iconId = EMbmSupFolder;
+            maskId = EMbmSupFoldermask;
+            }, 
+        AKN_ICON 
+            { 
+            iconId = EMbmSupFile;
+            maskId = EMbmSupFilemask;
+            },
+		AKN_ICON 
+            { 
+            iconId = EMbmSupFolderup;
+            maskId = EMbmSupFolderupmask;
+            },
+        AKN_ICON 
+            { 
+            iconId = EMbmSupPhone;
+            maskId = EMbmSupPhonemask;
+            },
+         AKN_ICON 
+            { 
+            iconId = EMbmSupCard;
+            maskId = EMbmSupCardmask;
+            }            
+        }; 
+    }
+    
+// -----------------------------------------------------------------------------
+//
+// Upload images cart view listbox items icons.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE AKN_ICON_ARRAY r_cartview_icons 
+    { 
+    type = EAknIconArraySimple; 
+    bmpfile = "\\resource\\apps\\sup.mbm";
+ 
+    icons = 
+        { 
+        AKN_ICON 
+            { 
+            iconId = EMbmSupFile;
+            maskId = EMbmSupFilemask;
+            }
+        }; 
+    }
+  
+// -----------------------------------------------------------------------------
+//
+// Resources for messages.
+//
+// -----------------------------------------------------------------------------
+//
+//RESOURCE TBUF32 r_hewb_command1_text { buf=qtn_hewb_command1_text; }
+RESOURCE TBUF32 r_about_dialog_title { buf = qtn_about_dialog_title; }
+RESOURCE TBUF r_about_dialog_text { buf = qtn_about_dialog_text; }
+RESOURCE TBUF r_privacy_statement_filename { buf = qtn_privacy_statement_filename; }
+RESOURCE TBUF r_login_waitnote { buf = qtn_sup_login_waitnote;}
+RESOURCE TBUF r_login_failure_note { buf = qtn_sup_login_failure_dialog; }
+RESOURCE TBUF r_login_empty_fields_note { buf = qtn_sup_login_empty_credentials; }
+RESOURCE TBUF r_connection_not_ready { buf = qtn_sup_connection_not_ready; }
+RESOURCE TBUF r_upload_waitnote { buf = qtn_sup_upload_waitnote;}
+RESOURCE TBUF r_upload_failure_note { buf = qtn_sup_upload_failure_dialog; }
+RESOURCE TBUF r_upload_failure_credentials { buf = qtn_sup_upload_failure_credentials; }
+RESOURCE TBUF r_upload_noimage_note { buf = qtn_sup_upload_no_image; }
+RESOURCE TBUF r_upload_large_image_warning { buf = qtn_sup_upload_large_image; }
+RESOURCE TBUF r_upload_confirmation_note { buf = qtn_sup_upload_confimation_dialog; }
+RESOURCE TBUF r_upload_confimation_note_several { buf = qtn_sup_upload_confimation_dialog_several; }
+
+
+// -----------------------------------------------------------------------------
+//
+// Resources for labels etc
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE TBUF r_login_label { buf = qtn_sup_login_label; }
+RESOURCE TBUF r_password_label { buf = qtn_sup_password_label; }
+RESOURCE TBUF r_filebrowser_phonememory { buf = qtn_filebrowser_phonememory; }
+RESOURCE TBUF r_filebrowser_cardmemory { buf = qtn_filebrowser_cardmemory; }
+RESOURCE TBUF r_empty_image_cart_text { buf = qtn_sup_empty_image_cart; }

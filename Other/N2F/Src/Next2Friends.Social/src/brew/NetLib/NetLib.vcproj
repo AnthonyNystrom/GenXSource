@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="7.10"
+	Name="NetLib"
+	ProjectGUID="{31922162-9664-44D2-8214-7F371DEEFAB5}"
+	Keyword="Win32Proj">
+	<Platforms>
+		<Platform
+			Name="Win32"/>
+	</Platforms>
+	<Configurations>
+		<Configuration
+			Name="Debug (Simulator)|Win32"
+			OutputDirectory="$(SolutionDir)\Framework\lib\NetLib"
+			IntermediateDirectory="Debug"
+			ConfigurationType="4"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="0"
+				AdditionalIncludeDirectories="C:\brew\sdk\v312\inc;&quot;$(SolutionDir)\framework\include\GUI\framework&quot;;&quot;$(SolutionDir)\framework\include\NetLib&quot;"
+				PreprocessorDefinitions="WIN32;_DEBUG;_LIB;AEE_SIMULATOR"
+				MinimalRebuild="TRUE"
+				ExceptionHandling="FALSE"
+				BasicRuntimeChecks="3"
+				RuntimeLibrary="5"
+				UsePrecompiledHeader="0"
+				WarningLevel="4"
+				Detect64BitPortabilityProblems="FALSE"
+				DebugInformationFormat="4"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile="$(SolutionDir)\framework\lib\netlib\$(ProjectName).lib"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+		<Configuration
+			Name="Release (Device)|Win32"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release"
+			ConfigurationType="0"
+			CharacterSet="2">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="nmake /f makefile all"
+				ReBuildCommandLine="nmake /a /f makefile all"
+				CleanCommandLine="nmake /f makefile clean"/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx"
+			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
+			<File
+				RelativePath="..\framework\source\NetLib\HTTPClient.cpp">
+			</File>
+			<File
+				RelativePath="..\framework\source\NetLib\NetSystem.cpp">
+			</File>
+			<File
+				RelativePath="..\framework\source\NetLib\PacketStream.cpp">
+			</File>
+		</Filter>
+		<Filter
+			Name="Header Files"
+			Filter="h;hpp;hxx;hm;inl;inc;xsd"
+			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}">
+			<File
+				RelativePath="..\framework\include\NetLib\HTTPClient.h">
+			</File>
+			<File
+				RelativePath="..\framework\include\NetLib\IAnswer.h">
+			</File>
+			<File
+				RelativePath="..\framework\include\NetLib\INetClient.h">
+			</File>
+			<File
+				RelativePath="..\framework\include\NetLib\IServer.h">
+			</File>
+			<File
+				RelativePath="..\framework\include\NetLib\NetSystem.h">
+			</File>
+			<File
+				RelativePath="..\framework\include\NetLib\PacketStream.h">
+			</File>
+		</Filter>
+		<Filter
+			Name="Makefile"
+			Filter="">
+			<File
+				RelativePath="..\brew.inc">
+			</File>
+			<File
+				RelativePath=".\files.inc">
+			</File>
+			<File
+				RelativePath=".\makefile">
+			</File>
+		</Filter>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

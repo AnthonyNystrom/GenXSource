@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetEncryptionKey">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WebMemberID" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="WebPassword" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEncryptionKeyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEncryptionKeyResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMemberID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NickName" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="WebPassword" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMemberIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMemberIDResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTagID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WebMemberID" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="WebPassword" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTagIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTagIDResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string"/>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetEncryptionKeySoapIn">
+    <wsdl:part name="parameters" element="tns:GetEncryptionKey"/>
+  </wsdl:message>
+  <wsdl:message name="GetEncryptionKeySoapOut">
+    <wsdl:part name="parameters" element="tns:GetEncryptionKeyResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetMemberIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMemberID"/>
+  </wsdl:message>
+  <wsdl:message name="GetMemberIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMemberIDResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetTagIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTagID"/>
+  </wsdl:message>
+  <wsdl:message name="GetTagIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTagIDResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetEncryptionKeyHttpGetIn">
+    <wsdl:part name="WebMemberID" type="s:string"/>
+    <wsdl:part name="WebPassword" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetEncryptionKeyHttpGetOut">
+    <wsdl:part name="Body" element="tns:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetMemberIDHttpGetIn">
+    <wsdl:part name="NickName" type="s:string"/>
+    <wsdl:part name="WebPassword" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetMemberIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetTagIDHttpGetIn">
+    <wsdl:part name="WebMemberID" type="s:string"/>
+    <wsdl:part name="WebPassword" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetTagIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetEncryptionKeyHttpPostIn">
+    <wsdl:part name="WebMemberID" type="s:string"/>
+    <wsdl:part name="WebPassword" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetEncryptionKeyHttpPostOut">
+    <wsdl:part name="Body" element="tns:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetMemberIDHttpPostIn">
+    <wsdl:part name="NickName" type="s:string"/>
+    <wsdl:part name="WebPassword" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetMemberIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetTagIDHttpPostIn">
+    <wsdl:part name="WebMemberID" type="s:string"/>
+    <wsdl:part name="WebPassword" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetTagIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:string"/>
+  </wsdl:message>
+  <wsdl:portType name="MemberServicesSoap">
+    <wsdl:operation name="GetEncryptionKey">
+      <wsdl:input message="tns:GetEncryptionKeySoapIn"/>
+      <wsdl:output message="tns:GetEncryptionKeySoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberID">
+      <wsdl:input message="tns:GetMemberIDSoapIn"/>
+      <wsdl:output message="tns:GetMemberIDSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetTagID">
+      <wsdl:input message="tns:GetTagIDSoapIn"/>
+      <wsdl:output message="tns:GetTagIDSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="MemberServicesHttpGet">
+    <wsdl:operation name="GetEncryptionKey">
+      <wsdl:input message="tns:GetEncryptionKeyHttpGetIn"/>
+      <wsdl:output message="tns:GetEncryptionKeyHttpGetOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberID">
+      <wsdl:input message="tns:GetMemberIDHttpGetIn"/>
+      <wsdl:output message="tns:GetMemberIDHttpGetOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetTagID">
+      <wsdl:input message="tns:GetTagIDHttpGetIn"/>
+      <wsdl:output message="tns:GetTagIDHttpGetOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="MemberServicesHttpPost">
+    <wsdl:operation name="GetEncryptionKey">
+      <wsdl:input message="tns:GetEncryptionKeyHttpPostIn"/>
+      <wsdl:output message="tns:GetEncryptionKeyHttpPostOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberID">
+      <wsdl:input message="tns:GetMemberIDHttpPostIn"/>
+      <wsdl:output message="tns:GetMemberIDHttpPostOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetTagID">
+      <wsdl:input message="tns:GetTagIDHttpPostIn"/>
+      <wsdl:output message="tns:GetTagIDHttpPostOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MemberServicesSoap" type="tns:MemberServicesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetEncryptionKey">
+      <soap:operation soapAction="http://tempuri.org/GetEncryptionKey" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberID">
+      <soap:operation soapAction="http://tempuri.org/GetMemberID" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTagID">
+      <soap:operation soapAction="http://tempuri.org/GetTagID" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MemberServicesSoap12" type="tns:MemberServicesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetEncryptionKey">
+      <soap12:operation soapAction="http://tempuri.org/GetEncryptionKey" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberID">
+      <soap12:operation soapAction="http://tempuri.org/GetMemberID" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTagID">
+      <soap12:operation soapAction="http://tempuri.org/GetTagID" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MemberServicesHttpGet" type="tns:MemberServicesHttpGet">
+    <http:binding verb="GET"/>
+    <wsdl:operation name="GetEncryptionKey">
+      <http:operation location="/GetEncryptionKey"/>
+      <wsdl:input>
+        <http:urlEncoded/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberID">
+      <http:operation location="/GetMemberID"/>
+      <wsdl:input>
+        <http:urlEncoded/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTagID">
+      <http:operation location="/GetTagID"/>
+      <wsdl:input>
+        <http:urlEncoded/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MemberServicesHttpPost" type="tns:MemberServicesHttpPost">
+    <http:binding verb="POST"/>
+    <wsdl:operation name="GetEncryptionKey">
+      <http:operation location="/GetEncryptionKey"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberID">
+      <http:operation location="/GetMemberID"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTagID">
+      <http:operation location="/GetTagID"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MemberServices">
+    <wsdl:port name="MemberServicesSoap" binding="tns:MemberServicesSoap">
+      <soap:address location="http://services.next2friends.com/n2fwebservices/memberservices.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="MemberServicesSoap12" binding="tns:MemberServicesSoap12">
+      <soap12:address location="http://services.next2friends.com/n2fwebservices/memberservices.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="MemberServicesHttpGet" binding="tns:MemberServicesHttpGet">
+      <http:address location="http://services.next2friends.com/n2fwebservices/memberservices.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="MemberServicesHttpPost" binding="tns:MemberServicesHttpPost">
+      <http:address location="http://services.next2friends.com/n2fwebservices/memberservices.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

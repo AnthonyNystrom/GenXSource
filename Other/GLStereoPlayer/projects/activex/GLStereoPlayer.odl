@@ -1,0 +1,120 @@
+//-----------------------------------------------------------------------------
+// GLStereoPlayer.odl : type library source for OLE Custom Control project.
+//
+// Copyright (c) 2005 Toshiyuki Takahei All rights reserved.
+//
+//-----------------------------------------------------------------------------
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(06E4D5A3-70DF-4462-BFEB-63932E2BD79A), version(1.0),
+  helpfile("GLStereoPlayer.hlp"),
+  helpstring("GLStereoPlayer ActiveX Control module"),
+  control ]
+library GLSTEREOPLAYERLib
+{
+    importlib(STDOLE_TLB);
+    importlib(STDTYPE_TLB);
+
+    typedef enum {
+        Separated = 0,
+        HorizontallyCombined = 1,
+        HorizontallyCombinedAndCompressed = 2,
+        VerticallyCombined = 3,
+        VerticallyCombinedAndCompressed = 4
+    } EnumFormat;
+    typedef enum {
+        LeftOnly = 0,
+        RightOnly = 1,
+        Anagryph = 2,
+        HorizontallySplitted = 3,
+        VerticallySplitted = 4,
+        HorizontallyInterLeaved = 5,
+        VerticallyInterLeaved = 6,
+        Sharp3D = 7,
+        QuadBuffer = 8
+    } EnumStereoType;
+    typedef enum {
+        Hide = 0,
+        Auto = 1,
+        Show = 2
+    } EnumPlayControl;
+
+    [ uuid(3266D81F-3CD4-420E-9B05-81FA7DE55874),
+      helpstring("Dispatch Interface for GLStereoPlayer Control"), hidden ]
+    dispinterface _DGLStereoPlayer
+    {
+
+        properties:
+            //{{AFX_ODL_PROP(CGLStereoPlayerCtrl)
+            [id(1)] BSTR LeftFile;
+            [id(2)] BSTR RightFile;
+            [id(3)] EnumFormat Format;
+            [id(4)] EnumStereoType StereoType;
+            [id(5)] OLE_COLOR LeftColor;
+            [id(6)] OLE_COLOR RightColor;
+            [id(7)] boolean Swap;
+            [id(8)] float Offset;
+            [id(9)] float PanX;
+            [id(10)] float PanY;
+            [id(11)] float Zoom;
+            [id(12)] boolean Statistics;
+            [id(13)] EnumPlayControl PlayControl;
+            [id(14)] float Speed;
+            [id(15)] boolean ForceSync;
+            [id(16)] boolean Loop;
+            [id(17)] long Volume;
+            [id(18)] long SourceWidth;
+            [id(19)] long SourceHeight;
+            [id(20)] float SourceDuration;
+            [id(21)] long ClientWidth;
+            [id(22)] long ClientHeight;
+            [id(23)] boolean IsPlaying;
+            [id(24)] boolean PlayOnLoad;
+            [id(25)] IDispatch* StatisticsFont;
+            [id(26)] OLE_COLOR StatisticsColor;
+            [id(27)] OLE_COLOR BaseColor;
+            //}}AFX_ODL_PROP
+
+        methods:
+            //{{AFX_ODL_METHOD(CGLStereoPlayerCtrl)
+            [id(28)] boolean OpenLeftFile(BSTR fileName);
+            [id(29)] boolean OpenRightFile(BSTR fileName);
+            [id(30)] boolean OpenSetting(BSTR fileName);
+            [id(31)] boolean SaveSetting(BSTR fileName);
+            [id(32)] void Play();
+            [id(33)] void Pause();
+            [id(34)] void Stop();
+            [id(35)] void SetPosition(float position);
+            [id(36)] float GetPosition();
+            //}}AFX_ODL_METHOD
+
+            [id(DISPID_ABOUTBOX)] void AboutBox();
+    };
+
+    [ uuid(29A74F8F-40E5-4930-9FF0-3286F57499BB),
+      helpstring("Event interface for GLStereoPlayer Control") ]
+    dispinterface _DGLStereoPlayerEvents
+    {
+        properties:
+            //  Event interface has no properties
+
+        methods:
+            //{{AFX_ODL_EVENT(CGLStereoPlayerCtrl)
+            [id(1)] void NeedsResize();
+            //}}AFX_ODL_EVENT
+    };
+
+    [ uuid(64F33E49-C865-434B-84E1-AF4BA5733DD7),
+      helpstring("GLStereoPlayer Control"), control ]
+    coclass GLStereoPlayer
+    {
+        [default] dispinterface _DGLStereoPlayer;
+        [default, source] dispinterface _DGLStereoPlayerEvents;
+    };
+
+
+    //{{AFX_APPEND_ODL}}
+    //}}AFX_APPEND_ODL}}
+};

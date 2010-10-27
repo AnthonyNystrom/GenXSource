@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{B900F1C2-3D47-4FEC-85B3-04AAF18C3634}") = "Next2Friends", "Next2Friends\Next2Friends.vddproj", "{29827094-10AD-4AC5-89C5-BE958E981489}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{29827094-10AD-4AC5-89C5-BE958E981489}.Debug|Default.ActiveCfg = Debug
+		{29827094-10AD-4AC5-89C5-BE958E981489}.Debug|Default.Build.0 = Debug
+		{29827094-10AD-4AC5-89C5-BE958E981489}.Release|Default.ActiveCfg = Release
+		{29827094-10AD-4AC5-89C5-BE958E981489}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

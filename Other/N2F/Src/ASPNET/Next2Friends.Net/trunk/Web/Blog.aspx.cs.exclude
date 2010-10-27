@@ -1,0 +1,234 @@
+﻿using System;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+using System.Xml.Linq;
+using Next2Friends.Data;
+using System.Text;
+using System.Collections.Generic;
+
+public partial class Blog : System.Web.UI.Page
+{
+    private Member member;
+    public bool IsLoggedIn = false;
+
+    public string BlogTitle;
+    public string BlogCreationDt;
+    public string BlogBody;
+
+    private BlogEntry blog;
+
+    public string NumberOfComments = string.Empty;
+    public string PostCommentString = string.Empty;
+
+    public string BlogCommentsHTML = string.Empty;
+         
+
+    protected void Page_Load(object sender, EventArgs e)
+    {   
+        AjaxPro.Utility.RegisterTypeForAjax(typeof(Blog));
+         
+        member = (Member)Session["Member"];
+
+        if (member != null)
+        {
+            IsLoggedIn = true;
+        }
+
+        string strBlogID = Request.Params["b"];
+        string strWebMemberID = Request.Params["m"];
+
+        // Hamid I have added this code so we can access it with just a WebMemberID
+        if (strBlogID != null)
+        {
+            blog = BlogEntry.GetBlogEntryByWebBlogEntryID(strBlogID);
+        }
+        else if (strWebMemberID!=null)
+        {
+           // blog = BlogEntry.GetBlogEntryByMemberID(strWebMemberID);
+        }
+
+        PopulateVariables();
+        BlogCommentsHTML = GenerateComments();
+
+        if (member != null)
+            PostCommentString = "javascript:postComment('','" + blog.WebBlogEntryID + "');void(0);";
+        else
+            PostCommentString = "signup.aspx?u=http://www.next2friends.com/blog.aspx?b=" + blog.WebBlogEntryID;
+
+    }
+
+    private void PopulateVariables()
+    {
+        BlogTitle = blog.Title;
+        BlogCreationDt = blog.DTCreated.ToString("MMM dd, yyyy");
+        BlogBody = blog.Body;
+    }
+
+    private List<BlogComment> ArrangeComments(List<BlogComment> blogComments)
+    {
+        List<BlogComment> retComments = new List<BlogComment>();
+        var searchResult =
+                from comment in blogComments
+                where comment.InReplyToCommentID == comment.BlogCommentID
+                select comment;
+
+        foreach (BlogComment comment in searchResult)
+        {
+            BlogComment x = comment;
+            blogComments.Add(comment);
+        }
+
+        return retComments;
+    }
+
+    private string GenerateComments()
+    {
+        List<BlogComment> bc = BlogComment.GetBlogCommentsByWebBlogEntryID(blog.BlogEntryID);
+
+        List<BlogComment> blogComments = ArrangeComments(bc);
+
+        NumberOfComments = blogComments.Count.ToString();
+
+        StringBuilder sbCommentHTML = new StringBuilder();
+        StringBuilder sbPartialHTML = null;
+
+        object[] parameters = new object[6];
+
+        string HTMLItem = (@"<li class=""clearfix"" id=""li{5}""><img src=""{0}"" alt="""" width=""50"" height=""50"" class=""commenter_avatar"" />
+							<div class=""comment_entry"" id=""{5}"">
+								<p class=""reply"">");
+
+
+        string HTMLItem2 = (@"</p>
+								<p class=""commenter""> <cite><a href=""#"">{1}</a></cite><br />
+								<small>{2}</small></p>
+								<p id=""commentBody{5}"">{4}.</p>
+							</div>
+						</li>");
+        
+        int lastReplytoID = -1;
+        bool closeOLPending = false;
+
+        foreach (BlogComment comment in blogComments)
+        {
+            sbPartialHTML = new StringBuilder();
+            sbPartialHTML.Append(HTMLItem);
+            
+            if( member!=null && comment.MemberID == member.MemberID )
+            {
+                sbPartialHTML.Append(@"<small><a href=""javascript:editComment('{5}');void(0);"">Edit</a>");
+                sbPartialHTML.Append(@"<a href=""javascript:deleteComment('{5}');"">Delete</a></small>");
+            }
+
+            if (IsLoggedIn)
+            {
+                sbPartialHTML.Append(@"<a href=""javascript:replyToComment('{5}','{3}');void(0);"">Reply</a>");
+            }
+            else
+            {
+                sbPartialHTML.Append(@"<a href=""signup.aspx?u=http://www.next2friends.com/blog.aspx?b=" + blog.WebBlogEntryID + @""">Reply</a>");
+            }
+
+            sbPartialHTML.Append(HTMLItem2);
+
+            parameters[0] = ParallelServer.Get(comment.PhotoUrl) + "user/" + comment.PhotoUrl;
+            parameters[1] = comment.NickName;
+            parameters[2] = TimeDistance.TimeAgo(comment.DTCreated);
+            parameters[3] = blog.WebBlogEntryID;
+            parameters[4] = comment.Body;
+            parameters[5] = comment.WebBlogCommentID;
+
+            
+            if (lastReplytoID == comment.InReplyToCommentID && closeOLPending != true)
+            {
+                sbCommentHTML.Append("<ol>");
+                closeOLPending = true;
+            }
+
+            sbCommentHTML.AppendFormat(sbPartialHTML.ToString(), parameters);
+
+            if (lastReplytoID != comment.InReplyToCommentID && closeOLPending == true)
+            {
+                sbCommentHTML.Append("</ol>");
+            }
+
+            lastReplytoID = comment.InReplyToCommentID;
+        }
+        
+        return sbCommentHTML.ToString();
+    }
+
+    [AjaxPro.AjaxMethod]
+    public string DeleteComment(string WebBlogCommentID)
+    {
+        try
+        {
+            BlogComment comment = BlogComment.GetBlogCommentByWebBlogCommentID(WebBlogCommentID);
+
+            Member mem = (Member)HttpContext.Current.Session["Member"];
+            if (comment.MemberID != mem.MemberID)
+                return null;
+
+            BlogComment.DeleteBlogComment(WebBlogCommentID);
+        }
+        catch (Exception ex)
+        {
+            throw ex;
+        }
+        return WebBlogCommentID;
+    }
+
+    [AjaxPro.AjaxMethod]
+    public string UpdateComment(string WebBlogCommentID,string Body)
+    {
+        BlogComment comment = BlogComment.GetBlogCommentByWebBlogCommentID(WebBlogCommentID);
+
+        Member mem = (Member)HttpContext.Current.Session["Member"];
+        if (comment.MemberID != mem.MemberID)
+            return null;
+
+        comment.Body = Body;
+        comment.Save();
+        return WebBlogCommentID;
+    }
+
+    [AjaxPro.AjaxMethod]
+    public string PostReply(string WebBlogCommentID,string WebBlogEntryId, string Body)
+    {
+        Member mem = (Member)HttpContext.Current.Session["Member"];
+        BlogEntry blogEntry = BlogEntry.GetBlogEntryByWebBlogEntryID(WebBlogEntryId);
+        BlogComment inReplyToComment = null;
+
+        if( WebBlogCommentID != string.Empty )
+            inReplyToComment = BlogComment.GetBlogCommentByWebBlogCommentID(WebBlogCommentID);
+
+
+        BlogComment comment = new BlogComment();
+        comment.MemberID = mem.MemberID;
+        comment.BlogEntryID = blogEntry.BlogEntryID;
+        comment.DTCreated = DateTime.Now;
+        comment.IsDeleted = false;
+        comment.WebBlogCommentID = Next2Friends.Misc.UniqueID.NewWebID();
+        comment.Body = Body;
+
+        if (inReplyToComment != null)
+            comment.InReplyToCommentID = inReplyToComment.BlogCommentID;
+
+        comment.Save();
+
+        if (inReplyToComment == null)
+            comment.InReplyToCommentID = comment.BlogCommentID;
+
+        comment.Save();
+        
+        return WebBlogCommentID;
+    }
+}

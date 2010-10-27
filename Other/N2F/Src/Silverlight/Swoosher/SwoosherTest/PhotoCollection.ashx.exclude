@@ -1,0 +1,67 @@
+﻿<%@ WebHandler Language="C#" Class="PhotoCollectionREST" %>
+
+using System;
+using System.Collections.Generic;
+using System.Web;
+using System.Xml.Serialization;
+
+public class PhotoCollectionREST : IHttpHandler
+{
+	private static Dictionary<Type, XmlSerializer> serializers = new Dictionary<Type, XmlSerializer>();
+
+	public void ProcessRequest( HttpContext context )
+	{
+		string[] path = context.Request.PathInfo.Split( '/' );
+
+		PhotoCollection service = new PhotoCollection();
+		context.Response.ContentType = "text/xml";
+
+		switch ( path[ 0 ] )
+		{
+			case "Login":
+				{
+					SerializeResponse(
+						context,
+						service.Login(
+							context.Request.Form[ "email" ],
+							context.Request.Form[ "password" ] ) );
+
+					break;
+				}
+
+			case "GetCollections":
+				{
+					SerializeResponse(
+						context,
+						service.GetCollections( context.Request.Form[ "token" ] ) );
+
+					break;
+				}
+
+			case "GetPhotosByCollection":
+				{
+					SerializeResponse(
+						context,
+						service.GetPhotosByCollection( context.Request.Form[ "token" ], path[ 1 ] ) );
+
+					break;
+				}
+		}
+	}
+
+	public bool IsReusable { get { return true; } }
+
+	private void SerializeResponse( HttpContext context, object value )
+	{
+		var type = value.GetType();
+		XmlSerializer serializer = null;
+
+		lock ( serializers )
+		{
+			if ( !serializers.ContainsKey( type ) ) serializers.Add( type, new XmlSerializer( type ) );
+			serializer = serializers[ type ];
+		}
+
+		serializer.Serialize( context.Response.OutputStream, value );
+	}
+}

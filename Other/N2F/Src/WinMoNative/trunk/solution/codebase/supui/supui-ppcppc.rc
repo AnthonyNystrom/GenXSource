@@ -1,0 +1,224 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resourceppc.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "atlresce.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\icon.ico"
+IDI_APP_ICON            ICON                    "res\\icon.ico"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resourceppc.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlresce.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""supui-ppcppc.rc2""\r\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "Menu"
+    BEGIN
+        MENUITEM "New",                         ID_FILE_NEW
+        MENUITEM "Open",                        ID_FILE_OPEN
+        MENUITEM "Save",                        ID_FILE_SAVE
+        MENUITEM "Save As",                     ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        POPUP "Edit"
+        BEGIN
+            MENUITEM "Undo",                        ID_EDIT_UNDO
+            MENUITEM SEPARATOR
+            MENUITEM "Cut",                         ID_EDIT_CUT
+            MENUITEM "Copy",                        ID_EDIT_COPY
+            MENUITEM "Paste",                       ID_EDIT_PASTE
+        END
+        MENUITEM "About supui-ppc",             ID_APP_ABOUT
+        MENUITEM "Exit",                        ID_APP_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "Q",            ID_APP_EXIT,            VIRTKEY, CONTROL
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "FileDescription", "supui-ppc Module"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "supui-ppc"
+            VALUE "LegalCopyright", "Copyright 2008"
+            VALUE "OriginalFilename", "supui-ppc.exe"
+            VALUE "ProductName", "supui-ppc Module"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "N2F Snap-Up"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "New"
+    ID_FILE_OPEN            "Open"
+    ID_FILE_CLOSE           "Close"
+    ID_FILE_SAVE            "Save"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Program information"
+    ID_APP_EXIT             "Quit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Next Pane"
+    ID_PREV_PANE            "Previous Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "Split to panes"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase"
+    ID_EDIT_CLEAR_ALL       "Erase All"
+    ID_EDIT_COPY            "Copy"
+    ID_EDIT_CUT             "Cut"
+    ID_EDIT_FIND            "Find"
+    ID_EDIT_PASTE           "Paste"
+    ID_EDIT_REPEAT          "Repeat"
+    ID_EDIT_REPLACE         "Replace"
+    ID_EDIT_SELECT_ALL      "Select All"
+    ID_EDIT_UNDO            "Undo"
+    ID_EDIT_REDO            "Redo"
+END
+
+STRINGTABLE 
+BEGIN
+    ATL_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_MENU_OK              "Done"
+    ID_MENU_CANCEL          "Cancel"
+    ID_MENU                 "Menu"
+    ID_ACTION               "Action"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_FULLSCREEN      "Full screen"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "supui-ppcppc.rc2"
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

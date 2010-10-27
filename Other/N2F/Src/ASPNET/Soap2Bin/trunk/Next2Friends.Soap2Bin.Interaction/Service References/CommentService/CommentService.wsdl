@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.next2friends.com/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.next2friends.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Provides functionality to add, edit, and remove comments.</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.next2friends.com/">
+      <s:element name="AddComment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newComment" type="tns:WebComment" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WebComment">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ObjectID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nickname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Text" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DTCreated" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="InReplyToCommentID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ParentCommentID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CommentType" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddCommentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddCommentResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditComment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="editedComment" type="tns:WebComment" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditCommentResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetComment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="commentID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCommentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCommentResult" type="tns:WebComment" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCommentIDs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="objectID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastCommentID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="commentType" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCommentIDsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCommentIDsResult" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetComments">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="objectID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastCommentID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="commentType" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCommentsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCommentsResult" type="tns:ArrayOfWebComment" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfWebComment">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="WebComment" nillable="true" type="tns:WebComment" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="HasNewComments">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="objectID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastCommentID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="commentType" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HasNewCommentsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="HasNewCommentsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveComment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="commentID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveCommentResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="WebComment" nillable="true" type="tns:WebComment" />
+      <s:element name="ArrayOfInt" nillable="true" type="tns:ArrayOfInt" />
+      <s:element name="ArrayOfWebComment" nillable="true" type="tns:ArrayOfWebComment" />
+      <s:element name="boolean" type="s:boolean" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AddCommentSoapIn">
+    <wsdl:part name="parameters" element="tns:AddComment" />
+  </wsdl:message>
+  <wsdl:message name="AddCommentSoapOut">
+    <wsdl:part name="parameters" element="tns:AddCommentResponse" />
+  </wsdl:message>
+  <wsdl:message name="EditCommentSoapIn">
+    <wsdl:part name="parameters" element="tns:EditComment" />
+  </wsdl:message>
+  <wsdl:message name="EditCommentSoapOut">
+    <wsdl:part name="parameters" element="tns:EditCommentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentSoapIn">
+    <wsdl:part name="parameters" element="tns:GetComment" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCommentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentIDsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCommentIDs" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentIDsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCommentIDsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetComments" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCommentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="HasNewCommentsSoapIn">
+    <wsdl:part name="parameters" element="tns:HasNewComments" />
+  </wsdl:message>
+  <wsdl:message name="HasNewCommentsSoapOut">
+    <wsdl:part name="parameters" element="tns:HasNewCommentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="RemoveCommentSoapIn">
+    <wsdl:part name="parameters" element="tns:RemoveComment" />
+  </wsdl:message>
+  <wsdl:message name="RemoveCommentSoapOut">
+    <wsdl:part name="parameters" element="tns:RemoveCommentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentHttpGetIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="commentID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentHttpGetOut">
+    <wsdl:part name="Body" element="tns:WebComment" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentIDsHttpGetIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="objectID" type="s:string" />
+    <wsdl:part name="lastCommentID" type="s:string" />
+    <wsdl:part name="commentType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentIDsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfInt" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentsHttpGetIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="objectID" type="s:string" />
+    <wsdl:part name="lastCommentID" type="s:string" />
+    <wsdl:part name="commentType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfWebComment" />
+  </wsdl:message>
+  <wsdl:message name="HasNewCommentsHttpGetIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="objectID" type="s:string" />
+    <wsdl:part name="lastCommentID" type="s:string" />
+    <wsdl:part name="commentType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="HasNewCommentsHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="RemoveCommentHttpGetIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="commentID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RemoveCommentHttpGetOut" />
+  <wsdl:message name="GetCommentHttpPostIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="commentID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentHttpPostOut">
+    <wsdl:part name="Body" element="tns:WebComment" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentIDsHttpPostIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="objectID" type="s:string" />
+    <wsdl:part name="lastCommentID" type="s:string" />
+    <wsdl:part name="commentType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentIDsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfInt" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentsHttpPostIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="objectID" type="s:string" />
+    <wsdl:part name="lastCommentID" type="s:string" />
+    <wsdl:part name="commentType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfWebComment" />
+  </wsdl:message>
+  <wsdl:message name="HasNewCommentsHttpPostIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="objectID" type="s:string" />
+    <wsdl:part name="lastCommentID" type="s:string" />
+    <wsdl:part name="commentType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="HasNewCommentsHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="RemoveCommentHttpPostIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="commentID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RemoveCommentHttpPostOut" />
+  <wsdl:portType name="CommentServiceSoap">
+    <wsdl:operation name="AddComment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Posts a new comment.&lt;br /&gt;Set &lt;tt&gt;newComment.InReplyToCommentID&lt;/tt&gt; to &lt;tt&gt;0&lt;/tt&gt; for first-level comments.&lt;br /&gt;Use the following values for &lt;tt&gt;newComment.CommentType&lt;/tt&gt;:&lt;br /&gt;&lt;br /&gt;None = 0,&lt;br /&gt;Video = 1,&lt;br /&gt;Photo = 2,&lt;br /&gt;Wall = 3,&lt;br /&gt;NSpot = 4,&lt;br /&gt;LiveBroadcast = 5,&lt;br /&gt;Blog = 6,&lt;br /&gt;AskAFriend = 7,&lt;br /&gt;PhotoGallery = 21,&lt;br /&gt;Member = 22.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Returns: &lt;/b&gt;New comment identifier.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br /&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;newComment&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt;.&lt;br /&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If &lt;tt&gt;CommentType&lt;/tt&gt; enumeration does not contain any member associated with the specified &lt;tt&gt;newComment.CommentType&lt;/tt&gt;.&lt;br /&gt;&lt;tt&gt;BadCredentialsException&lt;/tt&gt; - If the user with the specified credentials does not exist.&lt;/p&gt;</wsdl:documentation>
+      <wsdl:input message="tns:AddCommentSoapIn" />
+      <wsdl:output message="tns:AddCommentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EditComment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Updates the comment using &lt;tt&gt;editedComment&lt;/tt&gt; data. Note, that you can edit your own comments only.&lt;br /&gt;Use the following values for &lt;tt&gt;newComment.CommentType&lt;/tt&gt;:&lt;br /&gt;&lt;br /&gt;None = 0,&lt;br /&gt;Video = 1,&lt;br /&gt;Photo = 2,&lt;br /&gt;Wall = 3,&lt;br /&gt;NSpot = 4,&lt;br /&gt;LiveBroadcast = 5,&lt;br /&gt;Blog = 6,&lt;br /&gt;AskAFriend = 7,&lt;br /&gt;PhotoGallery = 21,&lt;br /&gt;Member = 22.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br /&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;editedComment&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt;.&lt;br /&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the identifier of the comment creator does not match the identifier of the user that is intending to edit this comment, or if &lt;tt&gt;CommentType&lt;/tt&gt; enumeration does not contain any member with the specified &lt;tt&gt;editedComment.CommentType&lt;/tt&gt;.&lt;br /&gt;&lt;tt&gt;BadCredentialsException&lt;/tt&gt; - If the member with the specified credentials does not exist.&lt;br /&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the comment with the &lt;tt&gt;editedComment.ID&lt;/tt&gt; does not exist.&lt;/p&gt;</wsdl:documentation>
+      <wsdl:input message="tns:EditCommentSoapIn" />
+      <wsdl:output message="tns:EditCommentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetComment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Retrieves the comment with the specified &lt;tt&gt;commentID&lt;/tt&gt;.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br /&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br /&gt;&lt;tt&gt;BadCredentialsException&lt;/tt&gt; - If the member with the specified credentials does not exist.&lt;br /&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the comment with the &lt;tt&gt;commentID&lt;/tt&gt; does not exist.&lt;/p&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetCommentSoapIn" />
+      <wsdl:output message="tns:GetCommentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommentIDs">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Retrieves identifiers of the comments that are newer than the comment with &lt;tt&gt;lastCommentID&lt;/tt&gt;.&lt;br /&gt;Use the following values for &lt;tt&gt;commentType&lt;/tt&gt;:&lt;br /&gt;&lt;br /&gt;None = 0,&lt;br /&gt;Video = 1,&lt;br /&gt;Photo = 2,&lt;br /&gt;Wall = 3,&lt;br /&gt;NSpot = 4,&lt;br /&gt;LiveBroadcast = 5,&lt;br /&gt;Blog = 6,&lt;br /&gt;AskAFriend = 7,&lt;br /&gt;PhotoGallery = 21,&lt;br /&gt;Member = 22.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Returns: &lt;/b&gt;An array of comment identifiers.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br /&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br /&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If &lt;tt&gt;CommentType&lt;/tt&gt; enumeration does not contain any member associated with the specified &lt;tt&gt;commentType&lt;/tt&gt;.&lt;br /&gt;&lt;tt&gt;BadCredentialsException&lt;/tt&gt; - If the member with the specified credentials does not exist.&lt;/p&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetCommentIDsSoapIn" />
+      <wsdl:output message="tns:GetCommentIDsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetComments">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Retrieves comments that are newer than the comment with &lt;tt&gt;lastCommentID&lt;/tt&gt;.&lt;br /&gt;Use the following values for &lt;tt&gt;commentType&lt;/tt&gt;:&lt;br /&gt;&lt;br /&gt;None = 0,&lt;br /&gt;Video = 1,&lt;br /&gt;Photo = 2,&lt;br /&gt;Wall = 3,&lt;br /&gt;NSpot = 4,&lt;br /&gt;LiveBroadcast = 5,&lt;br /&gt;Blog = 6,&lt;br /&gt;AskAFriend = 7,&lt;br /&gt;PhotoGallery = 21,&lt;br /&gt;Member = 22.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Returns: &lt;/b&gt;An array of comments.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br /&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br /&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If &lt;tt&gt;CommentType&lt;/tt&gt; enumeration does not contain any member associated with the specified &lt;tt&gt;commentType&lt;/tt&gt;.&lt;br /&gt;&lt;tt&gt;BadCredentialsException&lt;/tt&gt; - If the member with the specified credentials does not exist.&lt;/p&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetCommentsSoapIn" />
+      <wsdl:output message="tns:GetCommentsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HasNewComments">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Checks whether there are new comments.&lt;br /&gt;Use the following values for &lt;tt&gt;commentType&lt;/tt&gt;:&lt;br /&gt;&lt;br /&gt;None = 0,&lt;br /&gt;Video = 1,&lt;br /&gt;Photo = 2,&lt;br /&gt;Wall = 3,&lt;br /&gt;NSpot = 4,&lt;br /&gt;LiveBroadcast = 5,&lt;br /&gt;Blog = 6,&lt;br /&gt;AskAFriend = 7,&lt;br /&gt;PhotoGallery = 21,&lt;br /&gt;Member = 22.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Returns: &lt;/b&gt;&lt;tt&gt;true&lt;/tt&gt; if there are comments newer than the comment with &lt;tt&gt;lastCommentID&lt;/tt&gt;.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br /&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or&lt;br /&gt;if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br /&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If &lt;tt&gt;CommentType&lt;/tt&gt; enumeration does not contain any member associated with the specified &lt;tt&gt;commentType&lt;/tt&gt;.&lt;br /&gt;&lt;tt&gt;BadCredentialsException&lt;/tt&gt; - If the member with the specified credentials does not exist.&lt;/p&gt;</wsdl:documentation>
+      <wsdl:input message="tns:HasNewCommentsSoapIn" />
+      <wsdl:output message="tns:HasNewCommentsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveComment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Removes the comment with the specified &lt;tt&gt;commentID&lt;/tt&gt;. Note that you can remove your own comments only.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br /&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br /&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the identifier of the comment creator does not match the identifier of the user that is intending to remove this comment.&lt;br /&gt;&lt;tt&gt;BadCredentialsException&lt;/tt&gt; - If the member with the specified credentials does not exist.&lt;br /&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the comment with the specified &lt;tt&gt;commentID&lt;/tt&gt; does not exist.&lt;/p&gt;</wsdl:documentation>
+      <wsdl:input message="tns:RemoveCommentSoapIn" />
+      <wsdl:output message="tns:RemoveCommentSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="CommentServiceHttpGet">
+    <wsdl:operation name="GetComment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Retrieves the comment with the specified &lt;tt&gt;commentID&lt;/tt&gt;.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br /&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br /&gt;&lt;tt&gt;BadCredentialsException&lt;/tt&gt; - If the member with the specified credentials does not exist.&lt;br /&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the comment with the &lt;tt&gt;commentID&lt;/tt&gt; does not exist.&lt;/p&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetCommentHttpGetIn" />
+      <wsdl:output message="tns:GetCommentHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommentIDs">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Retrieves identifiers of the comments that are newer than the comment with &lt;tt&gt;lastCommentID&lt;/tt&gt;.&lt;br /&gt;Use the following values for &lt;tt&gt;commentType&lt;/tt&gt;:&lt;br /&gt;&lt;br /&gt;None = 0,&lt;br /&gt;Video = 1,&lt;br /&gt;Photo = 2,&lt;br /&gt;Wall = 3,&lt;br /&gt;NSpot = 4,&lt;br /&gt;LiveBroadcast = 5,&lt;br /&gt;Blog = 6,&lt;br /&gt;AskAFriend = 7,&lt;br /&gt;PhotoGallery = 21,&lt;br /&gt;Member = 22.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Returns: &lt;/b&gt;An array of comment identifiers.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br /&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br /&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If &lt;tt&gt;CommentType&lt;/tt&gt; enumeration does not contain any member associated with the specified &lt;tt&gt;commentType&lt;/tt&gt;.&lt;br /&gt;&lt;tt&gt;BadCredentialsException&lt;/tt&gt; - If the member with the specified credentials does not exist.&lt;/p&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetCommentIDsHttpGetIn" />
+      <wsdl:output message="tns:GetCommentIDsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetComments">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Retrieves comments that are newer than the comment with &lt;tt&gt;lastCommentID&lt;/tt&gt;.&lt;br /&gt;Use the following values for &lt;tt&gt;commentType&lt;/tt&gt;:&lt;br /&gt;&lt;br /&gt;None = 0,&lt;br /&gt;Video = 1,&lt;br /&gt;Photo = 2,&lt;br /&gt;Wall = 3,&lt;br /&gt;NSpot = 4,&lt;br /&gt;LiveBroadcast = 5,&lt;br /&gt;Blog = 6,&lt;br /&gt;AskAFriend = 7,&lt;br /&gt;PhotoGallery = 21,&lt;br /&gt;Member = 22.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Returns: &lt;/b&gt;An array of comments.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br /&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br /&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If &lt;tt&gt;CommentType&lt;/tt&gt; enumeration does not contain any member associated with the specified &lt;tt&gt;commentType&lt;/tt&gt;.&lt;br /&gt;&lt;tt&gt;BadCredentialsException&lt;/tt&gt; - If the member with the specified credentials does not exist.&lt;/p&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetCommentsHttpGetIn" />
+      <wsdl:output message="tns:GetCommentsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HasNewComments">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Checks whether there are new comments.&lt;br /&gt;Use the following values for &lt;tt&gt;commentType&lt;/tt&gt;:&lt;br /&gt;&lt;br /&gt;None = 0,&lt;br /&gt;Video = 1,&lt;br /&gt;Photo = 2,&lt;br /&gt;Wall = 3,&lt;br /&gt;NSpot = 4,&lt;br /&gt;LiveBroadcast = 5,&lt;br /&gt;Blog = 6,&lt;br /&gt;AskAFriend = 7,&lt;br /&gt;PhotoGallery = 21,&lt;br /&gt;Member = 22.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Returns: &lt;/b&gt;&lt;tt&gt;true&lt;/tt&gt; if there are comments newer than the comment with &lt;tt&gt;lastCommentID&lt;/tt&gt;.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br /&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or&lt;br /&gt;if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br /&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If &lt;tt&gt;CommentType&lt;/tt&gt; enumeration does not contain any member associated with the specified &lt;tt&gt;commentType&lt;/tt&gt;.&lt;br /&gt;&lt;tt&gt;BadCredentialsException&lt;/tt&gt; - If the member with the specified credentials does not exist.&lt;/p&gt;</wsdl:documentation>
+      <wsdl:input message="tns:HasNewCommentsHttpGetIn" />
+      <wsdl:output message="tns:HasNewCommentsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveComment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Removes the comment with the specified &lt;tt&gt;commentID&lt;/tt&gt;. Note that you can remove your own comments only.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br /&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br /&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the identifier of the comment creator does not match the identifier of the user that is intending to remove this comment.&lt;br /&gt;&lt;tt&gt;BadCredentialsException&lt;/tt&gt; - If the member with the specified credentials does not exist.&lt;br /&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the comment with the specified &lt;tt&gt;commentID&lt;/tt&gt; does not exist.&lt;/p&gt;</wsdl:documentation>
+      <wsdl:input message="tns:RemoveCommentHttpGetIn" />
+      <wsdl:output message="tns:RemoveCommentHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="CommentServiceHttpPost">
+    <wsdl:operation name="GetComment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Retrieves the comment with the specified &lt;tt&gt;commentID&lt;/tt&gt;.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br /&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br /&gt;&lt;tt&gt;BadCredentialsException&lt;/tt&gt; - If the member with the specified credentials does not exist.&lt;br /&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the comment with the &lt;tt&gt;commentID&lt;/tt&gt; does not exist.&lt;/p&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetCommentHttpPostIn" />
+      <wsdl:output message="tns:GetCommentHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommentIDs">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Retrieves identifiers of the comments that are newer than the comment with &lt;tt&gt;lastCommentID&lt;/tt&gt;.&lt;br /&gt;Use the following values for &lt;tt&gt;commentType&lt;/tt&gt;:&lt;br /&gt;&lt;br /&gt;None = 0,&lt;br /&gt;Video = 1,&lt;br /&gt;Photo = 2,&lt;br /&gt;Wall = 3,&lt;br /&gt;NSpot = 4,&lt;br /&gt;LiveBroadcast = 5,&lt;br /&gt;Blog = 6,&lt;br /&gt;AskAFriend = 7,&lt;br /&gt;PhotoGallery = 21,&lt;br /&gt;Member = 22.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Returns: &lt;/b&gt;An array of comment identifiers.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br /&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br /&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If &lt;tt&gt;CommentType&lt;/tt&gt; enumeration does not contain any member associated with the specified &lt;tt&gt;commentType&lt;/tt&gt;.&lt;br /&gt;&lt;tt&gt;BadCredentialsException&lt;/tt&gt; - If the member with the specified credentials does not exist.&lt;/p&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetCommentIDsHttpPostIn" />
+      <wsdl:output message="tns:GetCommentIDsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetComments">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Retrieves comments that are newer than the comment with &lt;tt&gt;lastCommentID&lt;/tt&gt;.&lt;br /&gt;Use the following values for &lt;tt&gt;commentType&lt;/tt&gt;:&lt;br /&gt;&lt;br /&gt;None = 0,&lt;br /&gt;Video = 1,&lt;br /&gt;Photo = 2,&lt;br /&gt;Wall = 3,&lt;br /&gt;NSpot = 4,&lt;br /&gt;LiveBroadcast = 5,&lt;br /&gt;Blog = 6,&lt;br /&gt;AskAFriend = 7,&lt;br /&gt;PhotoGallery = 21,&lt;br /&gt;Member = 22.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Returns: &lt;/b&gt;An array of comments.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br /&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br /&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If &lt;tt&gt;CommentType&lt;/tt&gt; enumeration does not contain any member associated with the specified &lt;tt&gt;commentType&lt;/tt&gt;.&lt;br /&gt;&lt;tt&gt;BadCredentialsException&lt;/tt&gt; - If the member with the specified credentials does not exist.&lt;/p&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetCommentsHttpPostIn" />
+      <wsdl:output message="tns:GetCommentsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HasNewComments">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Checks whether there are new comments.&lt;br /&gt;Use the following values for &lt;tt&gt;commentType&lt;/tt&gt;:&lt;br /&gt;&lt;br /&gt;None = 0,&lt;br /&gt;Video = 1,&lt;br /&gt;Photo = 2,&lt;br /&gt;Wall = 3,&lt;br /&gt;NSpot = 4,&lt;br /&gt;LiveBroadcast = 5,&lt;br /&gt;Blog = 6,&lt;br /&gt;AskAFriend = 7,&lt;br /&gt;PhotoGallery = 21,&lt;br /&gt;Member = 22.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Returns: &lt;/b&gt;&lt;tt&gt;true&lt;/tt&gt; if there are comments newer than the comment with &lt;tt&gt;lastCommentID&lt;/tt&gt;.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br /&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or&lt;br /&gt;if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br /&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If &lt;tt&gt;CommentType&lt;/tt&gt; enumeration does not contain any member associated with the specified &lt;tt&gt;commentType&lt;/tt&gt;.&lt;br /&gt;&lt;tt&gt;BadCredentialsException&lt;/tt&gt; - If the member with the specified credentials does not exist.&lt;/p&gt;</wsdl:documentation>
+      <wsdl:input message="tns:HasNewCommentsHttpPostIn" />
+      <wsdl:output message="tns:HasNewCommentsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveComment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Removes the comment with the specified &lt;tt&gt;commentID&lt;/tt&gt;. Note that you can remove your own comments only.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br /&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br /&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the identifier of the comment creator does not match the identifier of the user that is intending to remove this comment.&lt;br /&gt;&lt;tt&gt;BadCredentialsException&lt;/tt&gt; - If the member with the specified credentials does not exist.&lt;br /&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the comment with the specified &lt;tt&gt;commentID&lt;/tt&gt; does not exist.&lt;/p&gt;</wsdl:documentation>
+      <wsdl:input message="tns:RemoveCommentHttpPostIn" />
+      <wsdl:output message="tns:RemoveCommentHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CommentServiceSoap" type="tns:CommentServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddComment">
+      <soap:operation soapAction="http://www.next2friends.com/AddComment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditComment">
+      <soap:operation soapAction="http://www.next2friends.com/EditComment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetComment">
+      <soap:operation soapAction="http://www.next2friends.com/GetComment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommentIDs">
+      <soap:operation soapAction="http://www.next2friends.com/GetCommentIDs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetComments">
+      <soap:operation soapAction="http://www.next2friends.com/GetComments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HasNewComments">
+      <soap:operation soapAction="http://www.next2friends.com/HasNewComments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveComment">
+      <soap:operation soapAction="http://www.next2friends.com/RemoveComment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CommentServiceSoap12" type="tns:CommentServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddComment">
+      <soap12:operation soapAction="http://www.next2friends.com/AddComment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditComment">
+      <soap12:operation soapAction="http://www.next2friends.com/EditComment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetComment">
+      <soap12:operation soapAction="http://www.next2friends.com/GetComment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommentIDs">
+      <soap12:operation soapAction="http://www.next2friends.com/GetCommentIDs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetComments">
+      <soap12:operation soapAction="http://www.next2friends.com/GetComments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HasNewComments">
+      <soap12:operation soapAction="http://www.next2friends.com/HasNewComments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveComment">
+      <soap12:operation soapAction="http://www.next2friends.com/RemoveComment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CommentServiceHttpGet" type="tns:CommentServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetComment">
+      <http:operation location="/GetComment" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommentIDs">
+      <http:operation location="/GetCommentIDs" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetComments">
+      <http:operation location="/GetComments" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HasNewComments">
+      <http:operation location="/HasNewComments" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveComment">
+      <http:operation location="/RemoveComment" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CommentServiceHttpPost" type="tns:CommentServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetComment">
+      <http:operation location="/GetComment" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommentIDs">
+      <http:operation location="/GetCommentIDs" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetComments">
+      <http:operation location="/GetComments" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HasNewComments">
+      <http:operation location="/HasNewComments" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveComment">
+      <http:operation location="/RemoveComment" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CommentService">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Provides functionality to add, edit, and remove comments.</wsdl:documentation>
+    <wsdl:port name="CommentServiceSoap" binding="tns:CommentServiceSoap">
+      <soap:address location="http://services.next2friends.com/n2fwebservices/CommentService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CommentServiceSoap12" binding="tns:CommentServiceSoap12">
+      <soap12:address location="http://services.next2friends.com/n2fwebservices/CommentService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CommentServiceHttpGet" binding="tns:CommentServiceHttpGet">
+      <http:address location="http://services.next2friends.com/n2fwebservices/CommentService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CommentServiceHttpPost" binding="tns:CommentServiceHttpPost">
+      <http:address location="http://services.next2friends.com/n2fwebservices/CommentService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

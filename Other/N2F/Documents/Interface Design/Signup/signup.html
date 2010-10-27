@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="page">
+
+	<!--/header start -->
+	<div id="header"> <a href="http://www.next2friends.com"><img src="images/logo.gif" alt="Next2Friends" id="logo" /></a>
+		<ul id="nav">
+			<li><a href="#" class="current"><span>Home</span></a></li>
+			<li><a href="#"><span>Friends</span></a></li>
+			<li><a href="#"><span>Videos</span></a></li>
+			<li><a href="#"><span>Photos</span></a></li>
+			<li><a href="#"><span>Hotspots</span></a></li>
+			<li><a href="#"><span>Ask a Friends</span></a></li>
+		</ul>
+		<p id="header_nav"><a href="#">Sign Up</a> | <a href="#">Login</a> | <a href="#">Family Filter: ON</a> | <a href="#">Help</a></p>
+		<form id="searchform">
+			<input name="search" type="text" class="form_txt" size="16" />
+			in
+			<select name="category" class="form_menu">
+				<option>Video</option>
+				<option>Image</option>
+			</select>
+			<input name="" type="image" src="images/search-btn.gif" class="submit" />
+		</form>
+		<p id="upload">Upload: <a href="#" title="Video"><img src="images/icon-video.gif" alt="Video" class="video" /></a> <a href="#" title="Photo"><img src="images/icon-image.gif" alt="Image" class="image" /></a></p>
+	</div>
+	<!-- header end -->
+
+
+
+
+
+	<!-- middle start -->
+	<div id="middle" class="clearfix">
+
+		<!--subnav start -->
+		<ul id="subnav" class="clearfix">
+			<li><a href="#">Most Viewed</a></li>
+			<li><a href="#">Most Commented</a></li>
+			<li><a href="#">Most Bookmarketd</a></li>
+			<li><a href="#">Most Recent</a></li>
+		</ul>
+		<!-- subnav end -->
+
+
+
+		<!-- page start -->
+		<div class="page clearfix">
+		
+			<!-- signup col start -->
+			<div class="signup_col">
+				<h2>Create Your Next2Friends Account</h2>
+				<p>It's free and easy. Just fill out the account info below. All fields are required.</p>
+				<!-- signup form div start -->
+				<div class="signup_form">
+					<div class="top"></div>
+					
+						<form action="#" method="get" id="signup_form">
+							<p>
+								<label for="email">Email</label>
+								<input class="form_txt" type="text" name="email" id="email" />
+							</p>
+							<p>
+								<label for="username">Username</label>
+								<input type="text" class="form_txt" name="username" id="username" /> 
+								<a href="#">Check availability</a><br />
+								<small class="indent">Your username can only contain letters A- Z or numbers 0 - 9</small>
+							</p>
+							<p>
+								<label for="password">Password</label>
+								<input type="text" class="form_txt" name="password" id="password" />
+							</p>
+							<p>
+								<label for="confirm">Confirm Password</label>
+								<input type="text" class="form_txt" name="password" id="password" /><br />
+								<span class="indent">Password strength</span>
+							</p>
+							<p>
+								<label for="country">Country</label>
+								<select name="country" id="country" class="form_menu">
+									<option>Please select...</option>
+									<option>United States</option>
+									<option>United Kingdom</option>
+									<option>Canada</option>
+								</select>
+							</p>
+							<p>
+								<label for="postal_code">Postal Code</label>
+								<input type="text" class="form_txt" name="postal_code" id="postal_code" /><br />
+								<small class="indent">Required for US, UK, and Canada only</small>
+							</p>
+							<p>
+								<label>Gender</label>
+								<input type="radio" name="radio" id="male" value="male" /> Male
+								<input type="radio" name="radio" id="female" value="female" /> Female
+							</p>
+							<p>
+								<label>Date of Birth</label>
+								<select class="form_menu">
+									<option>Month</option>
+								</select>
+								<select class="form_menu">
+									<option>Day</option>
+								</select>
+								<select class="form_menu">
+									<option>Year</option>
+								</select>
+							</p>
+							<p class="indent">
+								<img src="images/captcha.gif" alt="captcha" />
+							</p>
+							<p class="indent">
+								<input type="checkbox" name="agree" id="agree" />
+								I agree to the <a href="#">Terms of Use</a> and <a href="#">Privacy of Policy</a>
+							</p>
+							<p class="indent">
+								<input name="signup" type="button" value="Sign Up" class="form_btn" />
+							</p>
+						</form>
+					
+					<div class="bottom"></div>
+				</div>
+				<!-- signup form div end -->
+			</div>
+			<!-- signup col end -->
+
+			<!-- login col start -->
+			<div class="login_col">
+				<h2>Member Login</h2>
+				<p>Already have a Next2Friends account? Login here.</p>
+				
+				<div class="login_form">
+					<div class="top"></div>
+					
+					<form action="#" method="get" id="login_form">
+						<p>
+							<label for="login_email">Email</label>
+							<input type="text" class="form_txt" name="login_email" id="login_email" />
+						</p>
+						<p>
+							<label for="login_password">Password</label>
+							<input type="text" class="form_txt" name="login_password" id="login_password" />
+						</p>
+						<p class="indent">
+							<input name="Login" type="button" value="Login" class="form_btn" />
+						</p>
+						<p class="indent"><small><a href="#">Forgot Username</a> | <a href="#">Forgot Password</a></small></p>
+					</form>
+				</div>
+			</div>
+			<!-- login col end -->
+		
+		</div>
+		<!-- page end -->
+
+
+
+	</div>
+	<!-- middle end -->
+
+	<!-- footer start -->
+	<div id="footer">
+		<p id="credits">Copyright Next2Friends 2007 | Footer Menu | Privacy Policy</p>
+	</div>
+	<!-- footer end -->
+
+</div>
+<!--page end -->
+</body>
+</html>

@@ -1,0 +1,126 @@
+/*
+============================================================================
+ Name        : Next2Friends.rss
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Application resource file
+============================================================================
+*/
+
+//  RESOURCE IDENTIFIER
+NAME HEWB    // 4 letter ID
+
+
+//  INCLUDES
+#include <eikon.rh>
+#include <avkon.rh>
+#include <avkon.rsg>
+#include <appinfo.rh>
+#include "Next2Friends.hrh"
+#include "Next2Friends.rls"
+
+//  RESOURCE DEFINITIONS
+
+// -----------------------------------------------------------------------------
+//
+//    Define the resource file signature
+//    This resource should be empty.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE RSS_SIGNATURE
+    {
+    }
+
+// -----------------------------------------------------------------------------
+//
+//    Default Document Name
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE TBUF r_default_document_name
+    {
+    buf="HEWB";
+    }
+
+// -----------------------------------------------------------------------------
+//
+//    Define default menu and CBA key.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE EIK_APP_INFO
+    {
+    menubar = r_next2friends_menubar;
+    cba = R_AVKON_SOFTKEYS_OPTIONS_EXIT;
+    }
+
+
+// -----------------------------------------------------------------------------
+//
+//    Localizable application information
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE LOCALISABLE_APP_INFO r_next2friends_localisable_app_info
+    {
+    short_caption = qtn_hewb_short_caption_string;
+    caption_and_icon = 
+    CAPTION_AND_ICON_INFO
+        {
+        caption = qtn_hewb_caption_string;
+
+        number_of_icons = 1;
+        icon_file = "\\resource\\apps\\Next2Friends_reg.mif";
+        };
+    }
+
+// -----------------------------------------------------------------------------
+//
+//   r_next2friends_menubar
+//   Menubar for Next2Friends example
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_BAR r_next2friends_menubar
+    {
+    titles =
+        {
+        MENU_TITLE { menu_pane = r_next2friends_menu; }
+        };
+    }
+
+// -----------------------------------------------------------------------------
+//
+//   r_next2friends_menu
+//   Menu for "Options"
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_next2friends_menu
+    {
+    items =
+        {
+        // added the new Options menu command here
+        MENU_ITEM
+                {
+                command = ENext2FriendsCommand1;
+                txt = qtn_hewb_command1;
+                },
+        MENU_ITEM
+                {
+                command = EAknSoftkeyExit;
+                txt = qtn_hewb_exit;
+                }
+        };
+    }
+
+// -----------------------------------------------------------------------------
+//
+// Resources for messages.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE TBUF32 r_hewb_command1_text { buf=qtn_hewb_command1_text; }
+

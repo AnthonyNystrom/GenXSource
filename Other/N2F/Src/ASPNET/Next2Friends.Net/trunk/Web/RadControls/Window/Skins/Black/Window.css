@@ -1,0 +1,107 @@
+.RadWWrapperActive td{padding:0px;font:normal 11px "segoe ui",arial, sans-serif;}
+
+iframe.RadWContentFrame{background: white;} /* Mozilla overlay */
+
+.RadWWrapperActive{border-collapse: collapse}
+
+.RadWTitleRow{height:41px;cursor: default;}
+.RadWHeaderTopResizer{height:6px;font-size:6px;line-height:6px}
+
+.RadWWrapperHeaderLeft{width:11px;background:url(CssImg/RadWHeaderLeft.gif) no-repeat}
+.RadWWrapperHeaderCenter{background:url(CssImg/RadWHeaderCenter.gif) repeat-x;text-align:left}
+.RadWWrapperHeaderCenter .RadWWrapperHeaderCenter{background:transparent}
+.RadWWrapperHeaderRight{width:11px;background:url(CssImg/RadWHeaderRight.gif) no-repeat}
+.RadWTitleText{padding-left:0.4em;color:#0d5776;font-weight:bold;font-size:14px}
+
+.RadWWrapperHeaderCenter .RadWWrapperHeaderCenter img{margin:0 1px}
+
+.RadWWrapperHeaderCenter table{height:32px}
+
+.RadWButton{cursor:pointer;}
+
+.RadWWrapperBodyLeft{width:11px;background:url(CssImg/RadWBodyLeft.gif) repeat-y #292929}
+.RadWWrapperBodyCenter{background:#292929}
+.RadWWrapperBodyRight{width:11px;background:url(CssImg/RadWBodyRight.gif) 100% 0 repeat-y #292929}
+
+.RadWStatusRow{height:25px;background:url(CssImg/RadWStatus.gif) repeat-x;color:#717171;font-size:10px}
+.RadWStatusRow input{display:none;}
+.RadWStatusRow img{height:12px;width:12px;margin:0 3px}
+div.RadWStatus{}
+
+.RadWWrapperFooterLeft{width:15px;height:35px;background:url(CssImg/RadWFooterLeft.gif) no-repeat}
+.RadWWrapperFooterCenter{height:35px;background:url(CssImg/RadWFooterCenter.gif) repeat-x}
+.RadWWrapperFooterRight{width:25px;height:35px;background:url(CssImg/RadWFooterRight.gif) no-repeat}
+
+/* Firefox Fix to show the side TDs */
+.RadWWrapperHeaderLeft:before,
+.RadWWrapperBodyLeft:before,
+.RadWWrapperFooterLeft:before,
+.RadWWrapperHeaderRight:before,
+.RadWWrapperBodyRight:before,
+.RadWWrapperFooterRight:before
+{
+	content: " ";
+	display: block;
+}
+
+.RadWWrapperHeaderLeft:before,
+.RadWWrapperHeaderRight:before
+{
+	width: 11px;
+}
+
+.RadWWrapperBodyLeft:before,
+.RadWWrapperBodyRight:before
+{
+	width: 11px;
+}
+
+.RadWWrapperFooterLeft:before
+{
+	width: 15px;
+}
+
+.RadWWrapperFooterRight:before
+{
+	width: 25px;
+}
+
+/* Firefox fix end */
+
+.RadWModalImage
+{
+	background: url('Img/ModalImageBg.gif');
+}
+
+.RadWDragHelper
+{		
+	border: solid 1px solid #ccc;
+	background: #ccc;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50); /* IE */
+	-moz-opacity: 0.5; /* Mozilla */
+	opacity: 0.5; /* CSS3 */
+	margin: 0px;
+	padding: 0px;	
+	position: absolute;
+	z-index: 50000;
+	overflow: hidden;	
+}
+
+.RadWWrapperInactive
+{
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=90); /* IE */
+	-moz-opacity: 0.9; /* Moz */
+	opacity: 0.9; /* CSS3 */
+}
+
+.RadWMinimizedOver,
+.RadWMinimizedActive,
+.RadWMinimizedInactive,
+.RadWMinimizedPageLoaded
+{width:120px;background:url(CssImg/RadWHeaderCenter.gif) repeat-x #292929;text-align:left}
+
+.RadWMinimizedOver .RadWTitleRow,
+.RadWMinimizedActive .RadWTitleRow,
+.RadWMinimizedInactive .RadWTitleRow,
+.RadWMinimizedPageLoaded .RadWTitleRow
+{background-color:#292929;}

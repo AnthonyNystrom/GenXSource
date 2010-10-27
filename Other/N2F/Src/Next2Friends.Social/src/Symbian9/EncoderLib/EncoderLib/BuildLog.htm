@@ -1,0 +1,50 @@
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=windows-1251">
+</head>
+<body>
+<pre>
+<table width=100% bgcolor=#CFCFE5><tr> <td> <font face=arial size=+3>
+Build Log
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>
+<h3>------- Build started: Project: EncoderLib, Configuration: Rel_S60_31_GCCE|Win32 -------
+</h3>
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Command Lines
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>Creating temporary file "C:\DOCUME~1\ALEXEY~1.ALE\LOCALS~1\Temp\BAT000004.bat" with contents
+[
+@echo off
+RCMake.exe "D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\EncoderLib\EncoderLib\EncoderLib.vcproj" S60_31 GCCE UREL rebuild
+if errorlevel 1 goto VCReportError
+goto VCEnd
+:VCReportError
+echo Project : error PRJ0019: A tool returned an error code from "Performing Makefile project actions"
+exit 1
+:VCEnd
+]
+Creating command line "C:\DOCUME~1\ALEXEY~1.ALE\LOCALS~1\Temp\BAT000004.bat"
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Output Window
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>Performing Makefile project actions
+* Current build configuration: GCCE UREL
+Converting multi-icons...
+* Creating makefile for platform GCCE
+epocroot = 
+* d:\Nokia\Tools\Carbide_vs\makmake.bat \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\EncoderLib\EncoderLib\group\EncoderLib GCCE
+initialiseConfig: GCCE
+* Running build action: rebuild
+epocroot = 
+* d:\Nokia\Tools\Carbide_vs\make.bat -f D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\EncoderLib\EncoderLib\group\EncoderLib.GCCE CLEANUREL UREL
+perl -S emkdir.pl \symbian\9.2\s60_3rd_fp1\epoc32\build\projects\next2friends\dev\brewwmsys\src\symbian9\encoderlib\encoderlib\group\encoderlib\gcce\urel
+Creating \symbian\9.2\s60_3rd_fp1\epoc32\build\projects\next2friends\dev\brewwmsys\src\symbian9\encoderlib\encoderlib\group\encoderlib\gcce\urel
+encoderlib.cpp
+arm-none-symbianelf-g++    -O2 -fno-unit-at-a-time  -Wall -Wno-ctor-dtor-privacy -Wno-unknown-pragmas  -fexceptions -march=armv5t      -mapcs -pipe -nostdinc -c    -msoft-float       -DNDEBUG -D_UNICODE -D__GCCE__  -D__SYMBIAN32__ -D__SERIES60_31__ -D__SERIES60_3X__ -D__GCCE__ -D__EPOC32__ -D__MARM__ -D__EABI__ -D__MARM_ARMV5__ -D__SUPPORT_CPP_EXCEPTIONS__ -D__MARM_ARMV5__  -D__PRODUCT_INCLUDE__=\"/Symbian/9.2/S60_3rd_FP1/epoc32/include/variant/Symbian_OS_v9.2.hrh\"    -x c++ -include /Symbian/9.2/S60_3rd_FP1/EPOC32/INCLUDE/GCCE/GCCE.h  -I /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/EncoderLib/EncoderLib/src -I /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/framework  -I /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/EncoderLib/EncoderLib/inc -I /Symbian/9.2/S60_3rd_FP1/EPOC32/include -I /Symbian/9.2/S60_3rd_FP1/epoc32/include/variant -I "D:/Program Files/CSL Arm Toolchain/bin/../lib/gcc/arm-none-symbianelf/3.4.3/include" -o /Symbian/9.2/S60_3rd_FP1/EPOC32/BUILD/Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/EncoderLib/EncoderLib/group/EncoderLib/GCCE/UREL/EncoderLib.o /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/EncoderLib/EncoderLib/src/encoderlib.cpp
+make: *** Warning: File `\symbian\9.2\s60_3rd_fp1\epoc32\build\projects\next2friends\dev\brewwmsys\src\symbian9\encoderlib\encoderlib\group\encoderlib\gcce' has modification time in the future (2008-08-22 15:25:16 > 2008-08-22 15:25:14)
+arm-none-symbianelf-ar  cr  \Symbian\9.2\S60_3rd_FP1\EPOC32\RELEASE\ARMV5\UREL\EncoderLib.lib \Symbian\9.2\S60_3rd_FP1\EPOC32\BUILD\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\EncoderLib\EncoderLib\group\EncoderLib\GCCE\UREL\EncoderLib.o
+make: warning:  Clock skew detected.  Your build may be incomplete.
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Results
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>
+Build log was saved at "file://d:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\EncoderLib\EncoderLib\\BuildLog.htm"
+EncoderLib - 0 error(s), 1 warning(s)</pre></table><table   width=100% height=20 bgcolor=#CFCFE5><tr><td><font face=arial size=+2>
+</font></table></body></html>

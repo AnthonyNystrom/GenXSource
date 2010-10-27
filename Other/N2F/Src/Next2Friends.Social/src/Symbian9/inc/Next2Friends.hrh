@@ -1,0 +1,21 @@
+/*
+============================================================================
+ Name        : Next2Friends.hrh
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Enumerations used in the application UI
+============================================================================
+*/
+
+#ifndef __NEXT2FRIENDS_HRH__
+#define __NEXT2FRIENDS_HRH__
+
+// Next2Friends enumerate command codes
+enum TNext2FriendsIds
+    {
+    ENext2FriendsCommand1 = 1, // start value must not be 0
+    ENext2FriendsCommand2
+    };
+
+#endif // __NEXT2FRIENDS_HRH__

@@ -1,0 +1,1 @@
+﻿<%@ WebService Language="C#" CodeBehind="GeoMessage.asmx.cs" Class="Next2Friends.GeoMessage.GeoMessage" %>

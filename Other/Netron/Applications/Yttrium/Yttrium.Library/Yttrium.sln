@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yttrium", "Yttrium.csproj", "{1E5EA7C4-F07E-4CC2-8F43-F247FC99E599}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug + Code Analysis|Any CPU = Debug + Code Analysis|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release + XML|Any CPU = Release + XML|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E5EA7C4-F07E-4CC2-8F43-F247FC99E599}.Debug + Code Analysis|Any CPU.ActiveCfg = Debug + Code Analysis|Any CPU
+		{1E5EA7C4-F07E-4CC2-8F43-F247FC99E599}.Debug + Code Analysis|Any CPU.Build.0 = Debug + Code Analysis|Any CPU
+		{1E5EA7C4-F07E-4CC2-8F43-F247FC99E599}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E5EA7C4-F07E-4CC2-8F43-F247FC99E599}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E5EA7C4-F07E-4CC2-8F43-F247FC99E599}.Release + XML|Any CPU.ActiveCfg = Release + XML|Any CPU
+		{1E5EA7C4-F07E-4CC2-8F43-F247FC99E599}.Release + XML|Any CPU.Build.0 = Release + XML|Any CPU
+		{1E5EA7C4-F07E-4CC2-8F43-F247FC99E599}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E5EA7C4-F07E-4CC2-8F43-F247FC99E599}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

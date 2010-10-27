@@ -1,0 +1,142 @@
+/*
+============================================================================
+ Name        : Sup.rls
+ Author      : Vitaly Vinogradov
+ Version     : 1.0.0
+ Copyright   : (c) Next2Friends, 2008
+ Description : String localization file
+============================================================================
+*/
+
+//  LOCALISATION STRINGS
+
+//d:Caption string for app.
+rls_string qtn_sup_caption_string "N2F Snap-up"
+
+//d:Short caption string for app.
+rls_string qtn_sup_short_caption_string "N2F Snap-up"
+
+//d:Set internet access point
+rls_string qtn_sup_set_iap "Set access point"
+
+//d:Third item in "Options" menu pane, "Help" event
+rls_string qtn_help "Help"
+
+//d:Forth item in "Options" menu page, "About" event
+rls_string qtn_about "About"
+
+//d:Third item in "Options" menu pane, "exit" event.
+rls_string qtn_sup_exit "Exit"
+
+// Main view items
+rls_string qtn_upload_images "0\tUpload Images\t\t"
+
+rls_string qtn_filebrowser "0\tFile Browser\t\t"
+
+rls_string qtn_upload_imagecart_short "1\tUpload Cart\t\t"
+
+rls_string qtn_upload_imagecart "1\tUpload Images Cart\t\t"
+
+rls_string qtn_credentials "2\tCredentials\t\t"
+
+rls_string qtn_exit "3\tExit\t\t"
+
+
+// Upload images cart view menu
+rls_string qtn_sup_select "Select"
+
+rls_string qtn_upload_images_upload "Upload"
+
+rls_string qtn_upload_images_file_browser "File Browser"
+
+rls_string qtn_upload_images_deselect "Deselect"
+
+rls_string qtn_upload_images_remove_selected "Remove selected"
+
+rls_string qtn_upload_images_remove_all "Remove all"
+
+// File browser view menu
+rls_string qtn_filebrowser_goto_upload "Go to Upload Cart"
+
+rls_string qtn_filebrowser_addto_upload "Add to Upload Cart"
+
+rls_string qtn_filebrowser_open_dir "Open"
+
+rls_string qtn_filebrowser_file_properties "File properties"
+
+rls_string qtn_filebrowser_preview "Preview"
+
+// File browser view auxilary strings
+rls_string qtn_filebrowser_phonememory " (phone memory)"
+
+rls_string qtn_filebrowser_cardmemory " (card memory)"
+
+
+// Generally used strings
+rls_string qtn_sup_back "Back"
+
+rls_string qtn_sup_cancel "Cancel"
+
+rls_string qtn_sup_menu "Menu"
+
+rls_string qtn_sup_continue "Continue"
+
+rls_string qtn_sup_more "More"
+
+
+// Login view labels
+rls_string qtn_sup_login_label "Login"
+
+rls_string qtn_sup_password_label "Password"
+
+// Connection in process dialog
+rls_string qtn_sup_login_waitnote "Connecting, please wait..."
+
+// Connection failure note dialog
+rls_string qtn_sup_login_failure_dialog "Posting credentials to server failed! Please, try later."
+
+// Empty credentials warning
+rls_string qtn_sup_login_empty_credentials "Login or password couldn't be empty!"
+
+// Connection initialization error
+rls_string qtn_sup_connection_not_ready "Error has occured while initializating connection"
+
+// Upload in process dialog
+rls_string qtn_sup_upload_waitnote "Submitting images to server..."
+
+// Upload failure note dialog
+rls_string qtn_sup_upload_failure_dialog "Failed to upload..."
+
+// Upload success confirmation
+rls_string qtn_sup_upload_confimation_dialog "Images have been submitted to the server"
+
+// Upload success confirmation (for several images)
+rls_string qtn_sup_upload_confimation_dialog_several "%d images have been submitted to the server"
+
+// Credentials are not valid
+rls_string qtn_sup_upload_failure_credentials "Credentials are not valid"
+
+// There is no image to upload
+rls_string qtn_sup_upload_no_image "There is no image to upload"
+
+rls_string qtn_sup_empty_image_cart "Image cart is empty.\nUse file browser to choose pictures for uploading"
+
+// Warning about image size
+rls_string qtn_sup_upload_large_image "Image '%S' is rather large for using in mobile applications.\nProcess it anyway?"
+
+//d:About dialog title
+rls_string qtn_about_dialog_title "About"
+
+//d:About dialog text
+rls_string qtn_about_dialog_text "Snap-up Version 1.0.0\n\nAuthor: Next2Friends\n\nSupport: contact@next2friends.com\n\n(c) Next2Friends, 2008.\n\nSnap Up, or SUP, stands for Snap and Upload. It is a simple way to snap and upload photos to your Next2Friends profile. Want to create a live photo gallery from an event for your friends to view? Or maybe you want to save space on your mobile device’s hard drive. Either way, Next2Friends allows you to just snap photos and upload them to your profile for later viewing and editing."
+
+//d:Privacy Statement file name
+rls_string qtn_privacy_statement_filename "PrivacyStatement.txt"
+
+//d:Privacy Statement dialog header
+rls_string qtn_privacy_statement_header "SUP Privacy Statement"
+
+//!New code
+rls_string qtn_question_form_initial_text "Write your question here..."
+
+// End of File

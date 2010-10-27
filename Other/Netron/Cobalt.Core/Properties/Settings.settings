@@ -1,0 +1,51 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Netron.Cobalt.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="HttpPort" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1458</Value>
+    </Setting>
+    <Setting Name="BinarySerializationSwitch" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="BinaryDeserializationSwitch" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="HttpEnabled" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="LineStyleStripLocation" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">3, 25</Value>
+    </Setting>
+    <Setting Name="DrawingStripLocation" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">578, 0</Value>
+    </Setting>
+    <Setting Name="ActionStripLocation" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">389, 0</Value>
+    </Setting>
+    <Setting Name="BrowserStripLocation" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">3, 49</Value>
+    </Setting>
+    <Setting Name="WebBrowserDockState" Type="Netron.Neon.WinFormsUI.DockState" Scope="User">
+      <Value Profile="(Default)">Document</Value>
+    </Setting>
+    <Setting Name="DiagramDockState" Type="Netron.Neon.WinFormsUI.DockState" Scope="User">
+      <Value Profile="(Default)">Document</Value>
+    </Setting>
+    <Setting Name="PropertyDockState" Type="Netron.Neon.WinFormsUI.DockState" Scope="User">
+      <Value Profile="(Default)">DockLeft</Value>
+    </Setting>
+    <Setting Name="ShapesDockState" Type="Netron.Neon.WinFormsUI.DockState" Scope="User">
+      <Value Profile="(Default)">DockRight</Value>
+    </Setting>
+    <Setting Name="OutputDockState" Type="Netron.Neon.WinFormsUI.DockState" Scope="User">
+      <Value Profile="(Default)">DockBottom</Value>
+    </Setting>
+    <Setting Name="HttpDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">/../../HTTP</Value>
+    </Setting>
+    <Setting Name="ShellDockState" Type="Netron.Neon.WinFormsUI.DockState" Scope="User">
+      <Value Profile="(Default)">DockBottom</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

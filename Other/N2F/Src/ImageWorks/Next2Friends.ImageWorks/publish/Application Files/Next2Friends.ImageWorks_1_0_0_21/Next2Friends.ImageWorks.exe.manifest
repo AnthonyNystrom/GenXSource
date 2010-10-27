@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly manifestVersion="1.0" xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1">
+  <asmv1:assemblyIdentity version="1.0.0.21" name="Next2Friends.ImageWorks.exe" publicKeyToken="59f804230470a335" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:publisher="Next2Friends.ImageWorks" asmv2:product="Next2Friends.ImageWorks" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Next2Friends.ImageWorks" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Next2Friends.ImageWorks.exe" parameters="" />
+    <hostInBrowser xmlns="urn:schemas-microsoft-com:asm.v3" />
+  </entryPoint>
+  <co.v1:useManifestForTrust xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet class="System.Security.PermissionSet" version="1" Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- UAC Manifest Options
+            If you want to change the Windows User Account Control level replace the 
+            requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            If you want to utilize File and Registry Virtualization for backward 
+            compatibility then delete the requestedExecutionLevel node.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="2.0.50727.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="System.Core" version="3.5.0.0" publicKeyToken="b77a5c561934e089" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="WindowsBase" version="3.0.0.0" publicKeyToken="31bf3856ad364e35" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Next2Friends.ImageWorks.exe" size="607232">
+      <assemblyIdentity name="Next2Friends.ImageWorks" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>bs6bIZ+zd+dPJN8b2UT7SLxsQSY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Next2Friends.ImageWorks.Filters.dll" size="22016">
+      <assemblyIdentity name="Next2Friends.ImageWorks.Filters" version="1.0.0.0" publicKeyToken="9CFA11538A327F84" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>VNxA81Y+VqqvEjR+A8+qwthlIA4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Next2Friends.ImageWorks.exe.config" size="1558">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>2eM70J3iEm4pdBO5/f/0SsuRfdU=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=AnthonyNystr-PC\AnthonyNystrom" issuerKeyHash="7977575ed9cc53b472df6c17acf80173f7e64d61" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>STjnHSHOdbG/gZA1gN1Z/GNB0lI=</DigestValue></Reference></SignedInfo><SignatureValue>K6jDrl5rBFW8VFnyBJyNoKv3dmNVUHW9vSwUwhkXU/xS06yDxRiKG4m3/MtSQZdGwtwaGBN30J7vn2mSh5ercXUzTDIKZoj8gZeV1uL61Y9I02dHwhBXeO8JnOQs3DjZKQRoqMer9T2I4u5Pnq/ZSZ0rtT4An4qgPBSTPBLTcSI=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>w1/iws+Po556NWSmlWZZOTZn7uwTaEqsF7IjhkiVcsnsrtxi8lWJXdKM6ANwmSB3UrGOjCgojSDfrnFOO1iSHJt0D9yOg1T/A+9v7ZpHJN/jX8AMy/uTD1YtIYxlsNbeXOLdZzy901GYVT/FV1EYejKsEatZ1HXaSmECciBPjAM=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="52d24163fc59dd80359081bfb175ce211de73849" Description="" Url=""><as:assemblyIdentity version="1.0.0.21" name="Next2Friends.ImageWorks.exe" publicKeyToken="59f804230470a335" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=AnthonyNystr-PC\AnthonyNystrom</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>673nLSOLB8GdxGJzmgzjeAp/R5A=</DigestValue></Reference></SignedInfo><SignatureValue>miJ+uT/SuRL9vW/lCpiWShpXZajB34oH8LoP9w4R/HAKW5yxYN00bd2xqftP4UxHF1Vy2bYZhXVt20sNLq2NeBwiT93HCkOeNhjpsLHHZMXax0pJz0lvrAYhLmD1RdFCrASLoyqSTitV2R3C3XgS4R+WdLf9d4ZYtmazO33NJvk=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>w1/iws+Po556NWSmlWZZOTZn7uwTaEqsF7IjhkiVcsnsrtxi8lWJXdKM6ANwmSB3UrGOjCgojSDfrnFOO1iSHJt0D9yOg1T/A+9v7ZpHJN/jX8AMy/uTD1YtIYxlsNbeXOLdZzy901GYVT/FV1EYejKsEatZ1HXaSmECciBPjAM=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIICETCCAXqgAwIBAgIQoYACuv2CiLJO3uLmaADuMTANBgkqhkiG9w0BAQUFADBHMUUwQwYDVQQDHjwAQQBuAHQAaABvAG4AeQBOAHkAcwB0AHIALQBQAEMAXABBAG4AdABoAG8AbgB5AE4AeQBzAHQAcgBvAG0wHhcNMDgwNjE5MDM1ODI0WhcNMDkwNjE5MDk1ODI0WjBHMUUwQwYDVQQDHjwAQQBuAHQAaABvAG4AeQBOAHkAcwB0AHIALQBQAEMAXABBAG4AdABoAG8AbgB5AE4AeQBzAHQAcgBvAG0wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMNf4sLPj6OeejVkppVmWTk2Z+7sE2hKrBeyI4ZIlXLJ7K7cYvJViV3SjOgDcJkgd1KxjowoKI0g365xTjtYkhybdA/cjoNU/wPvb+2aRyTf41/ADMv7kw9WLSGMZbDW3lzi3Wc8vdNRmFU/xVdRGHoyrBGrWdR12kphAnIgT4wDAgMBAAEwDQYJKoZIhvcNAQEFBQADgYEARGlirpm6k66p6n4OnmxNvXGawetteHtbwXjMsxi63KH43I2piUNlpvyleYjgyGXFUQ6Yc8rpqRINAo+8CPEf0PeBnlUTrbU8UNGq7JHT/8WjQ7NjKQqKyVvRq8y00hpy7ViDxuxjCCdFpFKmHw0B74RW8A8hwhpZ4odEuXwIRPU=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

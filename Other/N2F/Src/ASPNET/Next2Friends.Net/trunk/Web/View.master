@@ -1,0 +1,208 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Main.master" AutoEventWireup="true" CodeFile="View.master.cs" Inherits="ViewMaster" %>
+<%@ MasterType VirtualPath="~/Main.master" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+
+<script type="text/javascript" src="/lib/FancyZoom.js"></script>
+<script type="text/javascript" src="/js/view.master.js"></script>
+<script type="text/javascript" src="/lib/FancyZoomHTML.js"></script>
+
+<script language="javascript" type="text/javascript">
+    function unfriendMember(WebMemberID){
+        if(confirm("Are you sure you want to permanently remove this friend from your network?")){
+            ViewMaster.UnfriendMember(WebMemberID, unfriendMember_Callback);
+        }
+    }
+
+    function unfriendMember_Callback(response){
+        
+        if(response.value!=null){
+            $('#spanBlockFriends').html("&nbsp;<img src='/images/check.gif' />");
+            $('.block_user').html("Friend removed");
+            $('.block_user').attr("href","javascript:void(0);");           
+        }
+    }
+</script>
+
+<%if (IsMyPage)
+  { %>
+       <script type="text/javascript" src="/lib/jquery_thickbox.js"></script>
+       <style type="text/css" media="all">@import "/lib/Thickbox.css";</style>
+<%} %> 
+<style type="text/css">
+ .profile_box {
+	<%=ColorScheme%>
+}
+/* profile change skin color */
+.profile_shortcuts{
+	border: 1px solid;
+	<%=ColorScheme%>	
+}
+.profile_shortcuts a{
+	color:#000000;
+}
+
+</style>
+
+	<!-- middle start -->
+	<div id="middle" class="clearfix no_subnav">
+
+			<!-- profile left start -->
+			<div class="profile_leftcol">
+
+				<!-- box start -->
+          <!-- box start -->
+            <div class="profile_box">
+                <h3 class="profile_name">
+                    <a href="/users/<%=ViewingMember.NickName %>"><%=ViewingMember.NickName%></a></h3>
+                <p class="profile_pic">
+                    
+                    <a href="/users/<%=ViewingMember.NickName %>"><img src="<%=PhotoURL%>" alt="<%=ViewingMember.NickName %> profile pic" id="imgProfile" /><span><a class="ppZoom" href="/<%=LargePhotoURL%>"></a></span></a>
+                    <p>
+                        <%if (ProfileDefaultPageType != DefaultPageType.Video)
+                          { %>
+                        <a href="<%=LargePhotoURL%>">Zoom Avatar</a>
+                        <%} %>
+
+                    <% if (IsMyPage)
+                       {%>
+                   
+
+                     | <a href="/cphotopicker.aspx?m=<%=ViewingMember.WebMemberID %>&keepThis=false&TB_iframe=true&height=480&width=630" title="Upload and frame your profile photo" class="thickbox">Edit Profile Photo</a></p>
+                    <%} %>
+                    </p>
+                   
+                <p> 
+                    <%if (TagLine != "")
+                      {%>
+                    <strong><span style="font-size: 90%;color:gray"><%=ViewingMember.NickName %> is: <%=TagLine%></span></strong>
+                    <%} %>
+                    <%if (Distance > 0 ) 
+                    {%>
+                        <strong>You are</strong>: <%=Distance %> miles from <%=ViewingMember.NickName%><br />
+                    <%}%>
+                 
+                        
+                   <%-- <strong>Last Online</strong>: <%=ViewingMember.CountryName%><br />--%>
+<%--                    <strong>Subscribers</strong>: <a href="#subscribers"><%=NumberOfMemberSubscribers%></a> <%if (!IsMyPage)
+                                                                                                               { %>| <a href="<%=SubscribeLink %>">Subscribe</a> <%} %><br />
+                    <strong>Wall posts</strong>: <a href="/users/<%=ViewingMember.NickName %>/wall"><span id="spanNumberOfComments1"><%=NumberOfComments%></span></a><br />
+                    <strong>Videos</strong>: <a href="/users/<%=ViewingMember.NickName %>/videos"><%=NumberOfVideos%></a><br />
+                    <strong>Photos</strong>: <a href="/users/<%=ViewingMember.NickName %>/photos"><%=NumberOfPhotos%></a><br />
+                    <strong>Friends</strong>: <a href="/users/<%=ViewingMember.NickName %>/friends"><%=NumberOfFriends%></a>--%>
+                </p>
+                <%if (IsMyPage)
+                  { %>
+                <ul class="profile_menu bulleted">					
+					<li><a href="/settings">Settings</a></li>
+					<li><a href="/MatchProfile.aspx">Tagging Profile</a></li>
+				</ul>
+				<%} %>
+                <%if (!IsMyPage)
+                  { %>
+                <ul class="profile_menu">
+                    <li><a href="<%=SubscribeLink %>" onmouseover="return true;" class="subscribe">Subscribe</a><span id="spanSubscribe"></span></li>
+                    <%if (!IsMyPage)
+                      { %>
+
+                    <%if (FriendshipStatus == FriendRequestStatus.AlreadyFriend)
+                    { %>
+                    <li><a href="<%=AddToFriendsLink %>" onmouseover="return true;" class="block_user"><%=AddToFriendText%></a><span id="spanBlockFriends"></span>
+                    <%}else {%>
+                    <li><a href="<%=AddToFriendsLink %>" onmouseover="return true;" class="add_to_friend"><%=AddToFriendText%></a><span id="spanAddToFriends"></span>
+                    <%} %>
+                    
+                   <%-- <%if (FriendshipStatus != FriendRequestStatus.NotAFriend){%>--%>
+                                                                                                                                                                     
+                   <%} %>
+                    <li><a href="<%=SendMessageLink %>" onmouseover="return true;" class="send_message">Send Message</a></li>
+                   <%-- <li><a href="<%=BlockMemberLink %>" class="block_user">Block Member</a><span id="spanBlockMember"></span></li>--%>
+                  <%--  <li><a href="<%=AddFavouritesLink %>" onmouseover="return true;" class="add_favorites">Add to Favorites</a><span id="spanAddFavourites"></span></li>--%>
+                </ul>
+                <%} %> 
+                <a name="friends"></a>
+                <asp:ContentPlaceHolder ID="LeftUpperContentHolder" runat="server">
+                </asp:ContentPlaceHolder>  
+            </div>
+            <asp:ContentPlaceHolder ID="LeftColContentHolder" runat="server">
+                </asp:ContentPlaceHolder>
+				<!-- box end -->
+				
+
+			</div>
+			<!-- profile left end -->
+
+
+			<!-- profile right start -->
+			<div class="profile_rightcol">
+			<p class="profile_shortcuts">
+					<a href="/users/<%=ViewingMember.NickName %>">Profile</a> <a href="/users/<%=ViewingMember.NickName %>/aboutme">Profile</a> <a href="/users/<%=ViewingMember.NickName %>/videos">Videos</a> <a href="/users/<%=ViewingMember.NickName %>/photos">Photos</a> <%--<a href="Blog.aspx?m=<%=ViewingMember.WebMemberID %>">Blog</a> --%><a href="/users/<%=ViewingMember.NickName %>/wall">Wall</a> <a href="/users/<%=ViewingMember.NickName %>/friends">Friends</a> <a href="/users/<%=ViewingMember.NickName %>/blog">Blog</a> 
+				</p>
+				<%if (IsMyPage)
+      {%>
+				<!-- change skin end-->				
+				<div class="change_skin" style="z-index:99999">
+					<a href="javascript:showSkins();" class="btn_change_skin">Change Color</a>
+					<div class="avail_skins clearfix" id="divSkins" style="display:none;">
+					
+					    <a href="javascript:cSkin('#f7f2fd','#e5c9e6',1);" class="skin_color" style="background-color: #f7f2fd; border-color: #e5c9e6"> </a>
+						<a href="javascript:cSkin('#f1fedd','#d3e2bd',2);" class="skin_color" style="background-color: #f1fedd; border-color: #d3e2bd"> </a>
+						<a href="javascript:cSkin('#fefce3','#f6dabb',3);" class="skin_color" style="background-color: #fefce3; border-color: #f6dabb"> </a>
+						<a href="javascript:cSkin('#ecf3fa','#bbd2db',4);" class="skin_color" style="background-color: #ecf3fa; border-color: #bbd2db"> </a>
+						<a href="javascript:cSkin('#eeeffb','#c4c2d5',5);" class="skin_color" style="background-color: #eeeffb; border-color: #c4c2d5"> </a>
+						<a href="javascript:cSkin('#fcf2f6','#e8aec7',6);" class="skin_color" style="background-color: #fcf2f6; border-color: #e8aec7"> </a>
+						<a href="javascript:cSkin('#fbf6f1','#dbc5ad',7);" class="skin_color" style="background-color: #fbf6f1; border-color: #dbc5ad"> </a>
+						<a href="javascript:cSkin('#f3f1f1','#d7d7d7',8);" class="skin_color" style="background-color: #f3f1f1; border-color: #d7d7d7"> </a>
+						<a href="javascript:cSkin('#fdecf4','#eac3da',9);" class="skin_color" style="background-color: #fdecf4; border-color: #eac3da"> </a>
+                        <a href="javascript:cSkin('#ffffff','#cccccc',10);" class="skin_color" style="background-color: #ffffff; border-color: #cccccc"> </a>
+                        <a href="javascript:cSkin('#D6E7F7','#99C2EA',11);" class="skin_color" style="background-color: #D6E7F7; border-color: #99C2EA"> </a>
+                        <a href="javascript:cSkin('#F7E7D6','#EBC299',12);" class="skin_color" style="background-color: #F7E7D6; border-color: #EBC299"> </a>
+						<a href="javascript:cSkin('#EBEB99','#F7F7D6',13);" class="skin_color" style="background-color: #EBEB99; border-color: #F7F7D6"> </a>
+						<a href="javascript:cSkin('#C2EA99','#F7F7D6',14);" class="skin_color" style="background-color: #C2EA99; border-color: #F7F7D6"> </a>
+						<a href="javascript:cSkin('#999999','#333333',15);" class="skin_color" style="background-color: #999999; border-color: #333333"> </a>
+                        <a href="javascript:cSkin('#ecf0f3','#cccccc',0);" class="default_skin">Default Skin</a>
+					</div>
+				</div>
+								
+				<!-- change skin end-->
+				<%} %>
+				<script type="text/javascript">
+                function cSkin(bg,bdr,index){
+                    $('.profile_box').css('background-color',bg);
+                    $('.profile_box').css('border-color',bdr);
+                    $('.profile_shortcuts').css('background-color',bg);
+                    $('.profile_shortcuts').css('border-color',bdr);
+                    hideSkin();
+                    ViewMaster.ChangeSkin('<%=ViewingMember.WebMemberID %>',index,cSkin_Callback);
+                    $(window.frames["iframeAboutMe"])[0].cSkin(bg,bdr,index);                    
+                    }
+                
+                function cSkin_Callback(response,args){
+
+                }
+
+                function hideSkin(){
+                    $('#divSkins').hide();
+                }
+
+                function showSkins(){
+                    $('#divSkins').show();
+                }
+      
+                </script>
+			    <asp:ContentPlaceHolder ID="RightColContentHolder" runat="server">
+                </asp:ContentPlaceHolder>            
+			</div>
+			<!-- profile right end -->
+
+	</div>
+	<!-- middle end -->
+
+<script type="text/javascript">
+$(document).ready(
+	function () {
+	    setupZoom();
+	}
+);
+</script>
+
+</asp:Content>

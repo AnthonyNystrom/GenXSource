@@ -1,0 +1,124 @@
+body {
+	font: 75%/120% Arial, Helvetica, sans-serif;
+}
+a {
+	color: #333;
+	text-decoration: underline;
+}
+a:hover {
+	text-decoration: none;
+	color: #000;
+}
+#wrapper {
+	width: 637px;
+	height: 464px;
+	margin: 0 auto;
+	background: url(images/editor-bg.gif) no-repeat;
+	position: relative;
+}
+.browse {
+	position: absolute;
+	left: 26px;
+	top: 15px;
+}
+.cropimg {
+	width: 457px;
+	height: 400px;
+	position: absolute;
+	left: 10px;
+	top: 60px;
+	text-align: center;
+}
+.previewimg {
+	position: absolute;
+	top: 18px;
+	right: 22px;
+}
+
+.cpane {
+	position: absolute;
+	top: 145px;
+	right: 7px;
+	width: 129px;
+}
+.rotate {
+	width: 125px;
+	height: 20px;
+	margin: 0 0 0 9px;
+	padding: 0 0 15px;
+	clear: both;
+	font-size: 95%;
+	color: #999;
+}
+.rotate img {
+	float: left;
+}
+.rotate span {
+	width: 55px;
+	display: block;
+	float: left;
+	padding-top: 3px;
+	text-align: center;
+}
+
+
+.adjust {
+	position: relative;
+	padding: 3px 0 0 7px;
+	width: 122px;
+	height: 48px;
+	font-size: 95%;
+	line-height: 100%;
+	color: #777;
+	margin-bottom: 10px;
+}
+.adjust .handle {
+	width: 9px;
+	height: 15px;
+	background: url(images/handle.gif) no-repeat;
+	cursor: pointer;
+}
+.adjust span {
+	color: #333;
+}
+.adjust .slider {
+	width: 96px;
+	height: 15px;
+	position: absolute;
+	left: 28px;
+	top: 27px;
+}
+
+.contrast {
+	background: url(images/contrast-bg.gif) no-repeat;
+	margin-top: 15px;
+}
+.brightness {
+	background: url(images/brightness-bg.gif) no-repeat;
+}
+
+
+/* save */
+.save {
+	font-size: 95%;
+}
+.save input {
+	font-size: 110%;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+/* form elements */
+input {
+	font: 100% Arial, Helvetica, sans-serif;
+	padding: 3px 5px;
+}
+.form-txt {
+	background: #fff;
+	border: solid 1px #9aaabb;
+}
+.form-btn {
+	background: #fff url(images/formbtn-bg.gif) repeat-x left 1px;
+	border: solid 1px #9aaabb;
+	padding: 3px 8px;
+}

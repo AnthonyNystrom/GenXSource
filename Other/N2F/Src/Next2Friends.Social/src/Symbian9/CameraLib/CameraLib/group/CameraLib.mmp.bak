@@ -1,0 +1,26 @@
+/*
+============================================================================
+ Name        : CameraLib.mmp
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : This is the project specification file for CameraLib.
+============================================================================
+*/
+
+TARGET          CameraLib.lib
+TARGETTYPE      lib
+UID             0x0 0xea445eeb
+SECUREID        0xe54156bb
+
+USERINCLUDE     ..\inc
+SYSTEMINCLUDE   \epoc32\include
+
+SOURCEPATH      ..\src
+SOURCE          CameraLib.cpp
+
+LIBRARY         euser.lib
+LIBRARY         estor.lib
+
+VENDORID        0
+CAPABILITY      NONE

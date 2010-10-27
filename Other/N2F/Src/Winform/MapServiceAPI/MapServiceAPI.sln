@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapServiceAPI", "MapServiceAPI\MapServiceAPI.csproj", "{154A4E78-1BE3-4101-BC89-1F657C420226}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleMapViewer", "SimpleMapViewer\SimpleMapViewer.csproj", "{9EA2E6FA-A198-40E8-A044-D609B696520F}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs04.codeplex.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = MapServiceAPI\\MapServiceAPI.csproj
+		SccProjectName1 = MapServiceAPI
+		SccLocalPath1 = MapServiceAPI
+		SccProjectUniqueName2 = SimpleMapViewer\\SimpleMapViewer.csproj
+		SccProjectName2 = SimpleMapViewer
+		SccLocalPath2 = SimpleMapViewer
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{154A4E78-1BE3-4101-BC89-1F657C420226}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{154A4E78-1BE3-4101-BC89-1F657C420226}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{154A4E78-1BE3-4101-BC89-1F657C420226}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{154A4E78-1BE3-4101-BC89-1F657C420226}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EA2E6FA-A198-40E8-A044-D609B696520F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EA2E6FA-A198-40E8-A044-D609B696520F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EA2E6FA-A198-40E8-A044-D609B696520F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EA2E6FA-A198-40E8-A044-D609B696520F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

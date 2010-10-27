@@ -1,0 +1,27 @@
+﻿<Canvas xmlns="http://schemas.microsoft.com/client/2007" 
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+				xmlns:local="clr-namespace:Next2Friends.Swoosher;assembly=ClientBin/Next2Friends.Swoosher.dll"
+				MouseLeftButtonDown="canvas_MouseButtonDown" MouseLeftButtonUp="canvas_MouseButtonUp"
+				MouseMove="canvas_MouseMove" MouseLeave="canvas_MouseLeave" Background="Transparent"
+        >
+
+	<Canvas.Resources>
+		<Storyboard x:Name="timer">
+			<DoubleAnimation Duration="00:00:00.02" From="0" To="0"
+											 Storyboard.TargetName="dummyTimerTarget"
+											 Storyboard.TargetProperty="Opacity"/>
+		</Storyboard>
+	</Canvas.Resources>
+
+	<Canvas Name="dummyTimerTarget" />
+
+	<local:Loading Name="loading" />
+	<Canvas Name="photoCanvas"/>
+
+	<local:Arrow Name="backButton" Angle="180" Click="back_Click"/>
+	<local:Arrow Name="forwardButton" Click="forward_Click"/>
+	<local:Arrow Name="fullscreenButton" Angle="270" Click="fullscreen_Click"/>
+	<local:Arrow Name="windowedButton" Angle="90" Click="window_Click"/>
+	<local:Arrow Name="physicsButton" Angle="90" Click="physics_Click"/>
+
+</Canvas>

@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>n2f player v2</title>
+
+
+<script type="text/javascript" src="swfobject.js"></script>
+
+
+</head>
+<body bgcolor="#333333">
+
+
+<p id="player1"><a href="http://www.macromedia.com/go/getflashplayer">Get the Flash Player</a> to see this player.</p>
+<script type="text/javascript">
+	var s1 = new SWFObject("flvplayer.swf","n2fplayer","480","365","7");
+	s1.addParam("allowfullscreen","true");
+	s1.addVariable("Ad","true");
+	//s1.addVariable("live","true");
+	//s1.addVariable("file","rtmp://69.21.114.99/DeviceStream");
+	s1.addVariable("width","480");
+	s1.addVariable("height","365");
+//	s1.addVariable("autostart","false");
+	s1.addVariable("logoUrl","http://www.next2friends.com");
+	//s1.addVariable('id', 'VideoMessage7036');
+	s1.write("player1");
+</script>
+
+
+
+</body>
+</html>

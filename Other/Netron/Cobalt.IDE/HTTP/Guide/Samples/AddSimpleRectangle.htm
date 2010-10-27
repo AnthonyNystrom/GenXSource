@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/SampleTemplate.dwt" codeOutsideHTMLIsLocked="false" -->
+	<head>
+	<!-- InstanceBeginEditable name="doctitle" -->
+	<title>The Netron Library - Quick guide</title>
+	<!-- InstanceEndEditable -->
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<link href="/Templates/style.css" rel="stylesheet" type="text/css">
+	<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+	</head>
+	<body>
+	<table width="1024" height="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr >
+        <th height="15" colspan="2" align="left" valign="top"><table width="1024" border="0" cellpadding="0" cellspacing="0" bgcolor="#192D4F">
+          <tr align="center" >
+            <td width="20" class="menu"><img src="/Guide/images/1x1.gif" alt="Empty" width="1" height="1"></td>
+            <td width="100" class="menu"><a href="/Guide/index.htm">&nbsp;&nbsp;&nbsp;Home&nbsp; &nbsp;&nbsp; </a></td>
+            <td width="100"  class="menu"><a href="/Guide/Samples.htm">&nbsp;&nbsp;&nbsp;Samples&nbsp;&nbsp;&nbsp;</a></td>
+            <td width="100" class="menu"><a href="/Guide/API/index.html">&nbsp;&nbsp;&nbsp;API&nbsp;&nbsp;&nbsp;</a></td>
+            <td width="100" class="menu"></td>
+            <td width="100" class="menu"></td>
+            <td width="100" class="menu"></td>
+            <td width="100" class="menu"></td>
+          </tr>
+        </table></th>
+      </tr>
+      <tr >
+        <th height="37" colspan="2" align="left" valign="top" background="/images/NetronFutureSmall.png" class="graybottomborder">&nbsp;</th>
+      </tr>
+      <tr>
+        <td width="2%"><img src="/Guide/images/1x1.gif" alt="Empty" width="20" height="600"></td>
+        <td width="98%" height="437" valign="top"><p>&nbsp;</p>
+        <span class="SampleTitle"><!-- InstanceBeginEditable name="Title" -->Add a simple rectangle with text <!-- InstanceEndEditable --></span>
+		<p><!-- InstanceBeginEditable name="Description" -->The Text property of the simple shape types allows you to add text to them. <!-- InstanceEndEditable -->		</p>
+		<!-- InstanceBeginEditable name="SampleContent" -->
+		<p>Execute the following script; it will add a rectangle at location (10,10), width 160 and height 80. <br>
+	    You can edit and change the script to experiment, if you wish. &nbsp;        </p>
+		<form name="myform">
+		  <p>
+		    <textarea name="code1" cols="77" rows="7" class="CodeTextArea" id="code1" >
+SimpleRectangle shape = new SimpleRectangle();
+shape.Transform(10, 10, 160, 80);
+shape.Text = "Hi there!";
+this.DiagramControl.AddShape(shape);
+                </textarea>
+		  </p>
+            <p>         
+              <input type="button" class="CodeButton" onClick="window.external.RunScript(myform.code1.value); return false;" value="Execute script" /> 
+          </p>
+            <p>You can also use other simple shape types and auto-size them via the AutoSize property as follows:</p>
+            <p>
+              <textarea name="textarea" cols="77" rows="7" class="CodeTextArea" id="code2" >
+SimpleEllipse shape = new SimpleEllipse();
+shape.Location = new Point(50, 50);
+shape.Text = "This is an auto-size \n elliptic shape.";
+shape.AutoSize = true;
+this.DiagramControl.AddShape(shape);
+                </textarea>
+</p>
+            <p>
+              <input name="button" type="button" class="CodeButton" onClick="window.external.RunScript(myform.code2.value); return false;" value="Execute script" />
+            </p>
+		</form>
+		<p>&nbsp;</p>
+		<!-- InstanceEndEditable -->
+		<p>&nbsp;</p>
+        <p>&nbsp;</p>
+        </td>
+      </tr>
+      <tr >
+        <td colspan="2"><hr color="#192D4F" noshade="noshade"></td>
+      </tr>
+    </table>
+	</body>
+<!-- InstanceEnd --></html>

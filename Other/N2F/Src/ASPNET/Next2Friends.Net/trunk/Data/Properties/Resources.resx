@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Argument_InvalidAskQuestionCommentID" xml:space="preserve">
+    <value>No Ask Question comments exist with the AskAFriendCommentID = {0}.</value>
+  </data>
+  <data name="Argument_InvalidBlogCommentID" xml:space="preserve">
+    <value>No Blog Comment exists with CommentID = {0}.</value>
+  </data>
+  <data name="Argument_InvalidNSpotCommentID" xml:space="preserve">
+    <value>No NSpot exists with NSpotCommentID = {0}.</value>
+  </data>
+  <data name="Argument_InvalidWebAskID" xml:space="preserve">
+    <value>AAF does not exist with WebAskAFriendID = {0}.</value>
+  </data>
+  <data name="InvalidOperation_NoAskQuestions" xml:space="preserve">
+    <value>No Ask Questions! How did this ever happen!</value>
+  </data>
+  <data name="Argument_InvalidWebInviteClickID" xml:space="preserve">
+    <value>There is no InviteClick in the database with the WebInviteClickID = {0}.</value>
+  </data>
+  <data name="Argument_NoISOCountry" xml:space="preserve">
+    <value>There is no ISOCountry in the database with the ISOCode = {0}.</value>
+  </data>
+  <data name="BadCredentials_InvalidEmailAddressOrPassword" xml:space="preserve">
+    <value>The user with the specified EmailAddress and Password does not exist.</value>
+  </data>
+  <data name="BadCredentials_InvalidWebMemberIDOrPassword" xml:space="preserve">
+    <value>The user with the specified WebMemberID or Password does not exist.</value>
+  </data>
+  <data name="Argument_InvalidWebMemberID" xml:space="preserve">
+    <value>No Member exists with WebMemberID = {0}.</value>
+  </data>
+  <data name="BadCredentials_InvalidNicknameOrPassword" xml:space="preserve">
+    <value>The user with the specified Nickname or Password does not exist.</value>
+  </data>
+  <data name="BadCredentials_InvalidNickname" xml:space="preserve">
+    <value>The user with the specified Nickname does not exist.</value>
+  </data>
+  <data name="InvalidOperation_ParentObjectIsNull" xml:space="preserve">
+    <value>This object cannot be created as its parent object is null.</value>
+  </data>
+  <data name="InvalidOperation_BadDbRelationship" xml:space="preserve">
+    <value>For some strange reason there is no Member Profile for this member, Bad DB relationship?</value>
+  </data>
+  <data name="Argument_NoMemberSettingsForMemberID" xml:space="preserve">
+    <value>There is no MemberSettings for MemberID = {0}.</value>
+  </data>
+  <data name="Argument_InvalidWebNSpotID" xml:space="preserve">
+    <value>No NSpot exists with WebNSpotID = {0}.</value>
+  </data>
+  <data name="IO_WriteFileErrorToSavePath" xml:space="preserve">
+    <value>Could not write file to "{0}".</value>
+  </data>
+  <data name="Win32_CannotFindOrAccessRegKey" xml:space="preserve">
+    <value>Could not find or access registry key "{0}".</value>
+  </data>
+  <data name="Argument_InvalidMemberAccountType" xml:space="preserve">
+    <value>accountType should be one of the following values: 0 - None, 1 - Twitter.</value>
+  </data>
+  <data name="Argument_InvalidMemberActivityType" xml:space="preserve">
+    <value>activityType should be one of the following values: 0 - None, 1 - Video, 2 - PhotoGallery, 3 - Photo, 4 - Status.</value>
+  </data>
+</root>

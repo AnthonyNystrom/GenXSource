@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:WindowedApplication
+	xmlns:mx="http://www.adobe.com/2006/mxml"
+	xmlns:n2f="*"
+	layout="absolute"
+	backgroundColor="#E8E8E8"
+	status="{'Service is ' + ( NetworkStatus.networked ? 'online' : 'offline' )}"
+	applicationComplete="OnApplicationComplete()" xmlns:ui="flash.ui.*">
+
+	<mx:Style source="../assets/Layout.css"/>
+
+	<mx:Script>
+		<![CDATA[
+			import mx.controls.Alert;
+			import com.next2friends.*;
+			import mx.events.ListEventReason;
+			import mx.controls.TextInput;
+			import mx.events.MenuEvent;
+			import mx.controls.Image;
+			import mx.events.DragEvent;
+			import mx.events.FileEvent;
+			import mx.events.ListEvent;
+			import mx.controls.FileSystemEnumerationMode;
+			import mx.managers.PopUpManager;
+			import mx.collections.ArrayCollection;
+
+			[Bindable] private var session : UserSession = new UserSession();
+			[Bindable] private var collections : ArrayCollection = new ArrayCollection();
+			[Bindable] private var remoteFiles : ArrayCollection = new ArrayCollection();
+			[Bindable] private var remoteFolderMenu : ContextMenu = new ContextMenu();
+			[Bindable] private var localFiles : ArrayCollection = new ArrayCollection();
+
+			private var credentials : LoginEvent = null;
+			private var remoteBusy : Boolean = false;
+			private var localBusy : Boolean = false;
+
+			private function OnApplicationComplete() : void
+			{
+				remoteFileList.addEventListener( "Delete", Delete );
+				remoteFileList.addEventListener( "Preview", Preview );
+				remoteFileList.addEventListener( "Rotate", Rotate );
+				
+				localFileList.addEventListener( "Preview", Preview );
+				localFileList.addEventListener( "Rotate", Rotate );
+
+				AddMenuItem( remoteFolderMenu, "Rename", RenameFolder );
+
+				stage.quality = StageQuality.BEST;
+				NetworkStatus.initialize();
+
+				Login();
+				Upload.StartUploads();
+			}
+
+			private function AddMenuItem( menu : ContextMenu, text : String, onSelect : Function ) : void
+			{
+				var item : ContextMenuItem = new ContextMenuItem( text );
+				item.addEventListener( ContextMenuEvent.MENU_ITEM_SELECT, onSelect );
+				menu.customItems.push( item );
+			}
+
+			private function Login() : void
+			{
+				var onLogin : Function = function OnLogin( event : Event ) : void
+				{
+					GetCollections();
+				}
+
+				var dialog : LoginDialog = PopUpManager.createPopUp( this, LoginDialog, true ) as LoginDialog;
+
+				dialog.session = session;
+				dialog.addEventListener( "LoginEvent", onLogin );
+
+				PopUpManager.centerPopUp( dialog );
+			}
+
+			private function GetCollections() : void
+			{
+				var onComplete : Function = function OnComplete( event : GetCollectionsResultEvent ) : void
+				{
+					collections.removeAll();
+					var items : ArrayOfPhotoCollectionItem = event.result;
+
+					if ( items != null )
+					{
+						for ( var index : int = 0; index < items.length; ++ index )
+						{
+							var item : PhotoCollectionItem = items.getPhotoCollectionItemAt( index ) as PhotoCollectionItem;
+
+							if ( item != null ) collections.addItem( item );
+						}
+					}
+
+					if ( !remoteFileTree.selectedItem && collections.length > 0 ) remoteFileTree.selectedIndex = 0;
+				} 
+
+				session.GetCollections( onComplete );
+			}
+
+			private function GetRemoteFiles( collection : PhotoCollectionItem ) : ArrayCollection
+			{
+				RefreshCollection( collection );
+				return remoteFiles;
+			} 
+
+			private function RefreshCollection( collection : PhotoCollectionItem ) : void
+			{
+				var populate : Function = function Populate( event : GetPhotosByCollectionResultEvent ) : void
+				{
+					var items : ArrayOfPhotoItem = event.result;
+
+					if ( items != null )
+					{					
+						for ( var index : int = 0; index < items.length; ++ index  )
+						{
+							var item : PhotoItem = items.getPhotoItemAt( index ) as PhotoItem;
+							if ( item != null ) remoteFiles.addItem( item );
+						}
+					}
+
+					remoteBusy = false;
+				}
+
+				if ( !remoteBusy )
+				{
+					remoteFiles.removeAll();
+
+					if ( collection != null )
+					{
+						remoteBusy = true;
+						session.GetCollection( collection.WebPhotoCollectionID, populate );
+					}
+				}
+			}
+
+			private function GetLocalFiles( directory : File, root : File ) : ArrayCollection
+			{
+				RefreshDirectory( directory != null ? directory : root );
+				return localFiles;
+			} 
+
+			private function RefreshDirectory( directory : File = null ) : void
+			{
+				var populate : Function = function Populate( event : FileListEvent ) : void
+				{
+					directory.removeEventListener( FileListEvent.DIRECTORY_LISTING, populate );
+
+					for ( var fileID : Object in event.files )
+					{
+						var file : File = event.files[ fileID ] as File;
+
+						if ( file.extension )
+						{
+							var ext : String = file.extension.toUpperCase();
+	
+							if ( !file.isDirectory && ( ext == "JPG" || ext == "PNG" || ext == "GIF" ) )
+							{
+								localFiles.addItem( file );
+							}
+						}
+					}
+
+					localBusy = false;
+				}
+
+				if ( !localBusy )
+				{
+					localFiles.removeAll();
+ 
+					if ( directory != null && directory.exists )
+					{
+						localBusy = true;
+						directory.addEventListener( FileListEvent.DIRECTORY_LISTING, populate );
+						directory.getDirectoryListingAsync();
+					}
+				}
+			}
+
+			private function NewFolder() : void
+			{
+				var onComplete : Function = function OnComplete( event : CreateNewCollectionResultEvent ) : void
+				{
+					GetCollections();
+				}
+
+				var createFolder : Function = function CreateFolder( event : NewItemEvent ) : void
+				{
+					session.CreateNewCollection( event.name, onComplete );
+				}
+
+				var dialog : NewFolderDialog = PopUpManager.createPopUp( this, NewFolderDialog, true ) as NewFolderDialog;
+				dialog.addEventListener( "NewItemEvent", createFolder );
+
+				PopUpManager.centerPopUp( dialog );
+			}
+
+			[Bindable(event="propertyChange")] private function ImageSize( container : TileList, scale : Number ) : Number
+			{
+				return ( container != null ) ? Math.min( container.height, container.width - 10 ) * scale : 0;
+			}
+
+
+			private function DragLocalToRemote( event : DragEvent ) : void
+			{
+				event.updateAfterEvent();
+				var items : Object = event.dragSource.dataForFormat( "items" );
+				Upload.UploadPhotos( items, remoteFileTree.selectedItem.WebPhotoCollectionID );
+//				UploadPhotos( items );
+			}
+
+			private function DragRemoteToLocal( event : DragEvent ) : void
+			{
+
+			}
+
+			private function RenameFolder( event : ContextMenuEvent ) : void
+			{
+				var collectionID : String = remoteFileTree.selectedItem.WebPhotoCollectionID;
+				var dialog : NewFolderDialog = PopUpManager.createPopUp( this, NewFolderDialog, true ) as NewFolderDialog;
+
+				var onComplete : Function = function OnComplete( event : RenameCollectionResultEvent ) : void
+				{
+					remoteFileTree.selectedItem.Name = dialog.folderName.text;
+					remoteFileTree.invalidateList();
+//					GetCollections();
+				}
+
+				var createFolder : Function = function CreateFolder( event : NewItemEvent ) : void
+				{
+					session.RenameCollection(
+						collectionID,
+						event.name,
+						onComplete );
+				}
+
+				dialog.title = "Rename folder";
+				dialog.folderName.text = remoteFileTree.selectedItem.Name;
+				dialog.addEventListener( "NewItemEvent", createFolder );
+
+				PopUpManager.centerPopUp( dialog );
+			}
+
+			private function Delete( event : ItemEvent ) : void
+			{
+				var remain : Number = 0;
+				
+				var onComplete : Function = function OnComplete( event : Event ) : void
+				{
+					if ( -- remain < 1 ) RefreshCollection( remoteFileTree.selectedItem as PhotoCollectionItem );
+				}
+
+				if ( event != null )
+				{
+					if ( event.item != null )
+					{
+						remain = 1;
+						session.DeletePhoto( event.item.WebPhotoID, onComplete );
+					}
+				}
+				else
+				{
+					for ( var id : Object in remoteFileList.selectedItems )
+					{
+						++ remain;
+						var item : PhotoItem = remoteFileList.selectedItems[ id ] as PhotoItem;
+						session.DeletePhoto( item.WebPhotoID, onComplete );
+					}
+				}
+			}
+
+			private function Preview( event : ItemEvent ) : void
+			{
+				var dialog : PreviewDialog = new PreviewDialog();
+
+				if ( event.item is PhotoItem ) dialog.url = event.item.MainPhotoURL;
+				else if ( event.item[ "url" ] ) dialog.url = event.item.url;
+
+				PopUpManager.addPopUp( dialog, this, true );
+				PopUpManager.centerPopUp( dialog );
+			}
+
+			private function OnPreviewComplete( event : Event ) : void
+			{
+			}
+
+			private function Rotate( event : ItemEvent ) : void
+			{
+				var url : String = ( event.item is PhotoItem )
+					? ( event.item as PhotoItem ).MainPhotoURL
+					: ( event.item as File ).url;
+
+				var refreshRemote : Function = function RefreshRemote( event : Event ) : void
+				{
+					RefreshCollection( remoteFileTree.selectedItem as PhotoCollectionItem );
+				}
+
+				var onUploaded : Function = function OnUploaded( event2 : Event ) : void
+				{
+					session.DeletePhoto( ( event.item as PhotoItem ).WebPhotoID, refreshRemote ); 
+				}
+
+				var onComplete : Function = function OnComplete( event2 : Event ) : void
+				{
+					var collectionID : String = remoteFileTree.selectedItem.WebPhotoCollectionID;
+
+					var bitmap : Bitmap = ImageUtility.Rotate( image.content as Bitmap, event.param as Number );
+
+					if ( event.item is PhotoItem )
+					{
+						var upload : Upload = Upload.UploadPhoto( image.name, url, bitmap, collectionID );
+						upload.addEventListener( Event.COMPLETE, onUploaded ); 
+					}
+					else
+					{
+						Alert.show( "Rotating local images is currently unsupported" );
+					}
+				}
+
+				var image : Image = new Image();
+				image.addEventListener( Event.COMPLETE, onComplete );
+				image.load( url );
+			}
+
+			private function LocalFileContexts() : Array
+			{
+				return [
+					{ file: FileSystemTree.COMPUTER, text: "Computer" },
+					{ file: File.desktopDirectory, text: "Desktop" },
+					{ file: File.userDirectory, text: "User" },
+					{ file: File.documentsDirectory, text: "Documents" }
+				];
+			}
+		]]>
+	</mx:Script>
+
+	<ui:ContextMenu id="remoteMenu">
+		<ui:customItems>
+			<mx:String>Delete</mx:String>
+		</ui:customItems>
+	</ui:ContextMenu>
+
+	<mx:Fade id="fade"/>
+
+	<mx:Canvas width="100%" height="100%">
+		<mx:VDividedBox width="100%" height="100%" paddingLeft="5" paddingTop="5" paddingRight="5" paddingBottom="5">
+
+			<mx:VBox width="100%" height="100%" minHeight="100">
+
+				<mx:HBox width="100%">
+					<mx:Image id="logo" source="@Embed('../assets/Logo_med.png')" />
+					<mx:VBox right="0" horizontalAlign="right" width="100%" height="100%">
+						<mx:HBox right="0" bottom="0" horizontalAlign="right" verticalAlign="bottom" width="100%" height="100%">
+							<mx:Text text="Zoom"/>
+							<mx:HSlider id="remoteScale" minimum="0.1" maximum="1" value="0.5" />
+						</mx:HBox>
+					</mx:VBox>
+				</mx:HBox>
+
+				<mx:HDividedBox width="100%" height="100%">
+					<mx:VBox width="30%" height="100%" minWidth="190">
+						<mx:HBox width="100%" verticalAlign="bottom">
+							<mx:Text text="On Next2Friends" left="0" width="100%" height="100%" styleName="treeTitle"/>
+							<mx:Button label="New" right="0" click="NewFolder()"/>
+						</mx:HBox>
+						<mx:VBox backgroundColor="White" borderStyle="solid" width="100%" height="100%" verticalGap="0">
+							<mx:ComboBox id="remoteContext" width="100%" cornerRadius="0" borderThickness="0" borderColor="White">
+								<mx:dataProvider>
+									<mx:String>Next2Friends folders</mx:String>
+								</mx:dataProvider>
+							</mx:ComboBox>
+							<mx:Tree id="remoteFileTree" width="100%" height="100%" borderStyle="none"
+								labelField="Name" editable="false" contextMenu="{remoteFolderMenu}"
+								dataProvider="{collections}" />
+						</mx:VBox>
+					</mx:VBox>
+
+					<mx:TileList id="remoteFileList" width="100%" height="100%" minWidth="200" itemRenderer="RemoteFile"
+						allowDragSelection="true" allowMultipleSelection="true"
+						dataProvider="{GetRemoteFiles( remoteFileTree.selectedItem as PhotoCollectionItem )}"
+						dragEnabled="true" dropEnabled="true" dragDrop="DragLocalToRemote( event )"
+						offscreenExtraRowsOrColumns="0"
+						rowHeight="{Math.min( remoteFileList.height - 5, remoteFileList.width - 20 ) * remoteScale.value}"
+						columnWidth="{Math.min( remoteFileList.height - 5, remoteFileList.width - 20 ) * remoteScale.value}"
+						toolTip="To upload photos to your Next2Friends account, drag them here from the lower pane or local file system."/>
+
+				</mx:HDividedBox>
+
+			</mx:VBox>
+
+			<mx:VBox width="100%" height="100%" minHeight="100">
+
+				<mx:HBox width="100%" verticalAlign="bottom">
+					<mx:HBox verticalAlign="bottom" width="100%" height="100%">
+						<mx:Text text="On My Computer" left="0" styleName="treeTitle"/>
+					</mx:HBox>
+					<mx:HBox horizontalAlign="right" verticalAlign="bottom" width="100%" height="100%">
+						<mx:Text text="Zoom"/>
+						<mx:HSlider id="localScale" minimum="0.1" maximum="1" value="0.5" />
+					</mx:HBox>
+				</mx:HBox>
+
+				<mx:HDividedBox width="100%" height="100%">
+					<mx:VBox width="30%" height="100%" minWidth="190">
+						<mx:VBox backgroundColor="White" borderStyle="solid" width="100%" height="100%" verticalGap="0">
+							<mx:ComboBox id="localContext" width="100%" dataProvider="{LocalFileContexts()}" labelField="text"
+								cornerRadius="0" borderThickness="0" borderColor="White">
+							</mx:ComboBox>
+							<mx:FileSystemTree id="localFileTree" width="100%" height="100%" borderStyle="none"
+								directory="{localContext.selectedItem.file}" extensions="JPG, JPEG, PNG, GIF"
+								enumerationMode="{FileSystemEnumerationMode.DIRECTORIES_ONLY}" />
+						</mx:VBox>
+					</mx:VBox>
+					<mx:TileList id="localFileList" width="100%" height="100%" minWidth="200" itemRenderer="LocalFile"
+						toolTip="To upload photos to your Next2Friends account, drag them into the upper pane."
+						allowDragSelection="true" allowMultipleSelection="true" dragEnabled="true"
+						offscreenExtraRowsOrColumns="0"
+						dataProvider="{GetLocalFiles( localFileTree.selectedItem as File, localFileTree.directory )}"
+						rowHeight="{Math.min( localFileList.height - 5, localFileList.width - 20 ) * localScale.value}"
+						columnWidth="{Math.min( localFileList.height - 5, localFileList.width - 20 ) * localScale.value}"/>
+				</mx:HDividedBox>
+
+			</mx:VBox>
+
+		</mx:VDividedBox>
+
+	</mx:Canvas>
+	
+</mx:WindowedApplication>

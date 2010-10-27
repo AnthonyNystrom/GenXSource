@@ -1,0 +1,104 @@
+[Version]
+Signature   = "$Chicago$"       ; required as-is
+Provider    = "Next2Friends"          ; maximum of 30 characters, full app name will be "<Provider><AppName>"
+CESignature = "$Windows CE$"    ; required as-is
+ 
+
+[CEStrings]
+AppName     = "Snap-Up"  	; maximum of 40 characters, full app name will be "<Provider> <AppName>"
+InstallDir  = %CE1%\n2f-sup 	; Program Files\n2f-sup
+ 
+[SourceDisksNames]                  ; directory that holds the applications files
+1 = , "Program Files",, ..\..\bin\wm6-pro\debug
+;resources
+3 = , "Program Files",, ..\..\res
+4 = , "Program Files",, ..\..\res\languages
+5 = , "Program Files",, ..\..\res\skins
+6 = , "Program Files",, ..\..\res\skins\default
+
+
+
+[CEDevice]
+BuildMax=0xE0000000
+ProcessorType=0
+
+[Platform.OCP.PocketPC]
+PlatformString=Pocket PC
+PlatformMin=4.2
+PlatformMax=6.1
+
+[SourceDisksFiles]                  ; list of files to be included in .cab
+n2fcorelib.dll = 1
+n2f-sup.exe = 1
+
+n2f-client.xml = 3
+n2f-strings-en.xml = 4
+n2f-graphics-default.xml = 5
+
+comments.png = 6
+commercelogo.png = 6
+credentials.png = 6
+drafts.png = 6
+icon.png = 6
+menu-btn-back-focused.png = 6
+menu-btn-back-unfocused.png = 6
+new_post.png = 6
+outbox.png = 6
+recent_posts.png = 6
+recent_uploads.png = 6
+selected.png = 6
+textbox-focused.png = 6
+textbox-unfocused.png = 6
+upload.png = 6
+
+[DefaultInstall]                    ; operations to be completed during install
+CopyFiles   = CopyToProgramFiles, SkinDir, LangDir, Images, ClientConfig
+AddReg      = RegData
+CEShortcuts = Shortcuts 
+
+ 
+[DestinationDirs]                   ; default destination directories for each operation section
+CopyToProgramFiles = 0, %InstallDir%
+Shortcuts = 0, %CE11%             ; \Windows\Start Menu\Programs
+SkinDir = 0, %InstallDir%\skins
+LangDir = 0, %InstallDir%\data\text
+Images = 0, %InstallDir%\skins\default
+ClientConfig = 0, %InstallDir%\data
+
+ 
+[CopyToProgramFiles]                ; copy operation file list
+"n2fcorelib.dll", n2fcorelib.dll
+"n2f-sup.exe", n2f-sup.exe
+
+[ClientConfig]
+"n2f-client.xml", n2f-client.xml
+
+[SkinDir]
+"n2f-graphics-default.xml", n2f-graphics-default.xml
+
+[LangDir]
+"n2f-strings-en.xml", n2f-strings-en.xml
+
+[Images]
+"comments.png", comments.png
+"commercelogo.png", commercelogo.png
+"credentials.png", credentials.png
+"drafts.png", drafts.png
+"icon.png", icon.png
+"menu-btn-back-focused.png", menu-btn-back-focused.png
+"menu-btn-back-unfocused.png", menu-btn-back-unfocused.png
+"new_post.png", new_post.png
+"outbox.png", outbox.png
+"recent_posts.png", recent_posts.png
+"recent_uploads.png", recent_uploads.png
+"selected.png", selected.png
+"textbox-focused.png", textbox-focused.png
+"textbox-unfocused.png", textbox-unfocused.png
+"upload.png", upload.png
+
+[RegData]                           ; registry key list
+
+
+[Shortcuts]                         ; Shortcut created in destination dir, %CE14%
+%AppName%,0,n2f-sup.exe
+

@@ -1,0 +1,21 @@
+This is a list of changes in GLStereoPlayer version history.
+
+Version 0.6.0: Released 1th of May 2005
+    SlideShow sequencial file displaying support.
+    Drop with Right button to open a right file.
+    Some key short-cuts changed for compatibility between standalone and ActiveX in PowerPoint.
+    Added some file extensions in the file open dialog.
+    Hide the play control when any movie files are loaded.
+    Added Keep and Free Aspect ratio mode.
+    Store and restore window status(full screen, toolbar, status bar, etc.)
+    Fixed aspect ratio error in displaying separated files.
+    Fixed file open error in .gsp setting file.
+
+Version 0.5.2: Released 3th of April 2005
+    Built with the latest DirectShow library (it requires VisualSturio.NET andthe latest Platform SDK).
+    Fixed a memory leak of releasing the renderer filter.
+    Fixed wglMakeCurrect() error during exiting the program in some environment
+    Replace str* functions to safer ones.
+
+Version 0.5.0: Released 1th of April 2005
+    The first release.

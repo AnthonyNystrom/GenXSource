@@ -1,0 +1,1107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.next2friends.com/" xmlns:s1="http://www.next2friends.com/AbstractTypes" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.next2friends.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Provides functionality to create questions with photos attached, retrieve responses as well as private questions.</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.next2friends.com/">
+      <s:element name="SubmitQuestion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="questionText" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="numberOfPhotos" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="responseType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="customResponses" type="tns:ArrayOfString" />
+            <s:element minOccurs="1" maxOccurs="1" name="durationType" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="isPrivate" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SubmitQuestionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitQuestionResult" type="tns:AskQuestionConfirm" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AskQuestionConfirm">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AdvertURL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdvertImage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AskQuestionID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AttachPhoto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="askQuestionID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="indexOrder" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="photoBase64String" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AttachPhotoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CompleteQuestion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="askQuestionID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CompleteQuestionResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetQuestion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="questionID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetQuestionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetQuestionResult" type="tns:AskQuestion" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AskQuestion">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Question" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DTCreated" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetQuestionIDs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetQuestionIDsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetQuestionIDsResult" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddComment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newComment" type="tns:AskComment" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AskComment">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AskQuestionID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nickname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Text" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DTCreated" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="InReplyToCommentID" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddCommentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddCommentResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HasNewComments">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="questionID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastCommentID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HasNewCommentsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="HasNewCommentsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetComment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="commentID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCommentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCommentResult" type="tns:AskComment" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCommentIDs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="questionID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastCommentID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCommentIDsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCommentIDsResult" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="questionID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResponseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetResponseResult" type="tns:AskResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AskResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="AskQuestionID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Question" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhotoBase64Binary" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseValues" type="tns:ArrayOfInt" />
+          <s:element minOccurs="1" maxOccurs="1" name="Average" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResponseType" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomResponses" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SkipQuestion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="questionID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SkipQuestionResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="VoteForQuestion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="questionID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="result" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VoteForQuestionResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AskQuestionConfirm" nillable="true" type="tns:AskQuestionConfirm" />
+      <s:element name="AskQuestion" nillable="true" type="tns:AskQuestion" />
+      <s:element name="ArrayOfInt" nillable="true" type="tns:ArrayOfInt" />
+      <s:element name="boolean" type="s:boolean" />
+      <s:element name="AskComment" nillable="true" type="tns:AskComment" />
+      <s:element name="AskResponse" nillable="true" type="tns:AskResponse" />
+    </s:schema>
+    <s:schema targetNamespace="http://www.next2friends.com/AbstractTypes">
+      <s:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <s:complexType name="StringArray">
+        <s:complexContent mixed="false">
+          <s:restriction base="soapenc:Array">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="unbounded" name="String" type="s:string" />
+            </s:sequence>
+          </s:restriction>
+        </s:complexContent>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SubmitQuestionSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitQuestion" />
+  </wsdl:message>
+  <wsdl:message name="SubmitQuestionSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitQuestionResponse" />
+  </wsdl:message>
+  <wsdl:message name="AttachPhotoSoapIn">
+    <wsdl:part name="parameters" element="tns:AttachPhoto" />
+  </wsdl:message>
+  <wsdl:message name="AttachPhotoSoapOut">
+    <wsdl:part name="parameters" element="tns:AttachPhotoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CompleteQuestionSoapIn">
+    <wsdl:part name="parameters" element="tns:CompleteQuestion" />
+  </wsdl:message>
+  <wsdl:message name="CompleteQuestionSoapOut">
+    <wsdl:part name="parameters" element="tns:CompleteQuestionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetQuestionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetQuestion" />
+  </wsdl:message>
+  <wsdl:message name="GetQuestionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetQuestionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetQuestionIDsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetQuestionIDs" />
+  </wsdl:message>
+  <wsdl:message name="GetQuestionIDsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetQuestionIDsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddCommentSoapIn">
+    <wsdl:part name="parameters" element="tns:AddComment" />
+  </wsdl:message>
+  <wsdl:message name="AddCommentSoapOut">
+    <wsdl:part name="parameters" element="tns:AddCommentResponse" />
+  </wsdl:message>
+  <wsdl:message name="HasNewCommentsSoapIn">
+    <wsdl:part name="parameters" element="tns:HasNewComments" />
+  </wsdl:message>
+  <wsdl:message name="HasNewCommentsSoapOut">
+    <wsdl:part name="parameters" element="tns:HasNewCommentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentSoapIn">
+    <wsdl:part name="parameters" element="tns:GetComment" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCommentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentIDsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCommentIDs" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentIDsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCommentIDsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetResponseSoapIn">
+    <wsdl:part name="parameters" element="tns:GetResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetResponseSoapOut">
+    <wsdl:part name="parameters" element="tns:GetResponseResponse" />
+  </wsdl:message>
+  <wsdl:message name="SkipQuestionSoapIn">
+    <wsdl:part name="parameters" element="tns:SkipQuestion" />
+  </wsdl:message>
+  <wsdl:message name="SkipQuestionSoapOut">
+    <wsdl:part name="parameters" element="tns:SkipQuestionResponse" />
+  </wsdl:message>
+  <wsdl:message name="VoteForQuestionSoapIn">
+    <wsdl:part name="parameters" element="tns:VoteForQuestion" />
+  </wsdl:message>
+  <wsdl:message name="VoteForQuestionSoapOut">
+    <wsdl:part name="parameters" element="tns:VoteForQuestionResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitQuestionHttpGetIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="questionText" type="s:string" />
+    <wsdl:part name="numberOfPhotos" type="s:string" />
+    <wsdl:part name="responseType" type="s:string" />
+    <wsdl:part name="customResponses" type="s1:StringArray" />
+    <wsdl:part name="durationType" type="s:string" />
+    <wsdl:part name="isPrivate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SubmitQuestionHttpGetOut">
+    <wsdl:part name="Body" element="tns:AskQuestionConfirm" />
+  </wsdl:message>
+  <wsdl:message name="AttachPhotoHttpGetIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="askQuestionID" type="s:string" />
+    <wsdl:part name="indexOrder" type="s:string" />
+    <wsdl:part name="photoBase64String" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AttachPhotoHttpGetOut" />
+  <wsdl:message name="CompleteQuestionHttpGetIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="askQuestionID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CompleteQuestionHttpGetOut" />
+  <wsdl:message name="GetQuestionHttpGetIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="questionID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetQuestionHttpGetOut">
+    <wsdl:part name="Body" element="tns:AskQuestion" />
+  </wsdl:message>
+  <wsdl:message name="GetQuestionIDsHttpGetIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetQuestionIDsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfInt" />
+  </wsdl:message>
+  <wsdl:message name="HasNewCommentsHttpGetIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="questionID" type="s:string" />
+    <wsdl:part name="lastCommentID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="HasNewCommentsHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentHttpGetIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="commentID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentHttpGetOut">
+    <wsdl:part name="Body" element="tns:AskComment" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentIDsHttpGetIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="questionID" type="s:string" />
+    <wsdl:part name="lastCommentID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentIDsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfInt" />
+  </wsdl:message>
+  <wsdl:message name="GetResponseHttpGetIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="questionID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetResponseHttpGetOut">
+    <wsdl:part name="Body" element="tns:AskResponse" />
+  </wsdl:message>
+  <wsdl:message name="SkipQuestionHttpGetIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="questionID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SkipQuestionHttpGetOut" />
+  <wsdl:message name="VoteForQuestionHttpGetIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="questionID" type="s:string" />
+    <wsdl:part name="result" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VoteForQuestionHttpGetOut" />
+  <wsdl:message name="SubmitQuestionHttpPostIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="questionText" type="s:string" />
+    <wsdl:part name="numberOfPhotos" type="s:string" />
+    <wsdl:part name="responseType" type="s:string" />
+    <wsdl:part name="customResponses" type="s1:StringArray" />
+    <wsdl:part name="durationType" type="s:string" />
+    <wsdl:part name="isPrivate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SubmitQuestionHttpPostOut">
+    <wsdl:part name="Body" element="tns:AskQuestionConfirm" />
+  </wsdl:message>
+  <wsdl:message name="AttachPhotoHttpPostIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="askQuestionID" type="s:string" />
+    <wsdl:part name="indexOrder" type="s:string" />
+    <wsdl:part name="photoBase64String" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AttachPhotoHttpPostOut" />
+  <wsdl:message name="CompleteQuestionHttpPostIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="askQuestionID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CompleteQuestionHttpPostOut" />
+  <wsdl:message name="GetQuestionHttpPostIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="questionID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetQuestionHttpPostOut">
+    <wsdl:part name="Body" element="tns:AskQuestion" />
+  </wsdl:message>
+  <wsdl:message name="GetQuestionIDsHttpPostIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetQuestionIDsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfInt" />
+  </wsdl:message>
+  <wsdl:message name="HasNewCommentsHttpPostIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="questionID" type="s:string" />
+    <wsdl:part name="lastCommentID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="HasNewCommentsHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentHttpPostIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="commentID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentHttpPostOut">
+    <wsdl:part name="Body" element="tns:AskComment" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentIDsHttpPostIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="questionID" type="s:string" />
+    <wsdl:part name="lastCommentID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentIDsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfInt" />
+  </wsdl:message>
+  <wsdl:message name="GetResponseHttpPostIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="questionID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetResponseHttpPostOut">
+    <wsdl:part name="Body" element="tns:AskResponse" />
+  </wsdl:message>
+  <wsdl:message name="SkipQuestionHttpPostIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="questionID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SkipQuestionHttpPostOut" />
+  <wsdl:message name="VoteForQuestionHttpPostIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="questionID" type="s:string" />
+    <wsdl:part name="result" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VoteForQuestionHttpPostOut" />
+  <wsdl:portType name="AskServiceSoap">
+    <wsdl:operation name="SubmitQuestion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Call this method to start a question. Only once the &lt;tt&gt;numberOfPhotos&lt;/tt&gt; has equal value to the number of attached photos can &lt;tt&gt;CompleteQuestion&lt;/tt&gt; method be called.&lt;br/&gt;&lt;tt&gt;numberOfPhotos&lt;/tt&gt; - Specifies the total number of photos to be submitted.&lt;br/&gt;&lt;tt&gt;responseType&lt;/tt&gt; - Specifies the type of question to ask. &lt;tt&gt;0&lt;/tt&gt; = YesNo, &lt;tt&gt;1&lt;/tt&gt; = AB, &lt;tt&gt;2&lt;/tt&gt; = RateTo10, &lt;tt&gt;3&lt;/tt&gt; = MultipleSelect.&lt;br/&gt;&lt;tt&gt;durationType&lt;/tt&gt; - Specifies how long the question is open for. &lt;tt&gt;0&lt;/tt&gt; = 3 min, &lt;tt&gt;1&lt;/tt&gt; = 15 min, &lt;tt&gt;2&lt;/tt&gt; = 60 min, &lt;tt&gt;3&lt;/tt&gt; = 1 day.&lt;br/&gt;&lt;tt&gt;isPrivate&lt;/tt&gt; - Specifies the value indicating whether the question is intended for friends only.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;questionText&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt;.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:SubmitQuestionSoapIn" />
+      <wsdl:output message="tns:SubmitQuestionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AttachPhoto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Attaches a single photo to an Ask question.&lt;br/&gt;&lt;tt&gt;askQuestionID&lt;/tt&gt; - Specifies the identifier of the question to attach the photo to.&lt;br/&gt;&lt;tt&gt;indexOrder&lt;/tt&gt; - First photo - &lt;tt&gt;1&lt;/tt&gt;, Second photo - &lt;tt&gt;2&lt;/tt&gt;, Third photo - &lt;tt&gt;3&lt;/tt&gt;.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the specified &lt;tt&gt;askQuestionID&lt;/tt&gt; is invalid.&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;askQuestionID&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;photoBase64String&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:AttachPhotoSoapIn" />
+      <wsdl:output message="tns:AttachPhotoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CompleteQuestion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Completes an Ask question and promotes it to live.&lt;br/&gt;&lt;tt&gt;askQuestionID&lt;/tt&gt; - Specifies the identifier of the question that has been completed.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;askQuestionID&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt;.&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - At least 2 photos should be attached to the MultipleSelect question and at least 1 photo should be attached to the questions of other types.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:CompleteQuestionSoapIn" />
+      <wsdl:output message="tns:CompleteQuestionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Retrieves question-related data according to the specified identifier.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the question with the specified &lt;tt&gt;questionID&lt;/tt&gt; does not exist.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetQuestionSoapIn" />
+      <wsdl:output message="tns:GetQuestionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestionIDs">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns a list of the latest 10 question identifiers for the specified user.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetQuestionIDsSoapIn" />
+      <wsdl:output message="tns:GetQuestionIDsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddComment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Posts a new comment to a question. Use this for either post a comment to your own question or a private one. Set &lt;tt&gt;inReplyToCommentID&lt;/tt&gt; to &lt;tt&gt;0&lt;/tt&gt; for first-level comments. Returns new comment identifier.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;newComment&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt;.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:AddCommentSoapIn" />
+      <wsdl:output message="tns:AddCommentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HasNewComments">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Checks whether there are new comments for the entry specified by the &lt;tt&gt;questionID&lt;/tt&gt;. Use &lt;tt&gt;lastCommentID&lt;/tt&gt; to specify the latest successfully retrieved comment. Specify &lt;tt&gt;0&lt;/tt&gt; if no comments have been retrieved yet.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:HasNewCommentsSoapIn" />
+      <wsdl:output message="tns:HasNewCommentsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetComment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Retrieves comment-related data for the specified identifier.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the comment with the specified identifier does not exist.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetCommentSoapIn" />
+      <wsdl:output message="tns:GetCommentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommentIDs">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns a list of identifiers for the comments that are newer than the comment with &lt;tt&gt;lastCommentID&lt;/tt&gt;. To retrieve all the comments specify &lt;tt&gt;0&lt;/tt&gt; for &lt;tt&gt;lastCommentID&lt;/tt&gt;.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetCommentIDsSoapIn" />
+      <wsdl:output message="tns:GetCommentIDsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResponse">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Gets the response for the question with the specified identifier.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetResponseSoapIn" />
+      <wsdl:output message="tns:GetResponseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SkipQuestion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Skips the question and marks it as skipped in the database.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:SkipQuestionSoapIn" />
+      <wsdl:output message="tns:SkipQuestionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VoteForQuestion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Votes for the question with the specified identifier.&lt;br/&gt;&lt;tt&gt;result&lt;/tt&gt; value should be appropriate to the &lt;tt&gt;ResponseType&lt;/tt&gt; of the question.&lt;br/&gt;If the type of the response is &lt;tt&gt;YesNo&lt;/tt&gt;, &lt;tt&gt;1&lt;/tt&gt; = &lt;tt&gt;Yes&lt;/tt&gt;, &lt;tt&gt;2&lt;/tt&gt; = &lt;tt&gt;No&lt;/tt&gt;.&lt;br/&gt;If the type of the response is &lt;tt&gt;AB&lt;/tt&gt;, &lt;tt&gt;1&lt;/tt&gt; = &lt;tt&gt;A&lt;/tt&gt;, &lt;tt&gt;2&lt;/tt&gt; = &lt;tt&gt;B&lt;/tt&gt;.&lt;br/&gt;If the type of the response is &lt;tt&gt;Rate1To10&lt;/tt&gt;, &lt;tt&gt;result&lt;/tt&gt; should be an integer from 1 to 10.&lt;br/&gt;If the type of the response is &lt;tt&gt;MultipleSelect&lt;/tt&gt;, &lt;tt&gt;result&lt;/tt&gt; should identify the choice that is take values from 1 to 3.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:VoteForQuestionSoapIn" />
+      <wsdl:output message="tns:VoteForQuestionSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="AskServiceHttpGet">
+    <wsdl:operation name="SubmitQuestion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Call this method to start a question. Only once the &lt;tt&gt;numberOfPhotos&lt;/tt&gt; has equal value to the number of attached photos can &lt;tt&gt;CompleteQuestion&lt;/tt&gt; method be called.&lt;br/&gt;&lt;tt&gt;numberOfPhotos&lt;/tt&gt; - Specifies the total number of photos to be submitted.&lt;br/&gt;&lt;tt&gt;responseType&lt;/tt&gt; - Specifies the type of question to ask. &lt;tt&gt;0&lt;/tt&gt; = YesNo, &lt;tt&gt;1&lt;/tt&gt; = AB, &lt;tt&gt;2&lt;/tt&gt; = RateTo10, &lt;tt&gt;3&lt;/tt&gt; = MultipleSelect.&lt;br/&gt;&lt;tt&gt;durationType&lt;/tt&gt; - Specifies how long the question is open for. &lt;tt&gt;0&lt;/tt&gt; = 3 min, &lt;tt&gt;1&lt;/tt&gt; = 15 min, &lt;tt&gt;2&lt;/tt&gt; = 60 min, &lt;tt&gt;3&lt;/tt&gt; = 1 day.&lt;br/&gt;&lt;tt&gt;isPrivate&lt;/tt&gt; - Specifies the value indicating whether the question is intended for friends only.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;questionText&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt;.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:SubmitQuestionHttpGetIn" />
+      <wsdl:output message="tns:SubmitQuestionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AttachPhoto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Attaches a single photo to an Ask question.&lt;br/&gt;&lt;tt&gt;askQuestionID&lt;/tt&gt; - Specifies the identifier of the question to attach the photo to.&lt;br/&gt;&lt;tt&gt;indexOrder&lt;/tt&gt; - First photo - &lt;tt&gt;1&lt;/tt&gt;, Second photo - &lt;tt&gt;2&lt;/tt&gt;, Third photo - &lt;tt&gt;3&lt;/tt&gt;.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the specified &lt;tt&gt;askQuestionID&lt;/tt&gt; is invalid.&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;askQuestionID&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;photoBase64String&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:AttachPhotoHttpGetIn" />
+      <wsdl:output message="tns:AttachPhotoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CompleteQuestion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Completes an Ask question and promotes it to live.&lt;br/&gt;&lt;tt&gt;askQuestionID&lt;/tt&gt; - Specifies the identifier of the question that has been completed.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;askQuestionID&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt;.&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - At least 2 photos should be attached to the MultipleSelect question and at least 1 photo should be attached to the questions of other types.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:CompleteQuestionHttpGetIn" />
+      <wsdl:output message="tns:CompleteQuestionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Retrieves question-related data according to the specified identifier.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the question with the specified &lt;tt&gt;questionID&lt;/tt&gt; does not exist.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetQuestionHttpGetIn" />
+      <wsdl:output message="tns:GetQuestionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestionIDs">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns a list of the latest 10 question identifiers for the specified user.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetQuestionIDsHttpGetIn" />
+      <wsdl:output message="tns:GetQuestionIDsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HasNewComments">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Checks whether there are new comments for the entry specified by the &lt;tt&gt;questionID&lt;/tt&gt;. Use &lt;tt&gt;lastCommentID&lt;/tt&gt; to specify the latest successfully retrieved comment. Specify &lt;tt&gt;0&lt;/tt&gt; if no comments have been retrieved yet.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:HasNewCommentsHttpGetIn" />
+      <wsdl:output message="tns:HasNewCommentsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetComment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Retrieves comment-related data for the specified identifier.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the comment with the specified identifier does not exist.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetCommentHttpGetIn" />
+      <wsdl:output message="tns:GetCommentHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommentIDs">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns a list of identifiers for the comments that are newer than the comment with &lt;tt&gt;lastCommentID&lt;/tt&gt;. To retrieve all the comments specify &lt;tt&gt;0&lt;/tt&gt; for &lt;tt&gt;lastCommentID&lt;/tt&gt;.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetCommentIDsHttpGetIn" />
+      <wsdl:output message="tns:GetCommentIDsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResponse">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Gets the response for the question with the specified identifier.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetResponseHttpGetIn" />
+      <wsdl:output message="tns:GetResponseHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SkipQuestion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Skips the question and marks it as skipped in the database.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:SkipQuestionHttpGetIn" />
+      <wsdl:output message="tns:SkipQuestionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VoteForQuestion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Votes for the question with the specified identifier.&lt;br/&gt;&lt;tt&gt;result&lt;/tt&gt; value should be appropriate to the &lt;tt&gt;ResponseType&lt;/tt&gt; of the question.&lt;br/&gt;If the type of the response is &lt;tt&gt;YesNo&lt;/tt&gt;, &lt;tt&gt;1&lt;/tt&gt; = &lt;tt&gt;Yes&lt;/tt&gt;, &lt;tt&gt;2&lt;/tt&gt; = &lt;tt&gt;No&lt;/tt&gt;.&lt;br/&gt;If the type of the response is &lt;tt&gt;AB&lt;/tt&gt;, &lt;tt&gt;1&lt;/tt&gt; = &lt;tt&gt;A&lt;/tt&gt;, &lt;tt&gt;2&lt;/tt&gt; = &lt;tt&gt;B&lt;/tt&gt;.&lt;br/&gt;If the type of the response is &lt;tt&gt;Rate1To10&lt;/tt&gt;, &lt;tt&gt;result&lt;/tt&gt; should be an integer from 1 to 10.&lt;br/&gt;If the type of the response is &lt;tt&gt;MultipleSelect&lt;/tt&gt;, &lt;tt&gt;result&lt;/tt&gt; should identify the choice that is take values from 1 to 3.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:VoteForQuestionHttpGetIn" />
+      <wsdl:output message="tns:VoteForQuestionHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="AskServiceHttpPost">
+    <wsdl:operation name="SubmitQuestion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Call this method to start a question. Only once the &lt;tt&gt;numberOfPhotos&lt;/tt&gt; has equal value to the number of attached photos can &lt;tt&gt;CompleteQuestion&lt;/tt&gt; method be called.&lt;br/&gt;&lt;tt&gt;numberOfPhotos&lt;/tt&gt; - Specifies the total number of photos to be submitted.&lt;br/&gt;&lt;tt&gt;responseType&lt;/tt&gt; - Specifies the type of question to ask. &lt;tt&gt;0&lt;/tt&gt; = YesNo, &lt;tt&gt;1&lt;/tt&gt; = AB, &lt;tt&gt;2&lt;/tt&gt; = RateTo10, &lt;tt&gt;3&lt;/tt&gt; = MultipleSelect.&lt;br/&gt;&lt;tt&gt;durationType&lt;/tt&gt; - Specifies how long the question is open for. &lt;tt&gt;0&lt;/tt&gt; = 3 min, &lt;tt&gt;1&lt;/tt&gt; = 15 min, &lt;tt&gt;2&lt;/tt&gt; = 60 min, &lt;tt&gt;3&lt;/tt&gt; = 1 day.&lt;br/&gt;&lt;tt&gt;isPrivate&lt;/tt&gt; - Specifies the value indicating whether the question is intended for friends only.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;questionText&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt;.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:SubmitQuestionHttpPostIn" />
+      <wsdl:output message="tns:SubmitQuestionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AttachPhoto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Attaches a single photo to an Ask question.&lt;br/&gt;&lt;tt&gt;askQuestionID&lt;/tt&gt; - Specifies the identifier of the question to attach the photo to.&lt;br/&gt;&lt;tt&gt;indexOrder&lt;/tt&gt; - First photo - &lt;tt&gt;1&lt;/tt&gt;, Second photo - &lt;tt&gt;2&lt;/tt&gt;, Third photo - &lt;tt&gt;3&lt;/tt&gt;.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the specified &lt;tt&gt;askQuestionID&lt;/tt&gt; is invalid.&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;askQuestionID&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;photoBase64String&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:AttachPhotoHttpPostIn" />
+      <wsdl:output message="tns:AttachPhotoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CompleteQuestion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Completes an Ask question and promotes it to live.&lt;br/&gt;&lt;tt&gt;askQuestionID&lt;/tt&gt; - Specifies the identifier of the question that has been completed.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;askQuestionID&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt;.&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - At least 2 photos should be attached to the MultipleSelect question and at least 1 photo should be attached to the questions of other types.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:CompleteQuestionHttpPostIn" />
+      <wsdl:output message="tns:CompleteQuestionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Retrieves question-related data according to the specified identifier.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the question with the specified &lt;tt&gt;questionID&lt;/tt&gt; does not exist.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetQuestionHttpPostIn" />
+      <wsdl:output message="tns:GetQuestionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestionIDs">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns a list of the latest 10 question identifiers for the specified user.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetQuestionIDsHttpPostIn" />
+      <wsdl:output message="tns:GetQuestionIDsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HasNewComments">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Checks whether there are new comments for the entry specified by the &lt;tt&gt;questionID&lt;/tt&gt;. Use &lt;tt&gt;lastCommentID&lt;/tt&gt; to specify the latest successfully retrieved comment. Specify &lt;tt&gt;0&lt;/tt&gt; if no comments have been retrieved yet.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:HasNewCommentsHttpPostIn" />
+      <wsdl:output message="tns:HasNewCommentsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetComment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Retrieves comment-related data for the specified identifier.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the comment with the specified identifier does not exist.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetCommentHttpPostIn" />
+      <wsdl:output message="tns:GetCommentHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommentIDs">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns a list of identifiers for the comments that are newer than the comment with &lt;tt&gt;lastCommentID&lt;/tt&gt;. To retrieve all the comments specify &lt;tt&gt;0&lt;/tt&gt; for &lt;tt&gt;lastCommentID&lt;/tt&gt;.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetCommentIDsHttpPostIn" />
+      <wsdl:output message="tns:GetCommentIDsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResponse">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Gets the response for the question with the specified identifier.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetResponseHttpPostIn" />
+      <wsdl:output message="tns:GetResponseHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SkipQuestion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Skips the question and marks it as skipped in the database.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:SkipQuestionHttpPostIn" />
+      <wsdl:output message="tns:SkipQuestionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VoteForQuestion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Votes for the question with the specified identifier.&lt;br/&gt;&lt;tt&gt;result&lt;/tt&gt; value should be appropriate to the &lt;tt&gt;ResponseType&lt;/tt&gt; of the question.&lt;br/&gt;If the type of the response is &lt;tt&gt;YesNo&lt;/tt&gt;, &lt;tt&gt;1&lt;/tt&gt; = &lt;tt&gt;Yes&lt;/tt&gt;, &lt;tt&gt;2&lt;/tt&gt; = &lt;tt&gt;No&lt;/tt&gt;.&lt;br/&gt;If the type of the response is &lt;tt&gt;AB&lt;/tt&gt;, &lt;tt&gt;1&lt;/tt&gt; = &lt;tt&gt;A&lt;/tt&gt;, &lt;tt&gt;2&lt;/tt&gt; = &lt;tt&gt;B&lt;/tt&gt;.&lt;br/&gt;If the type of the response is &lt;tt&gt;Rate1To10&lt;/tt&gt;, &lt;tt&gt;result&lt;/tt&gt; should be an integer from 1 to 10.&lt;br/&gt;If the type of the response is &lt;tt&gt;MultipleSelect&lt;/tt&gt;, &lt;tt&gt;result&lt;/tt&gt; should identify the choice that is take values from 1 to 3.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:VoteForQuestionHttpPostIn" />
+      <wsdl:output message="tns:VoteForQuestionHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AskServiceSoap" type="tns:AskServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SubmitQuestion">
+      <soap:operation soapAction="http://www.next2friends.com/SubmitQuestion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AttachPhoto">
+      <soap:operation soapAction="http://www.next2friends.com/AttachPhoto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompleteQuestion">
+      <soap:operation soapAction="http://www.next2friends.com/CompleteQuestion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestion">
+      <soap:operation soapAction="http://www.next2friends.com/GetQuestion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestionIDs">
+      <soap:operation soapAction="http://www.next2friends.com/GetQuestionIDs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddComment">
+      <soap:operation soapAction="http://www.next2friends.com/AddComment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HasNewComments">
+      <soap:operation soapAction="http://www.next2friends.com/HasNewComments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetComment">
+      <soap:operation soapAction="http://www.next2friends.com/GetComment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommentIDs">
+      <soap:operation soapAction="http://www.next2friends.com/GetCommentIDs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResponse">
+      <soap:operation soapAction="http://www.next2friends.com/GetResponse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SkipQuestion">
+      <soap:operation soapAction="http://www.next2friends.com/SkipQuestion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoteForQuestion">
+      <soap:operation soapAction="http://www.next2friends.com/VoteForQuestion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AskServiceSoap12" type="tns:AskServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SubmitQuestion">
+      <soap12:operation soapAction="http://www.next2friends.com/SubmitQuestion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AttachPhoto">
+      <soap12:operation soapAction="http://www.next2friends.com/AttachPhoto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompleteQuestion">
+      <soap12:operation soapAction="http://www.next2friends.com/CompleteQuestion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestion">
+      <soap12:operation soapAction="http://www.next2friends.com/GetQuestion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestionIDs">
+      <soap12:operation soapAction="http://www.next2friends.com/GetQuestionIDs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddComment">
+      <soap12:operation soapAction="http://www.next2friends.com/AddComment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HasNewComments">
+      <soap12:operation soapAction="http://www.next2friends.com/HasNewComments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetComment">
+      <soap12:operation soapAction="http://www.next2friends.com/GetComment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommentIDs">
+      <soap12:operation soapAction="http://www.next2friends.com/GetCommentIDs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResponse">
+      <soap12:operation soapAction="http://www.next2friends.com/GetResponse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SkipQuestion">
+      <soap12:operation soapAction="http://www.next2friends.com/SkipQuestion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoteForQuestion">
+      <soap12:operation soapAction="http://www.next2friends.com/VoteForQuestion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AskServiceHttpGet" type="tns:AskServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="SubmitQuestion">
+      <http:operation location="/SubmitQuestion" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AttachPhoto">
+      <http:operation location="/AttachPhoto" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="CompleteQuestion">
+      <http:operation location="/CompleteQuestion" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestion">
+      <http:operation location="/GetQuestion" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestionIDs">
+      <http:operation location="/GetQuestionIDs" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HasNewComments">
+      <http:operation location="/HasNewComments" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetComment">
+      <http:operation location="/GetComment" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommentIDs">
+      <http:operation location="/GetCommentIDs" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResponse">
+      <http:operation location="/GetResponse" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SkipQuestion">
+      <http:operation location="/SkipQuestion" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="VoteForQuestion">
+      <http:operation location="/VoteForQuestion" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AskServiceHttpPost" type="tns:AskServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="SubmitQuestion">
+      <http:operation location="/SubmitQuestion" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AttachPhoto">
+      <http:operation location="/AttachPhoto" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="CompleteQuestion">
+      <http:operation location="/CompleteQuestion" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestion">
+      <http:operation location="/GetQuestion" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestionIDs">
+      <http:operation location="/GetQuestionIDs" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HasNewComments">
+      <http:operation location="/HasNewComments" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetComment">
+      <http:operation location="/GetComment" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommentIDs">
+      <http:operation location="/GetCommentIDs" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResponse">
+      <http:operation location="/GetResponse" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SkipQuestion">
+      <http:operation location="/SkipQuestion" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="VoteForQuestion">
+      <http:operation location="/VoteForQuestion" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AskService">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Provides functionality to create questions with photos attached, retrieve responses as well as private questions.</wsdl:documentation>
+    <wsdl:port name="AskServiceSoap" binding="tns:AskServiceSoap">
+      <soap:address location="http://services.next2friends.com/n2fwebservices/AskService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AskServiceSoap12" binding="tns:AskServiceSoap12">
+      <soap12:address location="http://services.next2friends.com/n2fwebservices/AskService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AskServiceHttpGet" binding="tns:AskServiceHttpGet">
+      <http:address location="http://services.next2friends.com/n2fwebservices/AskService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AskServiceHttpPost" binding="tns:AskServiceHttpPost">
+      <http:address location="http://services.next2friends.com/n2fwebservices/AskService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

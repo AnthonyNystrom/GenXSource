@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/SampleTemplate.dwt" codeOutsideHTMLIsLocked="false" -->
+	<head>
+	<!-- InstanceBeginEditable name="doctitle" -->
+	<title>The Netron Library - Quick guide</title>
+	<!-- InstanceEndEditable -->
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<link href="/Templates/style.css" rel="stylesheet" type="text/css">
+	<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+	</head>
+	<body>
+	<table width="1024" height="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr >
+        <th height="15" colspan="2" align="left" valign="top"><table width="1024" border="0" cellpadding="0" cellspacing="0" bgcolor="#192D4F">
+          <tr align="center" >
+            <td width="20" class="menu"><img src="/Guide/images/1x1.gif" alt="Empty" width="1" height="1"></td>
+            <td width="100" class="menu"><a href="/Guide/index.htm">&nbsp;&nbsp;&nbsp;Home&nbsp; &nbsp;&nbsp; </a></td>
+            <td width="100"  class="menu"><a href="/Guide/Samples.htm">&nbsp;&nbsp;&nbsp;Samples&nbsp;&nbsp;&nbsp;</a></td>
+            <td width="100" class="menu"><a href="/Guide/API/index.html">&nbsp;&nbsp;&nbsp;API&nbsp;&nbsp;&nbsp;</a></td>
+            <td width="100" class="menu"></td>
+            <td width="100" class="menu"></td>
+            <td width="100" class="menu"></td>
+            <td width="100" class="menu"></td>
+          </tr>
+        </table></th>
+      </tr>
+      <tr >
+        <th height="37" colspan="2" align="left" valign="top" background="/images/NetronFutureSmall.png" class="graybottomborder">&nbsp;</th>
+      </tr>
+      <tr>
+        <td width="2%"><img src="/Guide/images/1x1.gif" alt="Empty" width="20" height="600"></td>
+        <td width="98%" height="437" valign="top"><p>&nbsp;</p>
+        <span class="SampleTitle"><!-- InstanceBeginEditable name="Title" -->The class shape <!-- InstanceEndEditable --></span>
+		<p><!-- InstanceBeginEditable name="Description" -->This sample guides you through the class shape interface. Since this type of shape seems to be rather popular I have tried to extend it and make it as useful as possible.<br>
+<!-- InstanceEndEditable -->		</p>
+		<!-- InstanceBeginEditable name="SampleContent" -->
+		
+		<form name="myform">
+          <p>This snippet adds the class shape, assigns it a title and sub-title and locates it at (100,10) on the canvas.  The body-type is set to 'None' which means that the shape has no additional 'stuff' besides the header. </p>
+          <p>
+            <textarea name="code1" cols="100" rows="8" class="CodeTextArea" id="code1" >
+ClassShape cls = new ClassShape();
+cls.BodyType = BodyType.None;
+cls.Location = new Point(100, 20);
+cls.Title = "Customer";
+cls.SubTitle = "Type: VIP";
+this.DiagramControl.AddShape(cls);
+
+                </textarea>
+          </p>
+          <p>
+            <input name="button" type="button" class="CodeButton" onClick="window.external.RunScript(myform.code1.value); return false;" value="Execute script" />
+          </p>
+          <p>If you wish to show additional information in the body you can set the body-type to 'FreeText' or 'List'. In the following code the FreeText type allows you to display additional string-like information.The icon to expand/collapse the shape will automatically become visible. </p>
+          <p>
+            <textarea name="textarea" cols="100" rows="10" class="CodeTextArea" id="code2" >
+ ClassShape cls = new ClassShape();
+cls.BodyType = BodyType.FreeText;
+cls.Location = new Point(100, 20);
+cls.Title = "Customer";
+cls.SubTitle = "Type: VIP";
+cls.Text = "This customer donated a substantial amount to the Netron project.";
+//cls.Expand();
+this.DiagramControl.AddShape(cls);
+
+                </textarea>
+          </p>
+          <p>
+            <input name="button2" type="button" class="CodeButton" onClick="window.external.RunScript(myform.code2.value); return false;" value="Execute script" />
+          </p>
+          <p>Finally, the popular properties/methods type of shape can be set via the 'List' body type. In the following snippet the pre-defined 'PropertiesNode' property is accessed to set the items under the 'Property' node: </p>
+          <p>
+            <textarea name="textarea2" cols="100" rows="13" class="CodeTextArea" id="code3" >
+ClassShape cls = new ClassShape();
+cls.BodyType = BodyType.List;
+cls.Location = new Point(100, 20);
+cls.Title = "Customer";
+cls.SubTitle = "Type: VIP";
+cls.Expand();
+cls.PropertiesNode.Entries.Clear();
+cls.PropertiesNode.Text = "Info";
+cls.PropertiesNode.Entries.Add(new LabelMaterial("Test"));
+cls.MethodsNode.Entries.Clear();
+this.DiagramControl.AddShape(cls);
+
+                </textarea>
+</p>
+          <p>
+            <input name="button22" type="button" class="CodeButton" onClick="window.external.RunScript(myform.code3.value); return false;" value="Execute script" />
+          </p>
+          <p>The following code demonstrates how you can modify the shape material and actually mix-and-customize the way you like it: </p>
+          <p>
+            <textarea name="textarea3" cols="140" rows="23" class="CodeTextArea" id="code4" >
+ClassShape cls = new ClassShape();
+cls.BodyType = BodyType.List;
+cls.Location = new Point(100, 20);
+cls.Title = "Customer";
+cls.SubTitle = "Type: VIP";
+cls.Expand();
+cls.PropertiesNode.Entries.Clear();
+cls.MethodsNode.Entries.Clear();
+
+cls.PropertiesNode.Text = "Info";
+cls.PropertiesNode.Entries.Add(new IconLabelMaterial("IQ = 117", "Resources.idea.gif"));
+ClickableIconLabelMaterial material = new ClickableIconLabelMaterial("Customer solutions", "Resources.Web.png", "http://msdn.microsoft.com/mbs/default.aspx");
+cls.PropertiesNode.Entries.Add(material);
+
+cls.MethodsNode.Text = "Address";
+cls.MethodsNode.Entries.Add(new IconLabelMaterial("Tel: +32-2-457896", "Resources.DialHS.png"));
+cls.MethodsNode.Entries.Add(new IconLabelMaterial("San Jose, CA 95112", "Resources.HomeHS.png"));
+
+this.DiagramControl.AddShape(cls);
+
+                </textarea>
+          </p>
+          <p>
+            <input name="button222" type="button" class="CodeButton" onClick="window.external.RunScript(myform.code4.value); return false;" value="Execute script" />
+          </p>
+          <p>&nbsp;</p>
+          <p class="SampleTitle">A Note to developers and integrators </p>
+          <p>The class shape is base on the ComplexShapeBase base class which allows a wider variety of shapes than the SimpleShapeBase type. The SimpleShapeBase is roughly the same as the base class for shapes in previous versions of the Netron library. The complex shape type is not more complex however but allows you to build shapes based on so-called shape materials. </p>
+          <p>Shape materials are basic building blocks which can be injected in shapes. The basic material types defined in the library are:</p>
+          <ul>
+            <li>the LabelMaterial: just a label</li>
+            <li>the IconMaterial: just an icon or image</li>
+            <li>a combination of both; the IconLabelMaterial</li>
+            <li>clickable extensions of the three previous types; ClickableIconMaterial, ClickableLabelMaterial, ClickableIconLabelMaterial. </li>
+            <li>a FolderMaterial which acts as a expandable tree-like container. </li>
+            <li>the SwitchIconMaterial which you can recognize in the expand/collapse icon top-right of the ClassShape </li>
+          </ul>
+          <p>As demonstrated above in the last code snippet, it's very easy to combine materials in a complex shape without much coding efforts. Of course, you can define your own materials and develop custom 'class shapes'. The only limit is your imagination. </p>
+          <p>&nbsp; </p>
+		</form>
+		<!-- InstanceEndEditable -->
+		<p>&nbsp;</p>
+        <p>&nbsp;</p>
+        </td>
+      </tr>
+      <tr >
+        <td colspan="2"><hr color="#192D4F" noshade="noshade"></td>
+      </tr>
+    </table>
+	</body>
+<!-- InstanceEnd --></html>

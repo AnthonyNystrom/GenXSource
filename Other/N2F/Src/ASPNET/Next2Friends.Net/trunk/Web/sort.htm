@@ -1,0 +1,189 @@
+<html><head>
+
+<meta http-equiv="Content-Type" content="text/html; utf-8"><title>Sortables demo - Interface plugin for jQuery</title>
+
+		<script type="text/javascript" src="lib/jquery.js"></script>
+		<script type="text/javascript" src="lib/interface.js"></script>
+<style type="text/css" media="all">
+html
+{
+	height: 100%;
+}
+img{
+	border: none;
+}
+body
+{
+	background: #fff;
+	height: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+.groupWrapper
+{
+	width: 32%;
+	float: left;
+	margin-right: 1%;
+	min-height: 400px;
+}
+
+.serializer
+{
+	clear: both;
+}
+
+.groupItem
+{
+	margin-bottom: 5px;
+}
+
+.groupItem .itemHeader
+{
+	line-height: 15px;
+	background-color: #75b2ef;
+	border-top: 2px solid #65a9ed;
+	color: #FFF;
+	padding: 0 10px;
+	cursor: move;
+	font-size: 12px;
+	height: 15px;
+	position: relative;
+}
+
+.groupItem .itemHeader a
+{
+	position: absolute;
+	right: 10px;
+	top: 0px;
+	font-weight: normal;
+	font-size: 11px;
+	text-decoration: none;
+}
+.sortHelper
+{
+	border: 3px dashed #666;
+	width: auto !important;
+}
+.groupWrapper p
+{
+	height: 1px;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+</style></head><body>
+<div id="sort1" class="groupWrapper">
+
+	<p>&nbsp;</p>
+<div style="position: static; display: block; left: -2px; top: 26px;" id="news" class="groupItem">
+		<div style="-moz-user-select: none;" class="itemHeader">News<a href="#" class="closeEl">[-]</a></div>
+		<div class="itemContent">
+			<ul>
+				<li>orem ipsum dolor sit amet, consectetuer adipiscing elit</li>
+				<li>orem ipsum dolor sit amet, consectetuer adipiscing elit</li>
+				<li>orem ipsum dolor sit amet, consectetuer adipiscing elit</li>
+				<li>orem ipsum dolor sit amet, consectetuer adipiscing elit</li>
+			</ul>
+		</div>
+	</div>
+	
+<div style="position: static; display: block;  top: 11px;" id="images" class="groupItem">
+		<div style="-moz-user-select: none;" class="itemHeader">Images<a href="#" class="closeEl">[-]</a></div>
+		<div class="itemContent">
+			<ul>
+				<li>orem ipsum dolor sit amet, consectetuer adipiscing elit</li>
+				<li>orem ipsum dolor sit amet, consectetuer adipiscing elit</li>
+				<li>orem ipsum dolor sit amet, consectetuer adipiscing elit</li>
+				<li>orem ipsum dolor sit amet, consectetuer adipiscing elit</li>
+			</ul>
+		</div>
+	</div>
+	
+<div style="position: static; display: block;  top: 11px;" id="images" class="groupItem">
+		<div style="-moz-user-select: none;" class="itemHeader">Images<a href="#" class="closeEl">[-]</a></div>
+		<div class="itemContent">
+			<ul>
+				<li>orem ipsum dolor sit amet, consectetuer adipiscing elit</li>
+				<li>orem ipsum dolor sit amet, consectetuer adipiscing elit</li>
+				<li>orem ipsum dolor sit amet, consectetuer adipiscing elit</li>
+				<li>orem ipsum dolor sit amet, consectetuer adipiscing elit</li>
+			</ul>
+		</div>
+</div>
+	
+	
+	</div>
+
+
+<div id="sort4" class="groupWrapper">
+	<div id="links" class="groupItem">
+		<div style="-moz-user-select: none;" class="itemHeader">Links<a href="#" class="closeEl">[-]</a></div>
+		<div class="itemContent">
+			<ul>
+				<li>orem ipsum dolor sit amet, consectetuer adipiscing elit</li>
+				<li>orem ipsum dolor sit amet, consectetuer adipiscing elit</li>
+				<li>orem ipsum dolor sit amet, consectetuer adipiscing elit</li>
+				<li>orem ipsum dolor sit amet, consectetuer adipiscing elit</li>
+			</ul>
+		</div>
+	</div>
+	
+	<p>&nbsp;</p>
+</div>
+
+
+<script type="text/javascript">
+$(document).ready(
+	function () {
+		$('a.closeEl').bind('click', toggleContent);
+		$('div.groupWrapper').Sortable(
+			{
+				accept: 'groupItem',
+				helperclass: 'sortHelper',
+				activeclass : 	'sortableactive',
+				hoverclass : 	'sortablehover',
+				handle: 'div.itemHeader',
+				tolerance: 'pointer',
+				onChange : function(ser)
+				{
+				},
+				onStart : function()
+				{
+					$.iAutoscroller.start(this, document.getElementsByTagName('body'));
+				},
+				onStop : function()
+				{
+					$.iAutoscroller.stop();
+				}
+			}
+		);
+	}
+);
+var toggleContent = function(e)
+{
+	var targetContent = $('div.itemContent', this.parentNode.parentNode);
+	if (targetContent.css('display') == 'none') {
+		targetContent.slideDown(300);
+		$(this).html('[-]');
+	} else {
+		targetContent.slideUp(300);
+		$(this).html('[+]');
+	}
+	return false;
+};
+function serialize(s)
+{
+	serial = $.SortSerialize(s);
+	alert(serial.hash);
+};
+</script>
+<div class="serializer">
+<a href="#" onclick="serialize(); return false;">serialize all lists</a>
+<a href="#" onclick="serialize('sort1'); return false;">serialize list 1</a>
+<a href="#" onclick="serialize('sort2'); return false;">serialize list 2</a>
+<a href="#" onclick="serialize('sort3'); return false;">serialize list 3</a>
+<a href="#" onclick="serialize(['sort1', 'sort3']); return false;">serialize lists 2 and 3</a>
+</div>
+
+</body></html>

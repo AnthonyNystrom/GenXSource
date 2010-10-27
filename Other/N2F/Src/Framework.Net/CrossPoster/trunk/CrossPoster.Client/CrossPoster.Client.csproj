@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2442BB9B-C952-48CE-95AF-9D4487B0F3BD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Next2Friends.CrossPoster.Client</RootNamespace>
+    <AssemblyName>Next2Friends.CrossPoster.Client</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>Edit.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CookComputing.XmlRpcV2, Version=2.3.2.0, Culture=neutral, PublicKeyToken=a7d6e17aa302004d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\CookComputing.XmlRpcV2.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Client, Version=1.1.4.0, Culture=neutral, PublicKeyToken=04a59ca9b0273830, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\Google.GData.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddBlogStepOne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddBlogStepOne.Designer.cs">
+      <DependentUpon>AddBlogStepOne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddBlogStepTwo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddBlogStepTwo.Designer.cs">
+      <DependentUpon>AddBlogStepTwo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddBlogWizard.cs" />
+    <Compile Include="Engines\BlogEngineFactory.cs" />
+    <Compile Include="Engines\BloggerEngine.cs" />
+    <Compile Include="Engines\IBlogEngine.cs" />
+    <Compile Include="Engines\LiveJournalEngine.cs" />
+    <Compile Include="Engines\WordPressEngine.cs" />
+    <Compile Include="Google\GoogleSucks.cs" />
+    <Compile Include="LiveJournal\Event.cs" />
+    <Compile Include="LiveJournal\FriendGroup.cs" />
+    <Compile Include="LiveJournal\GetEventsRequest.cs" />
+    <Compile Include="LiveJournal\GetEventsResponse.cs" />
+    <Compile Include="LiveJournal\ILiveJournalClient.cs" />
+    <Compile Include="LiveJournal\LoginRequest.cs" />
+    <Compile Include="LiveJournal\LoginResponse.cs" />
+    <Compile Include="LiveJournal\PostRequest.cs" />
+    <Compile Include="LiveJournal\PostResponse.cs" />
+    <Compile Include="Logic\BlogDescriptor.cs" />
+    <Compile Include="Logic\BlogEntryDescriptor.cs" />
+    <Compile Include="Logic\BlogEntryListModel.cs" />
+    <Compile Include="Logic\BlogListModel.cs" />
+    <Compile Include="BlogPropertiesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BlogPropertiesForm.Designer.cs">
+      <DependentUpon>BlogPropertiesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logic\BlogType.cs" />
+    <Compile Include="ComposeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComposeForm.Designer.cs">
+      <DependentUpon>ComposeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BorderContainer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Design\BorderContainerDesigner.cs" />
+    <Compile Include="Controls\ImageCombo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ImageComboItem.cs" />
+    <Compile Include="Controls\PostContentPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PostContentPanel.Designer.cs">
+      <DependentUpon>PostContentPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PostMetadataPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PostMetadataPanel.Designer.cs">
+      <DependentUpon>PostMetadataPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IWizardStep.cs" />
+    <Compile Include="Logic\ListEventArgs.cs" />
+    <Compile Include="Logic\ListModel.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MetaWeblog\MetaWeblogGateway.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddBlogStepOne.resx">
+      <DependentUpon>AddBlogStepOne.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddBlogStepTwo.resx">
+      <DependentUpon>AddBlogStepTwo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BlogPropertiesForm.resx">
+      <DependentUpon>BlogPropertiesForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComposeForm.resx">
+      <DependentUpon>ComposeForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PostContentPanel.resx">
+      <DependentUpon>PostContentPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PostMetadataPanel.resx">
+      <DependentUpon>PostMetadataPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="VerificationMessages.cs" />
+    <Compile Include="WizardFinishedEventArgs.cs" />
+    <Compile Include="WizardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MetaWeblog\Category.cs" />
+    <Compile Include="MetaWeblog\Comment.cs" />
+    <Compile Include="MetaWeblog\Link.cs" />
+    <Compile Include="MetaWeblog\NewCategory.cs" />
+    <Compile Include="MetaWeblog\Post.cs" />
+    <Compile Include="MetaWeblog\UserBlog.cs" />
+    <Compile Include="MetaWeblog\UserInfo.cs" />
+    <Compile Include="Xml\XmlService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Edit.ico" />
+    <None Include="app.config" />
+    <None Include="Resources\Blogger.png" />
+    <None Include="Resources\Download.png" />
+    <None Include="Resources\Blogger2.png" />
+    <Content Include="Resources\Edit.ico" />
+    <None Include="Resources\LiveJournal.png" />
+    <None Include="Resources\WordPress.png" />
+    <None Include="Resources\Schema.png" />
+    <None Include="Resources\Go.png" />
+    <None Include="Resources\Remove.png" />
+    <None Include="Resources\New.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

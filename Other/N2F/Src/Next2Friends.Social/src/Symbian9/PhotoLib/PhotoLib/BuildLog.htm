@@ -1,0 +1,179 @@
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=windows-1251">
+</head>
+<body>
+<pre>
+<table width=100% bgcolor=#CFCFE5><tr> <td> <font face=arial size=+3>
+Build Log
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>
+<h3>------- Build started: Project: PhotoLib, Configuration: Rel_S60_31_GCCE|Win32 -------
+</h3>
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Command Lines
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>Creating temporary file "C:\DOCUME~1\ALEXEY~1.ALE\LOCALS~1\Temp\BAT000027.bat" with contents
+[
+@echo off
+RCMake.exe "D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\PhotoLib.vcproj" S60_31 GCCE UREL rebuild
+if errorlevel 1 goto VCReportError
+goto VCEnd
+:VCReportError
+echo Project : error PRJ0019: A tool returned an error code from "Performing Makefile project actions"
+exit 1
+:VCEnd
+]
+Creating command line "C:\DOCUME~1\ALEXEY~1.ALE\LOCALS~1\Temp\BAT000027.bat"
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Output Window
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>Performing Makefile project actions
+* Current build configuration: GCCE UREL
+Converting multi-icons...
+* Creating makefile for platform GCCE
+epocroot = 
+* d:\Nokia\Tools\Carbide_vs\makmake.bat \Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\group\PhotoLib GCCE
+initialiseConfig: GCCE
+* Running build action: rebuild
+epocroot = 
+* d:\Nokia\Tools\Carbide_vs\make.bat -f D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\group\PhotoLib.GCCE CLEANUREL UREL
+make: *** Warning: File `D:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\group\PhotoLib.GCCE' has modification time in the future (2008-08-26 12:23:06 > 2008-08-26 12:23:04)
+perl -S emkdir.pl \symbian\9.2\s60_3rd_fp1\epoc32\build\projects\next2friends\dev\brewwmsys\src\symbian9\photolib\photolib\group\photolib\gcce\urel
+Creating \symbian\9.2\s60_3rd_fp1\epoc32\build\projects\next2friends\dev\brewwmsys\src\symbian9\photolib\photolib\group\photolib\gcce\urel
+vlist.cpp
+arm-none-symbianelf-g++    -O2 -fno-unit-at-a-time  -Wall -Wno-ctor-dtor-privacy -Wno-unknown-pragmas  -fexceptions -march=armv5t      -mapcs -pipe -nostdinc -c    -msoft-float       -DNDEBUG -D_UNICODE -D__GCCE__  -D__SYMBIAN32__ -D__SERIES60_31__ -D__SERIES60_3X__ -D__GCCE__ -D__EPOC32__ -D__MARM__ -D__EABI__ -D__MARM_ARMV5__ -D__SUPPORT_CPP_EXCEPTIONS__ -D__MARM_ARMV5__  -D__PRODUCT_INCLUDE__=\"/Symbian/9.2/S60_3rd_FP1/epoc32/include/variant/Symbian_OS_v9.2.hrh\"    -x c++ -include /Symbian/9.2/S60_3rd_FP1/EPOC32/INCLUDE/GCCE/GCCE.h  -I /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src -I /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/framework  -I /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc -I /Symbian/9.2/S60_3rd_FP1/EPOC32/include -I /Symbian/9.2/S60_3rd_FP1/epoc32/include/variant -I "D:/Program Files/CSL Arm Toolchain/bin/../lib/gcc/arm-none-symbianelf/3.4.3/include" -o /Symbian/9.2/S60_3rd_FP1/EPOC32/BUILD/Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/group/PhotoLib/GCCE/UREL/VList.o /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src/vlist.cpp
+In file included from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/framework/Utils.h:8,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/framework/BaseTypes.h:7,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc/VList.h:12,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src/vlist.cpp:1:
+/Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/framework/BaseTypes.h:155(35): warning: no newline at end of file
+In file included from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc/VList.h:12,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src/vlist.cpp:1:
+/Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/framework/BaseTypes.h:155(35): warning: no newline at end of file
+In file included from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/framework/Allocator.h:4,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc/VList.h:13,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src/vlist.cpp:1:
+/Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/framework/BaseTypes.h:155(35): warning: no newline at end of file
+In file included from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc/VList.h:13,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src/vlist.cpp:1:
+/Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/framework/Allocator.h:79(39): warning: no newline at end of file
+In file included from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src/vlist.cpp:1:
+/Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc/VList.h:258(34): warning: no newline at end of file
+/Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src/vlist.cpp:229(21): warning: no newline at end of file
+photolibrarysis9.cpp
+arm-none-symbianelf-g++    -O2 -fno-unit-at-a-time  -Wall -Wno-ctor-dtor-privacy -Wno-unknown-pragmas  -fexceptions -march=armv5t      -mapcs -pipe -nostdinc -c    -msoft-float       -DNDEBUG -D_UNICODE -D__GCCE__  -D__SYMBIAN32__ -D__SERIES60_31__ -D__SERIES60_3X__ -D__GCCE__ -D__EPOC32__ -D__MARM__ -D__EABI__ -D__MARM_ARMV5__ -D__SUPPORT_CPP_EXCEPTIONS__ -D__MARM_ARMV5__  -D__PRODUCT_INCLUDE__=\"/Symbian/9.2/S60_3rd_FP1/epoc32/include/variant/Symbian_OS_v9.2.hrh\"    -x c++ -include /Symbian/9.2/S60_3rd_FP1/EPOC32/INCLUDE/GCCE/GCCE.h  -I /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src -I /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/framework  -I /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc -I /Symbian/9.2/S60_3rd_FP1/EPOC32/include -I /Symbian/9.2/S60_3rd_FP1/epoc32/include/variant -I "D:/Program Files/CSL Arm Toolchain/bin/../lib/gcc/arm-none-symbianelf/3.4.3/include" -o /Symbian/9.2/S60_3rd_FP1/EPOC32/BUILD/Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/group/PhotoLib/GCCE/UREL/PhotoLibrarySis9.o /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src/photolibrarysis9.cpp
+In file included from /Symbian/9.2/S60_3rd_FP1/EPOC32/include/eikmenub.h:18,
+                 from /Symbian/9.2/S60_3rd_FP1/EPOC32/include/aknenv.h:28,
+                 from /Symbian/9.2/S60_3rd_FP1/EPOC32/include/aknutils.h:40,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src/photolibrarysis9.cpp:6:
+/Symbian/9.2/S60_3rd_FP1/EPOC32/include/eikmenup.h: In member function `TBool CEikMenuPaneItem::IsScaleableText(const TDesC&) const':
+/Symbian/9.2/S60_3rd_FP1/EPOC32/include/eikmenup.h(242): warning: enumeral mismatch in conditional expression: `TFalse' vs `TTrue'
+In file included from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/framework/Utils.h:8,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/framework/Application.h:9,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src/photolibrarysis9.cpp:8:
+/Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/framework/BaseTypes.h:155(35): warning: no newline at end of file
+In file included from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/framework/IApplicationCore.h:8,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/framework/Application.h:10,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src/photolibrarysis9.cpp:8:
+/Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/framework/BaseTypes.h:155(35): warning: no newline at end of file
+In file included from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src/photolibrarysis9.cpp:8:
+/Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/framework/Application.h:431(36): warning: no newline at end of file
+In file included from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src/photolibrarysis9.cpp:9:
+/Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/framework/FileSystem.h:110(37): warning: no newline at end of file
+In file included from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc/PhotoLibrary.h:4,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc/PhotoLibrarySis9.h:4,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src/photolibrarysis9.cpp:10:
+/Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/framework/BaseTypes.h:155(35): warning: no newline at end of file
+In file included from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc/PhotoLibrary.h:5,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc/PhotoLibrarySis9.h:4,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src/photolibrarysis9.cpp:10:
+/Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/framework/FileSystem.h:110(37): warning: no newline at end of file
+In file included from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc/PhotoLibrarySis9.h:4,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src/photolibrarysis9.cpp:10:
+/Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc/PhotoLibrary.h:43(7): warning: no newline at end of file
+In file included from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc/VList.h:12,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc/PhotoLibrarySis9.h:5,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src/photolibrarysis9.cpp:10:
+/Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/framework/BaseTypes.h:155(35): warning: no newline at end of file
+In file included from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/framework/Allocator.h:4,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc/VList.h:13,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc/PhotoLibrarySis9.h:5,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src/photolibrarysis9.cpp:10:
+/Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/framework/BaseTypes.h:155(35): warning: no newline at end of file
+In file included from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc/VList.h:13,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc/PhotoLibrarySis9.h:5,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src/photolibrarysis9.cpp:10:
+/Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/framework/Allocator.h:79(39): warning: no newline at end of file
+In file included from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc/PhotoLibrarySis9.h:5,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src/photolibrarysis9.cpp:10:
+/Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc/VList.h:258(34): warning: no newline at end of file
+In file included from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc/LibPhotoItem.h:4,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src/photolibrarysis9.cpp:11:
+/Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/framework/BaseTypes.h:155(35): warning: no newline at end of file
+In file included from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src/photolibrarysis9.cpp:11:
+/Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc/LibPhotoItem.h:67(7): warning: no newline at end of file
+/Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src/photolibrarysis9.cpp: In member function `void PhotoLibrarySis::ScanForFiles(ePhotoSourceType, char16*)':
+/Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src/photolibrarysis9.cpp(203): warning: unused variable 'newID'
+/Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src/photolibrarysis9.cpp(161): warning: unused variable 'result'
+photolibrary.cpp
+arm-none-symbianelf-g++    -O2 -fno-unit-at-a-time  -Wall -Wno-ctor-dtor-privacy -Wno-unknown-pragmas  -fexceptions -march=armv5t      -mapcs -pipe -nostdinc -c    -msoft-float       -DNDEBUG -D_UNICODE -D__GCCE__  -D__SYMBIAN32__ -D__SERIES60_31__ -D__SERIES60_3X__ -D__GCCE__ -D__EPOC32__ -D__MARM__ -D__EABI__ -D__MARM_ARMV5__ -D__SUPPORT_CPP_EXCEPTIONS__ -D__MARM_ARMV5__  -D__PRODUCT_INCLUDE__=\"/Symbian/9.2/S60_3rd_FP1/epoc32/include/variant/Symbian_OS_v9.2.hrh\"    -x c++ -include /Symbian/9.2/S60_3rd_FP1/EPOC32/INCLUDE/GCCE/GCCE.h  -I /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src -I /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/framework  -I /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc -I /Symbian/9.2/S60_3rd_FP1/EPOC32/include -I /Symbian/9.2/S60_3rd_FP1/epoc32/include/variant -I "D:/Program Files/CSL Arm Toolchain/bin/../lib/gcc/arm-none-symbianelf/3.4.3/include" -o /Symbian/9.2/S60_3rd_FP1/EPOC32/BUILD/Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/group/PhotoLib/GCCE/UREL/PhotoLibrary.o /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src/photolibrary.cpp
+In file included from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/framework/Utils.h:8,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/framework/BaseTypes.h:7,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc/PhotoLibrary.h:4,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src/photolibrary.cpp:1:
+/Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/framework/BaseTypes.h:155(35): warning: no newline at end of file
+In file included from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc/PhotoLibrary.h:4,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src/photolibrary.cpp:1:
+/Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/framework/BaseTypes.h:155(35): warning: no newline at end of file
+In file included from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc/PhotoLibrary.h:5,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src/photolibrary.cpp:1:
+/Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/framework/FileSystem.h:110(37): warning: no newline at end of file
+In file included from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src/photolibrary.cpp:1:
+/Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc/PhotoLibrary.h:43(7): warning: no newline at end of file
+In file included from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc/PhotoLibrarySis9.h:4,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src/photolibrary.cpp:2:
+/Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc/PhotoLibrary.h:43(7): warning: no newline at end of file
+In file included from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc/VList.h:12,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc/PhotoLibrarySis9.h:5,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src/photolibrary.cpp:2:
+/Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/framework/BaseTypes.h:155(35): warning: no newline at end of file
+In file included from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/framework/Allocator.h:4,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc/VList.h:13,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc/PhotoLibrarySis9.h:5,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src/photolibrary.cpp:2:
+/Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/framework/BaseTypes.h:155(35): warning: no newline at end of file
+In file included from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc/VList.h:13,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc/PhotoLibrarySis9.h:5,
+libphotoitem.cpp
+arm-none-symbianelf-g++    -O2 -fno-unit-at-a-time  -Wall -Wno-ctor-dtor-privacy -Wno-unknown-pragmas  -fexceptions -march=armv5t      -mapcs -pipe -nostdinc -c    -msoft-float       -DNDEBUG -D_UNICODE -D__GCCE__  -D__SYMBIAN32__ -D__SERIES60_31__ -D__SERIES60_3X__ -D__GCCE__ -D__EPOC32__ -D__MARM__ -D__EABI__ -D__MARM_ARMV5__ -D__SUPPORT_CPP_EXCEPTIONS__ -D__MARM_ARMV5__  -D__PRODUCT_INCLUDE__=\"/Symbian/9.2/S60_3rd_FP1/epoc32/include/variant/Symbian_OS_v9.2.hrh\"    -x c++ -include /Symbian/9.2/S60_3rd_FP1/EPOC32/INCLUDE/GCCE/GCCE.h  -I /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src -I /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/framework  -I /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc -I /Symbian/9.2/S60_3rd_FP1/EPOC32/include -I /Symbian/9.2/S60_3rd_FP1/epoc32/include/variant -I "D:/Program Files/CSL Arm Toolchain/bin/../lib/gcc/arm-none-symbianelf/3.4.3/include" -o /Symbian/9.2/S60_3rd_FP1/EPOC32/BUILD/Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/group/PhotoLib/GCCE/UREL/LibPhotoItem.o /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src/libphotoitem.cpp
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src/photolibrary.cpp:2:
+/Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/framework/Allocator.h:79(39): warning: no newline at end of file
+In file included from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc/PhotoLibrarySis9.h:5,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src/photolibrary.cpp:2:
+/Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc/VList.h:258(34): warning: no newline at end of file
+In file included from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/framework/Utils.h:8,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/framework/BaseTypes.h:7,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc/PhotoLibrary.h:4,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src/libphotoitem.cpp:1:
+/Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/framework/BaseTypes.h:155(35): warning: no newline at end of file
+In file included from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc/PhotoLibrary.h:4,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src/libphotoitem.cpp:1:
+/Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/framework/BaseTypes.h:155(35): warning: no newline at end of file
+In file included from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc/PhotoLibrary.h:5,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src/libphotoitem.cpp:1:
+/Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/framework/FileSystem.h:110(37): warning: no newline at end of file
+In file included from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src/libphotoitem.cpp:1:
+/Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc/PhotoLibrary.h:43(7): warning: no newline at end of file
+photolib.cpp
+arm-none-symbianelf-g++    -O2 -fno-unit-at-a-time  -Wall -Wno-ctor-dtor-privacy -Wno-unknown-pragmas  -fexceptions -march=armv5t      -mapcs -pipe -nostdinc -c    -msoft-float       -DNDEBUG -D_UNICODE -D__GCCE__  -D__SYMBIAN32__ -D__SERIES60_31__ -D__SERIES60_3X__ -D__GCCE__ -D__EPOC32__ -D__MARM__ -D__EABI__ -D__MARM_ARMV5__ -D__SUPPORT_CPP_EXCEPTIONS__ -D__MARM_ARMV5__  -D__PRODUCT_INCLUDE__=\"/Symbian/9.2/S60_3rd_FP1/epoc32/include/variant/Symbian_OS_v9.2.hrh\"    -x c++ -include /Symbian/9.2/S60_3rd_FP1/EPOC32/INCLUDE/GCCE/GCCE.h  -I /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src -I /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/framework  -I /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc -I /Symbian/9.2/S60_3rd_FP1/EPOC32/include -I /Symbian/9.2/S60_3rd_FP1/epoc32/include/variant -I "D:/Program Files/CSL Arm Toolchain/bin/../lib/gcc/arm-none-symbianelf/3.4.3/include" -o /Symbian/9.2/S60_3rd_FP1/EPOC32/BUILD/Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/group/PhotoLib/GCCE/UREL/PhotoLib.o /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src/photolib.cpp
+arm-none-symbianelf-ar  cr  \Symbian\9.2\S60_3rd_FP1\EPOC32\RELEASE\ARMV5\UREL\PhotoLib.lib \Symbian\9.2\S60_3rd_FP1\EPOC32\BUILD\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\group\PhotoLib\GCCE\UREL\VList.o \Symbian\9.2\S60_3rd_FP1\EPOC32\BUILD\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\group\PhotoLib\GCCE\UREL\PhotoLibrarySis9.o \Symbian\9.2\S60_3rd_FP1\EPOC32\BUILD\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\group\PhotoLib\GCCE\UREL\PhotoLibrary.o \Symbian\9.2\S60_3rd_FP1\EPOC32\BUILD\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\group\PhotoLib\GCCE\UREL\LibPhotoItem.o \Symbian\9.2\S60_3rd_FP1\EPOC32\BUILD\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\group\PhotoLib\GCCE\UREL\PhotoLib.o
+In file included from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc/LibPhotoItem.h:4,
+                 from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src/libphotoitem.cpp:2:
+/Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/framework/BaseTypes.h:155(35): warning: no newline at end of file
+In file included from /Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/src/libphotoitem.cpp:2:
+/Projects/Next2Friends/dev/BrewWmSys/src/Symbian9/PhotoLib/PhotoLib/inc/LibPhotoItem.h:67(7): warning: no newline at end of file
+make: warning:  Clock skew detected.  Your build may be incomplete.
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Results
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>
+Build log was saved at "file://d:\Projects\Next2Friends\dev\BrewWmSys\src\Symbian9\PhotoLib\PhotoLib\\BuildLog.htm"
+PhotoLib - 0 error(s), 38 warning(s)</pre></table><table   width=100% height=20 bgcolor=#CFCFE5><tr><td><font face=arial size=+2>
+</font></table></body></html>

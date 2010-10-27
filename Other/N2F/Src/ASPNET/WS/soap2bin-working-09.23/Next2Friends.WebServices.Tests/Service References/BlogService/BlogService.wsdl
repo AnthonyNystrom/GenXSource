@@ -1,0 +1,1302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.next2friends.com/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.next2friends.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Provides functionality to create and modify blog entries, insert photos and videos, read comments, leave your own.</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.next2friends.com/">
+      <s:element name="AddEntry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newEntry" type="tns:BlogEntry" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="BlogEntry">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Body" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DTCreated" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddEntryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddEntryResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditEntry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="editedEntry" type="tns:BlogEntry" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditEntryResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="RemoveEntry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="blogEntryID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveEntryResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetEntry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="blogEntryID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEntryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEntryResult" type="tns:BlogEntry" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEntryFromUrl">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="url" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEntryFromUrlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEntryFromUrlResult" type="tns:BlogEntry" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEntryIDs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEntryIDsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEntryIDsResult" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddComment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newComment" type="tns:BlogComment" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="BlogComment">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="NickName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BlogEntryID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Body" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DTCreated" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="InReplyToCommentID" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddCommentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddCommentResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditComment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="editedComment" type="tns:BlogComment" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditCommentResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="RemoveComment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="blogCommentID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveCommentResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="HasNewComments">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="blogEntryID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastBlogCommentID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HasNewCommentsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="HasNewCommentsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetComment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="blogCommentID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCommentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCommentResult" type="tns:BlogComment" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCommentIDs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="blogEntryID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastBlogCommentID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCommentIDsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCommentIDsResult" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPhotoIDs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPhotoIDsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPhotoIDsResult" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPhoto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="photoID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPhotoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPhotoResult" type="tns:BlogPhoto" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="BlogPhoto">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BlogMedia" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BlogMedia" abstract="true">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedDT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Base64ThumbnailString" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetVideoIDs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVideoIDsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetVideoIDsResult" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVideo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="videoID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVideoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetVideoResult" type="tns:BlogVideo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="BlogVideo">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BlogMedia" />
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="BlogEntry" nillable="true" type="tns:BlogEntry" />
+      <s:element name="ArrayOfInt" nillable="true" type="tns:ArrayOfInt" />
+      <s:element name="boolean" type="s:boolean" />
+      <s:element name="BlogComment" nillable="true" type="tns:BlogComment" />
+      <s:element name="BlogPhoto" nillable="true" type="tns:BlogPhoto" />
+      <s:element name="BlogVideo" nillable="true" type="tns:BlogVideo" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AddEntrySoapIn">
+    <wsdl:part name="parameters" element="tns:AddEntry" />
+  </wsdl:message>
+  <wsdl:message name="AddEntrySoapOut">
+    <wsdl:part name="parameters" element="tns:AddEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="EditEntrySoapIn">
+    <wsdl:part name="parameters" element="tns:EditEntry" />
+  </wsdl:message>
+  <wsdl:message name="EditEntrySoapOut">
+    <wsdl:part name="parameters" element="tns:EditEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="RemoveEntrySoapIn">
+    <wsdl:part name="parameters" element="tns:RemoveEntry" />
+  </wsdl:message>
+  <wsdl:message name="RemoveEntrySoapOut">
+    <wsdl:part name="parameters" element="tns:RemoveEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEntrySoapIn">
+    <wsdl:part name="parameters" element="tns:GetEntry" />
+  </wsdl:message>
+  <wsdl:message name="GetEntrySoapOut">
+    <wsdl:part name="parameters" element="tns:GetEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEntryFromUrlSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEntryFromUrl" />
+  </wsdl:message>
+  <wsdl:message name="GetEntryFromUrlSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEntryFromUrlResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEntryIDsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEntryIDs" />
+  </wsdl:message>
+  <wsdl:message name="GetEntryIDsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEntryIDsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddCommentSoapIn">
+    <wsdl:part name="parameters" element="tns:AddComment" />
+  </wsdl:message>
+  <wsdl:message name="AddCommentSoapOut">
+    <wsdl:part name="parameters" element="tns:AddCommentResponse" />
+  </wsdl:message>
+  <wsdl:message name="EditCommentSoapIn">
+    <wsdl:part name="parameters" element="tns:EditComment" />
+  </wsdl:message>
+  <wsdl:message name="EditCommentSoapOut">
+    <wsdl:part name="parameters" element="tns:EditCommentResponse" />
+  </wsdl:message>
+  <wsdl:message name="RemoveCommentSoapIn">
+    <wsdl:part name="parameters" element="tns:RemoveComment" />
+  </wsdl:message>
+  <wsdl:message name="RemoveCommentSoapOut">
+    <wsdl:part name="parameters" element="tns:RemoveCommentResponse" />
+  </wsdl:message>
+  <wsdl:message name="HasNewCommentsSoapIn">
+    <wsdl:part name="parameters" element="tns:HasNewComments" />
+  </wsdl:message>
+  <wsdl:message name="HasNewCommentsSoapOut">
+    <wsdl:part name="parameters" element="tns:HasNewCommentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentSoapIn">
+    <wsdl:part name="parameters" element="tns:GetComment" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCommentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentIDsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCommentIDs" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentIDsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCommentIDsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPhotoIDsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPhotoIDs" />
+  </wsdl:message>
+  <wsdl:message name="GetPhotoIDsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPhotoIDsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPhotoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPhoto" />
+  </wsdl:message>
+  <wsdl:message name="GetPhotoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPhotoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetVideoIDsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVideoIDs" />
+  </wsdl:message>
+  <wsdl:message name="GetVideoIDsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVideoIDsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetVideoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVideo" />
+  </wsdl:message>
+  <wsdl:message name="GetVideoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVideoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RemoveEntryHttpGetIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="blogEntryID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RemoveEntryHttpGetOut" />
+  <wsdl:message name="GetEntryHttpGetIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="blogEntryID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEntryHttpGetOut">
+    <wsdl:part name="Body" element="tns:BlogEntry" />
+  </wsdl:message>
+  <wsdl:message name="GetEntryFromUrlHttpGetIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="url" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEntryFromUrlHttpGetOut">
+    <wsdl:part name="Body" element="tns:BlogEntry" />
+  </wsdl:message>
+  <wsdl:message name="GetEntryIDsHttpGetIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEntryIDsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfInt" />
+  </wsdl:message>
+  <wsdl:message name="RemoveCommentHttpGetIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="blogCommentID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RemoveCommentHttpGetOut" />
+  <wsdl:message name="HasNewCommentsHttpGetIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="blogEntryID" type="s:string" />
+    <wsdl:part name="lastBlogCommentID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="HasNewCommentsHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentHttpGetIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="blogCommentID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentHttpGetOut">
+    <wsdl:part name="Body" element="tns:BlogComment" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentIDsHttpGetIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="blogEntryID" type="s:string" />
+    <wsdl:part name="lastBlogCommentID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentIDsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfInt" />
+  </wsdl:message>
+  <wsdl:message name="GetPhotoIDsHttpGetIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPhotoIDsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfInt" />
+  </wsdl:message>
+  <wsdl:message name="GetPhotoHttpGetIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="photoID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPhotoHttpGetOut">
+    <wsdl:part name="Body" element="tns:BlogPhoto" />
+  </wsdl:message>
+  <wsdl:message name="GetVideoIDsHttpGetIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetVideoIDsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfInt" />
+  </wsdl:message>
+  <wsdl:message name="GetVideoHttpGetIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="videoID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetVideoHttpGetOut">
+    <wsdl:part name="Body" element="tns:BlogVideo" />
+  </wsdl:message>
+  <wsdl:message name="RemoveEntryHttpPostIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="blogEntryID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RemoveEntryHttpPostOut" />
+  <wsdl:message name="GetEntryHttpPostIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="blogEntryID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEntryHttpPostOut">
+    <wsdl:part name="Body" element="tns:BlogEntry" />
+  </wsdl:message>
+  <wsdl:message name="GetEntryFromUrlHttpPostIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="url" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEntryFromUrlHttpPostOut">
+    <wsdl:part name="Body" element="tns:BlogEntry" />
+  </wsdl:message>
+  <wsdl:message name="GetEntryIDsHttpPostIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEntryIDsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfInt" />
+  </wsdl:message>
+  <wsdl:message name="RemoveCommentHttpPostIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="blogCommentID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RemoveCommentHttpPostOut" />
+  <wsdl:message name="HasNewCommentsHttpPostIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="blogEntryID" type="s:string" />
+    <wsdl:part name="lastBlogCommentID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="HasNewCommentsHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentHttpPostIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="blogCommentID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentHttpPostOut">
+    <wsdl:part name="Body" element="tns:BlogComment" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentIDsHttpPostIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="blogEntryID" type="s:string" />
+    <wsdl:part name="lastBlogCommentID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCommentIDsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfInt" />
+  </wsdl:message>
+  <wsdl:message name="GetPhotoIDsHttpPostIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPhotoIDsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfInt" />
+  </wsdl:message>
+  <wsdl:message name="GetPhotoHttpPostIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="photoID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPhotoHttpPostOut">
+    <wsdl:part name="Body" element="tns:BlogPhoto" />
+  </wsdl:message>
+  <wsdl:message name="GetVideoIDsHttpPostIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetVideoIDsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfInt" />
+  </wsdl:message>
+  <wsdl:message name="GetVideoHttpPostIn">
+    <wsdl:part name="nickname" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="videoID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetVideoHttpPostOut">
+    <wsdl:part name="Body" element="tns:BlogVideo" />
+  </wsdl:message>
+  <wsdl:portType name="BlogServiceSoap">
+    <wsdl:operation name="AddEntry">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Adds new blog entry. Returns new entry identifier.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;newEntry&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt;.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:AddEntrySoapIn" />
+      <wsdl:output message="tns:AddEntrySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EditEntry">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Updates the specified entry. Set the &lt;tt&gt;editedEntry.ID&lt;/tt&gt; property value to the identifier of the entry to edit. Other properties should contain new values for this entry.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;editedEntry&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt;.&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the identifier of the blog entry creator does not match the identifier of the user that is intending to edit this blog entry.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:EditEntrySoapIn" />
+      <wsdl:output message="tns:EditEntrySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveEntry">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Removes the entry with the specified identifier.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the identifier of the blog entry creator does not match the identifier of the user that is intending to delete this blog entry.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:RemoveEntrySoapIn" />
+      <wsdl:output message="tns:RemoveEntrySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntry">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Retrieves entry-related data according to the specified identifer.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the blog entry with the specified identifer does not exist.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If teh user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetEntrySoapIn" />
+      <wsdl:output message="tns:GetEntrySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntryFromUrl">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Retrieves entry-related data according to the specified &lt;tt&gt;url&lt;/tt&gt; that should be in the following format: &lt;tt&gt;/blog.aspx?m=webMemberID&amp;b=webBlogEntryID&lt;/tt&gt;.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;url&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.</wsdl:documentation>
+      <wsdl:input message="tns:GetEntryFromUrlSoapIn" />
+      <wsdl:output message="tns:GetEntryFromUrlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntryIDs">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Retrieves a list of the latest 10 blog entry identifiers for the specified user.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.</wsdl:documentation>
+      <wsdl:input message="tns:GetEntryIDsSoapIn" />
+      <wsdl:output message="tns:GetEntryIDsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddComment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Posts a new comment to a blog entry. Returns new comment identifier.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;newComment&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt;.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:AddCommentSoapIn" />
+      <wsdl:output message="tns:AddCommentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EditComment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Updates the specified entry. Set the &lt;tt&gt;editedComment.ID&lt;/tt&gt; property value to the identifier of the comment to edit. Other properties should contain new values for this comment.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;editedComment&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt;.&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the identifier of the blog comment creator does not match the identifier of the user that is intending to edit this blog comment.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:EditCommentSoapIn" />
+      <wsdl:output message="tns:EditCommentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveComment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Removes the comment with the specified identifier.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the identifier of the blog comment creator does not match the identifier of the user that is intending to delete this blog comment.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:RemoveCommentSoapIn" />
+      <wsdl:output message="tns:RemoveCommentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HasNewComments">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Checks whether there are new comments for the entry specified by the &lt;tt&gt;blogEntryID&lt;/tt&gt;. Use &lt;tt&gt;lastBlogCommentID&lt;/tt&gt; to specify the latest successfully retrieved comment. Specify &lt;tt&gt;0&lt;/tt&gt; if no comments have been retrieved yet.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the identifier of the blog entry creator does not match the identifer of the user that is intending to retrieve comments for the specified blog entry.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:HasNewCommentsSoapIn" />
+      <wsdl:output message="tns:HasNewCommentsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetComment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Retrieves comment-related data for the specified identifier.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the comment with the specified identifier does not exist.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetCommentSoapIn" />
+      <wsdl:output message="tns:GetCommentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommentIDs">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns a list of identifiers for the comments that are newer than the comment with &lt;tt&gt;lastBlogCommentID&lt;/tt&gt;. To retrieve all the comments specify &lt;tt&gt;0&lt;/tt&gt; for &lt;tt&gt;lastBlogCommentID&lt;/tt&gt;.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetCommentIDsSoapIn" />
+      <wsdl:output message="tns:GetCommentIDsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPhotoIDs">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns a list of photo identifiers for the specified user.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetPhotoIDsSoapIn" />
+      <wsdl:output message="tns:GetPhotoIDsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPhoto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Retrieves photo-related data according to the specified identifier.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the photo with the specified &lt;tt&gt;photoID&lt;/tt&gt; does not exist or the specified user does not have access to it.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetPhotoSoapIn" />
+      <wsdl:output message="tns:GetPhotoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVideoIDs">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns a list of video identifiers for the specified user.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetVideoIDsSoapIn" />
+      <wsdl:output message="tns:GetVideoIDsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVideo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Retrieves video-related data according to the specified identifier.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the video with the specified &lt;tt&gt;videoID&lt;/tt&gt; does not exist or the specified user does not have access to it.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetVideoSoapIn" />
+      <wsdl:output message="tns:GetVideoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="BlogServiceHttpGet">
+    <wsdl:operation name="RemoveEntry">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Removes the entry with the specified identifier.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the identifier of the blog entry creator does not match the identifier of the user that is intending to delete this blog entry.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:RemoveEntryHttpGetIn" />
+      <wsdl:output message="tns:RemoveEntryHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntry">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Retrieves entry-related data according to the specified identifer.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the blog entry with the specified identifer does not exist.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If teh user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetEntryHttpGetIn" />
+      <wsdl:output message="tns:GetEntryHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntryFromUrl">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Retrieves entry-related data according to the specified &lt;tt&gt;url&lt;/tt&gt; that should be in the following format: &lt;tt&gt;/blog.aspx?m=webMemberID&amp;b=webBlogEntryID&lt;/tt&gt;.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;url&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.</wsdl:documentation>
+      <wsdl:input message="tns:GetEntryFromUrlHttpGetIn" />
+      <wsdl:output message="tns:GetEntryFromUrlHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntryIDs">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Retrieves a list of the latest 10 blog entry identifiers for the specified user.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.</wsdl:documentation>
+      <wsdl:input message="tns:GetEntryIDsHttpGetIn" />
+      <wsdl:output message="tns:GetEntryIDsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveComment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Removes the comment with the specified identifier.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the identifier of the blog comment creator does not match the identifier of the user that is intending to delete this blog comment.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:RemoveCommentHttpGetIn" />
+      <wsdl:output message="tns:RemoveCommentHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HasNewComments">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Checks whether there are new comments for the entry specified by the &lt;tt&gt;blogEntryID&lt;/tt&gt;. Use &lt;tt&gt;lastBlogCommentID&lt;/tt&gt; to specify the latest successfully retrieved comment. Specify &lt;tt&gt;0&lt;/tt&gt; if no comments have been retrieved yet.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the identifier of the blog entry creator does not match the identifer of the user that is intending to retrieve comments for the specified blog entry.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:HasNewCommentsHttpGetIn" />
+      <wsdl:output message="tns:HasNewCommentsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetComment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Retrieves comment-related data for the specified identifier.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the comment with the specified identifier does not exist.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetCommentHttpGetIn" />
+      <wsdl:output message="tns:GetCommentHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommentIDs">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns a list of identifiers for the comments that are newer than the comment with &lt;tt&gt;lastBlogCommentID&lt;/tt&gt;. To retrieve all the comments specify &lt;tt&gt;0&lt;/tt&gt; for &lt;tt&gt;lastBlogCommentID&lt;/tt&gt;.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetCommentIDsHttpGetIn" />
+      <wsdl:output message="tns:GetCommentIDsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPhotoIDs">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns a list of photo identifiers for the specified user.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetPhotoIDsHttpGetIn" />
+      <wsdl:output message="tns:GetPhotoIDsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPhoto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Retrieves photo-related data according to the specified identifier.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the photo with the specified &lt;tt&gt;photoID&lt;/tt&gt; does not exist or the specified user does not have access to it.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetPhotoHttpGetIn" />
+      <wsdl:output message="tns:GetPhotoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVideoIDs">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns a list of video identifiers for the specified user.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetVideoIDsHttpGetIn" />
+      <wsdl:output message="tns:GetVideoIDsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVideo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Retrieves video-related data according to the specified identifier.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the video with the specified &lt;tt&gt;videoID&lt;/tt&gt; does not exist or the specified user does not have access to it.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetVideoHttpGetIn" />
+      <wsdl:output message="tns:GetVideoHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="BlogServiceHttpPost">
+    <wsdl:operation name="RemoveEntry">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Removes the entry with the specified identifier.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the identifier of the blog entry creator does not match the identifier of the user that is intending to delete this blog entry.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:RemoveEntryHttpPostIn" />
+      <wsdl:output message="tns:RemoveEntryHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntry">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Retrieves entry-related data according to the specified identifer.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the blog entry with the specified identifer does not exist.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If teh user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetEntryHttpPostIn" />
+      <wsdl:output message="tns:GetEntryHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntryFromUrl">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Retrieves entry-related data according to the specified &lt;tt&gt;url&lt;/tt&gt; that should be in the following format: &lt;tt&gt;/blog.aspx?m=webMemberID&amp;b=webBlogEntryID&lt;/tt&gt;.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;url&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.</wsdl:documentation>
+      <wsdl:input message="tns:GetEntryFromUrlHttpPostIn" />
+      <wsdl:output message="tns:GetEntryFromUrlHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntryIDs">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Retrieves a list of the latest 10 blog entry identifiers for the specified user.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.</wsdl:documentation>
+      <wsdl:input message="tns:GetEntryIDsHttpPostIn" />
+      <wsdl:output message="tns:GetEntryIDsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveComment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Removes the comment with the specified identifier.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the identifier of the blog comment creator does not match the identifier of the user that is intending to delete this blog comment.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:RemoveCommentHttpPostIn" />
+      <wsdl:output message="tns:RemoveCommentHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HasNewComments">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Checks whether there are new comments for the entry specified by the &lt;tt&gt;blogEntryID&lt;/tt&gt;. Use &lt;tt&gt;lastBlogCommentID&lt;/tt&gt; to specify the latest successfully retrieved comment. Specify &lt;tt&gt;0&lt;/tt&gt; if no comments have been retrieved yet.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the identifier of the blog entry creator does not match the identifer of the user that is intending to retrieve comments for the specified blog entry.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:HasNewCommentsHttpPostIn" />
+      <wsdl:output message="tns:HasNewCommentsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetComment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Retrieves comment-related data for the specified identifier.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the comment with the specified identifier does not exist.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetCommentHttpPostIn" />
+      <wsdl:output message="tns:GetCommentHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommentIDs">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns a list of identifiers for the comments that are newer than the comment with &lt;tt&gt;lastBlogCommentID&lt;/tt&gt;. To retrieve all the comments specify &lt;tt&gt;0&lt;/tt&gt; for &lt;tt&gt;lastBlogCommentID&lt;/tt&gt;.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetCommentIDsHttpPostIn" />
+      <wsdl:output message="tns:GetCommentIDsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPhotoIDs">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns a list of photo identifiers for the specified user.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetPhotoIDsHttpPostIn" />
+      <wsdl:output message="tns:GetPhotoIDsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPhoto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Retrieves photo-related data according to the specified identifier.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the photo with the specified &lt;tt&gt;photoID&lt;/tt&gt; does not exist or the specified user does not have access to it.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetPhotoHttpPostIn" />
+      <wsdl:output message="tns:GetPhotoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVideoIDs">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Returns a list of video identifiers for the specified user.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetVideoIDsHttpPostIn" />
+      <wsdl:output message="tns:GetVideoIDsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVideo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Retrieves video-related data according to the specified identifier.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;nickname&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;password&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the video with the specified &lt;tt&gt;videoID&lt;/tt&gt; does not exist or the specified user does not have access to it.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified credentials does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:GetVideoHttpPostIn" />
+      <wsdl:output message="tns:GetVideoHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BlogServiceSoap" type="tns:BlogServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddEntry">
+      <soap:operation soapAction="http://www.next2friends.com/AddEntry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditEntry">
+      <soap:operation soapAction="http://www.next2friends.com/EditEntry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveEntry">
+      <soap:operation soapAction="http://www.next2friends.com/RemoveEntry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntry">
+      <soap:operation soapAction="http://www.next2friends.com/GetEntry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntryFromUrl">
+      <soap:operation soapAction="http://www.next2friends.com/GetEntryFromUrl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntryIDs">
+      <soap:operation soapAction="http://www.next2friends.com/GetEntryIDs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddComment">
+      <soap:operation soapAction="http://www.next2friends.com/AddComment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditComment">
+      <soap:operation soapAction="http://www.next2friends.com/EditComment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveComment">
+      <soap:operation soapAction="http://www.next2friends.com/RemoveComment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HasNewComments">
+      <soap:operation soapAction="http://www.next2friends.com/HasNewComments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetComment">
+      <soap:operation soapAction="http://www.next2friends.com/GetComment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommentIDs">
+      <soap:operation soapAction="http://www.next2friends.com/GetCommentIDs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhotoIDs">
+      <soap:operation soapAction="http://www.next2friends.com/GetPhotoIDs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhoto">
+      <soap:operation soapAction="http://www.next2friends.com/GetPhoto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVideoIDs">
+      <soap:operation soapAction="http://www.next2friends.com/GetVideoIDs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVideo">
+      <soap:operation soapAction="http://www.next2friends.com/GetVideo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BlogServiceSoap12" type="tns:BlogServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddEntry">
+      <soap12:operation soapAction="http://www.next2friends.com/AddEntry" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditEntry">
+      <soap12:operation soapAction="http://www.next2friends.com/EditEntry" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveEntry">
+      <soap12:operation soapAction="http://www.next2friends.com/RemoveEntry" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntry">
+      <soap12:operation soapAction="http://www.next2friends.com/GetEntry" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntryFromUrl">
+      <soap12:operation soapAction="http://www.next2friends.com/GetEntryFromUrl" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntryIDs">
+      <soap12:operation soapAction="http://www.next2friends.com/GetEntryIDs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddComment">
+      <soap12:operation soapAction="http://www.next2friends.com/AddComment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditComment">
+      <soap12:operation soapAction="http://www.next2friends.com/EditComment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveComment">
+      <soap12:operation soapAction="http://www.next2friends.com/RemoveComment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HasNewComments">
+      <soap12:operation soapAction="http://www.next2friends.com/HasNewComments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetComment">
+      <soap12:operation soapAction="http://www.next2friends.com/GetComment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommentIDs">
+      <soap12:operation soapAction="http://www.next2friends.com/GetCommentIDs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhotoIDs">
+      <soap12:operation soapAction="http://www.next2friends.com/GetPhotoIDs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhoto">
+      <soap12:operation soapAction="http://www.next2friends.com/GetPhoto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVideoIDs">
+      <soap12:operation soapAction="http://www.next2friends.com/GetVideoIDs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVideo">
+      <soap12:operation soapAction="http://www.next2friends.com/GetVideo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BlogServiceHttpGet" type="tns:BlogServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="RemoveEntry">
+      <http:operation location="/RemoveEntry" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntry">
+      <http:operation location="/GetEntry" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntryFromUrl">
+      <http:operation location="/GetEntryFromUrl" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntryIDs">
+      <http:operation location="/GetEntryIDs" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveComment">
+      <http:operation location="/RemoveComment" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="HasNewComments">
+      <http:operation location="/HasNewComments" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetComment">
+      <http:operation location="/GetComment" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommentIDs">
+      <http:operation location="/GetCommentIDs" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhotoIDs">
+      <http:operation location="/GetPhotoIDs" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhoto">
+      <http:operation location="/GetPhoto" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVideoIDs">
+      <http:operation location="/GetVideoIDs" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVideo">
+      <http:operation location="/GetVideo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BlogServiceHttpPost" type="tns:BlogServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="RemoveEntry">
+      <http:operation location="/RemoveEntry" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntry">
+      <http:operation location="/GetEntry" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntryFromUrl">
+      <http:operation location="/GetEntryFromUrl" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEntryIDs">
+      <http:operation location="/GetEntryIDs" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveComment">
+      <http:operation location="/RemoveComment" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="HasNewComments">
+      <http:operation location="/HasNewComments" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetComment">
+      <http:operation location="/GetComment" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommentIDs">
+      <http:operation location="/GetCommentIDs" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhotoIDs">
+      <http:operation location="/GetPhotoIDs" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhoto">
+      <http:operation location="/GetPhoto" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVideoIDs">
+      <http:operation location="/GetVideoIDs" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVideo">
+      <http:operation location="/GetVideo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BlogService">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Provides functionality to create and modify blog entries, insert photos and videos, read comments, leave your own.</wsdl:documentation>
+    <wsdl:port name="BlogServiceSoap" binding="tns:BlogServiceSoap">
+      <soap:address location="http://services.next2friends.com/n2fwebservices/BlogService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="BlogServiceSoap12" binding="tns:BlogServiceSoap12">
+      <soap12:address location="http://services.next2friends.com/n2fwebservices/BlogService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="BlogServiceHttpGet" binding="tns:BlogServiceHttpGet">
+      <http:address location="http://services.next2friends.com/n2fwebservices/BlogService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="BlogServiceHttpPost" binding="tns:BlogServiceHttpPost">
+      <http:address location="http://services.next2friends.com/n2fwebservices/BlogService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

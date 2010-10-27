@@ -1,0 +1,160 @@
+/*
+============================================================================
+ Name        : Aaf.rss
+ Author      : Vitaly Vinogradov
+ Version     :
+ Copyright   : (c) Next2Friends, 2008
+ Description : Project specification file for Aaf
+============================================================================
+*/
+TARGET                                  Aaf.exe 
+TARGETTYPE                              exe 
+UID                                     0x100039CE 0xe2536f82 
+SECUREID                                0xe2536f82 
+EPOCSTACKSIZE                           0x5000 
+SOURCEPATH                              ..\data 
+START RESOURCE Aaf.rss 
+  TARGETPATH                              \resource\apps 
+  HEADER                                   
+END  
+
+START RESOURCE Aaf_reg.rss 
+  TARGETPATH                              \private\10003a3f\apps 
+END  
+
+
+SOURCEPATH                              ..\gSOAP 
+SOURCE                                  soapC.cpp 
+SOURCE                                  soapAskAFriendWSSoapProxy.cpp 
+SOURCE                                  stdsoap2.cpp 
+
+SOURCEPATH                              ..\src 
+SOURCE                                  Aafsocketutils.cpp 
+SOURCE                                  aafprivatequestionsserviceprovider.cpp 
+SOURCE                                  aafuserquestionsserviceprovider.cpp 
+SOURCE                                  Aafappdataviewdialog.cpp 
+SOURCE                                  Aafconnectionmanager.cpp 
+SOURCE                                  Aafimagehandler.cpp 
+SOURCE                                  Aafappcameraview.cpp 
+SOURCE                                  Aafcameracontainer.cpp 
+SOURCE                                  Aafcameraengine.cpp 
+SOURCE                                  Aafappcommentsview.cpp 
+SOURCE                                  Aafappprivatequestionsview.cpp 
+SOURCE                                  Aafappaskquestionform.cpp 
+SOURCE                                  Aafappresponsesview.cpp 
+SOURCE                                  Aafuploadserviceprovider.cpp 
+SOURCE                                  Aafapputils.cpp 
+SOURCE                                  Aafloginserviceprovider.cpp 
+SOURCE                                  Aafsplashscreenview.cpp 
+SOURCE                                  Aafsplashscreenctrl.cpp 
+SOURCE                                  Aaffilebrowserengine.cpp 
+SOURCE                                  Aafapploginview.cpp 
+SOURCE                                  Aafappimagecartview.cpp 
+SOURCE                                  Aafappfilebrowserview.cpp 
+SOURCE                                  Aafappmainview.cpp 
+SOURCE                                  Aaf.cpp 
+SOURCE                                  AafApplication.cpp 
+SOURCE                                  AafAppUi.cpp 
+SOURCE                                  AafDocument.cpp 
+
+USERINCLUDE                             ..\inc 
+USERINCLUDE                             ..\help 
+USERINCLUDE                             ..\gsoap 
+SYSTEMINCLUDE                           \epoc32\include\networking 
+SYSTEMINCLUDE                           \epoc32\include\libc 
+SYSTEMINCLUDE                           . 
+SYSTEMINCLUDE                           \epoc32\include 
+SYSTEMINCLUDE                           \epoc32\include\mmf\plugin 
+LIBRARY                                 insock.lib 
+LIBRARY                                 esock.lib 
+LIBRARY                                 commdb.lib 
+
+#ifndef __WINSCW__  
+  LIBRARY                       caeengine.lib 
+#endif  
+
+LIBRARY                                 estlib.lib 
+LIBRARY                                 commondialogs.lib 
+LIBRARY                                 BitmapTransforms.lib 
+LIBRARY                                 xmlframework.lib 
+LIBRARY                                 eikdlg.lib 
+LIBRARY                                 Sendui.lib 
+LIBRARY                                 pbkeng.lib 
+LIBRARY                                 pbkview.lib 
+LIBRARY                                 senservdesc.lib 
+LIBRARY                                 apmime.lib 
+LIBRARY                                 imut.lib 
+LIBRARY                                 senutils.lib 
+LIBRARY                                 estor.lib 
+LIBRARY                                 senservconn.lib 
+LIBRARY                                 senservmgr.lib 
+LIBRARY                                 commonui.lib 
+LIBRARY                                 uiklaf.lib 
+LIBRARY                                 form.lib 
+LIBRARY                                 etext.lib 
+LIBRARY                                 egul.lib 
+LIBRARY                                 eikctl.lib 
+LIBRARY                                 charconv.lib 
+LIBRARY                                 commonengine.lib 
+LIBRARY                                 hlplch.lib 
+LIBRARY                                 flogger.lib 
+LIBRARY                                 mediaclientaudio.lib 
+LIBRARY                                 apgrfx.lib 
+LIBRARY                                 aknskins.lib 
+LIBRARY                                 platformenv.lib 
+LIBRARY                                 imageconversion.lib 
+LIBRARY                                 hal.lib 
+LIBRARY                                 gdi.lib 
+LIBRARY                                 ecam.lib 
+LIBRARY                                 ws32.lib 
+LIBRARY                                 bitgdi.lib 
+LIBRARY                                 fbscli.lib 
+LIBRARY                                 eikcoctl.lib 
+LIBRARY                                 euser.lib 
+LIBRARY                                 apparc.lib 
+LIBRARY                                 cone.lib 
+LIBRARY                                 eikcore.lib 
+LIBRARY                                 avkon.lib 
+LIBRARY                                 efsrv.lib 
+LIBRARY                                 bafl.lib 
+LANG                                    SC 
+VENDORID                                0 
+capability                              LocalServices NetworkServices ReadUserData UserEnvironment WriteUserData 
+START BITMAP Aaf.mbm 
+  TARGETPATH                              \resource\apps 
+  HEADER                                   
+  SOURCEPATH                              ..\gfx 
+  source                                  c24 ask.bmp 
+  source                                  1 askmask.bmp 
+  source                                  c24 camera.bmp 
+  source                                  1 cameramask.bmp 
+  source                                  c24 cart.bmp 
+  source                                  1 cartmask.bmp 
+  source                                  c24 file.bmp 
+  source                                  1 filemask.bmp 
+  source                                  c24 folder.bmp 
+  source                                  1 foldermask.bmp 
+  source                                  c24 n2f_commercelogo_1.bmp 
+  source                                  c24 n2f_commercelogo_2.bmp 
+  source                                  c24 n2f_commercelogo_3.bmp 
+  source                                  c24 private.bmp 
+  source                                  1 privatemask.bmp 
+  source                                  c24 questions.bmp 
+  source                                  1 questionsmask.bmp 
+  source                                  c24 selected.bmp 
+  source                                  1 selectedmask.bmp 
+  source                                  c24 settings.bmp 
+  source                                  1 settingsmask.bmp 
+  source                                  c24 sms.bmp 
+  source                                  1 smsmask.bmp 
+  source                                  c24 unselected.bmp 
+  source                                  1 unselectedmask.bmp 
+  source                                  c24 card.bmp 
+  source                                  1 cardmask.bmp 
+  source                                  c24 folderup.bmp 
+  source                                  1 folderupmask.bmp 
+  source                                  c24 phone.bmp 
+  source                                  1 phonemask.bmp 
+
+END  
+

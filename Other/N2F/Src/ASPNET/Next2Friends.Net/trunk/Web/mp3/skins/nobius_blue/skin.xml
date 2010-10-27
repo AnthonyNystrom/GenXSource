@@ -1,0 +1,52 @@
+
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<skin version="1.0.0">
+
+	<layout>
+
+		<image src="background.jpg" x="0" y="0"></image>
+
+		<font id="TEXT" 	charW="6"  charH="8" chars="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&amp;*()-_+=[]{}|\/:;,.&lt;&gt;?' " src="font.png"></font>
+		<font id="DIGITS" 	charW="12" charH="14" chars="0123456789:" src="digits.png"></font>
+
+		<button id="PLAY" 	frameH="44" x="114" y="57" src="b_play.png"></button>
+		<button id="STOP" 	frameH="27" x="157" y="65" src="b_stop.png"></button>
+		<button id="NEXT" 	frameH="27" x="183" y="61" src="b_next.png"></button>
+		<button id="PAUSE" 	frameH="27" x="88"  y="65" src="b_pause.png"></button>
+		<button id="PREV" 	frameH="27" x="62"  y="61" src="b_prev.png"></button>
+
+		<display id="SONGINFO" width="170" height="8"  x="84" y="41" font="TEXT"    defaultText="E-PHONIC MP3-PLAYER - GET YOUR OWN FREE SKINNABLE MP3-PLAYER AT WWW.E-PHONIC.COM/MP3PLAYER"></display>
+		<display id="SONGTIME" width="200" height="20" x="15" y="38" font="DIGITS"  defaultText="00:00"></display>
+
+		<visualization width="257" height="25" x="6" y="10" color="0xFF52E8FF" clickList="scope, wave, fft, peak">
+			<scope src="scope.jpg" blur="8"></scope>
+			<wave src="wave.png" blur="0"></wave>
+			<fft src="fft.png" blur="0"></fft>
+			<peak src="peak.png" blur="0"></peak>
+		</visualization>
+
+		<slider id="TRANSPORT" x="6" y="103">
+			<background src="transport_bg.png"></background>
+			<handle src="transport_handle.png" frameH="15"></handle>
+			<indicator src="transport_loaded.png"></indicator>
+		</slider>
+
+		<slider id="VOLUME" x="189" y="103">
+			<background src="volume_bg.png"></background>
+			<handle src="transport_handle.png" frameH="15"></handle>
+			<indicator src="volume_indicator.png"></indicator>
+		</slider>
+
+		<playlist width="255" height="80" x="7" y="125" font="TEXT">
+			<button frameH="10" txtX="8" txtY="1" src="b_playlist.png"></button>
+		</playlist>
+
+		<button id="PLAYLIST_UP" 	frameH="23" x="246" y="141" 	src="b_pl_up.png"></button>
+		<button id="PLAYLIST_DOWN" 	frameH="23" x="246" y="164" 	src="b_pl_down.png"></button>
+
+		<ephonic_icon x="253" y="211"></ephonic_icon>
+
+	</layout>
+
+</skin>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope
+ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+ xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:ns3="http://tempuri.org/AskAFriendWSSoap"
+ xmlns:ns1="http://tempuri.org/"
+ xmlns:ns4="http://tempuri.org/AskAFriendWSSoap12">
+ <SOAP-ENV:Body>
+  <ns1:GetAAFCommentsResponse>
+   <ns1:GetAAFCommentsResult>
+    <ns1:AskAFriendComment>
+     <ns1:NickName></ns1:NickName>
+     <ns1:WebMemberID></ns1:WebMemberID>
+     <ns1:WebAskAFriendCommentID></ns1:WebAskAFriendCommentID>
+     <ns1:Text></ns1:Text>
+     <ns1:DateTimePosted></ns1:DateTimePosted>
+    </ns1:AskAFriendComment>
+   </ns1:GetAAFCommentsResult>
+  </ns1:GetAAFCommentsResponse>
+ </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

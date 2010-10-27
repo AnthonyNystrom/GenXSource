@@ -1,0 +1,46 @@
+.conv file specification:
+string1 - tool name (bmp2spa.exe, midiconv.exe etc.)
+string2 - additional arguments for convertation (19 -f4444 -x16 etc.)
+string3 - files that the curent resource depends on
+string4 - files out of resources that the current resource depends on
+
+if script don't find .conv file fore some resource they ignore this resource
+
+
+for exmple 1:
+file Font2Orange.conv
+-------------------------------------------------------
+Bmp2Spa.exe
+96 -f3565 -x4 -p Font2Red.png -p Font2Yellow.png
+Font2Red.png Font2Yellow.png
+-------------------------------------------------------
+
+check for changes in files:
+'Font2Orange.png'
+'Font2Orange.conv'
+'Font2Red.png'
+'Font2Yellow.png'
+
+and if some of this fils chaned
+runs string: Bmp2Spa.exe Font2Orange.png 96 -f3565 -x4 -p Font2Red.png -p Font2Yellow.png
+
+
+for exmple 2:
+file ScriptAwards.conv
+-------------------------------------------------------
+ParseGUI.bat
+..\..\include\ScriptCommands.h ..\..\include\ScriptConstants.h ..\..\include\gui\GUITypes.h ..\stringres.h ..\graphres.h
+
+..\..\include\ScriptCommands.h ..\..\include\ScriptConstants.h ..\..\include\gui\GUITypes.h
+-------------------------------------------------------
+
+check for changes in files:
+'ScriptAwards.h'
+'ScriptAwards.conv'
+'..\..\include\ScriptCommands.h'
+'..\..\include\ScriptConstants.h'
+'..\..\include\gui\GUITypes.h'
+
+and if some of this fils chaned
+runs string: ParseGUI.bat ScriptAwards.h ..\..\include\ScriptCommands.h ..\..\include\ScriptConstants.h ..\..\include\gui\GUITypes.h ..\stringres.h ..\graphres.h
+

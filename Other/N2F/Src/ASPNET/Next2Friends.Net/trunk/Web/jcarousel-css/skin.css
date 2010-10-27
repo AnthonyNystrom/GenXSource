@@ -1,0 +1,173 @@
+/* carousel gallery */
+.carousel {
+	padding: 10px 0 0 0px;
+	width: 628px !important;
+}
+.carousel ul {
+	overflow: hidden;
+	height: 225px;
+}
+.carousel li {
+	height: 200px;
+	width: 160px;
+	margin: 0 10px 10px 10px;
+	padding: 8px;
+	background: #fff;
+	border: 1px solid #ccc;
+	font-size: 95%;
+	line-height: 140%;
+	text-align: center;
+	float: left;
+}
+
+
+.jcarousel-skin.jcarousel-container-horizontal {
+    width: 628px;
+}
+
+.jcarousel-skin .jcarousel-clip-horizontal {
+    width:  584px;
+	left: 18px;
+}
+
+
+/**
+ *  Horizontal Buttons
+ */
+.jcarousel-skin .jcarousel-next-horizontal {
+    position: absolute;
+    top: 95px;
+    right: 5px;
+    width: 16px;
+    height: 19px;
+    cursor: pointer;
+    background: transparent url(images/next.gif) no-repeat 0 0;
+}
+
+.jcarousel-skin .jcarousel-next-horizontal:hover {
+    background-position: -20px 0;
+}
+
+.jcarousel-skin .jcarousel-next-disabled-horizontal,
+.jcarousel-skin .jcarousel-next-disabled-horizontal:hover,
+.jcarousel-skin .jcarousel-next-disabled-horizontal:active {
+    cursor: default;
+    background-position: -40px 0;
+}
+
+.jcarousel-skin .jcarousel-prev-horizontal {
+    position: absolute;
+    top: 95px;
+    left: 5px;
+    width: 16px;
+    height: 19px;
+    cursor: pointer;
+    background: transparent url(images/prev.gif) no-repeat -40px 0;
+}
+
+.jcarousel-skin .jcarousel-prev-horizontal:hover {
+    background-position: -20px 0;
+}
+
+.jcarousel-skin .jcarousel-prev-disabled-horizontal,
+.jcarousel-skin .jcarousel-prev-disabled-horizontal:hover,
+.jcarousel-skin .jcarousel-prev-disabled-horizontal:active {
+    cursor: default;
+    background-position: 0 0;
+}
+
+
+/***** Profile Vid Carousel BY AK ******/
+
+.carousel-vid {
+	padding: 10px 0 0 0px;
+	width: 628px !important;
+}
+.carousel-vid ul{
+	overflow: hidden;
+	height: 400px;
+}
+.carousel-vid  li {
+	height: 400px;
+	width: 275px;
+	margin: 0 0 5px 6px;	
+	padding: 0 8px 10px 0;			
+	float: left;	
+}
+
+.divli {
+	height: 130px;
+	width: 275px;
+	margin: 2px 2px 2px 2px;
+	background: #fff;		
+	border: 1px solid #ccc;				
+}
+
+.jcarousel-skin-vid .vid_info {
+	float: right;
+	width: 140px;
+}
+.jcarousel-skin-vid .vid_info h3 {
+	font-size: 105%;
+}
+.jcarousel-skin-vid .vid_thumb {
+	padding-bottom: 10px;
+}
+
+.jcarousel-skin-vid .jcarousel-container-horizontal {
+    width: 628px;
+}
+
+.jcarousel-skin-vid .jcarousel-clip-horizontal {
+    width:  584px;
+	left: 18px;
+}
+
+
+/**
+ *  Horizontal Buttons
+ */
+.jcarousel-skin-vid .jcarousel-next-horizontal {
+    position: absolute;
+    top: 95px;
+    right: 5px;
+    width: 16px;
+    height: 19px;
+    cursor: pointer;
+    background: transparent url(next.gif) no-repeat 0 0;
+}
+
+.jcarousel-skin-vid .jcarousel-next-horizontal:hover {
+    background-position: -20px 0;
+}
+
+.jcarousel-skin-vid .jcarousel-next-disabled-horizontal,
+.jcarousel-skin-vid .jcarousel-next-disabled-horizontal:hover,
+.jcarousel-skin-vid .jcarousel-next-disabled-horizontal:active {
+    cursor: default;
+    background-position: -40px 0;
+}
+
+.jcarousel-skin-vid .jcarousel-prev-horizontal {
+    position: absolute;
+    top: 95px;
+    left: 5px;
+    width: 16px;
+    height: 19px;
+    cursor: pointer;
+    background: transparent url(prev.gif) no-repeat -40px 0;
+}
+
+.jcarousel-skin-vid .jcarousel-prev-horizontal:hover {
+    background-position: -20px 0;
+}
+
+.jcarousel-skin-vid .jcarousel-prev-disabled-horizontal,
+.jcarousel-skin-vid .jcarousel-prev-disabled-horizontal:hover,
+.jcarousel-skin-vid .jcarousel-prev-disabled-horizontal:active {
+    cursor: default;
+    background-position: 0 0;
+}
+
+
+/***** Profile Vid Carousel BY AK ******

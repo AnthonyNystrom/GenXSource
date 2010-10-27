@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope
+ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+ xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:ns3="http://tempuri.org/AskAFriendWSSoap"
+ xmlns:ns1="http://tempuri.org/"
+ xmlns:ns4="http://tempuri.org/AskAFriendWSSoap12">
+ <SOAP-ENV:Body>
+   <ns1:SubmitQuestion>
+    <ns1:WebMemberID></ns1:WebMemberID>
+    <ns1:WebPassword></ns1:WebPassword>
+    <ns1:Question></ns1:Question>
+    <ns1:NumberOfPhotos>0</ns1:NumberOfPhotos>
+    <ns1:ResponseType>0</ns1:ResponseType>
+    <ns1:CustomResponses>
+     <ns1:string></ns1:string>
+    </ns1:CustomResponses>
+    <ns1:Duration>0</ns1:Duration>
+    <ns1:IsPrivate>false</ns1:IsPrivate>
+   </ns1:SubmitQuestion>
+
+ </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

@@ -1,0 +1,1384 @@
+﻿using System;
+using System.Text;
+using System.Data;
+using System.Configuration;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+using System.Xml.Linq;
+using Next2Friends.Data;
+using Next2Friends.Misc;
+
+public enum DefaultPageType { None, Video, Photo, Member, NSpot, LiveBroadcast }
+
+public partial class MemberProfilePage : System.Web.UI.Page
+{
+    public Member ViewingMember;
+    public MemberProfile ViewingMemberProfile;
+    public string PhotoURL;
+    public string VideoURL;
+    public Member member;
+    public string PageComments = string.Empty;
+    public string MemberSubscribers = string.Empty;
+    public string NumberOfMemberSubscribers = string.Empty;
+    public string DefaultLister = string.Empty;
+    public string DefaultPager = string.Empty;
+    public int NumberOfComments = 0;
+    public int NumberOfVideos = 0;
+    public int NumberOfPhotos = 0;
+    public int NumberOfFriends = 0;
+    public string GalleryDetailsHTML = string.Empty;
+    public string GalleryListerHTML = string.Empty;
+    public string LeftPagerHTML = string.Empty;
+    public string RightPagerHTML = string.Empty;
+
+    public string DefaultTab = string.Empty;
+    public string PermaLink = string.Empty;
+    public string EmbedLink = string.Empty;
+
+    public bool IsMyPage = false;
+    public bool IsLoggedIn = false;
+    public DefaultPageType ProfileDefaultPageType;
+    public string DefaultPhotoURL;
+    public string DefaultVideoURL;
+
+    public string MainTitle = string.Empty;
+    public string MainSubTitle = string.Empty;
+
+    public string LoginUrl;
+    public string SubscribeLink;
+    public string SendMessageLink;
+    public string BlockMemberLink;
+    public string AddToFriendsLink;
+    public string AddFavouritesLink;
+    public string ReportAbuseLink;
+
+    public string DefaultVoteCount = "0";
+    public string DefaultVoteUpLink;
+    public string DefaultVoteDownLink;
+    public string DefaultVoteUpName;
+    public string DefaultVoteDownName;
+    public string DefaultMediaID;
+    public Photo DefaultPhoto;
+    public Video DefaultVideo;
+    public string DefaultFriendLister = string.Empty;
+    public string LargePhotoURL;
+
+    public bool LoadLargeMemberPhoto = false;
+
+    public string DefaultNewCommentParams;
+    public string DefaultNumberOfViews = "0";
+
+    public string WebRoot = ASP.global_asax.WebServerRoot;
+
+    public string AboutMeHTML = string.Empty;
+    public string MyLife = string.Empty;
+    public string Gender = string.Empty;
+    public string LastActive = string.Empty;
+    public string ProfileViews = string.Empty;
+
+    public string Hometown = string.Empty;
+    public string Country = string.Empty;
+    public string DirectUrl = string.Empty;
+    public string DirectUrlText = string.Empty;
+    public string Nick = string.Empty;
+    public string MemberSince = string.Empty;
+    public string Movies = string.Empty;
+    public string Books = string.Empty;
+    public string Music = string.Empty;
+    public string OtherHalf = string.Empty;
+    public string RelationshipStatus = string.Empty;
+    public string MySpaceURL = string.Empty;
+    public string FaceBookURL = string.Empty;
+    public string BlogURL = string.Empty;
+    public string BlogFeedURL = string.Empty;
+
+    public string MySpaceURLText = string.Empty;
+    public string FaceBookURLText = string.Empty;
+    public string BlogURLText = string.Empty;
+    public string BlogFeedURLText = string.Empty;
+    public string DashboardHTMLRow1 = string.Empty;
+    public string DashboardHTMLRow2 = string.Empty;
+    public string DashboardHTMLRow3 = string.Empty;
+
+    public bool ShowGalleryArrows = true;
+
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        AjaxPro.Utility.RegisterTypeForAjax(typeof(MemberProfilePage));
+
+        member = (Member)Session["Member"];
+
+        if (member != null)
+        {
+            IsLoggedIn = true;
+        }
+
+        // set the default forwarding if the member is not logged in
+        LoginUrl = @"signup.aspx?u=" + Request.Url.AbsoluteUri;
+        SubscribeLink = LoginUrl;
+        SendMessageLink = LoginUrl;
+        BlockMemberLink = LoginUrl;
+        AddToFriendsLink = LoginUrl;
+        DefaultVoteUpLink = LoginUrl;
+        DefaultVoteDownLink = LoginUrl;
+        AddFavouritesLink = LoginUrl;
+
+        string strWebMemberID = Request.Params["m"];
+        string strWebVideoID = Request.Params["v"];
+        string strPhotoID = Request.Params["p"];
+        string strLiveBroadcastID = Request.Params["l"];
+
+        // load the members photo
+        string strMemberPhoto = Request.Params["mp"];
+
+        if (strWebMemberID != null)
+        {
+            ViewingMember = Member.GetMembersViaWebMemberIDWithFullJoin(strWebMemberID);
+            ProfileDefaultPageType = DefaultPageType.Member;
+            ViewingMemberProfile = ViewingMember.MemberProfile[0];
+            DefaultNumberOfViews = (++ViewingMemberProfile.NumberOfViews).ToString();
+            ViewingMemberProfile.Save();
+            PermaLink = WebRoot + "view.aspx?m=" + strWebMemberID;
+            MemberSubscribers = GetSubscriberLister();
+
+            GenerateFriendLister();
+            PopulateMemberVariables();
+        }
+        else if (strWebVideoID != null)
+        {
+            DefaultVideo = Video.GetVideoByWebVideoIDWithJoin(strWebVideoID);
+            ViewingMember = new Member(DefaultVideo.MemberID);
+            ViewingMemberProfile = ViewingMember.MemberProfile[0];
+            ProfileDefaultPageType = DefaultPageType.Video;
+            DefaultVideoURL = DefaultVideo.VideoResourceFile.FullyQualifiedURL;
+            DefaultMediaID = strWebVideoID;
+            DefaultVoteCount = DefaultVideo.TotalVoteScore.ToString();
+            VideoURL = DefaultVideo.VideoResourceFile.FullyQualifiedURL;
+            DefaultNumberOfViews = (++DefaultVideo.NumberOfViews).ToString();
+            DefaultVideo.Save();
+            PermaLink = WebRoot + "view.aspx?v=" + strWebVideoID;
+            EmbedLink = @"<object width=""480"" height=""400""><param name=""movie"" value=""http://www.next2friends.com/flvplayer.swf""></param><param name=""wmode"" value=""transparent""></param><embed src=""http://www.next2friends.com/flvplayer.swf?file=" + VideoURL + @""" type=""application/x-shockwave-flash"" wmode=""transparent"" width=""480"" height=""400""></embed></object>";
+
+            MainTitle = DefaultVideo.Title;
+            MainSubTitle = DefaultVideo.Description;
+
+            if (IsLoggedIn)
+            {
+                ReportAbuseLink = "ReportAbuse.aspx?r=" + strWebVideoID;
+            }
+            else
+            {
+                ReportAbuseLink = @"signup.aspx?u=ReportAbuse.aspx?r=" + strWebVideoID + "&url=" + Request.Url.AbsoluteUri;
+            }
+        }
+        else if (strPhotoID != null)
+        {
+            DefaultPhoto = Photo.GetPhotoByWebPhotoIDWithJoin(strPhotoID);
+
+            DefaultNumberOfViews = (++DefaultPhoto.NumberOfViews).ToString();
+            DefaultPhoto.Save();
+
+            ViewingMember = new Member(DefaultPhoto.MemberID);
+            ViewingMemberProfile = ViewingMember.MemberProfile[0];
+            ProfileDefaultPageType = DefaultPageType.Photo;
+            DefaultPhotoURL = ParallelServer.Get(DefaultPhoto.PhotoResourceFile.FullyQualifiedURL) + DefaultPhoto.PhotoResourceFile.FullyQualifiedURL;
+            DefaultMediaID = strPhotoID;
+            DefaultVoteCount = DefaultPhoto.TotalVoteScore.ToString();
+            PermaLink = WebRoot + "view.aspx?p=" + strPhotoID;
+
+            MainTitle = DefaultPhoto.Caption;
+
+            //MainSubTitle = "From Gallery " + DefaultPhoto.;
+
+            if (IsLoggedIn)
+            {
+                ReportAbuseLink = "ReportAbuse.aspx?r=" + strPhotoID;
+            }
+            else
+            {
+                ReportAbuseLink = @"signup.aspx?u=ReportAbuse.aspx?r=" + strPhotoID + "&url=" + Request.Url.AbsoluteUri;
+            }
+        }
+        else if (strLiveBroadcastID != null)
+        {
+            VideoURL = strLiveBroadcastID;
+            LiveBroadcast live = LiveBroadcast.GetLiveBroadcastByWebLiveBroadcastID(strLiveBroadcastID);
+
+            ViewingMember = new Member(live.MemberID);
+            ViewingMemberProfile = ViewingMember.MemberProfile[0];
+            ProfileDefaultPageType = DefaultPageType.LiveBroadcast;
+            //PermaLink = ASP.global_asax.WebRoot + "view.aspx?v="+strWebVideoID;
+        }
+        else
+        {
+            throw new Exception("No WebID");
+            //ViewingMember = new Member(1);
+            //ProfileDefaultPageType = DefaultPageType.Member;
+            //PermaLink = ASP.global_asax.WebRoot + "view.aspx?v="+strWebVideoID;
+        }
+
+
+        if (member != null)
+        {
+            if (ViewingMember.MemberID == member.MemberID)
+            {
+                IsMyPage = true;
+            }
+        }
+
+        
+
+        if (IsMyPage)
+        {
+            inviteDiv.Visible = true;
+            GenerateDashboard();
+        }
+        else
+        {
+            inviteDiv.Visible = false;
+        }
+
+        try
+        {
+
+            NumberOfVideos = ViewingMemberProfile.NumberOfVideos;
+            NumberOfPhotos = ViewingMemberProfile.NumberOfPhotos;
+            NumberOfFriends = FriendRequest.GetNumberOfFriends(ViewingMember.MemberID);
+        }
+        catch { }
+
+
+
+        try
+        {
+            ResourceFile PhotoRes = new ResourceFile(ViewingMember.ProfilePhotoResourceFileID);
+            PhotoURL = ParallelServer.Get(PhotoRes.FullyQualifiedURL) + PhotoRes.FullyQualifiedURL;
+
+            if (strMemberPhoto != null)
+            {
+                LoadLargeMemberPhoto = true;
+            }
+            LargePhotoURL = ParallelServer.Get("/pmed/" + PhotoRes.FileName) + @"user/" + ViewingMember.NickName + "/pmed/" + PhotoRes.FileName;
+        }
+        catch { }
+
+        ViewingMemberProfile = ViewingMember.MemberProfile[0];
+
+        ViewingMemberProfile.NumberOfViews++;
+        //ViewingMemberProfile.Save();
+
+        GeneratePageComments();
+        CreateEmbeddedLinks();
+
+        List<PhotoCollection> Galleries = PhotoCollection.GetAllPhotoCollectionByMemberID(ViewingMember.MemberID);
+        GetPhotoLister(ViewingMember.WebMemberID, Galleries, 0);
+
+        if (ProfileDefaultPageType == DefaultPageType.Photo)
+        {
+            //DefaultLister = GetPhotoLister();
+        }
+        else if (ProfileDefaultPageType == DefaultPageType.Video)
+        {
+            TabContents tabContents = GetVideoLister(ViewingMember.WebMemberID, 0);
+            DefaultLister = tabContents.HTML;
+            DefaultPager = tabContents.PagerHTML;
+        }
+        else if (ProfileDefaultPageType == DefaultPageType.NSpot)
+        {
+            TabContents tabContents = GenerateNspotLister(ViewingMember.WebMemberID, 0);
+            tabContents.HTML = DefaultLister;
+        }
+        else
+        {
+            TabContents tabContents = GetVideoLister(ViewingMember.WebMemberID, 0);
+            DefaultLister = tabContents.HTML;
+            DefaultPager = tabContents.PagerHTML;
+        }
+
+    }
+
+    public void GenerateDashboard()
+    {
+        member = (Member)Session["Member"];
+
+        Dashboard dash = member.DashboardNoCache;
+        dash.GenerateBashboard();
+
+
+        DashboardHTMLRow1 = dash.GetRowHTML(1);
+        DashboardHTMLRow2 = dash.GetRowHTML(2);
+        DashboardHTMLRow3 = dash.GetRowHTML(3);
+
+    }
+
+    [AjaxPro.AjaxMethod]
+    public void UpdateDash(int[] Row1, int[] Row2, int[] Row3)
+    {
+        //Member member = Session["Member"];
+        member = (Member)Session["Member"];
+
+
+        // ensure the correct user is logged in
+        //if (member.WebMemberID == WebMemberID)
+        //{
+        Dashboard dash = member.Dashboard[0];
+
+        dash.UpdateViaArray(Row1, Row2, Row3);
+
+        //}
+
+    }
+
+    private void PopulateMemberVariables()
+    {
+        MyLife = ViewingMember.MemberProfile[0].MyLife.Replace("\r\n", "<br/>").Replace("\r", "<br/>").Replace("\n", "<br/>");
+        Gender = GetGender(ViewingMember.Gender);
+        LastActive = TimeDistance.TimeAgo(ViewingMember.LastOnline);
+        ProfileViews = ViewingMember.MemberProfile[0].NumberOfViews.ToString();
+
+        Hometown = ViewingMember.MemberProfile[0].HomeTown;
+        Country = ViewingMember.CountryName;
+        Nick = ViewingMember.NickName;
+        DirectUrl = WebRoot + "?n=" + ViewingMember.NickName;
+        DirectUrlText = WebRoot + "?n=" + ViewingMember.NickName;
+
+        Movies = ViewingMember.MemberProfile[0].Movies.Replace("\r\n", "<br/>").Replace("\r", "<br/>").Replace("\n", "<br/>");
+        Books = ViewingMember.MemberProfile[0].Books.Replace("\r\n", "<br/>").Replace("\r", "<br/>").Replace("\n", "<br/>");
+        Music = ViewingMember.MemberProfile[0].Music.Replace("\r\n", "<br/>").Replace("\r", "<br/>").Replace("\n", "<br/>");
+
+        MemberSince = ViewingMember.CreatedDT.ToString("dd MMMM yyyy");
+        RelationshipStatus = GetRelationShipStatus(ViewingMember.MemberProfile[0].RelationshipStatus);
+
+        if (ViewingMember.MemberProfile[0].OtherHalfID != -1)
+        {
+            // Married
+            if (ViewingMember.MemberProfile[0].RelationshipStatus == 2)
+            {
+                RelationshipStatus += " To";
+            }
+            //Kinda have a thing
+            else if (ViewingMember.MemberProfile[0].RelationshipStatus == 6)
+            {
+                RelationshipStatus += " With";
+            }
+        }
+
+        OtherHalf = GetOtherHalf(ViewingMember.MemberProfile[0].OtherHalfID);
+
+        BlogFeedURL = ViewingMember.MemberProfile[0].BlogFeedURL;
+        BlogFeedURLText = BreakText(BlogFeedURL);
+
+        BlogURL = ViewingMember.MemberProfile[0].BlogURL;
+        BlogURLText = BreakText(BlogURL);
+
+        MySpaceURL = ViewingMember.MemberProfile[0].MySpaceURL;
+        MySpaceURLText = BreakText(MySpaceURL);
+
+        FaceBookURL = ViewingMember.MemberProfile[0].FaceBookURL;
+        FaceBookURLText = BreakText(FaceBookURL);
+    }
+
+    private string BreakText(string inText)
+    {
+        StringBuilder sb = new StringBuilder(inText);
+        for (int i = 45; i < sb.Length; i += 48)
+        {
+            sb.Insert(i, "<br/>");
+        }
+
+        return sb.ToString();
+    }
+
+    private string GetGender(int gender)
+    {
+        if (gender == 0)
+        {
+            return "Female";
+        }
+        else if (gender == 1)
+        {
+            return "Male";
+        }
+        else
+        {
+            return "";
+        }
+    }
+
+    private string GetRelationShipStatus(int status)
+    {
+        switch (status)
+        {
+            case -1:
+                return "Not Saying";
+            case 1:
+                return "Single";
+            case 2:
+                return "Married";
+            case 3:
+                return "Divorced";
+            case 4:
+                return "Dating";
+            case 5:
+                return "Seeing";
+            case 6:
+                return "Kinda Have A Thing";
+            default:
+                return "";
+        }
+    }
+
+    private string GetOtherHalf(int otherHalfId)
+    {
+        try
+        {
+            if (otherHalfId <= 0)
+            {
+                return "Not Saying";
+            }
+            else
+            {
+                Member m = new Member(otherHalfId);
+                return "<a href=\"view.aspx?m=" + m.WebMemberID + "\">" + m.NickName + "</a>";
+            }
+        }
+        catch { }
+
+        return "Not Saying";
+    }
+
+
+    protected void btnInvite_Click(object sender, EventArgs e)
+    {
+        string Email1 = txtFriend1.Text;
+        string Email2 = txtFriend2.Text;
+        string Email3 = txtFriend3.Text;
+        string Email4 = txtFriend4.Text;
+        string Email5 = txtFriend5.Text;
+
+        ProfileInvite profileInvite1 = new ProfileInvite();
+        ProfileInvite profileInvite2 = new ProfileInvite();
+        ProfileInvite profileInvite3 = new ProfileInvite();
+        ProfileInvite profileInvite4 = new ProfileInvite();
+        ProfileInvite profileInvite5 = new ProfileInvite();
+
+        bool Go1 = false;
+        bool Go2 = false;
+        bool Go3 = false;
+        bool Go4 = false;
+        bool Go5 = false;
+
+        bool go = true;
+        bool AtLeast1 = false;
+
+        if (Email1 != string.Empty)
+        {
+            AtLeast1 = true;
+
+            if (RegexPatterns.TestEmailRegex(Email1))
+            {
+                profileInvite1.DTCreated = DateTime.Now;
+                profileInvite1.EmailAddress = Email1;
+                txtFriend1.CssClass = "form_txt_small";
+                Go1 = true;
+            }
+            else
+            {
+                go = false;
+                txtFriend1.CssClass = "form_txt_small formerror";
+            }
+        }
+        else
+        {
+            txtFriend1.CssClass = "form_txt_small";
+        }
+
+
+        if (Email2 != string.Empty)
+        {
+            AtLeast1 = true;
+
+            if (RegexPatterns.TestEmailRegex(Email2))
+            {
+                profileInvite2.DTCreated = DateTime.Now;
+                profileInvite2.EmailAddress = Email2;
+                txtFriend2.CssClass = "form_txt_small";
+                Go2 = true;
+            }
+            else
+            {
+                go = false;
+                txtFriend2.CssClass = "form_txt_small formerror";
+            }
+        }
+        else
+        {
+            txtFriend2.CssClass = "form_txt_small";
+        }
+
+
+        if (Email3 != string.Empty)
+        {
+            AtLeast1 = true;
+
+            if (RegexPatterns.TestEmailRegex(Email3))
+            {
+                profileInvite3.DTCreated = DateTime.Now;
+                profileInvite3.EmailAddress = Email3;
+                txtFriend3.CssClass = "form_txt_small";
+                Go3 = true;
+            }
+            else
+            {
+                go = false;
+                txtFriend3.CssClass = "form_txt_small formerror";
+            }
+        }
+        else
+        {
+            txtFriend3.CssClass = "form_txt_small";
+        }
+
+
+        if (Email4 != string.Empty)
+        {
+            AtLeast1 = true;
+
+            if (RegexPatterns.TestEmailRegex(Email4))
+            {
+                profileInvite4.DTCreated = DateTime.Now;
+                profileInvite4.EmailAddress = Email4;
+                txtFriend4.CssClass = "form_txt_small";
+                Go4 = true;
+            }
+            else
+            {
+                go = false;
+                txtFriend4.CssClass = "form_txt_small formerror";
+            }
+        }
+        else
+        {
+            txtFriend4.CssClass = "form_txt_small";
+        }
+
+        if (Email5 != string.Empty)
+        {
+            AtLeast1 = true;
+
+            if (RegexPatterns.TestEmailRegex(Email5))
+            {
+                profileInvite5.DTCreated = DateTime.Now;
+                profileInvite5.EmailAddress = Email5;
+                txtFriend5.CssClass = "form_txt_small";
+                Go5 = true;
+
+            }
+            else
+            {
+                go = false;
+                txtFriend5.CssClass = "form_txt_small formerror";
+            }
+        }
+        else
+        {
+            txtFriend5.CssClass = "form_txt_small";
+        }
+
+        if (!AtLeast1)
+        {
+
+            litInvite.Text = "<p class='error_alert'>Please enter at least one email address</p>";
+        }
+        else if (go)
+        {
+            litInvite.Text = "Thank you, we have invited your friends</p>";
+
+
+            string AttachedMessage = (txtInviteMessage.Text == "Your personal message here!") ? string.Empty : txtInviteMessage.Text;
+
+            profileInvite1.CustomMessage = AttachedMessage;
+            profileInvite2.CustomMessage = AttachedMessage;
+            profileInvite3.CustomMessage = AttachedMessage;
+            profileInvite4.CustomMessage = AttachedMessage;
+            profileInvite5.CustomMessage = AttachedMessage;
+
+            member = (Member)Session["Member"];
+            if (member != null)
+            {
+                profileInvite1.MemberID = member.MemberID;
+                profileInvite2.MemberID = member.MemberID;
+                profileInvite3.MemberID = member.MemberID;
+                profileInvite4.MemberID = member.MemberID;
+                profileInvite5.MemberID = member.MemberID;
+            }
+
+            if (Go1) profileInvite1.Save();
+            if (Go2) profileInvite2.Save();
+            if (Go3) profileInvite3.Save();
+            if (Go4) profileInvite4.Save();
+            if (Go5) profileInvite5.Save();
+
+            txtFriend1.Text = string.Empty;
+            txtFriend2.Text = string.Empty;
+            txtFriend3.Text = string.Empty;
+            txtFriend4.Text = string.Empty;
+            txtFriend5.Text = string.Empty;
+        }
+        else
+        {
+            litInvite.Text = "<p class='error_alert'>One or more invalid email address</p>";
+        }
+    }
+
+
+    /// <summary>
+    /// Creates a lister with members friends
+    /// </summary>
+    public void GenerateFriendLister()
+    {
+        List<Member> Friends = Member.GetAllFriendsByMemberIDForPageLister(ViewingMember.MemberID);
+        //NumberOfFriends = Friends.Count;
+
+        StringBuilder sbHTMLList = new StringBuilder();
+
+        for (int i = 0; i < 10; i++)
+        {
+            if (Friends.Count <= i)
+            {
+                break;
+            }
+
+            StringBuilder sbHTMLItem = new StringBuilder();
+
+            object[] parameters = new object[5];
+
+            parameters[0] = Friends[i].WebMemberID;
+            parameters[1] = ParallelServer.Get(Friends[i].DefaultPhoto.FullyQualifiedURL) + Friends[i].DefaultPhoto.FullyQualifiedURL;
+            parameters[2] = Friends[i].NickName;
+            parameters[3] = Friends[i].ISOCountry;
+            parameters[4] = TimeDistance.TimeAgo(Friends[i].LastOnline);
+
+            string HTMLItem = @"<li><a href='view.aspx?m={0}'>
+                            <img src='{1}' alt='friend' width='45' height='45' /></a>
+                            <p>
+                                <a href='view.aspx?m={0}'><strong>{2}</strong></a><br />
+                                Active: <span style='notes'>{4}</span><br />
+                                Country: <span style='metadata'>{3}</span></p>
+                        </li>";
+
+            //<p class='notes'>You and Lawrence made friend {}. <br />
+
+            sbHTMLItem.AppendFormat(HTMLItem, parameters);
+            sbHTMLList.Append(sbHTMLItem.ToString());
+        }
+
+        DefaultFriendLister = sbHTMLList.ToString();
+    }
+    /// <summary>
+    /// Creates a subscribe request for the member
+    /// </summary>
+    /// <param name="WebMemberID">The WebMemberID of the subscribe request</param>
+    /// <returns>1 = OK, 2 = Not logged in, 3 = already subscribed</returns>
+    [AjaxPro.AjaxMethod]
+    public int SubscribeToMember(string WebMemberID)
+    {
+        ViewingMember = Member.GetMemberViaWebMemberID(WebMemberID);
+        member = (Member)Session["Member"];
+
+        SubscriptionMember subscription = new SubscriptionMember();
+
+        subscription.MemberID = member.MemberID;
+        subscription.SubscribeToMemberID = ViewingMember.MemberID;
+        subscription.DTCreated = DateTime.Now;
+        subscription.SaveWithCheck();
+
+        return 1;
+    }
+
+    /// <summary>
+    /// Creates a favourite request for the member
+    /// </summary>
+    /// <param name="WebMemberID">The WebMemberID of the favourite request</param>
+    /// <returns>1 = OK, 2 = Not logged in, 3 = already subscribed</returns>
+    [AjaxPro.AjaxMethod]
+    public int AddToFavourites(string WebMemberID)
+    {
+        ViewingMember = Member.GetMemberViaWebMemberID(WebMemberID);
+        member = (Member)Session["Member"];
+
+        FavouriteMember subscription = new FavouriteMember();
+
+        subscription.MemberID = member.MemberID;
+        subscription.TheFavouriteMemberID = ViewingMember.MemberID;
+        subscription.DTCreated = DateTime.Now;
+        subscription.SaveWithCheck();
+
+        return 1;
+    }
+
+    /// <summary>
+    /// Creates a member block
+    /// </summary>
+    /// <param name="WebMemberID">The WebMemberID of the block request</param>
+    /// <returns>1 = OK, 2 = Not logged in, 3 = already blocked</returns>
+    [AjaxPro.AjaxMethod]
+    public int BlockMember(string WebMemberID)
+    {
+        ViewingMember = Member.GetMemberViaWebMemberID(WebMemberID);
+        member = (Member)Session["Member"];
+
+        MemberBlock block = new MemberBlock();
+
+        block.MemberID = member.MemberID;
+        block.BlockMemberID = ViewingMember.MemberID;
+        block.DTCreated = DateTime.Now;
+
+        block.SaveWithCheck();
+
+        return 1;
+    }
+
+    /// <summary>
+    /// Creates a friend request for the Member
+    /// </summary>
+    /// <param name="WebMemberID">The WebMemberID of the friend request</param>
+    /// <returns>1 = OK, 2 = Not logged in, 3 = already a friend</returns>
+    [AjaxPro.AjaxMethod]
+    public bool AddToFriends(string WebMemberID)
+    {
+        ViewingMember = Member.GetMemberViaWebMemberID(WebMemberID);
+        member = (Member)Session["Member"];
+
+        bool MadeFriendRequest = FriendRequest.CreateWebFriendRequest(member.MemberID, ViewingMember.MemberID);
+
+        return MadeFriendRequest;
+    }
+
+
+    private void CreateEmbeddedLinks()
+    {
+        if (member != null)
+        {
+            SubscribeLink = @"javascript:subscribeToMember('" + ViewingMember.WebMemberID + "', this);";
+            SendMessageLink = @"Inbox.aspx?s=" + ViewingMember.WebMemberID + @"&r=" + Server.UrlEncode(Request.Url.PathAndQuery);
+            BlockMemberLink = @"javascript:blockMember('" + ViewingMember.WebMemberID + "', this);";
+            AddToFriendsLink = @"javascript:addTofriends('" + ViewingMember.WebMemberID + "', this);";
+            AddFavouritesLink = @"javascript:addToFavourites('" + ViewingMember.WebMemberID + "', this);";
+
+            string param = ProfileDefaultPageType.ToString().Substring(0, 1).ToLower();
+
+            DefaultVoteUpLink = @"javascript:vote('" + param + "','" + DefaultMediaID + "', true);";
+            DefaultVoteDownLink = @"javascript:vote('" + param + "','" + DefaultMediaID + "', false);";
+
+            DefaultVoteUpName = "VoteUp" + DefaultMediaID;
+            DefaultVoteDownName = "VoteDown" + DefaultMediaID;
+
+        }
+    }
+
+    [AjaxPro.AjaxMethod]
+    public int Vote(string param, string WebID, bool up)
+    {
+        member = (Member)Session["Member"];
+
+        Vote v = new Vote();
+        v.MemberID = member.MemberID;
+        v.Value = (up) ? 1 : -1;
+
+        switch (param)
+        {
+            case "v":
+                v.VideoID = Video.GetVideoIDByWebVideoID(WebID);
+                break;
+            case "p":
+                v.PhotoID = Photo.GetPhotoIDByWebPhotoID(WebID);
+                break;
+        }
+
+
+        bool value = v.SaveWithCheck();
+
+        if (value)
+        {
+            if (up)
+                return 1;
+            else
+                return -1;
+        }
+        else
+        {
+            return 0;
+        }
+    }
+
+    /// <summary>
+    /// Gets the Comments from the page from either Member, Photo or video (depending on the default page item)
+    /// </summary>
+    private void GeneratePageComments()
+    {
+        AjaxComment[] comments = new AjaxComment[0];
+
+        if (ProfileDefaultPageType == DefaultPageType.Member)
+        {
+            comments = AjaxComment.GetMemberCommentByMemberIDWithJoin(ViewingMember.MemberID);
+            DefaultNewCommentParams = "'m','" + ViewingMember.WebMemberID + "'";
+        }
+        else if (ProfileDefaultPageType == DefaultPageType.Photo)
+        {
+            comments = AjaxComment.GetPhotoCommentByPhotoIDWithJoin(DefaultPhoto.PhotoID);
+            DefaultNewCommentParams = "'p','" + DefaultPhoto.WebPhotoID + "'";
+        }
+        else if (ProfileDefaultPageType == DefaultPageType.Video)
+        {
+            comments = AjaxComment.GetVideoCommentByVideoIDWithJoin(DefaultVideo.VideoID);
+            DefaultNewCommentParams = "'v','" + DefaultVideo.WebVideoID + "'";
+        }
+
+        NumberOfComments = comments.Length;
+
+        for (int i = 0; i < comments.Length; i++)
+        {
+            PageComments += comments[i].HTML;
+        }
+    }
+
+    /// <summary>
+    /// Concatonates the videos into HTML for the lister control
+    /// </summary>
+    private TabContents GetVideoLister(string WebMemberID, int Page)
+    {
+        PrivacyType privacyType = PrivacyType.Public;
+
+        if (member != null)
+        {            
+            if( 
+                ViewingMember.MemberID == member.MemberID ||
+                Friend.IsFriend( member.MemberID,ViewingMember.MemberID) )
+            {
+                privacyType = PrivacyType.Network;
+            }
+        }
+
+        List<Next2Friends.Data.Video> videos = Next2Friends.Data.Video.GetTopVideosByMemberIDWithJoin(ViewingMember.MemberID,privacyType);
+        NumberOfVideos = videos.Count;
+        int DisplayNumberOfVideos = 6;
+        int StartIndex = Page * DisplayNumberOfVideos;
+        int EndIndex = StartIndex + DisplayNumberOfVideos;
+
+        StringBuilder sbHTML = new StringBuilder();
+
+        for (int i = StartIndex; i < EndIndex; i++)
+        {
+            if (videos.Count <= i)
+            {
+                break;
+            }
+
+            object[] parameters = new object[8];
+
+            parameters[0] = ParallelServer.Get(videos[i].ThumbnailResourceFile.FullyQualifiedURL) + videos[i].ThumbnailResourceFile.FullyQualifiedURL;
+            parameters[1] = videos[i].Duration.ToString();
+            parameters[2] = videos[i].VeryShortTitle;
+            parameters[3] = TimeDistance.TimeAgo(videos[i].DTCreated);
+            parameters[4] = videos[i].VeryShortDescription;
+            parameters[5] = videos[i].NumberOfViews;
+            parameters[6] = videos[i].WebVideoID;
+            parameters[7] = videos[i].NumberOfComments;
+
+            sbHTML.AppendFormat(@"<li>
+								<div class='vid_thumb'> <a href='view.aspx?v={6}'><img src='{0}' width='124' height='91' alt='thumb' /></a></div>
+								<div class='vid_info'>
+									<h3><a href='view.aspx?v={6}'>{2}</a></h3>
+									<p class='timestamp'>{3}</p>
+									<p>{4}</p>
+									<p class='metadata'>Views: {5} Comments: {7}</p>
+								</div>
+							</li>", parameters);
+
+        }
+
+        TabContents tabContents = new TabContents();
+
+        int PreviousPage = Page - 1;
+        int NextPage = Page + 1;
+
+        tabContents.PagerHTML = (Page > 0) ? @"<p class='view_all'><a href='javascript:ajaxGetListerContent(""" + WebMemberID + @""",1," + PreviousPage + @");' class='previous'>Previous</a>" : string.Empty;
+        tabContents.PagerHTML += (videos.Count > (NextPage * DisplayNumberOfVideos)) ? @"<a href='javascript:ajaxGetListerContent(""" + WebMemberID + @""",1," + NextPage + @");' class='next'>Next</a></p>" : string.Empty;
+
+        tabContents.HTML = sbHTML.ToString();
+
+        return tabContents;
+    }
+
+    /// <summary>
+    /// Concatonates the NSpots into HTML for the lister control
+    /// </summary>
+    public TabContents GenerateNspotLister(string WebMemberID, int Page)
+    {
+        ViewingMember = Member.GetMemberViaWebMemberID(WebMemberID);
+
+        List<NSpot> nspots = NSpot.GetAllNSpotByMemberID(ViewingMember);
+
+        StringBuilder sbHTMLList = new StringBuilder();
+
+        int DisplayNumberOfNSpots = 6;
+        int StartIndex = Page * DisplayNumberOfNSpots;
+        int EndIndex = StartIndex + DisplayNumberOfNSpots;
+
+        StringBuilder sbHTML = new StringBuilder();
+
+        for (int i = StartIndex; i < EndIndex; i++)
+        {
+            if (nspots.Count <= i)
+            {
+                break;
+            }
+
+            StringBuilder sbHTMLItem = new StringBuilder();
+
+            object[] parameters = new object[15];
+
+            parameters[0] = nspots[i].WebNSpotID;
+            parameters[1] = nspots[i].PhotoResourceFile.FullyQualifiedURL;
+            parameters[2] = nspots[i].Name;
+            parameters[3] = nspots[i].Description;
+            parameters[4] = nspots[i].WebNSpotID;
+            parameters[5] = nspots[i].Member.NickName;
+            parameters[6] = nspots[i].NumberOfViews;
+            parameters[7] = nspots[i].Member.WebMemberID;
+            parameters[8] = nspots[i].NumberOfViews;
+            parameters[9] = nspots[i].NumberOfComments;
+            parameters[10] = nspots[i].TotalVoteScore;
+            parameters[11] = TimeDistance.TimeAgo(nspots[i].DTCreated);
+
+            string HTMLItem = @"<li>
+							<div class='vid_thumb' style='text-align:center;width:131px;overflow:hidden;'><a href='nspot.aspx?n={0}'><img src='{1}' height='91' alt='thumb' /></a></div>
+							<div class='vid_info'>
+								<h3><a href='nspot.aspx?n={0}'>{2}</a></h3>
+								<p class='timestamp'>{11}</p>
+
+								<div class='vote vote_condensed'><span class='vote_count'>{10}</span></div>
+								<p class='metadata'>Views: {8}<br />
+								Comments: <a href='#'>{9}</a><br />
+								by: <a href='view.aspx?m={7}'>{5}</a></p>
+							</div>
+						</li>";
+
+            //<li><a href='inbox.aspx?s=Mzk5OWEwN2Y5ZDg5NDg3Mz' class='send_message'>Send Message</a></li>
+            //<li><a href='#' class='send_instant'>Send Instant Message</a></li>
+            //<li><a href='inbox.aspx?f=Mzk5OWEwN2Y5ZDg5NDg3Mz' class='forward'>Forward to a nspot</a></li>
+            //<li><a href='javascript:blocknspot('Mzk5OWEwN2Y5ZDg5NDg3Mz');' class='block'>Block this user</a></li>
+
+            sbHTMLItem.AppendFormat(HTMLItem, parameters);
+            sbHTMLList.Append(sbHTMLItem.ToString());
+        }
+
+
+
+        TabContents tabContents = new TabContents();
+
+        int PreviousPage = Page - 1;
+        int NextPage = Page + 1;
+
+        tabContents.PagerHTML = (Page > 0) ? @"<p class='view_all'><a href='javascript:ajaxGetListerContent(""" + WebMemberID + @""",3," + PreviousPage + @");' class='previous'>Previous</a>" : string.Empty;
+        tabContents.PagerHTML += (nspots.Count > (NextPage * DisplayNumberOfNSpots)) ? @"<a href='javascript:ajaxGetListerContent(""" + WebMemberID + @""",3," + NextPage + @");' class='next'>Next</a></p>" : string.Empty;
+
+
+        tabContents.HTML = sbHTMLList.ToString();
+
+
+        return tabContents;
+    }
+
+    [AjaxPro.AjaxMethod]
+    public TabContents GetPhotoLister(string WebMemberID, int Page)
+    {
+        ViewingMember = Member.GetMemberViaWebMemberID(WebMemberID);
+
+        List<PhotoCollection> Galleries = PhotoCollection.GetAllPhotoCollectionByMemberID(ViewingMember.MemberID);
+
+        return GetPhotoLister(WebMemberID, Galleries, Page);
+    }
+
+    /// <summary>
+    /// generates the gallery HTML
+    /// </summary>
+    private TabContents GetPhotoLister(string WebMemberID, List<PhotoCollection> Galleries, int Page)
+    {
+        StringBuilder sbHTML = new StringBuilder();
+        int DisplayNumberOfGalleries = 10;
+        int NumberOfGalleries = Galleries.Count + 1;
+        int NumberOfPhotos = 0;
+        int NumberOfPopulatedGalleries = 0;
+        int StartIndex = Page * DisplayNumberOfGalleries;
+        int EndIndex = StartIndex + DisplayNumberOfGalleries;
+
+        for (int i = StartIndex; i < EndIndex; i++)
+        {
+            if (Galleries.Count <= i)
+            {
+                break;
+            }
+
+            // only show galleries with at least one photo
+            if (Galleries[i].Photo.Count > 0)
+            {
+                object[] parameters = new object[5];
+
+                parameters[0] = ParallelServer.Get(Galleries[i].DefaultThumbnailURL) + "user/" + Galleries[i].DefaultThumbnailURL;
+                parameters[1] = Galleries[i].WebPhotoCollectionID;
+                parameters[2] = Galleries[i].Name;
+                parameters[3] = Galleries[i].Photo.Count;
+                parameters[4] = Galleries[i].Description;
+
+                sbHTML.AppendFormat(@"<li style='height:182px'><a href='ViewGallery.aspx?g={1}'><img src='{0}' alt='thumb' /></a>
+                                <p class='cat_details'><a href='ViewGallery.aspx?g={1}'><strong>{2}</strong> ({3})</a><br />
+                                {4}</p>
+
+                            </li>", parameters);
+            }
+        }
+
+
+
+        for (int i = 0; i < Galleries.Count; i++)
+        {
+            if (Galleries[i].Photo.Count > 0)
+            {
+                NumberOfPopulatedGalleries++;
+                NumberOfPhotos += Galleries[i].Photo.Count;
+            }
+        }
+
+        if (NumberOfPopulatedGalleries <= 3)
+        {
+            ShowGalleryArrows = false;
+        }
+
+
+        TabContents tabContents = new TabContents();
+
+
+        // previous button
+        string DisplayPrev = (Page > 1) ? "block" : "none";
+
+        int PrevPage = Page - 1;
+        tabContents.PagerHTML = "<li class='gallery_prev'><a style='display:" + DisplayPrev + ";' href='javascript:PageGallery(\"" + WebMemberID + "\"," + PrevPage + "," + NumberOfGalleries + ");'  id='aGallPrev'><img src='images/nspots-prev.gif' alt='previous' /></a></li>";
+        RightPagerHTML = tabContents.PagerHTML;
+
+        string DisplayNext = (DisplayNumberOfGalleries < NumberOfGalleries) ? "block" : "none";
+
+        // Next Button
+        int NextPage = Page + 1;
+        LeftPagerHTML = "<li class='gallery_next'><a style='display:" + DisplayNext + ";' href='javascript:PageGallery(\"" + WebMemberID + "\"," + NextPage + "," + NumberOfGalleries + ");'  id='aGallNext'><img src='images/nspots-next.gif' alt='next' /></a></li>";
+        tabContents.PagerHTML = LeftPagerHTML;
+
+        GalleryDetailsHTML = "(" + NumberOfPhotos + " photos in " + NumberOfPopulatedGalleries + " galleries)";
+        GalleryListerHTML = sbHTML.ToString();
+
+        tabContents.HTML = GalleryListerHTML;
+
+        return tabContents;
+    }
+
+    private string GetSubscriberLister()
+    {
+        List<SubscriptionItem> Subscribers = SubscriptionMember.GetSubscriptionMembersByMemberID(ViewingMember.MemberID);
+
+        NumberOfMemberSubscribers = Subscribers.Count.ToString();
+
+        StringBuilder sbHTML = new StringBuilder();
+
+        for (int i = 0; i < 4; i++)
+        {
+            if (Subscribers.Count <= i)
+            {
+                break;
+            }
+
+            object[] parameters = new object[5];
+
+            parameters[0] = Subscribers[i].WebMemberID;
+            parameters[1] = Subscribers[i].NickName;
+            parameters[2] = ParallelServer.Get(Subscribers[i].PhotoURL) + Subscribers[i].PhotoURL;
+            parameters[3] = Subscribers[i].ISOCountry;
+            parameters[4] = TimeDistance.TimeAgo(Subscribers[i].LastOnline);
+
+
+
+
+            sbHTML.AppendFormat(@"<li><img src='{2}' alt='{1}' width='45' height='45' />
+                            <p>
+                                <a href='view.aspx?m={0}'><strong>{1}</strong></a><br />
+                                Logged in: <span style='notes'>{4}</span><br />
+                                Country:<span style='metadata'>{3}</span></p></li>", parameters);
+        }
+
+        return sbHTML.ToString();
+    }
+
+    /// <summary>
+    /// Returns the tab content for the member
+    /// </summary>
+    /// <param name="TabType"></param>
+    /// <returns></returns>
+    [AjaxPro.AjaxMethod]
+    public TabContents GetListerContent(string WebMemberID, int TabType, int Page)
+    {
+        ViewingMember = Member.GetMemberViaWebMemberID(WebMemberID);
+
+        TabContents tabContents = new TabContents();
+
+        if (TabType == 1)
+        {
+            tabContents = GetVideoLister(WebMemberID, Page);
+
+        }
+        else if (TabType == 2)
+        {
+            //tabContents.HTML = GetPhotoLister();
+            //tabContents.PagerHTML = " ";
+        }
+        else if (TabType == 3)
+        {
+            tabContents = GenerateNspotLister(WebMemberID, Page);
+        }
+        else if (TabType == 4)
+        {
+            tabContents.HTML = "Live Broadcasts";
+            tabContents.TabType = TabType;
+            tabContents.PagerHTML = " ";
+        }
+
+
+
+        return tabContents;
+    }
+
+    /// <summary>
+    /// Saves the About me section to the database
+    /// </summary>
+    /// <param name="NewText">The new text</param>
+    /// <returns>The new text</returns>
+    [AjaxPro.AjaxMethod]
+    public string UpdateAboutMe(string NewText)
+    {
+        member = (Member)Session["Member"];
+
+        MemberProfile mp = member.MemberProfile[0];
+        //mp.EmbeddedContent = SafeHTML.CleanText(NewText);
+        member.Save();
+
+        Session["Member"] = member;
+
+        return "AboutMe.aspx?m=" + member.WebMemberID;
+    }
+
+    /// <summary>
+    /// gets the About me section in plain text
+    /// </summary>
+    [AjaxPro.AjaxMethod]
+    public string GetAboutMeText()
+    {
+        member = (Member)Session["Member"];
+
+        return member.MemberProfile[0].EmbeddedContent;
+    }
+
+    [AjaxPro.AjaxMethod]
+    public AjaxComment EditComment(string type, string WebID, string CommentText)
+    {
+        AjaxComment ajaxComment = new AjaxComment();
+        member = (Member)Session["Member"];
+
+        if (type == "m")
+        {
+            //Member memberTo = Member.GetMemberViaWebMemberID(WebID);
+
+            //comment.Save();
+
+            //ajaxComment = AjaxComment.GetAjaxMemberCommentByMemberCommentIDWithJoin(comment.MemberCommentID);
+
+            //ajaxComment.TotalNumberOfComments = AjaxComment.GetNumberOfMemberCommentByMemberID(memberTo.MemberID).ToString();
+
+        }
+        else if (type == "p")
+        {
+            //PhotoComment comment = PhotoComment.
+
+            //Photo photo = Photo.GetPhotoByWebPhotoIDWithJoin(WebID);
+
+            //comment.MemberID = member.MemberID;
+            //comment.PhotoID = photo.PhotoID;
+            //comment.Text = CommentText;
+            //comment.DTCreated = DateTime.Now;
+
+            //comment.Save();
+
+            //// update the local number of comments to the photo object
+            //photo.NumberOfComments++;
+            //photo.Save();
+
+            //ajaxComment = AjaxComment.GetAjaxPhotoCommentByPhotoCommentIDWithJoin(comment.PhotoCommentID);
+
+            //ajaxComment.TotalNumberOfComments = photo.NumberOfComments.ToString();
+        }
+        else if (type == "v")
+        {
+            //VideoComment comment = new VideoComment();
+
+            //Video video = Video.GetVideoByWebVideoIDWithJoin(WebID);
+
+            //comment.MemberID = member.MemberID;
+            //comment.VideoID = video.VideoID;
+            //comment.Text = CommentText;
+            //comment.DTCreated = DateTime.Now;
+
+            //comment.Save();
+
+            //// update the local number of comments to the photo object
+            //video.NumberOfComments++;
+            //video.Save();
+
+            //ajaxComment = AjaxComment.GetAjaxVideoCommentByVideoCommentIDWithJoin(comment.VideoCommentID);
+
+            //ajaxComment.TotalNumberOfComments = video.NumberOfComments.ToString();
+        }
+
+        return ajaxComment;
+    }
+
+    /// <summary>
+    /// Post a new comment to the members page
+    /// </summary>
+    /// <param name="WebMemberID">The WebMemberID who owns the page</param>
+    /// <param name="CommentText">The text body of the comment</param>
+    /// <returns>An AjaxComment object populated with all the comments properties</returns>
+    [AjaxPro.AjaxMethod]
+    public AjaxComment PostComment(string type, string WebID, string CommentText)
+    {
+        AjaxComment ajaxComment = new AjaxComment();
+        member = (Member)Session["Member"];
+
+        if (type == "m")
+        {
+            Member memberTo = Member.GetMemberViaWebMemberID(WebID);
+
+            MemberComment comment = new MemberComment();
+
+            comment.MemberID = memberTo.MemberID;
+            comment.MemberIDFrom = member.MemberID;
+            comment.Text = CommentText;
+            comment.DTCreated = DateTime.Now;
+
+            comment.Save();
+
+            ajaxComment = AjaxComment.GetAjaxMemberCommentByMemberCommentIDWithJoin(comment.MemberCommentID);
+
+            ajaxComment.TotalNumberOfComments = AjaxComment.GetNumberOfMemberCommentByMemberID(memberTo.MemberID).ToString();
+
+        }
+        else if (type == "p")
+        {
+            PhotoComment comment = new PhotoComment();
+
+            Photo photo = Photo.GetPhotoByWebPhotoIDWithJoin(WebID);
+
+            comment.MemberID = member.MemberID;
+            comment.PhotoID = photo.PhotoID;
+            comment.Text = CommentText;
+            comment.DTCreated = DateTime.Now;
+
+            comment.Save();
+
+            // update the local number of comments to the photo object
+            photo.NumberOfComments++;
+            photo.Save();
+
+            ajaxComment = AjaxComment.GetAjaxPhotoCommentByPhotoCommentIDWithJoin(comment.PhotoCommentID);
+
+            ajaxComment.TotalNumberOfComments = photo.NumberOfComments.ToString();
+        }
+        else if (type == "v")
+        {
+            VideoComment comment = new VideoComment();
+
+            Video video = Video.GetVideoByWebVideoIDWithJoin(WebID);
+
+            comment.MemberID = member.MemberID;
+            comment.VideoID = video.VideoID;
+            comment.Text = CommentText;
+            comment.DTCreated = DateTime.Now;
+
+            comment.Save();
+
+            // update the local number of comments to the photo object
+            video.NumberOfComments++;
+            video.Save();
+
+            ajaxComment = AjaxComment.GetAjaxVideoCommentByVideoCommentIDWithJoin(comment.VideoCommentID);
+
+            ajaxComment.TotalNumberOfComments = video.NumberOfComments.ToString();
+        }
+
+        return ajaxComment;
+    }
+
+    protected void btnPhotoChange_Click(object sender, EventArgs e)
+    {
+        Member member = (Member)Session["Member"];
+
+        if (member != null)
+        {
+            if (filePhoto.HasFile)
+            {
+                System.Drawing.Image ProfilePhoto = Photo.ByteArrayToImage(filePhoto.FileBytes);
+                Photo.ProcessProfilePhoto(member, ProfilePhoto);
+                Session["Member"] = member;
+                ResourceFile PhotoRes = new ResourceFile(member.ProfilePhotoResourceFileID);
+                PhotoURL = PhotoRes.FullyQualifiedURL;
+
+            }
+        }
+    }
+
+    /// <summary>
+    /// set the page skin
+    /// </summary>
+    /// <param name="e"></param>
+    protected override void OnPreInit(EventArgs e)
+    {
+        string strWebMemberID = Request.Params["m"];
+        string strWebVideoID = Request.Params["v"];
+        string strPhotoID = Request.Params["p"];
+        string strLiveBroadcastID = Request.Params["l"];
+
+        if (strWebMemberID != null)
+        {
+            Master.SkinID = "community";
+        }
+        else if (strWebVideoID != null)
+        {
+            Master.SkinID = "video";
+        }
+        else if (strPhotoID != null)
+        {
+            Master.SkinID = "photo";
+        }
+        else if (strLiveBroadcastID != null)
+        {
+            Master.SkinID = "video";
+        }
+
+        base.OnPreInit(e);
+    }
+}
+

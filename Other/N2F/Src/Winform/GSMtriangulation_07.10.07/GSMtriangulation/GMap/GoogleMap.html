@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>Google Maps JavaScript API Example</title>
+    <!-- Note: The Google map key as below must be registered.  The one used here for testing is a personal registration. -->
+    <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAbNpdbFMJYVLYjooRgkYD8hT2yXp_ZAY8_ufC3CFXhHIE1NvwkxThjdOcH12Cup4YtR44bX0N9BjPJw"
+      type="text/javascript"></script>
+    <script type="text/javascript">
+    
+    //<![CDATA[
+    var map = null;
+    var marker = [];
+    
+    //---------------------------------------------------------------------------------------    
+    function load()
+	{
+      if (GBrowserIsCompatible())
+	  {
+        map = new GMap2(document.getElementById("divmap"));// Create map object.
+		map.addControl(new GSmallMapControl());         // Add small map controls.
+		map.addControl(new GMapTypeControl());          // Add map/satellite buttons.
+		
+		GEvent.addListener(map, "moveend", function()
+		{   // Get latitude and longitude coordinates of center of map.
+		    var latitude = map.getCenter().lat();
+		    var longitude = map.getCenter().lng();
+		    //document.getElementById("latitude").innerHTML = "Latitude = " + latitude;
+		    //document.getElementById("longitude").innerHTML = "Longitude = " + longitude;
+        });
+		
+		var point = new GLatLng(38,-97);    // Center of United States.
+		map.setCenter(point, 4);            // Set center of map.
+      }
+    }
+    
+    //---------------------------------------------------------------------------------------
+    function addMarker(markernumber, latitude, longitude, description)
+    {
+        var point = new GLatLng(latitude, longitude);
+        marker[markernumber] = new GMarker(point);  // Creater a marker object.
+        map.addOverlay(marker[markernumber]);       // Add marker to map.
+        
+        GEvent.addListener(marker[markernumber], "click", function()
+        {// If the marker is clicked, open a bubble.
+            marker[markernumber].openInfoWindowHtml(description);
+        });
+    }
+    
+    //---------------------------------------------------------------------------------------
+    function setCenter(latitude, longitude)
+    {
+        var point = new GLatLng(latitude, longitude);
+		map.setCenter(point, 12);   // Set center of map.
+    }
+    
+    //---------------------------------------------------------------------------------------
+    function clearMap()
+    {
+        map.clearOverlays();    // Remove all overlays on the map.
+    }
+    
+    //]]>
+    
+    </script>
+  </head>
+  
+  <body onload="load()" onunload="GUnload()"; style="margin: 0px">
+    <div id="divmap" style="width: 992px; height: 548px"></div>
+  </body>
+  
+</html>

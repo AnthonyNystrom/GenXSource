@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.next2friends.com/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.next2friends.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Provides functionality to upload images to the Next2Friends server.</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.next2friends.com/">
+      <s:element name="DeviceUploadPhoto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nickname" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="base64StringPhoto" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="dateTime" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeviceUploadPhotoResponse">
+        <s:complexType/>
+      </s:element>
+      <s:element name="JavaUploadPhoto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="encryptedWebMemberID" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="webPhotoCollectionID" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="base64StringPhoto" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="dateTime" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="JavaUploadPhotoResponse">
+        <s:complexType/>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="DeviceUploadPhotoSoapIn">
+    <wsdl:part name="parameters" element="tns:DeviceUploadPhoto"/>
+  </wsdl:message>
+  <wsdl:message name="DeviceUploadPhotoSoapOut">
+    <wsdl:part name="parameters" element="tns:DeviceUploadPhotoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="JavaUploadPhotoSoapIn">
+    <wsdl:part name="parameters" element="tns:JavaUploadPhoto"/>
+  </wsdl:message>
+  <wsdl:message name="JavaUploadPhotoSoapOut">
+    <wsdl:part name="parameters" element="tns:JavaUploadPhotoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="DeviceUploadPhotoHttpGetIn">
+    <wsdl:part name="nickname" type="s:string"/>
+    <wsdl:part name="password" type="s:string"/>
+    <wsdl:part name="base64StringPhoto" type="s:string"/>
+    <wsdl:part name="dateTime" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="DeviceUploadPhotoHttpGetOut"/>
+  <wsdl:message name="JavaUploadPhotoHttpGetIn">
+    <wsdl:part name="encryptedWebMemberID" type="s:string"/>
+    <wsdl:part name="webPhotoCollectionID" type="s:string"/>
+    <wsdl:part name="base64StringPhoto" type="s:string"/>
+    <wsdl:part name="dateTime" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="JavaUploadPhotoHttpGetOut"/>
+  <wsdl:message name="DeviceUploadPhotoHttpPostIn">
+    <wsdl:part name="nickname" type="s:string"/>
+    <wsdl:part name="password" type="s:string"/>
+    <wsdl:part name="base64StringPhoto" type="s:string"/>
+    <wsdl:part name="dateTime" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="DeviceUploadPhotoHttpPostOut"/>
+  <wsdl:message name="JavaUploadPhotoHttpPostIn">
+    <wsdl:part name="encryptedWebMemberID" type="s:string"/>
+    <wsdl:part name="webPhotoCollectionID" type="s:string"/>
+    <wsdl:part name="base64StringPhoto" type="s:string"/>
+    <wsdl:part name="dateTime" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="JavaUploadPhotoHttpPostOut"/>
+  <wsdl:portType name="SnapUpServiceSoap">
+    <wsdl:operation name="DeviceUploadPhoto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Uploads the specified image to the default user gallery. Intended to be used from a handheld device.&lt;tt&gt;DateTime&lt;/tt&gt; is expected to be a string representing ticks in Microsoft .NET Framework.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;Base64StringPhoto&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;DateTime&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt;.&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the specified &lt;tt&gt;Base64StringPhoto&lt;/tt&gt; is not a valid image encoded as a Base64 string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified &lt;tt&gt;Nickname&lt;/tt&gt; and &lt;tt&gt;Password&lt;/tt&gt; does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:DeviceUploadPhotoSoapIn"/>
+      <wsdl:output message="tns:DeviceUploadPhotoSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="JavaUploadPhoto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Uploads the specified image to the specified user gallery. Intended to be used from an applet.&lt;tt&gt;DateTime&lt;/tt&gt; is expected to be a string representing ticks in Microsoft .NET Framework.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;EncryptedWebMemberID&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, orif the specified &lt;tt&gt;WebPhotoCollectionID&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, orif the specified &lt;tt&gt;Base64StringPhoto&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, orif the specified &lt;tt&gt;DateTime&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the specified &lt;tt&gt;Base64StringPhoto&lt;/tt&gt; is not a valid image encoded as a Base64 string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the specified &lt;tt&gt;EncryptedWebMemberID&lt;/tt&gt; is not mapped to any existing user.</wsdl:documentation>
+      <wsdl:input message="tns:JavaUploadPhotoSoapIn"/>
+      <wsdl:output message="tns:JavaUploadPhotoSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SnapUpServiceHttpGet">
+    <wsdl:operation name="DeviceUploadPhoto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Uploads the specified image to the default user gallery. Intended to be used from a handheld device.&lt;tt&gt;DateTime&lt;/tt&gt; is expected to be a string representing ticks in Microsoft .NET Framework.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;Base64StringPhoto&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;DateTime&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt;.&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the specified &lt;tt&gt;Base64StringPhoto&lt;/tt&gt; is not a valid image encoded as a Base64 string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified &lt;tt&gt;Nickname&lt;/tt&gt; and &lt;tt&gt;Password&lt;/tt&gt; does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:DeviceUploadPhotoHttpGetIn"/>
+      <wsdl:output message="tns:DeviceUploadPhotoHttpGetOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="JavaUploadPhoto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Uploads the specified image to the specified user gallery. Intended to be used from an applet.&lt;tt&gt;DateTime&lt;/tt&gt; is expected to be a string representing ticks in Microsoft .NET Framework.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;EncryptedWebMemberID&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, orif the specified &lt;tt&gt;WebPhotoCollectionID&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, orif the specified &lt;tt&gt;Base64StringPhoto&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, orif the specified &lt;tt&gt;DateTime&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the specified &lt;tt&gt;Base64StringPhoto&lt;/tt&gt; is not a valid image encoded as a Base64 string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the specified &lt;tt&gt;EncryptedWebMemberID&lt;/tt&gt; is not mapped to any existing user.</wsdl:documentation>
+      <wsdl:input message="tns:JavaUploadPhotoHttpGetIn"/>
+      <wsdl:output message="tns:JavaUploadPhotoHttpGetOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SnapUpServiceHttpPost">
+    <wsdl:operation name="DeviceUploadPhoto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Uploads the specified image to the default user gallery. Intended to be used from a handheld device.&lt;tt&gt;DateTime&lt;/tt&gt; is expected to be a string representing ticks in Microsoft .NET Framework.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;Base64StringPhoto&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, or if the specified &lt;tt&gt;DateTime&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt;.&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the specified &lt;tt&gt;Base64StringPhoto&lt;/tt&gt; is not a valid image encoded as a Base64 string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the user with the specified &lt;tt&gt;Nickname&lt;/tt&gt; and &lt;tt&gt;Password&lt;/tt&gt; does not exist.</wsdl:documentation>
+      <wsdl:input message="tns:DeviceUploadPhotoHttpPostIn"/>
+      <wsdl:output message="tns:DeviceUploadPhotoHttpPostOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="JavaUploadPhoto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;p&gt;Uploads the specified image to the specified user gallery. Intended to be used from an applet.&lt;tt&gt;DateTime&lt;/tt&gt; is expected to be a string representing ticks in Microsoft .NET Framework.&lt;/p&gt;&lt;b&gt;Throws:&lt;/b&gt;&lt;br/&gt;&lt;tt&gt;ArgumentNullException&lt;/tt&gt; - If the specified &lt;tt&gt;EncryptedWebMemberID&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, orif the specified &lt;tt&gt;WebPhotoCollectionID&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, orif the specified &lt;tt&gt;Base64StringPhoto&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string, orif the specified &lt;tt&gt;DateTime&lt;/tt&gt; is &lt;tt&gt;null&lt;/tt&gt; or an empty string.&lt;br/&gt;&lt;tt&gt;ArgumentException&lt;/tt&gt; - If the specified &lt;tt&gt;Base64StringPhoto&lt;/tt&gt; is not a valid image encoded as a Base64 string.&lt;br/&gt;&lt;tt&gt;Exception&lt;/tt&gt; - If the specified &lt;tt&gt;EncryptedWebMemberID&lt;/tt&gt; is not mapped to any existing user.</wsdl:documentation>
+      <wsdl:input message="tns:JavaUploadPhotoHttpPostIn"/>
+      <wsdl:output message="tns:JavaUploadPhotoHttpPostOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SnapUpServiceSoap" type="tns:SnapUpServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="DeviceUploadPhoto">
+      <soap:operation soapAction="http://www.next2friends.com/DeviceUploadPhoto" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JavaUploadPhoto">
+      <soap:operation soapAction="http://www.next2friends.com/JavaUploadPhoto" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SnapUpServiceSoap12" type="tns:SnapUpServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="DeviceUploadPhoto">
+      <soap12:operation soapAction="http://www.next2friends.com/DeviceUploadPhoto" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JavaUploadPhoto">
+      <soap12:operation soapAction="http://www.next2friends.com/JavaUploadPhoto" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SnapUpServiceHttpGet" type="tns:SnapUpServiceHttpGet">
+    <http:binding verb="GET"/>
+    <wsdl:operation name="DeviceUploadPhoto">
+      <http:operation location="/DeviceUploadPhoto"/>
+      <wsdl:input>
+        <http:urlEncoded/>
+      </wsdl:input>
+      <wsdl:output/>
+    </wsdl:operation>
+    <wsdl:operation name="JavaUploadPhoto">
+      <http:operation location="/JavaUploadPhoto"/>
+      <wsdl:input>
+        <http:urlEncoded/>
+      </wsdl:input>
+      <wsdl:output/>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SnapUpServiceHttpPost" type="tns:SnapUpServiceHttpPost">
+    <http:binding verb="POST"/>
+    <wsdl:operation name="DeviceUploadPhoto">
+      <http:operation location="/DeviceUploadPhoto"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output/>
+    </wsdl:operation>
+    <wsdl:operation name="JavaUploadPhoto">
+      <http:operation location="/JavaUploadPhoto"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output/>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SnapUpService">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Provides functionality to upload images to the Next2Friends server.</wsdl:documentation>
+    <wsdl:port name="SnapUpServiceSoap" binding="tns:SnapUpServiceSoap">
+      <soap:address location="http://next2friends.com:90/SnapUpService.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="SnapUpServiceSoap12" binding="tns:SnapUpServiceSoap12">
+      <soap12:address location="http://next2friends.com:90/SnapUpService.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="SnapUpServiceHttpGet" binding="tns:SnapUpServiceHttpGet">
+      <http:address location="http://next2friends.com:90/SnapUpService.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="SnapUpServiceHttpPost" binding="tns:SnapUpServiceHttpPost">
+      <http:address location="http://next2friends.com:90/SnapUpService.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

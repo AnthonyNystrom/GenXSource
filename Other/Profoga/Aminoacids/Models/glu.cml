@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<molecule xmlns="http://www.xml-cml.org/schema/cml2/core" id="glu.pdb">
+	<atomArray>
+		<atom id="a1" elementType="N" x3="0.145000" y3="-0.223000" z3="0.000000" role="peptideN"/>
+		<atom id="a2" elementType="C" x3="1.592000" y3="-0.027000" z3="0.000000" role="skeletonC"/>
+		<atom id="a3" elementType="C" x3="1.938000" y3="1.443000" z3="0.000000" role="peptideC"/>
+		<atom id="a4" elementType="O" x3="1.076000" y3="2.313000" z3="0.000000" role="dehydrateCarbonO"/>
+		<atom id="a5" elementType="C" x3="2.187000" y3="-0.746000" z3="-1.242000"/>
+		<atom id="a6" elementType="C" x3="1.796000" y3="-0.188000" z3="-2.651000"/>
+		<atom id="a7" elementType="C" x3="2.286000" y3="-0.938000" z3="-3.892000"/>
+		<atom id="a8" elementType="O" x3="2.004000" y3="-0.594000" z3="-5.032000"/>
+		<atom id="a9" elementType="O" formalCharge="-1" x3="3.063000" y3="-2.020000" z3="-3.607000"/>
+		<atom id="a10" elementType="H" x3="-0.545000" y3="0.607000" z3="0.000000" role="dehydrateNitrogenH"/>
+		<atom id="a11" elementType="H" x3="-0.298000" y3="-1.208000" z3="0.000000" role="peptideH"/>
+		<atom id="a12" elementType="H" x3="2.010000" y3="-0.472000" z3="0.922000" role="skeletonH"/>
+		<atom id="a13" elementType="H" x3="1.524000" y3="3.241000" z3="0.000000" role="dehydrateCarbonH"/>
+		<atom id="a14" elementType="H" x3="3.291000" y3="-0.743000" z3="-1.160000"/>
+		<atom id="a15" elementType="H" x3="1.916000" y3="-1.819000" z3="-1.194000"/>
+		<atom id="a16" elementType="H" x3="0.695000" y3="-0.122000" z3="-2.732000"/>
+		<atom id="a17" elementType="H" x3="2.138000" y3="0.859000" z3="-2.754000"/>
+		<atom id="a18" elementType="H" x3="2.198000" y3="0.411000" z3="-5.146000"/>
+		<atom id="a19" elementType="O" x3="3.333000" y3="1.759000" z3="0.000000" role="peptideO"/>
+	</atomArray>
+	<bondArray>
+		<bond atomRefs2="a1 a2" order="1"/>
+		<bond atomRefs2="a1 a10" order="1"/>
+		<bond atomRefs2="a1 a11" order="1"/>
+		<bond atomRefs2="a2 a3" order="1"/>
+		<bond atomRefs2="a2 a5" order="1"/>
+		<bond atomRefs2="a2 a12" order="1"/>
+		<bond atomRefs2="a3 a4" order="1"/>
+		<bond atomRefs2="a5 a6" order="1"/>
+		<bond atomRefs2="a5 a14" order="1"/>
+		<bond atomRefs2="a5 a15" order="1"/>
+		<bond atomRefs2="a6 a7" order="1"/>
+		<bond atomRefs2="a6 a16" order="1"/>
+		<bond atomRefs2="a6 a17" order="1"/>
+		<bond atomRefs2="a7 a8" order="1"/>
+		<bond atomRefs2="a7 a9" order="2"/>
+		<bond atomRefs2="a18 a8" order="1"/>
+		<bond atomRefs2="a3 a19" order="2"/>
+		<bond atomRefs2="a4 a13" order="1"/>
+	</bondArray>
+</molecule>

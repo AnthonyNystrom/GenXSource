@@ -1,0 +1,34 @@
+GLStereoPlayer.exe - Standalone viewer program.
+
+    Copy the following files anywhere you want.  You don't need any special
+    installing process, but it's useful to asign .gsp file type (Stereo setting file)
+    to this program. Just run GLStereoPlayer.reg file to register it (You must an Administer user).
+
+        GLStereoPlayer.exe              Executable program.
+        DevIL.dll, ILU.dll, ILUT.dll    DevIL dynamic link libraries.
+        gui.png                         Play Control skin file.
+        GLStereoPlayer.reg              Type registration file.
+
+
+GLSPCtrl.ocx - ActiveX control version of the GLStereoPlayer.
+
+    Copy the following files anywhere you want.  In that directory, run install.bat file to install.
+    When you want to uninstall, run uninstall.bat file in the same directory.  (You must an Administer user).
+    In Microsoft Office or other OLE client programs, you can make an instance of the GLStereoPlayer
+    from [Insert Object...] or [Insert OLE...] menu.  Access its property for detail settings.
+
+        GLSPCtrl.ocx                    ActiveX control.
+        DevIL.dll, ILU.dll, ILUT.dll    DevIL dynamic link libraries.
+        gui.png                         Play Control skin file.
+        install.bat, uninstall.bat      Install/uninstall script files.
+
+glutStereoPlayer.exe - Simple glut based GLStereoPlayer.
+
+    Copy the following files anywhere you want.
+
+        GLStereoPlayer.exe              Executable program.
+        DevIL.dll, ILU.dll, ILUT.dll    DevIL dynamic link libraries.
+        glut32.dll                      GLUT dynamic link library.
+        gui.png                         Play Control skin file.
+
+

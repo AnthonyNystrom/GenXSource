@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:TitleWindow xmlns:mx="http://www.adobe.com/2006/mxml"
+	xmlns:n2f="*"
+	borderAlpha="1" borderColor="#E8E8E8"
+	backgroundColor="#E8E8E8" shadowDirection="right" roundedBottomCorners="true"
+	modalTransparencyColor="White" modalTransparencyBlur="5" defaultButton="{ok}"
+	layout="absolute" title="Create a new folder" showCloseButton="true" close="CloseDialog( event )"
+	creationComplete="OnCreated()"
+	showEffect="fade" hideEffect="fade">
+
+	<mx:Metadata>
+		[ Event( name="newFolder", type="NewItemEvent" ) ]
+	</mx:Metadata>
+
+	<mx:Script>
+		<![CDATA[
+			import mx.managers.PopUpManager;
+			import mx.events.CloseEvent;
+
+			public var session : UserSession;
+
+			private function OnCreated() : void
+			{
+				focusManager.setFocus( folderName );
+			}
+
+			private function CloseDialog( event : CloseEvent ) : void
+			{
+				PopUpManager.removePopUp( this );
+			}
+
+			private function CreateFolder( name : String ) : void
+			{
+				if ( name.replace( " ", "" ).length > 0 ) dispatchEvent( new NewItemEvent( name ) );
+				CloseDialog( null );
+			}
+
+			private function OnKeyUp( key : KeyboardEvent ) : void
+			{
+				if ( key.keyCode == Keyboard.ESCAPE ) CloseDialog( null );
+			}
+		]]>
+	</mx:Script>
+
+	<mx:HBox>
+		<mx:Text text="Folder name"/>
+		<mx:TextInput id="folderName" keyUp="OnKeyUp( event )"/>
+		<mx:Button id="ok" label="OK" click="CreateFolder( folderName.text )"/>
+	</mx:HBox>
+
+</mx:TitleWindow>

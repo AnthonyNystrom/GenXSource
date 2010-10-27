@@ -1,0 +1,64 @@
+﻿<Canvas xmlns="http://schemas.microsoft.com/client/2007" 
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Width="1"
+        Height="1"
+        >
+
+	<Canvas.Resources>
+		<Storyboard Name="stop">
+			<DoubleAnimation To="0" Duration="0:0:1"
+											 Storyboard.TargetName="content"
+											 Storyboard.TargetProperty="Opacity"/>
+		</Storyboard>
+	</Canvas.Resources>
+
+	<Canvas>
+		<Canvas.RenderTransform>
+			<TransformGroup>
+				<RotateTransform Name="angle" Angle="0" CenterX="0.5" CenterY="0.5"/>
+			</TransformGroup>
+		</Canvas.RenderTransform>
+
+		<Canvas.Triggers>
+			<EventTrigger RoutedEvent="Canvas.Loaded">
+				<BeginStoryboard>
+					<Storyboard Name="rotation">
+						<DoubleAnimation To="1" Duration="0:0:1"
+														 Storyboard.TargetName="content"
+														 Storyboard.TargetProperty="Opacity"/>
+						<DoubleAnimation From="0" To="359" Duration="0:0:3" RepeatBehavior="Forever"
+														 Storyboard.TargetName="angle"
+														 Storyboard.TargetProperty="Angle"/>
+					</Storyboard>
+				</BeginStoryboard>
+			</EventTrigger>
+		</Canvas.Triggers>
+
+		<Canvas Name="content" Opacity="0">
+
+			<Path Width="1" Height="1" Stretch="Fill" Stroke="#FF187EE4" StrokeThickness="0.1" StrokeStartLineCap="Round">
+				<Path.Data>
+					<PathGeometry>
+						<PathFigure StartPoint="1,0">
+							<ArcSegment Point="0,-1" RotationAngle="90" SweepDirection="Clockwise" IsLargeArc="True" Size="1,1"/>
+						</PathFigure>
+					</PathGeometry>
+				</Path.Data>
+			</Path>
+
+			<Path Canvas.Left="0.49" Canvas.Top="-0.05" Width="0.2" Height="0.2" Stretch="Fill" Fill="#FF187EE4">
+				<Path.Data>
+					<PathGeometry>
+						<PathFigure StartPoint="0,-1.1">
+							<LineSegment Point="0.1,-1" />
+							<LineSegment Point="0,-0.9" />
+						</PathFigure>
+					</PathGeometry>
+				</Path.Data>
+			</Path>
+
+		</Canvas>
+
+	</Canvas>
+
+</Canvas>

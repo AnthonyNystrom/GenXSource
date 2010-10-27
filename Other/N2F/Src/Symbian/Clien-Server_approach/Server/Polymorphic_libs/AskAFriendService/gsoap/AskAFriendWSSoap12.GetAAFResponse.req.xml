@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope
+ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+ xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:ns3="http://tempuri.org/AskAFriendWSSoap"
+ xmlns:ns1="http://tempuri.org/"
+ xmlns:ns4="http://tempuri.org/AskAFriendWSSoap12">
+ <SOAP-ENV:Body>
+   <ns1:GetAAFResponse>
+    <ns1:WebMemberID></ns1:WebMemberID>
+    <ns1:WebPassword></ns1:WebPassword>
+    <ns1:WebAskAFriendID></ns1:WebAskAFriendID>
+   </ns1:GetAAFResponse>
+
+ </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

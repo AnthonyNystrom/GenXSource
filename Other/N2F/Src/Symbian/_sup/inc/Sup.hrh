@@ -1,0 +1,86 @@
+/*
+============================================================================
+ Name        : Sup.hrh
+ Author      : Vitaly Vinogradov
+ Version     : 1.0.0
+ Copyright   : (c) Next2Friends, 2008
+ Description : Enumerations used in the application UI
+============================================================================
+*/
+
+#ifndef __SUP_HRH__
+#define __SUP_HRH__
+
+#define _UID3 0xeb83db8a
+
+// Sup enumerate command codes
+enum TSupIds
+	{
+	// Default menu items
+	ESetIAP = 1,
+	EHelp,
+	EAbout,
+	
+	// General CBA
+	ESupSoftkeyContinue,
+	
+	// Main view listbox itmes
+	EUploadImagesView,
+	EFileBrowserView,
+	EImageCartView,
+	ECredentialsView,
+	
+	// "Upload Images" view menu items
+	EUploadImagesUpload,
+	EUploadImagesFileBrowser,
+	
+	// "File Browser" view menu items
+	EFileBrowserGotoUpload,
+	EFileBrowserAddtoUpload,
+	EFileBrowserOpen,
+	EFileBrowserFileProperties,
+	EFileBrowserPreview,
+	EFileBrowserSelect,
+	
+	// "Upload Image Card" view menu items
+	EUploadImageCartUpload,
+	EUploadImageCartFileBrowser,
+	EUploadImageCartPreview,
+	EUploadImageCartSelect,
+	EUploadImageCartDeselect,
+	EUploadImageCartRemoveSelected,
+	EUploadImageCartRemoveAll,
+	
+	// "Credentials" view
+	
+	// Question form
+	EAskQuestionSubmit,
+	EPrivateQuestions,
+	EResponses
+	};
+	
+enum TQuestionForm
+    {
+    EQuestionText = 0x200,
+    EQuestionType,
+    EQuestionDuration,
+    EQuestionPrivate
+    };
+	
+enum TFileBrowserDirectories
+    {
+    EFileBrowserSounds = 1,
+	EFileBrowserPictures,
+	EFileBrowserVideos,
+	EFileBrowserDirNoChange
+    };
+
+enum TFileBrowserSizeDate
+    {
+    EFileBrowserSize = 1,
+	EFileBrowserDate,
+	EFileBrowserToggle,
+	EFileBrowserSizeDateNoChange
+    };
+
+#endif // __SUP_HRH__

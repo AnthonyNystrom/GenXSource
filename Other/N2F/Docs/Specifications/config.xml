@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<N2F ConfigVersion="0.1"> <!--  the config file version number -->
+  <Username>Lawrence5784</Username> <!-- login nickname -->
+  <Password>Y7MXY547XY74YX74Y</Password> <!--  Encryoted login password (-->
+  <HistoryKey>4C4E80F6-BD32-4e96-882A-3153DD211E0E </ HistoryKey > <!--  The mutually remembered key from the last connection to the server -->
+  <MemberID>555E4661-93A1-474f-80EE-48C1E27ED2B4</MemberID > <!--  128 bit unique identifier -->
+  <Key>B8917530-C68D-41cc-AE7A-462CBB57B909</Key>	<!-- unique encryption key for friend matching -->
+  <Options>
+    <Option1>0</Option1> <!--  miscellaneous optionsand configurations Not yet implemented -->
+    <Option2>1</Option2>
+    <Option3>0</Option3>
+    <Option4>0</Option4>
+  </Options>
+  <Tags>
+    <TagItem MemberID="9B56CE28-09A1-4762-A4B4-C0E03CC2988B/><!--  128 bit unique identifier of the match. This is used server side to decrypt the TagValidationString string -->
+      <TagValidationString ConfirmedByServer="False">EFRE7V74BVKU54UV7VB7VBU76BU76U6732NF5356V3F06</TagValidationString >
+      <TagValidationString ConfirmedByServer="False">3875DYM85C70YXC57YD248XCY805424Y5C7N48F0XC7YN</TagValidationString >
+      <TagValidationString ConfirmedByServer="False">R342UM5YCNT74Y7MXY547XY74YX74YFX80MY70X29T895</TagValidationString >
+      <TagValidationString ConfirmedByServer="True">CX3F7H7F30XMF3Y820XM0EWQ84FMXC3478Q2034XCN8470</TagValidationString >
+      <TagValidationString ConfirmedByServer="True">5467H2CN5F74H80237XC42HF0X8QW7FN023HFM-XC8F73</TagValidationString >
+		<!-- serveral matches have been made with this user. The Acii text is the ecrytped TagValidationString -->
+		<!-- The TagValidationStrings are flagged ConfirmedToServer try after the server confirms with a receipt -->
+    </TagItem>
+    <TagItem MemberID="4C4E80F6-BD32-4e96-882A-3153DD211E0E"/>
+      <TagValidationString ConfirmedByServer="False">EFRE7V74BVKU54UV7VB7VBU76BU76U6732NF5356V3F06</TagValidationString >
+      <TagValidationString ConfirmedByServer="True">3875DYM85C70YXC57YD248XCY805424Y5C7N48F0XC7YN</TagValidationString >
+      <TagValidationString ConfirmedByServer="True">R342UM5YCNT74Y7MXY547XY74YX74YFX80MY70X29T895</TagValidationString >
+      <TagValidationString ConfirmedByServer="True">GVTRGV63CV56H675VV3578KVC426Y24UY76OK986KO890O</TagValidationString >
+      <TagValidationString ConfirmedByServer="True">5Y43V489TRERCFRE4N9HCF4Y893475CFN54G7C4GNF8540C</TagValidationString >
+      <TagValidationString ConfirmedByServer="True">CX3F7H7F30XMF3Y820XM0EWQ84FMXC3478Q2034XCN8470</TagValidationString >
+      <TagValidationString ConfirmedByServer="True">5467H2CN5F74H80237XC42HF0X8QW7FN023HFM-XC8F73</TagValidationString >
+    </TagItem>
+     <TagItem MemberID="E0065B0E-31DA-4e0b-B2B0-36E52983FF8D"/>
+      <ConfirmedByServer>false</ConfirmedByServer>
+      <TagValidationString ConfirmedByServer="False">EFRE7V74BVKU54UV7VB7VBU76BU76U6732NF5356V3F06</TagValidationString >
+      <TagValidationString ConfirmedByServer="False">3875DYM85C70YXC57YD248XCY805424Y5C7N48F0XC7YN</TagValidationString >
+      <TagValidationString ConfirmedByServer="True">CX3F7H7F30XMF3Y820XM0EWQ84FMXC3478Q2034XCN8470</TagValidationString >
+      <TagValidationString ConfirmedByServer="True">5467H2CN5F74H80237XC42HF0X8QW7FN023HFM-XC8F73</TagValidationString >
+    </TagItem>
+  </Tags>
+</N2F>

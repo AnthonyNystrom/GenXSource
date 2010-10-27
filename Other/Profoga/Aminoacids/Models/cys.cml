@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSpy v2006 U (http://www.altova.com) by George Schizas (TerraSoft) -->
+<molecule xmlns="http://www.xml-cml.org/schema/cml2/core" id="cys.pdb">
+	<atomArray>
+		<atom id="a1" elementType="N" x3="0.102000" y3="-0.143000" z3="0.000000" role="peptideN"/>
+		<atom id="a2" elementType="C" x3="1.558000" y3="-0.029000" z3="0.000000" role="skeletonC"/>
+		<atom id="a3" elementType="C" x3="1.986000" y3="1.419000" z3="0.000000" role="peptideC"/>
+		<atom id="a4" elementType="O" x3="1.165000" y3="2.348000" z3="0.000000" role="dehydrateCarbonO"/>
+		<atom id="a5" elementType="C" x3="2.111000" y3="-0.807000" z3="-1.210000"/>
+		<atom id="a6" elementType="S" x3="3.916000" y3="-0.856000" z3="-1.168000"/>
+		<atom id="a7" elementType="H" x3="-0.540000" y3="0.725000" z3="0.000000" role="dehydrateNitrogenH"/>
+		<atom id="a8" elementType="H" x3="-0.397000" y3="-1.101000" z3="0.000000" role="peptideH"/>
+		<atom id="a9" elementType="H" x3="1.942000" y3="-0.485000" z3="0.931000" role="skeletonH"/>
+		<atom id="a10" elementType="H" x3="1.665000" y3="3.249000" z3="0.000000" role="dehydrateCarbonH"/>
+		<atom id="a11" elementType="H" x3="1.743000" y3="-1.849000" z3="-1.218000"/>
+		<atom id="a12" elementType="H" x3="1.778000" y3="-0.357000" z3="-2.168000"/>
+		<atom id="a13" elementType="H" x3="4.123000" y3="0.036000" z3="-2.134000"/>
+		<atom id="a14" elementType="O" x3="3.396000" y3="1.655000" z3="0.000000" role="peptideO"/>
+	</atomArray>
+	<bondArray>
+		<bond atomRefs2="a1 a2" order="1"/>
+		<bond atomRefs2="a2 a3" order="1"/>
+		<bond atomRefs2="a2 a5" order="1"/>
+		<bond atomRefs2="a2 a9" order="1"/>
+		<bond atomRefs2="a3 a4" order="1"/>
+		<bond atomRefs2="a5 a6" order="1"/>
+		<bond atomRefs2="a5 a11" order="1"/>
+		<bond atomRefs2="a5 a12" order="1"/>
+		<bond atomRefs2="a6 a13" order="1"/>
+		<bond atomRefs2="a1 a7" order="1"/>
+		<bond atomRefs2="a1 a8" order="1"/>
+		<bond atomRefs2="a3 a14" order="2"/>
+		<bond atomRefs2="a4 a10" order="1"/>
+	</bondArray>
+</molecule>

@@ -1,0 +1,79 @@
+/* There is a version of this file commented in great detail for educational purposes here:
+ * http://users.tpg.com.au/j_birch/plugins/superfish/superfish.commented.css
+ */
+
+/*** ESSENTIAL STYLES ***/
+.nav, .nav * {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.nav {
+	line-height:1.0;
+}
+.nav ul {
+	position:absolute;
+	top:-999em;
+	width:9.45em;
+}
+.nav ul li,
+.nav a {
+	width: 100%;
+}
+.nav li {
+	float:left;
+	position:relative;
+	z-index:99;
+}
+.nav a {
+	display:block;
+}
+.nav li:hover ul,
+ul.nav li.sfHover ul {
+	left:-1px;
+	top:2.5em;
+}
+.nav li:hover li ul,
+.nav li.sfHover li ul {
+	top:-999em;
+}
+.nav li li:hover ul,
+ul.nav li li.sfHover ul {
+	left:9.45em;
+	top:-1px;
+}
+.superfish li:hover ul,
+.superfish li li:hover ul {
+	top: -999em;
+}
+
+/*** ORIGINAL SKIN ***/
+.nav {
+	float:left;
+	margin-bottom:1.5em;
+}
+.nav li {
+	background:#BDD2FF;
+	border-left:1px solid #fff;
+	border-top:1px solid #CFDEFF;
+	width:9.45em;
+}
+.nav a {
+	color: #13a;
+	padding: .75em 0;
+	text-decoration:none;
+	text-indent: 2em;
+}
+.nav li:hover, .nav li.sfHover,
+.nav a:focus, .nav a:hover, .nav a:active {
+	background:#CFDEFF;
+}
+.nav li li {
+	background:#AABDE6;
+}
+.nav li li li {
+	background:#9AAEDB;
+}
+
+
+

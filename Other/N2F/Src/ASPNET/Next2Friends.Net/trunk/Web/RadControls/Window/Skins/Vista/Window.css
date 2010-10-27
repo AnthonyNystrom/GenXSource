@@ -1,0 +1,91 @@
+.RadWWrapperActive td{padding:0px;font:normal 11px "segoe ui", arial, sans-serif;}
+
+iframe.RadWContentFrame{background: white;} /* Mozilla overlay */
+
+.RadWWrapperActive{border-collapse: collapse}
+
+.RadWTitleRow{height:28px;cursor: default;}
+.RadWHeaderTopResizer{height:5px;font-size:5px;line-height:5px}
+
+.RadWWrapperHeaderLeft{width:8px;background:url(CssImg/RadWHeaderLeft.gif) no-repeat}
+.RadWWrapperHeaderCenter{background:url(CssImg/RadWHeaderCenter.gif) repeat-x;text-align:left}
+.RadWWrapperHeaderCenter .RadWWrapperHeaderCenter{background:transparent}
+.RadWWrapperHeaderRight{width:8px;background:url(CssImg/RadWHeaderRight.gif) no-repeat}
+.RadWTitleText{padding-left:1em}
+
+.RadWWrapperHeaderCenter .RadWWrapperHeaderCenter img{margin:0 1px}
+
+.RadWWrapperHeaderCenter table{height:23px}
+
+.RadWButton{cursor:pointer;}
+
+.RadWWrapperBodyLeft{width:8px;background:url(CssImg/RadWBodyLeft.gif) repeat-y}
+.RadWWrapperBodyCenter{}
+.RadWWrapperBodyRight{width:8px;background:url(CssImg/RadWBodyRight.gif) repeat-y}
+
+.RadWStatusRow{height:15px;background:#ededed;border-top:1px solid #909090;color:#000;font-size:9px}
+.RadWStatusRow input{display:none;}
+.RadWStatusRow img{height:12px;width:12px;margin-left:3px}
+div.RadWStatus{}
+
+.RadWWrapperFooterLeft{width:8px;height:8px;background:url(CssImg/RadWFooterLeft.gif) no-repeat}
+.RadWWrapperFooterCenter{height:8px;background:url(CssImg/RadWFooterCenter.gif) repeat-x}
+.RadWWrapperFooterRight{width:8px;height:8px;background:url(CssImg/RadWFooterRight.gif) no-repeat}
+
+/* Firefox Fix to show the side TDs */
+.RadWWrapperHeaderLeft:before,
+.RadWWrapperBodyLeft:before,
+.RadWWrapperFooterLeft:before
+{
+	content: " ";
+	display: block;
+	width: 8px;
+}
+.RadWWrapperHeaderRight:before,
+.RadWWrapperBodyRight:before,
+.RadWWrapperFooterRight:before
+{
+	content: " ";
+	display: block;
+	width: 8px;
+}
+/* Firefox fix end */
+
+.RadWModalImage
+{
+	background: url('Img/ModalImageBg.gif');
+}
+
+.RadWDragHelper
+{		
+	border: solid 1px solid #ccc;
+	background: #ccc;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50); /* IE */
+	-moz-opacity: 0.5; /* Mozilla */
+	opacity: 0.5; /* CSS3 */
+	margin: 0px;
+	padding: 0px;	
+	position: absolute;
+	z-index: 50000;
+	overflow: hidden;	
+}
+
+.RadWWrapperInactive
+{
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=90); /* IE */
+	-moz-opacity: 0.9; /* Moz */
+	opacity: 0.9; /* CSS3 */
+}
+
+.RadWMinimizedOver,
+.RadWMinimizedActive,
+.RadWMinimizedInactive,
+.RadWMinimizedPageLoaded
+{width:100px;background:url(CssImg/RadWHeaderCenter.gif) repeat-x #bad1ea;text-align:left}
+
+
+.RadWMinimizedOver .RadWTitleRow,
+.RadWMinimizedActive .RadWTitleRow,
+.RadWMinimizedInactive .RadWTitleRow,
+.RadWMinimizedPageLoaded .RadWTitleRow
+{background-color:#bad1ea}

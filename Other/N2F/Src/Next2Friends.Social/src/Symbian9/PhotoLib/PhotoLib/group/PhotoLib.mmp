@@ -1,0 +1,27 @@
+/*
+============================================================================
+ Name        : PhotoLib.mmp
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : This is the project specification file for PhotoLib.
+============================================================================
+*/
+TARGET                                  PhotoLib.lib 
+TARGETTYPE                              lib 
+UID                                     0x0 0xe7dd32fa 
+SECUREID                                0xe9a74bd9 
+/* [+] */ USERINCLUDE                   ..\..\..\framework 
+USERINCLUDE                             ..\inc 
+SYSTEMINCLUDE                           \epoc32\include 
+SOURCEPATH                              ..\src 
+/* [+] */ SOURCE                        VList.cpp 
+/* [+] */ SOURCE                        PhotoLibrarySis9.cpp 
+/* [+] */ SOURCE                        PhotoLibrary.cpp 
+/* [+] */ SOURCE                        LibPhotoItem.cpp 
+SOURCE                                  PhotoLib.cpp 
+
+LIBRARY                                 euser.lib 
+LIBRARY                                 estor.lib 
+VENDORID                                0 
+CAPABILITY                              NONE 

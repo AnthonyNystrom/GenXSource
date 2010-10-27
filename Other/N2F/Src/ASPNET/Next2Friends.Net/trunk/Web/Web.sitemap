@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+
+	<!-- Root -->
+	<siteMapNode roles="*" defaultUrl="~/Welcome" title="Retirement Planner">
+
+		<siteMapNode title="Public Pages" roles="*">
+
+			<siteMapNode url="Welcome" controlPath="~/Controls/Welcome.ascx"
+					 title="AZI Welcome" roles="*"/>
+
+		</siteMapNode>
+
+		<siteMapNode title="Demo Pages" roles="*">
+
+			<siteMapNode url="lawrence/" controlPath="~/index.aspx"
+					 title="Validator / HelpTip" description="5.0 Validation / HelpTip Controls"
+					 roles="*" />
+			
+		</siteMapNode>
+
+		<!-- Pages access before signing in -->
+		<siteMapNode title="Account Services Public" visible="false" roles="*">
+			
+			<siteMapNode url="Login" controlTemplate="login"
+					title="Sign In" description="Sign In"
+					roles="*" />
+
+			<siteMapNode url="LoggedOut" controlTemplate="loggedOut"
+					title="Logged out" description="Logged out"
+					roles="*" />
+
+			<siteMapNode url="AccountServices/LoginTroubles" controlTemplate="loginTroubles"
+					title="Login Troubles" description="Login Troubles"
+					roles="*" />
+
+			<siteMapNode url="AccountServices/StrongPasswords" controlTemplate="strongPasswords"
+					title="Strong Passwords" description="About Strong Passwords"
+					roles="*" />
+
+			<siteMapNode url="AccountServices/PrivacyStatement" controlTemplate="privacyStatement"
+					title="Privacy Statement" description="Privacy Statement"
+					roles="*" />
+
+			<siteMapNode url="AccountServices/ServiceAgreement" controlTemplate="serviceAgreement"
+					title="Service Agreement" description="Service Agreement"
+					roles="*" />
+
+			<siteMapNode url="AccountServices/Register" controlTemplate="registrationWizard"
+				   title="Register account" description="Register account"
+				   roles="*" />
+
+			<siteMapNode url="AccountServices/ResetPassword" controlTemplate="resetPassword"
+				   title="Reset Password" description="Reset Password"
+				   roles="*" />
+
+		</siteMapNode>
+
+		<siteMapNode title="Account Detail"  description="Account Detail" roles="member,hasProfileData">
+
+			<siteMapNode url="AccountDetail/Summary" controlTemplate="accountSummary"
+					title="Account Summary" description="Account Summary"
+					roles="member" />
+
+			<siteMapNode url="AccountDetail/ChangePassword" controlTemplate="changePassword"
+					title="Change Password" description="Change Password"
+					roles="member" />
+
+			<siteMapNode url="AccountDetail/ChangeUserName" controlTemplate="changeUserName"
+					title="Change User Name" description="Change User Name"
+					roles="member" />
+
+			<siteMapNode url="AccountDetail/ChangeQuestionAnswer" controlTemplate="changeQuestionAnswer"
+					title="Change Reset Information" description="Change Reset Information"
+					roles="member" />
+
+			<siteMapNode url="AccountDetail/PersonalInfo" controlPath="~/Controls/PersonalInfo.ascx"
+					title="Personal Data" description="Personal Data" dataDefinition="dataProfile"
+					roles="member,hasProfileData" />
+
+		</siteMapNode>
+
+		<siteMapNode title="Member Management" roles="admin">
+
+			<siteMapNode url="MembershipAdmin/ManageUsers" controlPath="~/Controls/Membership/Administration/ManageUsers.ascx"
+					 title="Manage Users" description="Manage existing site users."
+					 roles="admin" />
+
+			<siteMapNode url="MembershipAdmin/ManageRoles" controlPath="~/Controls/Membership/Administration/ManageRoles.ascx"
+					 title="Manage Roles" description="Create and delete security roles."
+					 roles="admin" />
+
+			<siteMapNode url="MembershipAdmin/CreateUser" controlPath="~/Controls/Membership/Administration/CreateUser.ascx"
+					 title="Create User" description="Create a new site user."
+					 roles="admin" />
+
+		</siteMapNode>
+
+		<siteMapNode title="Private Pages"  description="Private Pages" roles="*">
+
+			<siteMapNode url="Estimate" controlTemplate="estimate"
+					title="Estimate inputs test" description="Estimate Inputs"
+					roles="authenticated" />
+
+			<siteMapNode url="Retirement" controlTemplate="retirement"
+					title="Retirement inputs test" description="Retirement Inputs"
+					roles="authenticated" />
+
+			<siteMapNode url="TestProfileSource" controlTemplate="xmlSource" dataDefinition="dataProfileBlob"
+					 title="Profile source test" description="Profile Source"
+					 roles="authenticated,hasProfileData" />
+		</siteMapNode>
+
+	</siteMapNode>
+
+</siteMap>

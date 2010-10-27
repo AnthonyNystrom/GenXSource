@@ -1,0 +1,115 @@
+/* r.a.d.upload Windows Vista skin */
+
+.RadUploadTable
+{
+	background: white url('Img/RadUploadTable.gif') repeat-x;
+	border: solid 1px #333;
+	border-collapse: collapse;
+	filter: progid:DXImageTransform.Microsoft.Shadow(direction=140,color=#404040,strength=3); 
+	margin: 5px 0px;
+	width: 350px;
+	font: normal 11px Arial, Verdana, Sans-serif;
+	color: black;
+}
+
+.RadUploadTable td
+{
+	padding: 4px;
+}
+
+.RadUploadButtonArea
+{
+	background: transparent;
+}
+
+.RadUploadButton,
+.radUploadButtonMedium
+{
+	background: transparent url('Img/radUploadBtnMedium.gif') no-repeat;
+	border: 0px;
+	height: 23px;
+	width: 114px;
+	font: normal 11px Arial, Verdana, Sans-serif;
+	color: black;
+}
+
+.RadUploadButtonDisabled
+{
+	background: transparent url('Img/radUploadBtnMedium.gif') no-repeat;
+	border: 0px;
+	height: 23px;
+	width: 114px;
+	font: normal 11px Arial, Verdana, Sans-serif;
+	color: black;
+	filter: alpha(opacity=30);
+	-moz-opacity:0.5;
+	opacity: 0.5;
+}
+
+.RadUploadFileSelector
+{
+	/* checkbox */
+}
+
+.RadUploadInputField
+{
+	width: 134px;
+	background: transparent url('Img/RadUploadInputField.gif') no-repeat;
+	_background-attachment: fixed; /* IE Only */
+	_width: 144px;
+	border: 0px;
+	height: 23px;
+	font: normal 11px Arial, Verdana, Sans-Serif;
+	color: black;
+	padding-top: 3px;
+	padding-left: 7px;
+	vertical-align: top;
+}
+
+input.RealFileInput
+{
+	z-index: 2;
+	position: relative;
+	-moz-opacity: 0;
+	filter: alpha(opacity: 0);
+	opacity: 0;
+}
+
+.RadUploadSelectButton
+{
+	border: 0px;
+	background: transparent url('Img/select.gif') no-repeat;
+	font: normal 11px Arial, Verdana, Sans-serif;
+	color: black;
+	height: 23px;
+	width: 81px;
+	vertical-align: top;
+}
+
+.RadUploadRemoveButton
+{
+	border: 0px;
+	background: transparent url('Img/radUploadBtnSmall.gif') no-repeat;
+	font: normal 11px Arial, Verdana, Sans-serif;
+	color: black;
+	height: 22px;
+	width: 66px;
+	float: right;
+	_margin-top: -1px;
+}
+
+.RadUploadClearButton
+{
+	border: 0px;
+	background: transparent url('Img/radUploadBtnSmall.gif') no-repeat;
+	font: normal 11px Arial, Verdana, Sans-serif;
+	color: black;
+	height: 22px;
+	width: 66px;
+	float: right;
+}
+
+input.NoSkinnedFileUnput
+{
+	border: solid 1px #1a43b0;
+}

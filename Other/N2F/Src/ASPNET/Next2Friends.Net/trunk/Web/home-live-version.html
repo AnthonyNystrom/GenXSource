@@ -1,0 +1,330 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="jcarousel-css/jquery.jcarousel.css" />
+<link rel="stylesheet" type="text/css" href="jcarousel-css/skin.css" />
+
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.bgiframe.js"></script>
+<script type="text/javascript" src="js/jquery_global.js"></script>
+
+<script type="text/javascript" src="js/jquery.jcarousel.pack.js"></script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#header_login").bgiframe();
+});
+</script>
+
+
+<script type="text/javascript">
+// Ride the carousel...
+jQuery(document).ready(function() {
+    jQuery(".minifeats ul").jcarousel({
+        scroll: 1,
+        initCallback: mycarousel_initCallback,
+        // This tells jCarousel NOT to autobuild prev/next buttons
+        //buttonNextHTML: null,
+        //buttonPrevHTML: null
+    });
+});
+
+/**
+ * We use the initCallback callback
+ * to assign functionality to the controls
+ */
+function mycarousel_initCallback(carousel) {
+    jQuery('.jcarousel-control a').bind('click', function() {
+        carousel.scroll(jQuery.jcarousel.intval(jQuery(this).text()));
+        return false;
+    });
+
+    jQuery('.minifeat-next').bind('click', function() {
+        carousel.next();
+        return false;
+    });
+
+    jQuery('.minifeat-prev').bind('click', function() {
+        carousel.prev();
+        return false;
+    });
+};
+
+</script>
+
+</head>
+<body id="home">
+<div id="page">
+
+	<!--/header start -->
+	<div id="header"> <a href="http://www.next2friends.com"><img src="images/logo.gif" alt="Next2Friends" id="logo" /></a>
+	
+
+		<ul id="nav">
+			<li><a href="#" class="current"><span>Home</span></a></li>
+			<li><a href="#"><span>Friends</span></a></li>
+			<li><a href="#"><span>Videos</span></a></li>
+			<li><a href="#"><span>Photos</span></a></li>
+			<li><a href="#"><span>Hotspots</span></a></li>
+			<li><a href="#"><span>Ask a Friends</span></a></li>
+		</ul>
+		
+		<ul id="header_nav">
+			<li>
+				<a href="#" class="profile_dropdown">Nick La <span></span></a>
+
+				<ul>
+					<li><a href="#">My Profile</a></li>
+					<li><a href="#">My Subscriptions (0)</a></li>
+					<li><a href="#">My Friends (12)</a></li>
+					<li><a href="#">My NSpots (0)</a></li>
+				</ul>
+			</li>
+			<li><a href="#" class="message_inbox">Inbox (12)</a></li>
+			<li>
+				<a href="#" class="display_login">Login</a>
+
+				<div id="header_login">
+					<p><label>Email</label> <input name="email" type="text" class="form_txt2" /></p>
+					<p><label>Password</label> <input name="password" type="text" class="form_txt2" /></p>
+					<p class="indent"><input name="" type="checkbox" value="" /> Remember Me</p>
+					<p class="indent"><input type="submit" name="Login" value="Login" class="form_btn2" /></p>
+					<p class="indent"><small>Forgot <a href="#">Login</a> or <a href="#">Password</a>?</small></p>
+				
+				</div>
+			</li>
+			<li><a href="#">Logout</a></li>
+			<li><a href="#">Family Filter: ON</a></li>
+			<li class="last"><a href="#">Help</a></li>
+		</ul>
+
+
+		<form id="searchform">
+			<input name="search" type="text" class="form_field" size="16" />
+			in
+			<select name="category" class="form_field">
+				<option>Video</option>
+				<option>Image</option>
+			</select>
+			<input name="" type="image" src="images/search-btn.gif" class="submit" />
+		</form>
+
+		<p id="upload">Upload: <a href="#" title="Video"><img src="images/icon-video.gif" alt="Video" class="videos" /> <span class="videos_span">Videos</span></a> <a href="#" title="Photo"><img src="images/icon-image.gif" alt="Image" class="photos" /> <span class="photos_span">Photos</span></a></p>
+	</div>
+	<!-- header end -->
+
+
+
+
+
+	<!-- middle start -->
+	<div id="middle" class="no_subnav clearfix">
+
+		<!--live start-->
+		<div class="livefeats">
+			<h3 class="live">Title</h3>
+			<div class="player">
+				live player here
+			</div>
+			<div class="scrollbar">
+				scrollbar here
+			</div>
+		</div>
+		<!--/live end -->
+
+
+		<!-- left col start -->
+		<div id="left_col">
+		
+
+			<!-- tab start -->
+			<div class="tab">
+				<ul class="tab_nav">
+					<li><a href="#" class="current">Feature Videos</a></li>
+					<li><a href="#">Most Viewed</a></li>
+					<li><a href="#">Most Discussed</a></li>
+					<li><a href="#" class="current">Top Rated</a> </li>
+				</ul>
+				<div class="tab_content">
+				<ul class="feat_videos">
+					<li>
+						<div class="vid_thumb"> <a href="#"><img src="images/thumb1.jpg" alt="thumb" /><span class="vid_length">2:12</span></a><br />
+							1 hour ago </div>
+						<div class="vid_info">
+							<h3><a href="#">Interactive LED Coffee Table Demo</a></h3>
+							<div class="vote"><span class="vote_count">12</span> <a href="#" class="up voted">up</a> <a href="#" class="down voted">down</a></div>
+							<p>Humans have been around for a while. Flipbooks have been around for a while. Now, for the first time in human or flipbook history. </p>
+							<p class="metadata">Views: <a href="#">1202</a> Comments: <a href="#">3</a><br />
+								Tags: <a href="#">business</a> <a href="#">money</a> <a href="#">stress</a> <a href="#">headache</a> <a href="#">time</a><br />
+								From: <a href="#">nickla</a> in Category: <a href="#">Travel</a></p>
+						</div>
+					</li>
+					<li>
+						<div class="vid_thumb"> <a href="#"><img src="images/thumb2.jpg" alt="thumb" /><span class="vid_length">0:07</span></a><br />
+							2 hours ago </div>
+						<div class="vid_info">
+							<h3><a href="#">Dogs Mans Best Friend</a></h3>
+							<div class="vote"><span class="vote_count">1209</span> <a href="#" class="up">up</a> <a href="#" class="down">down</a></div>
+							<p>Humans have been around for a while... </p>
+							<p class="metadata">Views: <a href="#">1202</a> Comments: <a href="#">3</a><br />
+								Tags: <a href="#">business</a> <a href="#">money</a> <a href="#">stress</a> <a href="#">headache</a> <a href="#">time</a><br />
+								From: <a href="#">nickla</a> in Category: <a href="#">Travel</a></p>
+						</div>
+					</li>
+					<li>
+						<div class="vid_thumb"> <a href="#"><img src="images/thumb3.jpg" alt="thumb" /><span class="vid_length">46:08</span></a><br />
+							2 hours ago </div>
+						<div class="vid_info">
+							<h3><a href="#">How Not To Work Out</a></h3>
+							<div class="vote"><span class="vote_count">8983</span> <a href="#" class="up">up</a> <a href="#" class="down">down</a></div>
+							<p>Express your mood on Skype™ with your favorite Metacafe video!</p>
+							<p class="metadata">Views: <a href="#">1202</a> Comments: <a href="#">3</a><br />
+								Tags: <a href="#">business</a> <a href="#">money</a> <a href="#">stress</a> <a href="#">headache</a> <a href="#">time</a><br />
+								From: <a href="#">nickla</a> in Category: <a href="#">Travel</a></p>
+						</div>
+					</li>
+					<li>
+						<div class="vid_thumb"> <a href="#"><img src="images/thumb4.jpg" alt="thumb" /><span class="vid_length">2:12</span></a><br />
+							12 hours ago </div>
+						<div class="vid_info">
+							<h3><a href="#">Become a Guitar Master</a></h3>
+							<div class="vote"><span class="vote_count">12</span> <a href="#" class="up voted">up</a> <a href="#" class="down voted">down</a></div>
+							<p>Humans have been around for a while. Flipbooks have been around for a while. Now, for the first time in human or flipbook history. </p>
+							<p class="metadata">Views: <a href="#">1202</a> Comments: <a href="#">3</a><br />
+								Tags: <a href="#">business</a> <a href="#">money</a> <a href="#">stress</a> <a href="#">headache</a> <a href="#">time</a><br />
+								From: <a href="#">nickla</a> in Category: <a href="#">Travel</a></p>
+						</div>
+					</li>
+					<li>
+						<div class="vid_thumb"> <a href="#"><img src="images/thumb5.jpg" alt="thumb" /><span class="vid_length">0:07</span></a><br />
+							1 day ago </div>
+						<div class="vid_info">
+							<h3><a href="#">Dogs Mans Best Friend</a></h3>
+							<div class="vote"><span class="vote_count">234</span> <a href="#" class="up">up</a> <a href="#" class="down">down</a></div>
+							<p>Humans have been around for a while. Flipbooks have been around for a while. Now, for the first time in human or flipbook history.</p>
+							<p class="metadata">Views: <a href="#">1202</a> Comments: <a href="#">3</a><br />
+								Tags: <a href="#">business</a> <a href="#">money</a> <a href="#">stress</a> <a href="#">headache</a> <a href="#">time</a> <a href="#">business</a> <a href="#">some tag</a><br />
+								From: <a href="#">nickla</a> in Category: <a href="#">Travel</a></p>
+						</div>
+					</li>
+					<li>
+						<div class="vid_thumb"> <a href="#"><img src="images/thumb6.jpg" alt="thumb" /><span class="vid_length">46:08</span></a><br />
+							2 days ago </div>
+						<div class="vid_info">
+							<h3><a href="#">The Best Online Video Content on Next2Friends</a></h3>
+							<div class="vote"><span class="vote_count">12</span> <a href="#" class="up">up</a> <a href="#" class="down">down</a></div>
+							<p>Express your mood on Skype™ with your favorite Metacafe video!</p>
+							<p class="metadata">Views: <a href="#">1202</a> Comments: <a href="#">3</a><br />
+								Tags: <a href="#">business</a> <a href="#">money</a> <a href="#">stress</a> <a href="#">headache</a> <a href="#">time</a><br />
+								From: <a href="#">nickla</a> in Category: <a href="#">Travel</a></p>
+						</div>
+					</li>
+					</ul>
+					
+					<p class="more_link"><a href="#">More featured vidoes &raquo;</a></p>
+				</div>
+				<!--/tab_content -->
+
+			</div>
+			<!-- tab end -->
+
+		</div>
+		<!-- left col end -->
+
+
+
+
+
+
+
+		<!-- right col start -->
+		<div id="right_col">
+
+
+			<!-- news tab start -->
+			<div class="tab">
+				<h3>What's New?</h3>
+				<div class="tab_content">
+					<ul class="news">
+						<li>
+						  <p><strong>Valentines’s Day IPod Giveaway!</strong></p>
+							<p></p>
+							<img src="images/ipod-touch.jpg" class="left">
+							<p>Next2Friends will be giving away an iPod Touch to the user with the most registered friends by 8:00pm GMT February 14th, 2008!</p> 
+							<p>So if you haven’t already invited all your friends to join Next2Friends here is another great reason to do so!
+							(Aside from the fact that we offer all of the latest cutting edge Mobile and Social Networking technology in one place!)</p>  
+							<p>Click <a href="signup.aspx">here to signup</a></p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- news tab end -->
+			
+			<!--mini features start -->
+			<div class="minifeats">
+				<h3>About and Features</h3>
+				<div class="middle">
+					<ul class="minifeats-skin">
+						<li>
+							<img src="images/minifeat-img.jpg" alt="feature image" class="right" />
+							<p><strong>1 Live Mobile</strong><br />
+							You can upload live stream videos from your mobile  phone. Instantly. Real time.<br />
+							<a href="#">Learn more</a>.</p>
+						</li>
+						<li>
+							<img src="images/minifeat-img.jpg" alt="feature image" class="right" />
+							<p><strong>2 Chat</strong><br />
+							You can upload live stream videos from your mobile  phone. Instantly. Real time.<br />
+							<a href="#">Learn more</a>.</p>
+						</li>
+						<li>
+							<img src="images/minifeat-img.jpg" alt="feature image" class="right" />
+							<p><strong>3 Video Messaging</strong><br />
+							You can upload live stream videos from your mobile  phone. Instantly. Real time.<br />
+							<a href="#">Learn more</a>.</p>
+						</li>
+					</ul>
+				</div>
+				<div class="bottom clearfix">
+					<div class="controller">
+						<a href="#" class="minifeat-prev"><img src="images/minifeat-prev.gif" alt="prev" /></a>
+						<span class="jcarousel-control">
+						  <a href="#">1</a>
+						  <a href="#">2</a>
+						  <a href="#">3</a>
+						</span>
+						<a href="#" class="minifeat-next"><img src="images/minifeat-next.gif" alt="next" /></a>
+					</div>
+
+					<a href="#" class="seeall">See all features</a>				
+				</div>
+			</div>
+			<!--mini features start -->
+
+		</div>
+		<!-- right col end -->
+
+	</div>
+	<!-- middle end -->
+
+
+
+
+
+
+	<!-- footer start -->
+	<div id="footer">
+		<p id="credits">Copyright Next2Friends 2007 | Footer Menu | Privacy Policy</p>
+	</div>
+	<!-- footer end -->
+
+</div>
+<!--page end -->
+</body>
+</html>

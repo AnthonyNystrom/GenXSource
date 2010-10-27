@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:TitleWindow xmlns:mx="http://www.adobe.com/2006/mxml"
+	xmlns:n2f="*"
+	xmlns:qs="qs.controls.*"
+	borderAlpha="1" borderColor="#E8E8E8" minHeight="200"
+	backgroundColor="#E8E8E8" shadowDirection="right" roundedBottomCorners="true"
+	modalTransparencyColor="White" modalTransparencyBlur="5" minWidth="200"
+	title="Preview" showCloseButton="true" close="CloseDialog( event )" creationComplete="OnCreated( event )"
+	resize="{PopUpManager.centerPopUp( this )}" defaultButton="{close}"
+	verticalScrollPolicy="off" horizontalScrollPolicy="off" xmlns:display="flash.display.*">
+
+	<n2f:BitmapLoader id="loader" url="{url}" maxImageWidth="800" maxImageHeight="600" complete="OnComplete( event )"/>
+
+	<mx:Script>
+		<![CDATA[
+			import mx.managers.PopUpManager;
+
+			[Bindable] public var menu : ContextMenu = null;
+			[Bindable] public var url : String = null;
+			[Bindable] public var maxImageWidth : int = 800;
+			[Bindable] public var maxImageHeight : int = 600;
+
+			private function OnCreated( event : Event ) : void
+			{
+				focusManager.setFocus( close );
+			}
+
+			private function OnComplete( event : Event ) : void
+			{
+				var hScale : Number = Math.min( 1, parentApplication.width * 0.9 / loader.bitmap.width );
+				var vScale : Number = Math.min( 1, parentApplication.height * 0.8 / loader.bitmap.height );
+				var scale : Number = Math.min( hScale, vScale );
+
+				image.width = loader.bitmap.width * scale;
+				image.height = loader.bitmap.height * scale;
+			}
+
+			private function CloseDialog( event : Event ) : void
+			{
+				PopUpManager.removePopUp( this );				
+			}
+
+			private function OnKeyUp( key : KeyboardEvent ) : void
+			{
+				if ( key.keyCode == Keyboard.ESCAPE ) CloseDialog( null );
+			}
+		]]>
+	</mx:Script>
+
+	<mx:Fade id="fade"/>
+
+	<mx:Box id="container" horizontalAlign="center" verticalAlign="middle" width="100%" height="100%">
+		<mx:Canvas>
+			<mx:Button id="close" visible="false" click="CloseDialog( event )" includeInLayout="false" keyUp="OnKeyUp( event )"/>
+			<n2f:LoadingIcon id="loading" width="100" height="100" visible="{loader.bitmap == null}"/>
+			<mx:Image id="image" toolTip="{toolTip}" visible="{loader.bitmap != null}" source="{loader.bitmap}"/>
+		</mx:Canvas>
+	</mx:Box>
+
+</mx:TitleWindow>

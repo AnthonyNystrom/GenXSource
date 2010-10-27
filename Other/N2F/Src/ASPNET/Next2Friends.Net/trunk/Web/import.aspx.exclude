@@ -1,0 +1,167 @@
+<%@ Page language="c#"  MasterPageFile="~/Main.master" validateRequest="false" Inherits="asp.net.ContactImport" CodeFile="import.aspx.cs" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+	<div id="middle" class="clearfix no_subnav">
+	<% if(primKey==""){%>
+
+
+			<TABLE cellSpacing="0" cellPadding="1" width="40%" align="center" bgColor="#f2f1f0" border="0">
+				<TR>
+					<TD>
+						<TABLE cellSpacing="0" cellPadding="2" width="100%" align="center" border="0">
+							<TR align="center">
+								<TD colSpan="2"><FONT face="Arial, Helvetica, sans-serif" color="#006699" size="2"><strong>Grab 
+											Contacts</strong></FONT></TD>
+							</TR>
+							<tr>
+								<td width="22%" align="right" style="HEIGHT: 27px"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">
+										Email:</font></td>
+								<td width="78%" style="HEIGHT: 27px">
+								
+									<asp:TextBox id="user_id" runat="server" Width="128px"></asp:TextBox>@
+									<asp:DropDownList id="emailCat" runat="server" Height="24px" Width="120px">
+										<asp:ListItem Value="hotmail.com" Selected="True">hotmail.com</asp:ListItem>
+										<asp:ListItem Value="yahoo.com">yahoo.com</asp:ListItem>
+										<asp:ListItem Value="live.com">live.com</asp:ListItem>
+										<asp:ListItem Value="msn.com">msn.com</asp:ListItem>
+										<asp:ListItem Value="gmail.com">gmail.com</asp:ListItem>
+										<asp:ListItem Value="aol.com">aol.com</asp:ListItem>
+										<asp:ListItem Value="rediff.com">rediff.com</asp:ListItem>
+										<asp:ListItem Value="myspace.com">myspace.com</asp:ListItem>
+										<asp:ListItem Value="web.de">web.de</asp:ListItem>
+										<asp:ListItem Value="mail.com">mail.com</asp:ListItem>
+										<asp:ListItem Value="mail.ru">mail.ru</asp:ListItem>
+										<asp:ListItem Value="plaxo.com">plaxo.com</asp:ListItem>
+										<asp:ListItem Value="linkedin.com">linkedin.com</asp:ListItem>
+										<asp:ListItem Value="163.com">163.com</asp:ListItem>
+										<asp:ListItem Value="sina.com">sina.com</asp:ListItem>
+										<asp:ListItem Value="qq.com">qq.com</asp:ListItem>
+									</asp:DropDownList></td>
+							</tr>
+							<tr>
+								<td align="right" style="HEIGHT: 27px"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">
+										Password:</font></td>
+								<td style="HEIGHT: 27px">
+									<asp:TextBox id="pass" runat="server" Width="128px" TextMode="Password"></asp:TextBox></td>
+							</tr>
+							<tr align="center">
+								<td colspan="2" style="HEIGHT: 27px">
+									<asp:Button id="Button1" runat="server" Height="24px" Width="144px" Text="Get Contacts" onclick="Button1_Click"></asp:Button>&nbsp;
+									<input type="reset" name="Submit2" value="Reset"></td>
+							</tr>
+						</TABLE>
+					</TD>
+				</TR>
+			</TABLE>
+			<asp:RequiredFieldValidator id="RequiredFieldValidator2" style="Z-INDEX: 102; LEFT: 712px; POSITION: absolute; TOP: 80px"
+				runat="server" Width="184px" Height="16px" ErrorMessage="Password is required" Font-Bold="True" ControlToValidate="pass"
+				Font-Names="Arial" Font-Size="Smaller"></asp:RequiredFieldValidator>
+			<asp:RequiredFieldValidator id="RequiredFieldValidator1" style="Z-INDEX: 101; LEFT: 712px; POSITION: absolute; TOP: 32px"
+				runat="server" Width="176px" Height="32px" ErrorMessage="Email ID is required" Font-Bold="True" ControlToValidate="user_id"
+				Font-Names="Arial" Font-Size="Smaller"></asp:RequiredFieldValidator>
+
+<%
+	}
+	
+	else
+	{
+    
+    %>
+
+	
+
+
+			<table width="1000" border="0" align="center" cellpadding="1" cellspacing="0" bgcolor="#f2f1f0">
+				<tr>
+					<td width="100%"><table width="100%" border="0" align="center" cellpadding="2" cellspacing="0">
+							<tr align="center">
+								<td colspan="6" style="HEIGHT: 12px"><font color="#006699" size="2" face="Arial, Helvetica, sans-serif"><strong>
+											Contacts
+											      <input name="user_email_id" type="hidden" id="user_email_id" value="<%=Request.Form["user_id"]%>@<%=Request.Form["emailCat"]%>">
+									        <br>
+										</strong><font face="Verdana, Arial, Helvetica, sans-serif">Total Address found
+											<%=emailArray.Length%>
+											
+										</font></font>
+								</td>
+							</tr>
+							<tr align="center" bgcolor="#99ccff">
+								<td align="left" style="PADDING-LEFT: 12px"><font color="#000066" size="2" face="Arial, Helvetica, sans-serif"><strong>Display 
+											Name </strong></font>
+								</td>
+								<td align="left" bgcolor="#99ccff" style="PADDING-LEFT: 12px"><font color="#000066" size="2" face="Arial, Helvetica, sans-serif"><strong>Email 
+											ID</strong></font></td>
+								<td align="left" bgcolor="#99ccff" style="PADDING-LEFT: 12px"><font color="#000066" size="2" face="Arial, Helvetica, sans-serif"><strong> 
+											N2F Member?</strong></font></td>
+								<td align="left" bgcolor="#99ccff" style="PADDING-LEFT: 12px"><font color="#000066" size="2" face="Arial, Helvetica, sans-serif"><strong> 
+											Invite</strong></font></td>
+								<td  align="left" bgcolor="#99ccff" style="PADDING-LEFT: 12px"><font color="#000066" size="2" face="Arial, Helvetica, sans-serif"><strong> 
+											Send Friend Request</strong></font></td>
+
+							</tr>
+							<%
+                            for(int i=0;i<emailArray.Length;i++)
+                            {
+                            %>
+							<tr>
+
+								<td align="left" style="PADDING-LEFT: 12px">
+									<font size="2" face="Verdana, Arial, Helvetica, sans-serif">
+										<%=nameArray[i]=="" ? "<i>NA</i>":nameArray[i]%>
+									</font>
+								</td>
+								<td style="PADDING-LEFT: 12px">
+									<font size="2" face="Verdana, Arial, Helvetica, sans-serif">
+										<%=emailArray[i]=="" ? "<i>NA</i>":emailArray[i]%>
+									</font>
+								</td>
+
+								<td style="PADDING-LEFT: 12px">
+								    <%if (IsMemberArray[i]) { Response.Write("<img src='/images/check.gif'>"); }%>
+								</td>
+								<td style="PADDING-LEFT: 12px">
+									<%if (!IsMemberArray[i]) { Response.Write("<input name='chk_email' type='checkbox' >"); } else { Response.Write("<img src='/images/check.gif'>"); }%>
+								</td>
+								<td style="PADDING-LEFT: 12px">
+									<%if (!IsFriendArray[i]) { Response.Write("<input name='chk_email' type='checkbox' >"); } else { Response.Write("<img src='/images/check.gif'>"); }%>
+								</td>
+							</tr>
+							<%
+}
+if(emailArray.Length==0)
+{
+%>
+							<tr align="center">
+								<td colspan="3" style="PADDING-LEFT: 12px">
+									<font size="2" face="Verdana, Arial, Helvetica, sans-serif"><em>No Address found.</em></font></td>
+							</tr>
+							<%
+}
+else
+{
+%>
+							<tr align="center">
+								<td colspan="3" style="PADDING-LEFT: 12px" align="left">
+									<font size="2" face="Verdana, Arial, Helvetica, sans-serif"><em><textarea name="textfield" cols="50" rows="5"></textarea>
+											<br>
+											<%--<input type="submit" name="Submit" value="Send Invitation" >--%></em></font></td>
+							</tr>
+							<%
+}
+%>
+							<tr align="center">
+								<td colspan="3" align="left">&nbsp;
+									</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+
+		<%
+	  
+	}
+
+%>
+</div>
+</asp:Content>

@@ -1,0 +1,76 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microsoft.Practices", "Microsoft.Practices", "{5A5C5AAD-7C2A-4A48-A4DE-9E39DD83C5E6}"
+	ProjectSection(SolutionItems) = preProject
+		Microsoft.Practices\Microsoft.Practices.EnterpriseLibrary.Common.dll = Microsoft.Practices\Microsoft.Practices.EnterpriseLibrary.Common.dll
+		Microsoft.Practices\Microsoft.Practices.EnterpriseLibrary.Data.dll = Microsoft.Practices\Microsoft.Practices.EnterpriseLibrary.Data.dll
+		Microsoft.Practices\Microsoft.Practices.ObjectBuilder.dll = Microsoft.Practices\Microsoft.Practices.ObjectBuilder.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Next2Friends", "Next2Friends.Data\Next2Friends.csproj", "{AC0A01A4-A54C-4DB3-A16D-720FCBA5FDFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Next2Friends.Soap2Bin.Core", "Next2Friends.Soap2Bin.Core\Next2Friends.Soap2Bin.Core.csproj", "{F891580B-9326-434C-91BA-DB94F1FA5524}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Next2Friends.Soap2Bin.Core.Tests", "Next2Friends.Soap2Bin.Core.Tests\Next2Friends.Soap2Bin.Core.Tests.csproj", "{775DE6BD-C2CB-48FA-B697-68FC794AA969}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Next2Friends.Soap2Bin.Interaction", "Next2Friends.Soap2Bin.Interaction\Next2Friends.Soap2Bin.Interaction.csproj", "{A3C5600F-F81D-4F8B-B8D5-861E5CBAD6CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Next2Friends.WebServices", "Next2Friends.WebServices\Next2Friends.WebServices.csproj", "{635D060C-F423-4DA6-B126-061CD52B4D56}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A3C5600F-F81D-4F8B-B8D5-861E5CBAD6CC} = {A3C5600F-F81D-4F8B-B8D5-861E5CBAD6CC}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Next2Friends.WebServices.Tests", "Next2Friends.WebServices.Tests\Next2Friends.WebServices.Tests.csproj", "{BB5A4023-9256-47E6-9E27-784E8032F89F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BA60BFB9-FD02-43BD-9121-9AFC92925C7D}"
+	ProjectSection(SolutionItems) = preProject
+		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
+		Next2Friends.vsmdi = Next2Friends.vsmdi
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CrossPoster", "CrossPoster", "{C61F7951-A4EA-4BCF-85D4-05F1CC419053}"
+	ProjectSection(SolutionItems) = preProject
+		CrossPoster\CookComputing.XmlRpcV2.dll = CrossPoster\CookComputing.XmlRpcV2.dll
+		CrossPoster\Google.GData.Client.dll = CrossPoster\Google.GData.Client.dll
+		CrossPoster\Next2Friends.CrossPoster.Library.dll = CrossPoster\Next2Friends.CrossPoster.Library.dll
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Next2Friends.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC0A01A4-A54C-4DB3-A16D-720FCBA5FDFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC0A01A4-A54C-4DB3-A16D-720FCBA5FDFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC0A01A4-A54C-4DB3-A16D-720FCBA5FDFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC0A01A4-A54C-4DB3-A16D-720FCBA5FDFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F891580B-9326-434C-91BA-DB94F1FA5524}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F891580B-9326-434C-91BA-DB94F1FA5524}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F891580B-9326-434C-91BA-DB94F1FA5524}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F891580B-9326-434C-91BA-DB94F1FA5524}.Release|Any CPU.Build.0 = Release|Any CPU
+		{775DE6BD-C2CB-48FA-B697-68FC794AA969}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{775DE6BD-C2CB-48FA-B697-68FC794AA969}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{775DE6BD-C2CB-48FA-B697-68FC794AA969}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{775DE6BD-C2CB-48FA-B697-68FC794AA969}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3C5600F-F81D-4F8B-B8D5-861E5CBAD6CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3C5600F-F81D-4F8B-B8D5-861E5CBAD6CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3C5600F-F81D-4F8B-B8D5-861E5CBAD6CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3C5600F-F81D-4F8B-B8D5-861E5CBAD6CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{635D060C-F423-4DA6-B126-061CD52B4D56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{635D060C-F423-4DA6-B126-061CD52B4D56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{635D060C-F423-4DA6-B126-061CD52B4D56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{635D060C-F423-4DA6-B126-061CD52B4D56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB5A4023-9256-47E6-9E27-784E8032F89F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB5A4023-9256-47E6-9E27-784E8032F89F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB5A4023-9256-47E6-9E27-784E8032F89F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB5A4023-9256-47E6-9E27-784E8032F89F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

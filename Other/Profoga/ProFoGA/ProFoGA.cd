@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="TerraSoft.BioTech.ProFoGA.Display">
+    <Position X="3.25" Y="2.5" Width="2.5" />
+    <TypeIdentifier>
+      <FileName>Display.vb</FileName>
+      <HashCode>AAAAAAAAACEAAAAAACCgMAACAAQAAGAAAQAAAkAAIAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="components" Hidden="true" />
+      <Field Name="ddX" Hidden="true" />
+      <Field Name="ddY" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="pbDisplay" Hidden="true" />
+    </Members>
+  </Class>
+  <Class Name="TerraSoft.BioTech.ProFoGA.Progress">
+    <Position X="0.5" Y="2.5" Width="2.5" />
+    <TypeIdentifier>
+      <FileName>Progress.vb</FileName>
+      <HashCode>AAAAgABAEGACAAAAkAKAMAACgCAEoAJEAeAAAAQAAAE=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="btnDisplay" Hidden="true" />
+      <Field Name="btnExit" Hidden="true" />
+      <Field Name="btnGrow" Hidden="true" />
+      <Field Name="btnKill" Hidden="true" />
+      <Field Name="btnStep" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="lblAvgFitness" Hidden="true" />
+      <Field Name="lblAvgFitnessNumber" Hidden="true" />
+      <Field Name="lblMaxFitness" Hidden="true" />
+      <Field Name="lblMaxFitnessNumber" Hidden="true" />
+      <Field Name="lblPopulation" Hidden="true" />
+      <Field Name="lblPopulationNumber" Hidden="true" />
+      <Field Name="lbPopulation" Hidden="true" />
+      <Field Name="pnlPopulation" Hidden="true" />
+      <Field Name="ssPopulation" Hidden="true" />
+    </Members>
+  </Class>
+  <Class Name="TerraSoft.BioTech.ProFoGA.SplashScreen">
+    <Position X="3.25" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <FileName>SplashScreen.vb</FileName>
+      <HashCode>IAAAAAABACAAAAAAAACAEAACAAAACAAAAgAAAAAAAAI=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="ApplicationTitle" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Field Name="Copyright" Hidden="true" />
+      <Field Name="DetailsLayoutPanel" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="MainLayoutPanel" Hidden="true" />
+      <Field Name="Version" Hidden="true" />
+    </Members>
+  </Class>
+  <Class Name="TerraSoft.BioTech.ProFoGA.Start">
+    <Position X="0.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <FileName>Start.vb</FileName>
+      <HashCode>IEIAAggAACAgQAAABgKAABACAAAgAAAAAAAAAAAEAAg=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="btnDone" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="lbAminoacids" Hidden="true" />
+      <Field Name="lblPopulation" Hidden="true" />
+      <Field Name="lbProtein" Hidden="true" />
+      <Field Name="numPopulation" Hidden="true" />
+      <Field Name="pnlMakeProtein" Hidden="true" />
+      <Field Name="splMakeProtein" Hidden="true" />
+      <Method Name="Start_FormClosing" Hidden="true" />
+      <Method Name="Start_Load" Hidden="true" />
+    </Members>
+  </Class>
+  <Class Name="TerraSoft.BioTech.ProFoGA.My.MySettings">
+    <Position X="3.25" Y="5.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAQAABAAIAAABAABAIAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="addedHandler" Hidden="true" />
+      <Field Name="addedHandlerLockObject" Hidden="true" />
+      <Method Name="AutoSaveSettings" Hidden="true" />
+      <Property Name="Default" Hidden="true" />
+      <Field Name="defaultInstance" Hidden="true" />
+    </Members>
+  </Class>
+  <Module Name="TerraSoft.BioTech.ProFoGA.Base">
+    <Position X="0.5" Y="5.5" Width="2.5" />
+    <TypeIdentifier>
+      <FileName>Base.vb</FileName>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Module>
+</ClassDiagram>

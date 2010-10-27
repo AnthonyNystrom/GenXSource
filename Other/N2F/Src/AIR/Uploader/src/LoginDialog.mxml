@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:TitleWindow xmlns:mx="http://www.adobe.com/2006/mxml"
+	xmlns:n2f="*"
+	borderAlpha="1" borderColor="#E8E8E8"
+	backgroundColor="#E8E8E8" shadowDirection="right" roundedBottomCorners="true"
+	modalTransparencyColor="White" modalTransparencyBlur="5" defaultButton="{ok}"
+	layout="absolute" title="Sign in to Next2Frinds" showCloseButton="false"
+	creationComplete="OnCreated()"
+	showEffect="fade" hideEffect="fade">
+
+	<mx:Metadata>
+		[ Event( name="login", type="LoginEvent" ) ]
+	</mx:Metadata>
+
+	<mx:Script>
+		<![CDATA[
+			import com.next2friends.LoginResultEvent;
+			import mx.rpc.events.FaultEvent;
+			import mx.managers.PopUpManager;
+			import mx.events.CloseEvent;
+
+			public var session : UserSession;
+			[Bindable] private var busy : Boolean = false;
+			private var credentials : SharedObject;
+
+			private function OnCreated() : void
+			{
+				credentials = SharedObject.getLocal( "credentials" );
+
+				if ( credentials.data != null && credentials.data[ "userName" ] != null )
+				{
+					userName.text = credentials.data[ "userName" ];
+					password.text = credentials.data[ "password" ];
+					rememberMe.selected = true;
+				}
+
+				focusManager.setFocus( userName.text.length > 0 ? password : userName );
+			}
+
+			private function CloseDialog( event : CloseEvent ) : void
+			{
+				PopUpManager.removePopUp( this );
+			}
+
+			private function OnLoggedIn( event : LoginResultEvent ) : void
+			{
+				busy = false;
+
+				if ( event.result != null )
+				{
+					if ( rememberMe.selected )
+					{
+						credentials.data[ "userName" ] = userName.text;
+						credentials.data[ "password" ] = password.text;
+						credentials.flush();
+					}
+
+					dispatchEvent( new LoginEvent( userName.text, password.text ) );
+					CloseDialog( null );
+				}
+				else
+				{
+					error.text = BadCredentialsError();
+					errorRow.visible = true;
+				}
+			}
+
+			private function BadCredentialsError() : String
+			{
+				return "The email address and password you entered do not match any accounts on record.  Please try again.";;
+			}
+
+			private function ServerError() : String
+			{
+				return "The Next2Friends Upload service is currently unavailable.  Please try again later.";;
+			}
+
+			private function OnError( event : FaultEvent ) : void
+			{
+				if ( event.fault.faultString.indexOf( "bad login credentials" ) >= 0 )
+				{
+					error.text = BadCredentialsError();
+				}
+				else
+				{
+					error.text = ServerError();
+					// TODO: Log error somewhere?
+				}
+
+				errorRow.visible = true;
+				busy = false;
+			}
+
+			private function OnKeyUp( key : KeyboardEvent ) : void
+			{
+//				if ( key.keyCode == Keyboard.ESCAPE ) CloseDialog( null );
+			}
+
+			private function Login() : void
+			{
+				busy = true;
+				errorRow.visible = false;
+				session.Login( userName.text, password.text, OnLoggedIn, OnError );
+			}
+		]]>
+	</mx:Script>
+
+	<mx:Grid>
+		<mx:GridRow>
+			<mx:GridItem><mx:Text text="User name"/></mx:GridItem>
+			<mx:GridItem><mx:TextInput id="userName" keyUp="OnKeyUp( event )"/></mx:GridItem>
+		</mx:GridRow>
+		<mx:GridRow>
+			<mx:GridItem><mx:Text text="Password"/></mx:GridItem>
+			<mx:GridItem><mx:TextInput id="password" keyUp="OnKeyUp( event )" displayAsPassword="true"/></mx:GridItem>
+		</mx:GridRow>
+		<mx:GridRow>
+			<mx:GridItem/>
+			<mx:GridItem>
+				<mx:CheckBox id="rememberMe" label="Remember me" selected="false"/>
+			</mx:GridItem>
+		</mx:GridRow>
+		<mx:GridRow id="errorRow" visible="false" includeInLayout="{errorRow.visible}">
+			<mx:GridItem colSpan="2">
+				<mx:Text id="error" color="red" width="{errorRow.width}" textAlign="center" />
+			</mx:GridItem>
+		</mx:GridRow>
+		<mx:GridRow visible="{busy}" includeInLayout="{busy}">
+			<mx:GridItem colSpan="2" horizontalAlign="center">
+				<n2f:LoadingIcon width="30" height="30" />
+			</mx:GridItem>
+		</mx:GridRow>
+		<mx:GridRow visible="{!busy}" includeInLayout="{!busy}">
+			<mx:GridItem colSpan="2" horizontalAlign="center">
+				<mx:Button id="ok" label="Sign in" click="Login()"/>
+			</mx:GridItem>
+		</mx:GridRow>
+	</mx:Grid>
+
+</mx:TitleWindow>

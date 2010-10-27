@@ -1,0 +1,16 @@
+﻿.rtop,.rbottom{display:block;background: #FFF}
+.rtop *,.rbottom *{display:block;height: 1px;overflow: hidden;background: #C3D9FF}
+.r1{margin: 0 4px}
+.r2{margin: 0 2px}
+.r3{margin: 0 1px}
+.r4{margin: 0 1px;height: 1px}
+
+.rs1{margin: 0 2px}
+.rs2{margin: 0 1px}
+.rtopdark,.rbottomdark{display:block;background: #FFF}
+.rtopdark *,.rbottomdark *{display:block;height: 1px;overflow: hidden;background: #73a6ff}
+
+.rtoponlyborder,.rbottomonlyborder{display:block;background: #FFF;}
+.rtoponlyborder *,.rbottomonlyborder *{display:block;height: 1px;overflow: hidden;background: #73a6ff;}
+
+

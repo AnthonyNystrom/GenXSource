@@ -1,0 +1,217 @@
+/* r.a.d.window Office 2007 skin */
+
+iframe.RadWContentFrame
+{
+	background: white; /* Mozilla overlay */
+}
+
+.RadWContentFrame
+{
+	/**/
+}
+
+.RadWStatus,
+.RadWStatusRow,
+.RadWStatus input
+{
+	display: none;
+}
+
+.RadWModalImage
+{
+	background: url('Img/ModalImageBg.gif');
+}
+
+.RadWDragHelper
+{		
+	border: solid 1px solid #ccc;
+	background: #ccc;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50); /* IE */
+	-moz-opacity: 0.5; /* Mozilla */
+	opacity: 0.5; /* CSS3 */
+	margin: 0px;
+	padding: 0px;	
+	position: absolute;
+	z-index: 50000;
+	overflow: hidden;	
+}
+
+.RadWMinimizedPageLoaded
+{
+	width: 60px;
+	height: 24px;
+	border: solid 1px #ccc;
+	background: url('CssImg/RadWWrapperHeaderCenter.gif') repeat-x;
+}
+
+.RadWMinimizedActive,
+.RadWMinimizedOver
+{
+	width: 60px;
+	height: 30px;
+	border: solid 1px #3b5a82;
+	border-top: 0px;
+	background: transparent url('CssImg/RadWWrapperHeaderCenter.gif') repeat-x;
+}
+
+.RadWMinimizedInactive
+{
+	width: 60px;
+	height: 30px;
+	border: solid 1px #3b5a82;
+	border-top: 0px;
+	background: transparent url('CssImg/RadWWrapperHeaderCenter.gif') repeat-x;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=63); /* IE */
+	-moz-opacity: 0.6; /* Moz */
+	opacity: 0.6; /* CSS3 */
+}
+
+.RadWLoadingWrapper
+{
+	width: 80px;
+	height: 100%;
+	vertical-align: middle;
+	text-align: center;	
+	font: normal 11px Verdana, Arial, Sans-Serif;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=99); /* IE */
+}
+
+.RadWIcon
+{
+	margin: 0px 2px 0px 2px;
+	cursor: default;
+	vertical-align: middle;
+	visibility: hidden; /* no icon sopecified for this skin */
+}
+
+.RadWTitleText
+{
+	font: bold 10px Verdana, Arial, Sans-Serif;
+	color: #3b5a82;
+	vertical-align: top;
+	padding-left: 4px;
+}
+
+.RadWButton
+{
+	cursor: hand;
+	vertical-align: top;
+}
+
+.RadWWrapperActive
+{
+	background-color: white;
+	font-size: 0px;	
+}
+
+.RadWWrapperInactive
+{
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70); /* IE */
+	-moz-opacity: 0.7; /* Moz */
+	opacity: 0.7; /* CSS3 */
+}
+
+.RadWWrapperModal
+{	
+	/**/
+}
+
+.RadWTitleRow
+{
+	cursor: default;		
+}
+
+.RadWWrapperHeaderLeft
+{
+	background: transparent url('CssImg/RadWWrapperHeaderLeft.gif') repeat-x;
+	width: 6px;
+	height: 30px;
+}
+
+.RadWHeaderTopResizer
+{
+	height: 3px;
+	font-size: 0px;
+	background: transparent url('CssImg/RadWWrapperHeaderCenter.gif') repeat-x top;
+}
+
+.RadWWrapperHeaderCenter
+{
+	height: 27px;
+	text-align: left;
+	background: transparent url('CssImg/RadWWrapperHeaderCenter.gif') repeat-x bottom;
+}
+
+.RadWWrapperHeaderRight
+{
+	background: transparent url('CssImg/RadWWrapperHeaderRight.gif') repeat-x;
+	width: 6px;
+	height: 30px;
+}
+
+.RadWWrapperBodyLeft
+{
+	border-left: solid 1px #3b5a82;
+	width: 3px;
+	font-size: 1px;
+	background: white;
+}
+
+.RadWWrapperBodyCenter
+{
+	width: 100%;
+	height: 100%;
+}
+
+.RadWWrapperBodyRight
+{
+	border-right: solid 1px #3b5a82;
+	width: 3px;
+	font-size: 1px;
+	background: white;
+}
+
+/* Mozilla 1.5 Fix */
+.RadWWrapperBodyLeft:before,
+.RadWWrapperBodyRight:before
+{
+	content: " ";
+	display: block;
+	width: 3px;
+}
+
+.RadWWrapperFooterLeft
+{
+	width: 6px;
+	height: 23px;
+	background: transparent url('CssImg/RadWWrapperFooterLeft.gif') no-repeat;
+	position: relative;
+	top: -1px;
+}
+
+.RadWWrapperFooterCenter
+{
+	background: transparent url('CssImg/RadWWrapperFooterCenter.gif') repeat-x;	
+	position: relative;
+	top: -1px;
+}
+
+.RadWWrapperFooterRight
+{
+	width: 6px;
+	height: 23px;
+	background: transparent url('CssImg/RadWWrapperFooterRight.gif') no-repeat;
+	position: relative;
+	top: -1px ;
+}
+
+/* Mozilla fix */
+.RadWWrapperFooterLeft:before,
+.RadWWrapperFooterRight:before,
+.RadWWrapperHeaderLeft:before,
+.RadWWrapperHeaderRight:before
+{
+	content: " ";
+	display: block;
+	width: 6px;
+}

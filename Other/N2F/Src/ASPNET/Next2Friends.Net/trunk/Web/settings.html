@@ -1,0 +1,254 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head id="ctl00_MasterHeader">
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="./style.css" rel="stylesheet" type="text/css">
+<link href="./StyleB.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" href="http://www.n2fstaticx3.com/favicon.ico" type="image/x-icon">
+<link rel="icon" href="http://www.n2fstaticx3.com/favicon.ico" type="image/x-icon">
+    <script type="text/javascript" src="/lib/jquery.js"></script>
+<title>
+	Next2Friends.com
+</title></head><body>
+
+<div id="page">
+        
+        <!--/header start -->
+        <div id="header">
+
+            <a href="http://www.next2friends.com">
+                <img src="./images/logo.gif" alt="Next2Friends" id="logo"></a>
+         <div style="position: absolute; right: 0px; top: 30px;" id="pSearch">
+         <form name="aspnetForm" method="post" action="Settings.aspx" id="aspnetForm">
+<div>
+<input name="__EVENTTARGET" id="__EVENTTARGET" value="" type="hidden">
+<input name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" type="hidden">
+<input name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMjE1NjAzMDQ5D2QWAmYPZBYCAgEPZBYEZg8PZBYCHgpvbktleVByZXNzBVRqYXZhc2NyaXB0OmlmIChldmVudC5rZXlDb2RlID09IDEzKXsgX19kb1Bvc3RCYWNrKCdjdGwwMCRidG5Mb2dpbicsJycpO3JldHVybiBmYWxzZX1kAgEPD2QWAh8ABVRqYXZhc2NyaXB0OmlmIChldmVudC5rZXlDb2RlID09IDEzKXsgX19kb1Bvc3RCYWNrKCdjdGwwMCRidG5Mb2dpbicsJycpO3JldHVybiBmYWxzZX1kGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYJBRNjdGwwMCRjaGJSZW1lbWJlck1lBSdjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJGNoYk5ld01lc3NhZ2UFKmN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkY2hiTmV3QUFGQ29tbWVudAUtY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRjaGJOZXdGcmllbmRSZXF1ZXN0BSxjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJGNoYlN1YnNjcmliZXJFdmVudAUuY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRjaGJOZXdQcm9maWxlQ29tbWVudAUyY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRjaGJOb3RpZnlOZXdQaG90b0NvbW1lbnQFMmN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkY2hiTm90aWZ5TmV3VmlkZW9Db21tZW50BSdjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJGNoYk5ld3NMZXR0ZXJT6u4LfovDXR4JhOb2zxJ0fCngbw==" type="hidden">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script type="text/javascript" src="/ajaxpro/prototype.ashx"></script>
+<script type="text/javascript" src="/ajaxpro/core.ashx"></script>
+<script type="text/javascript" src="/ajaxpro/ms.ashx"></script>
+<script type="text/javascript" src="/ajaxpro/converter.ashx"></script>
+<script type="text/javascript" src="/ajaxpro/Main,App_Web_kgyflpri.ashx"></script>
+
+           
+			<input id="search" style="width: 200px;" value="" class="form_txt2" type="text">
+			in
+			<select id="category" class="form_txt2" style="width: 80px;">
+
+				<option value="video">video</option>
+				<option value="people">people</option>
+			</select>
+			<div id="friendoptions" style="display: none; top: 55px; z-index: 500;">
+               <p>
+					<label>Email</label>
+					<input id="email" style="width: 200px;" value="" class="form_txt2" type="text">
+
+				</p>
+				<p>
+					<label>Sex</label>
+					<select id="sex" class="form_txt2" style="width: 90px;">
+						<option value="-1">Any</option>
+						<option value="1">Male</option>
+						<option value="0">Female</option>
+
+					</select>
+				</p>
+				<p>
+					<label>Country</label>
+						<span id="sCountry"><select id="country" class="form_txt2" style="width: 200px;" name="country">
+							<option value="TN">Tunisia</option>
+							<option value="TR">Turkey</option>
+							</select></span>
+				</p>
+				<p>
+					<label>City</label>
+					<input id="city" class="form_txt2" value="" style="width: 200px;" type="text">
+				</p>
+				<p>
+					<label>Profile keywords</label>
+					<textarea id="profile" cols="25" rows="3" class="form_txt2" style="width: 200px;"></textarea>
+
+				</p>
+				<p class="indent"><input id="avatar" value="yes" type="checkbox"> Avatar photo only</p>
+
+				<div class="arrow"></div>
+			</div>
+			<input id="searchButton" value="Search" class="form_btn2" type="button">
+		<br>
+		<a href="javascript:void(0);" style="position: absolute; top: 25px; font-size: smaller; display: none;" id="advancedSearch">Advanced search</a>
+
+		</form></div>       
+            <ul id="nav">
+                <li><a href="/"><span>Home</span></a></li>
+                
+                <li><a href="/community"><span>Community</span></a></li>
+                <li><a href="/video"><span>Videos</span></a></li>
+                <li><a href="/ask"><span>Ask</span></a></li>
+                <li id="greenTab"><a href="/features"><span>Mobile</span></a></li>
+
+            </ul>
+            
+            
+            <ul id="header_nav">
+             
+            
+			
+			<li>
+				<a href="javascript:void(0);" class="profile_dropdown">Chat</a>
+				<ul id="chatDropDown" style="display: block;">
+					<li><a href="javascript:openChatWindow();void(0);">Windowed</a></li>
+					<li><a href="javascript:chatLogin();closeDropDown();">Integrated</a></li>
+
+                    <li id="chatLogOut" style="display: none;"><a href="javascript:chatLogoutEx();closeDropDown();">Log out of Chat</a></li>
+				</ul>
+			</li>
+			<li><a href="/users/Comosicus">Profile</a></li>
+			<li><a href="/friends">Friends</a></li>
+			<li><a href="/dashboard">Dashboard</a></li>
+		    <li><a href="/inbox" class="message_inbox">Inbox (<div style="display: inline;" id="spanInboxCount">0</div>)</a></li>
+
+			
+            <li class="last"><a href="javascript:__doPostBack('ctl00$ctl05','')">Logout</a></li>
+            
+		</ul>
+		
+				  
+            <p id="upload">My Media<a href="/myvideos" title="Video"><img src="./images/icon-video.gif" alt="" class="videos"><span class="videos_span">Videos</span></a><a href="/myphotos" title="Photo">
+            <img src="./images/icon-image.gif" alt="" class="photos"><span class="photos_span">Photos</span></a></p>                         
+        </div>
+
+        <!-- header end -->
+        
+    <!-- middle start -->
+
+	<div id="middle" class="no_subnavclearfix">
+
+
+		<!-- page start -->
+		<div class="page clearfix fullPageBkg">
+		
+		<!-- CHANGES START HERE -->
+		
+				<h2>Change your Next2Friends Settings</h2>
+				<p>You can change your settings below. Once you are happy you can click save.</p>
+
+		
+				<div class="settings_area_large">
+					<div class="top"></div>
+					<div class="firstHalfColumn">
+						<h3 class="bottomSpace">General Settings</h3>
+						<p>
+							<input id="ctl00_ContentPlaceHolder1_chbNewMessage" name="ctl00$ContentPlaceHolder1$chbNewMessage" checked="checked" type="checkbox">
+							<label for="notify">Notify me by email on new Message</label>
+							
+						</p>
+
+						<p>
+							<input id="ctl00_ContentPlaceHolder1_chbNewAAFComment" name="ctl00$ContentPlaceHolder1$chbNewAAFComment" checked="checked" type="checkbox">
+							<label for="notify">Notify me by email on new AAF Comment</label>
+						</p>
+						<p>
+							<input id="ctl00_ContentPlaceHolder1_chbNewFriendRequest" name="ctl00$ContentPlaceHolder1$chbNewFriendRequest" checked="checked" type="checkbox">
+							<label for="notify">Notify me by email on new Friend Request</label>
+						</p>
+
+						<p>
+							<input id="ctl00_ContentPlaceHolder1_chbSubscriberEvent" name="ctl00$ContentPlaceHolder1$chbSubscriberEvent" checked="checked" type="checkbox">
+							<label for="notify">Notify me by email on new Subscriber Event</label>
+						</p>
+						<p>
+							<input id="ctl00_ContentPlaceHolder1_chbNewProfileComment" name="ctl00$ContentPlaceHolder1$chbNewProfileComment" checked="checked" type="checkbox">
+							<label for="notify">Notify me by email on new profile comment</label>
+						</p>
+
+						<p>
+							<input id="ctl00_ContentPlaceHolder1_chbNotifyNewPhotoComment" name="ctl00$ContentPlaceHolder1$chbNotifyNewPhotoComment" checked="checked" type="checkbox">
+							<label for="notify">Notify me by email on new Photo comment</label>
+						</p>
+						<p>
+							<input id="ctl00_ContentPlaceHolder1_chbNotifyNewVideoComment" name="ctl00$ContentPlaceHolder1$chbNotifyNewVideoComment" checked="checked" type="checkbox">
+							<label for="notify">Notify me by email on new Video comment</label>
+						</p>
+
+						<p>
+							<input id="ctl00_ContentPlaceHolder1_chbNewsLetter" name="ctl00$ContentPlaceHolder1$chbNewsLetter" checked="checked" type="checkbox">
+							<label for="notify">Receive News Letter</label>
+						</p>
+						
+					</div>
+					<div class="secondHalfColumn">
+						<h3 class="bottomSpace">Update Email Address</h3>
+						<p>
+							<label>Email</label>
+							<input type="text" class="form_txt" />
+						</p>
+						<h3 class="bottomSpace">Update Password</h3>
+						<p>
+							<label>Old Password</label>
+							<input type="password" class="form_txt" />
+						</p>
+						<p>
+							<label>New Password</label>
+							<input type="password" class="form_txt" />
+						</p>
+						<p>
+							<label>Repeat Password</label>
+							<input type="password" class="form_txt" />
+						</p>
+					</div>
+					<div class="clear"></div>
+					<p class="align_right" style="margin-right:30px;">
+						<input value="Save" class="form_btn" onclick="__doPostBack('ctl00$ContentPlaceHolder1$btnSave', '');return false;" type="button">
+						<input name="ctl00$ContentPlaceHolder1$btnSave" value="Save" id="ctl00_ContentPlaceHolder1_btnSave" class="hiddenButton" type="submit">
+					</p>
+					<div class="bottom"></div>
+				</div>
+			
+			<!-- CHANGES END HERE -->
+			
+		</div>
+	</div>
+
+
+        <!-- footer start -->
+        <div id="footer">
+            <p id="credits">
+               Copyright Next2Friends 2008 | 
+               <a href="/privacypolicy">Privacy Policy</a> | 
+               <a href="/termsofuse">Terms of Use</a> |  
+               <a href="/labs">Labs</a> | 
+               <a href="/developers">Developers</a> | 
+               <a href="http://www.next2friendsblog.com">Blog</a> | 
+               <a href="/aboutus">About Us</a>
+
+            </p>
+        </div>
+        <!-- footer end -->
+        
+    
+     
+    </div>
+    
+    <!--page end -->
+
+</body></html>

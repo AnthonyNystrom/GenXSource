@@ -1,0 +1,1425 @@
+/*
+============================================================================
+ Name        : Aaf.rss
+ Author      : Vitaly Vinogradov
+ Version     :
+ Copyright   : (c) Next2Friends, 2008
+ Description : Application resource file
+============================================================================
+*/
+
+//  RESOURCE IDENTIFIER
+NAME HEWB    // 4 letter ID
+
+
+//  INCLUDES
+#include <eikon.rh>
+#include <avkon.rsg>
+#include <avkon.rh>
+#include <eikon.hrh>
+#include <appinfo.rh>
+#include "Aaf.hrh"
+#include "Aaf.rsg"
+#include "Aaf.rls"
+#include "aaf.mbg"
+
+//  RESOURCE DEFINITIONS
+
+// -----------------------------------------------------------------------------
+//
+//    Define the resource file signature
+//    This resource should be empty.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE RSS_SIGNATURE
+	{
+	}
+
+// -----------------------------------------------------------------------------
+//
+//    Default Document Name
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE TBUF r_default_document_name
+	{
+	buf="AAF";
+	}
+
+// -----------------------------------------------------------------------------
+//
+//    Define default menu and CBA key.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE EIK_APP_INFO
+	{
+	menubar = r_aaf_menubar;
+	cba = R_AVKON_SOFTKEYS_OPTIONS_EXIT;
+	}
+
+
+// -----------------------------------------------------------------------------
+//
+//    Localizable application information
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE LOCALISABLE_APP_INFO r_aaf_localisable_app_info
+	{
+	short_caption = qtn_aaf_short_caption_string;
+	caption_and_icon = 
+	CAPTION_AND_ICON_INFO
+		{
+		caption = qtn_aaf_caption_string;
+		number_of_icons = 1;
+		icon_file = "\\resource\\apps\\aaf_reg.mif";
+		};
+	}
+
+// -----------------------------------------------------------------------------
+//
+//   r_aaf_menubar
+//   Menubar for Aaf example
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_BAR r_aaf_menubar
+	{
+	titles =
+		{
+		MENU_TITLE { menu_pane = r_aaf_menu; }
+		};
+	}
+
+// -----------------------------------------------------------------------------
+//
+//   r_aaf_menu
+//   Menu for "Options"
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_aaf_menu
+	{
+	items =
+		{
+		// added the new Options menu command here
+		MENU_ITEM
+			{
+			command = EHelp;
+			txt = qtn_help;
+			},
+		MENU_ITEM
+			{
+			command = EAbout;
+			txt = qtn_about;
+			},				
+		MENU_ITEM
+			{
+			command = EAknSoftkeyExit;
+			txt = qtn_aaf_exit;
+			}
+		};
+	}
+
+// -----------------------------------------------------------------------------
+//
+//    Define standart CBA key.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE CBA r_aaf_cba_standart
+	{
+	buttons = 
+		{
+		CBA_BUTTON { txt = qtn_aaf_menu; id = EAknSoftkeyOptions; },
+		CBA_BUTTON { txt = qtn_aaf_back; id = EAknSoftkeyBack; }
+		}; 
+	}
+
+// -----------------------------------------------------------------------------
+//
+//    Define start CBA key.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE CBA r_aaf_cba_start
+	{
+	buttons = 
+		{
+		CBA_BUTTON { txt = qtn_aaf_continue; id = EAafSoftkeyContinue;},
+		CBA_BUTTON { txt = qtn_aaf_more; id = EAknSoftkeyOptions; }		
+		}; 
+	}
+	
+// -----------------------------------------------------------------------------
+//
+//    Define credentials edit CBA key.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE CBA r_aaf_cba_credentials
+	{
+	buttons = 
+		{
+		CBA_BUTTON { txt = qtn_aaf_continue; id = EAafSoftkeyContinue;},
+		CBA_BUTTON { txt = qtn_aaf_cancel; id = EAknSoftkeyCancel; }		
+		}; 
+	}
+	
+// -----------------------------------------------------------------------------
+//
+//    Define CBA key for the main view
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE CBA r_aaf_cba_mainview
+	{
+	buttons = 
+		{
+		CBA_BUTTON { txt = qtn_aaf_more; id = EAknSoftkeyOptions; },
+		CBA_BUTTON { id = EAknSoftkeyEmpty; }
+		}; 
+	}
+	
+// -----------------------------------------------------------------------------
+//
+//   r_aaf_loginview_menubar
+//   Menubar for the login view
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_BAR r_aaf_loginview_menubar
+	{
+	titles =
+		{
+		MENU_TITLE { menu_pane = r_aaf_loginview_menu; }
+		};
+	}
+
+// -----------------------------------------------------------------------------
+//
+//   r_aaf_loginview_menu
+//   Menu for 'More' (login view)
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_aaf_loginview_menu
+	{
+	items =
+		{
+		// added the new 'Menu' menu command here
+		MENU_ITEM
+			{
+			command = ESetIAP;
+			txt = qtn_aaf_set_iap;
+			},
+		MENU_ITEM
+			{
+			command = EHelp;
+			txt = qtn_help;
+			},
+		MENU_ITEM
+			{
+			command = EAbout;
+			txt = qtn_about;
+			},
+		MENU_ITEM
+			{
+			command = EAknSoftkeyExit;
+			txt = qtn_aaf_exit;
+			}		
+		};
+	}
+	
+// -----------------------------------------------------------------------------
+//
+//   r_aaf_mainview_menubar
+//   Menubar for the main view screen
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_BAR r_aaf_mainview_menubar
+	{
+	titles =
+		{
+		MENU_TITLE { menu_pane = r_aaf_mainview_menu; }
+		};
+	}
+
+// -----------------------------------------------------------------------------
+//
+//   r_aaf_mainview_menu
+//   Menu for 'More' (main view screen)
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_aaf_mainview_menu
+	{
+	items =
+		{
+		// added the new 'Menu' menu command here
+		MENU_ITEM
+			{
+			command = EAknSoftkeySelect;
+			txt = qtn_aaf_select;
+			},
+		MENU_ITEM
+			{
+			command = ESetIAP;
+			txt = qtn_aaf_set_iap;
+			},
+		MENU_ITEM
+			{
+			command = EHelp;
+			txt = qtn_help;
+			},
+		MENU_ITEM
+			{
+			command = EAbout;
+			txt = qtn_about;
+			},
+		MENU_ITEM
+			{
+			command = EAknSoftkeyExit;
+			txt = qtn_aaf_exit;
+			}		
+		};
+	}
+	
+// -----------------------------------------------------------------------------
+//
+//	Define CBA key for the question form
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE CBA r_aaf_cba_question_form
+	{
+	buttons = 
+		{
+		CBA_BUTTON { txt = qtn_aaf_menu; id = EAknSoftkeyOptions; },
+		CBA_BUTTON { txt = qtn_aaf_back; id = EAknSoftkeyBack; }
+		}; 
+	}
+
+// -----------------------------------------------------------------------------
+//
+//   r_aaf_filebrowser_menubar
+//   Menubar for 'File Browser'
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_BAR r_aaf_filebrowser_menubar
+	{
+	titles =
+		{
+		MENU_TITLE { menu_pane = r_aaf_filebrowser_menu; }
+		};
+	}
+
+// -----------------------------------------------------------------------------
+//
+//   r_aaf_filebrowser_menu
+//   Menu for 'Menu' ('File Browser')
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_aaf_filebrowser_menu
+	{
+	items =
+		{
+		// added the new 'Menu' menu command here
+		MENU_ITEM
+			{
+			command = EFileBrowserGotoUpload;
+			txt = qtn_filebrowser_goto_upload;
+			},				
+		MENU_ITEM
+			{
+			command = EFileBrowserAddtoUpload;
+			txt = qtn_filebrowser_addto_upload;
+			},
+		MENU_ITEM
+			{
+			command = EFileBrowserOpen;
+			txt = qtn_filebrowser_open_dir;
+			},
+		MENU_ITEM
+			{
+			command = EFileBrowserPreview;
+			txt = qtn_filebrowser_preview;
+			},
+		MENU_ITEM
+			{
+			command = EHelp;
+			txt = qtn_help;
+			},
+		MENU_ITEM
+			{
+			command = EAbout;
+			txt = qtn_about;
+			},
+		MENU_ITEM
+			{
+			command = EAknSoftkeyExit;
+			txt = qtn_aaf_exit;
+			}		
+		};
+	}
+
+
+// -----------------------------------------------------------------------------
+//
+//   r_aaf_upload_image_cart_menubar
+//   Menubar for 'Upload Image Cart'
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_BAR r_aaf_upload_image_cart_menubar
+	{
+	titles =
+		{
+		MENU_TITLE { menu_pane = r_aaf_upload_image_cart_menu; }
+		};
+	}
+
+// -----------------------------------------------------------------------------
+//
+//   r_aaf_upload_image_cart_menu
+//   Menu for 'Menu' ('Upload Image Cart')
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_aaf_upload_image_cart_menu
+	{
+	items =
+		{
+		// added the new 'Menu' menu command here
+		MENU_ITEM
+			{
+			command = EAskQuestion;
+			txt = qtn_upload_images_ask_question;
+			},				
+		MENU_ITEM
+			{
+			command = EUploadImageCartFileBrowser;
+			txt = qtn_upload_images_file_browser;
+			},
+		MENU_ITEM
+			{
+			command = EUploadImageCartPreview;
+			txt = qtn_filebrowser_preview;
+			},
+		MENU_ITEM
+			{
+			command = EUploadImageCartSelect;
+			txt = qtn_aaf_select;
+			},
+		MENU_ITEM
+			{
+			command = EUploadImageCartDeselect;
+			txt = qtn_upload_images_deselect;
+			},
+		MENU_ITEM
+			{
+			command = EUploadImageCartRemoveSelected;
+			txt = qtn_upload_images_remove_selected;
+			},
+		MENU_ITEM
+			{
+			command = EUploadImageCartRemoveAll;
+			txt = qtn_upload_images_remove_all;
+			},
+		MENU_ITEM
+			{
+			command = EHelp;
+			txt = qtn_help;
+			},
+		MENU_ITEM
+			{
+			command = EAbout;
+			txt = qtn_about;
+			},
+		MENU_ITEM
+			{
+			command = EAknSoftkeyExit;
+			txt = qtn_aaf_exit;
+			}			
+		};
+	}
+
+// -----------------------------------------------------------------------------
+//
+//   r_aaf_private_questions_menubar
+//   Menubar for 'Private Questions' view
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_BAR r_aaf_private_questions_menubar
+	{
+	titles =
+		{
+		MENU_TITLE { menu_pane = r_aaf_private_questions_menu; }
+		};
+	}
+
+// -----------------------------------------------------------------------------
+//
+//   r_aaf_private_questions_menu
+//   Menu for 'Menu' ('Private Questions')
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_aaf_private_questions_menu
+	{
+	items =
+		{
+		// added the new 'Menu' menu command here
+		MENU_ITEM
+			{
+			command = EPQuestionsRefresh;
+			txt = qtn_aaf_refresh;
+			},
+		MENU_ITEM
+			{
+			command = EPQuestionDetails;
+			txt = qtn_aaf_item_details;
+			},
+		MENU_ITEM
+			{
+			command = EHelp;
+			txt = qtn_help;
+			},
+		MENU_ITEM
+			{
+			command = EAbout;
+			txt = qtn_about;
+			},
+		MENU_ITEM
+			{
+			command = EAknSoftkeyExit;
+			txt = qtn_aaf_exit;
+			}			
+		};
+	}
+	
+// -----------------------------------------------------------------------------
+//
+//   r_aaf_my_questions_menubar
+//   Menubar for 'Responses' view
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_BAR r_aaf_my_questions_menubar
+	{
+	titles =
+		{
+		MENU_TITLE { menu_pane = r_aaf_my_questions_menu; }
+		};
+	}
+
+// -----------------------------------------------------------------------------
+//
+//   r_aaf_my_questions_menu
+//   Menu for 'Menu' ('Responses')
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_aaf_my_questions_menu
+	{
+	items =
+		{
+		// added the new 'Menu' menu command here
+		MENU_ITEM
+			{
+			command = EMyQuestionsRefresh;
+			txt = qtn_aaf_refresh;
+			},
+		MENU_ITEM
+			{
+			command = EMyQuestionDetails;
+			txt = qtn_aaf_details;
+			},
+		MENU_ITEM
+			{
+			command = EMyQuestionComments;
+			txt = qtn_aaf_comments;
+			},
+		MENU_ITEM
+			{
+			command = EHelp;
+			txt = qtn_help;
+			},
+		MENU_ITEM
+			{
+			command = EAbout;
+			txt = qtn_about;
+			},
+		MENU_ITEM
+			{
+			command = EAknSoftkeyExit;
+			txt = qtn_aaf_exit;
+			}			
+		};
+	}
+	
+// -----------------------------------------------------------------------------
+//
+//   r_aaf_my_questions_menubar
+//   Menubar for 'Responses' view
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_BAR r_aaf_question_comments_menubar
+	{
+	titles =
+		{
+		MENU_TITLE { menu_pane = r_aaf_question_comments_menu; }
+		};
+	}
+
+// -----------------------------------------------------------------------------
+//
+//   r_aaf_question_comments_menu
+//   Menu for 'Menu' ('Comments')
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_aaf_question_comments_menu
+	{
+	items =
+		{
+		// added the new 'Menu' menu command here
+		MENU_ITEM
+			{
+			command = EQuestionCommentsRefresh;
+			txt = qtn_aaf_refresh;
+			},
+		MENU_ITEM
+			{
+			command = EQuestionCommentDetails;
+			txt = qtn_aaf_details;
+			},
+		MENU_ITEM
+			{
+			command = EHelp;
+			txt = qtn_help;
+			},
+		MENU_ITEM
+			{
+			command = EAbout;
+			txt = qtn_about;
+			},
+		MENU_ITEM
+			{
+			command = EAknSoftkeyExit;
+			txt = qtn_aaf_exit;
+			}			
+		};
+	}
+	
+// -----------------------------------------------------------------------------
+//
+//   r_aaf_camera_menubar
+//   Menubar for 'Make a photo'
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_BAR r_aaf_camera_view_menubar
+	{
+	titles =
+		{
+		MENU_TITLE { menu_pane = r_aaf_camera_menu; }
+		};
+	}
+
+// -----------------------------------------------------------------------------
+//
+//   r_aaf_camera_menu
+//   Menu for 'Menu' ('Make a photo')
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_aaf_camera_menu
+	{
+	items =
+		{
+		// added the new 'Menu' menu command here
+		MENU_ITEM
+			{
+			command = EMakePhotoCapture;
+			txt = qtn_aaf_make_photo_capture;
+			},
+		MENU_ITEM
+			{
+			command = EMakePhotoZoomIn;
+			txt = qtn_aaf_make_photo_zoomin;
+			},
+		MENU_ITEM
+			{
+			command = EMakePhotoZoomOut;
+			txt = qtn_aaf_make_photo_zoomout;
+			},
+		MENU_ITEM
+			{
+			command = EMakePhotoNew;
+			txt = qtn_aaf_make_photo_new;
+			},
+		MENU_ITEM
+			{
+			command = EMakePhotoSave;
+			txt = qtn_aaf_make_photo_save;
+			},
+		MENU_ITEM
+			{
+			command = EMakePhotoResolution;
+			cascade = r_resolutions_list_menu;
+			txt = qtn_aaf_make_photo_resolution;
+			},
+		MENU_ITEM
+			{
+			command = EHelp;
+			txt = qtn_help;
+			},
+		MENU_ITEM
+			{
+			command = EAbout;
+			txt = qtn_about;
+			},
+		MENU_ITEM
+			{
+			command = EAknSoftkeyExit;
+			txt = qtn_aaf_exit;
+			}			
+		};
+	}
+	
+RESOURCE MENU_PANE r_resolutions_list_menu
+	{
+	items =
+		{
+		// added the new 'Menu' menu command here
+		MENU_ITEM
+			{
+			command = EMakePhotoRes640x480;
+			flags = EEikMenuItemRadioStart;
+			txt = qtn_aaf_make_photo_res1;
+			},
+		MENU_ITEM
+			{
+			command = EMakePhotoRes480x320;
+			txt = qtn_aaf_make_photo_res2;
+			},
+		MENU_ITEM
+			{
+			command = EMakePhotoRes320x240;
+			flags = EEikMenuItemRadioEnd;
+			txt = qtn_aaf_make_photo_res3;
+			}
+		};
+	}
+	
+//----------------------------------------------------
+//
+//	  Generic data view dialog
+//
+//----------------------------------------------------
+RESOURCE DIALOG r_dataview_dialog
+  {
+	flags = EEikDialogFlagWait | EEikDialogFlagFillAppClientRect |EEikDialogFlagNoTitleBar | EEikDialogFlagNoDrag | EEikDialogFlagCbaButtons;
+	buttons = R_AVKON_SOFTKEYS_OK_EMPTY;
+  }
+  
+//----------------------------------------------------
+//   
+//    Ask a question view page items
+//
+//----------------------------------------------------
+//
+RESOURCE DIALOG r_ask_question_form_dialog
+{
+	flags = EEikDialogFlagNoDrag | EEikDialogFlagFillAppClientRect | EEikDialogFlagWait | EEikFormHideEmptyFields | EEikFormEditModeOnly;
+	buttons = R_AAF_CBA_QUESTION_FORM;
+	form = r_ask_question_form;	
+}
+
+RESOURCE FORM r_ask_question_form
+	{
+	flags =  EEikFormUseDoubleSpacedFormat;
+	items =
+		{
+			DLG_LINE
+			{
+				type = EEikCtEdwin;
+				prompt = qtn_question_text_label;
+				id = EQuestionText;
+				itemflags = EEikDlgItemTakesEnterKey | EEikDlgItemOfferAllHotKeys;
+				control = EDWIN 
+					{
+					width = 50; 
+					maxlength = 256;
+					lines = 5;
+					};
+			},
+	        DLG_LINE
+            {
+            type = EAknCtPopupFieldText;
+            prompt = qtn_question_duration_label;
+            id = EQuestionDuration;
+            itemflags = EEikDlgItemTakesEnterKey;
+            control = POPUP_FIELD_TEXT
+                {
+                textarray = r_question_duration_popup;
+                popupfield = POPUP_FIELD {};
+                active = 0;
+                };
+			},
+			DLG_LINE
+            {
+            type = EAknCtPopupFieldText;
+            prompt = qtn_question_private_label;
+            id = EQuestionPrivate;
+            itemflags = EEikDlgItemTakesEnterKey;
+            control = POPUP_FIELD_TEXT
+                {
+                textarray = r_question_private_popup;
+				popupfield = POPUP_FIELD {};
+                active = 1;
+                };
+            },
+            DLG_LINE
+            {
+            type = EAknCtPopupFieldText;
+            prompt = qtn_question_type_label;
+            id = EQuestionType;
+            itemflags = EEikDlgItemTakesEnterKey;
+            control = POPUP_FIELD_TEXT
+                {
+                textarray = r_question_type_popup;
+                popupfield = POPUP_FIELD {};
+                active = 0;
+                };
+			}            		
+		};
+}
+
+RESOURCE ARRAY r_question_type_popup
+    {
+    items = 
+        { 
+        LBUF { txt = qtn_question_type_01;},
+        LBUF { txt = qtn_question_type_02;},
+        LBUF { txt = qtn_question_type_03;},
+        LBUF { txt = qtn_question_type_04;}
+        };
+    }
+   
+ RESOURCE ARRAY r_question_duration_popup
+    {
+    items = 
+        { 
+        LBUF { txt = qtn_question_duration_01;},
+        LBUF { txt = qtn_question_duration_02;},
+        LBUF { txt = qtn_question_duration_03;},
+        LBUF { txt = qtn_question_duration_04;}
+        };
+    }
+    
+ RESOURCE ARRAY r_question_private_popup
+    {
+    items = 
+        { 
+        LBUF { txt = qtn_question_private_yes;},
+        LBUF { txt = qtn_question_private_no;}
+        };
+    }
+     
+  
+// Create the menu resource
+RESOURCE MENU_BAR r_question_form_menubar
+   {
+   titles =
+      {
+      MENU_TITLE {menu_pane = r_question_form_menu; txt = "";}
+      };
+   }
+
+RESOURCE MENU_PANE r_question_form_menu
+   {
+   items=
+      {
+      MENU_ITEM
+			{
+			command = EAskQuestionSubmit;
+			txt = qtn_question_form_submit;
+			},
+	  MENU_ITEM
+			{
+			command = EResponses;
+			txt = qtn_question_form_responses;
+			},
+	  MENU_ITEM
+			{
+			command = EPrivateQuestions;
+			txt = qtn_question_form_pquestions;
+			},
+      MENU_ITEM
+			{
+			command = EHelp;
+			txt = qtn_help;
+			},
+		MENU_ITEM
+			{
+			command = EAbout;
+			txt = qtn_about;
+			},
+		MENU_ITEM
+			{
+			command = EAknSoftkeyExit;
+			txt = qtn_aaf_exit;
+			}			
+      };
+   }
+   
+// -----------------------------------------------------------------------------
+//
+// Login view username text field.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE EDWIN r_login_box
+{
+	width = 20;
+	lines = 1;
+	maxlength = 20;
+	flags = EEikEdwinNoHorizScrolling | EEikEdwinResizable;
+	default_input_mode = EAknEditorTextInputMode;
+}
+
+// -----------------------------------------------------------------------------
+//
+// Login view password text field.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE SECRETED r_password_box
+{ 
+    num_letters = 20; 
+} 
+
+// -----------------------------------------------------------------------------
+//
+// Main view listbox control.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE LISTBOX r_mainview_listbox
+    {
+    flags = EAknListBoxSelectionList;
+    array_id = r_mainview_listbox_item_array;
+    }
+
+RESOURCE LISTBOX r_mainview_listbox_without_camera
+    {
+    flags = EAknListBoxSelectionList;
+    array_id = r_mainview_listbox_item_array_without_camera;
+    }
+    
+// -----------------------------------------------------------------------------
+//
+// Main view listbox items.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE ARRAY r_mainview_listbox_item_array
+    {
+    items = 
+        { 
+        LBUF { txt = qtn_ask_question;},
+        LBUF { txt = qtn_make_photo;},
+        LBUF { txt = qtn_filebrowser;},
+        LBUF { txt = qtn_upload_imagecart;},
+        LBUF { txt = qtn_private_questions;},
+        LBUF { txt = qtn_responses;},
+        LBUF { txt = qtn_credentials;},
+        LBUF { txt = qtn_invite_friend;}
+        };
+    }
+
+RESOURCE ARRAY r_mainview_listbox_item_array_without_camera
+    {
+    items = 
+        { 
+        LBUF { txt = qtn_ask_question_without_camera;},
+        LBUF { txt = qtn_filebrowser_without_camera;},
+        LBUF { txt = qtn_upload_imagecart_without_camera;},
+        LBUF { txt = qtn_private_questions_without_camera;},
+        LBUF { txt = qtn_responses_without_camera;},
+        LBUF { txt = qtn_credentials_without_camera;},
+        LBUF { txt = qtn_invite_friend_without_camera;}
+        };
+    }
+ 
+// -----------------------------------------------------------------------------
+//
+// Generally used waitnote dialog with 'Cancel' button
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE DIALOG r_waitnote
+{
+	flags = EAknWaitNoteFlags | EEikDialogFlagNotifyEsc;
+	buttons = R_AVKON_SOFTKEYS_CANCEL;
+	items =
+	{
+	  DLG_LINE
+	  {
+		  type = EAknCtNote;
+		  id = EGeneralNote;
+		  control = AVKON_NOTE
+		  {
+			  layout = EWaitLayout;
+			  animation = R_QGN_GRAF_WAIT_BAR_ANIM;
+		  };
+	  }
+	};
+}
+
+// -----------------------------------------------------------------------------
+//
+// Generally used waitnote dialog with empty buttons
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE DIALOG r_waitnote_blocking
+{
+	flags = EAknWaitNoteFlags | EEikDialogFlagNotifyEsc;
+	buttons = R_AVKON_SOFTKEYS_EMPTY;
+	items =
+	{
+	  DLG_LINE
+	  {
+		  type = EAknCtNote;
+		  id = EGeneralNote;
+		  control = AVKON_NOTE
+		  {
+			  layout = EWaitLayout;
+			  singular_label = qtn_aaf_general_waitnote;
+			  animation = R_QGN_GRAF_WAIT_BAR_ANIM;
+		  };
+	  }
+	};
+}
+
+// -----------------------------------------------------------------------------
+//
+// Generally used failure dialog.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE DIALOG r_dialog_failure
+{
+	flags = EAknWarningNoteFlags;
+	buttons = R_AVKON_SOFTKEYS_EMPTY;
+	items =
+	{
+		DLG_LINE
+		{
+			type = EAknCtNote;
+			id = EGeneralNote;
+			control = AVKON_NOTE
+			{
+				layout = EGeneralLayout;
+				animation = R_QGN_NOTE_WARNING_ANIM;
+			};
+		}
+	};
+}
+
+// -----------------------------------------------------------------------------
+//
+// General query dialog
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE AVKON_LIST_QUERY r_query_dialog
+{
+   flags = EGeneralQueryFlags;
+   softkeys = R_AVKON_SOFTKEYS_OK_CANCEL;
+   items =
+   {
+      AVKON_LIST_QUERY_DLG_LINE
+      {
+         control = AVKON_LIST_QUERY_CONTROL
+         {
+            listtype = EAknCtSinglePopupMenuListBox;
+            listbox = AVKON_LIST_QUERY_LIST
+            {
+            };
+            
+            heading = qtn_aaf_phone_selection_query;
+         };
+      }
+   };
+}
+
+// -----------------------------------------------------------------------------
+//
+// Filename query dialog
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE DIALOG r_filename_query 
+    { 
+    flags = EGeneralQueryFlags; 
+    buttons = R_AVKON_SOFTKEYS_OK_CANCEL; 
+    items = 
+        { 
+        DLG_LINE 
+            { 
+            type = EAknCtQuery; 
+            id = EGeneralQuery; 
+            control = AVKON_DATA_QUERY 
+                { 
+                layout = EDataLayout; 
+                label = qtn_aaf_filesave_dialog;  // prompt text 
+                control = EDWIN 
+                    { 
+						width = 5; 
+						lines = 1; 
+						maxlength = 255; 
+                    }; 
+                }; 
+            } 
+        }; 
+    }
+    
+// -----------------------------------------------------------------------------
+//
+// Main view listbox items icons.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE AKN_ICON_ARRAY r_mainview_icons 
+    { 
+    type = EAknIconArraySimple; 
+    bmpfile = "\\resource\\apps\\aaf.mbm";
+ 
+    icons = 
+        {
+        AKN_ICON 
+            { 
+            iconId = EMbmAafAsk;
+            maskId = EMbmAafAskmask;
+            },
+        AKN_ICON
+			{
+			iconId = EMbmAafCamera;
+			maskId = EMbmAafCameramask;
+			},
+        AKN_ICON 
+            { 
+            iconId = EMbmAafFolder;
+            maskId = EMbmAafFoldermask;
+            },
+        AKN_ICON 
+            { 
+            iconId = EMbmAafCart;
+            maskId = EMbmAafCartmask;
+            },
+       AKN_ICON 
+            { 
+            iconId = EMbmAafPrivate;
+            maskId = EMbmAafPrivatemask;
+            },
+       AKN_ICON 
+            { 
+            iconId = EMbmAafQuestions;
+            maskId = EMbmAafQuestionsmask;
+            },
+       AKN_ICON 
+            { 
+            iconId = EMbmAafSettings;
+            maskId = EMbmAafSettingsmask;
+            },
+       AKN_ICON 
+            { 
+            iconId = EMbmAafSms;
+            maskId = EMbmAafSmsmask;
+            }
+        }; 
+    }
+    
+RESOURCE AKN_ICON_ARRAY r_mainview_icons_without_camera 
+    { 
+    type = EAknIconArraySimple; 
+    bmpfile = "\\resource\\apps\\aaf.mbm";
+ 
+    icons = 
+        {
+        AKN_ICON 
+            { 
+            iconId = EMbmAafAsk;
+            maskId = EMbmAafAskmask;
+            },
+        AKN_ICON 
+            { 
+            iconId = EMbmAafFolder;
+            maskId = EMbmAafFoldermask;
+            },
+        AKN_ICON 
+            { 
+            iconId = EMbmAafCart;
+            maskId = EMbmAafCartmask;
+            },
+       AKN_ICON 
+            { 
+            iconId = EMbmAafPrivate;
+            maskId = EMbmAafPrivatemask;
+            },
+       AKN_ICON 
+            { 
+            iconId = EMbmAafQuestions;
+            maskId = EMbmAafQuestionsmask;
+            },
+       AKN_ICON 
+            { 
+            iconId = EMbmAafSettings;
+            maskId = EMbmAafSettingsmask;
+            },
+       AKN_ICON 
+            { 
+            iconId = EMbmAafSms;
+            maskId = EMbmAafSmsmask;
+            }
+        }; 
+    }
+    
+// -----------------------------------------------------------------------------
+//
+// File browser view listbox items icons.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE AKN_ICON_ARRAY r_browserview_icons 
+    { 
+    type = EAknIconArraySimple; 
+    bmpfile = "\\resource\\apps\\aaf.mbm";
+ 
+    icons = 
+        { 
+        AKN_ICON 
+            { 
+            iconId = EMbmAafFolder;
+            maskId = EMbmAafFoldermask;
+            }, 
+        AKN_ICON 
+            { 
+            iconId = EMbmAafFile;
+            maskId = EMbmAafFilemask;
+            },
+        AKN_ICON 
+            { 
+            iconId = EMbmAafFolderup;
+            maskId = EMbmAafFolderupmask;
+            },
+        AKN_ICON 
+            { 
+            iconId = EMbmAafPhone;
+            maskId = EMbmAafPhonemask;
+            },
+         AKN_ICON 
+            { 
+            iconId = EMbmAafCard;
+            maskId = EMbmAafCardmask;
+            }            
+        }; 
+    }
+    
+// -----------------------------------------------------------------------------
+//
+// Upload images cart view listbox items icons.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE AKN_ICON_ARRAY r_cartview_icons 
+    { 
+    type = EAknIconArraySimple; 
+    bmpfile = "\\resource\\apps\\aaf.mbm";
+ 
+    icons = 
+        { 
+        AKN_ICON 
+            { 
+            iconId = EMbmAafFile;
+            maskId = EMbmAafFilemask;
+            }
+        }; 
+    }
+
+RESOURCE AKN_ICON_ARRAY r_pquestionsview_icons 
+    { 
+    type = EAknIconArraySimple; 
+    bmpfile = "\\resource\\apps\\aaf.mbm";
+ 
+    icons = 
+        { 
+        AKN_ICON 
+            { 
+            iconId = EMbmAafSelected;
+            maskId = EMbmAafSelectedmask;
+            }
+        }; 
+    }
+
+RESOURCE AKN_ICON_ARRAY r_userquestionsview_icons 
+    { 
+    type = EAknIconArraySimple; 
+    bmpfile = "\\resource\\apps\\aaf.mbm";
+ 
+    icons = 
+        { 
+        AKN_ICON 
+            { 
+            iconId = EMbmAafUnselected;
+            maskId = EMbmAafUnselectedmask;
+            }
+        }; 
+    }
+    
+// -----------------------------------------------------------------------------
+//
+// About dialog resource.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE DIALOG r_about_query_dialog
+	{
+	flags = EGeneralQueryFlags | EEikDialogFlagNoBorder | EEikDialogFlagNoShadow;
+	buttons = R_AVKON_SOFTKEYS_OK_EMPTY;
+	items=
+		{
+		DLG_LINE 
+			{
+			type = EAknCtPopupHeadingPane;
+			id = EAknMessageQueryHeaderId;
+			itemflags = EEikDlgItemNonFocusing;
+			control = AVKON_HEADING
+				{
+				};
+			},
+		DLG_LINE
+			{
+			type = EAknCtMessageQuery;
+			id = EAknMessageQueryContentId;
+			control = AVKON_MESSAGE_QUERY
+				{
+				};
+			}
+		};
+	}
+
+// -----------------------------------------------------------------------------
+//
+// Privacy statement dialog resource.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE DIALOG r_privstmt_dialog {
+	flags = EAknDialogGenericQueryFlags;
+	buttons = R_AVKON_SOFTKEYS_YES_NO;
+	items = {
+		DLG_LINE {
+			type = EAknCtPopupHeadingPane;
+			id = EAknMessageQueryHeaderId;
+			itemflags = EEikDlgItemNonFocusing;
+			control = AVKON_HEADING {
+				label = qtn_privacy_statement_header;
+			};
+		},
+		DLG_LINE {
+			type = EAknCtMessageQuery;
+			id = EAknMessageQueryContentId;
+			control = AVKON_MESSAGE_QUERY {
+			};
+		}
+	};
+}	
+
+// -----------------------------------------------------------------------------
+//
+// File properties dialog resource.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE DIALOG r_fileproperties_dialog
+ {
+	flags = EAknDialogGenericQueryFlags;
+	buttons = R_AVKON_SOFTKEYS_OK_EMPTY;
+	items = {
+		DLG_LINE {
+			type = EAknCtPopupHeadingPane;
+			id = EAknMessageQueryHeaderId;
+			itemflags = EEikDlgItemNonFocusing;
+			control = AVKON_HEADING {
+				label = qtn_privacy_statement_header;
+			};
+		},
+		DLG_LINE {
+			type = EAknCtMessageQuery;
+			id = EAknMessageQueryContentId;
+			control = AVKON_MESSAGE_QUERY {
+			};
+		}
+	};
+}	
+
+// -----------------------------------------------------------------------------
+//
+// Resources for messages.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE TBUF32 r_about_dialog_title { buf=qtn_about_dialog_title; }
+RESOURCE TBUF r_about_dialog_text { buf=qtn_about_dialog_text; }
+RESOURCE TBUF r_privacy_statement_filename { buf = qtn_privacy_statement_filename; }
+RESOURCE TBUF r_settings_filename { buf = qtn_settings_filename; }
+RESOURCE TBUF r_login_waitnote { buf = qtn_aaf_login_waitnote;}
+RESOURCE TBUF r_login_failure_note { buf = qtn_aaf_login_failure_dialog; }
+RESOURCE TBUF r_login_empty_fields_note { buf = qtn_aaf_login_empty_credentials; }
+RESOURCE TBUF r_sms_empty_phone_note { buf = qtn_aaf_empty_phone_number; }
+RESOURCE TBUF r_connection_not_ready { buf = qtn_aaf_connection_not_ready; }
+RESOURCE TBUF r_upload_waitnote { buf = qtn_aaf_upload_waitnote; }
+RESOURCE TBUF r_pquestions_waitnote { buf = qtn_aaf_pquestions_waitnote; }
+RESOURCE TBUF r_upload_failure_note { buf = qtn_aaf_upload_failure_dialog; }
+RESOURCE TBUF r_pquestions_failure_note { buf = qtn_aaf_pquestions_failure_dialog; }
+RESOURCE TBUF r_myquestions_waitnote { buf = qtn_aaf_myquestions_waitnote; }
+RESOURCE TBUF r_myquestions_failure_note { buf = qtn_aaf_myquestions_failure_dialog; }
+RESOURCE TBUF r_comments_waitnote { buf = qtn_aaf_comments_waitnote; }
+RESOURCE TBUF r_comments_failure_note { buf = qtn_aaf_comments_failure_dialog; }
+RESOURCE TBUF r_upload_failure_credentials { buf = qtn_aaf_upload_failure_credentials; }
+RESOURCE TBUF r_upload_noimage_note { buf = qtn_aaf_upload_no_image; }
+
+RESOURCE TBUF r_empty_question_note { buf = qtn_aaf_empty_question_text; }
+RESOURCE TBUF r_empty_custom_responsea_note { buf = qtn_aaf_empty_custom_responsea; }
+RESOURCE TBUF r_empty_custom_responseb_note { buf = qtn_aaf_empty_custom_responseb; }
+
+// -----------------------------------------------------------------------------
+//
+// Resources for labels etc
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE TBUF r_login_label { buf = qtn_aaf_login_label; }
+RESOURCE TBUF r_password_label { buf = qtn_aaf_password_label; }
+RESOURCE TBUF r_filebrowser_phonememory { buf = qtn_filebrowser_phonememory; }
+RESOURCE TBUF r_filebrowser_cardmemory { buf = qtn_filebrowser_cardmemory; }
+RESOURCE TBUF r_select_folder_dialog { buf = qtn_select_folder_dialog; }
+RESOURCE TBUF r_back { buf = qtn_aaf_back; }
+RESOURCE TBUF r_sms_body_text { buf = qtn_aaf_sms_text; }
+RESOURCE TBUF r_responsea_label { buf = qtn_question_response_a; }
+RESOURCE TBUF r_responseb_label { buf = qtn_question_response_b; }
+RESOURCE TBUF r_empty_image_cart_text { buf = qtn_aaf_empty_image_cart; }
+RESOURCE TBUF r_no_private_questions_text { buf = qtn_aaf_empty_private_questions_view; }
+RESOURCE TBUF r_no_own_questions_text { buf = qtn_aaf_empty_own_questions_view; }

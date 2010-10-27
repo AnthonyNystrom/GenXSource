@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas
+	xmlns:mx="http://www.adobe.com/2006/mxml"
+	xmlns:n2f="*" horizontalScrollPolicy="off" verticalScrollPolicy="off">
+
+	<n2f:BitmapLoader id="loader" url="{url}" thumbnail="{thumbnail}"
+		maxImageWidth="{maxImageWidth}" maxImageHeight="{maxImageHeight}"/>
+
+	<mx:Script>
+		<![CDATA[
+			[Bindable] public var url : String = null;
+			[Bindable] public var thumbnail : Boolean = false;
+			[Bindable] public var maxImageWidth : int = 240;
+			[Bindable] public var maxImageHeight : int = 160;
+		]]>
+	</mx:Script>
+
+	<mx:Fade id="fade" />
+
+	<n2f:LoadingIcon id="loading" width="100%" height="100%" visible="{loader.bitmap == null &amp;&amp; !loader.error}"
+		hideEffect="{fade}"/>
+	<mx:Box width="100%" height="100%" horizontalAlign="center" verticalAlign="middle" visible="{loader.error != null}">
+		<mx:Image id="error" source="@Embed('../assets/ImageError.svg')"
+			scaleContent="true" width="50%" height="50%">
+			<mx:filters>
+				<mx:DropShadowFilter alpha="0.5" angle="45" distance="5" blurX="10" blurY="10" />
+			</mx:filters>
+		</mx:Image>
+	</mx:Box>
+
+	<mx:Box width="100%" height="100%" horizontalAlign="center" verticalAlign="middle">
+		<mx:Image id="image" width="100%" height="100%" toolTip="{toolTip}"
+			source="{loader.bitmap}" showEffect="{fade}" scaleContent="true"
+			horizontalAlign="center" verticalAlign="middle">
+			<mx:filters>
+				<mx:GlowFilter color="#888888" blurX="2" blurY="2" strength="1"/>
+				<mx:DropShadowFilter alpha="0.5" angle="45" distance="5" blurX="10" blurY="10" />
+			</mx:filters>
+		</mx:Image>
+	</mx:Box>
+
+</mx:Canvas>

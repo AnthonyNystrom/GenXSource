@@ -1,0 +1,96 @@
+/* r.a.d.upload webblue skin */
+
+.RadUploadTable
+{
+	background: #f0f2f4;
+	border: solid 1px #97a2ae;
+	border-collapse: collapse !important;
+	filter: progid:DXImageTransform.Microsoft.Shadow(direction=140,color=#97a2ae,strength=1);
+	margin: 4px 0px;
+	width: 364px;
+	font: normal 11px Arial, Verdana, Sans-serif;
+	color: #494848;
+}
+.RadUploadTable td
+{
+	padding: 4px;
+}
+
+.RadUploadButtonArea
+{
+	background-color: transparent;
+}
+
+.RadUploadButton, 
+.radUploadButtonMedium, 
+.RadUploadRemoveButton
+{
+	background: transparent url('Img/radUploadBtnMedium.gif') no-repeat;
+	border: 0px;
+	height: 21px;
+	width: 67px;
+	font: normal 11px Arial, Verdana, Sans-serif;
+	color: white;
+	font-weight: bold;
+}
+
+.RadUploadButtonDisabled
+{
+	background: transparent url('Img/radUploadBtnMedium.gif') no-repeat;
+	border: 0px;
+	height: 21px;
+	width: 89px;
+	font: normal 11px Arial, Verdana, Sans-serif;
+	color: #494848;
+	filter: alpha(opacity=30); /* IE */
+	-moz-opacity:0.5; /* Mozilla */
+	opacity: 0.5; /* CSS3 */
+}
+
+.RadUploadInputField
+{
+	background: white;
+	width: 140px;
+	_width: 150px; /* IE fix */
+	border: solid 1px #afbec5;
+	border-right: 0px;
+	vertical-align: top;
+	height: 17px;
+}
+
+input.RealFileInput
+{
+	position: relative;
+	-moz-opacity: 0;
+	filter: alpha(opacity: 0);
+	opacity: 0;
+	z-index: 2;
+}
+
+.RadUploadSelectButton
+{
+	background: transparent url('Img/select.gif') no-repeat;
+	border: 0px;
+	font: normal 11px Arial, Verdana, Sans-serif;
+	color: white;
+	font-weight: bold;
+	height: 22px;
+	width: 64px;
+	_margin-top: 1px; /* IE fix */
+}
+
+.RadUploadClearButton
+{
+	border: 0px;
+	background: transparent url('Img/radUploadBtnMedium.gif') no-repeat;
+	font: bold 11px Arial, Verdana, Sans-serif;
+	color: black;
+	height: 21px;
+	width: 67px;
+	float: right;
+}
+
+input.NoSkinnedFileUnput
+{
+	border: solid 1x #afbec5;
+}

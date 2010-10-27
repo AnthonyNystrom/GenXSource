@@ -1,0 +1,73 @@
+/*
+============================================================================
+ Name        : EncoderLib.mmp
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : This is the project specification file for EncoderLib.
+============================================================================
+*/
+TARGET                                  EncoderLib.lib 
+TARGETTYPE                              lib 
+UID                                     0x0 0xedc3b1ed 
+SECUREID                                0xe7118ef2 
+/* [+] */ USERINCLUDE                   ..\inc\libJpeg 
+USERINCLUDE                             ..\..\..\framework 
+USERINCLUDE                             ..\inc 
+SYSTEMINCLUDE                           \epoc32\include 
+SOURCEPATH                              ..\src 
+SOURCE                                  EncoderObjectSis9.cpp 
+SOURCE                                  EncoderObject.cpp 
+
+SOURCEPATH                              ..\src\libJpeg 
+SOURCE                                  jutils.c 
+SOURCE                                  jquant2.c 
+SOURCE                                  jquant1.c 
+SOURCE                                  jmemnobs.c 
+SOURCE                                  jmemmgr.c 
+SOURCE                                  jidctred.c 
+SOURCE                                  jidctint.c 
+SOURCE                                  jidctfst.c 
+SOURCE                                  jidctflt.c 
+SOURCE                                  jfdctint.c 
+SOURCE                                  jfdctfst.c 
+SOURCE                                  jfdctflt.c 
+SOURCE                                  jerror.c 
+SOURCE                                  jdtrans.c 
+SOURCE                                  jdsample.c 
+SOURCE                                  jdpostct.c 
+SOURCE                                  jdphuff.c 
+SOURCE                                  jdmerge.c 
+SOURCE                                  jdmaster.c 
+SOURCE                                  jdmarker.c 
+SOURCE                                  jdmainct.c 
+SOURCE                                  jdinput.c 
+SOURCE                                  jdhuff.c 
+SOURCE                                  jddctmgr.c 
+SOURCE                                  jdcolor.c 
+SOURCE                                  jdcoefct.c 
+SOURCE                                  jdatasrc.c 
+SOURCE                                  jdatadst.c 
+SOURCE                                  jdapistd.c 
+SOURCE                                  jdapimin.c 
+SOURCE                                  jctrans.c 
+SOURCE                                  jcsample.c 
+SOURCE                                  jcprepct.c 
+SOURCE                                  jcphuff.c 
+SOURCE                                  jcparam.c 
+SOURCE                                  jcomapi.c 
+SOURCE                                  jcmaster.c 
+SOURCE                                  jcmarker.c 
+SOURCE                                  jcmainct.c 
+SOURCE                                  jcinit.c 
+SOURCE                                  jchuff.c 
+SOURCE                                  jcdctmgr.c 
+SOURCE                                  jccolor.c 
+SOURCE                                  jccoefct.c 
+SOURCE                                  jcapistd.c 
+SOURCE                                  jcapimin.c 
+
+LIBRARY                                 euser.lib 
+LIBRARY                                 estor.lib 
+VENDORID                                0 
+CAPABILITY                              NONE 

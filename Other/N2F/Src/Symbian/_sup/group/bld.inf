@@ -1,0 +1,17 @@
+/*
+============================================================================
+ Name        : Sup.rss
+ Author      : Vitaly Vinogradov
+ Version     : 1.0.0
+ Copyright   : (c) Next2Friends, 2008
+============================================================================
+*/
+
+PRJ_PLATFORMS
+WINSCW ARMV5 GCCE
+
+PRJ_MMPFILES
+
+/*gnumakefile ..\help\build_help.mk*/
+
+Sup.mmp

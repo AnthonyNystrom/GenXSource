@@ -1,0 +1,132 @@
+
+div.contactBlock {
+margin-left:0px;
+}
+
+div.contactList {
+height:562px;
+}
+
+div.subcatHolder {
+height:532px;
+overflow:auto;
+}
+
+div.contactSubCat {
+border-bottom:solid 1px #f3f3f3;
+}
+
+#page {
+text-align:center;
+}
+
+#header,
+#middle {
+text-align:left;
+}
+
+
+#newFooterList1 {
+width:150px;
+}
+
+#newFooterList2 {
+width:60px;
+}
+
+#newFooterList3 {
+width:90px;
+}
+
+#newFooterList4 {
+width:190px;
+}
+
+#newFooterList5 {
+width:130px;
+}
+
+ul.chatBar {
+width:99.2%;
+}
+
+div.innerPopup {
+background:transparent;
+}
+
+div.innerPopupTop {
+background-image:url(images/popup-corner-nw.gif);
+}
+
+div.innerPopupBottom {
+background-image:url(images/popup-corner-sw.gif);
+}
+
+div.innerPopupTopCorner {
+background-image:url(images/popup-corner-ne.gif);
+}
+
+div.innerPopupBottomCorner {
+background-image:url(images/popup-corner-se.gif);
+}
+
+div.innerPopupContent {
+background-image:url(images/popup-content.gif);
+}
+
+div.innerPopupBlock input.longInput {
+height:25px !important;
+width:310px !important;
+}
+
+div.iframePlaylist {
+width:460px;
+}
+
+input.fileInput {
+height:24px;
+}
+
+p.downloadDetails {
+margin-top:10px;
+}
+
+a.subscribeRSSLink {
+top:10px;
+left:552px;
+}
+
+/*== home features link ==*/
+
+ul.minifeats-skin {
+list-style-type:none;
+}
+
+div.innerPopup div.popupRowLine input.form_txt2 {
+width:257px;
+}
+
+div.innerPopup div.popupRowLine select.form_txt2 {
+width:259px;
+}
+
+/*=====================================================
+NEW LANDING PAGE STYLES
+=====================================================*/
+
+#middleRefit {
+text-align:left;
+}
+
+div.handwriting {
+float:none;
+height:1%;
+}
+
+div.handwritingFooter #newFooterList4 {
+width:170px;
+}
+
+div.handwritingFooter #newFooterList5 {
+margin-right:0px;
+}

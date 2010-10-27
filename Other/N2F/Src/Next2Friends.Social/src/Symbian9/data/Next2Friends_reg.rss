@@ -1,0 +1,24 @@
+/*
+============================================================================
+ Name        : Next2Friends_reg.rss
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Application registration resource file
+============================================================================
+*/
+
+#include <appinfo.rh>
+#include <Next2Friends.rsg>
+
+UID2 KUidAppRegistrationResourceFile
+UID3 0xe2c9889d
+
+RESOURCE APP_REGISTRATION_INFO
+  {
+  app_file="Next2Friends";
+  localisable_resource_file = "\\resource\\apps\\Next2Friends";
+  localisable_resource_id = R_NEXT2FRIENDS_LOCALISABLE_APP_INFO;
+  embeddability=KAppNotEmbeddable;
+  newfile=KAppDoesNotSupportNewFile;
+  }

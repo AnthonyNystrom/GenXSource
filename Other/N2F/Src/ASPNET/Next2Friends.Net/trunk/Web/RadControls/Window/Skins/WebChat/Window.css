@@ -1,0 +1,241 @@
+/* RadWindow WebChat skin */
+
+iframe.RadWContentFrame
+{
+	background: #fff; /* Mozilla overlay */
+}
+
+.RadWContentFrame
+{
+	scrollbar-face-color: #BACBF4;
+	scrollbar-highlight-color: #FFFFFF;
+	scrollbar-shadow-color: #7E9FD2;
+	scrollbar-3dlight-color: #E6EEFC;
+	scrollbar-arrow-color: #4D6185;
+	scrollbar-track-color: #F7F7F3;
+	scrollbar-darkshadow-color: #C6D1DC;	
+}
+
+.RadWStatus
+{
+	display: none !important; /* this skin does not support status bar */
+}
+
+.RadWModalImage
+{
+	background: url('Img/ModalImageBg.gif');
+}
+
+.RadWStatusRow
+{
+	background: #d0e983;
+}
+
+.RadWDragHelper
+{		
+	border : solid 1px #ccc;	
+	background-color : #ccc;	
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50); /* IE */
+	-moz-opacity: 0.5; /* Moz */
+	opacity: 0.5; /* CSS3 */
+	margin: 0px;
+	padding: 0px;	
+	position: absolute;
+	z-index: 50000;
+	overflow: hidden;	
+}
+
+.RadWMinimizedActive,
+.RadWMinimizedOver,
+.RadWMinimizedPageLoaded
+{
+	width: 60px;
+	height: 30px;
+	background: #bdd041 url('CssImg/RadWWrapperHeaderCenter.gif') repeat-x;
+	border: solid 1px #9baf09;
+}
+
+.RadWMinimizedPageLoaded
+{
+	width: 60px;
+	height: 30px;
+	background: #789408 url('CssImg/RadWWrapperHeaderCenter.gif') repeat-x;
+	border: solid 1px #ad1400;
+}
+
+.RadWMinimizedInactive
+{
+	width: 60px;
+	height: 30px;
+	border: solid 1px #9baf09;
+	background: #005cec url('CssImg/RadWWrapperHeaderCenter.gif') repeat-x;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=60); /* IE */
+	-moz-opacity: 0.6; /* Moz */
+	opacity: 0.6; /* CSS3 */
+}
+
+.RadWLoadingWrapper
+{
+	width: 80px;
+	height: 100%;
+	vertical-align: middle;
+	text-align: center;	
+	font: normal 11px Arial, Verdana, Sans-Serif;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=99); /* IE */
+}
+
+.RadWIcon
+{
+	margin-left: 2px;	
+	margin-right: 2px;
+	cursor: default; /* you can also use cursor: move; */
+}
+
+.RadWTitleText
+{
+	font: bold 12px Arial, Verdana, Sans-Serif;
+	color: #9cb009;
+	vertical-align: top;				
+}
+
+.RadWButton
+{
+	cursor: default;
+	margin-top: 0px;
+	vertical-align: top;
+	margin-right: 2px;
+}
+
+.RadWWrapperActive
+{
+	font-size: 0px;	
+	/*filter: progid:DXImageTransform.Microsoft.Shadow(direction=140,color=#789408,strength=4); */
+}
+
+.RadWWrapperInactive
+{
+	font-size: 0px;	
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=90); /* IE */
+	-moz-opacity: 0.9; /* Moz */
+	opacity: 0.9; /* CSS3 */
+}
+
+.RadWWrapperModal
+{	
+	/*filter: progid:DXImageTransform.Microsoft.Shadow(direction=140,color=#789408,strength=4); */
+}
+
+.RadWTitleRow
+{
+	cursor: default;		
+}
+
+.RadWTitleRow TD
+{
+	padding: 0px;
+}
+
+.RadWWrapperHeaderLeft
+{
+	width: 7px;
+	height: 30px !important;
+	display: block;
+	background: url('CssImg/RadWWrapperHeaderLeft.gif') no-repeat;
+}
+
+.RadWHeaderTopResizer
+{
+	font-size: 0px;
+	height: 2px;
+	background: aqua url('CssImg/RadWWrapperHeaderCenter.gif') repeat-x bottom;
+}
+
+.RadWWrapperHeaderCenter
+{
+	text-align: left;
+	height: 28px;
+	font: normal 10px "Lucida Console", Arial, Verdana, Sans-serif; /* make sure you always set a value */
+	color: #fff;
+	background: aqua url('CssImg/RadWWrapperHeaderCenter.gif') repeat-x bottom;
+}
+
+.RadWWrapperHeaderRight
+{
+	width: 7px;
+	height: 30px !important;
+	display: block;
+	background: url('CssImg/RadWWrapperHeaderRight.gif') no-repeat;
+}
+
+.RadWWrapperBodyLeft
+{
+	width: 6px;
+	background: #f0f3c9 url('CssImg/RadWWrapperBodyLeft.gif') no-repeat left bottom;
+}
+
+/* Mozilla 1.5 Fix */
+.RadWWrapperBodyLeft:before
+{
+	content: " ";
+	display: block;
+	width: 6px;
+}
+
+.RadWWrapperBodyCenter
+{
+	width: 100%;
+	height: 100%;
+	background: #f0f3c9;
+}
+
+.RadWWrapperBodyRight
+{
+	width: 6px;
+	background: #f0f3c9 url('CssImg/RadWWrapperBodyRight.gif') no-repeat left bottom;
+}
+
+/* Mozilla 1.5 Fix */
+.RadWWrapperBodyRight:before
+{
+	content: " ";
+	display: block;
+	width: 6px;
+}
+
+/* footer start */
+.RadWWrapperFooterLeft 
+{
+	width: 7px;
+	height: 14px !important;
+	display: block;
+	background: url('CssImg/RadWWrapperFooterLeft.gif') no-repeat;
+	font-size: 0px;
+	padding: 0px;
+	_position: relative; /*IE fix */
+	_top: -1px; /*IE fix*/
+} 
+
+.RadWWrapperFooterCenter 
+{
+	width: 100%;
+	height: 14px;
+	background: url('CssImg/RadWWrapperFooterCenter.gif') repeat-x;
+	font-size: 0px;
+	line-height: 0px;
+	padding: 0px;
+	_position: relative; /*IE*/
+	_top: -1px; /*IE*/
+} 
+
+.RadWWrapperFooterRight 
+{
+	width: 7px;
+	height: 14px !important;
+	display: block;
+	background: url(CssImg/RadWWrapperFooterRight.gif)  no-repeat;
+	font-size: 0px;
+	padding: 0px;
+	_position: relative; /*IE fix */
+	_top: -1px; /*IE fix */
+} 
+/* footer end */

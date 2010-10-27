@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>Untitled Document</title>
+    <style type="text/css">
+body {
+	background-image: url(/Start/images/Welcome.png);
+}
+.ProjectItem
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #3E546A;
+	font-size: 14px;
+	margin-right: 10px;
+}
+#ProjectItems {
+	position:absolute;
+	width:191px;
+	height:378px;
+	z-index:1;
+	left: 65px;
+	top: 89px;
+	overflow: auto;
+	text-align: right;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #3E546A;
+	font-size: 14px;
+	line-height: 25px;
+	text-indent: 20px;
+}
+#ProjectDescription {
+	position:absolute;
+	width:500px;
+	height:379px;
+	z-index:2;
+	left: 280px;
+	top: 91px;
+	overflow: auto;
+}
+.ProjectImage
+{
+ visibility:hidden;
+}
+.ProjectText
+{
+	visibility:hidden;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #3F5469;
+}
+#InfoItems {
+	position:absolute;
+	width:511px;
+	height:200px;
+	z-index:3;
+	left: 280px;
+	top: 582px;
+	overflow: hidden;
+}
+</style>
+
+    <script language="javascript">
+var descriptions = new Array();
+descriptions[1] = "This project template allows you to use all shapes and features of the diagram control.";
+
+
+var prims = new Array();
+prims[1] = '/Start/images/Pass.jpg';
+
+
+function showItem(itemid)
+{
+    var pri = document.getElementById('ProjectImage');
+	var prt = document.getElementById('ProjectText');
+    if(itemid<0)
+    {
+        pri.src= prims[-itemid];
+	    prt.innerText = descriptions[-itemid];
+    }
+    else
+    {
+        pri.src= '/Addins' + window.external.FetchImpression(itemid);
+      
+	    prt.innerText = window.external.FetchDescription(itemid);
+    }
+	
+	
+	
+	pri.style.visibility = 'visible';
+	prt.style.visibility = 'visible';
+	
+}
+function hideItem(itemid)
+{
+	var pri = document.getElementById('ProjectImage');
+	var prt = document.getElementById('ProjectText');
+	
+	pri.style.visibility = 'hidden';
+	prt.style.visibility = 'hidden';
+	
+}
+
+function FetchAddins()
+{
+    var ad = document.getElementById('Addins');
+   var addins = window.external.FetchAddins();
+   if(addins.length>0)
+    {
+      var ar = new Array();
+      ar = addins.split('|'); 
+      for(var x = 0; x < ar.length; x++)
+      {
+      
+        ad.innerHTML += '<a class="ProjectItem" id="Project"' + x + ' onclick="window.external.LoadAddin(' + x + '); return false;" href="#" onmouseover="showItem(' + x + ');" onmouseout="hideItem(' + x + ');" title="' + ar[x] + '">' + ar[x] + '</a><br />';
+      }
+    }
+   
+}
+    </script>
+
+</head>
+<body onload="FetchAddins()">
+    <div id="ProjectItems">
+        <p>
+            <a class="ProjectItem" id="BlankProject" title="Blank project." onclick="window.external.ChangeWorkbench('blank'); return false;"
+                href="#" onmouseover="showItem(-1);" onmouseout="hideItem(-1);">Blank project</a><br />            
+               <span id="Addins"></span> 
+        </p>
+    </div>
+    <div id="ProjectDescription">
+        <img src="" alt="Project sample image" name="ProjectImage" class="ProjectImage" id="ProjectImage" /><br />
+        <br />
+        <span id="ProjectText" class="ProjectText"></span>
+    </div>
+    <div id="InfoItems">
+        <table width="100%" border="0" cellpadding="5">
+            <tr>
+                <td width="48%">
+                    <a href="http://www.orbifold.net/netron/" class="ProjectItem">The Orbifold</a>
+                </td>
+                <td width="52%" class="ProjectItem">
+                    <a href="http://www.orbifold.net/netron/download/GPL.php">License Agreement</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="/Guide/" class="ProjectItem">Diagramming Guide </a>
+                </td>
+                <td>
+                    <a href="/Guide/API/" class="ProjectItem">Diagramming Library API </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;</td>
+                <td>
+                    &nbsp;</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

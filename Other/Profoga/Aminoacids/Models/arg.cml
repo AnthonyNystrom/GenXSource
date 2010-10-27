@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSpy v2006 U (http://www.altova.com) by George Schizas (TerraSoft) -->
+<molecule xmlns="http://www.xml-cml.org/schema/cml2/core" id="arg.pdb">
+	<atomArray>
+		<atom id="a1" elementType="N" x3="0.735000" y3="2.219000" z3="1.389000" role="peptideN"/>
+		<atom id="a2" elementType="C" x3="2.189000" y3="2.285000" z3="1.274000" role="skeletonC"/>
+		<atom id="a3" elementType="C" x3="2.600000" y3="3.010000" z3="0.014000" role="peptideC"/>
+		<atom id="a4" elementType="O" x3="1.774000" y3="3.463000" z3="-0.774000" role="peptideO"/>
+		<atom id="a5" elementType="C" x3="2.760000" y3="0.838000" z3="1.308000"/>
+		<atom id="a6" elementType="C" x3="4.302000" y3="0.731000" z3="1.473000"/>
+		<atom id="a7" elementType="C" x3="4.786000" y3="-0.729000" z3="1.460000"/>
+		<atom id="a8" elementType="N" x3="6.267000" y3="-0.770000" z3="1.642000"/>
+		<atom id="a9" elementType="C" x3="7.007000" y3="-1.874000" z3="1.673000"/>
+		<atom id="a10" elementType="N" x3="6.518000" y3="-3.074000" z3="1.538000"/>
+		<atom id="a11" elementType="N" x3="8.285000" y3="-1.752000" z3="1.846000"/>
+		<atom id="a12" elementType="H" x3="0.115000" y3="2.627000" z3="0.682000" role="dehydrateNitrogenH"/>
+		<atom id="a13" elementType="H" x3="0.273000" y3="1.763000" z3="2.183000" role="peptideH"/>
+		<atom id="a14" elementType="H" x3="2.575000" y3="2.864000" z3="2.134000" role="skeletonH"/>
+		<atom id="a15" elementType="H" x3="2.277000" y3="0.276000" z3="2.132000"/>
+		<atom id="a16" elementType="H" x3="2.438000" y3="0.307000" z3="0.388000"/>
+		<atom id="a17" elementType="H" x3="4.812000" y3="1.292000" z3="0.662000"/>
+		<atom id="a18" elementType="H" x3="4.604000" y3="1.231000" z3="2.416000"/>
+		<atom id="a19" elementType="H" x3="4.269000" y3="-1.296000" z3="2.264000"/>
+		<atom id="a20" elementType="H" x3="4.490000" y3="-1.205000" z3="0.499000"/>
+		<atom id="a21" elementType="H" x3="6.806000" y3="0.094000" z3="1.761000"/>
+		<atom id="a22" elementType="H" x3="7.154000" y3="-3.872000" z3="1.573000"/>
+		<atom id="a23" elementType="H" x3="5.505000" y3="-3.100000" z3="1.403000"/>
+		<atom id="a24" elementType="H" x3="8.649000" y3="-0.803000" z3="1.949000"/>
+		<atom id="a25" elementType="H" x3="8.837000" y3="-2.612000" z3="1.868000"/>
+		<atom id="a26" elementType="O" x3="4.007000" y3="3.160000" z3="-0.192000" role="dehydrateCarbonO"/>
+		<atom id="a27" elementType="H" x3="4.448000" y3="3.496000" z3="0.676000" role="dehydrateCarbonH"/>
+	</atomArray>
+	<bondArray>
+		<bond atomRefs2="a1 a2" order="1"/>
+		<bond atomRefs2="a2 a3" order="1"/>
+		<bond atomRefs2="a2 a5" order="1"/>
+		<bond atomRefs2="a2 a14" order="1"/>
+		<bond atomRefs2="a3 a4" order="2"/>
+		<bond atomRefs2="a5 a6" order="1"/>
+		<bond atomRefs2="a5 a15" order="1"/>
+		<bond atomRefs2="a5 a16" order="1"/>
+		<bond atomRefs2="a6 a7" order="1"/>
+		<bond atomRefs2="a6 a17" order="1"/>
+		<bond atomRefs2="a6 a18" order="1"/>
+		<bond atomRefs2="a7 a8" order="1"/>
+		<bond atomRefs2="a7 a19" order="1"/>
+		<bond atomRefs2="a7 a20" order="1"/>
+		<bond atomRefs2="a8 a9" order="1"/>
+		<bond atomRefs2="a8 a21" order="1"/>
+		<bond atomRefs2="a9 a10" order="1"/>
+		<bond atomRefs2="a9 a11" order="2"/>
+		<bond atomRefs2="a10 a22" order="1"/>
+		<bond atomRefs2="a10 a23" order="1"/>
+		<bond atomRefs2="a11 a24" order="1"/>
+		<bond atomRefs2="a11 a25" order="1"/>
+		<bond atomRefs2="a26 a3" order="1"/>
+		<bond atomRefs2="a26 a27" order="1"/>
+		<bond atomRefs2="a12 a1" order="1"/>
+		<bond atomRefs2="a1 a13" order="1"/>
+	</bondArray>
+</molecule>

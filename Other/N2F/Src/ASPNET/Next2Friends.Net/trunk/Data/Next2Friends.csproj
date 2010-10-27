@@ -1,0 +1,194 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AC0A01A4-A54C-4DB3-A16D-720FCBA5FDFF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Next2Friends.Data</RootNamespace>
+    <AssemblyName>Next2Friends.Data</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CookComputing.XmlRpcV2, Version=2.3.2.0, Culture=neutral, PublicKeyToken=a7d6e17aa302004d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CrossPoster\CookComputing.XmlRpcV2.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Client, Version=1.1.4.0, Culture=neutral, PublicKeyToken=04a59ca9b0273830, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CrossPoster\Google.GData.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Microsoft.Practices\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Microsoft.Practices\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder, Version=1.0.51206.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Microsoft.Practices\Microsoft.Practices.ObjectBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="Next2Friends.CrossPoster.Library, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CrossPoster\Next2Friends.CrossPoster.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BadCredentialsException.cs" />
+    <Compile Include="Data\AskAFriend.cs" />
+    <Compile Include="Data\AskAFriendResponse.cs" />
+    <Compile Include="Data\Banner.cs" />
+    <Compile Include="Data\Business.cs" />
+    <Compile Include="Data\Chat.cs" />
+    <Compile Include="Data\ChatMessage.cs" />
+    <Compile Include="Data\ChatOnline.cs" />
+    <Compile Include="Data\ColumnFieldList.cs" />
+    <Compile Include="Data\BlogEntry.cs" />
+    <Compile Include="Data\Comment.cs" />
+    <Compile Include="Data\CommunityView.cs" />
+    <Compile Include="Data\ContactImport.cs" />
+    <Compile Include="Data\ContentView.cs" />
+    <Compile Include="Data\Dashboard.cs" />
+    <Compile Include="Data\Favourite.cs" />
+    <Compile Include="Data\FeedItem.cs" />
+    <Compile Include="Data\ForgottenPassword.cs" />
+    <Compile Include="Data\IMS.cs" />
+    <Compile Include="Data\InviteClick.cs" />
+    <Compile Include="Data\IPLocation.cs" />
+    <Compile Include="Data\Log.cs" />
+    <Compile Include="Data\LoggedIn.cs" />
+    <Compile Include="Data\MemberAccount.cs" />
+    <Compile Include="Data\MemberAccountActivity.cs" />
+    <Compile Include="Data\MemberBlogSettings.cs" />
+    <Compile Include="Data\MemberComment.cs" />
+    <Compile Include="Data\EmailMessage.cs" />
+    <Compile Include="Data\FavouriteMember.cs" />
+    <Compile Include="Data\FeaturedMember.cs" />
+    <Compile Include="Data\Friend.cs" />
+    <Compile Include="Data\FriendRequest.cs" />
+    <Compile Include="Data\FriendTag.cs" />
+    <Compile Include="Data\LiveBroadcast.cs" />
+    <Compile Include="Data\MemberBlock.cs" />
+    <Compile Include="Data\Channel.cs" />
+    <Compile Include="Data\AskAFriendPhoto.cs" />
+    <Compile Include="Data\AjaxAAFComment.cs" />
+    <Compile Include="Data\IsoCountry.cs" />
+    <Compile Include="Data\MemberSettings.cs" />
+    <Compile Include="Data\MemberStatusText.cs" />
+    <Compile Include="Data\MP3Upload.cs" />
+    <Compile Include="Data\Nspot.cs" />
+    <Compile Include="Data\NSpotComment.cs" />
+    <Compile Include="Data\NSpotMember.cs" />
+    <Compile Include="Data\PhotoCollection.cs" />
+    <Compile Include="Data\Member.cs" />
+    <Compile Include="Data\Photo.cs" />
+    <Compile Include="Data\PhotoComment.cs" />
+    <Compile Include="Data\PhotoTag.cs" />
+    <Compile Include="Data\Reporting.cs" />
+    <Compile Include="Data\Stats.cs" />
+    <Compile Include="Data\SubscriptionMember.cs" />
+    <Compile Include="Data\TagCloudItem.cs" />
+    <Compile Include="Data\Trace.cs" />
+    <Compile Include="Data\Video.cs" />
+    <Compile Include="Data\VideoEncoderQueue.cs" />
+    <Compile Include="Data\VideoTag.cs" />
+    <Compile Include="Data\Vote.cs" />
+    <Compile Include="Logic\AskAFriend.cs" />
+    <Compile Include="Logic\Category.cs" />
+    <Compile Include="Logic\Member.cs" />
+    <Compile Include="Data\AutoGenerated.cs" />
+    <Compile Include="Data\Message.cs" />
+    <Compile Include="Logic\ParalellServer.cs" />
+    <Compile Include="Logic\PersonalProfile.cs" />
+    <Compile Include="Logic\Photo.cs" />
+    <Compile Include="Data\AjaxMemberComment.cs" />
+    <Compile Include="Data\NSpotPhoto.cs" />
+    <Compile Include="Logic\Referral.cs" />
+    <Compile Include="Logic\ResourceFile.cs" />
+    <Compile Include="Logic\RijndaelEncryption.cs" />
+    <Compile Include="Logic\WaterMark.cs" />
+    <Compile Include="Misc\DESEncryption.cs" />
+    <Compile Include="Misc\EXIFextractor.cs" />
+    <Compile Include="Misc\MobileAskAFriendResponse.cs" />
+    <Compile Include="Data\NspotVideo.cs" />
+    <Compile Include="Misc\OSRegistry.cs" />
+    <Compile Include="Misc\RegexPatterns.cs" />
+    <Compile Include="Misc\ResourceFile.cs" />
+    <Compile Include="Misc\Friend.cs" />
+    <Compile Include="Misc\SafeHTML.cs" />
+    <Compile Include="Misc\SEOSiteMap.cs" />
+    <Compile Include="Misc\TimeDistance.cs" />
+    <Compile Include="Misc\translation.cs" />
+    <Compile Include="Misc\UniqueID.cs" />
+    <Compile Include="Misc\WebNSpot.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Logic\Video.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

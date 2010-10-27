@@ -1,0 +1,221 @@
+﻿.settings_form {
+	background: url(images/signup-middle.gif) repeat-y;
+	padding: 10px 10px 10px 10px;
+}
+
+.settings_form .top {
+	background: url(images/signup-top.gif) no-repeat;
+	padding-top: 3px;
+}
+.settings_form .bottom {
+	background: url(images/signup-bottom.gif) no-repeat left bottom;
+	padding-top: 3px;
+}
+
+
+.form_btn {
+	cursor:pointer;
+}
+
+#txtNewComment {
+	width:626px;
+}
+
+#commentSubmit {
+	float:right;
+	margin:10px 0px 10px 10px;
+}
+
+#commentReset {
+	float:right;
+	margin:10px 0px 10px 10px;
+}
+.pagenav {
+	text-align:right;
+	background-image:none;
+	padding-top:10px;
+	padding-bottom:10px;
+	border:solid #cccccc;
+	border-width:1px 0px;
+	margin-left:20px;
+	margin-right:20px;
+}
+.aaf_answers {
+width: 90%;
+}
+.aaf_answers li {
+float: none;
+border:none;
+margin: 0 0 0 0px;
+}
+
+#corner {
+background:transparent url(images/corner.gif) no-repeat scroll 0%;
+height:99px;
+left:0pt;
+position:absolute;
+text-indent:-900%;
+top:0pt;
+width:103px;
+}
+
+
+
+/* nspots start
+--------------------------------------------------------------------------------- */
+.nspot_list {
+	background: #fff;
+	border-top: solid 1px #d9d9d9;
+	padding: 10px;
+}
+.nspot_list .profile_pic {
+	width: 173px;
+	float: left;
+	margin-right: 15px;
+}
+.nspot_name {
+	font-size: 120%;
+	font-weight: bold;
+	padding: 0 0 5px;
+}
+.nspot_list .nspot_data {
+	width: 465px;
+	float: left;
+}
+.nscol1 {
+	float: left;
+	width: 180px;
+}
+.nscol2 {
+	float: right;
+	width: 230px;
+	color: #666666;
+}
+.nspot_actions {
+	list-style: none;
+	padding: 5px 0;
+	margin: 0;
+	width: 170px;
+	float: right;
+	background: #fcfad0;
+	border: solid 1px #ffe2b0;
+}
+.nspot_actions li {
+	padding: 0 10px;
+	margin: 0;
+}
+.nspot_actions a {
+	color: #622305;
+	padding: 4px 0 4px 20px;
+	display: block;
+}
+.nspot_actions .view_profile {
+	background: url(images/email-send.gif) no-repeat left center;
+}
+.nspot_actions .send_message {
+	background: url(images/email-send.gif) no-repeat left center;
+}
+.nspot_actions .send_instant {
+	background: url(images/email-send.gif) no-repeat left center;
+}
+.nspot_actions .forward {
+	background: url(images/user-check.gif) no-repeat left center;
+}
+.nspot_actions .block {
+	background: url(images/user-disabled.gif) no-repeat left center;
+	border-top: solid 1px #ffe2b0;
+	margin-top: 2px;
+	color: #CC0000;
+}
+
+/*===================================================================
+						STYLES ADDED BY ADRIAN
+===================================================================*/
+
+.extraPadding {
+	padding:20px;
+}
+
+.quarter {
+	width:25%;
+}
+
+div.leftFloater {
+	float:left;
+}
+
+	div.leftFloater input.checkBox{
+		margin-right:5px;
+	}
+	
+.allignRight {
+	text-align:right;
+}
+
+.allignCenter {
+	text-align:center;
+}
+
+.bottomSpace {
+	margin-bottom:20px;
+}
+
+/*-- trying to set up the inbox autocomplete dropdown --*/
+
+div.vm_rightcol {
+    position:relative;
+    top:0px;
+    left:0px;
+}
+
+div#Autocomplete {
+    top:25px;
+    left:17px;
+    background-color:#ffffff;
+}
+
+
+/*-- styles for the downloads page --*/
+
+div.phoneThumbnailBox {
+background-color: #ecf0f3;
+border: solid 1px #ccc;
+width:110px;
+height:140px;
+font-size:11px;
+float:left;
+margin:0px 7px 10px 0px;
+padding:5px 0px;
+text-align:center;
+}
+
+
+img.phoneThumbnail {
+	background-color:#ffffff;
+	padding:4px;
+	width:90px;
+	height:90px;
+	border:solid 1px #cccccc;
+	margin:0px auto 10px;
+}
+
+p.codeText {
+background-color:#ffffff;
+padding:10px;
+border:solid 1px #cccccc;
+font-family:"Courier New", Courier, monospace;
+font-size:12px;
+margin-bottom:20px;
+}
+
+
+
+ul.bulleted {
+list-style-type:none;
+}
+
+	ul.bulleted li {
+	background-image:url(images/profile-arrow-fw.gif);
+	background-position:0px 8px;
+	background-repeat:no-repeat;
+	}

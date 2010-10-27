@@ -1,0 +1,56 @@
+﻿<Canvas xmlns="http://schemas.microsoft.com/client/2007" 
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+				Width="1" Height="1">
+
+	<Canvas.Resources>
+
+		<Storyboard Name="highlight">
+			<DoubleAnimation To="1.0" Duration="0:0:0"
+											 Storyboard.TargetName="content"
+											 Storyboard.TargetProperty="Opacity"/>
+		</Storyboard>
+
+		<Storyboard Name="dim">
+			<DoubleAnimation To="0.5" Duration="0:0:0.5"
+											 Storyboard.TargetName="content"
+											 Storyboard.TargetProperty="Opacity"/>
+		</Storyboard>
+
+	</Canvas.Resources>
+
+	<Canvas.RenderTransform>
+		<TransformGroup>
+			<RotateTransform Name="angle" Angle="0" CenterX="0.5" CenterY="0.5"/>
+		</TransformGroup>
+	</Canvas.RenderTransform>
+
+	<Canvas.Triggers>
+		<EventTrigger RoutedEvent="Canvas.Loaded">
+			<BeginStoryboard>
+				<Storyboard>
+					<DoubleAnimation To="0.5" Duration="0:0:0.5"
+													 Storyboard.TargetName="content"
+													 Storyboard.TargetProperty="Opacity"/>
+				</Storyboard>
+			</BeginStoryboard>
+		</EventTrigger>
+	</Canvas.Triggers>
+
+	<Canvas Name="content" Opacity="0" Cursor="Hand">
+
+		<Ellipse Width="1" Height="1" Fill="#505050"/>
+
+		<Path Canvas.Left="0.3" Canvas.Top="0.25" Width="0.5" Height="0.5" Stretch="Fill" Fill="#FF187EE4">
+			<Path.Data>
+				<PathGeometry>
+					<PathFigure StartPoint="0,-1.1">
+						<LineSegment Point="0.1,-1" />
+						<LineSegment Point="0,-0.9" />
+					</PathFigure>
+				</PathGeometry>
+			</Path.Data>
+		</Path>
+
+	</Canvas>
+
+</Canvas>

@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Next2Friends.Soap2Bin", "Next2Friends.Soap2Bin\Next2Friends.Soap2Bin.csproj", "{210742E2-D2D8-41A4-AC2F-D4141A2F97F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Next2Friends.Soap2Bin.Interaction", "Next2Friends.Soap2Bin.Interaction\Next2Friends.Soap2Bin.Interaction.csproj", "{A3C5600F-F81D-4F8B-B8D5-861E5CBAD6CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Next2Friends.Soap2Bin.Core", "Next2Friends.Soap2Bin.Core\Next2Friends.Soap2Bin.Core.csproj", "{F891580B-9326-434C-91BA-DB94F1FA5524}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Next2Friends.Soap2Bin.Core.Tests", "Next2Friends.Soap2Bin.Core.Tests\Next2Friends.Soap2Bin.Core.Tests.csproj", "{775DE6BD-C2CB-48FA-B697-68FC794AA969}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B9BD84D2-6C59-4C44-A0DB-BC34B12B8239}"
+	ProjectSection(SolutionItems) = preProject
+		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
+		Soap2Bin.vsmdi = Soap2Bin.vsmdi
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Soap2Bin.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{210742E2-D2D8-41A4-AC2F-D4141A2F97F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{210742E2-D2D8-41A4-AC2F-D4141A2F97F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{210742E2-D2D8-41A4-AC2F-D4141A2F97F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{210742E2-D2D8-41A4-AC2F-D4141A2F97F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3C5600F-F81D-4F8B-B8D5-861E5CBAD6CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3C5600F-F81D-4F8B-B8D5-861E5CBAD6CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3C5600F-F81D-4F8B-B8D5-861E5CBAD6CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3C5600F-F81D-4F8B-B8D5-861E5CBAD6CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F891580B-9326-434C-91BA-DB94F1FA5524}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F891580B-9326-434C-91BA-DB94F1FA5524}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F891580B-9326-434C-91BA-DB94F1FA5524}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F891580B-9326-434C-91BA-DB94F1FA5524}.Release|Any CPU.Build.0 = Release|Any CPU
+		{775DE6BD-C2CB-48FA-B697-68FC794AA969}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{775DE6BD-C2CB-48FA-B697-68FC794AA969}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{775DE6BD-C2CB-48FA-B697-68FC794AA969}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{775DE6BD-C2CB-48FA-B697-68FC794AA969}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

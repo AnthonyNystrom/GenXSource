@@ -1,0 +1,17 @@
+/*
+============================================================================
+ Name        : Aaf.rss
+ Author      : Vitaly Vinogradov
+ Version     :
+ Copyright   : (c) Next2Friends, 2008
+============================================================================
+*/
+
+PRJ_PLATFORMS
+WINSCW ARMV5 GCCE
+
+PRJ_MMPFILES
+
+gnumakefile ..\help\build_help.mk
+
+Aaf.mmp
