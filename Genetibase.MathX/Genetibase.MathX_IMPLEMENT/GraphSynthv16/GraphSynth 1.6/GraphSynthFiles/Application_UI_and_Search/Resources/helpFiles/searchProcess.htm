@@ -1,0 +1,404 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+    <title>Search Process</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+    <link rel="stylesheet" type="text/css" href="gsStyle1.css" />
+    <style type="text/css">
+    h2
+	{text-indent:0pt;
+	text-align:left;
+	font-family:Georgia;
+	font-size:15.0pt;
+	color:black;
+	font-weight:bold;}
+.style6 {text-indent: 0pt;
+	line-height: 121%;
+	text-align: left;
+	font-family: Georgia;
+	font-size: 11.0pt;
+	color: black;}
+.style7 {text-indent: 0pt;
+	line-height: 121%;
+	text-align: center;
+	font-family: Arial;
+	font-size: 9.0pt;
+	color: black;}
+    .style8 {
+	text-align: center;
+}
+.style9 {
+	font-family: Arial;
+	font-size: xx-small;
+	text-indent: 0pt;
+	line-height: 121%;
+	text-align: center;
+	color: black;
+}
+.style10 {
+	font-size: x-small;
+}
+    .style11 {
+	font-family: "Courier New", Courier, monospace;
+}
+    .style12 {
+	color: teal;
+}
+    .style13 {
+	font-weight: normal;
+}
+    .style14 {
+	text-indent: 0pt;
+	line-height: 121%;
+	text-align: left;
+	font-family: Georgia;
+	font-size: small;
+	color: black;
+}
+    </style>
+</head>
+<body bgcolor="#FFFFFF">
+    <span style='position: absolute; z-index: 6; left: 163px; top: 2229px; width: 667px;
+        height: 216px'>
+        <p class="MsoNormal">
+            <span lang="en-US" style='font-size: 10.0pt; line-height: 121%; ' class="style11">
+                Generation.</span><span lang="en-US" style='font-size: 10.0pt; line-height: 121%;
+                    color: teal;' class="style11">randomChoose</span><span lang="en-US" style='font-size: 10.0pt;
+                        line-height: 121%; color: black;' class="style11"> 
+			GenerationApproach = </span>
+			<span lang="en-US" style='font-size: 10.0pt; line-height: 121%; color: blue;' class="style11">
+			new</span><span lang="en-US" style='font-size: 10.0pt; line-height: 121%;
+                                color: black;' class="style11"> Generation.</span><span lang="en-US"
+                                    style='font-size: 10.0pt; line-height: 121%; color: teal;' class="style11">randomChoose</span><span class="style11"><font SIZE="2"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (</font><font SIZE="2" COLOR="#008080">Program</font></span><font SIZE="2"><span class="style11">.seed,
+			</span></font><span class="style11"><font SIZE="2" COLOR="#008080">
+			Program</font><font SIZE="2">.rulesets, </font>
+			<font SIZE="2" COLOR="#0000ff">new</font><font SIZE="2"> </font>
+			<font SIZE="2" COLOR="#0000ff">int</font><font SIZE="2">[1] { 50 },
+			</font><font SIZE="2" COLOR="#0000ff">false</font></span><font SIZE="2"><span class="style11">);</span></p>
+	</font><font SIZE="2">
+	<p><span class="style11">Evaluation.</span></font><span class="style11"><font SIZE="2" COLOR="#008080">EvaluateSwirls</font><font SIZE="2"> 
+	EvaluationApproach = </font><font SIZE="2" COLOR="#0000ff">new</font><font SIZE="2"> 
+	Evaluation.</font><font SIZE="2" COLOR="#008080">EvaluateSwirls</font></span><font SIZE="2"><span class="style11">();</span></p>
+	<p><span class="style11">Guidance.</span><span class="style11"><font SIZE="2" COLOR="#008080">DoNothingButDisplay</font><font SIZE="2"> 
+	GuidanceApproach = </font><font SIZE="2" COLOR="#0000ff">new</font><font SIZE="2">Guidance.</font><font SIZE="2" COLOR="#008080">DoNothingButDisplay</font></span><font SIZE="2"><span class="style11">();</span></font><span lang="en-US" style='font-size: 10.0pt; line-height: 121%;
+                    color: black;' class="style11">
+                </span><span lang="en-US" style='font-size: 10.0pt; line-height: 121%;
+                    font-family: "Courier New"; color: black;'>
+                    <br>
+                </span></p>
+        <p class="style6">
+            <span lang="en-US">The initiation of these routines is done at the beginning of the
+                process in an attempt to make GraphSynth modular for a wide range of applications. 
+			Throughout the search process, one can take advantage of a number of 
+			fields in the <span class="style12">Program</span> and
+			<span class="style12">SearchIO</span> classes. These are listed 
+			below for your reference:</span></p>
+<p class="style6">
+            <strong><span class="style12">Program</span>.settings</strong> :
+The class globalSettings is in the MainFormsAndSettings directory. These values
+         	are loaded in from the GraphSynthSettings.config file. 
+	<p class="style6">
+    <span style='width: 667px;
+        height: 216px'>
+        	<font SIZE="2"><strong><span class="style12">Program</span>.mainForm</strong> 
+			:&nbsp; </font>
+        </span>&nbsp;this is the reference to the mainForm - the top/largest GraphSynth Window. 
+			It may be difficult to reference objects from a search process, as 
+			Visual Studio will view this as a cross threading operation (which 
+			apparently is a bad thing. See the SafeInvokeHelper class in 
+			Represenation-&gt;XMLandIO for a solution)<p class="style6">
+            <strong><span class="style12">Program</span>.seed</strong> : This is 
+			the seed graph (of class <span class="style12">designGraph</span>) 
+			indicated by the &quot;Set Active as Seed&quot; drop-down on the Design menu 
+			item or through the settings. It represents the <font SIZE="2">top 
+			of the search tree.</font><p class="style6">
+    <span style='width: 667px;
+        height: 216px'>
+        	<font SIZE="2"><strong><span class="style12">Program</span>.rulesets</strong> 
+			: An array of class <span class="style12">ruleSet</span> of length 
+			Program.settings.numOfRuleSets. These can be set in the same manner 
+			as <span class="style12">Program</span>.seed.</font></span><p class="style14">
+    <em>(The following can be called from either static class
+	<span class="style12">SearchIO</span> or <span class="style12">Program</span>. 
+	Anything written in the searchProcess.cs file will likely already be in the
+	<span class="style12">Program</span> class and the property can be reached 
+	without specifying the class. However, if you are in another project (i.e. 
+	within <strong>Evaluate</strong>) you will need to use <span class="style12">
+	SearchIO</span> prefix, as you will not be able to see the
+	<span class="style12">Program</span> class.)</em><p class="style6">
+            <span style='width: 667px;
+        height: 216px'>
+        	<font SIZE="2"><strong><span class="style12">SearchIO</span>.output
+			<span class="style13">or</span> <span class="style12">Program</span>.output</strong> 
+			: Use the various overloads of this statement to print messages to 
+			the sidebar text in the main form of GraphSynth. While a 
+			verbosityLimit is not mandatory, it is a &quot;nice to have&quot;, take the 
+			time to put something here.</font></span><p class="style6">
+    <span style='width: 667px;
+        height: 216px'>
+        	<font SIZE="2"><strong><span class="style12">SearchIO</span>.processNum</strong>
+			<strong><span class="style13">or</span> <span class="style12">
+			Program</span>.processNum</strong> : A read-only integer that simply 
+			lists what search process one is currently on. Not really that 
+			useful, during search process. The integer simply increments for 
+			each new search started in a single run of GraphSynth.</font></span><p class="style6">
+    <span style='width: 667px;
+        height: 216px'>
+    <span style='width: 667px;
+        height: 216px'>
+        	<font SIZE="2"><strong><span class="style12">SearchIO</span>.</strong></font></span><font SIZE="2"><strong>terminateRequest</strong>
+			<strong><span class="style13">or</span> <span class="style12">
+			Program</span>.terminateRequest</strong> : A read-only </font>
+        </span>Boolean that indicates true when the user has clicked the stop 
+			button on the SearchProcessController.<p class="style6">
+    <span style='width: 667px;
+        height: 216px'>
+    <span style='width: 667px;
+        height: 216px'>
+        	<font SIZE="2"><strong><span class="style12">SearchIO</span>.</strong></font></span><font SIZE="2"><strong>timeInterval</strong>
+			<strong><span class="style13">or</span> <span class="style12">
+			Program</span>.timeInterval</strong> : A read-only
+			<span class="style12">TimeSpan</span> (a fundamental C# class)object 
+			that indicates how long the search has been going on.</font></span> 
+<p class="style6">
+    <span style='width: 667px;
+        height: 216px'>
+    <span style='width: 667px;
+        height: 216px'>
+        	<font SIZE="2"><strong><span class="style12">SearchIO</span>.iteration</strong>
+			<strong><span class="style13">or</span> <span class="style12">
+			Program</span>.</strong></font></span><font SIZE="2"><strong>iteration</strong> 
+			: The number of iterations that have occured in the process. It can 
+			be read or set using this. The SearchProcessController will reflect 
+			the value in the first box.</font></span><p class="style6">
+    <span style='width: 667px;
+        height: 216px'>
+    <span style='width: 667px;
+        height: 216px'>
+        	<font SIZE="2"><strong><span class="style12">SearchIO</span>.miscObject</strong>
+			<strong><span class="style13">or</span> <span class="style12">
+			Program</span>.</strong></font></span><font SIZE="2"><strong>miscObject</strong>: 
+			Any object that the researcher wants to store. It will be converted 
+			to a string and shown in the SearchProcessController.</font></span>&nbsp;</span><span style='position: absolute; z-index: 5; left: 522px; top: 1587px;
+            width: 262px; height: 481px'><p class="style6">
+    <p class="style6">
+    <img width="262" height="481" src="images/flowchart.png">
+            <p class="style7">
+                <span lang="en-US">Figure 2: The Representation is accomplished by the seed, and rule
+                    set; and the Generation by the R-&gt;C-&gt;A cycle. What remains in the search process
+                    is some method to evaluate the quality of candidate graphs (classes and functions
+                    to be stored in 3.Evaluation), and methods to learn from these results to improve
+                    the next generation (classes and functions to be stored in 4.Guidance). &nbsp;</span></p>
+        </span>
+<span style='position: absolute; z-index: 3; left: 197px; top: 1593px; width: 321px;
+            height: 639px'>
+            <p class="style6">
+                <span lang="en-US">information about the progress of a long operation. However, such
+                    commands can greatly slow down the processing. By dynamically setting how verbose we
+                    want the search process to be, we can get the information we want when we need it.
+                    The </span>
+				<span lang="en-US" style='font-family: "Courier New"; color: teal;'>
+				SearchIO</span><span
+                        lang="en-US">.</span><span lang="en-US" style='font-family: "Courier New";'>output</span><span
+                            lang="en-US"> function can be invoked with an object (usually a string) to print
+                            and a </span><span lang="en-US" style='font-family: Georgia; font-style: italic;'>verbosity
+                                limit</span><span lang="en-US">, which is an integer from 0 to 4. If the verbosity limit
+                                    is set to 0, then the object will be printed all the time even for verbosity set
+                                    to “lowest.” If it is set to 4, then it will only print when verbosity is set to
+                                    “highest.”</span></p>
+            <h2>
+                <span lang="en-US">Writing a Custom Search Process</span></h2>
+            <p class="style6">
+                <span lang="en-US">As discussed in the introduction, one may want to automate the creation
+                    of candidate solutions. This custom code can be written in under the function </span>
+                <span lang="en-US" style='font-family: "Courier New"; color: teal;'>Program</span><span
+                    lang="en-US">. </span><span lang="en-US" style='font-family: "Courier New";'>runSearchProcess</span><span
+                        lang="en-US">() in the file searchProcess.cs. In fact, any C# code can be written here. One may want to invoke
+                        functions or classes from another Visual Studio project, or invoke additionally GUI forms.</span></p>
+<p class="style6">
+                &nbsp;</p>
+            <p class="style6">
+                <span lang="en-US">In the example code, the swirl seed and rule set are loaded (which
+                    encapsulates the </span><span lang="en-US" style='font-family: Georgia; color: teal;'>
+                        representation</span><span lang="en-US">) , and we create the </span><span lang="en-US"
+                            style='font-family: Georgia; color: blue;'>generate</span><span lang="en-US">, </span>
+                <span lang="en-US" style='font-family: Georgia; color: blue;'>evaluate </span><span
+                    lang="en-US">and </span><span lang="en-US" style='font-family: Georgia; color: blue;'>
+                        guide </span><span lang="en-US">methods for the search process:</span></p>
+            </div></span><span style='position: absolute; z-index: 13; left: 191px; top: 152px;
+                width: 557px; height: 32px' id="pageTitle">
+                <div style="position: absolute; left: 5px; top: 77px; width: 316px; height: 292px;
+                    z-index: 10" id="layer1">
+                    <img alt="design drop down menu items" src="images/designDropDown.png" width="354"
+                        height="269">
+                    <p class="MsoNormal" style="width: 354px">
+                        <span lang="en-US" style="font-size: 8.0pt; font-family: Tahoma;">Figure 1: Drop-down
+                            menu items for the design window.</span></p>
+                </div>
+            </span>
+    <div style="position: absolute; left: 579px; top: 1005px; width: 233px; height: 272px;
+        z-index: 13" id="layer2">
+        <img alt="search process controller" src="images/searchProcessController.png" width="232"
+            height="178">
+        <p class="style7">
+            <span lang="en-US">Figure 2: The Search Process Controller allows on to dynamically
+                control aspects of the search process. It is inspired by the transport bar of computer
+                music applications</span><a href="http://steinberg.net/35+M52087573ab0.html"><span
+                    lang="en-US" style="font-family: Arial; text-decoration: underline;">.</span></a><span
+                        lang="en-US">_</span></p>
+    </div>
+    <span style='position: absolute; z-index: 14; left: 195px; top: 525px; width: 527px;
+        height: 1126px'>
+        <p class="style6">
+            <span lang="en-US">The Design drop down menu in GraphSynth provides functions to test
+                and synthesize new graphs from the grammar rule sets described in earlier pages
+                (</span><a href="graphs.htm"><span lang="en-US" style='font-family: Georgia; text-decoration: underline;'>graphs</span></a><span
+                    lang="en-US">, </span><a href="grammars.htm"><span lang="en-US" style='font-family: Georgia;
+                        text-decoration: underline;'>grammars</span></a><span lang="en-US">, </span>
+            <a href="ruleSets.htm"><span lang="en-US" style='font-family: Georgia; text-decoration: underline;'>
+                rule sets</span></a><span lang="en-US">). Firstly, the pane has commands to set the
+                    active seed and the first three active rule sets. These can also be set in the GraphSynthSettings.config
+                    file, through the settings drop-down under File,&nbsp; so that they are established on 
+			beginning the program (this proves to be a great
+                    time-saver!). The GUI will only allow one to assign the first three rule sets; however,
+                    if you want more, you will need to make the assignments in GraphSynthSettings.config
+                    or even during </span><span lang="en-US" style='font-family: "Courier New"; color: teal;'>
+                        Program</span><span lang="en-US">.</span><span lang="en-US" style='font-family: "Courier New";'>runSearchProcess</span><span
+                            lang="en-US">(). </span>
+        </p>
+        <p class="style6">
+            <span lang="en-US">This is followed by the “Run Search Process” item, which is the main
+                entry point for a search process that one may implement (more on this in a second).
+                The bottom three items allow for the testing or rules, rule sets, and seeds. The
+                “Recognize—&gt;User Choose—&gt;Apply” item invokes a dialog to choose the rules
+                by hand. Within the options presented in that dialog, one can double-click a location
+                to see what subgraph the rule is applying to. The “Recognize—&gt; Random Choose—&gt;Apply”
+                item will continuously call random options on the seed until the process stops (stops
+                by encountering a “Stop” in one of the </span><a href="generation.htm"><span lang="en-US"
+                    style='font-family: Georgia; text-decoration: underline;'>5 generation exits</span></a><span
+                        lang="en-US">). Additionally the gray box that is labeled “#steps” can be changed
+                        to a set a integers that will be assigned to the generation cycle limits for each
+                        rule set (see </span><a href="generation.htm"><span lang="en-US" style='font-family: "Courier New";
+                            text-decoration: underline;'>int[] maxNumOfCalls</span></a><span lang="en-US">). For
+                                example by replacing “#steps” with “4, 5 12”, the generation process will be invoked
+                                with set </span><span lang="en-US" style='font-family: "Courier New";'>maxNumOfCalls
+                                </span><span lang="en-US">to [4, 5, 12] (most common separators such as comma and space
+                                    can be used).</span></p>
+        <h2>
+            <span lang="en-US">Search Process Controller</span></h2>
+        <p class="style6">
+            <span lang="en-US">When any of these lower items are clicked, a<br>
+                small controller window appears (often it is<br>
+                hidden for user and random testing). The<br>
+                controller allows one to change how the search<br>
+                process is executing. The snapshot to the right<br>
+                was taken while the process was executing. Notice<br>
+                that the “Play” button is disabled since the<br>
+                process is already in operation. The process can<br>
+                be paused, stopped , or aborted from this point.<br>
+                Pressing the “Stop” button will send a request to
+                <br>
+                the process. This is to allow the process to end
+                <br>
+                and still retain useful results. It will not always<br>
+                function if the search process is using the
+                <br>
+                computational resources elsewhere. Thus as a
+                <br>
+                last resort, the “Abort” button will attempt to
+                <br>
+                kill the thread that the search process is running on.</span></p>
+        <p class="style6">
+            <span lang="en-US">In addition to these button, there are three displays that show pertinent
+                information about the process. The time is implemented as part of the controller;
+                it ‘pings’ the thread the search process is on in specific intervals. The rate at
+                which it pings is based on the verbosity setting (described below). The top two
+                displays shown the iterations and a miscellaneous field. These are set in the search
+                process by setting the </span><span lang="en-US" style='font-family: "Courier New";'>
+                    iteration </span><span lang="en-US">and </span><span lang="en-US" style='font-family: "Courier New";'>
+                        miscObject </span><span lang="en-US">properties of the main Program.cs. At the bottom
+                            one can set the </span><span lang="en-US" style='font-family: Georgia; font-style: italic;'>
+                                priority </span><span lang="en-US">and </span><span lang="en-US" style='font-family: Georgia;
+                                    font-style: italic;'>verbosity </span><span lang="en-US">for the search process. The
+                                        computational processes in GraphSynth run on separate threads, and a thread can
+                                        be given a priority over other threads. Set this high if you want to speed up the
+                                        process but do not mind it slowly down other processes 
+			including the main thread (thus making GraphSynth appear as if it 
+			has locked up!). The verbosity is a highly
+                                        useful UI that allows the user to adjust how much text is being </span>
+            <span lang="en-US" style='font-family: Georgia; font-style: italic;'>output </span>
+            <span lang="en-US">by the process. One is encouraged to implement many </span>
+			<span
+                lang="en-US" style='font-family: "Courier New"; color: teal;'>
+			SearchIO</span><span
+                    lang="en-US">.</span><span lang="en-US" style='font-family: "Courier New";'>output</span><span
+                        lang="en-US"> statements in a search </span>process to provide
+        </p>
+        </span>
+    <div style="position: absolute; width: 100px; height: 100px; z-index: 0; left: 6px;
+        top: 159px" id="backgroundGraph">
+        <img alt="" src="images/lightergrayBackGroundGraph.png" width="698" height="610">
+    </div>
+    <p class="MsoOrganizationName">
+        <span style='color: #FFFFFF; position: absolute; z-index: 11; left: 388px; top: 74px;
+            width: 166px; height: 25px' id="ADLab">Automated Design Lab </span>
+    </p>
+    <span style='position: absolute; z-index: 8; left: 8px; top: 15px; width: 510px;
+        height: 42px' id="orangeDots">
+        <img width="510" height="42" src="images/orangeDots.png">
+    </span><a href="http://www.engr.utexas.edu"><span style='position: absolute; z-index: 7;
+        left: 560px; top: 0px; width: 189px; height: 177px' id="UTCOEBreadcrumbs">
+        <img width="200" height="188" src="images/UTCOEemblem.jpg" /></span></a><span style='position: absolute;
+            z-index: 2; left: 1px; top: 72px; width: 759px; height: 22px' id="fatOrangeBar">
+            <img width="759" height="22" src="images/thickOrangeBarHoriz.png">
+        </span><span style='position: absolute; z-index: 10; left: 197px; top: 47px; width: 372px;
+            height: 25px' id="GSTitle">
+            <p class="MsoOrganizationName">
+                GraphSynth 1.6</p>
+        </span><span style='position: absolute; z-index: 16; left: 197px; top: 197px; width: 560px;
+            height: 3px' id="beforeContentBreak">
+            <img width="560" height="3" src="images/thinBlackBarHoriz.png">
+        </span>
+	<span style='position: absolute; z-index: 7; left: 201px; top: 3142px; width: 538px;
+            height: 4px' id="bottommostBar" class="style9">
+            <div class="style6">
+                <p class="style8">
+                    <img width="538" height="4" src="images/thinnerOrangeBarHoriz.png">
+                    <span class="style10">| <a href="index.htm">Home</a> | <a href="introMethod.htm">Methodology Overview</a>
+                    | <a href="graphs.htm">Graph Basics</a> | <a href="grammars.htm">Grammar Basics</a>
+                    | <a href="rule_recognition.htm">Grammars: Recognition</a> | <a href="rule_application.htm">
+                        Grammars: Application</a> | <a href="ruleSets.htm">Grammars: RuleSets</a> |
+                    <a href="generation.htm">Generation</a> | <a href="searchProcess.htm">Search Process</a>
+                    | <a href="navigating.htm">Navigating GraphSynth</a> | <a href="examples.htm">Examples</a>
+                    | <a href="download.htm">Download</a> |</span>
+                </p>
+            </div>
+        </span><span style='position: absolute; z-index: 1; left: 0px; top: 0px; width: 760px;
+            height: 10px' id="topmostBar">
+            <img width="760" height="10" src="images/thinOrangeBarHoriz.png" />
+        </span><span style='position: absolute; z-index: 3; left: 156px; top: 48px; width: 17px;
+            height: 18px' id="leftArrow">
+            <img width="17" height="18" src="images/orangeDotArrow.png" />
+        </span><span style='position: absolute; z-index: 4; left: 174px; top: 48px; width: 17px;
+            height: 18px' id="rightArrow">
+            <img width="17" height="18" src="images/orangeDotArrow.png" /></span><span style='position: absolute;
+                z-index: 12; left: 191px; top: 152px; width: 557px; height: 32px' id="pageTitle">
+                <p class="MsoTitle3">
+                    Search Process
+                </p>
+            </span><span style="position: absolute; left: 9px; top: 211px; width: 175px; height: 431px;
+                z-index: 100" id="navigation">
+                <li class="sideBarNav"><a href="index.htm">Home</a></li><li class="sideBarNav"><a
+                    href="introMethod.htm">Methodology Overview</a></li><li class="sideBarNav"><a href="graphs.htm">
+                        Graph Basics</a></li><li class="sideBarNav"><a href="grammars.htm">Grammar Basics</a></li><li
+                            class="sideBarNav"><a href="rule_recognition.htm">Grammars: Recognition</a></li><li
+                                class="sideBarNav"><a href="rule_application.htm">Grammars: Application</a></li><li
+                                    class="sideBarNav"><a href="ruleSets.htm">Grammars: RuleSets</a></li><li class="sideBarNav">
+                                        <a href="generation.htm">Generation</a></li><li class="sideBarNav"><a href="searchProcess.htm">
+                                            Search Process</a></li><li class="sideBarNav"><a href="navigating.htm">Navigating GraphSynth</a></li><li
+                                                class="sideBarNav"><a href="examples.htm">Examples</a></li><li class="sideBarNav"><a
+                                                    href="download.htm">Download</a></li>
+            </span>
+</body>
+</html>

@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="RootFinding.BisectionRootFinder" Collapsed="true">
+    <Position X="5.25" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <FileName>BisectionRootFinder.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <InheritanceLine Type="RootFinding.RootFinder" FixedFromPoint="true">
+      <Path>
+        <Point X="8.5" Y="3.685" />
+        <Point X="8.5" Y="3.95" />
+        <Point X="6.25" Y="3.95" />
+        <Point X="6.25" Y="4.25" />
+      </Path>
+    </InheritanceLine>
+  </Class>
+  <Class Name="RootFinding.BrentRootFinder" Collapsed="true">
+    <Position X="9.75" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <FileName>BrentRootFinder.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <InheritanceLine Type="RootFinding.RootFinder" FixedFromPoint="true">
+      <Path>
+        <Point X="8.5" Y="3.685" />
+        <Point X="8.5" Y="3.95" />
+        <Point X="10.75" Y="3.95" />
+        <Point X="10.75" Y="4.25" />
+      </Path>
+    </InheritanceLine>
+  </Class>
+  <Class Name="RootFinding.RootFinder">
+    <Position X="6.25" Y="1.5" Width="4.75" />
+    <TypeIdentifier>
+      <FileName>RootFinder.cs</FileName>
+      <HashCode>AggAAAAAQABAABAAEAAJAoIYQAAZAQEAAQIAABAgAAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="double_Accuracy" Hidden="true" />
+      <Field Name="m_Accuracy" Hidden="true" />
+      <Field Name="m_AccuracyNotReached" Hidden="true" />
+      <Field Name="m_BracketingFactor" Hidden="true" />
+      <Field Name="m_DefaultAccuracy" Hidden="true" />
+      <Field Name="m_f" Hidden="true" />
+      <Field Name="m_InadequatedAlgorithm" Hidden="true" />
+      <Field Name="m_InvalidRange" Hidden="true" />
+      <Field Name="m_NbIterDefaultMax" Hidden="true" />
+      <Field Name="m_NbIterMax" Hidden="true" />
+      <Field Name="m_Of" Hidden="true" />
+      <Field Name="m_RootNotBracketed" Hidden="true" />
+      <Field Name="m_RootNotFound" Hidden="true" />
+      <Field Name="m_xmax" Hidden="true" />
+      <Field Name="m_xmin" Hidden="true" />
+      <Method Name="Sign" Hidden="true" />
+      <Method Name="Solve" Hidden="true" />
+      <Method Name="Swap" Hidden="true" />
+    </Members>
+  </Class>
+  <Class Name="RootFinding.FalsePositionRootFinder" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <FileName>FalsePositionRootFinder.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <InheritanceLine Type="RootFinding.RootFinder" FixedFromPoint="true">
+      <Path>
+        <Point X="8.5" Y="1.5" />
+        <Point X="8.5" Y="1.13" />
+      </Path>
+    </InheritanceLine>
+  </Class>
+  <Class Name="RootFinding.NewtonRootFinder" Collapsed="true">
+    <Position X="9.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <FileName>NewtonRootFinder.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAEAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <InheritanceLine Type="RootFinding.RootFinder" FixedFromPoint="true">
+      <Path>
+        <Point X="8.5" Y="1.5" />
+        <Point X="8.5" Y="1.322" />
+        <Point X="10.75" Y="1.322" />
+        <Point X="10.75" Y="1.13" />
+      </Path>
+    </InheritanceLine>
+  </Class>
+  <Class Name="RootFinding.RidderRootFinder" Collapsed="true">
+    <Position X="7.5" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <FileName>RidderRootFinder.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <InheritanceLine Type="RootFinding.RootFinder" FixedFromPoint="true">
+      <Path>
+        <Point X="8.5" Y="3.685" />
+        <Point X="8.5" Y="4.25" />
+      </Path>
+    </InheritanceLine>
+  </Class>
+  <Class Name="RootFinding.SecantRootFinder" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <FileName>SecantRootFinder.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <InheritanceLine Type="RootFinding.RootFinder" FixedFromPoint="true">
+      <Path>
+        <Point X="8.5" Y="1.5" />
+        <Point X="8.5" Y="1.322" />
+        <Point X="6.25" Y="1.322" />
+        <Point X="6.25" Y="1.13" />
+      </Path>
+    </InheritanceLine>
+  </Class>
+  <Delegate Name="RootFinding.UnaryFunction" Collapsed="true">
+    <Position X="4.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>RootFinder.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+    </TypeIdentifier>
+  </Delegate>
+</ClassDiagram>

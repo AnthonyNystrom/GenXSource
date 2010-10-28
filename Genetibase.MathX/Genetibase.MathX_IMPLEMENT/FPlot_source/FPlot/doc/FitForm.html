@@ -1,0 +1,17 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<meta name="keywords" content="Fit functions to measurement data">
+<Title>Fit functions to measurement data</Title>
+</HEAD>
+<BODY>
+<h1>Fit functions to measurement data</h1>
+<img src="FitForm.png"><br>
+<br>
+In this dialogbox you can fit functions to measurement data. In the two combo-boxes at the top you can select the function and the data. Below you can select a fit-algorithm. There are three algorithms implemented, Levenberg-Marquardt, Nelder & Mead and Simulated Annealing. The Levenberg-Marquardt algorithm is faster if your function provides <a href="FunctionForm.html#derivativeinfo">derivative information</a>. If you omit the derivative information, the algorithm computes numerical derivatives. The other algorithms do not use derivative information.<br>
+Next there is a table with the function parameters. In the checkboxes on the left you select which parameters to fit for. You can edit the parameters for an initial guess. On the right, the errors are displayed. This errors correspond to a 68% confidence interval, e.g. they are simply the square-roots of the diagonal elements of the covariance matrix of the fit.<br>
+Below the table are the chisquare and the goodness of fit value <code>Q = gammq(0.5*(N-M),0.5*chisquare)</code>, where <code>N</code> is the number of data points and <code>M</code> is the number of parameters that where fitted for. Also the number of function evaluations is displayed. If you press the <b>Covariance Matrix...</b> button, the covariance matrix of the fit is displayed.<br> To start fitting, press the <b>Start</b> button.
+ 
+</BODY>
+</HTML>

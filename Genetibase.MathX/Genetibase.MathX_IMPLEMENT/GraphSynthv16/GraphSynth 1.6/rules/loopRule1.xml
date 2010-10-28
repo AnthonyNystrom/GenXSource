@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<grammarRule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <name>loopRule1</name>
+  <spanning>false</spanning>
+  <induced>false</induced>
+  <containsAllGlobalLabels>false</containsAllGlobalLabels>
+  <embeddingRules>
+    <embeddingRule>
+      <freeArcLabel />
+      <LNodeName>nL</LNodeName>
+      <neighborNodeLabel />
+      <RNodeName>nNew0</RNodeName>
+      <originalDirection>0</originalDirection>
+      <newDirection>1</newDirection>
+      <allowArcDuplication>false</allowArcDuplication>
+    </embeddingRule>
+    <embeddingRule>
+      <freeArcLabel />
+      <LNodeName>nR</LNodeName>
+      <neighborNodeLabel />
+      <RNodeName>nNew2</RNodeName>
+      <originalDirection>0</originalDirection>
+      <newDirection>-1</newDirection>
+      <allowArcDuplication>false</allowArcDuplication>
+    </embeddingRule>
+  </embeddingRules>
+  <recognizeFunctions />
+  <applyFunctions />
+  <L>
+    <globalLabels />
+    <globalVariables />
+    <nodes>
+      <node xsi:type="ruleNode">
+        <shapekey>4F878611-3196-4d12-BA36-705F502C8A6B</shapekey>
+        <screenX>88</screenX>
+        <screenY>108</screenY>
+        <name>nL</name>
+        <localLabels />
+        <localVariables />
+        <containsAllLocalLabels>false</containsAllLocalLabels>
+        <strictDegreeMatch>false</strictDegreeMatch>
+      </node>
+      <node xsi:type="ruleNode">
+        <shapekey>4F878611-3196-4d12-BA36-705F502C8A6B</shapekey>
+        <screenX>155</screenX>
+        <screenY>109</screenY>
+        <name>nR</name>
+        <localLabels />
+        <localVariables />
+        <containsAllLocalLabels>false</containsAllLocalLabels>
+        <strictDegreeMatch>false</strictDegreeMatch>
+      </node>
+    </nodes>
+    <arcs>
+      <arc xsi:type="ruleArc">
+        <toConnector>0</toConnector>
+        <fromConnector>0</fromConnector>
+        <curveStyle>Default</curveStyle>
+        <name>oldArc</name>
+        <localLabels />
+        <localVariables />
+        <From>nL</From>
+        <To>nR</To>
+        <directed>true</directed>
+        <doublyDirected>false</doublyDirected>
+        <containsAllLocalLabels>false</containsAllLocalLabels>
+        <directionIsEqual>false</directionIsEqual>
+        <nullMeansNull>false</nullMeansNull>
+      </arc>
+    </arcs>
+  </L>
+  <R>
+    <globalLabels />
+    <globalVariables />
+    <nodes>
+      <node xsi:type="ruleNode">
+        <shapekey>4F878611-3196-4d12-BA36-705F502C8A6B</shapekey>
+        <screenX>70</screenX>
+        <screenY>114</screenY>
+        <name>nNew0</name>
+        <localLabels />
+        <localVariables />
+        <containsAllLocalLabels>false</containsAllLocalLabels>
+        <strictDegreeMatch>false</strictDegreeMatch>
+      </node>
+      <node xsi:type="ruleNode">
+        <shapekey>4F878611-3196-4d12-BA36-705F502C8A6B</shapekey>
+        <screenX>135</screenX>
+        <screenY>116</screenY>
+        <name>nNew1</name>
+        <localLabels />
+        <localVariables />
+        <containsAllLocalLabels>false</containsAllLocalLabels>
+        <strictDegreeMatch>false</strictDegreeMatch>
+      </node>
+      <node xsi:type="ruleNode">
+        <shapekey>4F878611-3196-4d12-BA36-705F502C8A6B</shapekey>
+        <screenX>195</screenX>
+        <screenY>117</screenY>
+        <name>nNew2</name>
+        <localLabels />
+        <localVariables />
+        <containsAllLocalLabels>false</containsAllLocalLabels>
+        <strictDegreeMatch>false</strictDegreeMatch>
+      </node>
+    </nodes>
+    <arcs>
+      <arc xsi:type="ruleArc">
+        <toConnector>0</toConnector>
+        <fromConnector>0</fromConnector>
+        <curveStyle>Default</curveStyle>
+        <name>newArc0</name>
+        <localLabels />
+        <localVariables />
+        <From>nNew0</From>
+        <To>nNew1</To>
+        <directed>true</directed>
+        <doublyDirected>false</doublyDirected>
+        <containsAllLocalLabels>false</containsAllLocalLabels>
+        <directionIsEqual>false</directionIsEqual>
+        <nullMeansNull>false</nullMeansNull>
+      </arc>
+      <arc xsi:type="ruleArc">
+        <toConnector>0</toConnector>
+        <fromConnector>0</fromConnector>
+        <curveStyle>Default</curveStyle>
+        <name>newArc1</name>
+        <localLabels />
+        <localVariables />
+        <From>nNew2</From>
+        <To>nNew1</To>
+        <directed>true</directed>
+        <doublyDirected>false</doublyDirected>
+        <containsAllLocalLabels>false</containsAllLocalLabels>
+        <directionIsEqual>false</directionIsEqual>
+        <nullMeansNull>false</nullMeansNull>
+      </arc>
+    </arcs>
+  </R>
+</grammarRule>

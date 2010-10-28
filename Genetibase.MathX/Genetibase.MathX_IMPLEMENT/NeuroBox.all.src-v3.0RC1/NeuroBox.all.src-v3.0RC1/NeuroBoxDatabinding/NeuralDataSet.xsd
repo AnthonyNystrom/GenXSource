@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NeuralDataSet" targetNamespace="http://www.cdrnet.net/projects/neuro/NeuralDataSet.xsd" elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://www.cdrnet.net/projects/neuro/NeuralDataSet.xsd" xmlns:mstns="http://www.cdrnet.net/projects/neuro/NeuralDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NeuralDataSet" msdata:IsDataSet="true">
+        <xs:complexType>
+            <xs:choice maxOccurs="unbounded">
+                <xs:element name="Networks">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nwID" type="xs:int" minOccurs="1" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msdata:AutoIncrementStep="1" msdata:Caption="Network ID" nillable="false" maxOccurs="1" />
+                            <xs:element name="nw_name" type="xs:string" minOccurs="0" msdata:Caption="Title" nillable="true" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Layers">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="laID" type="xs:int" minOccurs="1" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msdata:AutoIncrementStep="1" msdata:Caption="Layer ID" maxOccurs="1" nillable="false" />
+                            <xs:element name="laFK_network" type="xs:int" minOccurs="1" nillable="false" maxOccurs="1" msdata:Caption="Network" />
+                            <xs:element name="la_name" type="xs:string" minOccurs="0" msdata:Caption="Title" nillable="true" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Neurons">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="neID" type="xs:int" minOccurs="1" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msdata:AutoIncrementStep="1" msdata:Caption="Neuron ID" maxOccurs="1" nillable="false" />
+                            <xs:element name="neFK_layer" type="xs:int" minOccurs="1" maxOccurs="1" nillable="false" msdata:Caption="Layer" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Synapses">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="syID" type="xs:int" minOccurs="1" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msdata:AutoIncrementStep="1" msdata:Caption="Synapse ID" maxOccurs="1" nillable="false" />
+                            <xs:element name="syFK_neuronSource" type="xs:int" minOccurs="1" maxOccurs="1" nillable="false" msdata:Caption="Source Neuron" />
+                            <xs:element name="syFK_neuronTarget" type="xs:int" minOccurs="1" maxOccurs="1" nillable="false" msdata:Caption="Target Neuron" />
+                            <xs:element name="syFK_network" type="xs:int" minOccurs="1" maxOccurs="1" nillable="false" msdata:Caption="Network ID" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="TrainingSets">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="trID" type="xs:int" minOccurs="1" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msdata:AutoIncrementStep="1" msdata:Caption="Training Set ID" maxOccurs="1" nillable="false" />
+                            <xs:element name="trFK_network" type="xs:int" minOccurs="1" msdata:Caption="Network" maxOccurs="1" nillable="false" />
+                            <xs:element name="tr_name" type="xs:string" minOccurs="0" nillable="true" msdata:Caption="Title" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="TrainingItem">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="tiID" type="xs:int" minOccurs="1" msdata:Caption="Training Item ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msdata:AutoIncrementStep="1" maxOccurs="1" nillable="false" />
+                            <xs:element name="tiFK_trainingset" type="xs:int" minOccurs="1" nillable="false" maxOccurs="1" msdata:Caption="Training Set" />
+                            <xs:element name="tiFK_synapse" type="xs:int" minOccurs="1" maxOccurs="1" nillable="false" msdata:Caption="Synapse" />
+                            <xs:element name="ti_weight" type="xs:double" minOccurs="1" maxOccurs="1" nillable="false" msdata:Caption="Synapse Weight" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:choice>
+        </xs:complexType>
+        <xs:key name="PK_Networks">
+            <xs:selector xpath=".//mstns:Networks" />
+            <xs:field xpath="mstns:nwID" />
+        </xs:key>
+        <xs:key name="PK_Layers">
+            <xs:selector xpath=".//mstns:Layers" />
+            <xs:field xpath="mstns:laID" />
+        </xs:key>
+        <xs:key name="PK_Neurons">
+            <xs:selector xpath=".//mstns:Neurons" />
+            <xs:field xpath="mstns:neID" />
+        </xs:key>
+        <xs:keyref name="NetworksLayers" refer="PK_Networks" msdata:AcceptRejectRule="Cascade" msdata:DeleteRule="Cascade" msdata:UpdateRule="Cascade">
+            <xs:selector xpath=".//mstns:Layers" />
+            <xs:field xpath="mstns:laFK_network" />
+        </xs:keyref>
+        <xs:keyref name="LayersNeurons" refer="PK_Layers" msdata:AcceptRejectRule="Cascade" msdata:DeleteRule="Cascade" msdata:UpdateRule="Cascade">
+            <xs:selector xpath=".//mstns:Neurons" />
+            <xs:field xpath="mstns:neFK_layer" />
+        </xs:keyref>
+        <xs:key name="PK_Synapses">
+            <xs:selector xpath=".//mstns:Synapses" />
+            <xs:field xpath="mstns:syID" />
+        </xs:key>
+        <xs:keyref name="NeuronsSynapses_Source" refer="PK_Neurons" msdata:AcceptRejectRule="Cascade" msdata:DeleteRule="Cascade" msdata:UpdateRule="Cascade">
+            <xs:selector xpath=".//mstns:Synapses" />
+            <xs:field xpath="mstns:syFK_neuronSource" />
+        </xs:keyref>
+        <xs:keyref name="NetworksSynapses_Target" refer="PK_Neurons" msdata:AcceptRejectRule="Cascade" msdata:DeleteRule="Cascade" msdata:UpdateRule="Cascade">
+            <xs:selector xpath=".//mstns:Synapses" />
+            <xs:field xpath="mstns:syFK_neuronTarget" />
+        </xs:keyref>
+        <xs:key name="PK_TrainingSets">
+            <xs:selector xpath=".//mstns:TrainingSets" />
+            <xs:field xpath="mstns:trID" />
+        </xs:key>
+        <xs:keyref name="NetworksTrainingSets" refer="PK_Networks" msdata:AcceptRejectRule="Cascade" msdata:DeleteRule="Cascade" msdata:UpdateRule="Cascade">
+            <xs:selector xpath=".//mstns:TrainingSets" />
+            <xs:field xpath="mstns:trFK_network" />
+        </xs:keyref>
+        <xs:key name="PK_TrainingItems">
+            <xs:selector xpath=".//mstns:TrainingItem" />
+            <xs:field xpath="mstns:tiID" />
+        </xs:key>
+        <xs:keyref name="TrainingSetsTrainingItem" refer="PK_TrainingSets" msdata:AcceptRejectRule="Cascade" msdata:DeleteRule="Cascade" msdata:UpdateRule="Cascade">
+            <xs:selector xpath=".//mstns:TrainingItem" />
+            <xs:field xpath="mstns:tiFK_trainingset" />
+        </xs:keyref>
+        <xs:keyref name="SynapsesTrainingItem" refer="PK_Synapses" msdata:AcceptRejectRule="Cascade" msdata:DeleteRule="Cascade" msdata:UpdateRule="Cascade">
+            <xs:selector xpath=".//mstns:TrainingItem" />
+            <xs:field xpath="mstns:tiFK_synapse" />
+        </xs:keyref>
+        <xs:keyref name="NetworksSynapses" refer="PK_Networks" msdata:AcceptRejectRule="Cascade" msdata:DeleteRule="Cascade" msdata:UpdateRule="Cascade">
+            <xs:selector xpath=".//mstns:Synapses" />
+            <xs:field xpath="mstns:syFK_network" />
+        </xs:keyref>
+    </xs:element>
+</xs:schema>

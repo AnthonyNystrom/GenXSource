@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<grammarRule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <name>swirlRule1</name>
+  <spanning>false</spanning>
+  <induced>false</induced>
+  <containsAllGlobalLabels>false</containsAllGlobalLabels>
+  <embeddingRules />
+  <recognizeFunctions />
+  <applyFunctions>
+    <string>slopeOfNewEdge</string>
+  </applyFunctions>
+  <L>
+    <globalLabels />
+    <globalVariables />
+    <nodes>
+      <node xsi:type="ruleNode">
+        <name>smallZNode0</name>
+        <localLabels />
+        <localVariables />
+        <shapekey>4F878611-3196-4d12-BA36-705F502C8A6B</shapekey>
+        <screenX>65</screenX>
+        <screenY>116</screenY>
+        <nodeType>GraphSynth.Representation.vertex</nodeType>
+        <containsAllLocalLabels>false</containsAllLocalLabels>
+        <strictDegreeMatch>false</strictDegreeMatch>
+      </node>
+      <node xsi:type="ruleNode">
+        <name>smallZNode1</name>
+        <localLabels>
+          <string>a</string>
+        </localLabels>
+        <localVariables />
+        <shapekey>4F878611-3196-4d12-BA36-705F502C8A6B</shapekey>
+        <screenX>116</screenX>
+        <screenY>122</screenY>
+        <nodeType>GraphSynth.Representation.vertex</nodeType>
+        <containsAllLocalLabels>false</containsAllLocalLabels>
+        <strictDegreeMatch>false</strictDegreeMatch>
+      </node>
+    </nodes>
+    <arcs>
+      <arc xsi:type="ruleArc">
+        <name>arc1</name>
+        <localLabels />
+        <localVariables />
+        <toConnector>0</toConnector>
+        <fromConnector>0</fromConnector>
+        <curveStyle>Default</curveStyle>
+        <directed>false</directed>
+        <doublyDirected>false</doublyDirected>
+        <From>smallZNode1</From>
+        <To>smallZNode0</To>
+        <arcType>GraphSynth.Representation.edge</arcType>
+        <containsAllLocalLabels>false</containsAllLocalLabels>
+        <directionIsEqual>false</directionIsEqual>
+        <nullMeansNull>false</nullMeansNull>
+      </arc>
+    </arcs>
+  </L>
+  <R>
+    <globalLabels />
+    <globalVariables />
+    <nodes>
+      <node xsi:type="ruleNode">
+        <name>smallZNode0</name>
+        <localLabels />
+        <localVariables />
+        <shapekey>4F878611-3196-4d12-BA36-705F502C8A6B</shapekey>
+        <screenX>83</screenX>
+        <screenY>131</screenY>
+        <nodeType>GraphSynth.Representation.vertex</nodeType>
+        <containsAllLocalLabels>false</containsAllLocalLabels>
+        <strictDegreeMatch>false</strictDegreeMatch>
+      </node>
+      <node xsi:type="ruleNode">
+        <name>smallZNode1</name>
+        <localLabels />
+        <localVariables />
+        <shapekey>4F878611-3196-4d12-BA36-705F502C8A6B</shapekey>
+        <screenX>141</screenX>
+        <screenY>137</screenY>
+        <nodeType>GraphSynth.Representation.vertex</nodeType>
+        <containsAllLocalLabels>false</containsAllLocalLabels>
+        <strictDegreeMatch>false</strictDegreeMatch>
+      </node>
+      <node xsi:type="ruleNode">
+        <name>tinyZNode</name>
+        <localLabels>
+          <string>a</string>
+        </localLabels>
+        <localVariables />
+        <shapekey>4F878611-3196-4d12-BA36-705F502C8A6B</shapekey>
+        <screenX>185</screenX>
+        <screenY>115</screenY>
+        <nodeType>GraphSynth.Representation.vertex</nodeType>
+        <containsAllLocalLabels>false</containsAllLocalLabels>
+        <strictDegreeMatch>false</strictDegreeMatch>
+      </node>
+    </nodes>
+    <arcs>
+      <arc xsi:type="ruleArc">
+        <name>arc1</name>
+        <localLabels />
+        <localVariables />
+        <toConnector>0</toConnector>
+        <fromConnector>0</fromConnector>
+        <curveStyle>Default</curveStyle>
+        <directed>false</directed>
+        <doublyDirected>false</doublyDirected>
+        <From>smallZNode1</From>
+        <To>smallZNode0</To>
+        <arcType>GraphSynth.Representation.edge</arcType>
+        <containsAllLocalLabels>false</containsAllLocalLabels>
+        <directionIsEqual>false</directionIsEqual>
+        <nullMeansNull>false</nullMeansNull>
+      </arc>
+      <arc xsi:type="ruleArc">
+        <name>newArc</name>
+        <localLabels />
+        <localVariables />
+        <toConnector>0</toConnector>
+        <fromConnector>0</fromConnector>
+        <curveStyle>Default</curveStyle>
+        <directed>false</directed>
+        <doublyDirected>false</doublyDirected>
+        <From>smallZNode1</From>
+        <To>tinyZNode</To>
+        <arcType>GraphSynth.Representation.edge</arcType>
+        <containsAllLocalLabels>false</containsAllLocalLabels>
+        <directionIsEqual>false</directionIsEqual>
+        <nullMeansNull>false</nullMeansNull>
+      </arc>
+    </arcs>
+  </R>
+</grammarRule>

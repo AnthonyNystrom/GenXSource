@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NeuroBox.Repository</name>
+    </assembly>
+    <members>
+        <member name="T:NeuroBox.Repository.Manager">
+            <summary>
+            Neural Network Repsoitory. This class manages the transformation
+            between Neural Network instances and DataSet descriptions.
+            </summary>
+        </member>
+        <member name="M:NeuroBox.Repository.Manager.#ctor">
+            <summary>
+            Create a manager with an empty repository.
+            </summary>
+        </member>
+        <member name="M:NeuroBox.Repository.Manager.#ctor(NeuroBox.Repository.NeuralDataSet)">
+            <summary>
+            Create a manager with the passed repository.
+            </summary>
+            <param name="repository">The repository to work with.</param>
+        </member>
+        <member name="M:NeuroBox.Repository.Manager.WriteRepository(System.IO.TextWriter)">
+            <summary>
+            Save the current repository to a file or textbased stream (e.g. StreamWriter or StringWriter) in clean XML.
+            </summary>
+            <param name="writer">A TextWriter that maps e.g. to a writable file stream.</param>
+        </member>
+        <member name="M:NeuroBox.Repository.Manager.WriteRepository(System.String)">
+            <summary>
+            Save the current repository to a file.
+            </summary>
+            <param name="fileName">The full path for the new XML file. Recommended filename extension: ".xml.NB2"</param>
+        </member>
+        <member name="M:NeuroBox.Repository.Manager.ReadRepository(System.IO.TextReader)">
+            <summary>
+            Create a new manager based on a repository available as an XML stream (e.g. StreamReader or StringReader).
+            </summary>
+            <param name="reader">A TextReader that maps e.g. to a readable file stream.</param>
+            <returns>The manager instance bound to the loaded repository.</returns>
+        </member>
+        <member name="M:NeuroBox.Repository.Manager.ReadRepository(System.String)">
+            <summary>
+            Create a new manager based on a repository avaibale as an XML file.
+            </summary>
+            <param name="fileName">The full path to the XML file.</param>
+            <returns>The manager instance bound to the loaded repository.</returns>
+        </member>
+        <member name="M:NeuroBox.Repository.Manager.LoadNetworkStructure(System.Int32)">
+            <summary>
+            Load a network from the repository by its repository ID.
+            </summary>
+            <param name="networkID">The network's repository ID</param>
+        </member>
+        <member name="M:NeuroBox.Repository.Manager.LoadNetworkStructure(System.String)">
+            <summary>
+            Load a network from the repository by its repository title.
+            </summary>
+            <param name="title">The network's repository title</param>
+        </member>
+        <member name="M:NeuroBox.Repository.Manager.SaveNetworkStructure(System.String)">
+            <summary>
+            Save the current network to the repository, name it with a new
+            repository title and mark it as the current network. You SHOULD
+            save a network after you alter its structure if you want to save
+            any training sets trained with the new structre.
+            </summary>
+            <param name="title">The new network's repository title (choosable).</param>
+            <returns>The new network's repository ID</returns>
+        </member>
+        <member name="M:NeuroBox.Repository.Manager.ImportNetworkStructure(System.String,NeuroBox.Network,System.Boolean)">
+            <summary>
+            Import a network to the repository and name it with a new repository title.
+            </summary>
+            <param name="title">The new network's repository title (choosable).</param>
+            <param name="network">The neural network instance to import.</param>
+            <param name="setAsCurrent">Whether the network should be marked as the current network.</param>
+            <returns>The new network's repository ID</returns>
+        </member>
+        <member name="M:NeuroBox.Repository.Manager.LoadNetworkState(System.Int32)">
+            <summary>
+            Load a training set from the repository by its repository ID.
+            </summary>
+            <param name="trainingsetID">The training set's repository ID</param>
+        </member>
+        <member name="M:NeuroBox.Repository.Manager.LoadNetworkState(System.String)">
+            <summary>
+            Load a training set from the repository by its repository title.
+            </summary>
+            <param name="title">The training set's repository title</param>
+        </member>
+        <member name="M:NeuroBox.Repository.Manager.SaveNetworkState(System.String)">
+            <summary>
+            Save the current training to the repository and name it with
+            a new repository title
+            </summary>
+            <param name="title">The new training set's repository title (choosable).</param>
+            <returns>The new training set's repository ID</returns>
+        </member>
+        <member name="P:NeuroBox.Repository.Manager.Repository">
+            <summary>
+            Direct access to the repository (typed DataSet).
+            </summary>
+        </member>
+        <member name="P:NeuroBox.Repository.Manager.CurrentNetwork">
+            <summary>
+            The currently loaded neural network instance.
+            </summary>
+        </member>
+        <member name="P:NeuroBox.Repository.Manager.CurrentNetworkID">
+            <summary>
+            The repository ID of the currently loaded neural network instance.
+            </summary>
+        </member>
+        <member name="P:NeuroBox.Repository.Manager.CurrentNetworkTitle">
+            <summary>
+            The repository title of the currently loaded neural network instance.
+            </summary>
+        </member>
+    </members>
+</doc>

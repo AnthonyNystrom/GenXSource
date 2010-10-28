@@ -1,0 +1,282 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D61DEE2D-3679-4B3D-82E3-9050AE0F7A8F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GraphSynth</RootNamespace>
+    <AssemblyName>GraphSynth</AssemblyName>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <StartupObject>GraphSynth.Program</StartupObject>
+    <ApplicationIcon>GraphSynth-icon.ico</ApplicationIcon>
+    <TargetZone>LocalIntranet</TargetZone>
+    <GenerateManifests>false</GenerateManifests>
+    <ManifestCertificateThumbprint>CBED33F50A28957F0E251BF21402E8222A137AFB</ManifestCertificateThumbprint>
+    <ManifestKeyFile>GraphSynth_TemporaryKey.pfx</ManifestKeyFile>
+    <SignManifests>false</SignManifests>
+    <PublishUrl>C:\Documents and Settings\Matthew Campbell\My Documents\GraphSynth.v.1.5.exe.Setup\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Background</UpdateMode>
+    <UpdateInterval>4</UpdateInterval>
+    <UpdateIntervalUnits>Weeks</UpdateIntervalUnits>
+    <UpdatePeriodically>true</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <SupportUrl>http://www.me.utexas.edu/~adl/graphsynth</SupportUrl>
+    <ProductName>GraphSynth</ProductName>
+    <PublisherName>UT Automated Design Lab</PublisherName>
+    <MinimumRequiredVersion>1.1.0.0</MinimumRequiredVersion>
+    <WebPage>publish.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationVersion>1.6.0.0</ApplicationVersion>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NetronGraphLib, Version=2.2.2482.24583, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainFormsAndSettings\chooseDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFormsAndSettings\chooseDisplay.designer.cs">
+      <DependentUpon>chooseDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="searchProcess.cs" />
+    <Compile Include="MainFormsAndSettings\AboutGraphSynth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFormsAndSettings\AboutGraphSynth.Designer.cs">
+      <DependentUpon>AboutGraphSynth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFormsAndSettings\globalSettingsDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFormsAndSettings\globalSettingsDisplay.Designer.cs">
+      <DependentUpon>globalSettingsDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFormsAndSettings\grammarRuleDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFormsAndSettings\grammarRuleDisplay.Designer.cs">
+      <DependentUpon>grammarRuleDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFormsAndSettings\graphDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFormsAndSettings\graphDisplay.Designer.cs">
+      <DependentUpon>graphDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFormsAndSettings\helpWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFormsAndSettings\helpWindow.Designer.cs">
+      <DependentUpon>helpWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFormsAndSettings\mainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFormsAndSettings\mainForm.Designer.cs">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFormsAndSettings\PropertiesWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFormsAndSettings\PropertiesWindow.Designer.cs">
+      <DependentUpon>PropertiesWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFormsAndSettings\ruleSetDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFormsAndSettings\ruleSetDisplay.Designer.cs">
+      <DependentUpon>ruleSetDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFormsAndSettings\searchProcessController.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFormsAndSettings\searchProcessController.designer.cs">
+      <DependentUpon>searchProcessController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFormsAndSettings\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MainFormsAndSettings\AboutGraphSynth.resx">
+      <DependentUpon>AboutGraphSynth.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFormsAndSettings\chooseDisplay.resx">
+      <DependentUpon>chooseDisplay.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFormsAndSettings\globalSettingsDisplay.resx">
+      <DependentUpon>globalSettingsDisplay.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFormsAndSettings\grammarRuleDisplay.resx">
+      <DependentUpon>grammarRuleDisplay.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFormsAndSettings\graphDisplay.resx">
+      <DependentUpon>graphDisplay.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFormsAndSettings\helpWindow.resx">
+      <DependentUpon>helpWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFormsAndSettings\mainForm.resx">
+      <DependentUpon>mainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFormsAndSettings\PropertiesWindow.resx">
+      <DependentUpon>PropertiesWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFormsAndSettings\ruleSetDisplay.resx">
+      <DependentUpon>ruleSetDisplay.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFormsAndSettings\searchProcessController.resx">
+      <DependentUpon>searchProcessController.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="MainFormsAndSettings\globalSettings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\app.manifest" />
+    <None Include="Resources\abort.png" />
+    <Content Include="GraphSynth-icon.ico" />
+    <Content Include="Resources\gsLogo.png" />
+    <Content Include="Resources\helpFiles\download.htm" />
+    <Content Include="Resources\helpFiles\examples.htm" />
+    <Content Include="Resources\helpFiles\generation.htm" />
+    <Content Include="Resources\helpFiles\grammars.htm" />
+    <Content Include="Resources\helpFiles\graphs.htm" />
+    <Content Include="Resources\helpFiles\gsStyle1.css" />
+    <Content Include="Resources\helpFiles\images\applyProcess.png" />
+    <Content Include="Resources\helpFiles\images\designDropDown.png" />
+    <Content Include="Resources\helpFiles\images\designGraphXML.png" />
+    <Content Include="Resources\helpFiles\images\designGraphXML2.png" />
+    <Content Include="Resources\helpFiles\images\embedRuleProcess.png" />
+    <Content Include="Resources\helpFiles\images\exampleRule.png" />
+    <Content Include="Resources\helpFiles\images\exampleRuleSet.png" />
+    <Content Include="Resources\helpFiles\images\exampleRuleWithProps.png" />
+    <Content Include="Resources\helpFiles\images\flowchart.png" />
+    <Content Include="Resources\helpFiles\images\generationProcess.png" />
+    <Content Include="Resources\helpFiles\images\grayBackGroundGraph.png" />
+    <Content Include="Resources\helpFiles\images\GSScreenshot.jpg" />
+    <Content Include="Resources\helpFiles\images\introRCA.png" />
+    <Content Include="Resources\helpFiles\images\lightergrayBackGroundGraph.png" />
+    <Content Include="Resources\helpFiles\images\orangeDotArrow.png" />
+    <Content Include="Resources\helpFiles\images\orangeDots.png" />
+    <Content Include="Resources\helpFiles\images\ruleFromFStoCFG.png" />
+    <Content Include="Resources\helpFiles\images\ruleOverlap.png" />
+    <Content Include="Resources\helpFiles\images\ruleRecognitionBasic.png" />
+    <Content Include="Resources\helpFiles\images\ruleRecognitionOrder.png" />
+    <Content Include="Resources\helpFiles\images\rulesPropertyWindow.png" />
+    <Content Include="Resources\helpFiles\images\searchProcessController.png" />
+    <Content Include="Resources\helpFiles\images\seedBurstRuleSet.png" />
+    <Content Include="Resources\helpFiles\images\thickOrangeBarHoriz.png" />
+    <Content Include="Resources\helpFiles\images\thinBlackBarHoriz.png" />
+    <Content Include="Resources\helpFiles\images\thinnerOrangeBarHoriz.png" />
+    <Content Include="Resources\helpFiles\images\thinOrangeBarHoriz.png" />
+    <Content Include="Resources\helpFiles\images\thinOrangeBarVert.png" />
+    <Content Include="Resources\helpFiles\images\UTCOEemblem.jpg" />
+    <Content Include="Resources\helpFiles\index.htm" />
+    <Content Include="Resources\helpFiles\introMethod.htm" />
+    <Content Include="Resources\helpFiles\navigating.htm" />
+    <Content Include="Resources\helpFiles\ruleSets.htm" />
+    <Content Include="Resources\helpFiles\rule_application.htm" />
+    <Content Include="Resources\helpFiles\rule_recognition.htm" />
+    <Content Include="Resources\helpFiles\searchProcess.htm" />
+    <Content Include="Resources\NetronGraphLib.dll" />
+    <Content Include="Resources\pause.png" />
+    <Content Include="Resources\play.png" />
+    <Content Include="Resources\stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Evaluation\Evaluation.csproj">
+      <Project>{B2E678E1-90D2-4E7B-86E7-35B67D47C679}</Project>
+      <Name>Evaluation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Generation\Generation.csproj">
+      <Project>{1F0EBE8F-4FCC-4F63-A3F4-10ACD938944A}</Project>
+      <Name>Generation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GraphLayout\GraphLayout.csproj">
+      <Project>{B1CA9064-413A-42FD-BA2B-46F86B226926}</Project>
+      <Name>GraphLayout</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Guidance\Guidance.csproj">
+      <Project>{D17274AB-B5C7-49AA-BC8D-709FDE9E4258}</Project>
+      <Name>Guidance</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Representation\Representation.csproj">
+      <Project>{15F102F2-4CC4-4C5C-AB63-4D0E5CBD710C}</Project>
+      <Name>Representation</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\" />
+    <Folder Include="obj\Release\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ruleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <name>getToSpanningTreeRuleSet</name>
+  <ruleFileNames>
+    <string>Routerule1.xml</string>
+    <string>Routerule2.xml</string>
+  </ruleFileNames>
+  <triggerRuleNum>-1</triggerRuleNum>
+  <nextGenerationStep>
+    <nextGenerationSteps>Loop</nextGenerationSteps>
+    <nextGenerationSteps>Stop</nextGenerationSteps>
+    <nextGenerationSteps>Stop</nextGenerationSteps>
+    <nextGenerationSteps>GoToNext</nextGenerationSteps>
+    <nextGenerationSteps>Stop</nextGenerationSteps>
+  </nextGenerationStep>
+  <choiceMethod>Design</choiceMethod>
+  <interimCandidates>Developing</interimCandidates>
+  <finalCandidates>Developing</finalCandidates>
+  <ruleSetIndex>0</ruleSetIndex>
+  <recognizeSourceFiles />
+  <applySourceFiles />
+</ruleSet>

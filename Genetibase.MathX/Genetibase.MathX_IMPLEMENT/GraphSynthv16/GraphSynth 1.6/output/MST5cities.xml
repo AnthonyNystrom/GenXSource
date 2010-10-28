@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<designGraph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <name>citiesDefaultSeedGraph</name>
+  <globalLabels>
+    <string>H</string>
+  </globalLabels>
+  <globalVariables />
+  <nodes>
+    <node>
+      <name>Dallas</name>
+      <localLabels>
+        <string>a</string>
+      </localLabels>
+      <localVariables />
+      <shapekey>6E92FCD0-75DF-4f8f-A5B2-2927E22F4F0F</shapekey>
+      <screenX>387</screenX>
+      <screenY>141</screenY>
+    </node>
+    <node>
+      <name>Austin</name>
+      <localLabels>
+        <string>a</string>
+      </localLabels>
+      <localVariables />
+      <shapekey>6E92FCD0-75DF-4f8f-A5B2-2927E22F4F0F</shapekey>
+      <screenX>375</screenX>
+      <screenY>357</screenY>
+    </node>
+    <node>
+      <name>SanAntonio</name>
+      <localLabels>
+        <string>a</string>
+      </localLabels>
+      <localVariables />
+      <shapekey>6E92FCD0-75DF-4f8f-A5B2-2927E22F4F0F</shapekey>
+      <screenX>407</screenX>
+      <screenY>570</screenY>
+    </node>
+    <node>
+      <name>Houston</name>
+      <localLabels>
+        <string>a</string>
+      </localLabels>
+      <localVariables />
+      <shapekey>6E92FCD0-75DF-4f8f-A5B2-2927E22F4F0F</shapekey>
+      <screenX>654</screenX>
+      <screenY>443</screenY>
+    </node>
+    <node>
+      <name>ElPaso</name>
+      <localLabels>
+        <string>a</string>
+      </localLabels>
+      <localVariables />
+      <shapekey>6E92FCD0-75DF-4f8f-A5B2-2927E22F4F0F</shapekey>
+      <screenX>48</screenX>
+      <screenY>473</screenY>
+    </node>
+  </nodes>
+  <arcs>
+    <arc>
+      <name>a13</name>
+      <localLabels />
+      <localVariables />
+      <toConnector>0</toConnector>
+      <fromConnector>0</fromConnector>
+      <curveStyle>Default</curveStyle>
+      <directed>false</directed>
+      <doublyDirected>false</doublyDirected>
+      <From>SanAntonio</From>
+      <To>ElPaso</To>
+    </arc>
+    <arc>
+      <name>a12</name>
+      <localLabels />
+      <localVariables />
+      <toConnector>0</toConnector>
+      <fromConnector>0</fromConnector>
+      <curveStyle>Default</curveStyle>
+      <directed>false</directed>
+      <doublyDirected>false</doublyDirected>
+      <From>Austin</From>
+      <To>Houston</To>
+    </arc>
+    <arc>
+      <name>a11</name>
+      <localLabels />
+      <localVariables />
+      <toConnector>0</toConnector>
+      <fromConnector>0</fromConnector>
+      <curveStyle>Default</curveStyle>
+      <directed>false</directed>
+      <doublyDirected>false</doublyDirected>
+      <From>Austin</From>
+      <To>SanAntonio</To>
+    </arc>
+    <arc>
+      <name>a10</name>
+      <localLabels />
+      <localVariables />
+      <toConnector>0</toConnector>
+      <fromConnector>0</fromConnector>
+      <curveStyle>Default</curveStyle>
+      <directed>false</directed>
+      <doublyDirected>false</doublyDirected>
+      <From>Dallas</From>
+      <To>Austin</To>
+    </arc>
+  </arcs>
+</designGraph>

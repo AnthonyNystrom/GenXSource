@@ -1,0 +1,266 @@
+﻿ /* Font Definitions */
+@font-face
+	{font-family:Georgia;
+	panose-1:2 4 5 2 5 4 5 2 3 3;}
+@font-face
+	{font-family:"Trebuchet MS";
+	panose-1:2 11 6 3 2 2 2 2 2 4;}
+ /* Style Definitions */
+
+.style7 {
+	font-family: Georgia;
+	font-size: x-small;
+}
+
+p.MsoNormal
+	{
+	line-height: normal;
+	font-family: Georgia;
+	font-size: medium;
+	font: normal normal normal medium/normal serif;
+	margin-right: 0pt;
+	text-indent: 0pt;
+	margin-top: 0pt;
+	margin-bottom: 9.0pt;
+	text-align: left;
+	color: black;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	text-decoration: none;
+}
+div.MsoOrganizationName
+	{margin-right:0pt;
+	text-indent:0pt;
+	margin-top:0pt;
+	margin-bottom:0pt;
+	text-align:left;
+	font-family:Georgia;
+	font-size:11.0237pt;
+	color:black;
+	font-style:italic;}
+li.MsoOrganizationName
+	{margin-right:0pt;
+	text-indent:0pt;
+	margin-top:0pt;
+	margin-bottom:0pt;
+	text-align:left;
+	font-family:Georgia;
+	font-size:11.0237pt;
+	color:black;
+	font-style:italic;}
+p.MsoOrganizationName
+	{
+	margin-right: 0pt;
+	text-indent: 0pt;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	text-align: left;
+	font-family: Georgia;
+	font-size: medium;
+	color: #000000;
+	font-style: italic;
+}
+div.MsoTitle3
+	{margin-right:0pt;
+	text-indent:0pt;
+	margin-top:0pt;
+	margin-bottom:0pt;
+	text-align:left;
+	font-family:Georgia;
+	font-size:20.3252pt;
+	color:black;}
+li.MsoTitle3
+	{margin-right:0pt;
+	text-indent:0pt;
+	margin-top:0pt;
+	margin-bottom:0pt;
+	text-align:left;
+	font-family:Georgia;
+	font-size:20.3252pt;
+	color:black;}
+p.MsoTitle3
+	{
+	margin-right: 0pt;
+	text-indent: 0pt;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	text-align: left;
+	font-family: Georgia;
+	font-size: 20.3252pt;
+	color: #254472;
+}
+div.MsoAccentText5
+	{margin-right:0pt;
+	text-indent:0pt;
+	margin-top:0pt;
+	margin-bottom:0pt;
+	text-align:left;
+	font-family:Georgia;
+	font-size:9.0333pt;
+	color:#CC3300;
+	font-weight:bold;}
+li.MsoAccentText5
+	{margin-right:0pt;
+	text-indent:0pt;
+	margin-top:0pt;
+	margin-bottom:0pt;
+	text-align:left;
+	font-family:Georgia;
+	font-size:9.0333pt;
+	color:#CC3300;
+	font-weight:bold;}
+p.MsoAccentText5
+	{margin-right:0pt;
+	text-indent:0pt;
+	margin-top:0pt;
+	margin-bottom:0pt;
+	text-align:left;
+	font-family:Georgia;
+	font-size:9.0333pt;
+	color:#CC3300;
+	font-weight:bold;}
+div.MsoAddress
+	{margin-right:0pt;
+	text-indent:0pt;
+	margin-top:0pt;
+	margin-bottom:0pt;
+	text-align:left;
+	font-family:Georgia;
+	font-size:9.0333pt;
+	color:black;}
+li.MsoAddress
+	{margin-right:0pt;
+	text-indent:0pt;
+	margin-top:0pt;
+	margin-bottom:0pt;
+	text-align:left;
+	font-family:Georgia;
+	font-size:9.0333pt;
+	color:black;}
+p.MsoAddress
+	{margin-right:0pt;
+	text-indent:0pt;
+	margin-top:0pt;
+	margin-bottom:0pt;
+	text-align:left;
+	font-family:Georgia;
+	font-size:9.0333pt;
+	color:black;}
+div.MsoAccentText
+	{margin-right:0pt;
+	text-indent:0pt;
+	margin-top:0pt;
+	margin-bottom:3.0pt;
+	text-align:left;
+	font-family:Georgia;
+	font-size:9.3722pt;
+	color:black;
+	font-weight:bold;}
+li.MsoAccentText
+	{margin-right:0pt;
+	text-indent:0pt;
+	margin-top:0pt;
+	margin-bottom:3.0pt;
+	text-align:left;
+	font-family:Georgia;
+	font-size:9.3722pt;
+	color:black;
+	font-weight:bold;}
+p.MsoAccentText
+	{margin-right:0pt;
+	text-indent:0pt;
+	margin-top:0pt;
+	margin-bottom:3.0pt;
+	text-align:left;
+	font-family:Georgia;
+	font-size:9.3722pt;
+	color:black;
+	font-weight:bold;}
+div.MsoPlainText
+	{margin-right:0pt;
+	text-indent:18.0pt;
+	margin-top:0pt;
+	margin-bottom:0pt;
+	line-height:121%;
+	text-align:justify;
+	text-justify:inter-word;
+	font-family:"Times New Roman";
+	font-size:9.0pt;
+	color:black;}
+li.MsoPlainText
+	{margin-right:0pt;
+	text-indent:18.0pt;
+	margin-top:0pt;
+	margin-bottom:0pt;
+	line-height:121%;
+	text-align:justify;
+	text-justify:inter-word;
+	font-family:"Times New Roman";
+	font-size:9.0pt;
+	color:black;}
+p.MsoPlainText
+	{
+	line-height: 121%;
+	font-family: Cambria;
+	font-size: small;
+	margin: 2pt 0pt 5pt 0pt;
+	font: normal normal normal 100% serif;
+	text-indent: inherit;
+	text-align: left;
+	text-justify: inter-word;
+	color: black;
+}
+
+ul
+	{margin-top:0in;
+	margin-bottom:0in;
+	margin-left:-2197in;}
+@page
+	{size:8.0302in 11.0in;}
+	
+a:hover {
+	color: #6F96D0
+}
+a:link {
+	color:#3867AD;
+}
+a {
+	color:#3867AD;
+}
+
+li.sideBarNav {
+	font-family: Georgia;
+	font-size: medium;
+	font-weight: bold;
+	line-height: 110%;
+	vertical-align: middle;
+	text-align: left;
+	text-indent: 0px;
+	list-style-type: circle;
+	list-style-image: inherit;
+	white-space: normal;
+	text-decoration: none;
+	list-style-position: inside;
+	display: run-in;
+	font-variant: normal;
+	text-transform: none;
+	margin-top: 4px;
+	margin-bottom: 15px;
+	margin-left: auto;
+	float: inherit;
+	overflow: auto;
+}
+a:active {
+	color: #808080;
+}
+h2
+	{
+	text-indent:0pt;
+	text-align:left;
+	font-family:Georgia;
+	font-size:15.0pt;
+	color:black;
+	font-weight:bold;
+	}
+

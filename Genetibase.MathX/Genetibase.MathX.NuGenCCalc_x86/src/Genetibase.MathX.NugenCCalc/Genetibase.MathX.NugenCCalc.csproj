@@ -1,0 +1,391 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F6309FEF-FC04-49F4-9AA9-60919141619B}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Genetibase.MathX.NugenCCalc</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Genetibase.MathX.NugenCCalc</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\build\Genetibase.MathX.NugenCCalc\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>..\..\build\Genetibase.MathX.NugenCCalc\Genetibase.MathX.NugenCCalc.XML</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\build\Genetibase.MathX.NugenCCalc\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>comments.xml</DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Configuration.Install">
+      <Name>System.Configuration.Install</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Management">
+      <Name>System.Management</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\Genetibase.MathX.Core\Genetibase.MathX.Core.csproj">
+      <Name>Genetibase.MathX.Core</Name>
+      <Project>{7B015176-4FF5-474F-9D0F-25E9B57B78F1}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\Genetibase.MathX.NugenCCalc.Adapters\Genetibase.MathX.NugenCCalc.Adapters.vbproj">
+      <Project>{D313F54F-6E80-457B-804B-5D0F1F9254F9}</Project>
+      <Name>Genetibase.MathX.NugenCCalc.Adapters</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdaptersLoader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CodeExpressionChecker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Design\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\Controls\Dashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Design\Controls\DestinationView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Design\Controls\DestinationView3D.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Design\Controls\EquationExplorer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Design\Controls\EquationRepositoryView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Design\Controls\EquationView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Design\Controls\ExpressionExplorer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Design\Controls\ExpressionRepositoryView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Design\Controls\ExpressionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Design\Controls\FlatButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Design\Controls\PropertyView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Design\Controls\SourceView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Design\Converters\EnumDescConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Design\Converters\FunctionsParametersConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Design\Converters\Point2DConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Design\Converters\Point3DConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Design\Editors\DestinationChartEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Design\Editors\SeriesEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Design\Editors\SourceEditor.cs" />
+    <Compile Include="Design\EquationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\ExpressionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\Function3DTypePropertyDescriptor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Design\FunctionCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Design\FunctionNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Design\FunctionType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Design\FunctionType3D.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Design\FunctionTypePropertyDescriptor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Design\ItemEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Design\NugenCCalc3DDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Design\NugenCCalc3DDesignerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\NugenCCalcDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Design\NugenCCalcDesignerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\PredefinedSettings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Design\SeriesListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Design\StringArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EventSubscriber.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exceptions\CompileException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exceptions\NugenCCalcException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Explicit2DParameters.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Explicit3DParameters.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Function2DParameters.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Function3DParameters.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FunctionCodeAttribute.cs" />
+    <Compile Include="FunctionEvalutor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FunctionParameters.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IChartAdapter\ChartAdapterAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IChartAdapter\IChartAdapter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IChartAdapter\IChartAdapter2D.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IChartAdapter\IChartAdapter3D.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Implicit2DParameters.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Implicit3DParameters.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NugenCCalcBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NugenCCalc2D.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NugenCCalc3D.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NugenCCalcSerializer.cs" />
+    <Compile Include="Parametric2DParameters.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Parametric3DParameters.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ParametricSurfaceParameters.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PlotMode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Series.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SourceType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Design\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\Controls\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\Controls\DestinationView.resx">
+      <DependentUpon>DestinationView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\Controls\DestinationView3D.resx">
+      <DependentUpon>DestinationView3D.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\Controls\EquationExplorer.resx">
+      <DependentUpon>EquationExplorer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\Controls\EquationRepositoryView.resx">
+      <DependentUpon>EquationRepositoryView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\Controls\EquationView.resx">
+      <DependentUpon>EquationView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\Controls\ExpressionExplorer.resx">
+      <DependentUpon>ExpressionExplorer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\Controls\ExpressionRepositoryView.resx">
+      <DependentUpon>ExpressionRepositoryView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\Controls\ExpressionView.resx">
+      <DependentUpon>ExpressionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\Controls\PropertyView.resx">
+      <DependentUpon>PropertyView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\Controls\SourceView.resx">
+      <DependentUpon>SourceView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\EquationForm.resx">
+      <DependentUpon>EquationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\ExpressionForm.resx">
+      <DependentUpon>ExpressionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\NugenCCalc3DDesignerForm.resx">
+      <DependentUpon>NugenCCalc3DDesignerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\NugenCCalcDesignerForm.resx">
+      <DependentUpon>NugenCCalcDesignerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\SeriesListBox.resx">
+      <DependentUpon>SeriesListBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ico\chart.ico" />
+    <EmbeddedResource Include="ico\line-chart.ico" />
+    <EmbeddedResource Include="NugenCCalcBase.resx">
+      <DependentUpon>NugenCCalcBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NugenCCalc2D.resx">
+      <DependentUpon>NugenCCalc2D.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NugenCCalc3D.resx">
+      <DependentUpon>NugenCCalc3D.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="NugenCCalc.snk" />
+    <Content Include="Design\ico\cubes_yellow.ico" />
+    <Content Include="Design\ico\document_pulse1.ico" />
+    <Content Include="Design\ico\document_pulse_1.ico" />
+    <Content Include="Design\ico\dot-chart.ico" />
+    <Content Include="Design\ico\folder.ico" />
+    <Content Include="Design\ico\folder_view.ico" />
+    <Content Include="Design\ico\text_code_csharp.ico" />
+    <Content Include="Design\ico\text_code_VB.ico" />
+    <EmbeddedResource Include="Design\predefineItems.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

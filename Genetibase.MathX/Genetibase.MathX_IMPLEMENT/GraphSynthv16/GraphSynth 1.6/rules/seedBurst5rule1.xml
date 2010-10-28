@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<grammarRule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <name>seedBurst5rule1</name>
+  <spanning>false</spanning>
+  <induced>false</induced>
+  <containsAllGlobalLabels>false</containsAllGlobalLabels>
+  <embeddingRules />
+  <recognizeFunctions>
+    <string>divisibleBy5</string>
+  </recognizeFunctions>
+  <applyFunctions>
+    <string>distributeTo5NewRoots</string>
+  </applyFunctions>
+  <L>
+    <globalLabels />
+    <globalVariables />
+    <nodes>
+      <node xsi:type="ruleNode">
+        <shapekey>b2178640-076f-4520-b33c-c603466bc2fc</shapekey>
+        <screenX>130</screenX>
+        <screenY>130</screenY>
+        <name>root</name>
+        <localLabels />
+        <localVariables />
+        <containsAllLocalLabels>false</containsAllLocalLabels>
+        <strictDegreeMatch>false</strictDegreeMatch>
+      </node>
+    </nodes>
+    <arcs />
+  </L>
+  <R>
+    <globalLabels />
+    <globalVariables />
+    <nodes>
+      <node xsi:type="ruleNode">
+        <shapekey>b2178640-076f-4520-b33c-c603466bc2fc</shapekey>
+        <screenX>155</screenX>
+        <screenY>149</screenY>
+        <name>root</name>
+        <localLabels />
+		  <localVariables />
+        <containsAllLocalLabels>false</containsAllLocalLabels>
+        <strictDegreeMatch>false</strictDegreeMatch>
+      </node>
+      <node xsi:type="ruleNode">
+        <shapekey>4F878611-3196-4d12-BA36-705F502C8A6B</shapekey>
+        <screenX>85.84513</screenX>
+        <screenY>78.72764</screenY>
+        <name>n1</name>
+        <localLabels />
+        <localVariables />
+        <containsAllLocalLabels>false</containsAllLocalLabels>
+        <strictDegreeMatch>false</strictDegreeMatch>
+      </node>
+      <node xsi:type="ruleNode">
+        <shapekey>4F878611-3196-4d12-BA36-705F502C8A6B</shapekey>
+        <screenX>240.034317</screenX>
+        <screenY>95.03686</screenY>
+        <name>n2</name>
+        <localLabels />
+        <localVariables />
+        <containsAllLocalLabels>false</containsAllLocalLabels>
+        <strictDegreeMatch>false</strictDegreeMatch>
+      </node>
+      <node xsi:type="ruleNode">
+        <shapekey>4F878611-3196-4d12-BA36-705F502C8A6B</shapekey>
+        <screenX>244.215</screenX>
+        <screenY>201.304718</screenY>
+        <name>n3</name>
+        <localLabels />
+        <localVariables />
+        <containsAllLocalLabels>false</containsAllLocalLabels>
+        <strictDegreeMatch>false</strictDegreeMatch>
+      </node>
+      <node xsi:type="ruleNode">
+        <shapekey>4F878611-3196-4d12-BA36-705F502C8A6B</shapekey>
+        <screenX>149.772812</screenX>
+        <screenY>251.201</screenY>
+        <name>n4</name>
+        <localLabels />
+        <localVariables />
+        <containsAllLocalLabels>false</containsAllLocalLabels>
+        <strictDegreeMatch>false</strictDegreeMatch>
+      </node>
+      <node xsi:type="ruleNode">
+        <shapekey>4F878611-3196-4d12-BA36-705F502C8A6B</shapekey>
+        <screenX>64.303566</screenX>
+        <screenY>191.44873</screenY>
+        <name>n5</name>
+        <localLabels />
+        <localVariables />
+        <containsAllLocalLabels>false</containsAllLocalLabels>
+        <strictDegreeMatch>false</strictDegreeMatch>
+      </node>
+    </nodes>
+    <arcs>
+      <arc xsi:type="ruleArc">
+        <toConnector>0</toConnector>
+        <fromConnector>0</fromConnector>
+        <curveStyle>Default</curveStyle>
+        <name>a0</name>
+        <localLabels />
+        <localVariables />
+        <From>root</From>
+        <To>n5</To>
+        <directed>true</directed>
+        <doublyDirected>false</doublyDirected>
+        <containsAllLocalLabels>false</containsAllLocalLabels>
+        <directionIsEqual>false</directionIsEqual>
+        <nullMeansNull>false</nullMeansNull>
+      </arc>
+      <arc xsi:type="ruleArc">
+        <toConnector>0</toConnector>
+        <fromConnector>0</fromConnector>
+        <curveStyle>Default</curveStyle>
+        <name>a1</name>
+        <localLabels />
+        <localVariables />
+        <From>root</From>
+        <To>n1</To>
+        <directed>true</directed>
+        <doublyDirected>false</doublyDirected>
+        <containsAllLocalLabels>false</containsAllLocalLabels>
+        <directionIsEqual>false</directionIsEqual>
+        <nullMeansNull>false</nullMeansNull>
+      </arc>
+      <arc xsi:type="ruleArc">
+        <toConnector>0</toConnector>
+        <fromConnector>0</fromConnector>
+        <curveStyle>Default</curveStyle>
+        <name>a2</name>
+        <localLabels />
+        <localVariables />
+        <From>root</From>
+        <To>n2</To>
+        <directed>true</directed>
+        <doublyDirected>false</doublyDirected>
+        <containsAllLocalLabels>false</containsAllLocalLabels>
+        <directionIsEqual>false</directionIsEqual>
+        <nullMeansNull>false</nullMeansNull>
+      </arc>
+      <arc xsi:type="ruleArc">
+        <toConnector>0</toConnector>
+        <fromConnector>0</fromConnector>
+        <curveStyle>Default</curveStyle>
+        <name>a3</name>
+        <localLabels />
+        <localVariables />
+        <From>root</From>
+        <To>n3</To>
+        <directed>true</directed>
+        <doublyDirected>false</doublyDirected>
+        <containsAllLocalLabels>false</containsAllLocalLabels>
+        <directionIsEqual>false</directionIsEqual>
+        <nullMeansNull>false</nullMeansNull>
+      </arc>
+      <arc xsi:type="ruleArc">
+        <toConnector>0</toConnector>
+        <fromConnector>0</fromConnector>
+        <curveStyle>Default</curveStyle>
+        <name>a4</name>
+        <localLabels />
+        <localVariables />
+        <From>root</From>
+        <To>n4</To>
+        <directed>true</directed>
+        <doublyDirected>false</doublyDirected>
+        <containsAllLocalLabels>false</containsAllLocalLabels>
+        <directionIsEqual>false</directionIsEqual>
+        <nullMeansNull>false</nullMeansNull>
+      </arc>
+    </arcs>
+  </R>
+</grammarRule>

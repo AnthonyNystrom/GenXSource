@@ -1,0 +1,851 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NeuroBox.PatternMatching</name>
+    </assembly>
+    <members>
+        <member name="T:NeuroBox.PatternMatching.DoublePattern">
+            <summary>
+            A Pattern is a single double input-output association.
+            You may use such patterns to traing a neural network to its association.
+            </summary>
+        </member>
+        <member name="T:NeuroBox.PatternMatching.Pattern">
+            <summary>
+            A Pattern is a single input-output association.
+            You may use such patterns to traing a neural network to its association.
+            </summary>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.Pattern.#ctor(System.String,System.Int32)">
+            <summary>
+            Instanciates a new (abstract) pattern.
+            </summary>
+            <param name="title">A short pattern description</param>
+            <param name="classification">The favourie output neuron index (in the output layer).</param>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.Pattern.SyncInputTo(System.Double[],NeuroBox.BasicConfig)">
+            <summary>
+            Copy input pattern data to an array.
+            </summary>
+            <param name="vector">The target array.</param>
+            <param name="config">The configuration instance.</param>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.Pattern.SyncTrainingTo(System.Double[],NeuroBox.BasicConfig)">
+            <summary>
+            Copy output training data to an array.
+            </summary>
+            <param name="vector">The target array.</param>
+            <param name="config">The configuration instance.</param>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.Pattern.SyncInputFrom(System.Double[],NeuroBox.BasicConfig)">
+            <summary>
+            Copy input pattern data from an array.
+            </summary>
+            <param name="vector">The target array.</param>
+            <param name="config">The configuration instance.</param>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.Pattern.SyncTrainingFrom(System.Double[],NeuroBox.BasicConfig)">
+            <summary>
+            Copy output training data from an array.
+            </summary>
+            <param name="vector">The target array.</param>
+            <param name="config">The configuration instance.</param>
+        </member>
+        <member name="P:NeuroBox.PatternMatching.Pattern.Title">
+            <summary>
+            The name/title of this pattern.
+            </summary>
+        </member>
+        <member name="P:NeuroBox.PatternMatching.Pattern.Classification">
+            <summary>
+            The position of the favoured output neuron in the output layer.
+            </summary>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.DoublePattern.#ctor(System.String,System.Double[],System.Double[],System.Int32)">
+            <summary>
+            Instanciates a new pattern using the given input - training association.
+            </summary>
+            <param name="title">The name/title of the pattern.</param>
+            <param name="input">The input pattern data (gets copied).</param>
+            <param name="training">The output training data (gets copied).</param>
+            <param name="classification">The position of the favoured output neuron in the output layer.</param>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.DoublePattern.#ctor(System.String,System.Double[],System.Int32,System.Int32,NeuroBox.BasicConfig)">
+            <summary>
+            Instanciates a new pattern.
+            </summary>
+            <param name="title">The name/title of the pattern.</param>
+            <param name="input">The input pattern data (gets copied).</param>
+            <param name="numberOfClasses">The count of output neurons.</param>
+            <param name="classification">The position of the favoured output neuron in the output layer.</param>
+            <param name="config">The network configuration instance (needed to generate an appropriate training vector)</param>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.DoublePattern.ToBooleanPattern(System.Double,System.Double)">
+            <summary>
+            Create a boolean pattern based on this pattern.
+            </summary>
+            <param name="inputThreshold">The input limit between 'true' and 'false'.</param>
+            <param name="outputThreshold">The output limit between 'true' and 'false'.</param>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.DoublePattern.ToBooleanPattern(NeuroBox.BasicConfig)">
+            <summary>
+            Create a boolean pattern based on this pattern.
+            </summary>
+            <param name="config">The configuration instance.</param>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.DoublePattern.SyncInputTo(System.Double[],NeuroBox.BasicConfig)">
+            <summary>
+            Copy input pattern data to an array.
+            </summary>
+            <param name="vector">The target array.</param>
+            <param name="config">The configuration instance.</param>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.DoublePattern.SyncTrainingTo(System.Double[],NeuroBox.BasicConfig)">
+            <summary>
+            Copy output training data to an array.
+            </summary>
+            <param name="vector">The target array.</param>
+            <param name="config">The configuration instance.</param>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.DoublePattern.SyncInputFrom(System.Double[],NeuroBox.BasicConfig)">
+            <summary>
+            Copy input pattern data from an array.
+            </summary>
+            <param name="vector">The target array.</param>
+            <param name="config">The configuration instance.</param>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.DoublePattern.SyncTrainingFrom(System.Double[],NeuroBox.BasicConfig)">
+            <summary>
+            Copy output training data from an array.
+            </summary>
+            <param name="vector">The target array.</param>
+            <param name="config">The configuration instance.</param>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.DoublePattern.CopyInputFrom(System.Double[])">
+            <summary>
+            Read input pattern data from an array.
+            </summary>
+            <param name="bind">The source array.</param>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.DoublePattern.CopyTrainingFrom(System.Double[])">
+            <summary>
+            Read output training data from an array.
+            </summary>
+            <param name="bind">The source array.</param>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.DoublePattern.CopyInputTo(System.Double[])">
+            <summary>
+            Copy input pattern data to an array.
+            </summary>
+            <param name="bind">The target array.</param>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.DoublePattern.CopyTrainingTo(System.Double[])">
+            <summary>
+            Copy output training data to an array.
+            </summary>
+            <param name="bind">The target array.</param>
+        </member>
+        <member name="P:NeuroBox.PatternMatching.DoublePattern.InputPattern">
+            <summary>
+            The input pattern data.
+            </summary>
+        </member>
+        <member name="P:NeuroBox.PatternMatching.DoublePattern.OutputTraining">
+            <summary>
+            The output training data.
+            </summary>
+        </member>
+        <member name="T:NeuroBox.PatternMatching.BooleanPattern">
+            <summary>
+            A Pattern is a single boolean input-output association.
+            You may use such patterns to traing a neural network to its association.
+            </summary>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.BooleanPattern.#ctor(System.String,System.Boolean[],System.Boolean[],System.Int32)">
+            <summary>
+            Instanciates a new pattern using the given input - training association.
+            </summary>
+            <param name="title">The name/title of the pattern.</param>
+            <param name="input">The input pattern data (gets copied).</param>
+            <param name="training">The output training data (gets copied).</param>
+            <param name="classification">The position of the favoured output neuron in the output layer.</param>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.BooleanPattern.#ctor(System.String,System.Boolean[],System.Int32,System.Int32)">
+            <summary>
+            Instanciates a new pattern using the given input - training association.
+            </summary>
+            <param name="title">The name/title of the pattern.</param>
+            <param name="input">The input pattern data (gets copied).</param>
+            <param name="numberOfClasses">The count of output neurons.</param>
+            <param name="classification">The position of the favoured output neuron in the output layer.</param>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.BooleanPattern.ToDoublePattern(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Create a double pattern based on this pattern.
+            </summary>
+            <param name="inputLow">The input value for 'false'.</param>
+            <param name="inputHigh">The input value for 'true'.</param>
+            <param name="outputLow">The output value for 'false'.</param>
+            <param name="outputHigh">The output value for 'true'.</param>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.BooleanPattern.ToDoublePattern(NeuroBox.BasicConfig)">
+            <summary>
+            Create a double pattern based on this pattern.
+            </summary>
+            <param name="config">The configuration instance.</param>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.BooleanPattern.SyncInputTo(System.Double[],NeuroBox.BasicConfig)">
+            <summary>
+            Copy input pattern data to an array.
+            </summary>
+            <param name="vector">The target array.</param>
+            <param name="config">The configuration instance.</param>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.BooleanPattern.SyncTrainingTo(System.Double[],NeuroBox.BasicConfig)">
+            <summary>
+            Copy output training data to an array.
+            </summary>
+            <param name="vector">The target array.</param>
+            <param name="config">The configuration instance.</param>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.BooleanPattern.SyncInputFrom(System.Double[],NeuroBox.BasicConfig)">
+            <summary>
+            Copy input pattern data from an array.
+            </summary>
+            <param name="vector">The target array.</param>
+            <param name="config">The configuration instance.</param>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.BooleanPattern.SyncTrainingFrom(System.Double[],NeuroBox.BasicConfig)">
+            <summary>
+            Copy output training data from an array.
+            </summary>
+            <param name="vector">The target array.</param>
+            <param name="config">The configuration instance.</param>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.BooleanPattern.CopyInputFrom(System.Boolean[])">
+            <summary>
+            Read input pattern data from an array.
+            </summary>
+            <param name="bind">The source array.</param>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.BooleanPattern.CopyTrainingFrom(System.Boolean[])">
+            <summary>
+            Read output training data from an array.
+            </summary>
+            <param name="bind">The source array.</param>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.BooleanPattern.CopyInputTo(System.Boolean[])">
+            <summary>
+            Copy input pattern data to an array.
+            </summary>
+            <param name="bind">The target array.</param>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.BooleanPattern.CopyTrainingTo(System.Boolean[])">
+            <summary>
+            Copy output training data to an array.
+            </summary>
+            <param name="bind">The target array.</param>
+        </member>
+        <member name="P:NeuroBox.PatternMatching.BooleanPattern.InputPattern">
+            <summary>
+            The input pattern data.
+            </summary>
+        </member>
+        <member name="P:NeuroBox.PatternMatching.BooleanPattern.OutputTraining">
+            <summary>
+            The output training data.
+            </summary>
+        </member>
+        <member name="T:NeuroBox.PatternMatching.Grid2D.Grid2DControler">
+            <summary>
+            Building Block for 2D Grid pattern matching scenarios. This is the class to work with.
+            </summary>
+        </member>
+        <member name="T:NeuroBox.PatternMatching.Controler">
+            <summary>
+            Building Block for pattern matching scenarios. This is the class to work with.
+            </summary>
+        </member>
+        <member name="T:NeuroBox.PatternMatching.IControler">
+            <summary>
+            Controler Interface to decouple trainer implementations from the abstract Controler class.
+            </summary>
+            <remarks>
+            Do not use this interface for your own controler abstraction
+            as it is rather incomplete for such applications.
+            </remarks>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.IControler.SelectPattern(System.Int32)">
+            <summary>Select a pattern.</summary>
+            <param name="position">The index of the pattern.</param>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.IControler.CalculateCurrentNetwork">
+            <summary>Calculate the current network/pattern.</summary>
+            <returns>The position of the output neuron with the biggest output.</returns>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.IControler.CountSuccessfulPatterns">
+            <summary>Count matching (successful trained) patterns.</summary>
+            <returns>The number of matching patterns</returns>
+        </member>
+        <member name="P:NeuroBox.PatternMatching.IControler.NeuralNetwork">
+            <summary>The current network instance.</summary>
+        </member>
+        <member name="P:NeuroBox.PatternMatching.IControler.TrainingConfiguration">
+            <summary>The training configuration set.</summary>
+        </member>
+        <member name="P:NeuroBox.PatternMatching.IControler.BasicConfiguration">
+            <summary>The basic network configuration set.</summary>
+        </member>
+        <member name="P:NeuroBox.PatternMatching.IControler.PatternCount">
+            <summary>The count of loaded patterns.</summary>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.Controler.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Instanciate a new pattern matching building block.
+            </summary>
+            <param name="numberOfInputs">The count of input neurons.</param>
+            <param name="numberOfClasses">The count of output neurons.</param>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.Controler.#ctor(System.Int32,System.Int32,NeuroBox.ConfigNode)">
+            <summary>
+            Instanciate a new pattern matching building block.
+            </summary>
+            <param name="numberOfInputs">The count of input neurons.</param>
+            <param name="numberOfClasses">The count of output neurons.</param>
+            <param name="config">The configuration instance (to replace the default).</param>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.Controler.#ctor(System.Int32,System.Int32,NeuroBox.INetworkStructureBuilder)">
+            <summary>
+            Instanciate a new pattern matching building block.
+            </summary>
+            <param name="numberOfInputs">The count of input neurons.</param>
+            <param name="numberOfClasses">The count of output neurons.</param>
+            <param name="builder">A network structure builder (to replace the default).</param>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.Controler.#ctor(System.Int32,System.Int32,NeuroBox.ConfigNode,NeuroBox.INetworkStructureBuilder)">
+            <summary>
+            Instanciate a new pattern matching building block.
+            </summary>
+            <param name="numberOfInputs">The count of input neurons.</param>
+            <param name="numberOfClasses">The count of output neurons.</param>
+            <param name="config">The configuration instance (to replace the default).</param>
+            <param name="builder">A network structure builder (to replace the default).</param>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.Controler.BuildNetwork(System.Boolean)">
+            <summary>
+            Builds the Network. Call this method straight after the constructor.
+            </summary>
+            <param name="adaptConfiguration"></param>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.Controler.ImportNetwork(NeuroBox.Network,System.Boolean)">
+            <summary>
+            Imports a Network. Call this method instead of <see cref="M:NeuroBox.PatternMatching.Controler.BuildNetwork(System.Boolean)"/> if you want to use your own network structure.
+            </summary>
+            <param name="network"></param>
+            <param name="adaptConfiguration"></param>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.Controler.RebuildNetwork">
+            <summary>
+            Rebuilds a new network ready for a new training session.
+            </summary>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.Controler.SetOutputTitles(System.String[])">
+            <summary>
+            Sets names/titles of the output neurons.
+            </summary>
+            <param name="titles"></param>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.Controler.SelectPattern(System.Int32)">
+            <summary>
+            Select a pattern.
+            </summary>
+            <param name="position">The index of the pattern.</param>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.Controler.SelectShuffledPattern(System.Int32)">
+            <summary>
+            Select a pattern and shuffle it (if shuffle is enabled).
+            </summary>
+            <param name="position">The index of the pattern.</param>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.Controler.PushInput(System.Double[])">
+            <summary>
+            Push input data to the input layer.
+            </summary>
+            <param name="input">The input data.</param>
+            <remarks>
+            Use this to push arbitrary data that is NOT stored in patterns.
+            If you're working with patterns, use SelectPattern instead.
+            Note that this method overwrites data in the bound vector.
+            </remarks>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.Controler.PushInput(System.Boolean[])">
+            <summary>
+            Push input data to the input layer.
+            </summary>
+            <param name="input">The input data.</param>
+            <remarks>
+            Use this to push arbitrary data that is NOT stored in patterns.
+            If you're working with patterns, use SelectPattern instead.
+            Note that this method overwrites data in the bound vector.
+            </remarks>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.Controler.TrainCurrentNetwork">
+            <summary>
+            Train the current network/pattern.
+            </summary>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.Controler.CalculateCurrentNetwork">
+            <summary>
+            Calculate/Propagate the current network/pattern.
+            </summary>
+            <returns>The position of the output neuron with the biggest output.</returns>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.Controler.CalculateCurrentNetwork(System.Double@)">
+            <summary>
+            Calculate/Propagate the current network/pattern.
+            </summary>
+            <returns>The position of the output neuron with the biggest output.</returns>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.Controler.CountSuccessfulPatterns">
+            <summary>
+            Count matching (successful trained) patterns.
+            </summary>
+            <returns>The number of matching patterns</returns>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.Controler.AutoTrainNetwork(NeuroBox.PatternMatching.Progress)">
+            <summary>
+            Train the network using a Network Trainer agent.
+            </summary>
+            <param name="progress">Delegate to update the progress (between 0 and 100).</param>
+            <returns>Whether the training was successful or not.</returns>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.Controler.AutoTrainNetwork(System.Int32,NeuroBox.PatternMatching.Progress)">
+            <summary>
+            Train the network using a Network Trainer agent.
+            </summary>
+            <param name="attempts">The count of training attemps (if predecessor fails). Default is 1 (if omitted).</param>
+            <param name="progress">Delegate to update the progress (between 0 and 100).</param>
+            <returns>Whether the training was successful or not.</returns>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.Controler.AutoTrainNetwork">
+            <summary>
+            Train the network using a Network Trainer agent.
+            </summary>
+            <returns>Whether the training was successful or not.</returns>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.Controler.AutoTrainNetwork(System.Int32)">
+            <summary>
+            Train the network using a Network Trainer agent.
+            </summary>
+            <param name="attempts">The count of training attemps (if predecessor fails). Default is 1 (if omitted).</param>
+            <returns>Whether the training was successful or not.</returns>
+        </member>
+        <member name="E:NeuroBox.PatternMatching.Controler.PatternSelectionChanged">
+            <summary>Event that fires as soon as a new pattern is selected.</summary>
+        </member>
+        <member name="E:NeuroBox.PatternMatching.Controler.NetworkTrained">
+            <summary>Event that fires as soon as the network gets backpropagated.</summary>
+        </member>
+        <member name="E:NeuroBox.PatternMatching.Controler.NetworkCalculated">
+            <summary>Event that fires as soon as the network gets propagated.</summary>
+        </member>
+        <member name="E:NeuroBox.PatternMatching.Controler.InputChanged">
+            <summary>Event that fires as soon as the input data changed.</summary>
+        </member>
+        <member name="E:NeuroBox.PatternMatching.Controler.TrainingChanged">
+            <summary>Event that fires as soon as the output data changed.</summary>
+        </member>
+        <member name="E:NeuroBox.PatternMatching.Controler.NetworkRebuilt">
+            <summary>Event that fires as soon as the network is rebuilt.</summary>
+        </member>
+        <member name="P:NeuroBox.PatternMatching.Controler.StructureBuilder">
+            <summary>
+            Access the network structure builder.
+            </summary>
+            <remarks>
+            This builder is responsible for connecting the network layers together.
+            </remarks>
+        </member>
+        <member name="P:NeuroBox.PatternMatching.Controler.NetworkTrainer">
+            <summary>
+            Access the network trainer agent.
+            </summary>
+            <remarks>
+            This agent is responsible for a successful training the network.
+            </remarks>
+        </member>
+        <member name="P:NeuroBox.PatternMatching.Controler.TrainingConfiguration">
+            <summary>
+            Access the training configuration set.
+            </summary>
+        </member>
+        <member name="P:NeuroBox.PatternMatching.Controler.BasicConfiguration">
+            <summary>
+            Access the basic network configuration set.
+            </summary>
+        </member>
+        <member name="P:NeuroBox.PatternMatching.Controler.NeuralNetwork">
+            <summary>
+            Access the internal neural network structure.
+            </summary>
+        </member>
+        <member name="P:NeuroBox.PatternMatching.Controler.Patterns">
+            <summary>
+            The active pattern collection.
+            </summary>
+        </member>
+        <member name="P:NeuroBox.PatternMatching.Controler.NumberOfInputs">
+            <summary>
+            Access the count of input neurons.
+            </summary>
+        </member>
+        <member name="P:NeuroBox.PatternMatching.Controler.NumberOfClasses">
+            <summary>
+            Access the count of output neurons.
+            </summary>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.Grid2D.Grid2DControler.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Instanciate a new 2D grid pattern matching building block.
+            </summary>
+            <param name="width">The input grid width.</param>
+            <param name="height">The input grid height.</param>
+            <param name="numberOfClasses">The count of possible outputs.</param>
+        </member>
+        <member name="P:NeuroBox.PatternMatching.Grid2D.Grid2DControler.PatternWidth">
+            <summary>
+            The Input Grid Width.
+            </summary>
+        </member>
+        <member name="P:NeuroBox.PatternMatching.Grid2D.Grid2DControler.PatternHeight">
+            <summary>
+            The Input Grid Height.
+            </summary>
+        </member>
+        <member name="T:NeuroBox.PatternMatching.INetworkTrainer">
+            <summary>
+            Generic network trainer interface.
+            </summary>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.INetworkTrainer.Train(NeuroBox.PatternMatching.IControler,NeuroBox.PatternMatching.Progress)">
+            <summary>
+            Train the network using specialized strategies.
+            </summary>
+            <returns>Whether the training was successful.</returns>
+        </member>
+        <member name="T:NeuroBox.PatternMatching.Progress">
+            <summary>Delegate for publishing new progress.</summary>
+        </member>
+        <member name="T:NeuroBox.PatternMatching.Grid2D.BooleanGrid2DPattern">
+            <summary>
+            A specialized pattern for grid based applications.
+            </summary>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.Grid2D.BooleanGrid2DPattern.#ctor(System.String,System.Int32,System.Int32,System.Boolean[],System.Int32,System.Int32)">
+            <summary>
+            Instanciates a new pattern using the given input - training association.
+            </summary>
+            <param name="title">The name/title of the pattern.</param>
+            <param name="width">The width of the input grid.</param>
+            <param name="height">The height of the input grid.</param>
+            <param name="input">The input pattern data.</param>
+            <param name="numberOfClasses">The count of output neurons.</param>
+            <param name="classification">The output neuron associated with this pattern (zero based).</param>
+            <remarks>The input array needs to be of the same size as the product of x and y.</remarks>
+        </member>
+        <member name="P:NeuroBox.PatternMatching.Grid2D.BooleanGrid2DPattern.PatternWidth">
+            <summary>
+            The pattern grid width.
+            </summary>
+        </member>
+        <member name="P:NeuroBox.PatternMatching.Grid2D.BooleanGrid2DPattern.PatternHeight">
+            <summary>
+            The pattern grid height.
+            </summary>
+        </member>
+        <member name="T:NeuroBox.PatternMatching.ConditionalTrainer">
+            <summary>
+            Incremental Conditional Network Trainer, training only patterns not yet classified correctly.
+            </summary>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.ConditionalTrainer.#ctor">
+            <summary>
+            Instanciate a new network trainer.
+            </summary>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.ConditionalTrainer.Train(NeuroBox.PatternMatching.IControler,NeuroBox.PatternMatching.Progress)">
+            <summary>
+            Train the network using specialized strategies.
+            </summary>
+            <returns>Whether the training was successful.</returns>
+        </member>
+        <member name="T:NeuroBox.PatternMatching.Grid2D.DoubleGrid2DPattern">
+            <summary>
+            A specialized pattern for grid based applications.
+            </summary>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.Grid2D.DoubleGrid2DPattern.#ctor(System.String,System.Int32,System.Int32,System.Double[],System.Int32,System.Int32,NeuroBox.BasicConfig)">
+            <summary>
+            Instanciates a new pattern using the given input - training association.
+            </summary>
+            <param name="title">The name/title of the pattern.</param>
+            <param name="x">The width of the input grid.</param>
+            <param name="y">The height of the input grid.</param>
+            <param name="input">The input pattern data.</param>
+            <param name="numberOfClasses">The count of output neurons.</param>
+            <param name="classification">The output neuron associated with this pattern (zero based).</param>
+            <param name="config">The network configuration instance (needed to generate an appropriate training vector)</param>
+            <remarks>The input array needs to be of the same size as the product of x and y.</remarks>
+        </member>
+        <member name="P:NeuroBox.PatternMatching.Grid2D.DoubleGrid2DPattern.PatternWidth">
+            <summary>
+            The pattern grid width.
+            </summary>
+        </member>
+        <member name="P:NeuroBox.PatternMatching.Grid2D.DoubleGrid2DPattern.PatternHeight">
+            <summary>
+            The pattern grid height.
+            </summary>
+        </member>
+        <member name="T:NeuroBox.PatternMatching.PatternEventArgs">
+            <summary>
+            Event Arguments for events refering to a pattern.
+            </summary>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.PatternEventArgs.#ctor(NeuroBox.PatternMatching.Pattern)">
+            <summary>
+            Instanciates a new event arg.
+            </summary>
+            <param name="pattern">The pattern to refer to.</param>
+        </member>
+        <member name="P:NeuroBox.PatternMatching.PatternEventArgs.Pattern">
+            <summary>
+            The pattern this event refers to.
+            </summary>
+        </member>
+        <member name="T:NeuroBox.PatternMatching.PatternPositionEventArgs">
+            <summary>
+            Event Arguments for events refering to a pattern and its position.
+            </summary>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.PatternPositionEventArgs.#ctor(NeuroBox.PatternMatching.Pattern,System.Int32)">
+            <summary>
+            Instanciates a new event arg.
+            </summary>
+            <param name="pattern">The pattern to refer to.</param>
+            <param name="position">The position of the pattern.</param>
+        </member>
+        <member name="P:NeuroBox.PatternMatching.PatternPositionEventArgs.Pattern">
+            <summary>
+            The pattern this event refers to.
+            </summary>
+        </member>
+        <member name="P:NeuroBox.PatternMatching.PatternPositionEventArgs.Position">
+            <summary>
+            The position of the pattern.
+            </summary>
+        </member>
+        <member name="P:NeuroBox.PatternMatching.Grid2D.Grid2DConfig.All2AllEnable">
+            <summary>Whether to connect all neurons together.</summary>
+        </member>
+        <member name="P:NeuroBox.PatternMatching.Grid2D.Grid2DConfig.VerticalLinesEnable">
+            <summary>Whether to connect neurons in vertical lines.</summary>
+        </member>
+        <member name="P:NeuroBox.PatternMatching.Grid2D.Grid2DConfig.HorizontalLinesEnable">
+            <summary>Whether to connect neurons in horizontal lines.</summary>
+        </member>
+        <member name="P:NeuroBox.PatternMatching.Grid2D.Grid2DConfig.RingsEnable">
+            <summary>Whether to connect neurons in rings.</summary>
+        </member>
+        <member name="P:NeuroBox.PatternMatching.Grid2D.Grid2DConfig.LittleSquaresEnable">
+            <summary>Whether to connect neurons in little squares.</summary>
+        </member>
+        <member name="T:NeuroBox.PatternMatching.Grid2D.DefaultGrid2DStructureBuilder">
+            <summary>
+            Default structure generator that builds intermediate synapse structures.
+            </summary>
+        </member>
+        <member name="F:NeuroBox.PatternMatching.Grid2D.DefaultGrid2DStructureBuilder._config">
+            <summary>The configuration instance.</summary>
+        </member>
+        <member name="F:NeuroBox.PatternMatching.Grid2D.DefaultGrid2DStructureBuilder._network">
+            <summary>The neural network.</summary>
+        </member>
+        <member name="F:NeuroBox.PatternMatching.Grid2D.DefaultGrid2DStructureBuilder._width">
+            <summary>The input grid's width.</summary>
+        </member>
+        <member name="F:NeuroBox.PatternMatching.Grid2D.DefaultGrid2DStructureBuilder._height">
+            <summary>The input grid's height.</summary>
+        </member>
+        <member name="F:NeuroBox.PatternMatching.Grid2D.DefaultGrid2DStructureBuilder._numberOfOutputs">
+            <summary>The count of output neurons.</summary>
+        </member>
+        <member name="F:NeuroBox.PatternMatching.Grid2D.DefaultGrid2DStructureBuilder._numberOfInputs">
+            <summary>The count of input neurons (=width*height).</summary>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.Grid2D.DefaultGrid2DStructureBuilder.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Instanciate a new network structure factory
+            </summary>
+            <param name="network">The network.</param>
+            <param name="gridX">The width of the grid.</param>
+            <param name="gridY">The height of the grid.</param>
+            <param name="outputSize">The count of output neurons.</param>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.Grid2D.DefaultGrid2DStructureBuilder.AdaptConfiguration">
+            <summary>
+            Adapt the factory's default configuration.
+            </summary>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.Grid2D.DefaultGrid2DStructureBuilder.ConnectNetwork">
+            <summary>
+            Connect the network.
+            </summary>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.Grid2D.DefaultGrid2DStructureBuilder.AddVerticalLines(NeuroBox.Layer,NeuroBox.Layer)">
+            <summary>
+            Connect input neurons in vertical lines to new hidden neurons.
+            </summary>
+            <param name="input">The input layer.</param>
+            <param name="hidden">The neuron to connect to.</param>
+            <returns>The set of new hidden neurons.</returns>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.Grid2D.DefaultGrid2DStructureBuilder.AddHorizontalLines(NeuroBox.Layer,NeuroBox.Layer)">
+            <summary>
+            Connect input neurons in horizontal lines to new hidden neurons.
+            </summary>
+            <param name="input">The input layer.</param>
+            <param name="hidden">The neuron to connect to.</param>
+            <returns>The set of new hidden neurons.</returns>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.Grid2D.DefaultGrid2DStructureBuilder.AddRings(NeuroBox.Layer,NeuroBox.Layer)">
+            <summary>
+            Connect input neurons in rings to new hidden neurons.
+            </summary>
+            <param name="input">The input layer.</param>
+            <param name="hidden">The neuron to connect to.</param>
+            <returns>The set of new hidden neurons.</returns>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.Grid2D.DefaultGrid2DStructureBuilder.AddSquares(NeuroBox.Layer,NeuroBox.Layer)">
+            <summary>
+            Connect input neurons in squares to new hidden neurons.
+            </summary>
+            <param name="input">The input layer.</param>
+            <param name="hidden">The neuron to connect to.</param>
+            <returns>The set of new hidden neurons.</returns>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.Grid2D.DefaultGrid2DStructureBuilder.ConnectVerticalLine(NeuroBox.Layer,NeuroBox.Neuron,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Connect input neurons of a specified vertical line to a given neuron.
+            </summary>
+            <param name="input">The input layer.</param>
+            <param name="neuron">The neuron to connect to.</param>
+            <param name="width">The width of the input grid (needed for transforming (x,y) to linear position).</param>
+            <param name="x">The constant X-Coordinate of the line.</param>
+            <param name="ymin">The top end Y-Coordinate.</param>
+            <param name="ymax">The bottom end Y-Coordinate.</param>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.Grid2D.DefaultGrid2DStructureBuilder.ConnectHorizontalLine(NeuroBox.Layer,NeuroBox.Neuron,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Connect input neurons of a specified horizontal line to a given neuron.
+            </summary>
+            <param name="input">The input layer.</param>
+            <param name="neuron">The neuron to connect to.</param>
+            <param name="width">The width of the input grid (needed for transforming (x,y) to linear position).</param>
+            <param name="y">The constant Y-Coordinate of the line.</param>
+            <param name="xmin">The left end X-Coordinate.</param>
+            <param name="xmax">The right end X-Coordinate.</param>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.Grid2D.DefaultGrid2DStructureBuilder.ConnectRing(NeuroBox.Layer,NeuroBox.Neuron,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Connect input neurons of a specified 'ring' to a given neuron.
+            </summary>
+            <param name="input">The input layer.</param>
+            <param name="neuron">The neuron to connect to.</param>
+            <param name="width">The width of the input grid (needed for transforming (x,y) to linear position).</param>
+            <param name="height">The height of the input grid (needed for transforming (x,y) to linear position).</param>
+            <param name="shift">The radial shift. 0 means the biggest radius, 1 the second biggest etc.</param>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.Grid2D.DefaultGrid2DStructureBuilder.ConnectArea(NeuroBox.Layer,NeuroBox.Neuron,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Connect input neurons of a specified oblong to a given neuron.
+            </summary>
+            <param name="input">The input layer.</param>
+            <param name="neuron">The neuron to connect to.</param>
+            <param name="width">The width of the input grid (needed for transforming (x,y) to linear position).</param>
+            <param name="x">X-Coordinate of the top left cornet.</param>
+            <param name="y">Y-Coordinate of the top left cornet.</param>
+            <param name="dx">Width of the oblong.</param>
+            <param name="dy">Height of the oblong.</param>
+        </member>
+        <member name="P:NeuroBox.PatternMatching.Grid2D.DefaultGrid2DStructureBuilder.Network">
+            <summary>
+            The neural network instance.
+            </summary>
+        </member>
+        <member name="T:NeuroBox.PatternMatching.OpenloopTrainer">
+            <summary>
+            Incremental Openloop Network Trainer, adjusting behavior by time.
+            </summary>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.OpenloopTrainer.#ctor">
+            <summary>
+            Instanciate a new network trainer.
+            </summary>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.OpenloopTrainer.Train(NeuroBox.PatternMatching.IControler,NeuroBox.PatternMatching.Progress)">
+            <summary>
+            Train the network using specialized strategies.
+            </summary>
+            <returns>Whether the training was successful.</returns>
+        </member>
+        <member name="P:NeuroBox.PatternMatching.TrainingConfig.AutoTrainingEpochs">
+            <summary>The count of rounds for each auto training attempt.</summary>
+        </member>
+        <member name="P:NeuroBox.PatternMatching.TrainingConfig.AutoTrainingAttempts">
+            <summary>The count of auto training attempts.</summary>
+        </member>
+        <member name="P:NeuroBox.PatternMatching.TrainingConfig.AutoTrainingPercentSuccessful">
+            <summary>The success threshold value in percent. 1 = all patterns, 0.5 = 50% of the patterns.</summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:NeuroBox.PatternMatching.TrainingConfig.ShuffleSwapProbability" -->
+        <member name="P:NeuroBox.PatternMatching.TrainingConfig.ShuffleNoiseSigma">
+            <summary>Standard deviation of added noise to any input value.</summary>
+        </member>
+        <member name="P:NeuroBox.PatternMatching.TrainingConfig.ShuffleEnable">
+            <summary>Whether to enable shuffling.</summary>
+        </member>
+        <member name="T:NeuroBox.PatternMatching.FeedbackTrainer">
+            <summary>
+            Incremental Feedback Network Trainer, adjusting behavior by time and success.
+            </summary>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.FeedbackTrainer.#ctor">
+            <summary>
+            Instanciate a new network trainer.
+            </summary>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.FeedbackTrainer.Train(NeuroBox.PatternMatching.IControler,NeuroBox.PatternMatching.Progress)">
+            <summary>
+            Train the network using specialized strategies.
+            </summary>
+            <returns>Whether the training was successful.</returns>
+        </member>
+        <member name="T:NeuroBox.PatternMatching.SimpleTrainer">
+            <summary>
+            Simple Incremental Network Trainer.
+            </summary>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.SimpleTrainer.#ctor">
+            <summary>
+            Instanciate a new network trainer.
+            </summary>
+        </member>
+        <member name="M:NeuroBox.PatternMatching.SimpleTrainer.Train(NeuroBox.PatternMatching.IControler,NeuroBox.PatternMatching.Progress)">
+            <summary>
+            Train the network using specialized strategies.
+            </summary>
+            <returns>Whether the training was successful.</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6B02195C-F245-4BCD-B106-567E4892DF22}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Genetibase.MathX.NuGenAlgebricEquations</RootNamespace>
+    <AssemblyName>Genetibase.MathX.NuGenAlgebricEquations</AssemblyName>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <StartupObject>Genetibase.MathX.NuGenAlgebricEquations.NuGenAlgerbicEquation_mainForm</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Genetibase.MathX.NuGenAlgebricEquations.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Genetibase.MathX.NuGenAlgebricEquations.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Genetibase.MathX.NuGenCurvesAndCo-ordinates, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Genetibase.MathX.NuGenCurvesAndCo-ordinates\bin\Debug\Genetibase.MathX.NuGenCurvesAndCo-ordinates.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGenScientificCalculator, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\NuGenScientificCalculator\bin\Release\NuGenScientificCalculator.exe</HintPath>
+    </Reference>
+    <Reference Include="NuGenScientificCalculator.vshost, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\NuGenScientificCalculator\bin\Release\NuGenScientificCalculator.vshost.exe</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NuGenAlgerbicEquation_mainForm.Designer.vb">
+      <DependentUpon>NuGenAlgerbicEquation_mainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenAlgerbicEquation_mainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenComplexMethod_BairstowForm.Designer.vb">
+      <DependentUpon>NuGenComplexMethod_BairstowForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenComplexMethod_BairstowForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenComplexMethod_cznewtonForm.Designer.vb">
+      <DependentUpon>NuGenComplexMethod_cznewtonForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenComplexMethod_cznewtonForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenComplexMethod_LinForm.Designer.vb">
+      <DependentUpon>NuGenComplexMethod_LinForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenComplexMethod_LinForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenComplexMethod_Mueller2_Form.Designer.vb">
+      <DependentUpon>NuGenComplexMethod_Mueller2_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenComplexMethod_Mueller2_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenComplexMethod_MuellerForm.Designer.vb">
+      <DependentUpon>NuGenComplexMethod_MuellerForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenComplexMethod_MuellerForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenComplexMethod_QudraticForm.Designer.vb">
+      <DependentUpon>NuGenComplexMethod_QudraticForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenComplexMethod_QudraticForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenComplexMethod_RootNumForm.Designer.vb">
+      <DependentUpon>NuGenComplexMethod_RootNumForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenComplexMethod_RootNumForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenComplexMethod_ZCircleForm.Designer.vb">
+      <DependentUpon>NuGenComplexMethod_ZCircleForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenComplexMethod_ZCircleForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenComplexMethod_ZMuellerForm.Designer.vb">
+      <DependentUpon>NuGenComplexMethod_ZMuellerForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenComplexMethod_ZMuellerForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenEquationRoots.Designer.vb">
+      <DependentUpon>NuGenEquationRoots.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenEquationRoots.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenEquationsRootsByBisectionMethod.vb" />
+    <Compile Include="NuGenEqutationsRootsByComplexMethod.vb" />
+    <Compile Include="NuGenNumericalUseOfSeries.vb" />
+    <Compile Include="NuGenNumericUseOfSeries_MainForm.Designer.vb">
+      <DependentUpon>NuGenNumericUseOfSeries_MainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenNumericUseOfSeries_MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenPolinomial.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="NuGenPolynomial_AdditionForm.Designer.vb">
+      <DependentUpon>NuGenPolynomial_AdditionForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenPolynomial_AdditionForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenPolynomial_MainForm.Designer.vb">
+      <DependentUpon>NuGenPolynomial_MainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenPolynomial_MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenQuatratic.vb" />
+    <Compile Include="NuGenRootComplexMethod_AllRoots.Designer.vb">
+      <DependentUpon>NuGenRootComplexMethod_AllRoots.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenRootComplexMethod_AllRoots.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenRootsByComplexMethodMainForm.Designer.vb">
+      <DependentUpon>NuGenRootsByComplexMethodMainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenRootsByComplexMethodMainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenSeries_AsymptoticForm.Designer.vb">
+      <DependentUpon>NuGenSeries_AsymptoticForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenSeries_AsymptoticForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenSeries_Bessel1Form.Designer.vb">
+      <DependentUpon>NuGenSeries_Bessel1Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenSeries_Bessel1Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenSeries_BesslserForm.Designer.vb">
+      <DependentUpon>NuGenSeries_BesslserForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenSeries_BesslserForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenSeries_ChebyshevForm.Designer.vb">
+      <DependentUpon>NuGenSeries_ChebyshevForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenSeries_ChebyshevForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenSeries_ChiSqureForm.Designer.vb">
+      <DependentUpon>NuGenSeries_ChiSqureForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenSeries_ChiSqureForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenSeries_HornerForm.Designer.vb">
+      <DependentUpon>NuGenSeries_HornerForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenSeries_HornerForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenSeries_InvnormForm.Designer.vb">
+      <DependentUpon>NuGenSeries_InvnormForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenSeries_InvnormForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenSeries_ReciProForm.Designer.vb">
+      <DependentUpon>NuGenSeries_ReciProForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenSeries_ReciProForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenSeries_ReversionSeriesForm.Designer.vb">
+      <DependentUpon>NuGenSeries_ReversionSeriesForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenSeries_ReversionSeriesForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenSeries_SineProductForm.Designer.vb">
+      <DependentUpon>NuGenSeries_SineProductForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenSeries_SineProductForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenAlgerbicEquation_mainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenAlgerbicEquation_mainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenComplexMethod_BairstowForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenComplexMethod_BairstowForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenComplexMethod_cznewtonForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenComplexMethod_cznewtonForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenComplexMethod_LinForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenComplexMethod_LinForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenComplexMethod_Mueller2_Form.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenComplexMethod_Mueller2_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenComplexMethod_MuellerForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenComplexMethod_MuellerForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenComplexMethod_QudraticForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenComplexMethod_QudraticForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenComplexMethod_RootNumForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenComplexMethod_RootNumForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenComplexMethod_ZCircleForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenComplexMethod_ZCircleForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenComplexMethod_ZMuellerForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenComplexMethod_ZMuellerForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenEquationRoots.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenEquationRoots.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenNumericUseOfSeries_MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenNumericUseOfSeries_MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenPolynomial_AdditionForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenPolynomial_AdditionForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenPolynomial_MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenPolynomial_MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenRootComplexMethod_AllRoots.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenRootComplexMethod_AllRoots.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenRootsByComplexMethodMainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenRootsByComplexMethodMainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenSeries_AsymptoticForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenSeries_AsymptoticForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenSeries_Bessel1Form.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenSeries_Bessel1Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenSeries_BesslserForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenSeries_BesslserForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenSeries_ChebyshevForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenSeries_ChebyshevForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenSeries_ChiSqureForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenSeries_ChiSqureForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenSeries_HornerForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenSeries_HornerForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenSeries_InvnormForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenSeries_InvnormForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenSeries_ReciProForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenSeries_ReciProForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenSeries_ReversionSeriesForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenSeries_ReversionSeriesForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenSeries_SineProductForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenSeries_SineProductForm.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

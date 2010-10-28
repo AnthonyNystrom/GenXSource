@@ -1,0 +1,298 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Rule Application</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+    <link rel="stylesheet" type="text/css" href="gsStyle1.css" />
+    <style type="text/css">
+    .style1 {text-indent: 36.0pt;
+	line-height: 114%;
+	text-align: left;
+	font-family: Cambria;
+	font-size: 11.0pt;
+	color: black;}
+h2
+	{text-indent:0pt;
+	text-align:left;
+	font-family:Georgia;
+	font-size:15.0pt;
+	color:black;
+	font-weight:bold;}
+.style2 {text-indent: 0pt;
+	line-height: 114%;
+	text-align: left;
+	font-family: Cambria;
+	font-size: 10.0pt;
+	color: black;
+	font-style: italic;
+	font-weight: bold;}
+    .style3 {
+	text-indent: 36.0pt;
+	line-height: 114%;
+	text-align: left;
+	font-family: Cambria;
+	font-size: small;
+	color: black;
+}
+    .style8 {
+	text-align: center;
+}
+    </style>
+</head>
+<body bgcolor="#FFFFFF">
+    <span style='position: absolute; z-index: 48; left: 188px; top: 683px; width: 652px;
+        height: 349px'>
+        <img src="images/applyProcess.png">
+        <p style="width: 642px; height: 20px">
+            <span lang="en-US" style="font-family: Tahoma;" class="style3">Figure 1: The&nbsp; application
+                of a graph grammar rule takes as input: a rule to apply, how that rule’s L is mapped
+                into the host, and the host graph.</span></p>
+    </span>
+    <div style="position: absolute; width: 100px; height: 100px; z-index: 0; left: 6px;
+        top: 159px" id="backgroundGraph">
+        <img alt="" src="images/lightergrayBackGroundGraph.png" width="698" height="610">
+    </div>
+    <p class="MsoOrganizationName">
+        <span style='color: #FFFFFF; position: absolute; z-index: 8; left: 388px; top: 74px;
+            width: 166px; height: 25px' id="ADLab">Automated Design Lab </span>
+    </p>
+    <span style='position: absolute; z-index: 6; left: 8px; top: 15px; width: 510px;
+        height: 42px' id="orangeDots">
+        <img width="510" height="42" src="images/orangeDots.png">
+    </span><a href="http://www.engr.utexas.edu"><span style='position: absolute; z-index: 5;
+        left: 560px; top: 0px; width: 189px; height: 177px' id="UTCOEBreadcrumbs">
+        <img width="200" height="188" src="images/UTCOEemblem.jpg" /></span></a><span style='position: absolute;
+            z-index: 2; left: 1px; top: 72px; width: 759px; height: 22px' id="fatOrangeBar">
+            <img width="759" height="22" src="images/thickOrangeBarHoriz.png">
+        </span><span style='position: absolute; z-index: 8; left: 197px; top: 47px; width: 372px;
+            height: 25px' id="GSTitle">
+            <p class="MsoOrganizationName">
+                GraphSynth 1.6</p>
+        </span><span style='position: absolute; z-index: 12; left: 197px; top: 197px; width: 560px;
+            height: 3px' id="beforeContentBreak">
+            <img width="560" height="3" src="images/thinBlackBarHoriz.png">
+        </span><span style='position: absolute; z-index: 7; left: 200px; top: 3374px; width: 538px;
+            height: 4px' id="bottommostBar" class="style7">
+            <div class="style6">
+                <p class="style8">
+                    <img width="538" height="4" src="images/thinnerOrangeBarHoriz.png">
+                    | <a href="index.htm">Home</a> | <a href="introMethod.htm">Methodology Overview</a>
+                    | <a href="graphs.htm">Graph Basics</a> | <a href="grammars.htm">Grammar Basics</a>
+                    | <a href="rule_recognition.htm">Grammars: Recognition</a> | <a href="rule_application.htm">
+                        Grammars: Application</a> | <a href="ruleSets.htm">Grammars: RuleSets</a> |
+                    <a href="generation.htm">Generation</a> | <a href="searchProcess.htm">Search Process</a>
+                    | <a href="navigating.htm">Navigating GraphSynth</a> | <a href="examples.htm">Examples</a>
+                    | <a href="download.htm">Download</a> |
+                </p>
+            </div>
+        </span><span style='position: absolute; z-index: 1; left: 0px; top: 0px; width: 760px;
+            height: 10px' id="topmostBar">
+            <img width="760" height="10" src="images/thinOrangeBarHoriz.png" />
+        </span><span style='position: absolute; z-index: 3; left: 156px; top: 48px; width: 17px;
+            height: 18px' id="leftArrow">
+            <img width="17" height="18" src="images/orangeDotArrow.png" />
+        </span><span style='position: absolute; z-index: 4; left: 174px; top: 48px; width: 17px;
+            height: 18px' id="rightArrow">
+            <img width="17" height="18" src="images/orangeDotArrow.png" /></span><span style='position: absolute;
+                z-index: 9; left: 191px; top: 152px; width: 557px; height: 32px' id="pageTitle">
+                <p class="MsoTitle3">
+                    Grammar: Application
+                </p>
+            </span><span style='position: absolute; z-index: 47; left: 190px; top: 216px; width: 514px;
+                height: 668px'>
+<p class="MsoPlainText"><span lang="en-US">Over the past thirty
+                    years, two separate fundamental approaches to graph application have been derived.
+                    The two approaches have been distinguished from one another as: algebraic versus
+                    algorithmic, gluing versus connecting, or context-sensitive versus context-free
+                    and both have been incorporated into GraphSynth. Figure 1 shows an overall flowchart
+                    for this application procedure. This flowchart captures in a rigorous way all graph
+                    transformations that may occur; addition, subtraction, or modification to nodes,
+                    arcs, and labels. The thick dotted line in the figure shows the algorithmic path
+                    of the application procedure while the long ‘U’ shaped lines indicate subgraph distinctions,
+                    where A <span lang="en-US" style='font-family: Symbol;'>Ì </span>B indicates that
+                    <span lang="en-US" style='font-family: Georgia; font-style: italic;'>A</span> is
+                    a subgraph of <span lang="en-US" style='font-family: Georgia; font-style: italic;'>B</span>.
+                    The input to application includes the three items on the left of Figure 1. The rule
+                    and the L-mapping (or locations) are the result of the previous <span lang="en-US"
+                        style='font-family: Georgia; font-style: italic;'>choose</span> function that
+                    results from recognition (<a href="generation.htm"><span lang="en-US" style='font-family: Georgia;
+                        text-decoration: underline;'>see Generation for description</span></a>). These
+                    along with the host graph, G, represent the first elements of what is commonly referred
+                    to as the Double-Pushout method, which is discussed in detail in the following subsection.
+                    Following the pushout that removes elements from the host (Step 1 in Figure 1);
+                    a second pushout adds new elements to the graph (Step 2 in Figure 1). This concludes
+                    the traditional algebraic approach to graph transformation; however, for completeness,
+                    a third step is implemented to accomplish Free-Arc Embedding of possible dangling
+                    arcs. This third step (Step 3 in Figure 1), based on a previous approach referred
+                    to as edge-directed Neighborhood Controlled Embedding, is improved upon in the implementation
+                    of GraphSynth. It is described in more detail below. </span>
+</p>
+</span>
+    <span style='position: absolute; z-index: 151; left: 186px; top: 1054px; width: 538px;
+        height: 567px'>
+        <h2>
+            <span lang="en-US">The Algebraic Double Pushout Method</span></h2>
+        <p class="MsoPlainText">
+            <span lang="en-US" style='font-family: Georgia;'>In general, the description of grammar
+                rules contains some overlap in the two graphs L and R. This overlap is referred
+                to as K, and indicates what parts of the L-mapping are to be kept through the rule
+                application. Any elements (nodes, arcs, or labels therein) that are to be deleted
+                in this rule transformation are therefore stored in L but not in K. One could view
+                the DPO method as a function:
+                <br>
+            </span><span lang="en-US" style='font-family: Georgia; font-style: italic; font-weight: bold;'>
+                H=G – (L – R) + (R – L)
+                <br>
+            </span><span lang="en-US" style='font-family: Georgia;'>where the parts of L that are
+                not in R are first deleted (L-R), followed by the addition of elements in R but
+                not in L (R-L). This method of adding elements via graph transformation is sometimes
+                referred to as the ‘gluing’ method or the context-sensitive method given this approach
+                at adding new elements to a host. One final change that can be made in this part
+                of application is to modify the labels in the K elements. This modification happens
+                in a similar way to the overall rule operation but is applied on a set as opposed
+                to a graph. Within each element in K, we identify the labels that exist when in
+                L that are no longer stated when in R and delete them. This is then followed by
+                adding the new labels that are in R but not in L; the common labels are left alone.
+                In terms of implementation, we represent L and R as independent graphs. As such
+                there is no true intersection graph K that results. What is done to represent the
+                K elements is to require that arcs and nodes with identical ‘names’ in L and R are
+                the same element, when the user constructs a rule. This name tag is separate from
+                labels which are used to describe qualities in the graph. Name is an implementation
+                fix to storing K elements in two separate instances. As a result, the aforementioned
+                modification of K labels can be easily performed. An example DPO rule application
+                is shown below in Figure 2.</span></p>
+        <div style="position: absolute; left: 2px; top: 518px; width: 543px; height: 443px;
+            z-index: 8" id="layer1">
+            <img alt="the double pushout method" src="images/ruleOverlap.png" width="561" height="398">
+            <p>
+                <span lang="en-US" style="font-size: 8.0pt; font-family: Tahoma;">Figure 2: An example
+                    of a DPO rule application. First elements are deleted followed by the addition of
+                    new elements.</span></p>
+        </div>
+    </span><span style='position: absolute; z-index: 6; left: 195px; top: 2012px; width: 489px;
+        height: 290px'>
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <td width="489" height="290">
+                    <h2>
+                        <span lang="en-US">The Algorithmic Free-Arc Embedding</span></h2>
+                    <p class="style1">
+                        <span lang="en-US" style='font-family: Georgia;'>The second approach to graph application
+                            is often referred to as the ‘algorithmic approach’ or the ‘connecting approach.’
+                            In many instances the two approaches are able to perform identical graph modifications,
+                            and in general the DPO method is preferred for its ease of representing graph modifications
+                            by simple graph subtractions and additions. The algorithmic method is ‘context-free’
+                            which on a low-level relates to the lack of the common or context graph, K, but
+                            on a higher-level this means that the rules can be applied in more generic way.
+                            Consider the example in Figure 2. The three nodes of the left hand side, L, are
+                            removed leaving two dangling arcs and are replaced by two new nodes and a single
+                            connecting arc. The two dangling arcs are then connected following a condition that
+                            informs the transformation process of where these arcs are connected.</span></p>
+                    </div></td>
+            </tr>
+        </table>
+        <div style="position: absolute; left: 3px; top: 268px; width: 426px; height: 429px;
+            z-index: 2" id="layer2">
+            <img alt="the embedding of arcs when no commonality graph is provided" src="images/embedRuleProcess.png"
+                width="487" height="361">
+            <p>
+                <span lang="en-US" style="font-size: 8.0pt; font-family: Tahoma;">Figure 3: An example
+                    of free arc embedding. The embedding rule specifies only an RNodeName, causing all
+                    free arcs to be connected to node III.</span></p>
+        </div>
+    </span><span style='position: absolute; z-index: 7; left: 200px; top: 2716px; width: 489px;
+        height: 155px'>
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <td width="489" style="height: 122px">
+                    <p class="style1">
+                        <span lang="en-US" style='font-family: Georgia;'>The approach used in GraphSynth is
+                            referred to as Free Arc Embedding and takes advantage of our ability to handle dangling
+                            arcs. Following the algebraic approach (see Figure 1), we gather the dangling arcs
+                            that were connected to the nodes deleted in the first part of DPO and check them
+                            with specific embedding conditions of the form:</span></p>
+                    </div></td>
+            </tr>
+        </table>
+        <table v:shapes="_x0000_s1557" cellpadding="0" cellspacing="0" width="472" height="160"
+            border="0" dir="ltr">
+            <tr>
+                <td width="472" height="159" valign="Top">
+                    <p class="style2">
+                        <span lang="en-US" style='font-family: Cambria; font-style: normal;'>if free arc ((contains
+                            label, </span><span lang="en-US" style='font-family: Cambria; color: #CC3300;'>freeArcLabel</span><span
+                                lang="en-US" style='font-family: Cambria; font-style: normal;'>)
+                                <br>
+                                AND<br>
+                                (was previously connected to the deleted node matched<br>
+                                with the L node, </span><span lang="en-US" style='font-family: Cambria; color: #CC3300;'>
+                                    LNodeName</span><span lang="en-US" style='font-family: Cambria; font-style: normal;'>)
+                                        <br>
+                                        AND<br>
+                                        (is currently attached to a neighbor node with label,<br>
+                                    </span><span lang="en-US" style='font-family: Cambria; color: #CC3300;'>neighborNodeLabel</span><span
+                                        lang="en-US" style='font-family: Cambria; font-style: normal;'>))<br>
+                                        AND<br>
+                                        (is in the direction of </span><span lang="en-US" style='font-family: Cambria; color: #CC3300;'>
+                                            originalDirection</span><span lang="en-US" style='font-family: Cambria; font-style: normal;'>))<br>
+                                            </span><span lang="en-US" style='font-family: Calibri; font-style: normal;'>then </span>
+                        <span lang="en-US" style='font-family: Cambria; font-style: normal;'></span><span
+                            lang="en-US" style='font-family: Calibri; font-style: normal;'>(connect to node,
+                        </span><span lang="en-US" style='font-family: Cambria; color: #CC3300;'>RNodeName </span>
+                        <span lang="en-US" style='font-family: Calibri; font-style: normal;'>in the direction
+                            of </span><span lang="en-US" style='font-family: Cambria; color: #CC3300;'>newDirection</span><span
+                                lang="en-US" style='font-family: Calibri; font-style: normal;'>).</span></p>
+                </td>
+            </tr>
+        </table>
+    </span><span style='position: absolute; z-index: 5; left: 206px; top: 2991px; width: 481px;
+        height: 400px'>
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <td width="481" height="400">
+                    <p class="style1">
+                        <span lang="en-US" style='font-family: Georgia;'>The representation of embedding rules
+                            is accomplished by simply saving the these variables within a grammar rule. Any
+                            of the first four elements of this rule representation may be left blank to specify
+                            that the rule is not concerned about a particular quality. This embedding method
+                            differs from previous by reconnecting the free arcs as opposed to creating new arcs.
+                            An addition of a seventh quality, </span><span lang="en-US" style='font-size: 10.0pt;
+                                line-height: 114%; font-family: Calibri; color: #CC3300; font-style: italic;
+                                font-weight: bold;'>allowDuplication</span><span lang="en-US" style='font-size: 8.0pt;
+                                    line-height: 114%; font-family: Cambria; color: #CC3300;'> </span><span lang="en-US"
+                                        style='font-family: Georgia;'>gives the approach the ability to create more arcs
+                                        than what is originally contained in the host. Additionally, if none of the first
+                                        four qualities of the rule are specified, then the rule will be matched to all free
+                                        arcs (this is seen in the example of Figure 2). Any free arcs that meet no conditional
+                                        rules are deleted as a final step in creating the new host, H'.</span></p>
+                    <p class="style1">
+                        <span lang="en-US" style='font-family: Georgia;'>It is important to note that the order
+                            of the rules is important. Any combination of embedding rules can be used to identify
+                            a free arc. If two rules are </span><span lang="en-US" style='font-family: Georgia;
+                                font-style: italic;'>recognized </span><span lang="en-US" style='font-family: Georgia;'>
+                                    with the same free arc only the first one will modify it, as the arc will no longer
+                                    be ‘free’ after the rule is applied; however, in cases when </span><span lang="en-US"
+                                        style='font-size: 10.0pt; line-height: 114%; font-family: Calibri; color: #CC3300;
+                                        font-style: italic; font-weight: bold;'>allowDuplication</span><span lang="en-US"
+                                            style='font-size: 8.0pt; line-height: 114%; font-family: Cambria; color: #CC3300;'>
+                                        </span><span lang="en-US" style='font-family: Georgia;'>is set to true, a copy of the
+                                            free arc will remain for the other rules to operate on. As a result, when a rule
+                                            duplicates an arc in this way, it does not prevent further rules from being recognizing
+                                            the free arc.</span></p>
+                </div></tr>
+        </table>
+    </span></span><span style="position: absolute; left: 9px; top: 211px; width: 175px;
+        height: 431px; z-index: 100" id="navigation">
+        <li class="sideBarNav"><a href="index.htm">Home</a></li><li class="sideBarNav"><a
+            href="introMethod.htm">Methodology Overview</a></li><li class="sideBarNav"><a href="graphs.htm">
+                Graph Basics</a></li><li class="sideBarNav"><a href="grammars.htm">Grammar Basics</a></li><li
+                    class="sideBarNav"><a href="rule_recognition.htm">Grammars: Recognition</a></li><li
+                        class="sideBarNav"><a href="rule_application.htm">Grammars: Application</a></li><li
+                            class="sideBarNav"><a href="ruleSets.htm">Grammars: RuleSets</a></li><li class="sideBarNav">
+                                <a href="generation.htm">Generation</a></li><li class="sideBarNav"><a href="searchProcess.htm">
+                                    Search Process</a></li><li class="sideBarNav"><a href="navigating.htm">Navigating GraphSynth</a></li><li
+                                        class="sideBarNav"><a href="examples.htm">Examples</a></li><li class="sideBarNav"><a
+                                            href="download.htm">Download</a></li>
+    </span>
+</body>
+</html>

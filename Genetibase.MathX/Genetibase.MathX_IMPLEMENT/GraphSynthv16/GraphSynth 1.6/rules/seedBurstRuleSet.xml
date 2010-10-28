@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ruleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <name>seedBurstRuleSet</name>
+  <ruleFileNames>
+    <string>seedBurst5rule1.xml</string>
+    <string>seedBurst3rule2.xml</string>
+    <string>seedBurst2rule3.xml</string>
+    <string>seedBurst1rule4.xml</string>
+  </ruleFileNames>
+  <triggerRuleNum>-1</triggerRuleNum>
+  <nextGenerationStep>
+    <nextGenerationSteps>Loop</nextGenerationSteps>
+    <nextGenerationSteps>Stop</nextGenerationSteps>
+    <nextGenerationSteps>Stop</nextGenerationSteps>
+    <nextGenerationSteps>Stop</nextGenerationSteps>
+    <nextGenerationSteps>Stop</nextGenerationSteps>
+  </nextGenerationStep>
+  <choiceMethod>Automatic</choiceMethod>
+  <interimCandidates>Developing</interimCandidates>
+  <finalCandidates>Feasible</finalCandidates>
+  <ruleSetIndex>0</ruleSetIndex>
+  <recognizeSourceFiles>
+    <string>seedBurstParamRules.cs</string>
+  </recognizeSourceFiles>
+  <applySourceFiles>
+    <string>seedBurstParamRules.cs</string>
+  </applySourceFiles>
+</ruleSet>

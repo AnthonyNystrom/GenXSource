@@ -1,0 +1,164 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0277F844-14DF-4115-B5E0-3AE7314A1EDD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Genetibase.MathX.NuGenStructures</RootNamespace>
+    <AssemblyName>Genetibase.MathX.NuGenStructures</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NuGenBox2DTest.cs" />
+    <Compile Include="NuGenBox2F.cs" />
+    <Compile Include="NuGenBox3D.cs" />
+    <Compile Include="NuGenBox3F.cs" />
+    <Compile Include="NuGenNuGenScale2D.cs" />
+    <Compile Include="NuGenPnt2D.cs" />
+    <Compile Include="NuGenPnt2F.cs" />
+    <Compile Include="NuGenPnt3D.cs" />
+    <Compile Include="NuGenPnt3F.cs" />
+    <Compile Include="NuGenRay2D.cs" />
+    <Compile Include="NuGenRay2F.cs" />
+    <Compile Include="NuGenRay3D.cs" />
+    <Compile Include="NuGenRay3F.cs" />
+    <Compile Include="NuGenRGBA.cs" />
+    <Compile Include="NuGenRot2D.cs" />
+    <Compile Include="NuGenRot2F.cs" />
+    <Compile Include="NuGenRot3D.cs" />
+    <Compile Include="NuGenRot3F.cs" />
+    <Compile Include="NuGenScale3D.cs" />
+    <Compile Include="NuGenScale3F.cs" />
+    <Compile Include="NuGenShift2D.cs" />
+    <Compile Include="NuGenShift2F.cs" />
+    <Compile Include="NuGenShift3D.cs" />
+    <Compile Include="NuGenShift3F.cs" />
+    <Compile Include="NuGenSphere3D.cs" />
+    <Compile Include="NuGenSphere3F.cs" />
+    <Compile Include="NuGenStructures_for_RGBA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenStructures_for_RGBA.Designer.cs">
+      <DependentUpon>NuGenStructures_for_RGBA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenTrafo2D.cs" />
+    <Compile Include="NuGenTrafo2F.cs" />
+    <Compile Include="NuGenTrafo3D.cs" />
+    <Compile Include="NuGenTrafo3F.cs" />
+    <Compile Include="NuGenTriangle3D.cs" />
+    <Compile Include="NuGenTriangle3F.cs" />
+    <Compile Include="NuGenVector.cs" />
+    <Compile Include="NuGenVen2D.cs" />
+    <Compile Include="NuGenVen2F.cs" />
+    <Compile Include="NuGenVen2I.cs" />
+    <Compile Include="NuGenVen2L.cs" />
+    <Compile Include="NuGenVen3D.cs" />
+    <Compile Include="NuGenVen3F.cs" />
+    <Compile Include="NuGen_pnt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGen_pnt.Designer.cs">
+      <DependentUpon>NuGen_pnt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NuGen_rays.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGen_rays.Designer.cs">
+      <DependentUpon>NuGen_rays.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NuGen_structures.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGen_structures.Designer.cs">
+      <DependentUpon>NuGen_structures.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NuGen_Structures_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGen_Structures_Main.Designer.cs">
+      <DependentUpon>NuGen_Structures_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NuGen_Trafo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGen_Trafo.Designer.cs">
+      <DependentUpon>NuGen_Trafo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NuGen_Vectors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGen_Vectors.Designer.cs">
+      <DependentUpon>NuGen_Vectors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scale2F.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NuGenStructures_for_RGBA.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenStructures_for_RGBA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGen_pnt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGen_pnt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGen_rays.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGen_rays.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGen_structures.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGen_structures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGen_Structures_Main.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGen_Structures_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGen_Trafo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGen_Trafo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGen_Vectors.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGen_Vectors.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

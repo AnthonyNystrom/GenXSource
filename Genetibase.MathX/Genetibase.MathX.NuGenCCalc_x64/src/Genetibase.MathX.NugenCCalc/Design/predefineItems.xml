@@ -1,0 +1,583 @@
+<?xml version="1.0"?>
+<PredefinedSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Expressions>
+    <FunctionParameters xsi:type="Explicit2DParameters">
+      <Name>Sin</Name>
+      <Formula />
+      <CodeLanguage>CSharp</CodeLanguage>
+      <Code>double Calculate(double x)
+{ return Math.Sin(x); }</Code>
+      <SourceType>CodeExpression</SourceType>
+    </FunctionParameters>
+    <FunctionParameters xsi:type="Explicit2DParameters">
+      <Name>Parabola</Name>
+      <Formula />
+      <CodeLanguage>CSharp</CodeLanguage>
+      <Code>double Calculate(double x)
+{ return x*x; }</Code>
+      <SourceType>CodeExpression</SourceType>
+    </FunctionParameters>
+    <FunctionParameters xsi:type="Explicit2DParameters">
+      <Name>Verziera</Name>
+      <Formula />
+      <CodeLanguage>VBNET</CodeLanguage>
+      <Code>Function Calculate(x As Double) as Double return 5*5*5/(x*x+5*5) End Function</Code>
+      <SourceType>CodeExpression</SourceType>
+    </FunctionParameters>
+    <FunctionParameters xsi:type="Implicit2DParameters">
+      <Name>Circle</Name>
+      <Formula />
+      <CodeLanguage>VBNET</CodeLanguage>
+      <Code>Function Calculate(x As Double, y As Double) as Double Return x*x+y*y-25 End Function</Code>
+      <SourceType>CodeExpression</SourceType>
+      <PointA>
+        <X>-10</X>
+        <Y>-10</Y>
+      </PointA>
+      <PointB>
+        <X>10</X>
+        <Y>10</Y>
+      </PointB>
+      <GridFactor>20</GridFactor>
+      <AreaSize>
+        <Width>0</Width>
+        <Height>0</Height>
+      </AreaSize>
+    </FunctionParameters>
+    <FunctionParameters xsi:type="Implicit2DParameters">
+      <Name>Cardioid</Name>
+      <Formula />
+      <CodeLanguage>VBNET</CodeLanguage>
+      <Code>Function Calculate(x As Double, y As Double) as Double Return (x*x+y*y)*(x*x+y*y)-10*x*(x*x+y*y)- 25*y*y End Function</Code>
+      <SourceType>CodeExpression</SourceType>
+      <PointA>
+        <X>-10</X>
+        <Y>-10</Y>
+      </PointA>
+      <PointB>
+        <X>10</X>
+        <Y>10</Y>
+      </PointB>
+      <GridFactor>20</GridFactor>
+      <AreaSize>
+        <Width>0</Width>
+        <Height>0</Height>
+      </AreaSize>
+    </FunctionParameters>
+    <FunctionParameters xsi:type="Implicit2DParameters">
+      <Name>Hyperbola</Name>
+      <Formula />
+      <CodeLanguage>CSharp</CodeLanguage>
+      <Code>double Calculate(double x, double y)
+{ return x*x/3*3-y*y/3*3-1; }</Code>
+      <SourceType>CodeExpression</SourceType>
+      <PointA>
+        <X>-10</X>
+        <Y>-10</Y>
+      </PointA>
+      <PointB>
+        <X>10</X>
+        <Y>10</Y>
+      </PointB>
+      <GridFactor>20</GridFactor>
+      <AreaSize>
+        <Width>0</Width>
+        <Height>0</Height>
+      </AreaSize>
+    </FunctionParameters>
+    <FunctionParameters xsi:type="Implicit2DParameters">
+      <Name>Lemniscate Bernoulli</Name>
+      <Formula />
+      <CodeLanguage>CSharp</CodeLanguage>
+      <Code>double Calculate(double x, double y)
+{ return (x*x+y*y)*(x*x+y*y)-50*(x*x-y*y); }</Code>
+      <SourceType>CodeExpression</SourceType>
+      <PointA>
+        <X>-10</X>
+        <Y>-10</Y>
+      </PointA>
+      <PointB>
+        <X>10</X>
+        <Y>10</Y>
+      </PointB>
+      <GridFactor>20</GridFactor>
+      <AreaSize>
+        <Width>0</Width>
+        <Height>0</Height>
+      </AreaSize>
+    </FunctionParameters>
+    <FunctionParameters xsi:type="Parametric2DParameters">
+      <Name>Tanh Spiral</Name>
+      <Formula />
+      <CodeLanguage>CSharp</CodeLanguage>
+      <Code>Point2D Calculate(double t)
+{ return new Point2D(Math.Sinh(2*t)/(Math.Cos(4*t)+Math.Cosh(2*t)), Math.Sin(4*t)/(Math.Cos(4*t) + Math.Cosh(2*t))); }</Code>
+      <SourceType>CodeExpression</SourceType>
+      <FormulaY />
+    </FunctionParameters>
+    <FunctionParameters xsi:type="Parametric2DParameters">
+      <Name>Coth Spiral</Name>
+      <Formula />
+      <CodeLanguage>CSharp</CodeLanguage>
+      <Code>Point2D Calculate(double t)
+{ return new Point2D(-Math.Sinh(2*t)/(Math.Cos(8*t)-Math.Cosh(2*t)), Math.Sin(8*t)/(Math.Cos(8*t)-Math.Cosh(2*t))); }</Code>
+      <SourceType>CodeExpression</SourceType>
+      <FormulaY />
+    </FunctionParameters>
+    <FunctionParameters xsi:type="Parametric2DParameters">
+      <Name>Butterfly Curve</Name>
+      <Formula />
+      <CodeLanguage>CSharp</CodeLanguage>
+      <Code>Point2D Calculate(double t)
+{ return new Point2D(Math.Cos(t)*(Math.Exp(Math.Cos(t))-2*Math.Cos(4*t)-Math.Sin(t/12)*Math.Sin(t/12)*Math.Sin(t/12)*Math.Sin(t/12)*Math.Sin(t/12)), Math.Sin(t)*(Math.Exp(Math.Cos(t))-2*Math.Cos(4*t)-Math.Sin(t/12)*Math.Sin(t/12)*Math.Sin(t/12)*Math.Sin(t/12)*Math.Sin(t/12))); }</Code>
+      <SourceType>CodeExpression</SourceType>
+      <FormulaY />
+    </FunctionParameters>
+    <FunctionParameters xsi:type="Explicit3DParameters">
+      <Name>Paraboloid 2</Name>
+      <Formula />
+      <CodeLanguage>VBNET</CodeLanguage>
+      <Code>Function Calculate(x As Double, y As Double) as Double Return x*x-y*y End Function</Code>
+      <SourceType>CodeExpression</SourceType>
+      <PointA>
+        <X>-10</X>
+        <Y>-10</Y>
+      </PointA>
+      <PointB>
+        <X>10</X>
+        <Y>10</Y>
+      </PointB>
+      <AreaSize>
+        <Width>0</Width>
+        <Height>0</Height>
+      </AreaSize>
+    </FunctionParameters>
+    <FunctionParameters xsi:type="Explicit3DParameters">
+      <Name>Paraboloid</Name>
+      <Formula />
+      <CodeLanguage>CSharp</CodeLanguage>
+      <Code>double Calculate(double x, double y)
+{ return x*x+y*y; }</Code>
+      <SourceType>CodeExpression</SourceType>
+      <PointA>
+        <X>-10</X>
+        <Y>-10</Y>
+      </PointA>
+      <PointB>
+        <X>10</X>
+        <Y>10</Y>
+      </PointB>
+      <AreaSize>
+        <Width>0</Width>
+        <Height>0</Height>
+      </AreaSize>
+    </FunctionParameters>
+    <FunctionParameters xsi:type="Implicit3DParameters">
+      <Name>Sphere</Name>
+      <Formula />
+      <CodeLanguage>CSharp</CodeLanguage>
+      <Code>double Calculate(double x, double y, double z)
+{ return x*x+y*y+z*z-25; }</Code>
+      <SourceType>CodeExpression</SourceType>
+      <Point3DA>
+        <X>-10</X>
+        <Y>-10</Y>
+        <Z>-10</Z>
+      </Point3DA>
+      <Point3DB>
+        <X>10</X>
+        <Y>10</Y>
+        <Z>10</Z>
+      </Point3DB>
+      <GridFactor>20</GridFactor>
+      <PixelSizeX>1</PixelSizeX>
+      <PixelSizeY>1</PixelSizeY>
+      <PixelSizeZ>1</PixelSizeZ>
+    </FunctionParameters>
+    <FunctionParameters xsi:type="Implicit3DParameters">
+      <Name>Heart surface</Name>
+      <Formula />
+      <CodeLanguage>CSharp</CodeLanguage>
+      <Code>double Calculate(double x, double y, double z)
+{ return (2*x*x + y*y + z*z - 1)*(2*x*x + y*y + z*z - 1)*(2*x*x + y*y + z*z - 1) - x*x*z*z*z / 10 - y*y*z*z*z; }</Code>
+      <SourceType>CodeExpression</SourceType>
+      <Point3DA>
+        <X>-10</X>
+        <Y>-10</Y>
+        <Z>-10</Z>
+      </Point3DA>
+      <Point3DB>
+        <X>10</X>
+        <Y>10</Y>
+        <Z>10</Z>
+      </Point3DB>
+      <GridFactor>20</GridFactor>
+      <PixelSizeX>1</PixelSizeX>
+      <PixelSizeY>1</PixelSizeY>
+      <PixelSizeZ>1</PixelSizeZ>
+    </FunctionParameters>
+    <FunctionParameters xsi:type="Implicit3DParameters">
+      <Name>Glob teardrop</Name>
+      <Formula />
+      <CodeLanguage>VBNET</CodeLanguage>
+      <Code>Function Calculate(x As Double, y As Double, z As Double) as Double Return 0.5*x*x*x*x*x + 0.5*x*x*x*x  - y*y - z*z End Function</Code>
+      <SourceType>CodeExpression</SourceType>
+      <Point3DA>
+        <X>-10</X>
+        <Y>-10</Y>
+        <Z>-10</Z>
+      </Point3DA>
+      <Point3DB>
+        <X>10</X>
+        <Y>10</Y>
+        <Z>10</Z>
+      </Point3DB>
+      <GridFactor>20</GridFactor>
+      <PixelSizeX>1</PixelSizeX>
+      <PixelSizeY>1</PixelSizeY>
+      <PixelSizeZ>1</PixelSizeZ>
+    </FunctionParameters>
+    <FunctionParameters xsi:type="Implicit3DParameters">
+      <Name>Bifolia surface</Name>
+      <Formula />
+      <CodeLanguage>VBNET</CodeLanguage>
+      <Code>Function Calculate(x As Double, y As Double, z As Double) as Double Return (x*x + y*y + z*z)*(x*x + y*y + z*z) - 3*y*(x*x + z*z) End Function</Code>
+      <SourceType>CodeExpression</SourceType>
+      <Point3DA>
+        <X>-10</X>
+        <Y>-10</Y>
+        <Z>-10</Z>
+      </Point3DA>
+      <Point3DB>
+        <X>10</X>
+        <Y>10</Y>
+        <Z>10</Z>
+      </Point3DB>
+      <GridFactor>20</GridFactor>
+      <PixelSizeX>1</PixelSizeX>
+      <PixelSizeY>1</PixelSizeY>
+      <PixelSizeZ>1</PixelSizeZ>
+    </FunctionParameters>
+    <FunctionParameters xsi:type="Implicit3DParameters">
+      <Name>The Blob</Name>
+      <Formula />
+      <CodeLanguage>CSharp</CodeLanguage>
+      <Code>double Calculate(double x, double y, double z)
+{ return x*x+y*y+z*z+Math.Sin(4*x)+Math.Sin(4*y)+Math.Sin(4*z)-1; }</Code>
+      <SourceType>CodeExpression</SourceType>
+      <Point3DA>
+        <X>-10</X>
+        <Y>-10</Y>
+        <Z>-10</Z>
+      </Point3DA>
+      <Point3DB>
+        <X>10</X>
+        <Y>10</Y>
+        <Z>10</Z>
+      </Point3DB>
+      <GridFactor>20</GridFactor>
+      <PixelSizeX>1</PixelSizeX>
+      <PixelSizeY>1</PixelSizeY>
+      <PixelSizeZ>1</PixelSizeZ>
+    </FunctionParameters>
+  </Expressions>
+  <Equations>
+    <FunctionParameters xsi:type="Explicit2DParameters">
+      <Name>Sin</Name>
+      <Formula>sin(x)</Formula>
+      <CodeLanguage>CSharp</CodeLanguage>
+      <Code>double Calculate(double x) {  return sin(x); }</Code>
+      <SourceType>Equation</SourceType>
+    </FunctionParameters>
+    <FunctionParameters xsi:type="Explicit2DParameters">
+      <Name>Parabola</Name>
+      <Formula>x*x</Formula>
+      <CodeLanguage>CSharp</CodeLanguage>
+      <Code>double Calculate(double x) {  return x*x; }</Code>
+      <SourceType>Equation</SourceType>
+    </FunctionParameters>
+    <FunctionParameters xsi:type="Explicit2DParameters">
+      <Name>Verziera</Name>
+      <Formula>5*5*5/(x*x+5*5)</Formula>
+      <CodeLanguage>CSharp</CodeLanguage>
+      <Code>double Calculate(double x) {  return 5*5*5/(x*x+5*5); }</Code>
+      <SourceType>Equation</SourceType>
+    </FunctionParameters>
+    <FunctionParameters xsi:type="Implicit2DParameters">
+      <Name>Circle</Name>
+      <Formula>x*x+y*y-25</Formula>
+      <CodeLanguage>CSharp</CodeLanguage>
+      <Code>double Calculate(double x, double y) {  return x*x+y*y-25; }</Code>
+      <SourceType>Equation</SourceType>
+      <PointA>
+        <X>-10</X>
+        <Y>-10</Y>
+      </PointA>
+      <PointB>
+        <X>10</X>
+        <Y>10</Y>
+      </PointB>
+      <GridFactor>20</GridFactor>
+      <AreaSize>
+        <Width>0</Width>
+        <Height>0</Height>
+      </AreaSize>
+    </FunctionParameters>
+    <FunctionParameters xsi:type="Implicit2DParameters">
+      <Name>Hyperbola</Name>
+      <Formula>x*x/3*3-y*y/3*3-1</Formula>
+      <CodeLanguage>CSharp</CodeLanguage>
+      <Code>double Calculate(double x, double y) {  return x*x/3*3-y*y/3*3-1; }</Code>
+      <SourceType>Equation</SourceType>
+      <PointA>
+        <X>-10</X>
+        <Y>-10</Y>
+      </PointA>
+      <PointB>
+        <X>10</X>
+        <Y>10</Y>
+      </PointB>
+      <GridFactor>20</GridFactor>
+      <AreaSize>
+        <Width>0</Width>
+        <Height>0</Height>
+      </AreaSize>
+    </FunctionParameters>
+    <FunctionParameters xsi:type="Implicit2DParameters">
+      <Name>Lemniscate Bernoulli</Name>
+      <Formula>(x*x+y*y)*(x*x+y*y)-50*(x*x-y*y)</Formula>
+      <CodeLanguage>CSharp</CodeLanguage>
+      <Code>double Calculate(double x, double y) {  return (x*x+y*y)*(x*x+y*y)-50*(x*x-y*y); }</Code>
+      <SourceType>Equation</SourceType>
+      <PointA>
+        <X>-10</X>
+        <Y>-10</Y>
+      </PointA>
+      <PointB>
+        <X>10</X>
+        <Y>10</Y>
+      </PointB>
+      <GridFactor>20</GridFactor>
+      <AreaSize>
+        <Width>0</Width>
+        <Height>0</Height>
+      </AreaSize>
+    </FunctionParameters>
+    <FunctionParameters xsi:type="Parametric2DParameters">
+      <Name>Tanh Spiral</Name>
+      <Formula>sinh(2*t)/(cos(4*t)+cosh(2*t))</Formula>
+      <CodeLanguage>CSharp</CodeLanguage>
+      <Code>Point2D Calculate(double t) {  return new Point2D(sinh(2*t)/(cos(4*t)+cosh(2*t)),); }</Code>
+      <SourceType>Equation</SourceType>
+      <FormulaY>sin(4*t)/(cos(4*t) + cosh(2*t))</FormulaY>
+    </FunctionParameters>
+    <FunctionParameters xsi:type="Parametric2DParameters">
+      <Name>Coth Spiral</Name>
+      <Formula>-sinh(2*t)/(cos(8*t)-cosh(2*t))</Formula>
+      <CodeLanguage>CSharp</CodeLanguage>
+      <Code>Point2D Calculate(double t) {  return new Point2D(-sinh(2*t)/(cos(8*t)-cosh(2*t)),); }</Code>
+      <SourceType>Equation</SourceType>
+      <FormulaY>sin(8*t)/(cos(8*t)-cosh(2*t))</FormulaY>
+    </FunctionParameters>
+    <FunctionParameters xsi:type="Parametric2DParameters">
+      <Name>Butterfly Curve</Name>
+      <Formula>cos(t)*(exp(cos(t))-2*cos(4*t)-sin(t/12)*sin(t/12)*sin(t/12)*sin(t/12)*sin(t/12))</Formula>
+      <CodeLanguage>CSharp</CodeLanguage>
+      <Code>Point2D Calculate(double t) {  return new Point2D(cos(t)*(exp(cos(t))-2*cos(4*t)-sin(t/12)*sin(t/12)*sin(t/12)*sin(t/12)*sin(t/12)),); }</Code>
+      <SourceType>Equation</SourceType>
+      <FormulaY>sin(t)*(exp(cos(t))-2*cos(4*t)-sin(t/12)*sin(t/12)*sin(t/12)*sin(t/12)*sin(t/12))</FormulaY>
+    </FunctionParameters>
+    <FunctionParameters xsi:type="Implicit2DParameters">
+      <Name>Cardioid</Name>
+      <Formula>(x*x+y*y)*(x*x+y*y)-10*x*(x*x+y*y)- 25*y*y</Formula>
+      <CodeLanguage>CSharp</CodeLanguage>
+      <Code>double Calculate(double x, double y) {  return (x*x+y*y)*(x*x+y*y)-10*x*(x*x+y*y)- 25*y*y; }</Code>
+      <SourceType>Equation</SourceType>
+      <PointA>
+        <X>-10</X>
+        <Y>-10</Y>
+      </PointA>
+      <PointB>
+        <X>10</X>
+        <Y>10</Y>
+      </PointB>
+      <GridFactor>20</GridFactor>
+      <AreaSize>
+        <Width>0</Width>
+        <Height>0</Height>
+      </AreaSize>
+    </FunctionParameters>
+    <FunctionParameters xsi:type="Implicit2DParameters">
+      <Name>Folium</Name>
+      <Formula>x*x*x+y*y*y-3*x*y</Formula>
+      <CodeLanguage>CSharp</CodeLanguage>
+      <Code>double Calculate(double x, double y) {  return x*x*x+y*y*y-3*x*y; }</Code>
+      <SourceType>Equation</SourceType>
+      <PointA>
+        <X>-10</X>
+        <Y>-10</Y>
+      </PointA>
+      <PointB>
+        <X>10</X>
+        <Y>10</Y>
+      </PointB>
+      <GridFactor>20</GridFactor>
+      <AreaSize>
+        <Width>0</Width>
+        <Height>0</Height>
+      </AreaSize>
+    </FunctionParameters>
+    <FunctionParameters xsi:type="Explicit3DParameters">
+      <Name>Paraboloid</Name>
+      <Formula>x*x+y*y</Formula>
+      <CodeLanguage>CSharp</CodeLanguage>
+      <Code>double Calculate(double x, double y) {  return x*x+y*y; }</Code>
+      <SourceType>Equation</SourceType>
+      <PointA>
+        <X>-10</X>
+        <Y>-10</Y>
+      </PointA>
+      <PointB>
+        <X>10</X>
+        <Y>10</Y>
+      </PointB>
+      <AreaSize>
+        <Width>0</Width>
+        <Height>0</Height>
+      </AreaSize>
+    </FunctionParameters>
+    <FunctionParameters xsi:type="Explicit3DParameters">
+      <Name>Paraboloid 2</Name>
+      <Formula>x*x-y*y</Formula>
+      <CodeLanguage>CSharp</CodeLanguage>
+      <Code>double Calculate(double x, double y) {  return x*x-y*y; }</Code>
+      <SourceType>Equation</SourceType>
+      <PointA>
+        <X>-10</X>
+        <Y>-10</Y>
+      </PointA>
+      <PointB>
+        <X>10</X>
+        <Y>10</Y>
+      </PointB>
+      <AreaSize>
+        <Width>0</Width>
+        <Height>0</Height>
+      </AreaSize>
+    </FunctionParameters>
+    <FunctionParameters xsi:type="Implicit3DParameters">
+      <Name>Sphere</Name>
+      <Formula>x*x+y*y+z*z-25</Formula>
+      <CodeLanguage>CSharp</CodeLanguage>
+      <Code>double Calculate(double x, double y, double z) {  return x*x+y*y+z*z-25; }</Code>
+      <SourceType>Equation</SourceType>
+      <Point3DA>
+        <X>-10</X>
+        <Y>-10</Y>
+        <Z>-10</Z>
+      </Point3DA>
+      <Point3DB>
+        <X>10</X>
+        <Y>10</Y>
+        <Z>10</Z>
+      </Point3DB>
+      <GridFactor>20</GridFactor>
+      <PixelSizeX>1</PixelSizeX>
+      <PixelSizeY>1</PixelSizeY>
+      <PixelSizeZ>1</PixelSizeZ>
+    </FunctionParameters>
+    <FunctionParameters xsi:type="Implicit3DParameters">
+      <Name>Heart surface</Name>
+      <Formula>(2*x*x + y*y + z*z - 1)*(2*x*x + y*y + z*z - 1)*(2*x*x + y*y + z*z - 1) - x*x*z*z*z / 10 - y*y*z*z*z</Formula>
+      <CodeLanguage>CSharp</CodeLanguage>
+      <Code>double Calculate(double x, double y, double z) {  return (2*x*x + y*y + z*z - 1)*(2*x*x + y*y + z*z - 1)*(2*x*x + y*y + z*z - 1) - x*x*z*z*z / 10 - y*y*z*z*z; }</Code>
+      <SourceType>Equation</SourceType>
+      <Point3DA>
+        <X>-10</X>
+        <Y>-10</Y>
+        <Z>-10</Z>
+      </Point3DA>
+      <Point3DB>
+        <X>10</X>
+        <Y>10</Y>
+        <Z>10</Z>
+      </Point3DB>
+      <GridFactor>20</GridFactor>
+      <PixelSizeX>1</PixelSizeX>
+      <PixelSizeY>1</PixelSizeY>
+      <PixelSizeZ>1</PixelSizeZ>
+    </FunctionParameters>
+    <FunctionParameters xsi:type="Implicit3DParameters">
+      <Name>Glob teardrop</Name>
+      <Formula>0,5*x*x*x*x*x + 0,5*x*x*x*x  - y*y - z*z</Formula>
+      <CodeLanguage>CSharp</CodeLanguage>
+      <Code>double Calculate(double x, double y, double z) {  return 0,5*x*x*x*x*x + 0,5*x*x*x*x  - y*y - z*z; }</Code>
+      <SourceType>Equation</SourceType>
+      <Point3DA>
+        <X>-10</X>
+        <Y>-10</Y>
+        <Z>-10</Z>
+      </Point3DA>
+      <Point3DB>
+        <X>10</X>
+        <Y>10</Y>
+        <Z>10</Z>
+      </Point3DB>
+      <GridFactor>20</GridFactor>
+      <PixelSizeX>1</PixelSizeX>
+      <PixelSizeY>1</PixelSizeY>
+      <PixelSizeZ>1</PixelSizeZ>
+    </FunctionParameters>
+    <FunctionParameters xsi:type="Implicit3DParameters">
+      <Name>Bifolia surface</Name>
+      <Formula>(x*x + y*y + z*z)*(x*x + y*y + z*z) - 3*y*(x*x + z*z)</Formula>
+      <CodeLanguage>CSharp</CodeLanguage>
+      <Code>double Calculate(double x, double y, double z) {  return (x*x + y*y + z*z)*(x*x + y*y + z*z) - 3*y*(x*x + z*z); }</Code>
+      <SourceType>Equation</SourceType>
+      <Point3DA>
+        <X>-10</X>
+        <Y>-10</Y>
+        <Z>-10</Z>
+      </Point3DA>
+      <Point3DB>
+        <X>10</X>
+        <Y>10</Y>
+        <Z>10</Z>
+      </Point3DB>
+      <GridFactor>20</GridFactor>
+      <PixelSizeX>1</PixelSizeX>
+      <PixelSizeY>1</PixelSizeY>
+      <PixelSizeZ>1</PixelSizeZ>
+    </FunctionParameters>
+    <FunctionParameters xsi:type="Implicit3DParameters">
+      <Name>The Blob</Name>
+      <Formula>x*x+y*y+z*z+sin(4*x)+sin(4*y)+sin(4*z)-1</Formula>
+      <CodeLanguage>CSharp</CodeLanguage>
+      <Code>double Calculate(double x, double y, double z) {  return x*x+y*y+z*z+sin(4*x)+sin(4*y)+sin(4*z)-1; }</Code>
+      <SourceType>Equation</SourceType>
+      <Point3DA>
+        <X>-10</X>
+        <Y>-10</Y>
+        <Z>-10</Z>
+      </Point3DA>
+      <Point3DB>
+        <X>10</X>
+        <Y>10</Y>
+        <Z>10</Z>
+      </Point3DB>
+      <GridFactor>20</GridFactor>
+      <PixelSizeX>1</PixelSizeX>
+      <PixelSizeY>1</PixelSizeY>
+      <PixelSizeZ>1</PixelSizeZ>
+    </FunctionParameters>
+    <FunctionParameters xsi:type="ParametricSurfaceParameters">
+      <Name>Klein bottle</Name>
+      <Formula>cos(u)*(4+sin(v)*cos(u/2)-sin(2*v)*sin(u/2)/2)</Formula>
+      <CodeLanguage>CSharp</CodeLanguage>
+      <Code>Point3D Calculate(double u, double v) {  return new Point3D(cos(u)*(4+sin(v)*cos(u/2)-sin(2*v)*sin(u/2)/2),,); }</Code>
+      <SourceType>Equation</SourceType>
+      <FormulaY>sin(u)*(4+sin(v)*cos(u/2)-sin(2*v)*sin(u/2)/2)</FormulaY>
+      <FormulaZ>sin(u/2)*sin(v)+cos(u/2)*sin(2*v)/2</FormulaZ>
+    </FunctionParameters>
+  </Equations>
+</PredefinedSettings>

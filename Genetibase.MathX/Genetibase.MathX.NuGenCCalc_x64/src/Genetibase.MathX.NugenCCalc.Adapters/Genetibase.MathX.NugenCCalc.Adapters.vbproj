@@ -1,0 +1,167 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D313F54F-6E80-457B-804B-5D0F1F9254F9}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Genetibase.MathX.NugenCCalc.Adapters</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionExplicit>Off</OptionExplicit>
+    <OptionStrict>Off</OptionStrict>
+    <RootNamespace>Genetibase.MathX.NugenCCalc.Adapters</RootNamespace>
+    <StartupObject>Genetibase.MathX.NugenCCalc.Adapters.%28None%29</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <MyType>Windows</MyType>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\build\Genetibase.MathX.NugenCCalc.Adapters\</OutputPath>
+    <DocumentationFile>Genetibase.MathX.NugenCCalc.Adapters.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032</NoWarn>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\build\Genetibase.MathX.NugenCCalc.Adapters\</OutputPath>
+    <DocumentationFile>Genetibase.MathX.NugenCCalc.Adapters.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032</NoWarn>
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\Genetibase.MathX.Core\Genetibase.MathX.Core.csproj">
+      <Name>Genetibase.MathX.Core</Name>
+      <Project>{7B015176-4FF5-474F-9D0F-25E9B57B78F1}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="adapterC1.snk" />
+    <Compile Include="C1\C1Chart2Adapter2D.vb" />
+    <Compile Include="IAdapterContainer.vb" />
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="C1\C1Chart2Adapter3D.vb" />
+    <Compile Include="C1\C1ChartAdapter2D.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="C1\C1ChartAdapter3D.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ChartFX\ChartFXChartAdapter2D.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Dundas\DundasChartAdapter2D.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EventSubscriber.vb" />
+    <Compile Include="IChartAdapter\ChartAdapterAttribute.vb" />
+    <Compile Include="IChartAdapter\IChartAdapter.vb" />
+    <Compile Include="IChartAdapter\IChartAdapter2D.vb" />
+    <Compile Include="IChartAdapter\IChartAdapter3D.vb" />
+    <Compile Include="Nevron\NevronChartAdapter2D.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nevron\NevronChartAdapter3D.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Series.vb" />
+    <Compile Include="SharpGraph\SharpGraphChartAdapter2D.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TeeChart\TeeChartAdapter2D.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TeeChart\TeeChartAdapter3D.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Xceed\XceedChartAdapter2D.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Xceed\XceedChartAdapter3D.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="ico\C1.Win.C1Chart.C1Chart.bmp" />
+    <EmbeddedResource Include="ico\C1.Win.C1Chart3D.C1Chart3D.bmp" />
+    <EmbeddedResource Include="ico\ChartFX.Сharticon.ico" />
+    <EmbeddedResource Include="ico\Dundas.Charting.WinControl.DundasChart.ico" />
+    <EmbeddedResource Include="ico\Nevron.NChart.NChartControl.bmp" />
+    <EmbeddedResource Include="ico\SharpGraph.DataDynamics.SharpGraph.Windows.ico" />
+    <EmbeddedResource Include="ico\TeeChart.Steema.TeeChart.Images.TChart.bmp" />
+    <EmbeddedResource Include="ico\Xceed.Chart.ChartControl.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="My Project\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

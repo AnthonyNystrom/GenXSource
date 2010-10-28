@@ -1,0 +1,73 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{15F102F2-4CC4-4C5C-AB63-4D0E5CBD710C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Representation</RootNamespace>
+    <AssemblyName>Representation</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NetronGraphLib, Version=2.2.2482.24583, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Application_UI_and_Search\Resources\NetronGraphLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BasicGraphClasses\arc.cs" />
+    <Compile Include="BasicGraphClasses\candidate.cs" />
+    <Compile Include="BasicGraphClasses\designGraph.cs" />
+    <Compile Include="RuleClasses\embeddingRule.cs" />
+    <Compile Include="RuleClasses\grammarRule.cs" />
+    <Compile Include="inheritedGraphClasses.cs" />
+    <Compile Include="BasicGraphClasses\node.cs" />
+    <Compile Include="RuleClasses\option.cs" />
+    <Compile Include="RuleClasses\ruleArc.cs" />
+    <Compile Include="RuleClasses\ruleNode.cs" />
+    <Compile Include="RuleClasses\ruleSet.cs" />
+    <Compile Include="XMLandIO\SearchIO.cs" />
+    <Compile Include="XMLandIO\designGraphXMLIO.cs" />
+    <Compile Include="XMLandIO\DoubleCollectionConverter.cs" />
+    <Compile Include="XMLandIO\enumerators.cs" />
+    <Compile Include="XMLandIO\grammarRuleXMLIO.cs" />
+    <Compile Include="XMLandIO\ruleSetXMLIO.cs" />
+    <Compile Include="XMLandIO\SafeInvokeHelper.cs" />
+    <Compile Include="XMLandIO\StringCollectionConverter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

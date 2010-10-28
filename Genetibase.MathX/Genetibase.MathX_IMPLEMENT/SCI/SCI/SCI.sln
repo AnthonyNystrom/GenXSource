@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sci.Math", "Sci.Math\Sci.Math.csproj", "{0475E306-3E6C-4FB7-A3FD-AD2BF91F6D43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sci.Physics", "Sci.Physics\Sci.Physics.csproj", "{09FE3425-5947-4BB9-B1DE-6F0082467CE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SciWIN", "SciWIN\SciWIN.csproj", "{6B3F1F30-722C-4F0B-BA0D-EC9640909D8B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0475E306-3E6C-4FB7-A3FD-AD2BF91F6D43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0475E306-3E6C-4FB7-A3FD-AD2BF91F6D43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0475E306-3E6C-4FB7-A3FD-AD2BF91F6D43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0475E306-3E6C-4FB7-A3FD-AD2BF91F6D43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09FE3425-5947-4BB9-B1DE-6F0082467CE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09FE3425-5947-4BB9-B1DE-6F0082467CE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09FE3425-5947-4BB9-B1DE-6F0082467CE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09FE3425-5947-4BB9-B1DE-6F0082467CE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B3F1F30-722C-4F0B-BA0D-EC9640909D8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B3F1F30-722C-4F0B-BA0D-EC9640909D8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B3F1F30-722C-4F0B-BA0D-EC9640909D8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B3F1F30-722C-4F0B-BA0D-EC9640909D8B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

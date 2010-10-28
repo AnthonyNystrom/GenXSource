@@ -1,0 +1,407 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Rule Recognition</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+    <link rel="stylesheet" type="text/css" href="gsStyle1.css" />
+    <style type="text/css">
+    .style1 {text-indent: 0pt;
+	line-height: 121%;
+	text-align: left;
+	font-family: Georgia;
+	font-size: 11.0pt;
+	color: black;}
+h2
+	{text-indent:0pt;
+	text-align:left;
+	font-family:Georgia;
+	font-size:15.0pt;
+	color:black;
+	font-weight:bold;}
+.style3 {text-indent: 0pt;
+	line-height: 114%;
+	text-align: left;
+	font-family: Cambria;
+	font-size: 10.0pt;
+	color: black;
+	font-style: italic;
+	font-weight: bold;}
+.style4 {text-indent: 0pt;
+	line-height: 121%;
+	text-align: center;
+	font-family: Georgia;
+	font-size: 11.0pt;
+	color: black;}
+    .style8 {
+	text-align: center;
+}
+    </style>
+</head>
+<body bgcolor="#FFFFFF">
+    <span style='position: absolute; z-index: 1; left: 192px; top: 776px; width: 549px;
+        height: 1144px'>
+        <div style="position: absolute; left: 2px; top: 1101px; width: 637px; height: 380px;
+            z-index: 2" id="layer2">
+            <p class="style4">
+                <span lang="en-US" style="font-size: 8.0pt; font-family: Tahoma;">Table 1: A summary
+                    of the subgraph Booleans </span>
+            </p>
+            <table border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td width="171" valign="top">
+                        <p class="MsoNormal">
+                            <span style="font-size: 10.0pt; line-height: 120%">Subgraph Boolean</span></p>
+                    </td>
+                    <td width="112" valign="top">
+                        <p class="MsoNormal">
+                            <span style="font-size: 10.0pt; line-height: 120%">Applies to what aspect of rule</span></p>
+                    </td>
+                    <td width="336" valign="top">
+                        <p class="MsoNormal">
+                            <span style="font-size: 10.0pt; line-height: 120%">when TRUE…</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="171" valign="top">
+                        <p class="style3">
+                            <span style="color: #CC3300;">spanning</span></p>
+                    </td>
+                    <td width="112" valign="top">
+                        <p class="MsoNormal">
+                            <span style="font-size: 10.0pt; line-height: 120%">graph</span></p>
+                    </td>
+                    <td width="336" valign="top">
+                        <p class="MsoNormal">
+                            <span style="font-size: 10.0pt; line-height: 120%">host contains an equivalent set of
+                                nodes as L</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="171" valign="top">
+                        <p class="style3">
+                            <span style="color: #CC3300;">induced</span></p>
+                    </td>
+                    <td width="112" valign="top">
+                        <p class="MsoNormal">
+                            <span style="font-size: 10.0pt; line-height: 120%">graph</span></p>
+                    </td>
+                    <td width="336" valign="top">
+                        <p class="MsoNormal">
+                            <span style="font-size: 10.0pt; line-height: 120%">host contains an equivalent set of
+                                arcs as L for the recognized set of nodes</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="171" valign="top">
+                        <p class="style3">
+                            <span style="color: #CC3300;">containsAllGlobalLabels</span></p>
+                    </td>
+                    <td width="112" valign="top">
+                        <p class="MsoNormal">
+                            <span style="font-size: 10.0pt; line-height: 120%">graph</span></p>
+                    </td>
+                    <td width="336" valign="top">
+                        <p class="MsoNormal">
+                            <span style="font-size: 10.0pt; line-height: 120%">host contains an equivalent set of
+                                global labels as L</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="171" valign="top">
+                        <p class="style3">
+                            <span style="color: #CC3300;">strictDegreeMatch</span></p>
+                    </td>
+                    <td width="112" valign="top">
+                        <p class="MsoNormal">
+                            <span style="font-size: 10.0pt; line-height: 120%">node</span></p>
+                    </td>
+                    <td width="336" valign="top">
+                        <p class="MsoNormal">
+                            <span style="font-size: 10.0pt; line-height: 120%">host node contains an equivalent
+                                set of arcs connected to it as L node (nodes have same degree)</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="171" valign="top">
+                        <p class="style3">
+                            <span style="color: #CC3300;">containsAllLocalLabels</span></p>
+                    </td>
+                    <td width="112" valign="top">
+                        <p class="MsoNormal">
+                            <span style="font-size: 10.0pt; line-height: 120%">node</span></p>
+                    </td>
+                    <td width="336" valign="top">
+                        <p class="MsoNormal">
+                            <span style="font-size: 10.0pt; line-height: 120%">host node contains an equivalent
+                                set of labels as L node</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="171" valign="top">
+                        <p class="style3">
+                            <span style="color: #CC3300;">containsAllLocalLabels</span></p>
+                    </td>
+                    <td width="112" valign="top">
+                        <p class="MsoNormal">
+                            <span style="font-size: 10.0pt; line-height: 120%">arc</span></p>
+                    </td>
+                    <td width="336" valign="top">
+                        <p class="MsoNormal">
+                            <span style="font-size: 10.0pt; line-height: 120%">host arc contains an equivalent set
+                                of labels as L arc</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="171" valign="top">
+                        <p class="style3">
+                            <span style="color: #CC3300;">directionIsEqual</span></p>
+                    </td>
+                    <td width="112" valign="top">
+                        <p class="MsoNormal">
+                            <span style="font-size: 10.0pt; line-height: 120%">arc</span></p>
+                    </td>
+                    <td width="336" valign="top">
+                        <p class="MsoNormal">
+                            <span style="font-size: 10.0pt; line-height: 120%">host arc has equivalent direction
+                                characteristics as L arc</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="171" valign="top">
+                        <p class="style3">
+                            <span style="color: #CC3300;">nullMeansNull</span></p>
+                    </td>
+                    <td width="112" valign="top">
+                        <p class="MsoNormal">
+                            <span style="font-size: 10.0pt; line-height: 120%">arc</span></p>
+                    </td>
+                    <td width="336" valign="top">
+                        <p class="MsoNormal">
+                            <span style="font-size: 10.0pt; line-height: 120%">host arc must be equivalently unconnected
+                                at ends as the L arc</span></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </span>
+    <div style="position: absolute; width: 100px; height: 100px; z-index: 0; left: 6px;
+        top: 159px" id="backgroundGraph">
+        <img alt="" src="images/lightergrayBackGroundGraph.png" width="698" height="610">
+    </div>
+    <p class="MsoOrganizationName">
+        <span style='color: #FFFFFF; position: absolute; z-index: 11; left: 388px; top: 74px;
+            width: 166px; height: 25px' id="ADLab">Automated Design Lab </span>
+    </p>
+    <span style='position: absolute; z-index: 8; left: 8px; top: 15px; width: 510px;
+        height: 42px' id="orangeDots">
+        <img width="510" height="42" src="images/orangeDots.png">
+    </span><a href="http://www.engr.utexas.edu"><span style='position: absolute; z-index: 7;
+        left: 560px; top: 0px; width: 189px; height: 177px' id="UTCOEBreadcrumbs">
+        <img width="200" height="188" src="images/UTCOEemblem.jpg" /></span></a><span style='position: absolute;
+            z-index: 4; left: 1px; top: 72px; width: 759px; height: 22px' id="fatOrangeBar">
+            <img width="759" height="22" src="images/thickOrangeBarHoriz.png">
+        </span><span style='position: absolute; z-index: 10; left: 197px; top: 47px; width: 372px;
+            height: 25px' id="GSTitle">
+            <p class="MsoOrganizationName">
+                GraphSynth 1.6</p>
+        </span><span style='position: absolute; z-index: 13; left: 197px; top: 197px; width: 560px;
+            height: 3px' id="beforeContentBreak">
+            <img width="560" height="3" src="images/thinBlackBarHoriz.png">
+        </span>
+	<span style='position: absolute; z-index: 7; left: 200px; top: 3153px; width: 538px;
+            height: 4px' id="bottommostBar" class="style7">
+            <div class="style6">
+                <p class="style8">
+                    <img width="538" height="4" src="images/thinnerOrangeBarHoriz.png">
+                    | <a href="index.htm">Home</a> | <a href="introMethod.htm">Methodology Overview</a>
+                    | <a href="graphs.htm">Graph Basics</a> | <a href="grammars.htm">Grammar Basics</a>
+                    | <a href="rule_recognition.htm">Grammars: Recognition</a> | <a href="rule_application.htm">
+                        Grammars: Application</a> | <a href="ruleSets.htm">Grammars: RuleSets</a> |
+                    <a href="generation.htm">Generation</a> | <a href="searchProcess.htm">Search Process</a>
+                    | <a href="navigating.htm">Navigating GraphSynth</a> | <a href="examples.htm">Examples</a>
+                    | <a href="download.htm">Download</a> |
+                </p>
+            </div>
+        </span><span style='position: absolute; z-index: 3; left: 0px; top: 0px; width: 760px;
+            height: 10px' id="topmostBar">
+            <img width="760" height="10" src="images/thinOrangeBarHoriz.png" />
+        </span><span style='position: absolute; z-index: 5; left: 156px; top: 48px; width: 17px;
+            height: 18px' id="leftArrow">
+            <img width="17" height="18" src="images/orangeDotArrow.png" />
+        </span><span style='position: absolute; z-index: 6; left: 174px; top: 48px; width: 17px;
+            height: 18px' id="rightArrow">
+            <img width="17" height="18" src="images/orangeDotArrow.png" /></span><span style='position: absolute;
+                z-index: 12; left: 191px; top: 152px; width: 557px; height: 32px' id="pageTitle">
+                <p class="MsoTitle3">
+                    Grammar: Recognition&nbsp;
+                </p>
+            </span><span style='position: absolute; z-index: 49; left: 189px; top: 228px; width: 510px;
+                height: 300px'>
+                            <p class="style1">
+                                <span lang="en-US">The act of recognizing when a rule can be applied is to identify
+                                    a subgraph within the host that matches with the graph depicted as the left hand
+                                    side of the rule (as shown in Figure 1). Within a label rich system, the number
+                                    of possible subgraphs reduces drastically. The labels within both the graph L and
+                                    graph H in Figure 1 constrain the recognition to a single subgraph (node 2 and arc
+                                    10). However, if all of the labels are removed in L, then there are 16 possible
+                                    subgraphs. The corollary that is adopted here is that the act of matching a node
+                                    or arc to one in the host is that the labels must be a subset. In the case of Figure
+                                    1, the subgraph is recognized even though the matching location contains more labels
+                                    than L.</span></p>
+                            </div>
+                <div style="position: absolute; left: 2px; top: 202px; width: 410px; height: 362px;
+                    z-index: 4" id="layer1">
+                    <img alt="the recognition of a subgraph" src="images/ruleRecognitionBasic.png" width="489"
+                        height="303">
+                    <p class="MsoNormal">
+                        <span lang="en-US" style="font-size: 8.0pt; font-family: Tahoma;">Figure 1: The recognition
+                            requires that we find the subgraph of the left hand side (a) of the rule within
+                            the host (b). In this example, nodes and arcs are referred to by the corresponding
+                            number, and labels for nodes and arcs are shown in parentheses.</span></p>
+                </div>
+            </span><span style='position: absolute; z-index: 1; left: 192px; top: 776px; width: 549px;
+                height: 1144px'>
+                <table cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td width="549" height="1144">
+                            <h2>
+                                <span lang="en-US">Subgraph Booleans</span></h2>
+                            <p class="style1">
+                                <span lang="en-US">For creative systems, rules are likely constructed to model or contain
+                                    particular heuristics or design rules. A label rich recognition like this can be
+                                    interpreted as, “if a state of the design contains all the characteristics of a
+                                    particular rule, then that rule is applicable.” However, there are cases when rules
+                                    may not be easily represented by subsets of labels. It is for this reason that we
+                                    additionally equip each node and arc within the left hand side graphs with a Boolean,
+                                </span><span lang="en-US" style='font-size: 10.0pt; line-height: 121%; font-family: "Trebuchet MS";
+                                    color: #CC3300; font-style: italic; font-weight: bold;'>containsAllLocalLabels</span><span
+                                        lang="en-US">. If this Boolean is set to true then we enforce that the set of labels
+                                        must be identical in both rule and host. In this case, the rule shown in Figure
+                                        1 will not be recognized within the host. If all the labels were removed in the
+                                        L graph, we would find only one location (node 5 and arc 14) as opposed to the 16
+                                        discussed above.</span></p>
+                            <p class="style1">
+                                <span lang="en-US">It is clear from this example that by setting the label matching
+                                    as “equal to” as opposed to subset, the number of recognized location reduces significantly.
+                                    In addition to this restriction, there are number of additional Booleans that can
+                                    be implemented to better capture the intended rule recognitions. For each node,
+                                    one can limit the number of arcs that are connected to it. In our implementation,
+                                    a Boolean called </span><span lang="en-US" style='font-size: 10.0pt; line-height: 121%;
+                                        font-family: "Trebuchet MS"; color: #CC3300; font-style: italic; font-weight: bold;'>
+                                        strictDegreeMatch </span><span lang="en-US">is created. This essentially means that
+                                            a node in a rule’s L will match only with a node in the host that has the same number
+                                            of arcs connecting to it. In the preceding example of Figure 1 with the labels removed
+                                            from L and the </span><span lang="en-US" style='font-size: 10.0pt; line-height: 121%;
+                                                font-family: "Trebuchet MS"; color: #CC3300; font-style: italic; font-weight: bold;'>
+                                                strictDegreeMatch </span><span lang="en-US">set to true, there are only two locations
+                                                    that are properly matched (node 1 and arc 8, and node 6 and arc 12).</span></p>
+                            <p class="style1">
+                                <span lang="en-US">For the arc we can provide an additional criteria on the direction
+                                    of the arc with the Boolean, </span><span lang="en-US" style='font-size: 10.0pt;
+                                        line-height: 121%; font-family: "Trebuchet MS"; color: #CC3300; font-style: italic;
+                                        font-weight: bold;'>directionIsEqual</span><span lang="en-US">. When this is set to
+                                            false, we assume that undirected arcs can be matched with directed arcs or doubly-directed
+                                            arcs in the host. When set to true, the Boolean limits matching undirected only
+                                            with undirected, directed only with other directed with the same sense, and doubly-directed
+                                            with doubly-directed. An additional Boolean related to arcs deals with handling
+                                            the dangling nature of arcs. The L in Figure 1, only includes a single node and
+                                            arc; however, many approaches to graph theory disallow arcs from having an unspecified
+                                            or dangling end. In the development of the methodology and implementation presented
+                                            here, both cases are handled. In the examples that have played out from Figure 3,
+                                            the missing node at the bottom of L is treated as a wildcard that matches with any
+                                            node regardless of its characteristics. If one creates a rule that seeks to match
+                                            an arc to a similar dangling arcs in the host, then the Boolean, </span>
+                                <span lang="en-US" style='font-size: 10.0pt; line-height: 121%; font-family: "Trebuchet MS";
+                                    color: #CC3300; font-style: italic; font-weight: bold;'>nullMeansNull </span>
+                                <span lang="en-US">can be set to true for the arc. This prevent this from matching with
+                                    arcs that are defined between two nodes. In the example, this Boolean set to true
+                                    would again prevent the rule from recognizing a legitimate subgraph with the host.</span></p>
+                            <p class="style1">
+                                <span lang="en-US">Finally, the subgraph recognition ambiguities can result in the graph-wide
+                                    Booleans, </span><span lang="en-US" style='font-size: 10.0pt; line-height: 121%;
+                                        font-family: "Trebuchet MS"; color: #CC3300; font-style: italic; font-weight: bold;'>
+                                        induced </span><span lang="en-US">and </span><span lang="en-US" style='font-size: 10.0pt;
+                                            line-height: 121%; font-family: "Trebuchet MS"; color: #CC3300; font-style: italic;
+                                            font-weight: bold;'>spanning</span><span lang="en-US">. A spanning subgraph is one that
+                                                contains all the nodes of the host graph but not necessarily all the arcs. Clearly,
+                                                this results in no recognition in the previous example. When the induced Boolean
+                                                is set to true the subgraph is required to be an induced subgraph within the host.
+                                                This means that L must contain all arcs that exist between the recognized nodes
+                                                in the host. These subgraph Booleans are commonly accepted as fundamental to graph
+                                                theory. Graphs can also have labels similar to those in the nodes and arcs. As a
+                                                result, we create a final Boolean that relates to the global labels being a proper
+                                                subset or equivalent to those in the host. A final summary of these subgraph Booleans
+                                                are shown in Table 1. While some of these have existed before in past graph theory
+                                                literature, we have expanded the set to include all possible ambiguities in what
+                                                is meant by subgraph. Since a graph can be defined in category theory as an interacting
+                                                set of sets (e.g. set of labels, sets of arcs, and sets of nodes) the Booleans allow
+                                                us to independently define how the subsets are determined for each of these components.</span></p>
+                            </div></td>
+                    </tr>
+                </table>
+            </span><span style='position: absolute; z-index: 2; left: 192px; top: 2220px; width: 549px;
+                height: 560px'>
+                <table cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td width="549" height="560">
+                            <h2>
+                                <span lang="en-US">Recognition Procedure</span></h2>
+                            <p class="style1">
+                                <span lang="en-US">On the most general level this recognition takes two inputs: the
+                                    L of a rule, and the host graph. What is expected as a result is a list of subgraphs
+                                    where L is found in the host. For a particular rule and host, there may be no subgraph,
+                                    one subgraph, or many subgraphs. These resulting subgraphs are often referred to
+                                    as how L is mapped into the host. This becomes an important consideration for the
+                                </span><a href="rule_application.htm"><span lang="en-US" style='font-family: Georgia;
+                                    text-decoration: underline;'>application of a rule</span></a><span lang="en-US">.</span></p>
+                            <p class="style1">
+                                <span lang="en-US">The approach developed in our implementation is a recursive search
+                                    starting with a single node in L. The first node in L is checked to see if it matches
+                                    with each of the nodes in the host. For those in which it is a successful match,
+                                    a modified depth-first-search (DFS) is invoked from each matching node within the
+                                    host. As creators of the grammar rules, one can impact the efficiency of the recognition
+                                    process by altering the order in which the nodes are presented. The computational
+                                    structure for a graph stores the set of nodes as a list; by placing the most restrictive
+                                    node (the node that is hardest to match) first in the list of nodes one can eliminate
+                                    wasted search that would occur if a less restricted node is presented first. An
+                                    example of this is shown in Figure 2. The node I in L is more restrictive than node
+                                    III and the order of expansion is shown in Figure 2a and b. The depth-first-search
+                                    proves to be a more efficient approach to recognition both in computational speed
+                                    and memory.</span></p>
+                            <p class="style1">
+                                <span lang="en-US">An additional item to note in these mappings is that locations including
+                                    the same nodes and arcs are found multiple times. This is because our recognize-choose-apply
+                                    requires that we uniquely match each node and arc to one in the host. This becomes
+                                    more apparent in the discussion of rule application since the rule essentially includes
+                                    individual instructions for each of the elements matched to the L graph.</span></p>
+                            </div></td>
+                    </tr>
+                </table>
+                <div style="position: absolute; left: 2px; top: 551px; width: 636px; height: 276px;
+                    z-index: 5" id="layer3">
+                    <img alt="the order of recognition" src="images/ruleRecognitionOrder.png" width="660"
+                        height="268">
+                    <p class="MsoNormal">
+                        <span lang="en-US" style="font-size: 8.0pt; font-family: Tahoma;">Figure 2: An example
+                            for the procedure of recognition: a) an example rule, b) nodes ordered from most
+                            restrictive to least are more efficient as there are fewer opportunities to store
+                            and expand at each level of the depth first search, c) a poor ordering of nodes
+                            leads to twice as many candidate subgraphs being expanded before the same two are
+                            found (note: that the ordering is different in b to correspond to the order that
+                            they are presented).</span></p>
+                </div>
+            </span><span style="position: absolute; left: 9px; top: 211px; width: 175px; height: 431px;
+                z-index: 100" id="navigation">
+                <li class="sideBarNav"><a href="index.htm">Home</a></li><li class="sideBarNav"><a
+                    href="introMethod.htm">Methodology Overview</a></li><li class="sideBarNav"><a href="graphs.htm">
+                        Graph Basics</a></li><li class="sideBarNav"><a href="grammars.htm">Grammar Basics</a></li><li
+                            class="sideBarNav"><a href="rule_recognition.htm">Grammars: Recognition</a></li><li
+                                class="sideBarNav"><a href="rule_application.htm">Grammars: Application</a></li><li
+                                    class="sideBarNav"><a href="ruleSets.htm">Grammars: RuleSets</a></li><li class="sideBarNav">
+                                        <a href="generation.htm">Generation</a></li><li class="sideBarNav"><a href="searchProcess.htm">
+                                            Search Process</a></li><li class="sideBarNav"><a href="navigating.htm">Navigating GraphSynth</a></li><li
+                                                class="sideBarNav"><a href="examples.htm">Examples</a></li><li class="sideBarNav"><a
+                                                    href="download.htm">Download</a></li>
+            </span>
+</body>
+</html>

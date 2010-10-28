@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFraction", "TestFraction.csproj", "{D07F333B-D767-476A-B85A-58D104B5D3D2}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(DPCodeReviewSolutionGUID) = preSolution
+		DPCodeReviewSolutionGUID = {00000000-0000-0000-0000-000000000000}
+	EndGlobalSection
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{D07F333B-D767-476A-B85A-58D104B5D3D2}.Debug.ActiveCfg = Debug|.NET
+		{D07F333B-D767-476A-B85A-58D104B5D3D2}.Debug.Build.0 = Debug|.NET
+		{D07F333B-D767-476A-B85A-58D104B5D3D2}.Release.ActiveCfg = Release|.NET
+		{D07F333B-D767-476A-B85A-58D104B5D3D2}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

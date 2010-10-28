@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Genetibase.MathX.NuGenSciMathII", "Genetibase.MathX.NuGenSciMathII.vbproj", "{106F48B8-04C6-4D7B-AE9F-A9F10ECBAC86}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ConsoleApplication1", "..\..\..\..\My Documents\Visual Studio 2005\Projects\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vbproj", "{34C2D5B2-BE77-4BEA-93E5-A6098E2238E6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{106F48B8-04C6-4D7B-AE9F-A9F10ECBAC86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{106F48B8-04C6-4D7B-AE9F-A9F10ECBAC86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{106F48B8-04C6-4D7B-AE9F-A9F10ECBAC86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{106F48B8-04C6-4D7B-AE9F-A9F10ECBAC86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34C2D5B2-BE77-4BEA-93E5-A6098E2238E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34C2D5B2-BE77-4BEA-93E5-A6098E2238E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34C2D5B2-BE77-4BEA-93E5-A6098E2238E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34C2D5B2-BE77-4BEA-93E5-A6098E2238E6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

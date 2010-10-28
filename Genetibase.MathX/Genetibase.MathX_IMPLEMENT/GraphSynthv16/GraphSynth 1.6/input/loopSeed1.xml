@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<designGraph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <name>swirlSeed1</name>
+  <globalLabels />
+  <globalVariables />
+  <nodes>
+    <node>
+      <shapekey>b2178640-076f-4520-b33c-c603466bc2fc</shapekey>
+      <screenX>149.9937</screenX>
+      <screenY>57</screenY>
+      <name>seedN10</name>
+      <localLabels />
+      <localVariables />
+    </node>
+    <node>
+      <shapekey>b2178640-076f-4520-b33c-c603466bc2fc</shapekey>
+      <screenX>47.0063</screenX>
+      <screenY>57</screenY>
+      <name>seedN11</name>
+      <localLabels />
+      <localVariables />
+    </node>
+    <node>
+      <shapekey>4F878611-3196-4d12-BA36-705F502C8A6B</shapekey>
+      <screenX>102</screenX>
+      <screenY>132</screenY>
+      <name>seedN3</name>
+      <localLabels />
+      <localVariables />
+    </node>
+  </nodes>
+  <arcs>
+    <arc xsi:type="edge">
+      <toConnector>0</toConnector>
+      <fromConnector>0</fromConnector>
+      <curveStyle>Default</curveStyle>
+      <name>arc1</name>
+      <localLabels />
+      <localVariables />
+      <From>seedN11</From>
+      <To>seedN10</To>
+      <arcType>GraphSynth.edge</arcType>
+      <directed>true</directed>
+      <doublyDirected>false</doublyDirected>
+    </arc>
+    <arc>
+      <toConnector>0</toConnector>
+      <fromConnector>0</fromConnector>
+      <curveStyle>Default</curveStyle>
+      <name>arc2</name>
+      <localLabels />
+      <localVariables />
+      <From>seedN10</From>
+      <To>seedN3</To>
+      <directed>true</directed>
+      <doublyDirected>false</doublyDirected>
+    </arc>
+    <arc>
+      <toConnector>0</toConnector>
+      <fromConnector>0</fromConnector>
+      <curveStyle>Default</curveStyle>
+      <name>arc3</name>
+      <localLabels />
+      <localVariables />
+      <From>seedN3</From>
+      <To>seedN11</To>
+      <directed>true</directed>
+      <doublyDirected>false</doublyDirected>
+    </arc>
+  </arcs>
+</designGraph>

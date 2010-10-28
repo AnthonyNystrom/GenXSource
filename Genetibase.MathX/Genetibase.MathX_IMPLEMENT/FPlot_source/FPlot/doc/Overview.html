@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<meta name="keywords" content="Welcome, Overview, File Menu, Edit Menu, Options Menu, Fit Menu, Help Menu">
+<Title>Overview</Title>
+</HEAD>
+<BODY>
+<h1>Welcome</h1>
+Welcome to FPlot, a .NET programm for displaying mathematical functions and measurement data. Why yet another function plotting programm? The great advantage of FPlot is speed. Functions can be entered as C# sourcecode and compiled on the fly with the C#-compiler included in .NET.  This way your functions evaluate at the full speed of any compiled .NET programm. There is no slow expression interpreter in between. Because of this, you can use complicated numerical algorithms in your functions, with only a moderate speed penalty to C/C++ or Fortran. If you use sophisticated numerical libraries there is almost no speed penalty compared to C code. Altough I don't know of any freeware .NET numerical library around there are some good comercial packages. You can use those libraries in your functions and can do complicated numerical calculations. Check out <a href="http://www.centerspace.net">CenterSpace Softare</a> or <a href="http://www.vni.com/products/imsl/cSharp/overview.html">Visual Numerics</a> for commercial numerical .NET libraries. As an addition to this, the main control that plots the functions and measurement data is located in a separate dll you can freely reuse in your own .NET programms. The documentation for this library is found in the directory where you installed FPlot in the help folder. This library comes with the complete sourcecode. You can freely modify this code and include it in your own programms. The source-code of the FPlot application is not yet available for free, because it uses some routines from Numerical Recipes and therefore cannot be published freely. Maybe in the future I will replace the Numerical Recipes routines with freeware ones, so the complete sourcecode of the FPlot package can be published.
+
+<h2>Contents:</h2>
+<a name="MenuCommands">Menu Commands:<a><br>
+<a href="#filemenu">File menu</a><br>
+<a href="#editmenu">Edit menu</a><br>
+<a href="#optionsmenu">Options menu</a><br>
+<a href="#fitmenu">Fit menu</a><br>
+<a href="#helpmenu">Help menu</a><br>
+<br>
+<a href="#mousecommands">Mouse Commands on the plot view</a><br>
+
+<h2><a name="filemenu">File menu:</a></h2>
+<img src="FileMenu.png"><br>
+<h3>New...</h3>
+If you choose this menu entry, a dialogbox will appear that will prompt you for a filename of the new fplot-file you want to create. If you save the file later on, it will be saved with that filename.
+<h3>Open...</h3>
+Opens an fplot file. A File Chooser dialog will appear, where you can select the file you want to open.
+<h3>Save</h3>
+Saves the graph into a file with the name specified in the title-bar of the window.
+<h3>Save as...</h3>
+Saves the graph into a file. A dialogbox will appear where you can choose a filename.
+<h3>Save as Image...</h3>
+Opens a <a href="ImageForm.html">dialogbox</a> where you can save the graph as an image. 
+<h3>Page setup...</h3>
+Opens a page setup dialog, where you can set the page format and page margins for printing.
+<h3>Print preview...</h3>
+Opens a print preview dialog box.
+<h3>Print...</h3>
+Prints the graph to the printer.
+
+<h2><a name="editmenu">Edit menu:</a></h2>
+<img src="EditMenu.png"><br>
+<h3>Add Function...</h3>
+Opens a <a href="FunctionForm.html">dialogbox</a> where you can edit a function.
+<h3>Add Data...</h3>
+Opens a <a href="DataForm.html">dialogbox</a> where you can edit measurement data.
+<h3>Edit Library...</h3>
+Opens a <a href="LibraryForm.html">window</a> where you can edit the library C# code.
+
+<h2><a name="optionsmenu">Options menu:</a></h2>
+<img src="OptionsMenu.png"><br>
+<h3>Set view range...</h3>
+Shows a <a href="ViewRangeForm.html">dialogbox</a>, where you can set the range of the plotted area.
+<h3>Options...</h3>
+Shows a <a href="OptionsForm.html">dialogbox</a>, where you can set drawing options for the graph.
+<h3>Compiler Options...</h3>
+Shows a <a href="CompilerOptions.html">dialogbox</a>, where you can specify compiler options and libraries to import.
+
+<h2><a name="fitmenu">Fit menu</a></h2>
+<img src="FitMenu.png"><br>
+<h3>Fit...</h3>
+This menu entry is only available if there is a fittable function and some measurement data present. A <a href="FitForm.html">dialogbox</a> is shown, where you can fit a function to measurement data.
+
+<h2><a name="helpmenu">Help menu</a></h2>
+<img src="HelpMenu.png"><br>
+<h3>Contents...</h3>
+This page is displayed.
+
+</BODY>
+</HTML>

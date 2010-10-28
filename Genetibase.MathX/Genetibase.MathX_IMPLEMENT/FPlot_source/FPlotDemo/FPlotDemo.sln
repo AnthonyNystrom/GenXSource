@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FPlotDemo", "FPlotDemo.csproj", "{E2B37BE6-A8F1-455F-A96A-7B2BD736C6C9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BD66017E-09AD-4380-BE2F-F88D1B472F27} = {BD66017E-09AD-4380-BE2F-F88D1B472F27}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FPlotLibrary", "..\FPlotLibrary\FPlotLibrary.csproj", "{BD66017E-09AD-4380-BE2F-F88D1B472F27}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{E2B37BE6-A8F1-455F-A96A-7B2BD736C6C9}.Debug.ActiveCfg = Debug|.NET
+		{E2B37BE6-A8F1-455F-A96A-7B2BD736C6C9}.Debug.Build.0 = Debug|.NET
+		{E2B37BE6-A8F1-455F-A96A-7B2BD736C6C9}.Release.ActiveCfg = Release|.NET
+		{E2B37BE6-A8F1-455F-A96A-7B2BD736C6C9}.Release.Build.0 = Release|.NET
+		{BD66017E-09AD-4380-BE2F-F88D1B472F27}.Debug.ActiveCfg = Debug|.NET
+		{BD66017E-09AD-4380-BE2F-F88D1B472F27}.Debug.Build.0 = Debug|.NET
+		{BD66017E-09AD-4380-BE2F-F88D1B472F27}.Release.ActiveCfg = Release|.NET
+		{BD66017E-09AD-4380-BE2F-F88D1B472F27}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

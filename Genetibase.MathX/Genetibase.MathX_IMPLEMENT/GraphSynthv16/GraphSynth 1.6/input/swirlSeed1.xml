@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<designGraph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <name>swirlSeed1</name>
+  <globalLabels />
+  <globalVariables />
+  <nodes>
+    <node xsi:type="vertex">
+      <name>rightNode</name>
+      <localLabels>
+        <string>a</string>
+      </localLabels>
+      <localVariables />
+      <shapekey>b2178640-076f-4520-b33c-c603466bc2fc</shapekey>
+      <screenX>320</screenX>
+      <screenY>399</screenY>
+      <nodeType>GraphSynth.Representation.vertex</nodeType>
+      <x>320</x>
+      <y>399</y>
+      <z>0</z>
+    </node>
+    <node xsi:type="vertex">
+      <name>leftNode</name>
+      <localLabels>
+        <string>a</string>
+      </localLabels>
+      <localVariables />
+      <shapekey>b2178640-076f-4520-b33c-c603466bc2fc</shapekey>
+      <screenX>300</screenX>
+      <screenY>400</screenY>
+      <nodeType>GraphSynth.Representation.vertex</nodeType>
+      <x>300</x>
+      <y>400</y>
+      <z>0</z>
+    </node>
+  </nodes>
+  <arcs>
+    <arc xsi:type="edge">
+      <name>arc1</name>
+      <localLabels />
+      <localVariables />
+      <toConnector>0</toConnector>
+      <fromConnector>0</fromConnector>
+      <curveStyle>Default</curveStyle>
+      <directed>false</directed>
+      <doublyDirected>false</doublyDirected>
+      <From>leftNode</From>
+      <To>rightNode</To>
+      <arcType>GraphSynth.Representation.edge</arcType>
+    </arc>
+  </arcs>
+</designGraph>

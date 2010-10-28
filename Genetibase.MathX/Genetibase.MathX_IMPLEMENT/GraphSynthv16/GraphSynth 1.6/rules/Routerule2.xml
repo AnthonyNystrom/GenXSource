@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<grammarRule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <name>completing rule</name>
+  <spanning>false</spanning>
+  <induced>true</induced>
+  <containsAllGlobalLabels>true</containsAllGlobalLabels>
+  <embeddingRules />
+  <recognizeFunctions />
+  <applyFunctions />
+  <L>
+	  <globalLabels>
+		  <string>H</string>
+	  </globalLabels>
+    <globalVariables />
+    <nodes>
+      <node xsi:type="ruleNode">
+        <name>city1</name>
+        <localLabels>
+          <string>a</string>
+        </localLabels>
+        <localVariables />
+        <shapekey>6E92FCD0-75DF-4f8f-A5B2-2927E22F4F0F</shapekey>
+        <screenX>86</screenX>
+        <screenY>78</screenY>
+        <containsAllLocalLabels>false</containsAllLocalLabels>
+        <strictDegreeMatch>false</strictDegreeMatch>
+      </node>
+      <node xsi:type="ruleNode">
+        <name>city2</name>
+        <localLabels />
+        <localVariables />
+        <shapekey>6E92FCD0-75DF-4f8f-A5B2-2927E22F4F0F</shapekey>
+        <screenX>194</screenX>
+        <screenY>143</screenY>
+        <containsAllLocalLabels>true</containsAllLocalLabels>
+        <strictDegreeMatch>false</strictDegreeMatch>
+      </node>
+    </nodes>
+    <arcs />
+  </L>
+  <R>
+    <globalLabels>
+      <string>H</string>
+    </globalLabels>
+    <globalVariables />
+    <nodes>
+      <node xsi:type="ruleNode">
+        <name>city1</name>
+        <localLabels>
+          <string>a</string>
+        </localLabels>
+        <localVariables />
+        <shapekey>6E92FCD0-75DF-4f8f-A5B2-2927E22F4F0F</shapekey>
+        <screenX>149</screenX>
+        <screenY>135</screenY>
+        <containsAllLocalLabels>false</containsAllLocalLabels>
+        <strictDegreeMatch>false</strictDegreeMatch>
+      </node>
+      <node xsi:type="ruleNode">
+        <name>city2</name>
+        <localLabels>
+          <string>a</string>
+        </localLabels>
+        <localVariables />
+        <shapekey>6E92FCD0-75DF-4f8f-A5B2-2927E22F4F0F</shapekey>
+        <screenX>73</screenX>
+        <screenY>69</screenY>
+        <containsAllLocalLabels>false</containsAllLocalLabels>
+        <strictDegreeMatch>false</strictDegreeMatch>
+      </node>
+    </nodes>
+    <arcs>
+      <arc xsi:type="ruleArc">
+        <name>a1</name>
+        <localLabels />
+        <localVariables />
+        <toConnector>0</toConnector>
+        <fromConnector>0</fromConnector>
+        <curveStyle>Default</curveStyle>
+        <directed>false</directed>
+        <doublyDirected>false</doublyDirected>
+        <From>city1</From>
+        <To>city2</To>
+        <containsAllLocalLabels>false</containsAllLocalLabels>
+        <directionIsEqual>false</directionIsEqual>
+        <nullMeansNull>false</nullMeansNull>
+      </arc>
+    </arcs>
+  </R>
+</grammarRule>

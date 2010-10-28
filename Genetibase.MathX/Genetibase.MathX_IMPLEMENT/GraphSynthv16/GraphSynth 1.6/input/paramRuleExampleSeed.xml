@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<designGraph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <globalLabels />
+  <globalVariables />
+  <nodes>
+    <node>
+      <shapekey>6E92FCD0-75DF-4f8f-A5B2-2927E22F4F0F</shapekey>
+      <screenX>67</screenX>
+      <screenY>45</screenY>
+      <name>innode</name>
+      <localLabels>
+        <string>flow1</string>
+        <string>flow2</string>
+      </localLabels>
+      <localVariables>
+        <double>12</double>
+        <double>11</double>
+      </localVariables>
+    </node>
+    <node>
+      <shapekey>6E92FCD0-75DF-4f8f-A5B2-2927E22F4F0F</shapekey>
+      <screenX>225.627</screenX>
+      <screenY>121.836227</screenY>
+      <name>thrunode</name>
+      <localLabels />
+      <localVariables />
+    </node>
+    <node>
+      <shapekey>6E92FCD0-75DF-4f8f-A5B2-2927E22F4F0F</shapekey>
+      <screenX>109.403252</screenX>
+      <screenY>232.353455</screenY>
+      <name>outnode</name>
+      <localLabels />
+      <localVariables />
+    </node>
+  </nodes>
+  <arcs>
+    <arc>
+      <toConnector>0</toConnector>
+      <fromConnector>0</fromConnector>
+      <curveStyle>Default</curveStyle>
+      <name>a101</name>
+      <localLabels />
+      <localVariables />
+      <From>outnode</From>
+      <To>innode</To>
+      <directed>true</directed>
+      <doublyDirected>false</doublyDirected>
+    </arc>
+    <arc>
+      <toConnector>0</toConnector>
+      <fromConnector>0</fromConnector>
+      <curveStyle>Default</curveStyle>
+      <name>a102</name>
+      <localLabels />
+      <localVariables />
+      <From>outnode</From>
+      <To>thrunode</To>
+      <directed>true</directed>
+      <doublyDirected>false</doublyDirected>
+    </arc>
+    <arc>
+      <toConnector>0</toConnector>
+      <fromConnector>0</fromConnector>
+      <curveStyle>Default</curveStyle>
+      <name>a103</name>
+      <localLabels />
+      <localVariables />
+      <From>thrunode</From>
+      <To>innode</To>
+      <directed>true</directed>
+      <doublyDirected>false</doublyDirected>
+    </arc>
+  </arcs>
+</designGraph>

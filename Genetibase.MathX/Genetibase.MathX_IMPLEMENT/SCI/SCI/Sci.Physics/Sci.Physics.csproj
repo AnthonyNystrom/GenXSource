@@ -1,0 +1,96 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{09FE3425-5947-4BB9-B1DE-6F0082467CE7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sci.Physics</RootNamespace>
+    <AssemblyName>Sci.Physics</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entity\Entity.cs" />
+    <Compile Include="Entity\Microscobic\Baryon.cs" />
+    <Compile Include="Entity\Microscobic\BottomLambda.cs" />
+    <Compile Include="Entity\Microscobic\BottomQuark.cs" />
+    <Compile Include="Entity\Microscobic\BottomSigma.cs" />
+    <Compile Include="Entity\Microscobic\CharmedLambda.cs" />
+    <Compile Include="Entity\Microscobic\CharmedOmega.cs" />
+    <Compile Include="Entity\Microscobic\CharmedXi.cs" />
+    <Compile Include="Entity\Microscobic\CharmQuark.cs" />
+    <Compile Include="Entity\Microscobic\Delta.cs" />
+    <Compile Include="Entity\Microscobic\DownQuark.cs" />
+    <Compile Include="Entity\Microscobic\Electron.cs" />
+    <Compile Include="Entity\Microscobic\ElectronNeutrino.cs" />
+    <Compile Include="Entity\Microscobic\GaugeBoson.cs" />
+    <Compile Include="Entity\Microscobic\Gluon.cs" />
+    <Compile Include="Entity\Microscobic\Hadron.cs" />
+    <Compile Include="Entity\Microscobic\Hyperon.cs" />
+    <Compile Include="Entity\Microscobic\IParticle.cs" />
+    <Compile Include="Entity\Microscobic\Lambda.cs" />
+    <Compile Include="Entity\Microscobic\Lepton.cs" />
+    <Compile Include="Entity\Microscobic\Muon.cs" />
+    <Compile Include="Entity\Microscobic\MuonNeutrino.cs" />
+    <Compile Include="Entity\Microscobic\Neutrino.cs" />
+    <Compile Include="Entity\Microscobic\Neutron.cs" />
+    <Compile Include="Entity\Microscobic\Nucleon.cs" />
+    <Compile Include="Entity\Microscobic\Omega.cs" />
+    <Compile Include="Entity\Microscobic\Particle.cs" />
+    <Compile Include="Entity\Microscobic\Photon.cs" />
+    <Compile Include="Entity\Microscobic\Proton.cs" />
+    <Compile Include="Entity\Microscobic\Quark.cs" />
+    <Compile Include="Entity\Microscobic\Sigma.cs" />
+    <Compile Include="Entity\Microscobic\StrangeQuark.cs" />
+    <Compile Include="Entity\Microscobic\Tauon.cs" />
+    <Compile Include="Entity\Microscobic\TauonNeutrino.cs" />
+    <Compile Include="Entity\Microscobic\TopQuark.cs" />
+    <Compile Include="Entity\Microscobic\UpQuark.cs" />
+    <Compile Include="Entity\Microscobic\W.cs" />
+    <Compile Include="Entity\Microscobic\Xi.cs" />
+    <Compile Include="Entity\Microscobic\Z.cs" />
+    <Compile Include="Interaction\Color.cs" />
+    <Compile Include="Interaction\IInteract.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sci.Math\Sci.Math.csproj">
+      <Project>{0475E306-3E6C-4FB7-A3FD-AD2BF91F6D43}</Project>
+      <Name>Sci.Math</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entity\Macroscobic\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

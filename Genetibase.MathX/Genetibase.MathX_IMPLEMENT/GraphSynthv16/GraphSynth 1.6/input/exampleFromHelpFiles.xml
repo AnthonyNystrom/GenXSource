@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<designGraph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <globalLabels />
+  <globalVariables />
+  <nodes>
+    <node>
+      <name>blue</name>
+      <localLabels>
+        <string>a</string>
+        <string>b</string>
+        <string>c</string>
+      </localLabels>
+      <localVariables>
+        <double>1</double>
+        <double>3</double>
+      </localVariables>
+      <shapekey>6E92FCD0-75DF-4f8f-A5B2-2927E22F4F0F</shapekey>
+      <screenX>32.6742172</screenX>
+      <screenY>30.7245026</screenY>
+    </node>
+    <node xsi:type="vertex">
+      <name>black</name>
+      <localLabels />
+      <localVariables />
+      <shapekey>4F878611-3196-4d12-BA36-705F502C8A6B</shapekey>
+      <screenX>156.611</screenX>
+      <screenY>200.74971</screenY>
+      <nodeType>GraphSynth.vertex</nodeType>
+      <x>0</x>
+      <y>0</y>
+      <z>0</z>
+    </node>
+    <node>
+      <name>white</name>
+      <localLabels />
+      <localVariables />
+      <shapekey>b2178640-076f-4520-b33c-c603466bc2fc</shapekey>
+      <screenX>44.4889221</screenX>
+      <screenY>162.413162</screenY>
+    </node>
+  </nodes>
+  <arcs>
+    <arc>
+      <toConnector>0</toConnector>
+      <fromConnector>0</fromConnector>
+      <curveStyle>Default</curveStyle>
+      <name>a2</name>
+      <localLabels />
+      <localVariables />
+      <From>black</From>
+      <To>blue</To>
+      <directed>false</directed>
+      <doublyDirected>false</doublyDirected>
+    </arc>
+    <arc>
+      <toConnector>0</toConnector>
+      <fromConnector>0</fromConnector>
+      <curveStyle>Default</curveStyle>
+      <name>a1</name>
+      <localLabels />
+      <localVariables />
+      <From>black</From>
+      <To>white</To>
+      <directed>false</directed>
+      <doublyDirected>false</doublyDirected>
+    </arc>
+    <arc>
+      <toConnector>0</toConnector>
+      <fromConnector>0</fromConnector>
+      <curveStyle>Default</curveStyle>
+      <name>a3</name>
+      <localLabels />
+      <localVariables />
+      <From>white</From>
+      <To>blue</To>
+      <directed>false</directed>
+      <doublyDirected>false</doublyDirected>
+    </arc>
+  </arcs>
+</designGraph>

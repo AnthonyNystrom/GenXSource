@@ -1,0 +1,796 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Genetibase.MathX.Core</name>
+    </assembly>
+    <members>
+        <member name="T:Genetibase.MathX.Core.Plotters.Explicit2DFunctionPlotter">
+            <summary>
+            Summary description for Explicit2DFunctionPlotter.
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.Core.ExpressionTreeNode">
+            <summary>
+            Represents a node of <see cref="T:Genetibase.MathX.Core.ExpressionTree">ExpressionTree Class</see> binary
+            tree.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.Core.ExpressionTreeNode.HasVariable(System.String)">
+            <summary>Checks node and all child nodes for variable entry.</summary>
+        </member>
+        <member name="M:Genetibase.MathX.Core.ExpressionTreeNode.ToCodeExpression">
+            <summary>Return code representation of node.</summary>
+        </member>
+        <member name="M:Genetibase.MathX.Core.ExpressionTreeNode.ToString">
+            <summary>Return string representation of node.</summary>
+        </member>
+        <member name="P:Genetibase.MathX.Core.ExpressionTreeNode.Left">
+            <summary>Gets left child node.</summary>
+        </member>
+        <member name="P:Genetibase.MathX.Core.ExpressionTreeNode.Right">
+            <summary><para>Gets right child node.</para></summary>
+        </member>
+        <member name="P:Genetibase.MathX.Core.ExpressionTreeNode.ExpressionLexeme">
+            <summary>Gets lexeme that node stores.</summary>
+        </member>
+        <member name="T:Genetibase.MathX.Core.ExpressionLexemeInfo">
+            <summary>
+            This class supports the MathX.Core infrastructure and is not intended to be used directly from your code. 
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.Core.ExpressionLexeme">
+            <summary><para>Represents lexeme in expression.</para></summary>
+            <seealso cref="P:Genetibase.MathX.Core.ExpressionLexeme.Lexeme">Lexeme Enumeration</seealso>
+        </member>
+        <member name="P:Genetibase.MathX.Core.ExpressionLexeme.LexemeName">
+            <summary>Gets lexeme body.</summary>
+        </member>
+        <member name="P:Genetibase.MathX.Core.ExpressionLexeme.Lexeme">
+            <summary>
+            Gets <see cref="P:Genetibase.MathX.Core.ExpressionLexeme.Lexeme">Lexeme Enumeration</see> specified with current lexeme in
+            expression.
+            </summary>
+        </member>
+        <member name="P:Genetibase.MathX.Core.ExpressionLexeme.LexemeType">
+            <summary>Gets type of lexeme.</summary>
+            <remarks>Lexeme in expression can be "operator", "function" or "contstant".</remarks>
+        </member>
+        <member name="P:Genetibase.MathX.Core.ExpressionLexeme.LexemeCode">
+            <summary>Gets code representation of lexeme.</summary>
+        </member>
+        <member name="P:Genetibase.MathX.Core.ExpressionLexeme.LexemeDiffMask">
+            <summary>Gets derivative mask of lexeme.</summary>
+        </member>
+        <member name="T:Genetibase.MathX.Core.CodeLanguage">
+            <summary>
+            Specifies the code language for code expression
+            </summary>
+        </member>
+        <member name="F:Genetibase.MathX.Core.CodeLanguage.CSharp">
+            <summary>
+            Specify C# as language
+            </summary>
+        </member>
+        <member name="F:Genetibase.MathX.Core.CodeLanguage.VBNET">
+            <summary>
+            Specify VB.NET as language
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.Core.Function">
+            <summary>Represents base abstract class for mathematical functions.</summary>
+        </member>
+        <member name="P:Genetibase.MathX.Core.Function.Derivative">
+            <summary>Returns function, which represents derivative of current function.</summary>
+            <remarks>
+            In derived classes, you must ovverride this property to calculate derivatives. If
+            you function type doesn't have derivatives, simply return null.
+            </remarks>
+        </member>
+        <member name="P:Genetibase.MathX.Core.Function.Expression">
+            <summary>
+            Gets string expression that represents analytic representation of
+            function.
+            </summary>
+            <remarks>
+            In derived classes, you must ovverride this property to return analityc
+            representation of function. If function is numerical defined, you must return
+            null.
+            </remarks>
+        </member>
+        <member name="P:Genetibase.MathX.Core.Function.DefinitionType">
+            <summary>Gets definition type of function.</summary>
+            <remarks>
+            Functions can be defined in two ways - analytic (by expression) or numerical (by
+            delegate). <strong>DefinitionType</strong> property, represents how function is
+            defined.
+            </remarks>
+        </member>
+        <member name="P:Genetibase.MathX.Core.Function.ValueAt">
+            <summary>Gets delegate, which calcilates function.</summary>
+            <value>Delegate of function.</value>
+            <remarks>
+            In derived classes, you can override this property with keyword
+            <strong>new</strong> to concretize delegate type. For example, in
+            <a href="Genetibase.MathX.Core~Genetibase.MathX.Core.Explicit2DFunction.html">Explicit2DFunction
+            Class</a>, <strong>ValueAt</strong> property concretized to
+            <a href="Genetibase.MathX.Core~Genetibase.MathX.Core.RealFunction.html">RealFunction
+            Delegate</a>.
+            </remarks>
+        </member>
+        <member name="P:Genetibase.MathX.Core.Function.ArgsCount">
+            <summary>Gets count of argumets in function delegate.</summary>
+        </member>
+        <member name="P:Genetibase.MathX.Core.Function.ReturnType">
+            <summary><para>Gets type of return value.</para></summary>
+        </member>
+        <member name="T:Genetibase.MathX.Core.DifferencesDirection">
+            <summary><para>Identifies the direction for numerical differentiator.</para></summary>
+        </member>
+        <member name="T:Genetibase.MathX.Core.Constant">
+            <summary>Represents a function without inputs and one doulble output.</summary>
+            <remarks>
+            	<strong>Constant</strong> function is function like "5+3". It can be a result of
+            derivativation Explicit2DFunction.
+            </remarks>
+        </member>
+        <member name="T:Genetibase.MathX.Core.Explicit3DFunction">
+            <summary>Represents explicit two variable real function.</summary>
+            <example>
+            	<code lang="CS">
+            using System;
+            using Genetibase.MathX.Core;
+             
+            namespace Genetibase.MathX.Core.Tests
+            {
+                public class Explicit3DFunctionSample
+                {        
+                    [STAThread]
+                    static void Main(string[] args)
+                    {
+                        // create function
+                        Explicit3DFunction function = new Explicit3DFunction("Sin(x)/Cos(y)");
+             
+                        // calculate function;
+                        for (int x = 0; x &lt; 100; x++)
+                        for (int y = 0; y &lt; 100; y++)
+                        {
+                            Console.WriteLine("f({0},{1}) = {2}",x,y,function.ValueAt(x,y));
+                        }
+                                    
+                    }
+                }
+            }
+            </code>
+            </example>
+        </member>
+        <member name="M:Genetibase.MathX.Core.Explicit3DFunction.#ctor(Genetibase.MathX.Core.BivariateRealFunction)">
+            <summary><para>Initializes a function that defined by delegate.</para></summary>
+        </member>
+        <member name="M:Genetibase.MathX.Core.Explicit3DFunction.#ctor(System.String)">
+            <example>
+            	<code lang="CS">
+            using System;
+            using Genetibase.MathX.Core;
+             
+            namespace Genetibase.MathX.Core.Tests
+            {
+                public class Explicit3DFunctionSample
+                {        
+                    [STAThread]
+                    static void Main(string[] args)
+                    {
+                        // create function
+                        Explicit3DFunction function = new Explicit3DFunction("Sin(x)/Cos(y)");
+             
+                        // calculate function;
+                        for (int x = 0; x &lt; 100; x++)
+                        for (int y = 0; y &lt; 100; y++)
+                        {
+                            Console.WriteLine("f({0},{1}) = {2}",x,y,function.ValueAt(x,y));
+                        }
+                                    
+                    }
+                }
+            }
+            </code>
+            </example>
+            <summary><para>Initializes a function that defined by expression.</para></summary>
+            <exception cref="T:System.ArgumentNullException" caption=""></exception>
+            <exception cref="T:System.ArgumentException" caption=""></exception>
+            <exception cref="T:Genetibase.MathX.Core.ExpressionSyntaxException" caption="ExpressionSyntaxException Class"></exception>
+            <param name="expression">Expression of two variables.</param>
+        </member>
+        <member name="T:Genetibase.MathX.Core.TrivariateRealFunction">
+            <summary>
+            Represents delegate for mathematical function with three double input and 
+            one double output.
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.Core.LexemeCodeAttribute">
+            <summary>
+            Summary description for LexemeNameAttribute.
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.Core.ExpressionCompiler">
+            <summary>Compiles mathematical expression into runtime assembly.</summary>
+        </member>
+        <member name="T:Genetibase.MathX.Core.DelegateFactory">
+            <summary>
+            This class supports the MatX.Core infrastructure and is not intended to be used
+            directly from your code.
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.Core.Plotters.Implicit2DFunctionPlotter">
+            <summary>
+            Summary description for Implicit2DFunctionPlotter.
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.Core.LexemeNameAttribute">
+            <summary>
+            Summary description for LexemeNameAttribute.
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.Core.Constants">
+            <summary>Contains set of well-known mathematical constants.</summary>
+        </member>
+        <member name="T:Genetibase.MathX.Core.Functions">
+            <summary>Represents sealed class with set of elementary mathematical functions.</summary>
+        </member>
+        <member name="T:Genetibase.MathX.Core.Functions.Trigonometric">
+            <summary>Represents sealed class with set of trigonometric functions.</summary>
+        </member>
+        <member name="T:Genetibase.MathX.Core.Functions.Hyperbolic">
+            <summary>Represents sealed class with set of hyperbolic functions.</summary>
+        </member>
+        <member name="T:Genetibase.MathX.Core.ExpressionSyntaxException">
+            <summary>
+            The exception that is thrown when an symbolic methematical expression has syntax
+            errors.
+            </summary>
+        </member>
+        <member name="P:Genetibase.MathX.Core.ExpressionSyntaxException.Expression">
+            <summary>Source expression, which has syntax errors.</summary>
+        </member>
+        <member name="P:Genetibase.MathX.Core.ExpressionSyntaxException.ParsedExpression">
+            <summary>
+            Part of source expression that parsed succesfully and next lexeme has syntax
+            error.
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.Core.DefinitionType">
+            <summary><para>Identifies the type of function definition.</para></summary>
+        </member>
+        <member name="F:Genetibase.MathX.Core.DefinitionType.Analytic">
+            <summary>Function defined by expression.</summary>
+        </member>
+        <member name="F:Genetibase.MathX.Core.DefinitionType.Numerical">
+            <summary>Function defined by delegate.</summary>
+        </member>
+        <member name="T:Genetibase.MathX.Core.Point2D">
+            <summary>
+            	<para>Represents an ordered pair of floating-point x- and y-coordinates that defines a
+            point in a two-dimensional plane.</para>
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.Core.ParametricSurfaceDelegate">
+            <summary>
+            Represents delegate for mathematical function with two double input and 
+            one Point3D output.
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.Core.ConstantFunction">
+            <summary>
+            Represents delegate for mathematical function without inputs and 
+            one double output.
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.Core.Point3D">
+            <summary><para>Represents a point in tridimensional space.</para></summary>
+        </member>
+        <member name="T:Genetibase.MathX.Core.Parameter2DFunction">
+            <summary>Represents a function with one double input and one Plot2D output</summary>
+            <example>
+            	<code lang="CS">
+            using System;
+            using Genetibase.MathX.Core;
+             
+            namespace Genetibase.MathX.Core.Tests
+            {
+                public class Parameter2DFunctionSample
+                {        
+                    [STAThread]
+                    static void Main(string[] args)
+                    {
+                        // create function
+                        Parameter2DFunction function = new Parameter2DFunction("10*sin(t)","10*cos(t)");
+             
+                        // calculate function _Function;
+                        for (int i = 0; i &lt; 100; i++)
+                        {
+                            Console.WriteLine("f({0}) = ({1},{2})",i,function.ValueAt(i).X,function.ValueAt(i).Y);
+                        }
+                                    
+                    }
+                }
+            }
+            </code>
+            </example>
+        </member>
+        <member name="M:Genetibase.MathX.Core.Parameter2DFunction.#ctor(System.String,System.String)">
+            <example>
+            	<code lang="CS">
+            using System;
+            using Genetibase.MathX.Core;
+             
+            namespace Genetibase.MathX.Core.Tests
+            {
+                public class Parameter2DFunctionSample
+                {        
+                    [STAThread]
+                    static void Main(string[] args)
+                    {
+                        // create function
+                        Parameter2DFunction function = new Parameter2DFunction("10*sin(t)","10*cos(t)");
+             
+                        // calculate function _Function;
+                        for (int i = 0; i &lt; 100; i++)
+                        {
+                            Console.WriteLine("f({0}) = ({1},{2})",i,function.ValueAt(i).X,function.ValueAt(i).Y);
+                        }
+                                    
+                    }
+                }
+            }
+            </code>
+            </example>
+            <summary>Initializes a function that defined by delegate.</summary>
+        </member>
+        <member name="T:Genetibase.MathX.Core.Implicit2DFunction">
+            <summary>Represents implicit function of two variables.</summary>
+            <example>
+            	<code lang="CS">
+            using System;
+            using System.Drawing;
+             
+            using Genetibase.MathX.Core;
+            using Genetibase.MathX.Core.Plotters;
+             
+            namespace Genetibase.MathX.Core.Tests
+            {
+                public class Implicit2DFunctionSample
+                {        
+                    [STAThread]
+                    static void Main(string[] args)
+                    {
+                        // create function
+                        Implicit2DFunction function = new Implicit2DFunction("Sin(x)/y");
+             
+                        // create function plotter to plot function in specified range
+                        Implicit2DFunctionPlotter plotter = new Implicit2DFunctionPlotter(function);
+                            
+                        // write function roots in [0,0 - 10,10] range
+                        foreach (Point2D point in plotter.Plot(new Point2D(0,0), new Point2D(10,10), new Size(100,100)))
+                        {
+                            Console.WriteLine("Function root at point ({0},{1})", point.X, point.Y);
+                        }
+                    }
+                }
+            }
+            </code>
+            </example>
+            <remarks>
+            To calculate function you must use
+            <strong>Implicit2DFunctionPlotter</strong>.
+            </remarks>
+        </member>
+        <member name="M:Genetibase.MathX.Core.Implicit2DFunction.#ctor(Genetibase.MathX.Core.BivariateRealFunction)">
+            <summary><para>Initializes a function that defined by delegate.</para></summary>
+        </member>
+        <member name="M:Genetibase.MathX.Core.Implicit2DFunction.#ctor(System.String)">
+            <summary>Initializes a function that defined by expression.</summary>
+            <exception cref="T:System.ArgumentException" caption=""></exception>
+            <exception cref="T:System.ArgumentNullException" caption=""></exception>
+            <exception cref="T:Genetibase.MathX.Core.ExpressionSyntaxException" caption="ExpressionSyntaxException"></exception>
+        </member>
+        <member name="T:Genetibase.MathX.Core.Plotters.Parameter3DFunctionPlotter">
+            <summary>
+            Summary description for Explicit2DFunctionPlotter.
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.Core.ParametricSurface">
+            <summary>Represents a function with two double inputs and one Point3D output.</summary>
+            <example>
+            	<code lang="CS">
+            using System;
+            using Genetibase.MathX.Core;
+             
+            namespace Genetibase.MathX.Core.Tests
+            {
+                public class ParametricSurfaceSample
+                {        
+                    [STAThread]
+                    static void Main(string[] args)
+                    {
+                        // create function
+                        ParametricSurface function = new ParametricSurface("u+v","u-v","u*v");
+             
+                        // calculate function _Function;
+                        for (int u = 0; u &lt; 100; u++)
+                        for (int v = 0; v &lt; 100; v++)
+                        {
+                            Console.WriteLine("f({0},{1}) = ({2},{3},{4})",
+                                u,v,function.ValueAt(u,v).X,function.ValueAt(u,v).Y, 
+                                function.ValueAt(u,v).Z);
+                        }
+                                    
+                    }
+                }
+            }
+            </code>
+            </example>
+        </member>
+        <member name="M:Genetibase.MathX.Core.ParametricSurface.#ctor(System.String,System.String,System.String)">
+            <example>
+            	<code lang="CS">
+            using System;
+            using Genetibase.MathX.Core;
+             
+            namespace Genetibase.MathX.Core.Tests
+            {
+                public class ParametricSurfaceSample
+                {        
+                    [STAThread]
+                    static void Main(string[] args)
+                    {
+                        // create function
+                        ParametricSurface function = new ParametricSurface("u+v","u-v","u*v");
+             
+                        // calculate function _Function;
+                        for (int u = 0; u &lt; 100; u++)
+                        for (int v = 0; v &lt; 100; v++)
+                        {
+                            Console.WriteLine("f({0},{1}) = ({2},{3},{4})",
+                                u,v,function.ValueAt(u,v).X,function.ValueAt(u,v).Y, 
+                                function.ValueAt(u,v).Z);
+                        }
+                                    
+                    }
+                }
+            }
+            </code>
+            </example>
+        </member>
+        <member name="T:Genetibase.MathX.Core.Parameter3DFunctionDelegate">
+            <summary>
+            Represents delegate for mathematical function with one double input and 
+            one Point3D output.
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.Core.TypeOfLexemeAttribute">
+            <summary>
+            Summary description for LexemeNameAttribute.
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.Core.AnalyticDifferentiator">
+            <summary>Differentiates symbolic expression by specified variable.</summary>
+        </member>
+        <member name="M:Genetibase.MathX.Core.AnalyticDifferentiator.Differentiate(Genetibase.MathX.Core.ExpressionTree,System.String)">
+            <summary>Differentiates symbolic expression by specified variable.</summary>
+            <returns>bynary tree that represents derivative of source tree</returns>
+            <param name="tree"><strong>ExpressionTree</strong> binary tree of expression.</param>
+            <param name="diffVar">variable of differentiation</param>
+        </member>
+        <member name="T:Genetibase.MathX.Core.Plotters.Explicit3DFunctionPlotter">
+            <summary>
+            Summary description for Explicit2DFunctionPlotter.
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.Core.NumericalDifferentiator">
+            <summary>Differentiates numerically defined function.</summary>
+        </member>
+        <member name="T:Genetibase.MathX.Core.FunctionFactory">
+            <summary>
+            This class supports the MatX.Core infrastructure and is not intended to be used
+            directly from your code.
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.Core.RealFunction">
+            <summary>
+            Represents delegate for mathematical function with one double input and 
+            one double output.
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.Core.ExpressionTree">
+            <summary>
+            Represents symbolic expression in binary tree of
+            <see cref="T:Genetibase.MathX.Core.ExpressionTreeNode">ExpressionTreeNode Class</see> nodes.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.Core.ExpressionTree.#ctor(System.String)">
+            <summary>
+            Creates new instance of <strong>ExpressionTree</strong> with specified
+            expression.
+            </summary>
+            <exception cref="T:System.ArgumentNullException" caption="">expression is null</exception>
+            <exception cref="T:System.ArgumentException" caption="">expression has unknown lexemes</exception>
+            <exception cref="T:Genetibase.MathX.Core.ExpressionSyntaxException" caption="ExpressionSyntaxException Class">expression has syntax errors</exception>
+            <example>
+            	<code lang="CS">
+            ExpressionTree tree = new ExpressionTree("sin(x^2) + 10/x");
+            </code>
+            </example>
+            <remarks></remarks>
+            <param name="expression">An symbpolic mathematical expression.</param>
+        </member>
+        <member name="M:Genetibase.MathX.Core.ExpressionTree.ToString">
+            <summary>Returns string representation of binary tree.</summary>
+        </member>
+        <member name="M:Genetibase.MathX.Core.ExpressionTree.ToCodeExpression">
+            <summary>Returns code representation of binary tree.</summary>
+        </member>
+        <member name="M:Genetibase.MathX.Core.ExpressionTree.Simplify">
+            <summary>Simplifies binary tree of expression.</summary>
+            <remarks>
+            	<para><strong>Simplify</strong> method removes all unneccessary nodes that can be
+            simplifided. For example, expression "1+(x*0)" will be simplifided to "1" because (x*0)
+            will always return zero.</para>
+            	<para>Other samples of simplification</para>
+            	<para>"0/x + x" -&gt; "x"</para>
+            	<para>"x/x" -&gt; "1"</para>
+            </remarks>
+        </member>
+        <member name="P:Genetibase.MathX.Core.ExpressionTree.RootNode">
+            <summary>Gets root node of binary tree.</summary>
+        </member>
+        <member name="P:Genetibase.MathX.Core.ExpressionTree.Variables">
+            <summary>Gets array of varibles, containig in expression.</summary>
+        </member>
+        <member name="T:Genetibase.MathX.Core.Explicit2DFunction">
+            <summary>Represent explicit one variable real function.</summary>
+            <example>
+            	<code lang="CS" source="">
+            	</code>
+            	<code lang="CS">
+            using System;
+            using Genetibase.MathX.Core;
+             
+            namespace Genetibase.MathX.Core.Tests
+            {
+                public class Explicit2DFunctionSample
+                {        
+                    [STAThread]
+                    static void Main(string[] args)
+                    {
+                        // create function
+                        Explicit2DFunction function = new Explicit2DFunction("Sin(x)/x");
+             
+                        // calculate function _Function;
+                        for (int i = 0; i &lt; 100; i++)
+                        {
+                            Console.WriteLine("f({0}) = {1}",i,function.ValueAt(i));
+                        }
+                                    
+                    }
+                }
+            }
+            </code>
+            </example>
+        </member>
+        <member name="M:Genetibase.MathX.Core.Explicit2DFunction.#ctor(Genetibase.MathX.Core.RealFunction)">
+            <summary>
+            Creates function instance by specified <strong>RealFunction</strong>
+            delegate.
+            </summary>
+            <param name="function"><strong>RealFunction</strong> delegate.</param>
+        </member>
+        <member name="M:Genetibase.MathX.Core.Explicit2DFunction.#ctor(System.String)">
+            <example>
+            	<code lang="CS">
+            using System;
+            using Genetibase.MathX.Core;
+             
+            namespace Genetibase.MathX.Core.Tests
+            {
+                public class Explicit2DFunctionSample
+                {        
+                    [STAThread]
+                    static void Main(string[] args)
+                    {
+                        // create function
+                        Explicit2DFunction function = new Explicit2DFunction("Sin(x)/x");
+             
+                        // calculate function _Function;
+                        for (int i = 0; i &lt; 100; i++)
+                        {
+                            Console.WriteLine("f({0}) = {1}",i,function.ValueAt(i));
+                        }
+                                    
+                    }
+                }
+            }
+            </code>
+            </example>
+            <summary>Creates function instance by specified expression.</summary>
+            <exception cref="T:System.ArgumentNullException" caption=""></exception>
+            <exception cref="T:System.ArgumentException" caption=""></exception>
+            <exception cref="T:Genetibase.MathX.Core.ExpressionSyntaxException" caption="ExpressionSyntaxException"></exception>
+            <param name="expression">An mathematical expression with one variable.</param>
+        </member>
+        <member name="P:Genetibase.MathX.Core.Explicit2DFunction.ValueAt">
+            <summary>Gets <strong>RealFunction</strong> delegate of function.</summary>
+        </member>
+        <member name="P:Genetibase.MathX.Core.Explicit2DFunction.Expression">
+            <summary>
+            Gets expression of function if function is analiticaly defined. Otherwise returns
+            null.
+            </summary>
+        </member>
+        <member name="P:Genetibase.MathX.Core.Explicit2DFunction.Derivative">
+            <summary><para>Gets derivative of function.</para></summary>
+        </member>
+        <member name="T:Genetibase.MathX.Core.Plotters.ParametricSurfacePlotter">
+            <summary>
+            Summary description for Explicit2DFunctionPlotter.
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.Core.Parameter3DFunction">
+            <summary>Represents a function with one double input and one Point3D output.</summary>
+            <example>
+            	<code lang="CS">
+            using System;
+            using Genetibase.MathX.Core;
+             
+            namespace Genetibase.MathX.Core.Tests
+            {
+                public class Parameter3DFunctionSample
+                {        
+                    [STAThread]
+                    static void Main(string[] args)
+                    {
+                        // create function
+                        Parameter3DFunction function = new Parameter3DFunction("10*sin(t)","10*cos(t)", "10*tan(t)");
+             
+                        // calculate function _Function;
+                        for (int i = 0; i &lt; 100; i++)
+                        {
+                            Console.WriteLine("f({0}) = ({1},{2},{3})",i,function.ValueAt(i).X,function.ValueAt(i).Y, function.ValueAt(i).Z);
+                        }
+                                    
+                    }
+                }
+            }
+            </code>
+            </example>
+        </member>
+        <member name="M:Genetibase.MathX.Core.Parameter3DFunction.#ctor(System.String,System.String,System.String)">
+            <example>
+            	<code lang="CS">
+            using System;
+            using Genetibase.MathX.Core;
+             
+            namespace Genetibase.MathX.Core.Tests
+            {
+                public class Parameter3DFunctionSample
+                {        
+                    [STAThread]
+                    static void Main(string[] args)
+                    {
+                        // create function
+                        Parameter3DFunction function = new Parameter3DFunction("10*sin(t)","10*cos(t)", "10*tan(t)");
+             
+                        // calculate function _Function;
+                        for (int i = 0; i &lt; 100; i++)
+                        {
+                            Console.WriteLine("f({0}) = ({1},{2},{3})",i,function.ValueAt(i).X,function.ValueAt(i).Y, function.ValueAt(i).Z);
+                        }
+                                    
+                    }
+                }
+            }
+            </code>
+            </example>
+            <summary><para>Initializes a function that defined by expression.</para></summary>
+        </member>
+        <member name="T:Genetibase.MathX.Core.Implicit3DFunction">
+            <summary>Represents a implicit function of three variables.</summary>
+            <example>
+            	<code lang="CS">
+            using System;
+            using System.Drawing;
+             
+            using Genetibase.MathX.Core;
+            using Genetibase.MathX.Core.Plotters;
+             
+            namespace Genetibase.MathX.Core.Tests
+            {
+                public class Implicit3DFunctionSample
+                {        
+                    [STAThread]
+                    static void Main(string[] args)
+                    {
+                        // create function
+                        Implicit3DFunction function = new Implicit3DFunction("x^2 + y^2 + z^2 - 10^2");
+             
+                        // create function plotter to plot function in specified range
+                        Implicit3DFunctionPlotter plotter = new Implicit3DFunctionPlotter(function);
+                            
+                        // write function roots in [0,0 - 10,10] range
+                        foreach (Point3D point in plotter.Plot(new Point3D(-20,-20,-20), new Point3D(20,20,20), 1,1,1))
+                        {
+                            Console.WriteLine("Function root at point ({0},{1},{2})", point.X, point.Y, point.Z);
+                        }
+                    }
+                }
+            }
+            </code>
+            </example>
+        </member>
+        <member name="M:Genetibase.MathX.Core.Implicit3DFunction.#ctor(Genetibase.MathX.Core.TrivariateRealFunction)">
+            <summary>Initializes a function that defined by delegate.</summary>
+        </member>
+        <member name="M:Genetibase.MathX.Core.Implicit3DFunction.#ctor(System.String)">
+            <example>
+            	<code lang="CS">
+            using System;
+            using System.Drawing;
+             
+            using Genetibase.MathX.Core;
+            using Genetibase.MathX.Core.Plotters;
+             
+            namespace Genetibase.MathX.Core.Tests
+            {
+                public class Implicit3DFunctionSample
+                {        
+                    [STAThread]
+                    static void Main(string[] args)
+                    {
+                        // create function
+                        Implicit3DFunction function = new Implicit3DFunction("x^2 + y^2 + z^2 - 10^2");
+             
+                        // create function plotter to plot function in specified range
+                        Implicit3DFunctionPlotter plotter = new Implicit3DFunctionPlotter(function);
+                            
+                        // write function roots in [0,0 - 10,10] range
+                        foreach (Point3D point in plotter.Plot(new Point3D(-20,-20,-20), new Point3D(20,20,20), 1,1,1))
+                        {
+                            Console.WriteLine("Function root at point ({0},{1},{2})", point.X, point.Y, point.Z);
+                        }
+                    }
+                }
+            }
+            </code>
+            </example>
+            <exception cref="T:System.ArgumentException" caption=""></exception>
+            <exception cref="T:System.ArgumentNullException" caption=""></exception>
+            <exception cref="T:Genetibase.MathX.Core.ExpressionSyntaxException" caption="ExpressionSyntaxException"></exception>
+            <summary>Initializes a function that defined by expression.</summary>
+        </member>
+        <member name="T:Genetibase.MathX.Core.BivariateRealFunction">
+            <summary>
+            Represents delegate for mathematical function with two double inputs and one
+            double output.
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.Core.Plotters.Parameter2DFunctionPlotter">
+            <summary>
+            Summary description for Explicit2DFunctionPlotter.
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.Core.Plotters.Implicit3DFunctionPlotter">
+            <summary>
+            Summary description for Implicit3DFunctionPlotter.
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.Core.Parameter2DFunctionDelegate">
+            <summary>
+            Represents delegate for mathematical function with one double input and 
+            one Point2D output.
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.Core.LexemeDiffMaskAttribute">
+            <summary>
+            Summary description for LexemeDiffMaskAttribute.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitConversion", "UnitConversion\UnitConversion.csproj", "{6F7DBBA8-1AE2-47D7-A32A-62E232B2BCDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitDemo", "UnitDemo\UnitDemo.csproj", "{BF017A2D-3CF9-4178-AA6C-2E0E29185BA0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F7DBBA8-1AE2-47D7-A32A-62E232B2BCDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F7DBBA8-1AE2-47D7-A32A-62E232B2BCDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F7DBBA8-1AE2-47D7-A32A-62E232B2BCDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F7DBBA8-1AE2-47D7-A32A-62E232B2BCDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF017A2D-3CF9-4178-AA6C-2E0E29185BA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF017A2D-3CF9-4178-AA6C-2E0E29185BA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF017A2D-3CF9-4178-AA6C-2E0E29185BA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF017A2D-3CF9-4178-AA6C-2E0E29185BA0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

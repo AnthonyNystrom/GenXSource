@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FPlotLibrary", "FPlotLibrary.csproj", "{BD66017E-09AD-4380-BE2F-F88D1B472F27}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{BD66017E-09AD-4380-BE2F-F88D1B472F27}.Debug.ActiveCfg = Debug|.NET
+		{BD66017E-09AD-4380-BE2F-F88D1B472F27}.Debug.Build.0 = Debug|.NET
+		{BD66017E-09AD-4380-BE2F-F88D1B472F27}.Release.ActiveCfg = Release|.NET
+		{BD66017E-09AD-4380-BE2F-F88D1B472F27}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,317 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FPlot</name>
+    </assembly>
+    <members>
+        <member name="T:FPlot.CompilerOptionsForm">
+            <summary>
+            Summary description for CompilerOptionsForm.
+            </summary>
+        </member>
+        <member name="F:FPlot.CompilerOptionsForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:FPlot.CompilerOptionsForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:FPlot.CompilerOptionsForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:FPlot.CovarianceForm">
+            <summary>
+            Summary description for CovarianceForm.
+            </summary>
+        </member>
+        <member name="F:FPlot.CovarianceForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:FPlot.CovarianceForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:FPlot.CovarianceForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:FPlot.DataForm">
+            <summary>
+            Summary description for DataForm.
+            </summary>
+        </member>
+        <member name="F:FPlot.DataForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:FPlot.DataForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:FPlot.DataForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:FPlot.ErrorsForm">
+            <summary>
+            Summary description for ErrorsForm.
+            </summary>
+        </member>
+        <member name="F:FPlot.ErrorsForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:FPlot.ErrorsForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:FPlot.ErrorsForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:FPlot.FitForm">
+            <summary>
+            Summary description for MarquardtForm.
+            </summary>
+        </member>
+        <member name="F:FPlot.FitForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:FPlot.FitForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:FPlot.FitForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:FPlot.ImageControl">
+            <summary>
+            Summary description for ImageControl.
+            </summary>
+        </member>
+        <member name="F:FPlot.ImageControl.image">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="T:FPlot.ImageForm">
+            <summary>
+            Summary description for ImageForm.
+            </summary>
+        </member>
+        <member name="F:FPlot.ImageForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:FPlot.ImageForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:FPlot.ImageForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:FPlot.ImportForm">
+            <summary>
+            Summary description for importForm.
+            </summary>
+        </member>
+        <member name="F:FPlot.ImportForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:FPlot.ImportForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:FPlot.ImportForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:FPlot.LibraryForm">
+            <summary>
+            Summary description for LibraryForm.
+            </summary>
+        </member>
+        <member name="F:FPlot.LibraryForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:FPlot.LibraryForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:FPlot.LibraryForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:FPlot.LoadDataForm">
+            <summary>
+            Summary description for LoadDataForm.
+            </summary>
+        </member>
+        <member name="F:FPlot.LoadDataForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:FPlot.LoadDataForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:FPlot.LoadDataForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:FPlot.MainForm">
+            <summary>
+            The main form of the Application
+            </summary>
+        </member>
+        <member name="F:FPlot.MainForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:FPlot.MainForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:FPlot.MainForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:FPlot.MainForm.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:FPlot.OptionsForm">
+            <summary>
+            Summary description for OptionsForm.
+            </summary>
+        </member>
+        <member name="F:FPlot.OptionsForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:FPlot.OptionsForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:FPlot.OptionsForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:FPlot.ParForm">
+            <summary>
+            Summary description for ParForm.
+            </summary>
+        </member>
+        <member name="F:FPlot.ParForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:FPlot.ParForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:FPlot.ParForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:FPlot.RangeForm">
+            <summary>
+            Summary description for RangeForm.
+            </summary>
+        </member>
+        <member name="F:FPlot.RangeForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:FPlot.RangeForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:FPlot.RangeForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:FPlot.SourceForm">
+            <summary>
+            Summary description for SourceForm.
+            </summary>
+        </member>
+        <member name="F:FPlot.SourceForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:FPlot.SourceForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:FPlot.SourceForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>

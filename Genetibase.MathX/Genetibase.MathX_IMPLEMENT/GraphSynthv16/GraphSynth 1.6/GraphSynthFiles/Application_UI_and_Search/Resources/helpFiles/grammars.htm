@@ -1,0 +1,442 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Grammar Rule Basics</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+    <link rel="stylesheet" type="text/css" href="gsStyle1.css" />
+    <style type="text/css">
+    h2
+	{text-indent:0pt;
+	text-align:left;
+	font-family:Georgia;
+	font-size:15.0pt;
+	color:black;
+	font-weight:bold;}
+.style1 {text-indent: 0pt;
+	line-height: 121%;
+	text-align: left;
+	font-family: Georgia;
+	font-size: 11.0pt;
+	color: black;}
+    .style8 {
+	text-align: center;
+}
+.style9 {
+	margin-bottom: 0pt;
+}
+    .style11 {
+	margin-top: 0px;
+	margin-bottom: 2px;
+}
+    </style>
+</head>
+<body bgcolor="#FFFFFF">
+    <div style="position: absolute; width: 100px; height: 100px; z-index: 0; left: 6px;
+        top: 159px" id="backgroundGraph">
+        <span style='position: absolute; z-index: 148; left: 187px; top: 667px; width: 249px;
+            height: 398px'>
+                        <p class="style1">
+                            <span lang="en-US">When drafting a rule in GraphSynth, one can access many of these
+                                rule properties by invoking the properties window (shown to the right). This is
+                                the properties window for the rule named seedBurst1Rule4 (seedBurst1Rule4 .xml in
+                                the rules directory). It is a fairly simple rule with one Parametric Recognize Function
+                                called isALeafNode and one Parametric Apply Function called distributeTo1NewRoot.
+                                When this rule was created, a template for these functions were automatically created
+                                in the .cs file called seedBurstParamRules.cs. When GraphSynth creates these templates
+                                all Parametric Apply Functions will look like the following:</span></p>
+                           </span>
+        <img alt="" src="images/lightergrayBackGroundGraph.png" width="698" height="610">
+    </div>
+    <p class="style1">
+	<span style='position: absolute; z-index: 150; left: 463px; top: 833px; width: 306px;
+                height: 379px'>
+                <img width="306" height="379" src="images/rulesPropertyWindow.png"></span></p>
+    <p class="style1">
+	&nbsp;</p>
+    <p class="MsoOrganizationName">
+        <span style='color: #FFFFFF; position: absolute; z-index: 8; left: 388px; top: 74px;
+            width: 166px; height: 25px' id="ADLab">Automated Design Lab </span>
+    </p>
+    <span style='position: absolute; z-index: 6; left: 8px; top: 15px; width: 510px;
+        height: 42px' id="orangeDots">
+        <img width="510" height="42" src="images/orangeDots.png">
+    </span><a href="http://www.engr.utexas.edu"><span style='position: absolute; z-index: 5;
+        left: 560px; top: 0px; width: 189px; height: 177px' id="UTCOEBreadcrumbs">
+        <img width="200" height="188" src="images/UTCOEemblem.jpg" /></span></a><span style='position: absolute;
+            z-index: 2; left: 1px; top: 72px; width: 759px; height: 22px' id="fatOrangeBar">
+            <img width="759" height="22" src="images/thickOrangeBarHoriz.png">
+        </span><span style='position: absolute; z-index: 8; left: 197px; top: 47px; width: 372px;
+            height: 25px' id="GSTitle">
+            <p class="MsoOrganizationName">
+                GraphSynth 1.6</p>
+        </span><span style='position: absolute; z-index: 12; left: 197px; top: 197px; width: 560px;
+            height: 3px' id="beforeContentBreak">
+            <img width="560" height="3" src="images/thinBlackBarHoriz.png">
+        </span><span style='position: absolute; z-index: 2; left: 192px; top: 234px; width: 537px;
+            height: 580px'>
+            <table cellpadding="0" cellspacing="0">
+                <tr>
+                    <td width="537" height="580">
+                        <p class="style1">
+                            <span lang="en-US">Grammar rules are stored in GraphSynth in a similar<br>
+                                manner to how </span><a href="graphs.htm"><span lang="en-US" style='font-family: Georgia;
+                                    text-decoration: underline;'>graphs are stored</span></a><span lang="en-US">. Within
+                                        the
+                                        <br>
+                                        grammarRule class (under the 1.Representation folder) a rule is comprised of the
+                                        following main fields:</span></p>
+                        <p class="style11">
+                            <span lang="en-US"
+                                style='font-size: 11.0pt; font-family: "Courier New"; color: blue;'>public</span><span
+                                    lang="en-US" style='font-size: 11.0pt; font-family: "Courier New"; color: black;'>
+                                </span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New"; color: blue;'>
+                                    string</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                                        color: black;'> name;</span></p>
+                        <p class="style11">
+                            <span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New"; color: blue;'>
+                                public</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                                    color: black;'> </span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                                        color: teal;'>designGraph</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                                            color: black;'> L;</span></p>
+                        <p class="style11">
+                            <span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New"; color: blue;'>
+                                public</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                                    color: black;'> </span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                                        color: teal;'>designGraph</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                                            color: black;'> R;</span></p>
+                        <p class="style11">
+                            <span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New"; color: blue;'>
+                                public</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                                    color: black;'> </span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                                        color: teal;'>Boolean</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                                            color: black;'> spanning;</span></p>
+                        <p class="style11">
+                            <span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New"; color: blue;'>
+                                public</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                                    color: black;'> </span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                                        color: teal;'>Boolean</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                                            color: black;'> induced;</span></p>
+                        <p class="style11">
+                            <span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New"; color: blue;'>
+                                public</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                                    color: black;'> </span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                                        color: teal;'>Boolean</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                                            color: black;'> containsAllGlobalLabels;</span></p>
+                        <p class="style11">
+                            <span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New"; color: blue;'>
+                                public</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                                    color: black;'> </span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                                        color: teal;'>List</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                                            color: black;'>&lt;</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                                                color: blue;'>string</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                                                    color: black;'>&gt; recognizeFunctions ;</span></p>
+                        <p class="style11">
+                            <span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New"; color: blue;'>
+                                public</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                                    color: black;'> </span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                                        color: teal;'>List</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                                            color: black;'>&lt;</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                                                color: blue;'>string</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                                                    color: black;'>&gt; applyFunctions ;</span></p>
+                        <p class="style11">
+                            <span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New"; color: blue;'>
+                                public</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                                    color: black;'> </span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                                        color: teal;'>List</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                                            color: black;'>&lt;</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                                                color: teal;'>embeddingRule</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                                                    color: black;'>&gt; embeddingRules;</span></p>
+                        <p class="style1">
+                            <span lang="en-US">The rule contains a simple name and two designGraphs, one representing
+                                the left-hand-side, or L (what is used for </span><a href="rule_recognition.htm"><span
+                                    lang="en-US" style='font-family: Georgia; text-decoration: underline;'>recognition</span></a><span
+                                        lang="en-US">), and one representing the right-hand-side, or R (what is used for
+                                    </span><a href="rule_application.htm"><span lang="en-US" style='font-family: Georgia;
+                                        text-decoration: underline;'>application</span></a><span lang="en-US">). It is likely
+                                            that the rule should have some overlap in the elements that are in L and R. However,
+                                            these are stored twice as separate elements of both L and R. These elements represent
+                                            the K or common graph between in the rule and play a crucial role in rule application.
+                                            This is followed by three Booleans: </span><span lang="en-US" style='font-size: 10.0pt;
+                                                line-height: 121%; font-family: "Trebuchet MS"; color: #CC3300; font-style: italic;
+                                                font-weight: bold;'>spanning</span><span lang="en-US">, </span>
+                            <span lang="en-US" style='font-size: 10.0pt; line-height: 121%; font-family: "Trebuchet MS";
+                                color: #CC3300; font-style: italic; font-weight: bold;'>induced</span><span lang="en-US">,
+                                </span><span lang="en-US" style='font-size: 10.0pt; line-height: 121%; font-family: "Trebuchet MS";
+                                    color: #CC3300; font-style: italic; font-weight: bold;'>containsAllGlobalLabels
+                                </span><span lang="en-US">which are defined as part of the recognition (see Table 1
+                                    under </span><a href="rule_recognition.htm"><span lang="en-US" style='font-family: Georgia;
+                                        text-decoration: underline;'>Recognition</span></a><span lang="en-US">). </span>
+                        </p>
+                        <h2>
+                            <span lang="en-US">Parametric Rule Files</span></h2>
+                        <p class="style1">
+                            <span lang="en-US">The next two lists represent the </span><span lang="en-US" style='font-family: Georgia;
+                                font-style: italic;'>names of functions</span><span lang="en-US">, for C# functions
+                                    that have been written to add to the recognition or application criteria. These
+                                    are especially useful in parametric rules—rules that are in some way based on the
+                                    local variables (stored as doubles) stored in the nodes and arcs of the graph. </span>
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </span>
+	<span style='position: absolute; z-index: 7; left: 191px; top: 2623px; width: 538px;
+            height: 4px' id="bottommostBar" class="style7">
+            <div class="style6">
+                <p class="style8">
+                    <img width="538" height="4" src="images/thinnerOrangeBarHoriz.png">
+                    | <a href="index.htm">Home</a> | <a href="introMethod.htm">Methodology Overview</a>
+                    | <a href="graphs.htm">Graph Basics</a> | <a href="grammars.htm">Grammar Basics</a>
+                    | <a href="rule_recognition.htm">Grammars: Recognition</a> | <a href="rule_application.htm">
+                        Grammars: Application</a> | <a href="ruleSets.htm">Grammars: RuleSets</a> |
+                    <a href="generation.htm">Generation</a> | <a href="searchProcess.htm">Search Process</a>
+                    | <a href="navigating.htm">Navigating GraphSynth</a> | <a href="examples.htm">Examples</a>
+                    | <a href="download.htm">Download</a> |
+                </p>
+            </div>
+        </span><span style='position: absolute; z-index: 1; left: 0px; top: 0px; width: 760px;
+            height: 10px' id="topmostBar">
+            <img width="760" height="10" src="images/thinOrangeBarHoriz.png" />
+        </span><span style='position: absolute; z-index: 3; left: 156px; top: 48px; width: 17px;
+            height: 18px' id="leftArrow">
+            <img width="17" height="18" src="images/orangeDotArrow.png" />
+        </span><span style='position: absolute; z-index: 4; left: 174px; top: 48px; width: 17px;
+            height: 18px' id="rightArrow">
+            <img width="17" height="18" src="images/orangeDotArrow.png" /></span><span style='position: absolute;
+                z-index: 9; left: 191px; top: 152px; width: 557px; height: 32px' id="pageTitle">
+                <p class="MsoTitle3">
+                    Grammar: Saving &amp; Opening&nbsp;
+                </p>
+            </span>&nbsp;<span style='position: absolute; z-index: 149; left: 195px; top: 1237px; width: 569px;
+        height: 1228px'><p class="MsoNormal">
+            <span style='font-size: 11.0pt; line-height: 121%; font-family: "Courier New"; color: green'>
+                /* This is APPLY for the rule entitled: </span><span lang="en-US" style='font-size: 11.0pt;
+                    line-height: 121%; font-family: "Courier New"; color: green;'>swirlRule1</span><span
+                        style='font-size: 11.0pt; line-height: 121%; font-family: "Courier New"; color: green'>
+                        */</span></p>
+        <p class="MsoNormal">
+            <span lang="en-US" style='font-size: 11.0pt; line-height: 121%; font-family: "Courier New";
+                color: blue;'>public</span><span lang="en-US" style='font-size: 11.0pt; line-height: 121%;
+                    font-family: "Courier New"; color: black;'> designGraph distributeTo1NewRoot(</span><span
+                        lang="en-US" style='font-size: 11.0pt; line-height: 121%; font-family: "Courier New";
+                        color: teal;'>designGraph </span><span lang="en-US" style='font-size: 11.0pt; line-height: 121%;
+                            font-family: "Courier New"; color: black;'>Lmapping,<br>
+                        </span><span lang="en-US" style='font-size: 11.0pt; line-height: 121%; font-family: "Courier New";
+                            color: teal;'>designGraph </span><span lang="en-US" style='font-size: 11.0pt; line-height: 121%;
+                                font-family: "Courier New"; color: black;'>host, </span><span lang="en-US" style='font-size: 11.0pt;
+                                    line-height: 121%; font-family: "Courier New"; color: teal;'>designGraph </span>
+            <span lang="en-US" style='font-size: 11.0pt; line-height: 121%; font-family: "Courier New";
+                color: black;'>Rmapping,
+                <br>
+            </span><span lang="en-US" style='font-size: 11.0pt; line-height: 121%; font-family: "Courier New";
+                color: blue;'>double</span><span lang="en-US" style='font-size: 11.0pt; line-height: 121%;
+                    font-family: "Courier New"; color: black;'>[] parameters)</span></p>
+        <p class="MsoNormal">
+            <span lang="en-US" style='font-size: 11.0pt; line-height: 121%; font-family: "Courier New";
+                color: black;'>{</span></p>
+        <p class="MsoNormal">
+            <span lang="en-US" style='font-size: 11.0pt; line-height: 121%; font-family: "Courier New";
+                color: black;'></span><span lang="en-US" style='font-size: 11.0pt; line-height: 121%;
+                    font-family: "Courier New"; color: green;'>/* here is where the code for the APPLY
+                    function
+                    <br>
+                    * is to be located. Please modify host (or
+                    <br>
+                    * located nodes) with the input from parameters. */</span></p>
+        <p class="MsoNormal">
+            <span lang="en-US" style='font-size: 11.0pt; line-height: 121%; font-family: "Courier New";
+                color: black;'></span><span lang="en-US" style='font-size: 11.0pt; line-height: 121%;
+                    font-family: "Courier New"; color: blue;'>return</span><span lang="en-US" style='font-size: 11.0pt;
+                        line-height: 121%; font-family: "Courier New"; color: black;'> host;</span></p>
+        <p class="MsoNormal">
+            <span lang="en-US" style='font-size: 11.0pt; line-height: 121%; font-family: "Courier New";
+                color: black;'>}</span></p>
+        <p class="MsoNormal">
+            <span lang="en-US" style='font-size: 11.0pt; line-height: 121%; font-family: Georgia;'>
+                This means that one can draft any functions on the resulting host that results </span>
+            <span lang="en-US" style='font-size: 11.0pt; line-height: 121%; font-family: Georgia;
+                font-style: italic;'>after all </span><span lang="en-US" style='font-size: 11.0pt;
+                    line-height: 121%; font-family: Georgia;'>other rule modifications have occurred
+                    (see </span><a href="rule_application.htm"><span lang="en-US" style='font-size: 11.0pt;
+                        line-height: 121%; font-family: Georgia; text-decoration: underline;'>Application</span></a><span
+                            lang="en-US" style='font-size: 11.0pt; line-height: 121%; font-family: Georgia;'>).
+                            The Lmapping and Rmapping are needed to identify elements locations within the host.
+                            The examples in the rules directory are a good place to start to understand what
+                            can be done with this function.</span></p>
+        <p class="MsoNormal">
+            <span lang="en-US" style='font-size: 11.0pt; line-height: 121%; font-family: Georgia;'>
+                The Parametric Recognize Functions are more restrictive. The template for a parametric
+                recognize rule looks like the following:</span></p>
+        <p class="MsoNormal">
+            <span style='font-size: 11.0pt; font-family: "Courier New"; color: green'>/* This is
+                RECOGNIZE for the rule entitled: */</span></p>
+        <p class="MsoNormal">
+            <span lang="en-US" style='font-size: 11.0pt; line-height: 121%; font-family: "Courier New";
+                color: blue;'>public</span><span lang="en-US" style='font-size: 11.0pt; line-height: 121%;
+                    font-family: "Courier New"; color: black;'> </span><span lang="en-US" style='font-size: 11.0pt;
+                        line-height: 121%; font-family: "Courier New"; color: blue;'>double</span><span lang="en-US"
+                            style='font-size: 11.0pt; line-height: 121%; font-family: "Courier New"; color: black;'>
+                            isALeafNode (</span><span lang="en-US" style='font-size: 11.0pt; line-height: 121%;
+                                font-family: "Courier New"; color: teal;'>designGraph </span>
+            <span lang="en-US" style='font-size: 11.0pt; line-height: 121%; font-family: "Courier New";
+                color: black;'>L, </span><span lang="en-US" style='font-size: 11.0pt; line-height: 121%;
+                    font-family: "Courier New"; color: teal;'>designGraph </span><span lang="en-US" style='font-size: 11.0pt;
+                        line-height: 121%; font-family: "Courier New"; color: black;'>host,<br>
+                    </span><span lang="en-US" style='font-size: 11.0pt; line-height: 121%; font-family: "Courier New";
+                        color: teal;'>List</span><span lang="en-US" style='font-size: 11.0pt; line-height: 121%;
+                            font-family: "Courier New"; color: black;'>&lt;</span><span lang="en-US" style='font-size: 11.0pt;
+                                line-height: 121%; font-family: "Courier New"; color: teal;'>node</span><span lang="en-US"
+                                    style='font-size: 11.0pt; line-height: 121%; font-family: "Courier New"; color: black;'>&gt;
+                                    locatedNodes, </span><span lang="en-US" style='font-size: 11.0pt; line-height: 121%;
+                                        font-family: "Courier New"; color: teal;'>List</span><span lang="en-US" style='font-size: 11.0pt;
+                                            line-height: 121%; font-family: "Courier New"; color: black;'>&lt;</span><span lang="en-US"
+                                                style='font-size: 11.0pt; line-height: 121%; font-family: "Courier New"; color: teal;'>arc</span><span
+                                                    lang="en-US" style='font-size: 11.0pt; line-height: 121%; font-family: "Courier New";
+                                                    color: black;'>&gt; locatedArcs)</span></p>
+        <p class="MsoNormal">
+            <span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New"; color: black;'>
+                {</span></p>
+        <p class="MsoNormal">
+            <span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New"; color: black;'>
+            </span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New"; color: green;'>
+                /* here is where the code for the RECOGNIZE function
+                <br>
+                * is to be located. Please remember that returning
+                <br>
+                * a positive real (double) is equivalent to a<br>
+                * constraint violation. Zero and negative numbers
+                <br>
+                * are feasible. */</span></p>
+        <p class="MsoNormal">
+            <span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New"; color: black;'>
+            </span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New"; color: blue;'>
+                return</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                    color: black;'> 0.0;</span></p>
+        <p class="MsoNormal">
+            <span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New"; color: black;'>
+                }</span></p>
+        <p class="MsoNormal">
+            <span lang="en-US" style='font-size: 11.0pt; line-height: 121%; font-family: Georgia;'>
+                As the template shows, these functions return a double instead of a Boolean, which
+                may seem to be the more obvious type for whether or not a rule is recognized. Only
+                non-positive-valued real's will qualify as a successful match. This is to meet with
+                negative null form of constraints used in numerical optimization. Constraints are
+                usually written in the form g</span><span lang="en-US" style='font-size: 7.3259pt;
+                    line-height: 121%; font-family: Georgia;'><sub>i</sub></span><span lang="en-US" style='font-size: 11.0pt;
+                        line-height: 121%; font-family: Georgia;'>(x) &#8804; 0.0 to comply with penalty
+                        function and Karush-Kuhn Tucker conditions. Fortunately, understanding the reasons
+                        are not necessary for creating meaningful rules. Just remember that a positive number
+                        in NOT a match. Example of these rules can be found in the rules directory.</span></p>
+        <h2>
+            <span lang="en-US">Embedding Rules</span></h2>
+        <p class="MsoNormal">
+            <span lang="en-US" style='font-size: 11.0pt; line-height: 121%; font-family: Georgia;'>
+                As described in </span><a href="rule_application.htm"><span lang="en-US" style='font-size: 11.0pt;
+                    line-height: 121%; font-family: Georgia; text-decoration: underline;'>Application</span></a><span
+                        lang="en-US" style='font-size: 11.0pt; line-height: 121%; font-family: Georgia;'>,
+                        there are certain </span><span lang="en-US" style='font-size: 11.0pt; line-height: 121%;
+                            font-family: Georgia; font-weight: bold;'>arc </span><span lang="en-US" style='font-size: 11.0pt;
+                                line-height: 121%; font-family: Georgia;'>modifications that cannot be represented
+                                in the L and R graphs. These free-arc embedding rules are stored in a class under
+                                1.Representation called embeddingRule.cs. When drafting a rule one can specify in
+                                the Properties Window (as shown above) how many embedding rules to create for the
+                                rule. However, the actual drafting of embedding rule values must be done in XML.
+                                Once the rule is saved and opened in an XML editor one will see the following line
+                                added to the file:</span></p>
+        <p class="style9">
+            <span style='font-size: 11.0pt; font-family: "Courier New"; color: blue'>&lt;</span><span
+                lang="en-US" style='font-size: 11.0pt; font-family: "Courier New"; color: maroon;'>embeddingRules</span><span
+                    lang="en-US" style='font-size: 11.0pt; font-family: "Courier New"; color: blue;'>&gt;<br>
+&nbsp;&nbsp;&nbsp;
+                &lt;</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                    color: maroon;'>embeddingRule</span><span lang="en-US" style='font-size: 11.0pt;
+                        font-family: "Courier New"; color: blue;'>&gt;<br>
+			</span>
+			<span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New"; color: blue;'>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &lt;</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                    color: maroon;'>freeArcLabel</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                        color: blue;'> /&gt;<br>
+			</span><span lang="en-US"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+			<span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New"; color: blue;'>
+                &lt;</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                    color: maroon;'>LNodeName</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                        color: blue;'> /&gt;<br>
+			</span><span lang="en-US"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+			<span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New"; color: blue;'>
+                &lt;</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                    color: maroon;'>neighborNodeLabel</span><span lang="en-US" style='font-size: 11.0pt;
+                        font-family: "Courier New"; color: blue;'> /&gt;</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New"; color: blue;'><br>
+			</span><span lang="en-US">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+			<span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New"; color: blue;'>
+                &lt;</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                    color: maroon;'>RNodeName</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                        color: blue;'> /&gt;</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New"; color: blue;'><br>
+			</span><span lang="en-US">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+			<span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New"; color: blue;'>
+                &lt;</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                    color: maroon;'>originalDirection</span><span lang="en-US" style='font-size: 11.0pt;
+                        font-family: "Courier New"; color: blue;'>&gt;</span><span lang="en-US" style='font-size: 11.0pt;
+                            font-family: "Courier New"; color: black;'>0</span><span lang="en-US" style='font-size: 11.0pt;
+                                font-family: "Courier New"; color: blue;'>&lt;/</span><span lang="en-US" style='font-size: 11.0pt;
+                                    font-family: "Courier New"; color: maroon;'>originalDirection</span><span lang="en-US"
+                                        style='font-size: 11.0pt; font-family: "Courier New"; color: blue;'>&gt;<br>
+			</span><span lang="en-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang="en-US"
+                                        style='font-size: 11.0pt; font-family: "Courier New"; color: blue;'>&lt;</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                    color: maroon;'>newDirection</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                        color: blue;'>&gt;</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                            color: black;'>0</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                                color: blue;'>&lt;/</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                                    color: maroon;'>newDirection</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                                        color: blue;'>&gt;</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New"; color: blue;'><br>
+			</span><span lang="en-US">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+			<span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New"; color: blue;'>
+                &lt;</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                    color: maroon;'>allowArcDuplication</span><span lang="en-US" style='font-size: 11.0pt;
+                        font-family: "Courier New"; color: blue;'>&gt;</span><span lang="en-US" style='font-size: 11.0pt;
+                            font-family: "Courier New"; color: black;'>false</span><span lang="en-US" style='font-size: 11.0pt;
+                                font-family: "Courier New"; color: blue;'>&lt;/</span><span lang="en-US" style='font-size: 11.0pt;
+                                    font-family: "Courier New"; color: maroon;'>allowArcDuplication</span><span lang="en-US"
+                                        style='font-size: 11.0pt; font-family: "Courier New"; color: blue;'>&gt;<br>
+			</span><span lang="en-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang="en-US"
+                                        style='font-size: 11.0pt; font-family: "Courier New"; color: blue;'>&lt;/</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                    color: maroon;'>embeddingRule</span><span lang="en-US" style='font-size: 11.0pt;
+                        font-family: "Courier New"; color: blue;'>&gt;</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New"; color: blue;'><br>
+                &lt;/</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                    color: maroon;'>embeddingRules</span><span lang="en-US" style='font-size: 11.0pt;
+                        font-family: "Courier New"; color: blue;'>&gt;<br>
+			</span></p>
+        <p class="MsoNormal">
+            <span lang="en-US" style='font-size: 11.0pt; font-family: Georgia;'>This means that
+                for the list of embedding rules (</span><span style='font-size: 11.0pt; font-family: "Courier New";
+                    color: blue'>&lt;</span><span lang="en-US" style='font-size: 11.0pt; font-family: "Courier New";
+                        color: maroon;'>embeddingRules</span><span lang="en-US" style='font-size: 11.0pt;
+                            font-family: "Courier New"; color: blue;'>&gt;</span><span lang="en-US" style='font-size: 11.0pt;
+                                font-family: Georgia;'>), there is one free-arc embedding rule (</span><span lang="en-US"
+                                    style='font-size: 11.0pt; font-family: "Courier New"; color: blue;'>&lt;</span><span
+                                        lang="en-US" style='font-size: 11.0pt; font-family: "Courier New"; color: maroon;'>embeddingRule</span><span
+                                            lang="en-US" style='font-size: 11.0pt; font-family: "Courier New"; color: blue;'>&gt;)
+                                        </span><span lang="en-US" style='font-size: 11.0pt; font-family: Georgia;'>with the
+                                            following properties. The only field that must be filled in this rule is the RNodeName
+                                            since that specifies what new node (following the node produced from the Rmapping)
+                                            are the free-arcs to be connected to. Any number of rules may be created and rules
+                                            may have many of the same values. Be careful though, the modifications performed
+                                            by embedding rules are hard to debug!</span></p>
+        </td></tr></table></span><span style="position: absolute; left: 9px; top: 211px;
+            width: 175px; height: 431px; z-index: 100" id="navigation">
+            <li class="sideBarNav"><a href="index.htm">Home</a></li><li class="sideBarNav"><a
+                href="introMethod.htm">Methodology Overview</a></li><li class="sideBarNav"><a href="graphs.htm">
+                    Graph Basics</a></li><li class="sideBarNav"><a href="grammars.htm">Grammar Basics</a></li><li
+                        class="sideBarNav"><a href="rule_recognition.htm">Grammars: Recognition</a></li><li
+                            class="sideBarNav"><a href="rule_application.htm">Grammars: Application</a></li><li
+                                class="sideBarNav"><a href="ruleSets.htm">Grammars: RuleSets</a></li><li class="sideBarNav">
+                                    <a href="generation.htm">Generation</a></li><li class="sideBarNav"><a href="searchProcess.htm">
+                                        Search Process</a></li><li class="sideBarNav"><a href="navigating.htm">Navigating GraphSynth</a></li><li
+                                            class="sideBarNav"><a href="examples.htm">Examples</a></li><li class="sideBarNav"><a
+                                                href="download.htm">Download</a></li>
+        </span>
+</body>
+</html>

@@ -1,0 +1,1600 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Genetibase.MathX.NugenCCalc</name>
+    </assembly>
+    <members>
+        <member name="T:Genetibase.MathX.NugenCCalc.Design.ItemActionEventHandler">
+            <summary>
+            Event argument carrying an item
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.ItemEventArgs.#ctor(Genetibase.MathX.NugenCCalc.FunctionParameters,System.String)">
+            <summary>
+            Initializes a new instance of the ItemEventArgs class 
+            </summary>
+            <param name="item"></param>
+            <param name="action"></param>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.ItemEventArgs.#ctor(Genetibase.MathX.NugenCCalc.FunctionParameters)">
+            <summary>
+            Initializes a new instance of the ItemEventArgs class 
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Design.ItemEventArgs.Item">
+            <summary>
+            Get Item
+            </summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Design.ItemEventArgs.Action">
+            <summary>
+            Get string action
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.Design.Controls.PropertyView">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Genetibase.MathX.NugenCCalc.Design.Controls.PropertyView._component">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.Controls.PropertyView.#ctor">
+            <summary>
+            Initializes a new instance of the PropertyView class.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.Controls.PropertyView.#ctor(Genetibase.MathX.NugenCCalc.NugenCCalcBase)">
+            <summary>
+            Initializes a new instance of the PropertyView class.
+            </summary>
+            <param name="component">NugenCCalcComponent component</param>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.Controls.PropertyView.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.Controls.PropertyView.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.Controls.EquationView.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.Controls.EquationView.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.ParametricSurfaceParameters">
+            <summary>Store settings of parametric 3D surface.</summary>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.Function3DParameters">
+            <summary>
+            	<para>Provides the <b>abstract</b> base class for the all 3D function
+            parameters.</para>
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.FunctionParameters">
+            <summary>
+            	<para>Provides the <b>abstract</b> base class for the all function
+            parameters.</para>
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.FunctionParameters.Clone">
+            <summary>
+            When overridden in a derived class, creates an exact copy of this
+            <see cref="T:Genetibase.MathX.NugenCCalc.FunctionParameters"/>.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.FunctionParameters.ToString">
+            <summary>Returns a String that represents the current <b>Object</b>.</summary>
+        </member>
+        <member name="E:Genetibase.MathX.NugenCCalc.FunctionParameters.Changed">
+            <summary>
+            Event to notify that the item is changed
+            </summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.FunctionParameters.Function">
+            <summary>Get Function (from MathX)</summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.FunctionParameters.Name">
+            <summary>Get or set name of function(for designer).</summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.FunctionParameters.Formula">
+            <summary>Get or set formula</summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.FunctionParameters.CodeLanguage">
+            <summary>Get or set code language for code expression. C# or VB.NET</summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.FunctionParameters.Code">
+            <summary>Get or set code expression</summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.FunctionParameters.CodeHeader">
+            <summary>
+            Get code expression header
+            </summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.FunctionParameters.CodeFooter">
+            <summary>
+            Get code expression footer
+            </summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.FunctionParameters.CodeBody">
+            <summary>
+            Get code expression body
+            </summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.FunctionParameters.SourceType">
+            <summary>Get or set type of source. Equation or CodeExpression</summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.ParametricSurfaceParameters.#ctor">
+            <summary>
+            Initializes a new instance of the <strong>ParametricSurfaceParameters</strong>
+            class.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.ParametricSurfaceParameters.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <strong>ParametricSurfaceParameters</strong>
+            class on the specified formulas.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.ParametricSurfaceParameters.#ctor(System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Int32)">
+            <summary>
+            Initializes a new instance of the <strong>ParametricSurfaceParameters</strong>
+            class on the specified formulas.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.ParametricSurfaceParameters.#ctor(System.String,Genetibase.MathX.Core.CodeLanguage,System.Double,System.Double,System.Double,System.Double,System.Int32)">
+            <summary>
+            Initializes a new instance of the <strong>ParametricSurfaceParameters</strong>
+            class on the specified formulas.
+            </summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.ParametricSurfaceParameters.FormulaY">
+            <summary>
+            Get or set formula for Y dependent from <strong>u</strong> and <strong>v</strong>
+            parameter.
+            </summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.ParametricSurfaceParameters.FormulaZ">
+            <summary>
+            Get or set formula for Z dependent from <strong>u</strong> and <strong>v</strong>
+            parameter.
+            </summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.ParametricSurfaceParameters.NumPoints">
+            <summary>Get or set number of points for MathX plotters</summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.ParametricSurfaceParameters.MinU">
+            <summary>Get or set min U value for MathX plotters</summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.ParametricSurfaceParameters.MaxU">
+            <summary>Get or set max U value for MathX plotters</summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.ParametricSurfaceParameters.MinV">
+            <summary>Get or set min V value for MathX plotters</summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.ParametricSurfaceParameters.MaxV">
+            <summary>Get or set max V value for MathX plotters</summary>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.Design.FunctionType3D">
+            <summary>
+            Specifies the function type
+            </summary>
+        </member>
+        <member name="F:Genetibase.MathX.NugenCCalc.Design.FunctionType3D.Explicit">
+            <summary>
+            Specify explicit type of 3D function 
+            </summary>
+        </member>
+        <member name="F:Genetibase.MathX.NugenCCalc.Design.FunctionType3D.Implicit">
+            <summary>
+            Specify implicit type of 3D function 
+            </summary>
+        </member>
+        <member name="F:Genetibase.MathX.NugenCCalc.Design.FunctionType3D.Parametric">
+            <summary>
+            Specify parametric type of 3D function 
+            </summary>
+        </member>
+        <member name="F:Genetibase.MathX.NugenCCalc.Design.FunctionType3D.ParametricSurface">
+            <summary>
+            Specify parametric surface type of 3D function 
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.Design.ExpressionForm">
+            <summary>
+            Summary description for ExpressionForm.
+            </summary>
+        </member>
+        <member name="F:Genetibase.MathX.NugenCCalc.Design.ExpressionForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.ExpressionForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.ExpressionForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.Controls.ExpressionView.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.Controls.ExpressionView.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.CompileException">
+            <summary>
+            The exception that is thrown when compiler for code expression return error.
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.NugenCCalcException">
+            <summary>
+            Base exception class for NugenCCalc component
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.NugenCCalcException.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.NugenCCalcException.#ctor(System.String)">
+            <summary>
+            Constructor with exception message
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.NugenCCalcException.#ctor(System.String,System.Exception)">
+            <summary>
+            Constructor with message and inner exception
+            </summary>
+            <param name="message"></param>
+            <param name="inner"></param>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.CompileException.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.CompileException.#ctor(System.String)">
+            <summary>
+            Constructor with exception message
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.CompileException.#ctor(System.String,System.Exception)">
+            <summary>
+            Constructor with message and inner exception
+            </summary>
+            <param name="message"></param>
+            <param name="inner"></param>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.Function2DParameters">
+            <summary>
+            <para>Provides the <b>abstract</b> base class for the all 2D function
+            parameters.</para>
+            </summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Function2DParameters.DerivativeMode">
+            <summary>Get or set derivative mode for current function</summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Function2DParameters.OrderOfDerivative">
+            <summary>Get or set order of derivative</summary>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.Explicit3DParameters">
+            <summary>
+            Store settings of Explicit 3D function
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Explicit3DParameters.#ctor">
+            <summary>Initializes a new instance of the Explicit3DParameters class.</summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Explicit3DParameters.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the Explicit2DParameters class on the specified
+            formula.
+            </summary>
+            <param name="formula">Formula</param>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Explicit3DParameters.#ctor(System.String,Genetibase.MathX.Core.Point2D,Genetibase.MathX.Core.Point2D,System.Drawing.Size)">
+            <summary>
+            Initializes a new instance of the Explicit2DParameters class on the specified
+            formula, left-top corner point, right-bottom corner point and area size.
+            </summary>
+            <param name="formula">Formula</param>
+            <param name="pointA">Left-top corner point</param>
+            <param name="pointB">Right-bottom corner point</param>
+            <param name="size">Area size.</param>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Explicit3DParameters.#ctor(System.String,Genetibase.MathX.Core.CodeLanguage,Genetibase.MathX.Core.Point2D,Genetibase.MathX.Core.Point2D,System.Drawing.Size)">
+            <summary>
+            Initializes a new instance of the Explicit2DParameters class on the specified
+            code, code language, left-top corner point, right-bottom corner point and area
+            size.
+            </summary>
+            <param name="codeExpression">code</param>
+            <param name="codeLanguage">Code language.</param>
+            <param name="pointA">Left-top corner point</param>
+            <param name="pointB">Right-bottom corner point</param>
+            <param name="size">Area size.</param>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Explicit3DParameters.PointA">
+            <summary>Get or set left-top corner point</summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Explicit3DParameters.PointB">
+            <summary>Get or set right-bottom corner point</summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Explicit3DParameters.AreaSize">
+            <summary>Get or set area size</summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.Controls.DestinationView.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.Controls.DestinationView.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.Design.Controls.Dashboard">
+            <summary>
+            Summary description for Dashboard.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.Controls.Dashboard.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.Controls.Dashboard.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.AdaptersLoader">
+            <summary>
+            Provide methods for loading chart adapters
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.AdaptersLoader.LoadAdapters(System.String)">
+            <summary>
+            Load adapters assemblies located in the given directory.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.AdaptersLoader.LoadAdapters(System.String[])">
+            <summary>
+            Load adapters assemblies by names
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.AdaptersLoader.GetCustomAdapters(System.Reflection.Assembly[],System.Type)">
+            <summary>
+            Load adapters from given assemblies
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.Parametric2DParameters">
+            <summary>Store settings of parametric 2D function</summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Parametric2DParameters.#ctor">
+            <summary>
+            Initializes a new instance of the <strong>Parametric2DParameters</strong>
+            class.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Parametric2DParameters.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <strong>Parametric2DParameters</strong> class
+            on the specified formulas.
+            </summary>
+            <param name="formula">Formula for X dependent from <strong>t</strong> parameter.</param>
+            <param name="formulaY">Formula for Y dependent from <strong>t</strong> parameter.</param>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Parametric2DParameters.#ctor(System.String,System.String,Genetibase.MathX.NugenCCalc.PlotMode,System.Double,System.Double,System.Double,System.Int32)">
+            <summary>
+            Initializes a new instance of the <strong>Parametric2DParameters</strong> class
+            on the specified formulas.
+            </summary>
+            <param name="formula">Formula for X dependent from <strong>t</strong> parameter.</param>
+            <param name="formulaY">Formula for Y dependent from <strong>t</strong> parameter.</param>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Parametric2DParameters.#ctor(System.String,Genetibase.MathX.Core.CodeLanguage,Genetibase.MathX.NugenCCalc.PlotMode,System.Double,System.Double,System.Double,System.Int32)">
+            <summary>
+            Initializes a new instance of the <strong>Parametric2DParameters</strong> class
+            on the specified code and code language.
+            </summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Parametric2DParameters.FormulaY">
+            <summary>Get or set formula for Y dependent from <strong>t</strong> parameter.</summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Parametric2DParameters.PlotMode">
+            <summary>Get or set plot mode</summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Parametric2DParameters.NumPoints">
+            <summary>Get or set number of points for MathX plotters</summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Parametric2DParameters.Min">
+            <summary>Get or set min value for MathX plotters</summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Parametric2DParameters.Max">
+            <summary>Get or set max value for MathX plotters</summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Parametric2DParameters.Step">
+            <summary>Get or set step for MathX plotters</summary>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.Design.NugenCCalc3DDesignerForm">
+            <summary>
+            Summary description for NugenCCalcDesignerForm.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.NugenCCalc3DDesignerForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.NugenCCalc3DDesignerForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.NugenCCalc3DDesignerForm.SelectView(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="action"></param>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.Implicit3DParameters">
+            <summary>
+            Store settings of Implicit 3D function
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Implicit3DParameters.#ctor">
+            <summary>
+            Initializes a new instance of the <strong>Implicit3DParameters</strong>
+            class.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Implicit3DParameters.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <strong>Implicit3DParameters</strong> class on
+            the specified formula.
+            </summary>
+            <param name="formula">Formula</param>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Implicit3DParameters.#ctor(System.String,Genetibase.MathX.Core.Point3D,Genetibase.MathX.Core.Point3D,System.Int32)">
+            <summary>
+            Initializes a new instance of the <strong>Implicit3DParameters</strong> class on
+            the specified formula, left-top corner point, right-bottom corner point and grid
+            factor.
+            </summary>
+            <param name="formula">Formula</param>
+            <param name="point3DA">Left-top corner point</param>
+            <param name="point3DB">Right-bottom corner point</param>
+            <param name="gridFactor">
+            This parameter specify graphics details. Increasing of this parameter give more
+            detailed graphic but decrease speed of evaluation.
+            </param>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Implicit3DParameters.#ctor(System.String,Genetibase.MathX.Core.CodeLanguage,Genetibase.MathX.Core.Point3D,Genetibase.MathX.Core.Point3D,System.Int32)">
+            <summary>
+            Initializes a new instance of the <strong>Implicit3DParameters</strong> class on
+            the specified code, code language, left-top corner point, right-bottom corner point and
+            grid factor.
+            </summary>
+            <param name="codeExpression">Code</param>
+            <param name="codeLanguage">Code language</param>
+            <param name="point3DA">Left-top corner point</param>
+            <param name="point3DB">Right-bottom corner point</param>
+            <param name="gridFactor">
+            This parameter specify graphics details. Increasing of this parameter give more
+            detailed graphic but decrease speed of evaluation.
+            </param>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Implicit3DParameters.Point3DA">
+            <summary>Get or set left-top corner point</summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Implicit3DParameters.Point3DB">
+            <summary>Get or set right-bottom corner point</summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Implicit3DParameters.GridFactor">
+            <summary>
+            This parameter specify graphics details. Increasing of this parameter give more
+            detailed graphic but decrease speed of evaluation.
+            </summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Implicit3DParameters.PixelSizeX">
+            <summary>Get or set size of one point on chart by X value</summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Implicit3DParameters.PixelSizeY">
+            <summary>Get or set size of one point on chart by Y value</summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Implicit3DParameters.PixelSizeZ">
+            <summary>Get or set size of one point on chart by Z value</summary>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.Design.FunctionCollection">
+            <summary>
+            Summary description for SourceCollection.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.FunctionCollection.#ctor">
+            <summary>
+            Initializes a new instance of the FunctionCollection class.
+            </summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Design.FunctionCollection.Item(System.Int32)">
+            <summary>
+            Gets or sets the element at the specified index
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.NugenCCalc2D">
+            <summary>
+            	<para>The NugenCCalcComponent2D component is the primary object controlling a chart
+            displayed and 2D function evaluation.</para>
+            </summary>
+            <example>
+            	<code lang="CS" description="The following example create new function and plot it on chart">
+            NugenCCalcComponent2D nugenCCalcComponent1 = new NugenCCalcComponent2D(); 
+            nugenCCalcComponent1.FunctionParameters = new Explicit2DParameters("x*x"); 
+            nugenCCalcComponent1.ChartControl = c1Chart; 
+            nugenCCalcComponent1.Plot();
+            </code>
+            </example>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.NugenCCalcBase">
+            <summary>
+            Provides the <strong>abstract</strong> base class for the NugenCCalc
+            components.
+            </summary>
+        </member>
+        <member name="F:Genetibase.MathX.NugenCCalc.NugenCCalcBase.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.NugenCCalcBase.#ctor(System.ComponentModel.IContainer)">
+            <summary>Initializes a new instance of the NugenCCalcBase class</summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.NugenCCalcBase.#ctor">
+            <summary>Initializes a new instance of the NugenCCalcBase class</summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.NugenCCalcBase.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.NugenCCalcBase.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.NugenCCalcBase.BindSourceEvents">
+            <summary>
+            Subscribe on source event(changed)
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.NugenCCalcBase.UnBindSourceEvents">
+            <summary>
+            Unsubscribe on source event(changed)
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.NugenCCalcBase._functionParameters_Changed(Genetibase.MathX.NugenCCalc.FunctionParameters,System.EventArgs)">
+            <summary>
+            Subscribe on seft event Changed
+            </summary>
+            <param name="item"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.NugenCCalcBase.InitChartAdapter">
+            <summary>
+            Init Chart adapter by chart type
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.NugenCCalcBase.BindChartEvents">
+            <summary>
+            Subscribe on chart events(scale and paint)
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.NugenCCalcBase.UnBindChartEvents">
+            <summary>
+            Unsubscribe on chart events(scale and paint)
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.NugenCCalcBase.BindChartData">
+            <summary>
+            Get chart data
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.NugenCCalcBase.Chart_Changed(System.Object,System.EventArgs)">
+            <summary>
+            Replot if chart parameters changed
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.NugenCCalcBase.NugenCCalcComponent_ComponentDataChanged(System.Object,System.EventArgs)">
+            <summary>
+            Replot if some component data changed
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.NugenCCalcBase.OnAfterPlot">
+            <summary>
+            Triggers the AfterPlot event.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.NugenCCalcBase.OnBeforePlot">
+            <summary>
+            Triggers the BeforePlot event.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.NugenCCalcBase.NotifyDataChanged">
+            <summary>
+            Triggers the ComponentDataChanged event.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.NugenCCalcBase.GetChartAdapter(System.Object)">
+            <summary>
+            Get <font size="1"><strong>IChartAdapter</strong></font> interface for given
+            chart.
+            </summary>
+            <returns>IChartAdapter interface</returns>
+            <param name="chartControl">Chart control.</param>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.NugenCCalcBase.Plot">
+            <summary>Plot with existing source and current chart control</summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.NugenCCalcBase.ValidateControl(System.Object)">
+            <returns>true if chart supported.</returns>
+            <summary>Check if chart supported.</summary>
+            <example>
+            	<code lang="CS" description="The following example check if chart supported">
+            NugenCCalcComponent nugenCCalcComponent1 = new NugenCCalcComponent();
+            nugenCCalcComponent1.FunctionParameters = new Explicit2DFunction("x*x");
+            bool isSupported = nugenCCalcComponent1.ValidateControl(control);
+            if (isSupported)
+            {
+                nugenCCalcComponent1.Plot(control);
+            }
+            </code>
+            </example>
+            <param name="control">Control</param>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.NugenCCalcBase.ResumeChartBinding(System.Boolean)">
+            <summary>Resume binding all chart events</summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.NugenCCalcBase.SuspendChartBinding">
+            <summary>Suspend binding all chart events</summary>
+        </member>
+        <member name="E:Genetibase.MathX.NugenCCalc.NugenCCalcBase.ComponentDataChanged">
+            <summary>
+            Occurs when component data changed
+            </summary>
+        </member>
+        <member name="E:Genetibase.MathX.NugenCCalc.NugenCCalcBase.BeforePlot">
+            <summary>
+            Occurs before plot
+            </summary>
+        </member>
+        <member name="E:Genetibase.MathX.NugenCCalc.NugenCCalcBase.AfterPlot">
+            <summary>
+            Occurs after plot
+            </summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.NugenCCalcBase.CurrentAdapter">
+            <summary>
+            Get chart adapter for current chart control
+            </summary>
+            <value>IChartAdapter</value>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.NugenCCalcBase.ChartControl">
+            <summary>Get or set current chart control</summary>
+            <example>
+            	<code lang="CS" description="The following example show how to set chart control for component">
+            NugenCCalcComponent nugenCCalcComponent1 = new NugenCCalcComponent(); 
+            nugenCCalcComponent1.ChartControl = c1Chart;
+            </code>
+            </example>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.NugenCCalcBase.AutomaticMode">
+            <summary>Get or set automatic mode.</summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.NugenCCalcBase.EventDelay">
+            <summary>Delay between chart events.</summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.NugenCCalcBase.FunctionParameters">
+            <summary>Get or set function parameters</summary>
+            <example>
+            	<code lang="CS" description="The following example show how to set function parameters for component">
+            NugenCCalcComponent nugenCCalcComponent1 = new NugenCCalcComponent(); 
+            nugenCCalcComponent1.FunctionParameters = new Explicit2DFunction("x*x");
+            </code>
+            </example>
+        </member>
+        <member name="F:Genetibase.MathX.NugenCCalc.NugenCCalc2D.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.NugenCCalc2D.#ctor(System.ComponentModel.IContainer)">
+            <summary>Initializes a new instance of the NugenCCalcComponent2D class</summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.NugenCCalc2D.#ctor">
+            <summary>Initializes a new instance of the NugenCCalcComponent2D class</summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.NugenCCalc2D.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.NugenCCalc2D.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.NugenCCalc2D.InitComponent">
+            <summary>
+            Init all component data
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.NugenCCalc2D.BindChartData">
+            <summary>
+            Get chart data
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.NugenCCalc2D.Plot">
+            <summary>
+            Plot with exist source and current chart control
+            </summary>
+            <exception cref="T:System.ArgumentNullException" caption="ArgumentNullException">Chart control or FunctionParameters cannot be null</exception>
+            <exception cref="T:System.ArgumentException" caption="ArgumentException">Code or Formula of source cannot be empty</exception>
+            <exception cref="T:System.NotSupportedException" caption="NotSupportedException">Chart not supported</exception>
+            <example>
+            	<code lang="CS" description="The following example create new function and plot it on chart">
+            NugenCCalcComponent2D nugenCCalcComponent1 = new NugenCCalcComponent2D();
+            nugenCCalcComponent1.FunctionParameters = new Explicit2DParameters("x*x");
+            nugenCCalcComponent1.ChartControl = c1Chart;
+            nugenCCalcComponent1.Plot();
+            </code>
+            </example>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.NugenCCalc2D.Plot(System.Object)">
+            <summary>
+            Plot with exist source and new destination chart
+            </summary>
+            <exception cref="T:System.ArgumentNullException" caption="ArgumentNullException">Chart control or FunctionParameters cannot be null</exception>
+            <exception cref="T:System.ArgumentException" caption="ArgumentException">Code or Formula of source cannot be empty</exception>
+            <exception cref="T:System.NotSupportedException" caption="NotSupportedException">Chart not supported</exception>
+            <example>
+            	<code lang="CS" description="The following example create new function and plot it on given chart">
+            NugenCCalcComponent2D nugenCCalcComponent1 = new NugenCCalcComponent2D(); 
+            nugenCCalcComponent1.FunctionParameters = new Explicit2DParameters("x*x"); 
+            nugenCCalcComponent1.Plot(c1Chart);
+            </code>
+            </example>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.NugenCCalc2D.Plot(System.Object,Genetibase.MathX.NugenCCalc.Function2DParameters)">
+            <summary>
+            Plot with new source and new destination chart
+            </summary>
+            <exception cref="T:System.ArgumentNullException" caption="ArgumentNullException">Chart control or FunctionParameters cannot be null</exception>
+            <exception cref="T:System.ArgumentException" caption="ArgumentException">Code or Formula of source cannot be empty</exception>
+            <exception cref="T:System.NotSupportedException" caption="NotSupportedException">Chart not supported</exception>
+            <example>
+            	<code lang="CS" description="The following example plot given function on given chart">
+            NugenCCalcComponent2D nugenCCalcComponent1 = new NugenCCalcComponent2D();  
+            nugenCCalcComponent1.Plot(c1Chart, new Explicit2DParameters("x*x"));
+            </code>
+            </example>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.NugenCCalc2D.CurrentAdapter">
+            <summary>
+            Get chart adapter for current chart control
+            </summary>
+            <example>
+            	<code lang="CS" description="The following example show how to set axes for current chart">
+            NugenCCalcComponent2D nugenCCalcComponent1 = new NugenCCalcComponent2D(); 
+            nugenCCalcComponent1.FunctionParameters = new Explicit2DParameters("x*x"); 
+            nugenCCalcComponent1.ChartControl = c1Chart; 
+            nugenCCalcComponent1.CurrentAdapter.SetAxes(0,5,0,10);
+            </code>
+            </example>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.NugenCCalc2D.Series">
+            <summary>Get or set current series on chart</summary>
+            <value>Series</value>
+            <example>
+            	<code lang="CS" description="The following example set new series for NugenCCalcComponent2D">
+            NugenCCalcComponent2D ccalc = new NugenCCalcComponent2D();
+            ccalc.Series = new Series("newSeries", Color.Red);
+            </code>
+            </example>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.NugenCCalc2D.FunctionParameters">
+            <summary>Get or set FunctionParameters</summary>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.Design.PredefinedSettings">
+            <summary>
+            Store predefined settings
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.PredefinedSettings.LoadPredefinedSettings">
+            <summary>
+            Load predefined settings from XML file
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.PredefinedSettings.SavePredefinedSettings">
+            <summary>
+            Save predefined settings to XML file
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.PredefinedSettings.InitDataFolder">
+            <summary>
+            Set data folder for component as ApplicationData\\Genetibase\\NuGenCCalc\\
+            </summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Design.PredefinedSettings.Expressions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Design.PredefinedSettings.Equations">
+            <summary>
+            EquationCollection
+            </summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Design.PredefinedSettings.DataFolder">
+            <summary>
+            Return data folder for Math X components
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.Design.FunctionNode">
+            <summary>
+            Summary description for FunctionNode.
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.Design.Editors.SourceEditor">
+            <summary>
+            Summary description for CodeEditor.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.Controls.ExpressionRepositoryView.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.Controls.ExpressionRepositoryView.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.Controls.ExpressionRepositoryView.BindEvents">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.NugenCCalc3D">
+            <summary>
+            	<para>The NugenCCalcComponent component is the primary object controlling a chart
+            displayed and 3D function evaluation.</para>
+            </summary>
+        </member>
+        <member name="F:Genetibase.MathX.NugenCCalc.NugenCCalc3D.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.NugenCCalc3D.#ctor(System.ComponentModel.IContainer)">
+            <summary>Initializes a new instance of the NugenCCalcComponent3D class</summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.NugenCCalc3D.#ctor">
+            <summary>Initializes a new instance of the NugenCCalcComponent3D class</summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.NugenCCalc3D.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.NugenCCalc3D.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.NugenCCalc3D.InitComponent">
+            <summary>
+            Init all component data
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.NugenCCalc3D.Plot">
+            <summary>
+            Plot with exist source and current chart control
+            </summary>
+            <example>
+            	<code lang="CS" description="The following example create new function and plot it on chart">
+            NugenCCalcComponent3D nugenCCalcComponent1 = new NugenCCalcComponent3D(); 
+            nugenCCalcComponent1.FunctionParameters = new Explicit3DParameters("x*x+y"); 
+            nugenCCalcComponent1.ChartControl = c1Chart3D; 
+            nugenCCalcComponent1.Plot();
+            </code>
+            </example>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.NugenCCalc3D.Plot(System.Object)">
+            <summary>
+            Plot with exist source and new destination chart
+            </summary>
+            <example>
+            	<code lang="CS" description="The following example create new function and plot it on given chart">
+            NugenCCalcComponent3D nugenCCalcComponent1 = new NugenCCalcComponent3D();  
+            nugenCCalcComponent1.FunctionParameters = new Explicit3DParameters("x*x+y");  
+            nugenCCalcComponent1.Plot(c1Chart3D);
+            </code>
+            </example>
+            <param name="chartControl">Destination chart</param>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.NugenCCalc3D.Plot(System.Object,Genetibase.MathX.NugenCCalc.Function3DParameters)">
+            <summary>
+            Plot with new source and new destination chart
+            </summary>
+            <example>
+            	<code lang="CS" description="The following example plot given function on given chart">
+            NugenCCalcComponent3D nugenCCalcComponent1 = new NugenCCalcComponent3D();  
+            nugenCCalcComponent1.Plot(c1Chart3D, new Explicit3DParameters("x*x+y"));
+            </code>
+            </example>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.NugenCCalc3D.CurrentAdapter">
+            <summary>
+            Get chart adapter for current chart control
+            </summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.NugenCCalc3D.FunctionParameters">
+            <summary>Get or set function parameters</summary>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.ParametersChangeHandler">
+            <summary>
+            Represents the method that handles the FunctionParameters
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.Design.Converters.EnumDescConverter">
+            <summary>
+            EnumConverter supporting System.ComponentModel.DescriptionAttribute
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.Converters.EnumDescConverter.GetEnumDescription(System.Enum)">
+            <summary>
+            Gets Enum Value's Description Attribute
+            </summary>
+            <param name="value">The value you want the description attribute for</param>
+            <returns>The description, if any, else it's .ToString()</returns>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.Converters.EnumDescConverter.GetEnumDescription(System.Type,System.String)">
+            <summary>
+            Gets the description for certaing named value in an Enumeration
+            </summary>
+            <param name="value">The type of the Enumeration</param>
+            <param name="name">The name of the Enumeration value</param>
+            <returns>The description, if any, else the passed name</returns>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.Converters.EnumDescConverter.GetEnumValue(System.Type,System.String)">
+            <summary>
+            Gets the value of an Enum, based on it's Description Attribute or named value
+            </summary>
+            <param name="value">The Enum type</param>
+            <param name="description">The description or name of the element</param>
+            <returns>The value, or the passed in description, if it was not found</returns>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.Design.StringArgs">
+            <summary>
+            Contains a string event argument
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.Design.EquationForm">
+            <summary>
+            Summary description for EquationForm.
+            </summary>
+        </member>
+        <member name="F:Genetibase.MathX.NugenCCalc.Design.EquationForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.EquationForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.EquationForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.Design.AboutForm">
+            <summary>
+            Summary description for AboutForm.
+            </summary>
+        </member>
+        <member name="F:Genetibase.MathX.NugenCCalc.Design.AboutForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.AboutForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.AboutForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.Design.Editors.DestinationChartEditor">
+            <summary>
+            Provides a user interface to select destination chart
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.Controls.EquationRepositoryView.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.Controls.EquationRepositoryView.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.Controls.EquationRepositoryView.BindEvents">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.Controls.SourceView.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.Controls.SourceView.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.Design.NugenCCalcDesignerForm">
+            <summary>
+            Summary description for NugenCCalcDesignerForm.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.NugenCCalcDesignerForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.NugenCCalcDesignerForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.NugenCCalcDesignerForm.SelectView(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="action"></param>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.Parametric3DParameters">
+            <summary>Store settings of parametric 3D function</summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Parametric3DParameters.#ctor">
+            <summary>
+            Initializes a new instance of the <strong>Parametric3DParameters</strong>
+            class.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Parametric3DParameters.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <strong>Parametric3DParameters</strong> class
+            on the specified formulas.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Parametric3DParameters.#ctor(System.String,System.String,System.String,System.Double,System.Double,System.Int32)">
+            <summary>
+            Initializes a new instance of the <strong>Parametric3DParameters</strong> class
+            on the specified formulas.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Parametric3DParameters.#ctor(System.String,Genetibase.MathX.Core.CodeLanguage,System.Double,System.Double,System.Int32)">
+            <summary>
+            Initializes a new instance of the <strong>Parametric3DParameters</strong> class
+            on the specified formulas.
+            </summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Parametric3DParameters.FormulaY">
+            <summary>Get or set formula for Y dependent from <strong>t</strong> parameter.</summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Parametric3DParameters.FormulaZ">
+            <summary>Get or set formula for Z dependent from <strong>t</strong> parameter.</summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Parametric3DParameters.NumPoints">
+            <summary>Get or set number of points for MathX plotters</summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Parametric3DParameters.Min">
+            <summary>Get or set min value for MathX plotters</summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Parametric3DParameters.Max">
+            <summary>Get or set max value for MathX plotters</summary>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.Explicit2DParameters">
+            <summary>Store settings of Explicit 2D function</summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Explicit2DParameters.#ctor">
+            <summary>Initializes a new instance of the Explicit2DParameters class.</summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Explicit2DParameters.#ctor(System.String)">
+            <summary>Initializes a new instance of the Explicit2DParameters class on the specified formula.</summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Explicit2DParameters.#ctor(System.String,Genetibase.MathX.NugenCCalc.PlotMode,System.Double,System.Double,System.Double,System.Int32)">
+            <summary>
+            Initializes a new instance of the Explicit2DParameters class on the specified
+            formula, plot mode, min and max value, step and number of points.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Explicit2DParameters.#ctor(System.String,Genetibase.MathX.NugenCCalc.PlotMode,System.Double,System.Double,System.Double,System.Int32,System.Boolean)">
+            <summary>Initializes a new instance of the Explicit2DParameters class.</summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Explicit2DParameters.#ctor(System.String,Genetibase.MathX.Core.CodeLanguage,Genetibase.MathX.NugenCCalc.PlotMode,System.Double,System.Double,System.Double,System.Int32)">
+            <summary>
+            Initializes a new instance of the Explicit2DParameters class on the specified
+            code, code language, plot mode, min and max value, step and number of points.
+            </summary>
+            <param name="codeExpression">Code</param>
+            <param name="codeLanguage">Code language</param>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Explicit2DParameters.PlotMode">
+            <summary>Get or set plot mode</summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Explicit2DParameters.NumPoints">
+            <summary>Get or set number of points for MathX plotters</summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Explicit2DParameters.Min">
+            <summary>Get or set min value for MathX plotters</summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Explicit2DParameters.Max">
+            <summary>Get or set max value for MathX plotters</summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Explicit2DParameters.Step">
+            <summary>Get or set step for MathX plotters</summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Explicit2DParameters.IsPolar">
+            <summary>Indicated that ...</summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Explicit2DParameters.IsInvert">
+            <summary>Indicated that ...</summary>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.Design.SeriesListBox">
+            <summary>
+            Summary description for SeriesListBox.
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.Design.FunctionType">
+            <summary>
+            Specifies the function type
+            </summary>
+        </member>
+        <member name="F:Genetibase.MathX.NugenCCalc.Design.FunctionType.Explicit">
+            <summary>
+            Specify explicit type of function 
+            </summary>
+        </member>
+        <member name="F:Genetibase.MathX.NugenCCalc.Design.FunctionType.Implicit">
+            <summary>
+            Specify implicit type of function 
+            </summary>
+        </member>
+        <member name="F:Genetibase.MathX.NugenCCalc.Design.FunctionType.Parametric">
+            <summary>
+            Specify parametric type of function 
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.CodeExpressionChecker">
+            <summary>Provide methods for check source code</summary>
+            <example>
+            	<code lang="CS" description="The following example gets some code and check it with given code language">
+            string code = "double Calc(double x)
+            {
+                double gain = 1.5;
+                return x*gain;
+            }
+            "
+            String resultString;
+             
+            CodeExpressionChecker.CheckCode(CodeLanguage.CSharp, code, ref resultString);
+            </code>
+            </example>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.CodeExpressionChecker.CheckCode(System.CodeDom.Compiler.CodeDomProvider,System.String,System.String@)">
+            <summary>Check code with given CodeDomProvider.</summary>
+            <example>
+            	<code lang="CS" description="The following example gets some code and check it with given CodeDomProvider">
+            string code = "double Calc(double x)
+            {
+                double gain = 1.5;
+                return x*gain;
+            }
+            "
+            String resultString;
+             
+            CodeExpressionChecker.CheckCode(new CSharpCodeProvider(), code, ref resultString);
+            </code>
+            </example>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.CodeExpressionChecker.CheckCode(Genetibase.MathX.Core.CodeLanguage,System.String,System.String@)">
+            <summary>Check code with given CodeLanguage.</summary>
+            <example>
+            	<code lang="CS" description="The following example gets some code and check it with given code language">
+            string code = "double Calc(double x)
+            {
+                double gain = 1.5;
+                return x*gain;
+            }
+            "
+            String resultString;
+             
+            CodeExpressionChecker.CheckCode(CodeLanguage.CSharp, code, ref resultString);
+            </code>
+            </example>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.PlotMode">
+            <summary>
+            Specifies the plot mode for MathX plotters
+            </summary>
+        </member>
+        <member name="F:Genetibase.MathX.NugenCCalc.PlotMode.ByNumPoints">
+            <summary>
+            Specify "By points number" plot mode
+            </summary>
+        </member>
+        <member name="F:Genetibase.MathX.NugenCCalc.PlotMode.ByStep">
+            <summary>
+            Specify "By step" plot mode
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.Design.NugenCCalcDesigner">
+            <summary>
+            Designer for NugenMathX component
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.NugenCCalcDesigner.Initialize(System.ComponentModel.IComponent)">
+            <summary>
+            This method provides an opportunity to perform processing when a designer is initialized.
+            The component parameter is the component that the designer is associated with.
+            </summary>
+            <param name="component"></param>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.NugenCCalcDesigner.DoDefaultAction">
+            <summary>
+            This method is invoked when the associated component is double-clicked.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.NugenCCalcDesigner.ShowDesignerForm">
+            <summary>
+            Show designer form
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.NugenCCalcDesigner.OnVerbClicked(System.Object,System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Design.NugenCCalcDesigner.Verbs">
+            <summary>
+            Gets the design-time verbs supported by the component that is associated with the designer.
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.Design.Controls.EquationExplorer">
+            <summary>
+            Summary description for EquationExplorer.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.Controls.EquationExplorer.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.Controls.EquationExplorer.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.Controls.EquationExplorer.Init">
+            <summary>
+            Create nodes
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.Controls.EquationExplorer.ItemAction(Genetibase.MathX.NugenCCalc.FunctionParameters,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="item"></param>
+            <param name="action"></param>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.Controls.EquationExplorer.contextMenu_Popup(System.Object,System.EventArgs)">
+            <summary>
+            Show or hide some context menu items
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Design.Controls.EquationExplorer.Equations">
+            <summary>
+            Set EquationCollection for this tree
+            </summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Design.Controls.EquationExplorer.Selected">
+            <summary>
+            Get current Equation
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.SourceType">
+            <summary>
+            Specifies the source type for NugenCCalc component
+            </summary>
+        </member>
+        <member name="F:Genetibase.MathX.NugenCCalc.SourceType.Equation">
+            <summary>
+            Specify equation as source
+            </summary>
+        </member>
+        <member name="F:Genetibase.MathX.NugenCCalc.SourceType.CodeExpression">
+            <summary>
+            Specify code expression as source
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.Implicit2DParameters">
+            <summary>
+            Store settings of Implicit 2D function
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Implicit2DParameters.#ctor">
+            <summary>
+            Initializes a new instance of the <strong>Implicit2DParameters</strong>
+            class.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Implicit2DParameters.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <strong>Implicit2DParameters</strong> class on
+            the specified formula.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Implicit2DParameters.#ctor(System.String,Genetibase.MathX.Core.Point2D,Genetibase.MathX.Core.Point2D,System.Int32,System.Drawing.Size)">
+            <summary>
+            Initializes a new instance of the <strong>Implicit2DParameters</strong> class on
+            the specified formula, left-top corner point, right-bottom corner point, grid factor
+            and area size.
+            </summary>
+            <param name="formula">Formula</param>
+            <param name="pointA">Left-top corner point</param>
+            <param name="pointB">Right-bottom corner point</param>
+            <param name="gridFactor">
+            This parameter specify graphics details. Increasing of this parameter give more
+            detailed graphic but decrease speed of evaluation.
+            </param>
+            <param name="areaSize">formula, left-top corner point, right-bottom corner point and area size.</param>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Implicit2DParameters.#ctor(System.String,Genetibase.MathX.Core.CodeLanguage,Genetibase.MathX.Core.Point2D,Genetibase.MathX.Core.Point2D,System.Int32,System.Drawing.Size)">
+            <summary>
+            Initializes a new instance of the <strong>Implicit2DParameters</strong> class on
+            the specified code, code language, left-top corner point, right-bottom corner point,
+            grid factor and area size.
+            </summary>
+            <param name="codeExpression">code</param>
+            <param name="codeLanguage">Code language</param>
+            <param name="pointA">Left-top corner point</param>
+            <param name="pointB">Right-bottom corner point</param>
+            <param name="gridFactor">
+            This parameter specify graphics details. Increasing of this parameter give more
+            detailed graphic but decrease speed of evaluation.
+            </param>
+            <param name="areaSize">Area size.</param>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Implicit2DParameters.PointA">
+            <summary>Get or set left-top corner point</summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Implicit2DParameters.PointB">
+            <summary>Get or set right-bottom corner point</summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Implicit2DParameters.GridFactor">
+            <summary>
+            This parameter specify graphics details. Increasing of this parameter give more
+            detailed graphic but decrease speed of evaluation.
+            </summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Implicit2DParameters.AreaSize">
+            <summary>Get or set area size</summary>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.FunctionCodeAttribute">
+            <summary><para>Specifies whether a assembly contain chart adapters.</para></summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.FunctionCodeAttribute.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the FunctionCodeAttribute class.
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.Design.Editors.SeriesEditor">
+            <summary>
+            Provides a user interface to select series of chart. 
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.Design.Converters.FunctionsParametersConverter">
+            <summary>
+            Summary description for FunctionsParametersConverter.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.Controls.DestinationView3D.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.Controls.DestinationView3D.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.FunctionEvalutor">
+            <summary>Provide methods for evaluate expressions.</summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.FunctionEvalutor.#ctor(System.String,System.String[])">
+            <summary>
+            Initializes a new instance of the FunctionEvalutor class on the specified code
+            and list of variables
+            </summary>
+            <param name="code">Code</param>
+            <param name="variables">List of variables</param>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.FunctionEvalutor.#ctor(System.String,System.String[],Genetibase.MathX.Core.CodeLanguage)">
+            <summary>
+            Initializes a new instance of the FunctionEvalutor class on the specified code,
+            code language and list of variables.
+            </summary>
+            <param name="code">Code</param>
+            <param name="variables">List of variables</param>
+            <param name="language">Code language</param>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.FunctionEvalutor.CreateDelegate(System.Type)">
+            <summary>Create new delegate</summary>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.Design.NugenCCalc3DDesigner">
+            <summary>
+            Designer for NugenMathX component
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.NugenCCalc3DDesigner.Initialize(System.ComponentModel.IComponent)">
+            <summary>
+            This method provides an opportunity to perform processing when a designer is initialized.
+            The component parameter is the component that the designer is associated with.
+            </summary>
+            <param name="component"></param>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.NugenCCalc3DDesigner.DoDefaultAction">
+            <summary>
+            This method is invoked when the associated component is double-clicked.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.NugenCCalc3DDesigner.ShowDesignerForm">
+            <summary>
+            Show designer form
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.NugenCCalc3DDesigner.OnVerbClicked(System.Object,System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Design.NugenCCalc3DDesigner.Verbs">
+            <summary>
+            Gets the design-time verbs supported by the component that is associated with the designer.
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.Design.Converters.Point3DConverter">
+            <summary>
+            Provides a type converter to convert Point3D objects to and from various other representations.
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.Design.Converters.Point2DConverter">
+            <summary>
+            Provides a type converter to convert Point2D objects to and from various other representations.
+            </summary>
+        </member>
+        <member name="T:Genetibase.MathX.NugenCCalc.Design.Controls.ExpressionExplorer">
+            <summary>
+            Summary description for ExpressionExplorer.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.Controls.ExpressionExplorer.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.Controls.ExpressionExplorer.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.Controls.ExpressionExplorer.Init">
+            <summary>
+            Create tree nodes
+            </summary>
+        </member>
+        <member name="M:Genetibase.MathX.NugenCCalc.Design.Controls.ExpressionExplorer.contextMenuTreeView_Popup(System.Object,System.EventArgs)">
+            <summary>
+            Show or hide some context menu items
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Design.Controls.ExpressionExplorer.Expressions">
+            <summary>
+            Set collection of expression for this tree
+            </summary>
+        </member>
+        <member name="P:Genetibase.MathX.NugenCCalc.Design.Controls.ExpressionExplorer.Selected">
+            <summary>
+            Get selected expression
+            </summary>
+        </member>
+    </members>
+</doc>

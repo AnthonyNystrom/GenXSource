@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A67607ED-CC05-4BDB-A1A1-710EB49DAB5B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Genetibase.MathX.NuGenCurvesAndCo_ordinates</RootNamespace>
+    <AssemblyName>Genetibase.MathX.NuGenCurvesAndCo-ordinates</AssemblyName>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <StartupObject>Genetibase.MathX.NuGenCurvesAndCo_ordinates.NuGenCurvesAndCoordinate_MainMenu</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Genetibase.MathX.NuGenCurvesAndCo_ordinates.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Genetibase.MathX.NuGenCurvesAndCo_ordinates.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NuGenScientificCalculator, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\NuGenScientificCalculator\bin\Release\NuGenScientificCalculator.exe</HintPath>
+    </Reference>
+    <Reference Include="NuGenScientificCalculator.vshost, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\NuGenScientificCalculator\bin\Release\NuGenScientificCalculator.vshost.exe</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NuGenComplexOperationsForm.Designer.vb">
+      <DependentUpon>NuGenComplexOperationsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenComplexOperationsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenComplexRectOperationsForm.Designer.vb">
+      <DependentUpon>NuGenComplexRectOperationsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenComplexRectOperationsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenCurvesAndCoordinate_MainMenu.Designer.vb">
+      <DependentUpon>NuGenCurvesAndCoordinate_MainMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenCurvesAndCoordinate_MainMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenDerivativeInterpolationFom.Designer.vb">
+      <DependentUpon>NuGenDerivativeInterpolationFom.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenDerivativeInterpolationFom.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenFunctionPlot.vb" />
+    <Compile Include="NuGenHyperbolicTrignometricFunction.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="NuGenHyperbolicTrignometricFunctionsForm.Designer.vb">
+      <DependentUpon>NuGenHyperbolicTrignometricFunctionsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenHyperbolicTrignometricFunctionsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenInterolationNTHForm.Designer.vb">
+      <DependentUpon>NuGenInterolationNTHForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenInterolationNTHForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenInterPolationForCordicForm.Designer.vb">
+      <DependentUpon>NuGenInterPolationForCordicForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenInterPolationForCordicForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenInterpolationForGeneralIntegration.Designer.vb">
+      <DependentUpon>NuGenInterpolationForGeneralIntegration.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenInterpolationForGeneralIntegration.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenInterPolationForLagrange.vb" />
+    <Compile Include="NuGenInterpolationForLargrangeForm.Designer.vb">
+      <DependentUpon>NuGenInterpolationForLargrangeForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenInterpolationForLargrangeForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenInterPolationForNTH.vb" />
+    <Compile Include="NuGenInterpolationForNTH_IntegerOrderBesselForm.Designer.vb">
+      <DependentUpon>NuGenInterpolationForNTH_IntegerOrderBesselForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenInterpolationForNTH_IntegerOrderBesselForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenInterPolationForTrigonometricCordic.vb" />
+    <Compile Include="NuGenInterpolationMainForm.Designer.vb">
+      <DependentUpon>NuGenInterpolationMainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenInterpolationMainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenInterPolationNthForhermiteForm.Designer.vb">
+      <DependentUpon>NuGenInterPolationNthForhermiteForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenInterPolationNthForhermiteForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenInterpolationNTH_clipticForm.Designer.vb">
+      <DependentUpon>NuGenInterpolationNTH_clipticForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenInterpolationNTH_clipticForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenNewtoneInterpolationForm.Designer.vb">
+      <DependentUpon>NuGenNewtoneInterpolationForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenNewtoneInterpolationForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenNTH_MainForm.Designer.vb">
+      <DependentUpon>NuGenNTH_MainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenNTH_MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenPolarOperationsForm.designer.vb">
+      <DependentUpon>NuGenPolarOperationsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenPolarOperationsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenRectToSphereForm.Designer.vb">
+      <DependentUpon>NuGenRectToSphereForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenRectToSphereForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenSystemOfCoordinateMainForm.Designer.vb">
+      <DependentUpon>NuGenSystemOfCoordinateMainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuGenSystemOfCoordinateMainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenSystemsOfCoordinates.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenComplexOperationsForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenComplexOperationsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenComplexRectOperationsForm.resx">
+      <DependentUpon>NuGenComplexRectOperationsForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenCurvesAndCoordinate_MainMenu.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenCurvesAndCoordinate_MainMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenDerivativeInterpolationFom.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenDerivativeInterpolationFom.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenHyperbolicTrignometricFunctionsForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenHyperbolicTrignometricFunctionsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenInterolationNTHForm.resx">
+      <DependentUpon>NuGenInterolationNTHForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenInterPolationForCordicForm.resx">
+      <DependentUpon>NuGenInterPolationForCordicForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenInterpolationForGeneralIntegration.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenInterpolationForGeneralIntegration.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenInterpolationForLargrangeForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenInterpolationForLargrangeForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenInterpolationForNTH_IntegerOrderBesselForm.resx">
+      <DependentUpon>NuGenInterpolationForNTH_IntegerOrderBesselForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenInterpolationMainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenInterpolationMainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenInterPolationNthForhermiteForm.resx">
+      <DependentUpon>NuGenInterPolationNthForhermiteForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenInterpolationNTH_clipticForm.resx">
+      <DependentUpon>NuGenInterpolationNTH_clipticForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenNewtoneInterpolationForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenNewtoneInterpolationForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenNTH_MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenNTH_MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenPolarOperationsForm.resx">
+      <DependentUpon>NuGenPolarOperationsForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenRectToSphereForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenRectToSphereForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenSystemOfCoordinateMainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenSystemOfCoordinateMainForm.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,17 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<meta name="keywords" content="Edit measurement data">
+<Title>Edit measurement data</Title>
+</HEAD>
+<BODY>
+<h1>Edit measurement data</h1>
+<img src="DataForm.png"><br>
+<br>
+In this window you can enter measurement data. In the textbox at the top you can enter a name for the data. This name will appear in the legend and in the Edit menu.<br>
+Below you can set the drawing style of the data. If you press the <b>Color...</b> button you can change the color the data is drawn with. You can change the line style and the line width in the appropriate controls. You can also choose if the data points should be drawn with marks that indicate the width of the measurement errors or if there should be drawn a line from one point to the next.<br>
+If you press the <b>Load from file...</b> button, a <a href="LoadForm.html">dialogbox</a> is shown, where you can load data from a file.<br>
+Below you can edit the data in a table. In the first data-row of the table (denoted with a "=" at the left) you can enter a formula for the corresponding data-column. The formula must be an ordinary C# expression. You can refer to the varaibles <code>n</code>, <code>Length</code>, <code>x[n]</code>, <code>y[n]</code>, <code>dx[n]</code> and <code>dy[n]</code> in this expression. Alternatively you can enter the columns data into the data fields of the table. If you enter some data in the last row, the table is extended by one row.
+</BODY>
+</HTML>

@@ -1,0 +1,214 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Managing RuleSets</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+    <link rel="stylesheet" type="text/css" href="gsStyle1.css" />
+    <style type="text/css">
+    
+.style6 {text-indent: 0pt;
+	line-height: 121%;
+	text-align: left;
+	font-family: Georgia;
+	font-size: 11.0pt;
+	color: black;}
+    .style8 {
+	font-size: x-small;
+}
+.style9 {
+	font-size: x-small;
+	text-align: center;
+}
+    </style>
+</head>
+<body bgcolor="#FFFFFF">
+    <div style="position: absolute; width: 100px; height: 100px; z-index: 0; left: 6px;
+        top: 159px" id="backgroundGraph">
+        <img alt="" src="images/lightergrayBackGroundGraph.png" width="698" height="610">
+    </div>
+    <p class="MsoOrganizationName">
+        <span style='color: #FFFFFF; position: absolute; z-index: 8; left: 388px; top: 74px;
+            width: 166px; height: 25px' id="ADLab">Automated Design Lab </span>
+    </p>
+    <span style='position: absolute; z-index: 6; left: 8px; top: 15px; width: 510px;
+        height: 42px' id="orangeDots">
+        <img width="510" height="42" src="images/orangeDots.png">
+    </span><a href="http://www.engr.utexas.edu"><span style='position: absolute; z-index: 5;
+        left: 560px; top: 0px; width: 189px; height: 177px' id="UTCOEBreadcrumbs">
+        <img width="200" height="188" src="images/UTCOEemblem.jpg" /></span></a><span style='position: absolute;
+            z-index: 2; left: 1px; top: 72px; width: 759px; height: 22px' id="fatOrangeBar">
+            <img width="759" height="22" src="images/thickOrangeBarHoriz.png">
+        </span><span style='position: absolute; z-index: 8; left: 197px; top: 47px; width: 372px;
+            height: 25px' id="GSTitle">
+            <p class="MsoOrganizationName">
+                GraphSynth 1.6</p>
+        </span><span style='position: absolute; z-index: 12; left: 197px; top: 197px; width: 560px;
+            height: 3px' id="beforeContentBreak">
+            <img width="560" height="3" src="images/thinBlackBarHoriz.png">
+        </span>
+	<span style='position: absolute; z-index: 7; left: 200px; top: 2008px; width: 538px;
+            height: 4px' id="bottommostBar" class="style7">
+            <div class="style6">
+                <p class="style9">
+                    <img width="538" height="4" src="images/thinnerOrangeBarHoriz.png">
+                    <span class="style8">| <a href="index.htm">Home</a> | <a href="introMethod.htm">Methodology Overview</a>
+                    | <a href="graphs.htm">Graph Basics</a> | <a href="grammars.htm">Grammar Basics</a>
+                    | <a href="rule_recognition.htm">Grammars: Recognition</a> | <a href="rule_application.htm">
+                        Grammars: Application</a> | <a href="ruleSets.htm">Grammars: RuleSets</a> |
+                    <a href="generation.htm">Generation</a> | <a href="searchProcess.htm">Search Process</a>
+                    | <a href="navigating.htm">Navigating GraphSynth</a> | <a href="examples.htm">Examples</a>
+                    | <a href="download.htm">Download</a> |</span>
+                </p>
+            </div>
+        </span><span style='position: absolute; z-index: 1; left: 0px; top: 0px; width: 760px;
+            height: 10px' id="topmostBar">
+            <img width="760" height="10" src="images/thinOrangeBarHoriz.png" />
+        </span><span style='position: absolute; z-index: 3; left: 156px; top: 48px; width: 17px;
+            height: 18px' id="leftArrow">
+            <img width="17" height="18" src="images/orangeDotArrow.png" />
+        </span><span style='position: absolute; z-index: 4; left: 174px; top: 48px; width: 17px;
+            height: 18px' id="rightArrow">
+            <img width="17" height="18" src="images/orangeDotArrow.png" /></span><span style='position: absolute;
+                z-index: 9; left: 191px; top: 152px; width: 557px; height: 32px' id="pageTitle">
+                <p class="MsoTitle3">
+                    Grammar: Rule Sets
+                </p>
+            </span><span style='position: absolute; z-index: 45; left: 195px; top: 224px; width: 369px;
+                height: 112px'>
+                <table cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td width="369" height="112">
+                            <p class="style6">
+                                <span lang="en-US">Grammar rules are organized into sets, simply called rule sets. These
+                                    are stored in compact XML files that contain references to each of the grammar rules
+                                    in the set. All of the details of the rule set can be configured through GraphSynth’s
+                                    ruleSetDisplay—</span></p>
+                        </td>
+                    </tr>
+                </table>
+            </span><span style='position: absolute; z-index: 153; left: 195px; top: 329px; width: 289px;
+                height: 576px'>
+                <p class="style6">
+                    <span lang="en-US">there is no need to open a rule set’s XML in an editor (</span><span
+                        lang="en-US" style='font-family: Georgia; font-style: italic;'>I have only ever
+                        done it out of curiosity!</span><span lang="en-US">).</span></p>
+                <p class="style6">
+                    <span lang="en-US">The top of the pane is a list of the rules added to set. Any number
+                        of rules may be added to a rule set by clicking the add rule button. Once rules
+                        are in the set their order can be rearranged or they can be subsequently deleted.
+                        Along the bottom are three buttons that indicates what to do with the checked rules
+                        listed above. The checked rules are deleted by the “del” button, or moved up or
+                        down (“dn”) in the list.</span></p>
+                <p class="style6">
+                    <span lang="en-US">Following the list of rules is a list of important rule set properties.
+                        Similar to graphs and grammar rules the name will simply be inherited from the filename,
+                        and is not internally used within GraphSynth. The next is a property called “triggerRule
+                        #.” A trigger rule is one that when invoked during the generation process causes
+                        a particular action to occur. Currently, only one triggerRule can be set per rule
+                        set. If </span>there is no intention to use the trigger rule,&nbsp; then the
+                    item</p>
+            </span><span style='position: absolute; z-index: 155; left: 490px; top: 318px; width: 281px;
+                height: 498px'>
+                <img width="281" height="498" src="images/seedBurstRuleSet.png"></span>
+    <span style='position: absolute; z-index: 154; left: 197px; top: 859px; width: 521px;
+        height: 1157px'>
+        <p class="style6">
+            <span lang="en-US">should be set to –1. The triggerRule # corresponds to the rule #
+                shown in the top pane.</span></p>
+        <p class="style6">
+            <span lang="en-US">The next seven properties deal with how the rule set behaves during
+            </span><a href="generation.htm"><span lang="en-US" style='font-family: Georgia; text-decoration: underline;'>
+                Generation</span></a><span lang="en-US"> (It is recommended that this section is well
+                    understood before proceeding with this description). The “</span><span lang="en-US"
+                        style='font-family: Georgia; font-style: italic;'>choiceMethod” </span>
+            <span lang="en-US">is set to either Automatic or Design. An automatic rule set is one
+                that will invoke the rule once it is recognized. This is the case in the example
+                to the right (the example seedBurstRuleSet in the rules directory). When a rule
+                set is set to Automatic, the random tests and user choose tests under the design
+                drop down will not function. This is because the rules fire immediately, skipping
+                the choose part of the generation cycle. Given the methodical approach followed
+                by recognize, we will get the same resulting graph every time with an Automatic
+                ruleset. It will first look for valid locations of the first rule and searching
+                in the host from the first listed nodes on down. This continues for the remaining
+                rules. The important thing to note in automatic rule sets is that latter rules will
+                not be invoked unless all previous rules were unrecognized. This is illustrated
+                well in the seedBurst example. Alternatively, if one knows that their rule set is
+            </span><span lang="en-US" style='font-family: Georgia; font-style: italic;'>confluent</span><span
+                lang="en-US">, then an automatic rule set will work as expected.</span></p>
+        <p class="style6">
+            <span lang="en-US" style='font-family: Georgia; font-style: italic;'>“Interim Candidates
+                are”</span><span lang="en-US"> &amp; “</span><span lang="en-US" style='font-family: Georgia;
+                    font-style: italic;'>Final Candidates are</span><span lang="en-US">” are properties
+                        developed to support latter automated </span><a href="searchProcess.htm"><span lang="en-US"
+                            style='font-family: Georgia; text-decoration: underline;'>searching of graphs</span></a><span
+                                lang="en-US">. Often grammars rule sets are created so that only after all rules
+                                are invoked is a feasible solution achieved. For such rule sets, we would indicate
+                                that </span><span lang="en-US" style='font-family: Georgia; font-style: italic;'>Interim
+                                    Candidates are </span><span lang="en-US">Developing and </span>
+            <span lang="en-US" style='font-family: Georgia; font-style: italic;'>Final Candidates
+                are </span><span lang="en-US">Feasible—as is the case for the seedBurst example shown
+                    above. However, in other examples such as the fun swirlSeed example. We set both
+                    to Feasible. Users may want to create </span><span lang="en-US" style='font-family: Georgia;
+                        font-style: italic;'>choosing </span><span lang="en-US">methods that check these qualities
+                            to know if a candidate is complete and subsequent rules are simply modifying it,
+                            or if the candidate is Developing towards a Feasible candidate.</span></p>
+        <p class="style6">
+            <span lang="en-US">The next five properties correspond to the five ways that the Recognize</span><span
+                lang="en-US" style='font-family: "Times New Roman";'>&#8594;Choose&#8594;</span><span
+                    lang="en-US">Apply generation cycle may end (see </span><a href="generation.htm"><span
+                        lang="en-US" style='font-family: Georgia; text-decoration: underline;'>Generation</span></a><span
+                            lang="en-US">). These each can be set to one of the five actions:<br>
+                            Stop : simply end the generation process,<br>
+                            Loop : restart Recognize</span><span lang="en-US" style='font-family: "Times New Roman";'>&#8594;Choose&#8594;</span><span
+                                lang="en-US">Apply,<br>
+                                GoToPrevious : go to the previous rule set stored in the array<br>
+                            </span><span lang="en-US" style='font-family: "Courier New"; color: teal;'>Program</span><span
+                                lang="en-US" style='font-family: "Courier New"; color: black;'>.rulesets[]<br>
+                            </span><span lang="en-US">GoToNext : go to the next rule set<br>
+                                GoToRuleSet#</span><span lang="en-US" style='font-family: Georgia; font-style: italic;'>n</span><span
+                                    lang="en-US"> : go to rule set #</span><span lang="en-US" style='font-family: Georgia;
+                                        font-style: italic;'>n</span><span lang="en-US">
+                                            <br>
+                                            As a result of setting these five properties to any of these five actions, we can
+                                            greatly control how the rule sets execute. Note that there may be any number of
+                                            rule sets within a particular synthesis of a graph. We have noticed on several occasions
+                                            that grammar rule are stored in sets that perform different actions within the overall
+                                            synthesis. An example of multiple rule sets can be found in the Routes example (RouteGetToSpanningRuleSet.xml
+                                            and RouteGetToCompleteRuleSet.xml in the rules directory). After the first rule
+                                            set has run out of rules, then we know that we have created a spanning tree of the
+                                            nodes in the seed graph (citiesDefaultSeedGraph.xml). Since “</span><span lang="en-US"
+                                                style='font-family: Georgia; font-style: italic;'>NoRules</span><span lang="en-US">”
+                                                    is set to GoToNext, the next rule set is invoked to add additional routes between
+                                                    the cities.</span></p>
+        <p class="style6">
+            <span lang="en-US">Finally, the rule set has properties that list the filenames for
+                recognize or apply parametric functions. These need to be established prior to creating
+                templates for functions in the </span><a href="grammars.htm"><span lang="en-US" style='font-family: Georgia;
+                    text-decoration: underline;'>grammar rule</span></a><span lang="en-US"> property window.
+                        As is shown in the examples, a “.cs” file has been created for each ruleset. Each
+                        of these files contains all the functions used by that ruleset. This is not enforced
+                        by GraphSynth though. One may have multiple “.cs” files for a ruleset or multiple
+                        rulesets referencing the same source file.</span></p>
+        <p class="style6">
+            <span lang="en-US" style='font-family: Georgia; font-style: italic;'>Note</span><span
+                lang="en-US">: Because rule sets are stored in a fixed array (</span><span lang="en-US"
+                    style='font-family: "Courier New"; color: teal;'>Program</span><span lang="en-US"
+                        style='font-family: "Courier New"; color: black;'>.rulesets[]</span><span lang="en-US">),
+                            please specify the number in advance in the settings 
+			(GraphSynthSettings.config</span><span lang="en-US"
+                                            style='font-family: Georgia; color: black;'>).</span></p>
+    </span><span style="position: absolute; left: 9px; top: 211px; width: 175px; height: 431px;
+        z-index: 100" id="navigation">
+        <li class="sideBarNav"><a href="index.htm">Home</a></li><li class="sideBarNav"><a
+            href="introMethod.htm">Methodology Overview</a></li><li class="sideBarNav"><a href="graphs.htm">
+                Graph Basics</a></li><li class="sideBarNav"><a href="grammars.htm">Grammar Basics</a></li><li
+                    class="sideBarNav"><a href="rule_recognition.htm">Grammars: Recognition</a></li><li
+                        class="sideBarNav"><a href="rule_application.htm">Grammars: Application</a></li><li
+                            class="sideBarNav"><a href="ruleSets.htm">Grammars: RuleSets</a></li><li class="sideBarNav">
+                                <a href="generation.htm">Generation</a></li><li class="sideBarNav"><a href="searchProcess.htm">
+                                    Search Process</a></li><li class="sideBarNav"><a href="navigating.htm">Navigating GraphSynth</a></li><li
+                                        class="sideBarNav"><a href="examples.htm">Examples</a></li><li class="sideBarNav"><a
+                                            href="download.htm">Download</a></li>
+    </span>
+</body>
+</html>

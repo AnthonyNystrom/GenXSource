@@ -1,0 +1,79 @@
+==== Math.NET Iridium (Numerics) - r8 2007 MARCH (v2007.3.8) ====
+Author: Christoph Ruegg, Joannes Vermorel
+http://mathnet.opensourcedotnet.info
+
+What's new in release 8?
+- Completely revised FFT implementation
+- Integration of the Torschutz Random Library, extended with pdf/cdf
+- Various minor enhancements and fixes
+
+The library contains 
+- A linear algebra package, see MathNet.Numerics.LinearAlgebra.
+- Probability Distributions with pdf/pmf, cdf, ...
+- Non-uniform random number generators
+- Statistical accumulator, see MathNet.Numerics.Statistics.
+- Fourier transformations, see MathNet.Numerics.Transformations.
+- Miscellaneous utilies (polynomials, rationals, collections).
+- Special functions (trigonometry, special, combinatorics).
+
+==== MathNET - Numerics library - MAY 2006 (v2006.5.2-alpha) ====
+Author: Joannes Vermorel, Christoph Ruegg
+
+NOTE: The sparse linear algebra package hase been removed in
+this release - it will be reintegrated as soon it's working
+properly.
+
+The library contains 
+- A linear algebra package, see MathNet.Numerics.LinearAlgebra.
+- Non-uniform random generators, see MathNet.Numerics.Generators.
+- Distribution fonctions, see MathNet.Numerics.Distributions.
+- Statistical accumulator, see MathNet.Numerics.Statistics.
+- Fourier transformations, see MathNet.Numerics.Transformations.
+- Miscellaneous utilies (polynomials, rationals, collections).
+- Special functions (trigonometry, special, combinatorics).
+
+==== MathNET - Numerics library - v0.3 ====
+Date: 2004-12-12
+Author: Joannes Vermorel, Christoph Ruegg
+
+The library contains 
+- A linear algebra package, see MathNet.Numerics.LinearAlgebra.
+- A sparse linear algebra package, see MathNet.Numerics.LinearAlgebra.Sparse.
+- Non-uniform random generators, see MathNet.Numerics.Generators.
+- Distribution fonctions, see MathNet.Numerics.Distributions.
+- Statistical accumulator, see MathNet.Numerics.Statistics.
+- Fourier transformations, see MathNet.Numerics.Transformations.
+- Miscellaneous utilies (polynomials, rationals, collections).
+
+==== MathNET - Numerics library - v0.2 ====
+Date: 2004-09-05
+Author: Joannes Vermorel, Christoph Ruegg
+
+The library contains 
+- A linear algebra package, see MathNet.Numerics.LinearAlgebra.
+- Non-uniform random generators, see MathNet.Numerics.Generators.
+- Distribution fonctions, see MathNet.Numerics.Distributions.
+- Statistical accumulator, see MathNet.Numerics.Statistics.
+- Fourier transformations, see MathNet.Numerics.Transformations.
+
+
+==== MathNET - Numerics library - v0.1 ====
+Date: 2004-06-22
+Author: Joannes Vermorel
+
+The library contains 
+- A linear algebra package, see MathNet.Numerics.LinearAlgebra.
+- Non-uniform random generators, see MathNet.Numerics.Generators.
+- Distribution fonctions, see MathNet.Numerics.Distributions.
+- Statistical accumulator, see MathNet.Numerics.Statistics.
+
+
+==== MathNET - Numerics library - v0.0 ====
+Date: 2004-05-18
+Author: Joannes Vermorel
+
+The library contains 
+- A linear algebra package, see MathNet.Numerics.LinearAlgebra.
+- Non-uniform random generators, see MathNet.Numerics.Generators.
+- Distribution fonctions, see MathNet.Numerics.Distributions.
+

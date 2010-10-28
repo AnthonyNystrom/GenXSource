@@ -1,0 +1,243 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7B015176-4FF5-474F-9D0F-25E9B57B78F1}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Genetibase.MathX.Core</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Genetibase.MathX.Core</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>Genetibase.MathX.Core.xml</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\build\Genetibase.MathX.Core\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnalyticDifferentiator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BivariateRealFunction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CodeLanguage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constant.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConstantFunction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constants.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DefinitionType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DelegateFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DifferencesDirection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Explicit2DFunction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Explicit3DFunction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExpressionCompiler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExpressionLexeme.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExpressionLexemeInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExpressionSyntaxException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExpressionTree.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExpressionTreeNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Function.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FunctionFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Implicit2DFunction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Implicit3DFunction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Lexeme.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LexemeCodeAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LexemeDiffMaskAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LexemeNameAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LexemeType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LexemeTypeAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NumericalDifferentiator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Parameter2DFunction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Parameter2DFunctionDelegate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Parameter3DFunction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Parameter3DFunctionDelegate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ParametricSurface.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ParametricSurfaceDelegate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Plotters\ConstantFunctionPlotter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Plotters\Explicit2DFunctionPlotter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Plotters\Explicit3DFunctionPlotter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Plotters\Implicit2DFunctionPlotter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Plotters\Implicit3DFunctionPlotter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Plotters\Parameter2DFunctionPlotter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Plotters\Parameter3DFunctionPlotter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Plotters\ParametricSurfacePlotter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Point2D.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Point3D.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RealFunction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TrivariateRealFunction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <None Include="core.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
