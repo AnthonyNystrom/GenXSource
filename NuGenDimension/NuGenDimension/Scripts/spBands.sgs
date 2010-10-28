@@ -1,0 +1,15 @@
+spB1= SphericBand(1,-0.2, 0.5,24);
+
+for transLoop = 0, 15 do
+    tmpspB= SphericBand(spB1:GetRadius(), spB1:GetCoefficient1(), 
+            spB1:GetCoefficient2(), 24);
+    tmpspB:Translate(0,0, 2*transLoop+3);
+    tmpspB:SetColor(transLoop*2);
+end
+
+for RotLoop = 0, 36 do
+    tmpspB= spB1:Clone();
+    tmpspB:Translate(5,0,RotLoop);
+    tmpspB:Rotate(0,0,0, 0,0,1, 2*3.14159265/12*RotLoop);
+    tmpspB:SetColor(RotLoop);
+end

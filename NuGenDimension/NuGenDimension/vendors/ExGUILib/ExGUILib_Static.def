@@ -1,0 +1,6 @@
+; ExGUILib_Static.def : Declares the module parameters for the DLL.
+
+LIBRARY      "ExGUILib_Static"
+
+EXPORTS
+    ; Explicit exports can go here

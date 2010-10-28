@@ -1,0 +1,401 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\Standard2D.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "FileDescription", "Standard2D DLL"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "Standard2D"
+            VALUE "LegalCopyright", "Copyright (C) 2004"
+            VALUE "OriginalFilename", "Standard2D.DLL"
+            VALUE "ProductName", "Standard2D Dynamic Link Library"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_TOOLBAR TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_BUTTON_0
+    BUTTON      ID_BUTTON_1
+    BUTTON      ID_BUTTON_2
+    BUTTON      ID_BUTTON_3
+    BUTTON      ID_BUTTON_4
+    SEPARATOR
+    BUTTON      ID_BUTTON_5
+    SEPARATOR
+    BUTTON      ID_BUTTON_7
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_TOOLBAR             BITMAP                  "toolbar.bmp"
+IDB_LINE_TWO_PNTS       BITMAP                  "res\\line_two_points.bmp"
+IDB_LINE_ARC_EXT        BITMAP                  "res\\line_arc_end.bmp"
+IDB_LINE_ARC_PERP       BITMAP                  "res\\line_arc_perpendic_end.bmp"
+IDB_LINE_LINE_EXT       BITMAP                  "res\\line_line_extension.bmp"
+IDB_LINE_LINE_PERP      BITMAP                  "res\\line_line_perpendic_end.bmp"
+IDB_LINE_POINT_INC      BITMAP                  "res\\line_point_increment.bmp"
+IDB_LINE_POINT_VECTOR   BITMAP                  "res\\line_point_vector.bmp"
+IDB_CIRC_CEN_RAD        BITMAP                  "res\\circ_c_r.bmp"
+IDB_CIRC_3P             BITMAP                  "res\\circ_3p.bmp"
+IDB_PNT_EDIT            BITMAP                  "res\\pnt_edit.bmp"
+IDB_LINE_EDIT           BITMAP                  "res\\line_edit.bmp"
+IDB_CIRC_EDIT_RAD       BITMAP                  "res\\circ_edit_rad.bmp"
+IDB_CIRC_EDIT_CEN       BITMAP                  "res\\circ_edit_cen.bmp"
+IDB_CIRC_EDIT_NORM      BITMAP                  "res\\circ_edit_norm.bmp"
+IDB_SPL_EDIT            BITMAP                  "res\\Spline_edit.bmp"
+IDB_TOOLBAR32_BMP       BITMAP                  "toolbarBMP.bmp"
+IDB_ARC32               BITMAP                  "arc.bmp"
+IDB_CIRC32              BITMAP                  "circ.bmp"
+IDB_LINE32              BITMAP                  "line.bmp"
+IDB_PATH32              BITMAP                  "path.bmp"
+IDB_PNT32               BITMAP                  "pnt.bmp"
+IDB_SPL32               BITMAP                  "spl.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SPLINE_POINTS_DLG DIALOGEX 0, 0, 116, 121
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_SPLINE_POINTS_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_ALIGNLEFT | LVS_NOCOLUMNHEADER | WS_BORDER | 
+                    WS_TABSTOP,2,2,112,118
+END
+
+IDD_CONT_SCENARS_DLG DIALOGEX 0, 0, 105, 22
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Points",IDC_CONT_SCENARS_RADIO1,"Button",
+                    BS_AUTORADIOBUTTON,2,2,103,8
+    CONTROL         "Objects",IDC_CONT_SCENARS_RADIO2,"Button",
+                    BS_AUTORADIOBUTTON,2,11,103,9
+END
+
+IDD_CONT_OBJ_TYPE DIALOGEX 0, 0, 89, 23
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Line",IDC_CONT_OBJ_RADIO1,"Button",
+                    BS_AUTORADIOBUTTON,1,2,88,8
+    CONTROL         "Arc",IDC_CONT_OBJ_RADIO2,"Button",BS_AUTORADIOBUTTON,1,
+                    11,88,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_SPLINE_POINTS_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 109
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 114
+    END
+
+    IDD_CONT_SCENARS_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 98
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 15
+    END
+
+    IDD_CONT_OBJ_TYPE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 82
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 16
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_MENU_STRING         "2D primitives"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STBAR_ZERO          "Point"
+    IDS_TOOLTIP_ZERO        "Point"
+    IDS_STBAR_FIRST         "Line"
+    IDS_STBAR_SECOND        "Circle"
+    IDS_TOOLTIP_FIRST       "Line"
+    IDS_TOOLTIP_SECOND      "Circle"
+    IDS_STBAR_THIRD         "Arc"
+    IDS_STBAR_FOURTH        "Spline"
+    IDS_TOOLTIP_THIRD       "Arc"
+    IDS_TOOLTIP_FOURTH      "Spline"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CIRC_SCENAR_CEN_RAD_NORM "From center, normal and radius"
+    IDS_CIRC_SCENAR_THREE_POINTS "From three points"
+    IDS_CENTER              "Center"
+    IDS_LINE_SCENAR_TWO_POINTS "From two point"
+    IDS_FIRST_POINT         "First point"
+    IDS_SECOND_POINT        "Second point"
+    IDS_INCREASE            "Increases"
+    IDS_DIR                 "Direction"
+    IDS_LENGTH              "Length"
+    IDS_LINE_SCENSG_POINT_DXDYDZ "From point and increases"
+    IDS_LINE_SCENSG_POINT_DIR_LEN "From point, direction and length"
+    IDS_RADIUS              "Radius"
+    IDS_DIAMETR             "Diameter"
+    IDS_NORMAL              "Normal"
+    IDS_THIRD_POINT         "Third point"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_NEW_COORDINATES     "New  coordinates"
+    IDS_CHANGE_COORDS       "Change coordinates"
+    IDS_CHANGE_COOR_1       "Change first point coordinates"
+    IDS_CHANGE_COOR_2       "Change second point coordinates"
+    IDS_CHANGE_CENTER_COORDS "Change center coordinates"
+    IDS_CHANGE_RAD          "Change radius"
+    IDS_CHANGE_NORM         "Change normal"
+    IDS_NEW_RAD             "New radius"
+    IDS_NEW_NORMAL          "New normal"
+    IDS_ERROR_ZERO_LENGTH   "Error: zero length"
+    IDS_ERROR_ZERO_VECTOR   "Error: zero vector"
+    IDS_ERROR_ZERO_RADIUS   "Error: zero radius"
+    IDS_ENTER_NEW_COORDS    "Enter new coordinates"
+    IDS_REDACTION           "Edit"
+    IDS_QEUID_GET_OBJ       "Select object (circle, arc, flat spline or flat contour (no linear))"
+    IDS_EQUID_GET_H         "Enter shift"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_EQUID_H             "Shift"
+    IDS_SPLINE_EXISTING_KNOTS "Knots"
+    IDS_ERROR_INFIN_RAD     "Error: infinite radius"
+    IDS_POINT_ON_ARC        "Point on arc"
+    IDS_ARC_SCENAR_B_E_M    "From begin, end point and point on arc"
+    IDS_BEG_POINT           "Begin point"
+    IDS_END_POINT           "End point"
+    IDS_SPL_NEW_KNOT        "New knot"
+    IDS_SPL_ENTER_NEW_KNOT  "Enter coordinates of new knot"
+    IDS_INVERT              "Invert"
+    IDS_ARC_SCENAR_C_B_E    "From center, begin and end points"
+    IDS_CHANGE_ARC_POINT_COORD "Change point on arc"
+    IDS_LINE_SCENAR_OTHER_LINE_EXT "As continuous of other line"
+    IDS_LINE_SCENAR_PERPEND_OTHER_LINE "Perpendicular to other line"
+    IDS_LINE_SCENSG_ARC_EXT "As continuous of arc"
+    IDS_LINE_SCENAR_PERPEND_ARC "Perpendicular to other arc"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CHOISE_LINE         "Select line"
+    IDS_CHOISE_ARC          "select arc"
+    IDS_CHOISE_LINE_PNT     "Select on of end points of line"
+    IDS_CHOISE_ARC_PNT      "Select on of end points of arc"
+    IDS_ERROR_OBJ_NOT_SEL   "Error: needed object dont select"
+    IDS_END_OPER            "End"
+    IDS_ERROR_SPL_KNOT_AS_PREV "Error: this knot is equal with previous"
+    IDS_WARNING_CHOISE_SCREEN_POINT "Tips: select screen point"
+    IDS_ARC_SCENAR_OTHER_ARC_EXT "Tangent to other arc"
+    IDS_ARC_SCENAR_PERPEND_OTHER_ARC "Perpendicular to other arc"
+    IDS_ARC_SCENSG_LINE_EXT "Tangent to line"
+    IDS_ARC_SCENAR_PERPEND_LINE "Perpendicular to line"
+    IDS_CLOSE_SPLINE        "Close spline?"
+    IDS_WANT_MORE_POINTS    "Error: need more then 2 points."
+    IDS_CHOISE_SPLINE_PNT   "Select moving knot"
+    IDS_CREARE_SPL_ERROR    "Error in spline create. May be exist zero lines"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MOVE_SPLINE_KNOT    "Move knot"
+    IDS_N_IY_KNOT           "-th knot"
+    IDS_TOOLTIP_FIVETH      "Contour"
+    IDS_TOOLTIP_SIXTH       "Build contour"
+    IDS_STBAR_FIVETH        "Build contour from points or from existing objects"
+    IDS_STBAR_SIXTH         "Build contour from points"
+    IDS_CHOISE_FIRST_OBJ_OF_PATH "Select start object"
+    IDS_CLOSE_CONTOUR       "Close contour?"
+    IDS_STBAR_SEVENTH       "Build equidistant of selecting object"
+    IDS_STBAR_EIGHTTH       "Build round equidistant of selecting object"
+    IDS_TOOLTIP_SEVETH      "Equidistant"
+    IDS_TOOLTIP_EIGHTTH     "Round equdistant"
+    IDS_OBJECT              "Object"
+    IDS_FIRST_SHIFT         "First shift"
+    IDS_SECOND_SHIFT        "Second shift"
+    IDS_COORDS              "Coordinates"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CLOSING_SPLINE      "close"
+    IDS_FLATING_SPLINE      "flat"
+    IDS_NO_SELF_INTERS_SPLINE "without selfintersectings"
+    IDS_NO_CLOSING_SPLINE   "no close"
+    IDS_NO_FLATING_SPLINE   "no flat"
+    IDS_SELF_INTERS_SPLINE  "with self intersectings"
+    IDS_CANNT_CLOSE_SPLINE  "Error: cant close spline. May be, end segments in different planes."
+    IDS_ENTER_POINT_COORDS  "Enter point coordinates"
+    IDS_ARC_ENTER_NWE_POINT "Enter new coordinates of point on arc"
+    IDS_CONT_SCENAR         "Scenar"
+    IDS_CONT_OBJ_TYPE       "Object type"
+    IDS_PREV                "Prev"
+    IDS_ARC_ERR_ON_LINE     "Error: arc point cant be on one line"
+    IDS_ERR_PNT_AS_PREV     "Error: this point is equal with previous"
+    IDS_ERR_PATH_NO_OBJ     "Error: no exist objectcs for contour"
+    IDS_ERR_PATH_ONE_OBJ    "Error: in contour must be more then one object"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CIR_ENTER_CENTER    "Enter coordinates of new circle center"
+    IDS_CIR_ENTER_NORMAL    "Enter normal to circle plane"
+    IDS_CIR_ENTER_RAD       "Enter radius"
+    IDS_CIR_NEW_CENTER      "Enter coordinates of new circle center"
+    IDS_CIR_NEW_NORM        "Enter new normal to circle plane"
+    IDS_CIR_NEW_RAD         "Enter new radius"
+    IDS_ARC_ERR_SEC_P_AS_FIR 
+                            "Error: end point cant be equal with begin point (if you need such objectå - create circle)"
+    IDS_EQ_ERR              "Error: cant build equdistant. May be large shift"
+    IDS_EQ_ERR_NO_OBJ       "Error: no object"
+END
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\Standard2D.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

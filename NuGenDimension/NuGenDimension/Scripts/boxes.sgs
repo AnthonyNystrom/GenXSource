@@ -1,0 +1,17 @@
+box1 = Box(1,2,1);
+box1:Translate(-0.5,-1,0);
+box1:SetColor(12);
+
+for transLoop = 0, 5 do
+    tmpBox = Box(box1:GetXSize(),box1:GetYSize(),0.5);
+    tmpBox:Translate(-box1:GetXSize()/2,-box1:GetYSize()/2, 2*transLoop+3);
+    tmpBox:SetColor(transLoop*2);
+end
+
+for RotLoop = 0, 12 do
+    tmpBox = box1:Clone();
+    tmpBox:Translate(5,0,0)
+    tmpBox:Rotate(0,0,0, 0,0,1, 2*3.14159265/12*RotLoop);
+    tmpBox:SetColor(RotLoop);
+end
+

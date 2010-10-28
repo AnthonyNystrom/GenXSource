@@ -1,0 +1,230 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\Surfaces.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "FileDescription", "Surfaces DLL"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "Surfaces"
+            VALUE "LegalCopyright", "Copyright (C) 2004"
+            VALUE "OriginalFilename", "Surfaces.DLL"
+            VALUE "ProductName", "Surfaces Dynamic Link Library"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_TOOLBAR TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_BUTTON_0
+    BUTTON      ID_BUTTON_1
+    BUTTON      ID_BUTTON_2
+    BUTTON      ID_BUTTON_3
+    BUTTON      ID_BUTTON_4
+    BUTTON      ID_BUTTON_5
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_TOOLBAR             BITMAP                  "toolbar.bmp"
+IDB_TOOLBAR32_BMP       BITMAP                  "toolbarBMP.bmp"
+IDB_SECT_OBJ_BMP        BITMAP                  "res\\sectObj.bmp"
+IDB_COONS_OBJ_BMP       BITMAP                  "res\\coonsObj.bmp"
+IDB_FACE_OBJ_BMP        BITMAP                  "res\\faceObj.bmp"
+IDB_LINEAR_BMP          BITMAP                  "res\\linearObj.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_MENU_STRING         "Surfaces"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STBAR_ZERO          "Face with holes"
+    IDS_TOOLTIP_ZERO        "Face with holes"
+    IDS_STBAR_FIRST         "Surface from two contours"
+    IDS_STBAR_SECOND        "Surface from three contours"
+    IDS_TOOLTIP_FIRST       "Surface from two contours"
+    IDS_TOOLTIP_SECOND      "Surface from three contours"
+    IDS_STBAR_THIRD         "Surface from four contours"
+    IDS_STBAR_FOURTH        "Linear surface from two contours"
+    IDS_TOOLTIP_THIRD       "Surface from four contours"
+    IDS_TOOLTIP_FOURTH      "Linear surface from two contours"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ERROR_OBJ_NOT_SEL   "Error: no object"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MAIN_CON            "Out contour"
+    IDS_SEL_MAIN_CONT       "Select circle, flat spline or contour without selfintersecings as face outline contour"
+    IDS_OTV                 "Holes"
+    IDS_SEL_OTV             "Select circles, flat splines or contours without selfintersecings as holes"
+    IDS_COON_SEL_1_CONT     "Select first contour"
+    IDS_COON_SEL_2_CONT     "Select second contour"
+    IDS_COON_SEL_3_CONT     "Select third contour"
+    IDS_COON_SEL_4_CONT     "Select fourth contour"
+    IDS_CONT                "Contour"
+    IDS_CONT_ALREADY_SEL    "Error: this contour already select"
+    IDS_NOT_IN_ONE_PLANE    "Error: this contour not on one plane with outer limit contour"
+    IDS_INTERS_OUT          "Error: this contour intersect outer limit contour"
+    IDS_NOT_INSIDE_OUT      "Error: this contour dont inside outer limit contour"
+    IDS_INTERS_WITH_OTHERS  "Error: this contour intersect other holes"
+    IDS_INSIDE_EXIST_HOLE   "Error: this contour inside other hole"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CONSIST_EXIST_HOLE  "Error: this contour consist other hole"
+    IDS_TOOLTIP_FIVETH      "Spline surface"
+    IDS_STBAR_FIVETH        "Spline surface from sections"
+    IDS_COONS_ER_MUST_PRIMICAT "Error: contours must be flank"
+    IDS_COONS_ER_MUST_CLOSE_AREA "Error: contours must must bounds close area"
+    IDS_LS_FIR_CONT         "First contour"
+    IDS_LS_SEL_FIR_CONT     "Select first contour"
+    IDS_LS_SEC_CONT         "Second contour"
+    IDS_LS_SEL_SEC_CONT     "Select second contour"
+    IDS_QUESTION            "Question"
+    IDS_IS_CLOSE            "Close to solid body?"
+    IDS_SEL_HREBET_POINT    "Select spine point on contour"
+    IDS_SEL_CURVE_DIR       "Select direction of surface spin"
+    IDS_END_COM             "End"
+    IDS_FACE_NAME           "Face"
+    IDS_ERR_CANT_CREATE     "Error: cant create object (bad input data)"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_COONS_NAME          "Coons"
+    IDS_LINEAR_NAME         "Linear"
+    IDS_SPLINE_NAME         "SplineSurface"
+    IDS_SELECT_NEXT_CONTOUR "Select next contour"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\Surfaces.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

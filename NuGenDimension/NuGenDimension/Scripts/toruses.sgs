@@ -1,0 +1,14 @@
+tor1= Torus(1,0.2,24,24);
+
+for transLoop = 0, 15 do
+    tmpTor = Torus(tor1:GetRadius(), tor1:GetThickness(), 24, 24);
+    tmpTor:Translate(0,0, 2*transLoop+3);
+    tmpTor:SetColor(transLoop*2);
+end
+
+for RotLoop = 0, 36 do
+    tmpTor = tor1:Clone();
+    tmpTor:Translate(5,0,RotLoop);
+    tmpTor:Rotate(0,0,0, 0,0,1, 2*3.14159265/12*RotLoop);
+    tmpTor:SetColor(RotLoop);
+end

@@ -1,0 +1,15 @@
+ell1= Ellipsoid(1,0.2,0.5,24,24);
+
+for transLoop = 0, 35 do
+    tmpEll= Ellipsoid(ell1:GetXSize(), ell1:GetYSize(), 
+            ell1:GetZSize(), ell1:GetMeridiansCount(), ell1:GetParallelsCount());
+    tmpEll:Translate(0,0, 2*transLoop+3);
+    tmpEll:SetColor(transLoop*2);
+end
+
+for RotLoop = 0, 36 do
+    tmpEll= ell1:Clone();
+    tmpEll:Translate(5,0,RotLoop);
+    tmpEll:Rotate(0,0,0, 0,0,1, 2*3.14159265/12*RotLoop);
+    tmpEll:SetColor(RotLoop);
+end

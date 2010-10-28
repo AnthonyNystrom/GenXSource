@@ -1,0 +1,14 @@
+cyl1= Cylinder(1,1,24);
+
+for transLoop = 0, 15 do
+    tmpCyl = Cylinder(cyl1:GetRadius(), cyl1:GetHeight(), cyl1:GetMeridiansCount());
+    tmpCyl:Translate(0,0, 2*transLoop+3);
+    tmpCyl:SetColor(transLoop*2);
+end
+
+for RotLoop = 0, 36 do
+    tmpCyl = cyl1:Clone();
+    tmpCyl:Translate(5,0,RotLoop);
+    tmpCyl:Rotate(0,0,0, 0,0,1, 2*3.14159265/12*RotLoop);
+    tmpCyl:SetColor(RotLoop);
+end

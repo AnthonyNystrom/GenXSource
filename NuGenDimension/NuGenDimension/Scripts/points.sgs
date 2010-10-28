@@ -1,0 +1,10 @@
+p1 = Point(10,1,0);
+pointStr = p1:GetPoint();
+print("First point coords \n --------- \n",pointStr.x," ",pointStr.y," ",pointStr.z);
+
+for RotLoop = 0, 90 do
+    tmpPnt = Point(5*cos(RotLoop),10*sin(RotLoop),0);
+    pointStr2 = tmpPnt:GetPoint(); 
+    tmpPnt:SetColor(3);
+    tmpPnt:SetLineThickness(3);
+end

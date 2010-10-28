@@ -1,0 +1,345 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_TEXT_TEXT_DLG DIALOGEX 0, 0, 136, 96
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_TEXT_TEXT_EDIT,0,0,135,95,ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_WANTRETURN
+END
+
+IDD_TEXT_PARAMS_DLG DIALOGEX 0, 0, 97, 94
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_SYM_HEIGHT_EDIT,1,8,39,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SYM_ANGLE_EDIT,2,30,39,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SYMB_PROPOPT_EDIT,2,52,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SYMB_SPACE_EDIT,2,75,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LINES_SPACE_EDIT,43,70,40,12,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    LTEXT           "Symbol height:",IDC_STATIC,1,0,66,8
+    LTEXT           "Angle (degree):",IDC_STATIC,2,22,66,8
+    LTEXT           "Proportions (%):",IDC_STATIC,3,44,66,8
+    LTEXT           "Spaces (%):",IDC_STATIC,3,67,55,8
+END
+
+IDD_LINEAR_DIM_DLG DIALOGEX 0, 0, 103, 168
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Dimensional line",IDC_LD_RAZM_LIN_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,1,1,102,8
+    CONTROL         "Left line",IDC_LD_LEFT_DIM_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,1,11,102,8
+    CONTROL         "Right line",IDC_LD_RIGHT_DIM_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,1,20,102,11
+    LTEXT           "Shifts:",IDC_LD_VINOS_STATIC,1,54,64,8
+    EDITTEXT        IDC_LD_VINOS_EDIT,1,62,76,12,ES_AUTOHSCROLL
+    CONTROL         "Outsize",IDC_LD_LEFT_END_OUT_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,6,83,53,8
+    GROUPBOX        "",IDC_LD_LEFT_END_STATIC,1,81,90,27,NOT WS_VISIBLE
+    COMBOBOX        IDC_LD_LEFT_END_TYPE_COMBO,3,81,85,45,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Outside",IDC_LD_RIGHT_END_OUT_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,6,116,53,8
+    GROUPBOX        "",IDC_LD_RIGHT_END_STATIC,1,111,90,30,NOT WS_VISIBLE
+    COMBOBOX        IDC_LD_RIGHT_END_TYPE_COMBO,3,126,85,56,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Arrows length:",IDC_LD_END_SIZE_STATIC,1,142,74,8
+    EDITTEXT        IDC_LD_END_SIZE_EDIT,1,152,76,12,ES_AUTOHSCROLL
+    LTEXT           "Left end",IDC_LEFT_END_STATIC,7,74,39,8
+    LTEXT           "Right end",IDC_RIGHT_END_STATIC,7,107,44,8
+    CONTROL         "Automatic arrows",IDC_LIN_DIM_AUTO_ARR,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,1,43,77,9
+    CONTROL         "Invert",IDC_LIN_DIM_INVERT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,1,32,77,9
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_TEXT_TEXT_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 129
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 89
+    END
+
+    IDD_TEXT_PARAMS_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 90
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+
+    IDD_LINEAR_DIM_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 96
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 161
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\TD.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "FileDescription", "TD DLL"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "TD"
+            VALUE "LegalCopyright", "Copyright (C) 2004"
+            VALUE "OriginalFilename", "TD.DLL"
+            VALUE "ProductName", "TD Dynamic Link Library"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_TOOLBAR TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_BUTTON_0
+    BUTTON      ID_BUTTON_1
+    BUTTON      ID_BUTTON_2
+    BUTTON      ID_BUTTON_3
+    BUTTON      ID_BUTTON_4
+    BUTTON      ID_BUTTON_5
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_TOOLBAR             BITMAP                  "toolbar.bmp"
+IDB_TOOLBAR32_BMP       BITMAP                  "toolbarBMP.bmp"
+IDB_BITMAP2             BITMAP                  "res\\ar_simple.bmp"
+IDB_BITMAP3             BITMAP                  "res\\ar_1_1.bmp"
+IDB_BITMAP4             BITMAP                  "res\\ar_1_2.bmp"
+IDB_BITMAP5             BITMAP                  "res\\ar_2_1.bmp"
+IDB_BITMAP6             BITMAP                  "res\\ar_2_2.bmp"
+IDB_BITMAP7             BITMAP                  "res\\ar_3_1.bmp"
+IDB_BITMAP8             BITMAP                  "res\\ar_3_2.bmp"
+IDB_BITMAP9             BITMAP                  "res\\ar_4_1.bmp"
+IDB_BITMAP10            BITMAP                  "res\\ar_4_2.bmp"
+IDB_BITMAP11            BITMAP                  "res\\ar_5_1.bmp"
+IDB_BITMAP12            BITMAP                  "res\\ar_5_2.bmp"
+IDB_BITMAP13            BITMAP                  "res\\ar_6_1.bmp"
+IDB_BITMAP14            BITMAP                  "res\\ar_6_2.bmp"
+IDB_BITMAP15            BITMAP                  "res\\ar_7_1.bmp"
+IDB_BITMAP16            BITMAP                  "res\\ar_7_2.bmp"
+IDB_BITMAP17            BITMAP                  "res\\ar_8_1.bmp"
+IDB_BITMAP18            BITMAP                  "res\\ar_8_2.bmp"
+IDB_BITMAP19            BITMAP                  "res\\ar_9_1.bmp"
+IDB_BITMAP20            BITMAP                  "res\\ar_9_2.bmp"
+IDB_BITMAP21            BITMAP                  "res\\ar_10_1.bmp"
+IDB_BITMAP22            BITMAP                  "res\\ar_10_2.bmp"
+IDB_BITMAP23            BITMAP                  "res\\ar_11_1.bmp"
+IDB_BITMAP24            BITMAP                  "res\\ar_11_2.bmp"
+IDB_BITMAP25            BITMAP                  "res\\ar_12_1.bmp"
+IDB_BITMAP26            BITMAP                  "res\\ar_12_2.bmp"
+IDB_BITMAP27            BITMAP                  "res\\ar_13_1.bmp"
+IDB_BITMAP28            BITMAP                  "res\\ar_13_2.bmp"
+IDB_BITMAP29            BITMAP                  "res\\ar_14_1.bmp"
+IDB_BITMAP30            BITMAP                  "res\\ar_14_2.bmp"
+IDB_BITMAP31            BITMAP                  "res\\ar_15_1.bmp"
+IDB_BITMAP32            BITMAP                  "res\\ar_15_2.bmp"
+IDB_TEXT32              BITMAP                  "text.bmp"
+IDB_ANG32               BITMAP                  "ang.bmp"
+IDB_DIAM32              BITMAP                  "diam.bmp"
+IDB_LINEAR32            BITMAP                  "linear.bmp"
+IDB_RAD32               BITMAP                  "rad.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_MENU_STRING         "Text and dimensions"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STBAR_ZERO          "Text"
+    IDS_TOOLTIP_ZERO        "Text"
+    IDS_STBAR_FIRST         "Linear dimension"
+    IDS_STBAR_SECOND        "Chain of linear dimensions"
+    IDS_TOOLTIP_FIRST       "Linear dimension"
+    IDS_TOOLTIP_SECOND      "Chain of linear dimensions"
+    IDS_STBAR_THIRD         "Angle dimension"
+    IDS_STBAR_FOURTH        "Radial dimension"
+    IDS_TOOLTIP_THIRD       "Angle dimension"
+    IDS_TOOLTIP_FOURTH      "Radial dimension"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_TEXT_POINT          "Point"
+    IDS_SEL_TEXT_POINT      "Enter coordinates of text base point"
+    IDS_TEXT_PARAMS         "Text parameters"
+    IDS_DIM_PARAM           "Dimension parameters"
+    IDS_TA_CENTER           "Center"
+    IDS_TA_LEFT             "Right"
+    IDS_F_POINT             "First point"
+    IDS_ENTER_F_POINT       "Enter coordinates of first point of dimension"
+    IDS_S_POINT             "Second point"
+    IDS_ENTER_S_POINT       "Enter coordinates of second point of dimension"
+    IDS_L_POINT             "Shift point"
+    IDS_ENTER_L_POINT       "Enter shift point"
+    IDS_ERROR_POINT_IS_EQ   "Error: this point equal with previous"
+    IDS_REDACTION           "Edit text"
+    IDS_TOOLTIP_FIVETH      "Diametral dimensions"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STBAR_FIVETH        "Diametral dimensions"
+    IDS_TA_RIGHT            "Left"
+    IDS_LIN_STYLE           "Style"
+    IDS_TEXT_ALIGN          "Text align"
+    IDS_TEXT_ORIENT         "Orientation"
+    IDS_TEXT_ORINT_H        "Horizontal"
+    IDS_TEXT_ORINT_V        "Vertical"
+    IDS_EDIT_TEXT_STYLE     "Edit text style"
+    IDS_ENTER_NEW_STYLE     "Enter new  text style parameters and press ""Enter"" or click on scene"
+    IDS_ENTER_NEW_TEXT      "Enter new text and click on scene"
+    IDS_DIM_ST_PARALL       "Parallel"
+    IDS_DIM_ST_POINTS       "By three points"
+    IDS_DIM_ST_OPT          "Optimal"
+    IDS_PRECIS              "Precision"
+    IDS_OBJECT              "Object"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\TD.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

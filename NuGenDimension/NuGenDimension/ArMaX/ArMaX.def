@@ -1,0 +1,9 @@
+; ArMaX.def : Declares the module parameters.
+
+LIBRARY      "ArMaX.OCX"
+
+EXPORTS
+	DllCanUnloadNow     PRIVATE
+	DllGetClassObject   PRIVATE
+	DllRegisterServer   PRIVATE
+	DllUnregisterServer PRIVATE

@@ -1,0 +1,57 @@
+// ArMaX.idl : type library source for ActiveX Control project.
+
+// This file will be processed by the MIDL compiler tool to
+// produce the type library (ArMaX.tlb) that will become a resource in
+// ArMaX.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(FBB21704-A554-42C7-AACB-FEAE920E8DAC), version(1.0),
+  helpfile("ArMaX.hlp"),
+  helpstring("ArMaX ActiveX Control module"),
+  control ]
+library ArMaXLib
+{
+	importlib(STDOLE_TLB);
+
+	//  Primary dispatch interface for CArMaXCtrl
+
+	[ uuid(8E636C37-EBE4-46D3-8C9E-10DA24648ED4),
+	  helpstring("Dispatch interface for ArMaX Control")]
+	dispinterface _DArMaX
+	{
+		properties:
+		methods:
+		[id(1), helpstring("method SetAmbient")] void SetAmbient(FLOAT r, FLOAT g, FLOAT b);
+		[id(2), helpstring("method SetDiffuse")] void SetDiffuse(FLOAT r, FLOAT g, FLOAT b);
+		[id(3), helpstring("method SetEmission")] void SetEmission(FLOAT r, FLOAT g, FLOAT b);
+		[id(4), helpstring("method SetSpecular")] void SetSpecular(FLOAT r, FLOAT g, FLOAT b);
+		[id(5), helpstring("method SetTransparent")] void SetTransparent(FLOAT transparent);
+		[id(6), helpstring("method SetShininess")] void SetShininess(FLOAT shininess);
+		[id(7), helpstring("method CopyToClipboard")] void CopyToClipboard(void);
+	};
+
+	//  Event dispatch interface for CArMaXCtrl
+
+	[ uuid(C72A2FDA-8376-4868-99FB-58184138C180),
+	  helpstring("Event interface for ArMaX Control") ]
+	dispinterface _DArMaXEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+	};
+
+	//  Class information for CArMaXCtrl
+
+	[ uuid(4012F180-AEF8-4DFB-A45D-56BF5BA86458),
+	  helpstring("ArMaX Control"), control ]
+	coclass ArMaX
+	{
+		[default] dispinterface _DArMaX;
+		[default, source] dispinterface _DArMaXEvents;
+	};
+
+};

@@ -1,0 +1,16 @@
+sphere1= Sphere(1,24,24);
+
+for transLoop = 0, 15 do
+    tmpSphere = Sphere(sphere1:GetRadius(), sphere1:GetMeridiansCount(), sphere1:GetParallelsCount());
+    tmpSphere:Translate(0,0, 2*transLoop+3);
+    tmpSphere:SetColor(transLoop*2);
+end
+
+for RotLoop = 0, 36 do
+    tmpSphere = sphere1:Clone();
+    tmpSphere:Translate(5,0,RotLoop);
+    tmpSphere:Rotate(0,0,0, 0,0,1, 2*3.14159265/12*RotLoop);
+    tmpSphere:SetColor(RotLoop);
+end
+
+

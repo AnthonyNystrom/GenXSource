@@ -1,0 +1,6 @@
+circle_1 = Circle(0,0,1, 0,0,0,1);
+p_cen = circle_1:GetCenter();
+p_nor = circle_1:GetNormal();
+print("Circle \n",circle_1:GetRadius()," ",
+       p_cen.x," ",p_cen.y," ",p_cen.y);
+print("Normal \n",p_nor.x," ",p_nor.y," ",p_nor.z);

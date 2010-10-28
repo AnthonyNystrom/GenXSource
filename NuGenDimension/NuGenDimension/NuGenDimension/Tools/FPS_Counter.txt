@@ -1,0 +1,120 @@
+Всем привет !
+
+Вот класс, который можно использовать для расчета значения FPS. Значение усредняется либо по времени, либо по количеству кадров.
+
+FPSCounter.h
+#pragma once
+
+#include "windows.h"
+
+enum EFPSCounterAveraging
+{
+   FPS_FRAME = 0,
+   FPS_TIME  = 1
+};
+
+class CFPSCounter
+{
+public:
+            CFPSCounter (void);
+   virtual ~CFPSCounter (void);
+
+   void   SetAveraging (EFPSCounterAveraging eType, double dValue);
+   void   AddFrame     (void);
+   double GetFPS       (void);
+
+protected:
+   EFPSCounterAveraging m_eAveragingType;    // тип усреднения значения FPS
+   double               m_dAveragingValue;   // значение для параметра усреднения (количество кадров или время)
+   double               m_dFPS;              // текущее значение FPS
+   int                  m_nFrames;           // количество кадров
+
+   LARGE_INTEGER m_liFrequency; // частота таймера, тики в секунду
+   LARGE_INTEGER m_liMark;      // последняя засечка таймера, тики
+   LARGE_INTEGER m_liCounter;   // текущее значение таймера, тики
+   LARGE_INTEGER m_liTimeDiff;  // длительность интервала, тики
+};
+
+
+FPSCounter.cpp
+#include "FPSCounter.h"
+
+CFPSCounter::CFPSCounter(void) :
+   m_eAveragingType  (FPS_FRAME),
+   m_dAveragingValue (10),
+   m_dFPS            (0.0),
+   m_nFrames         (0)
+{
+   QueryPerformanceFrequency(&m_liFrequency);
+   QueryPerformanceCounter(&m_liMark);
+}
+
+CFPSCounter::~CFPSCounter(void)
+{
+}
+
+void CFPSCounter::SetAveraging(EFPSCounterAveraging eType, double dValue)
+{
+   m_eAveragingType  = eType;
+   m_dAveragingValue = dValue;
+}
+
+void CFPSCounter::AddFrame(void)
+{
+   m_nFrames++;
+   QueryPerformanceCounter(&m_liCounter);
+   m_liTimeDiff.QuadPart=m_liCounter.QuadPart-m_liMark.QuadPart;
+   double dTime=double(m_liTimeDiff.QuadPart)/double(m_liFrequency.QuadPart);
+
+   if (   m_eAveragingType == FPS_FRAME && m_nFrames >= m_dAveragingValue
+       || m_eAveragingType == FPS_TIME  &&     dTime >= m_dAveragingValue
+      )
+   {
+      m_dFPS=m_nFrames/dTime;
+      m_nFrames=0;
+      m_liMark=m_liCounter;
+   }
+}
+
+double CFPSCounter::GetFPS(void)
+{
+   return m_dFPS;
+}
+
+
+Используем примерно так
+#include "FPSCounter.h"
+
+CFPSCounter m_FPSCounter; // заводим счетчик
+
+m_FPSCounter.SetAveraging(FPS_FRAME, 100); // усреднять значение FPS по 100 кадрам
+или
+m_FPSCounter.SetAveraging(FPS_TIME, 0.5); // усреднять значение FPS каждые 0.5 секунд
+
+void Render(void) // при каждом выводе кадра
+{
+   m_FPSCounter.AddFrame(); // говорим счетчику, что готов очередной кадр
+   double dFPS=FPSCounter.GetFPS(); // получаем текущее значение FPS
+}
+
+
+
+
+
+
+
+Программное включение или отключение вертикальной синхронизации.
+
+Чтобы программно включить или выключить VSync в OpenGL, выполните следующий код:
+
+
+void set_vsync(bool enabled) // true -- VSync включен, false -- выключен
+{
+    PFNWGLSWAPINTERVALEXTPROC wglSwapInterval = NULL;
+
+    wglSwapInterval = (PFNWGLSWAPINTERVALEXTPROC) wglGetProcAddress("wglSwapIntervalEXT");
+    if ( wglSwapInterval ) wglSwapInterval(enabled ? 1 : 0);
+}
+
+
+

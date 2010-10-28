@@ -1,0 +1,375 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\Standard3D.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "FileDescription", "Standard3D DLL"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "Standard3D"
+            VALUE "LegalCopyright", "Copyright (C) 2004"
+            VALUE "OriginalFilename", "Standard3D.DLL"
+            VALUE "ProductName", "Standard3D Dynamic Link Library"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_TOOLBAR TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_BUTTON_0
+    BUTTON      ID_BUTTON_1
+    BUTTON      ID_BUTTON_2
+    BUTTON      ID_BUTTON_3
+    BUTTON      ID_BUTTON_4
+    BUTTON      ID_BUTTON_5
+    BUTTON      ID_BUTTON_6
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_TOOLBAR             BITMAP                  "toolbar.bmp"
+IDB_TLB_BMP             BITMAP                  "res\\tlb.bmp"
+IDB_CUBE                BITMAP                  "res\\cube.bmp"
+IDB_SPHERE              BITMAP                  "res\\sphere.bmp"
+IDB_CONE                BITMAP                  "res\\cone.bmp"
+IDB_CYL                 BITMAP                  "res\\cyl.bmp"
+IDB_TOR                 BITMAP                  "res\\tor.bmp"
+IDB_ELL                 BITMAP                  "res\\ell.bmp"
+IDB_SB                  BITMAP                  "res\\sb.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SPHERE_EDIT_DLG DIALOGEX 0, 0, 136, 61
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,12,41,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,70,41,50,14
+    RTEXT           "Meridians (3-36):",IDC_STATIC,5,9,84,8
+    EDITTEXT        IDC_SPH_MERID_EDIT,90,7,28,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_MERID_SPH_SPIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,118,7,11,11
+    RTEXT           "Parallels (3-36):",IDC_STATIC,7,25,82,8
+    EDITTEXT        IDC_SPH_PARAL_EDIT,90,23,28,12,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "",IDC_PARAL_SPH_SPIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,118,23,11,11
+END
+
+IDD_MERIDIANS_DLG DIALOGEX 0, 0, 136, 46
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,15,24,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,70,24,50,14
+    RTEXT           "Meridians (3-36):",IDC_STATIC,5,9,84,8
+    EDITTEXT        IDC_MERID_EDIT,90,7,28,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_MERID_SPIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,118,7,11,11
+END
+
+IDD_TORUS_EDIT_DLG DIALOGEX 0, 0, 160, 60
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Tor parameters"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,16,39,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,76,39,50,14
+    LTEXT           "Meridians1 (3-36):",IDC_STATIC,5,9,91,8
+    EDITTEXT        IDC_TOR_MERID1_EDIT,102,7,28,12,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "",IDC_TOR_MERID1_SPIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,130,7,11,11
+    RTEXT           "Meridians2 (3-36):",IDC_STATIC,4,25,89,8
+    EDITTEXT        IDC_TOR_MERID2_EDIT,102,23,28,12,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "",IDC_TOR_MERID2_SPIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,130,23,11,11
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_SPHERE_EDIT_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 129
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 54
+    END
+
+    IDD_MERIDIANS_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 129
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 39
+    END
+
+    IDD_TORUS_EDIT_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 153
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 53
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_MENU_STRING         "3D primitives"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STBAR_ZERO          "Box"
+    IDS_TOOLTIP_ZERO        "Box"
+    IDS_STBAR_FIRST         "Sphere"
+    IDS_STBAR_SECOND        "Cylinder"
+    IDS_TOOLTIP_FIRST       "Sphere"
+    IDS_TOOLTIP_SECOND      "Cylinder"
+    IDS_STBAR_THIRD         "Cone"
+    IDS_STBAR_FOURTH        "Torus"
+    IDS_TOOLTIP_THIRD       "Cone"
+    IDS_TOOLTIP_FOURTH      "Torus"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STBAR_FIVETH        "Ellipsoid"
+    IDS_TOOLTIP_FIVETH      "Ellipsoid"
+    IDS_STBAR_SIXTH         "Spheric band"
+    IDS_TOOLTIP_SIXTH       "Spheric band"
+    IDS_CENTER              "Center"
+    IDS_RADIUS              "Radius"
+    IDS_BOX_ENTER_BASE_PNT  "Enter base point"
+    IDS_ERROR_ZERO_RAD      "Error: zero radius"
+    IDS_FIRST_AXE_PNT       "First axe point"
+    IDS_SECOND_AXE_PNT      "Second axe point"
+    IDS_BOX_X_SIZE          "Enter X size"
+    IDS_ERROR_ZERO_LENGTH   "Error: zero length"
+    IDS_RADIUS_1            "First radius"
+    IDS_RADIUS_2            "Second radius"
+    IDS_BOX_Y_SIZE          "Enter Y size"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ERROR_ZERO_BOTH_RADS "Error: zero radiuses"
+    IDS_NORMAL              "Normal"
+    IDS_TOR_TOLZCHINA       "Thickness"
+    IDS_ERROR_ZERO_TOLZCHINA "Error: zero thickness"
+    IDS_BOX_Z_SIZE          "Enter Z size"
+    IDS_ERROR_ZERO_VECTOR   "Error: zero vector"
+    IDS_BASE_POINT          "Base point"
+    IDS_ENTER_NEW_SIZE      "Enter new size"
+    IDS_ERROR_ZERO_SIZE     "Error: zero size"
+    IDS_X_SIZE              "X size"
+    IDS_Y_SIZE              "Y size"
+    IDS_Z_SIZE              "Z size"
+    IDS_CYL_ENTER_FIRST_P   "Enter first axe point"
+    IDS_FIRST_COEF          "First coefficient"
+    IDS_SECOND_COEF         "Second coefficient"
+    IDS_CYL_ENTER_SEC_P     "Enter second axe point"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_COEF_IS_EQ          "Error: coefficients are equals"
+    IDS_ERROR_COEF_RANGE    "Error: coefficient must be in [-1;1]"
+    IDS_CHANGE_SPH_RAD      "Change radius"
+    IDS_CYL_ENTER_RAD       "Enter cylinder radius"
+    IDS_NEW_RADIUS          "New radius"
+    IDS_OTHER_PARAMS        "Other parameters..."
+    IDS_NEW_SIZE            "New size"
+    IDS_CHANGE_X_SIZE       "Change X size"
+    IDS_CHANGE_Y_SIZE       "Change Y size"
+    IDS_CHANGE_Z_SIZE       "Change Z size"
+    IDS_ENTER_NEW_HEIGHT    "Enter new length"
+    IDS_SPHERE_PARAMS       "Sphere parameters"
+    IDS_ELLIPSOID_PARAMS    "Ellipsoid parameters"
+    IDS_ERROR_HEIGHT_MUST_BE_POSIT "Error: length must be more then zero"
+    IDS_CONE_PARAMS         "Cone parameters"
+    IDS_CONE_ENTER_FIR_RAD  "Enter first radius"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CYL_PARAMS          "Cylinder parameters"
+    IDS_CONE_ENTER_SEC_RAD  "Enter second radius"
+    IDS_SPH_B_PARAMS        "Spheric band parameters"
+    IDS_TOR_ENTER_NORMAL    "Enter normal"
+    IDS_CHANGE_FIRST_RAD    "Change first radius"
+    IDS_CHANGE_SECOND_RAD   "Change second radius"
+    IDS_CHANGE_HEIGHT       "Change length"
+    IDS_CHANGE_F_COEF       "Change first coefficient"
+    IDS_CHANGE_S_COEF       "Change second coefficient"
+    IDS_TOR_ENTER_RAD       "Enter tor radius"
+    IDS_CHANGE_FIRST_R      "Change first radius"
+    IDS_CHANGE_SEC_R        "Change second radius"
+    IDS_NEW_HEIGHT          "New length"
+    IDS_SPH_ENTER_CENTER    "Enter center"
+    IDS_SPH_ENTER_RAD       "Enter radius"
+    IDS_ERROR_RAD_MUST_BE_POSIT "Error: radius must be more then zero"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_REDACTION           "Edit"
+    IDS_ENTER_NEW_RAD       "Enter new radius"
+    IDS_TOR_ENTER_TOLSH     "Enter tor thickness"
+    IDS_TOR_NEW_TOLSCH      "Enter new thickness"
+    IDS_ERROR_TOLS_MUST_BE_POSIT "Error: thickness must be more then zero"
+    IDS_ERROR_TOL_MUST_BE_LETTER_RAD 
+                            "Error: thickness must be less then radius"
+    IDS_TOR_NEW_TOLS        "New thickness"
+    IDS_CHANGE_TOLSH        "Chnage thickness"
+    IDS_SP_B_ENTER_F_C      "Enter first coefficient (-1 to 1)"
+    IDS_SP_B_ENTER_S_C      "Enter second coefficient (-1 to 1)"
+    IDS_SP_B_ENTER_NEW_COEF "Enter new coefficient"
+END
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\Standard3D.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,5 @@
+line1 = Line(1,2,3, 4,6,7);
+ppp = line1:GetPoint(0);
+print("First point coords \n",ppp.x," ",ppp.y," ",ppp.z);
+ppp = line1:GetPoint(1);
+print("Second point coords \n",ppp.x," ",ppp.y," ",ppp.z);
