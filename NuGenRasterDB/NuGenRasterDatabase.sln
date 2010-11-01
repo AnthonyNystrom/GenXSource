@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NuGenRasterDatabase", "NuGenRasterDatabase\NuGenRasterDatabase.csproj", "{F77921C8-B9B2-4882-B43D-04146EB64C01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsApplication1", "WindowsApplication1\WindowsApplication1.csproj", "{136E0357-98B7-4597-88B2-E7F4B8C428F2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F77921C8-B9B2-4882-B43D-04146EB64C01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F77921C8-B9B2-4882-B43D-04146EB64C01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F77921C8-B9B2-4882-B43D-04146EB64C01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F77921C8-B9B2-4882-B43D-04146EB64C01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{136E0357-98B7-4597-88B2-E7F4B8C428F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{136E0357-98B7-4597-88B2-E7F4B8C428F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{136E0357-98B7-4597-88B2-E7F4B8C428F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{136E0357-98B7-4597-88B2-E7F4B8C428F2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,182 @@
+<Configuration>
+  <SharedSolutionDisabledTemplatesManager>
+    <DisabledTemplates />
+  </SharedSolutionDisabledTemplatesManager>
+  <UserSolutionDisabledTemplatesManager>
+    <DisabledTemplates />
+  </UserSolutionDisabledTemplatesManager>
+  <FileStructureView>
+    <AutoScrollToSource>False</AutoScrollToSource>
+    <TrackCaretLocation>False</TrackCaretLocation>
+  </FileStructureView>
+  <ReFormatCode>
+    <ReorderMembers>False</ReorderMembers>
+    <OptimizeUsings>False</OptimizeUsings>
+    <RemoveRedundantThis>False</RemoveRedundantThis>
+    <ShortenReferences>False</ShortenReferences>
+  </ReFormatCode>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <EditorManager>
+    <RecentFiles>
+      <File id="136E0357-98B7-4597-88B2-E7F4B8C428F2/f:Program.cs" caret="0" scrollPosition="0|0" />
+      <File id="F77921C8-B9B2-4882-B43D-04146EB64C01/f:RasterDatabase.cs" caret="0" scrollPosition="0|0" />
+      <File id="F77921C8-B9B2-4882-B43D-04146EB64C01/f:RectangleGroup.cs" caret="0" scrollPosition="0|0" />
+      <File id="F77921C8-B9B2-4882-B43D-04146EB64C01/f:DataArea.cs" caret="0" scrollPosition="0|0" />
+      <File id="F77921C8-B9B2-4882-B43D-04146EB64C01/f:DataLayer.cs" caret="645" scrollPosition="0|12" />
+      <File id="136E0357-98B7-4597-88B2-E7F4B8C428F2/f:Form1.cs" caret="686" scrollPosition="0|3" />
+    </RecentFiles>
+  </EditorManager>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List&lt;NuGenRasterDatabase.DataLayer&gt;">
+      <Item value="ToArray" priority="0" />
+      <Item value="Add" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List&lt;NuGenRasterDatabase.DataArea&gt;">
+      <Item value="Add" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@">
+      <Item value="GetRegionData" priority="0" />
+      <Item value="GetRegionScans" priority="0" />
+      <Item value="Exclude" priority="0" />
+      <Item value="Data" priority="0" />
+      <Item value="TexCoords" priority="5" />
+      <Item value="Rect" priority="3" />
+      <Item value="X" priority="0" />
+      <Item value="Width" priority="0" />
+      <Item value="Y" priority="0" />
+      <Item value="Height" priority="0" />
+      <Item value="Add" priority="0" />
+      <Item value="Count" priority="0" />
+      <Item value="SubNodes" priority="1" />
+      <Item value="Area" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Region">
+      <Item value="GetBounds" priority="0" />
+      <Item value="Union" priority="2" />
+      <Item value="GetRegionScans" priority="2" />
+      <Item value="Complement" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NuGenRasterDatabase.DataArea">
+      <Item value="Position" priority="0" />
+      <Item value="Area" priority="10" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Point">
+      <Item value="X" priority="11" />
+      <Item value="Y" priority="6" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NuGenRasterDatabase.Area">
+      <Item value="position" priority="14" />
+      <Item value="dimensions" priority="7" />
+      <Item value="IsInside" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Size">
+      <Item value="Width" priority="6" />
+      <Item value="Height" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Rectangle">
+      <Item value="Size" priority="0" />
+      <Item value="Contains" priority="1" />
+      <Item value="Width" priority="6" />
+      <Item value="Height" priority="4" />
+      <Item value="X" priority="13" />
+      <Item value="IntersectsWith" priority="0" />
+      <Item value="Y" priority="11" />
+      <Item value="Right" priority="3" />
+      <Item value="Bottom" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.RectangleF[]">
+      <Item value="Length" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Rectangle[]">
+      <Item value="Length" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.RectangleF">
+      <Item value="X" priority="5" />
+      <Item value="Width" priority="3" />
+      <Item value="Height" priority="1" />
+      <Item value="Y" priority="1" />
+      <Item value="Right" priority="0" />
+      <Item value="Bottom" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Genetibase.RasterDatabase.Geometry.RectangleGroup">
+      <Item value="Bounds" priority="0" />
+      <Item value="BreakdownGroup" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Genetibase.RasterDatabase.Geometry.TexturedRectangle[]">
+      <Item value="Length" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Genetibase.RasterDatabase.Geometry.TexturedRectangle">
+      <Item value="Rect" priority="7" />
+      <Item value="TexCoords" priority="2" />
+      <Item value="Data" priority="1" />
+      <Item value="Equals" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Drawing.Rectangle">
+      <Item value="Empty" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Drawing.RectangleF">
+      <Item value="Empty" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:object">
+      <Item value="GetType" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Genetibase.RasterDatabase.Geometry.RectangleGroupQuadTree.GroupNode">
+      <Item value="NodeArea" priority="4" />
+      <Item value="Rectangles" priority="3" />
+      <Item value="SubNodes" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List&lt;Genetibase.RasterDatabase.Geometry.TexturedRectangle&gt;">
+      <Item value="ToArray" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List&lt;Genetibase.RasterDatabase.Geometry.RectangleGroupQuadTree.GroupNode&gt;">
+      <Item value="AddRange" priority="2" />
+      <Item value="Add" priority="0" />
+      <Item value="Count" priority="0" />
+      <Item value="ToArray" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Genetibase.RasterDatabase.DataLayer">
+      <Item value="BuildQuadTree" priority="1" />
+      <Item value="AddArea" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Genetibase.RasterDatabase.DataArea">
+      <Item value="Area" priority="20" />
+      <Item value="texCoords" priority="0" />
+      <Item value="TexCoords" priority="4" />
+      <Item value="Data" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List&lt;Genetibase.RasterDatabase.DataArea&gt;">
+      <Item value="ToArray" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Genetibase.RasterDatabase.Geometry.RectangleGroupQuadTree">
+      <Item value="GetNodes" priority="2" />
+      <Item value="Depth" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Genetibase.RasterDatabase.RasterDatabase">
+      <Item value="AddLayer" priority="0" />
+      <Item value="Layers" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Single">
+      <Item value="MinValue" priority="1" />
+      <Item value="MaxValue" priority="1" />
+      <Item value="NaN" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Graphics">
+      <Item value="ScaleTransform" priority="0" />
+      <Item value="DrawRectangle" priority="2" />
+      <Item value="Flush" priority="0" />
+      <Item value="Dispose" priority="0" />
+      <Item value="FillRectangle" priority="1" />
+      <Item value="DrawImage" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.PictureBox">
+      <Item value="Image" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Image">
+      <Item value="Width" priority="1" />
+      <Item value="Height" priority="1" />
+      <Item value="Save" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>
