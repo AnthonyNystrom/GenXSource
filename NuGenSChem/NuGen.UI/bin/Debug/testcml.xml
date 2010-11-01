@@ -1,0 +1,20 @@
+<cml>
+  <molecule xmlns="http://www.xml-cml.org/schema/cml2/core">
+    <atomArray>
+      <atom id="a1" elementType="C" x2="9.9" y2="-4.55" hydrogenCount="3"/>
+      <atom id="a2" elementType="C" x2="9.9" y2="-10.55" hydrogenCount="3"/>
+      <atom id="a3" elementType="C" x2="11.45" y2="-12.5" hydrogenCount="3"/>
+      <atom id="a4" elementType="C" x2="14.45" y2="-12.5" hydrogenCount="3"/>
+      <atom id="a5" elementType="C" x2="16.9" y2="-11.3" hydrogenCount="3"/>
+      <atom id="a6" elementType="C" x2="14.65" y2="-7.40288568297003" hydrogenCount="3"/>
+      <atom id="a7" elementType="C" x2="11.9" y2="-5.2" hydrogenCount="3"/>
+      <atom id="a8" elementType="C" x2="9.30192378864668" y2="-3.7" hydrogenCount="3"/>
+    </atomArray>
+    <bondArray>
+      <bond id="b1" atomRefs2="a1 a2" order="1"/>
+      <bond id="b2" atomRefs2="a3 a4" order="1"/>
+      <bond id="b3" atomRefs2="a5 a6" order="1"/>
+      <bond id="b4" atomRefs2="a7 a8" order="1"/>
+    </bondArray>
+  </molecule>
+</cml>

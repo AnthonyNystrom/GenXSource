@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NuGen.UI", "NuGen.UI\NuGen.UI.csproj", "{3230E2D4-CE73-48A0-9BC8-0F1E03B99F80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genetibase.Chem.NuGenSChem", "Genetibase.Chem.NuGenSChem\Genetibase.Chem.NuGenSChem.csproj", "{43A810E7-5F2B-4F93-9C6C-631B687FF90B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1B29AC63-B032-4710-A7C8-B4C6C69D331B} = {1B29AC63-B032-4710-A7C8-B4C6C69D331B}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genetibase.UI.NuGenInterface", "..\NuGenInterface\Genetibase.UI.NuGenInterface.csproj", "{1B29AC63-B032-4710-A7C8-B4C6C69D331B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3230E2D4-CE73-48A0-9BC8-0F1E03B99F80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3230E2D4-CE73-48A0-9BC8-0F1E03B99F80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3230E2D4-CE73-48A0-9BC8-0F1E03B99F80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3230E2D4-CE73-48A0-9BC8-0F1E03B99F80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43A810E7-5F2B-4F93-9C6C-631B687FF90B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43A810E7-5F2B-4F93-9C6C-631B687FF90B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43A810E7-5F2B-4F93-9C6C-631B687FF90B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43A810E7-5F2B-4F93-9C6C-631B687FF90B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B29AC63-B032-4710-A7C8-B4C6C69D331B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B29AC63-B032-4710-A7C8-B4C6C69D331B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B29AC63-B032-4710-A7C8-B4C6C69D331B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B29AC63-B032-4710-A7C8-B4C6C69D331B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

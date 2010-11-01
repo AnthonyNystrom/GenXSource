@@ -1,0 +1,293 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{43A810E7-5F2B-4F93-9C6C-631B687FF90B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Genetibase.Chem.NuGenSChem</RootNamespace>
+    <AssemblyName>Genetibase.Chem.NuGenSChem</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DebugTools, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DebugTools\DebugTools\bin\Debug\DebugTools.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CatalogWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditorPane.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FileExtFilter.cs" />
+    <Compile Include="FileMolPreview.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainWindow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Molecule.cs" />
+    <Compile Include="MoleculeStream.cs" />
+    <Compile Include="MolSelectListener.cs" />
+    <Compile Include="NuGenEventHandler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SupportClass.cs" />
+    <Compile Include="Templates.cs" />
+    <Compile Include="TemplateSelector.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TemplSelectListener.cs" />
+    <Compile Include="ToolButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\NuGenExportPopupMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\NuGenMainPopupMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\NuGenPopupMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\NuGenViewPopupMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utility.cs" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="templ\anthracene.el" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="templ\benzene.el" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="templ\cyclobutane.el" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="templ\cycloheptane.el" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="templ\cyclohexane.el" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="templ\cyclohexane_boat.el" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="templ\cyclohexane_chair.el" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="templ\cyclooctane.el" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="templ\cyclopentadiene.el" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="templ\cyclopentane_house.el" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="templ\cyclopropane.el" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="templ\dihydroindene.el" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="templ\dioxan.el" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="templ\fluoroscene.el" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="templ\furan.el" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="templ\morpholine.el" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="templ\naphthalene.el" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="templ\pentane.el" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="templ\phenanthrene.el" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="templ\piperidine.el" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="templ\pyran.el" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="templ\pyridine.el" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="templ\pyrrolidine.el" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="templ\tetrahydrofuran.el" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TemplateSelector.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TemplateSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="templ\thiofuran.el" />
+    <EmbeddedResource Include="UI\NuGenExportPopupMenu.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenExportPopupMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\NuGenMainPopupMenu.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenMainPopupMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\NuGenViewPopupMenu.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenViewPopupMenu.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\ACharge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\AEdit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\ASelect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\ASelMenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\BDeclined.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\BDouble.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\BInclined.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\BSingle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\BTriple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\BUnknown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\BZero.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Cursor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\ECopy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\ECut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\EDialog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\EPaste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Erasor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\MainIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\MainLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Redo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Rotator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Template.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\greenarrow.png" />
+    <Content Include="Resources\greenarrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\NuGenInterface\Genetibase.UI.NuGenInterface.csproj">
+      <Project>{1B29AC63-B032-4710-A7C8-B4C6C69D331B}</Project>
+      <Name>Genetibase.UI.NuGenInterface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
