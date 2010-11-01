@@ -1,0 +1,127 @@
+using System;
+using System.Drawing;
+using System.Collections;
+using System.ComponentModel;
+using System.Windows.Forms;
+using System.Data;
+using System.Net;
+using System.IO;
+using System.Text;
+using System.Diagnostics;
+using System.Net.Sockets;
+
+namespace ghj
+{
+	/// <summary>
+	/// Summary description for sosecl.
+	/// </summary>
+	/// 
+	public delegate void AppCallBack(string RxString);
+
+	public class d
+	{
+		private  Socket SocketListener;
+		private  Socket SocketWorker;
+		private int iPortNr;
+		private AsyncCallback pfnWorkerCallBack;
+		
+		AppCallBack pfServerReceivedData;
+
+		public d(int PortNr,AppCallBack RxServer)
+		{
+			iPortNr = PortNr;
+			pfServerReceivedData=RxServer;
+		}
+
+		public void StartServer()
+		{
+			try
+			{
+				//create the listening socket...
+				SocketListener = new Socket(AddressFamily.InterNetwork,SocketType.Stream,ProtocolType.Tcp);		
+				IPEndPoint ipLocal = new IPEndPoint ( IPAddress.Any ,iPortNr);
+				//bind to local IP Address...
+				SocketListener.Bind( ipLocal );
+				//start listening...
+				SocketListener.Listen (100);
+				// create the call back for any client connections...
+				SocketListener.BeginAccept(new AsyncCallback ( OnClientConnect ),null);
+			}
+			catch(Exception se)
+			{
+				MessageBox.Show ( se.Message );
+			}
+		}
+
+		private void OnClientConnect(IAsyncResult asyn)
+		{
+			if(SocketListener == null )
+			{
+				return;
+			}
+			try
+			{
+				SocketWorker = SocketListener.EndAccept (asyn);
+				WaitForDataServerRx(SocketWorker);
+			}
+			catch(Exception se)
+			{
+				MessageBox.Show(se.Message);
+			}
+		}
+
+		private void WaitForDataServerRx(System.Net.Sockets.Socket soc)
+		{
+			try
+			{
+				if  ( pfnWorkerCallBack == null ) 
+				{
+					pfnWorkerCallBack = new AsyncCallback (OnDataReceivedServer);
+				}
+				CSocketPacket theSocPkt = new CSocketPacket ();
+				theSocPkt.thisSocket = soc;
+				// now start to listen for any data...
+				soc .BeginReceive (theSocPkt.dataBuffer ,0,theSocPkt.dataBuffer.Length ,SocketFlags.None,pfnWorkerCallBack,theSocPkt);
+			}
+			catch(Exception se)
+			{
+				MessageBox.Show(se.Message);
+			}
+		}
+		private  void OnDataReceivedServer(IAsyncResult asyn)
+		{
+			if(SocketListener == null)
+			{
+				return;
+			}
+			try
+			{
+				CSocketPacket theSockId = (CSocketPacket)asyn.AsyncState ;
+				//end receive...
+				int iRx  = 0 ;
+				iRx = theSockId.thisSocket.EndReceive (asyn);
+				char[] chars = new char[iRx +  1];
+				System.Text.Decoder d = System.Text.Encoding.UTF8.GetDecoder();
+				int charLen = d.GetChars(theSockId.dataBuffer, 0, iRx, chars, 0);
+				System.String szData = new System.String(chars);
+
+				if(pfServerReceivedData != null)
+				{
+					pfServerReceivedData(szData);
+				}
+	
+				WaitForDataServerRx(SocketWorker );
+			}
+			catch(Exception se)
+			{
+				MessageBox.Show(se.Message);
+			}
+		}
+		public class CSocketPacket
+		{
+			public System.Net.Sockets.Socket thisSocket;
+			public byte[] dataBuffer = new byte[1024];
+		}
+	}
+}
+

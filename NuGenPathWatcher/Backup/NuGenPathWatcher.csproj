@@ -1,0 +1,206 @@
+<VisualStudioProject>
+    <CSHARP
+        ProjectType = "Local"
+        ProductVersion = "7.10.3077"
+        SchemaVersion = "2.0"
+        ProjectGuid = "{2E58AB50-C0A9-4F65-97E9-4D1C11309C5D}"
+    >
+        <Build>
+            <Settings
+                ApplicationIcon = "text_view.ico"
+                AssemblyKeyContainerName = ""
+                AssemblyName = "NuGenPathWatcher"
+                AssemblyOriginatorKeyFile = ""
+                DefaultClientScript = "JScript"
+                DefaultHTMLPageLayout = "Grid"
+                DefaultTargetSchema = "IE50"
+                DelaySign = "false"
+                OutputType = "WinExe"
+                PreBuildEvent = ""
+                PostBuildEvent = ""
+                RootNamespace = "Genetibase.Debug"
+                RunPostBuildEvent = "OnBuildSuccess"
+                StartupObject = ""
+            >
+                <Config
+                    Name = "Debug"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "DEBUG;TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "true"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "true"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "false"
+                    OutputPath = "bin\Debug\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+                <Config
+                    Name = "Release"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "false"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "false"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "true"
+                    OutputPath = "bin\Release\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+            </Settings>
+            <References>
+                <Reference
+                    Name = "System"
+                    AssemblyName = "System"
+                    HintPath = "c:\WINDOWS\Microsoft.NET\Framework\v1.0.3705\System.dll"
+                />
+                <Reference
+                    Name = "System.Data"
+                    AssemblyName = "System.Data"
+                    HintPath = "c:\WINDOWS\Microsoft.NET\Framework\v1.0.3705\System.Data.dll"
+                />
+                <Reference
+                    Name = "System.Drawing"
+                    AssemblyName = "System.Drawing"
+                    HintPath = "c:\WINDOWS\Microsoft.NET\Framework\v1.0.3705\System.Drawing.dll"
+                />
+                <Reference
+                    Name = "System.Windows.Forms"
+                    AssemblyName = "System.Windows.Forms"
+                    HintPath = "c:\WINDOWS\Microsoft.NET\Framework\v1.0.3705\System.Windows.Forms.dll"
+                />
+                <Reference
+                    Name = "System.XML"
+                    AssemblyName = "System.Xml"
+                    HintPath = "c:\WINDOWS\Microsoft.NET\Framework\v1.0.3705\System.XML.dll"
+                />
+                <Reference
+                    Name = "System.Management"
+                    AssemblyName = "System.Management"
+                    HintPath = "c:\WINDOWS\Microsoft.NET\Framework\v1.0.3705\System.Management.dll"
+                />
+                <Reference
+                    Name = "System.DirectoryServices"
+                    AssemblyName = "System.DirectoryServices"
+                    HintPath = "c:\WINDOWS\Microsoft.NET\Framework\v1.0.3705\System.DirectoryServices.dll"
+                />
+                <Reference
+                    Name = "devcomponents.dotnetbar"
+                    AssemblyName = "DevComponents.DotNetBar"
+                    HintPath = "..\..\..\..\progra~1\dotnet~1\devcomponents.dotnetbar.dll"
+                    AssemblyFolderKey = "hklm\devcomponents.dotnetbar"
+                />
+                <Reference
+                    Name = "System.Design"
+                    AssemblyName = "System.Design"
+                    HintPath = "..\..\..\..\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Design.dll"
+                />
+                <Reference
+                    Name = "System.Drawing.Design"
+                    AssemblyName = "System.Drawing.Design"
+                    HintPath = "..\..\..\..\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Drawing.Design.dll"
+                />
+                <Reference
+                    Name = "janus.windows.ui.v2"
+                    AssemblyName = "Janus.Windows.UI.v2"
+                    HintPath = "..\..\..\..\program files\janus systems\controls for microsoft .net\windows forms controls v2\bin\janus.windows.ui.v2.dll"
+                    AssemblyFolderKey = "hklm\janus.windows.schedule.v2"
+                />
+                <Reference
+                    Name = "Janus.Windows.Common.v2"
+                    AssemblyName = "Janus.Windows.Common.v2"
+                    HintPath = "..\..\..\..\Program Files\Janus Systems\Controls for Microsoft .NET\Windows Forms Controls v2\Bin\Janus.Windows.Common.v2.dll"
+                    AssemblyFolderKey = "hklm\janus.windows.schedule.v2"
+                />
+            </References>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "AssemblyInfo.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "licenses.licx"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "text_view.ico"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Forms\Form1.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Forms\Form1.resx"
+                    DependentUpon = "Form1.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "lib_ext\CommBase.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "lib_int\FileWatcher.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "lib_int\miniterminal.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "lib_int\monitor.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "lib_int\NetDevice.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "lib_int\NetDevice.resx"
+                    DependentUpon = "NetDevice.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "lib_int\perfo.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "lib_int\SocketClient.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "lib_int\SocketServer.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+            </Include>
+        </Files>
+    </CSHARP>
+</VisualStudioProject>
+
