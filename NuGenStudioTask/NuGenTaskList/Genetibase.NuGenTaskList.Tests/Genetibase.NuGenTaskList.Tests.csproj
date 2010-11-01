@@ -1,0 +1,98 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E027B769-6B72-4AA5-94C9-D91C4C7AD6A8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Genetibase.NuGenTaskList.Tests</RootNamespace>
+    <AssemblyName>Genetibase.NuGenTaskList.Tests</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetMock, Version=0.7.5.0, Culture=neutral, PublicKeyToken=805ea88df19095f6">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files\DotNetMock-0.8.0\bin\DotNetMock.dll</HintPath>
+    </Reference>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="EnvDTE80, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="extensibility, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="nunit.framework, Version=2.2.7.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\TestDriven.NET 2.0\NUnit\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NuGenAZTaskTreeNodeComparerTests.cs" />
+    <Compile Include="NuGenCompletedTaskTreeNodeComparerTests.cs" />
+    <Compile Include="NuGenFolderTreeNodeTests.cs" />
+    <Compile Include="NuGenPriorityTaskTreeNodeComparerTests.cs" />
+    <Compile Include="NuGenTaskDragDropService\NuGenTaskDragDropServiceTests.After.cs" />
+    <Compile Include="NuGenTaskDragDropService\NuGenTaskDragDropServiceTests.Before.cs" />
+    <Compile Include="NuGenTaskDragDropService\NuGenTaskDragDropServiceTests.cs" />
+    <Compile Include="NuGenTaskDragDropService\NuGenTaskDragDropServiceTests.Inside.cs" />
+    <Compile Include="NuGenTaskListAddIn\NuGenTaskListAddInTests.cs" />
+    <Compile Include="NuGenTaskListAddIn\NuGenTaskListAddInTests.OnConnection.cs" />
+    <Compile Include="NuGenTaskTreeNodeTests.cs" />
+    <Compile Include="NuGenTaskTreeView\NuGenTaskTreeViewTests.AddCodeTask.cs" />
+    <Compile Include="NuGenTaskTreeView\NuGenTaskTreeViewTests.AddFolder.cs" />
+    <Compile Include="NuGenTaskTreeView\NuGenTaskTreeViewTests.AddTask.cs" />
+    <Compile Include="NuGenTaskTreeView\NuGenTaskTreeViewTests.Clear.cs" />
+    <Compile Include="NuGenTaskTreeView\NuGenTaskTreeViewTests.ClearCodeTasks.cs" />
+    <Compile Include="NuGenTaskTreeView\NuGenTaskTreeViewTests.cs" />
+    <Compile Include="NuGenTaskTreeView\NuGenTaskTreeViewTests.DeleteTask.cs" />
+    <Compile Include="NuGenTaskTreeView\NuGenTaskTreeViewTests.Mockery.cs" />
+    <Compile Include="NuGenTaskTreeView\NuGenTaskTreeViewTests.SetTaskPriority.cs" />
+    <Compile Include="NuGenTaskXmlServiceTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Genetibase.Controls\Genetibase.Controls.csproj">
+      <Project>{45800074-EE30-4DBA-82EA-AB5FC52394CF}</Project>
+      <Name>Genetibase.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Genetibase.Shared\Genetibase.Shared.csproj">
+      <Project>{A7A02558-58A0-4333-BFAF-77CB49DE17F0}</Project>
+      <Name>Genetibase.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Genetibase.NuGenTaskList\Genetibase.NuGenTaskList.csproj">
+      <Project>{85C68432-8C2D-410E-86AE-6348480EA2A5}</Project>
+      <Name>Genetibase.NuGenTaskList</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
