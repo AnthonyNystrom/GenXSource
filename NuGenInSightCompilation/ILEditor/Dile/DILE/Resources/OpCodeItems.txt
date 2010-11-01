@@ -1,0 +1,452 @@
+0
+Fills space if opcodes are patched. No meaningful operation is performed although a processing cycle can be consumed.
+1
+Signals the Common Language Infrastructure (CLI) to inform the debugger that a break point has been tripped.
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+11
+
+12
+
+13
+
+14
+
+15
+
+16
+
+17
+
+18
+
+19
+
+20
+Pushes a null reference (type O) onto the evaluation stack.
+21
+
+22
+
+23
+
+24
+
+25
+
+26
+
+27
+
+28
+
+29
+
+30
+
+31
+
+32
+
+33
+
+34
+
+35
+
+37
+Copies the current topmost value on the evaluation stack, and then pushes the copy onto the evaluation stack.
+38
+Removes the value currently on top of the evaluation stack.
+39
+Exits current method and jumps to specified method.
+40
+Calls the method indicated by the passed method descriptor.
+41
+Calls the method indicated on the evaluation stack (as a pointer to an entry point) with arguments described by a calling convention.
+42
+Returns from the current method, pushing a return value (if present) from the caller's evaluation stack onto the callee's evaluation stack.
+43
+
+44
+
+45
+
+46
+
+47
+
+48
+
+49
+
+50
+
+51
+
+52
+
+53
+
+54
+
+55
+
+56
+Unconditionally transfers control to a target instruction.
+57
+Transfers control to a target instruction if value is false, a null reference (Nothing in Visual Basic), or zero.
+58
+Transfers control to a target instruction if value is true, not null, or non-zero.
+59
+Transfers control to a target instruction if two values are equal.
+60
+Transfers control to a target instruction if the first value is greater than or equal to the second value.
+61
+Transfers control to a target instruction if the first value is greater than the second value.
+62
+Transfers control to a target instruction if the first value is less than or equal to the second value.
+63
+Transfers control to a target instruction if the first value is less than the second value.
+64
+
+65
+
+66
+
+67
+
+68
+
+69
+Implements a jump table.
+70
+
+71
+
+72
+
+73
+
+74
+
+75
+
+76
+
+77
+
+78
+
+79
+
+80
+
+81
+
+82
+
+83
+
+84
+
+85
+
+86
+
+87
+
+88
+Adds two values and pushes the result onto the evaluation stack.
+89
+Subtracts one value from another and pushes the result onto the evaluation stack.
+90
+Multiplies two values and pushes the result on the evaluation stack.
+91
+Divides two values and pushes the result as a floating-point (type F) or quotient (type int32) onto the evaluation stack.
+92
+
+93
+Divides two values and pushes the remainder onto the evaluation stack.
+94
+
+95
+Computes the bitwise AND of two values and pushes the result onto the evaluation stack.
+96
+Compute the bitwise complement of the two integer values on top of the stack and pushes the result onto the evaluation stack.
+97
+Computes the bitwise XOR of the top two values on the evaluation stack, pushing the result onto the evaluation stack.
+98
+Shifts an integer value to the left (in zeroes) by a specified number of bits, pushing the result onto the evaluation stack.
+99
+Shifts an integer value (in sign) to the right by a specified number of bits, pushing the result onto the evaluation stack.
+100
+
+101
+Negates a value and pushes the result onto the evaluation stack.
+102
+Computes the bitwise complement of the integer value on top of the stack and pushes the result onto the evaluation stack as the same type.
+103
+
+104
+
+105
+
+106
+
+107
+
+108
+
+109
+
+110
+
+111
+Calls a late-bound method on an object, pushing the return value onto the evaluation stack.
+112
+Copies the value type located at the address of an object (type &, * or natural int) to the address of the destination object (type &, * or natural int).
+113
+Copies the value type object pointed to by an address to the top of the evaluation stack.
+114
+Pushes a new object reference to a string literal stored in the metadata.
+115
+Creates a new object or a new instance of a value type, pushing an object reference (type O) onto the evaluation stack.
+116
+Attempts to cast an object passed by reference to the specified class.
+117
+Tests whether an object reference (type O) is an instance of a particular class.
+118
+
+121
+Converts the boxed representation of a value type to its unboxed form.
+122
+Throws the exception object currently on the evaluation stack.
+123
+Finds the value of a field in the object whose reference is currently on the evaluation stack.
+124
+Finds the address of a field in the object whose reference is currently on the evaluation stack.
+125
+Replaces the value stored in the field of an object reference or pointer with a new value.
+126
+Pushes the value of a static field onto the evaluation stack.
+127
+Pushes the address of a static field onto the evaluation stack.
+128
+Replaces the value of a static field with a value from the evaluation stack.
+129
+Copies a value of a specified type from the evaluation stack into a supplied memory address.
+130
+
+131
+
+132
+
+133
+
+134
+
+135
+
+136
+
+137
+
+138
+
+139
+
+140
+Converts a value type to an object reference (type O).
+141
+Pushes an object reference to a new zero-based, one-dimensional array whose elements are of a specific type onto the evaluation stack.
+142
+Pushes the number of elements of a zero-based, one-dimensional array onto the evaluation stack.
+143
+Loads the address of the array element at a specified array index onto the top of the evaluation stack as type & (managed pointer).
+144
+
+145
+
+146
+
+147
+
+148
+
+149
+
+150
+
+151
+
+152
+
+153
+
+154
+
+155
+
+156
+
+157
+
+158
+
+159
+
+160
+
+161
+
+162
+
+163
+
+164
+
+165
+
+179
+
+180
+
+181
+
+182
+
+183
+
+184
+
+185
+
+186
+
+194
+Retrieves the address (type &) embedded in a typed reference.
+195
+Throws  if value is not a finite number.
+198
+Pushes a typed reference to an instance of a specific type onto the evaluation stack.
+208
+Converts a metadata token to its runtime representation, pushing it onto the evaluation stack.
+209
+
+210
+
+211
+
+212
+
+213
+
+214
+
+215
+
+216
+
+217
+
+218
+
+219
+
+220
+Transfers control from the fault or finally clause of an exception block back to the Common Language Infrastructure (CLI) exception handler.
+221
+Exits a protected region of code, unconditionally transferring control to a specific target instruction.
+222
+
+223
+
+224
+
+248
+This is a reserved instruction.
+249
+This is a reserved instruction.
+250
+This is a reserved instruction.
+251
+This is a reserved instruction.
+252
+This is a reserved instruction.
+253
+This is a reserved instruction.
+254
+This is a reserved instruction.
+255
+This is a reserved instruction.
+-512
+Returns an unmanaged pointer to the argument list of the current method.
+-511
+Compares two values. If they are equal, the integer value 1 (int32) is pushed onto the evaluation stack; otherwise 0 (int32) is pushed onto the evaluation stack.
+-510
+Compares two values. If the first value is greater than the second, the integer value 1 (int32) is pushed onto the evaluation stack; otherwise 0 (int32) is pushed onto the evaluation stack.
+-509
+
+-508
+Compares two values. If the first value is less than the second, the integer value 1 (int32) is pushed onto the evaluation stack; otherwise 0 (int32) is pushed onto the evaluation stack.
+-507
+
+-506
+Pushes an unmanaged pointer (type natural int) to the native code implementing a specific method onto the evaluation stack.
+-505
+Pushes an unmanaged pointer (type natural int) to the native code implementing a particular virtual method associated with a specified object onto the evaluation stack.
+-503
+Loads an argument (referenced by a specified index value) onto the stack.
+-502
+Load an argument address onto the evaluation stack.
+-501
+Stores the value on top of the evaluation stack in the argument slot at a specified index.
+-500
+Loads the local variable at a specific index onto the evaluation stack.
+-499
+Loads the address of the local variable at a specific index onto the evaluation stack.
+-498
+Pops the current value from the top of the evaluation stack and stores it in a the local variable list at a specified index.
+-497
+Allocates a certain number of bytes from the local dynamic memory pool and pushes the address (a transient pointer, type *) of the first allocated byte onto the evaluation stack.
+-495
+Transfers control from the filter clause of an exception back to the Common Language Infrastructure (CLI) exception handler.
+-494
+
+-493
+
+-492
+
+-491
+Initializes all the fields of the object at a specific address to a null reference or a 0 of the appropriate primitive type.
+-490
+
+-489
+Copies a specified number bytes from a source address to a destination address.
+-488
+Initializes a specified block of memory at a specific address to a given size and initial value.
+-486
+Rethrows the current exception.
+-484
+Pushes the size, in bytes, of a supplied value type onto the evaluation stack.
+-483
+Retrieves the type token embedded in a typed reference.
+-482
+

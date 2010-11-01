@@ -1,0 +1,551 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CFA8E3DD-0804-4624-A9C2-8A359BC68D05}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ILEditor</RootNamespace>
+    <AssemblyName>ILEditor</AssemblyName>
+    <WarningLevel>4</WarningLevel>
+    <StartupObject>
+    </StartupObject>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>http://localhost/Dile/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationVersion>0.2.0.%2a</ApplicationVersion>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\NuGenBaseMenuInformation.cs" />
+    <Compile Include="Configuration\NuGenCodeEditorFontSettings.cs" />
+    <Compile Include="Configuration\NuGenDebuggerRegistryHandler.cs" />
+    <Compile Include="Configuration\NuGenExceptionInformation.cs" />
+    <Compile Include="Configuration\NuGenIChangebleFont.cs" />
+    <Compile Include="Configuration\NuGenIMenuInformation.cs" />
+    <Compile Include="Configuration\NuGenMenuFunctionShortcut.cs" />
+    <Compile Include="Configuration\NuGenPanelDisplayer.cs" />
+    <Compile Include="Configuration\NuGenSerializableFont.cs" />
+    <Compile Include="Configuration\UI\NuGenBaseSettingsDisplayer.cs" />
+    <Compile Include="Configuration\UI\NuGenDebuggingSettingsDisplayer.cs" />
+    <Compile Include="Configuration\UI\NuGenFontSettingsDisplayer.cs" />
+    <Compile Include="Configuration\UI\NuGenGeneralProjectSettingsDisplayer.cs" />
+    <Compile Include="Configuration\UI\NuGenGeneralSettingsDisplayer.cs" />
+    <Compile Include="Configuration\NuGenMenuItemShortcut.cs" />
+    <Compile Include="Configuration\UI\NuGenDisplayedDebuggingEventsDisplayer.cs" />
+    <Compile Include="Configuration\UI\NuGenProjectDebuggingSettingsDisplayer.cs" />
+    <Compile Include="Configuration\UI\NuGenProjectExceptionSettingsDisplayer.cs" />
+    <Compile Include="Configuration\UI\NuGenProjectStartupSettingsDisplayer.cs" />
+    <Compile Include="Configuration\UI\NuGenShortcutSettingsDisplayer.cs" />
+    <Compile Include="NuGenConstants.cs" />
+    <Compile Include="Controls\NuGenBreakpointLine.cs" />
+    <Compile Include="Controls\NuGenCallerLine.cs" />
+    <Compile Include="Controls\NuGenComment.cs" />
+    <Compile Include="Controls\NuGenCurrentLine.cs" />
+    <Compile Include="Controls\NuGenCustomDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\NuGenCustomListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\NuGenDefaultLine.cs" />
+    <Compile Include="Controls\NuGenExactCallerLine.cs" />
+    <Compile Include="Controls\NuGenHighlightLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\NuGenHighlightLabel.Designer.cs">
+      <DependentUpon>NuGenHighlightLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NuGenILEditorControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\NuGenILEditorControl.Designer.cs">
+      <DependentUpon>NuGenILEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NuGenBaseLineDescriptor.cs" />
+    <Compile Include="Controls\NuGenNextPossibleInstructionLine.cs" />
+    <Compile Include="Controls\NuGenOpCodeItem.cs" />
+    <Compile Include="Controls\NuGenParser.cs" />
+    <Compile Include="Controls\NuGenSettingsDisplayerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\NuGenSettingsDisplayerControl.Designer.cs">
+      <DependentUpon>NuGenSettingsDisplayerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NuGenWord.cs" />
+    <Compile Include="Debug\NuGenDebugEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Debug\NuGenDelegates.cs" />
+    <Compile Include="Debug\NuGenEnumerations.cs" />
+    <Compile Include="Debug\NuGenEvaluationContext.cs" />
+    <Compile Include="Debug\NuGenEvaluationHandlerException.cs" />
+    <Compile Include="Debug\Expressions\NuGenBaseDebugExpressionException.cs" />
+    <Compile Include="Debug\Expressions\NuGenBaseExpression.cs" />
+    <Compile Include="Debug\Expressions\NuGenCastExpression.cs" />
+    <Compile Include="Debug\Expressions\NuGenConstantExpression.cs" />
+    <Compile Include="Debug\Expressions\NuGenConstructorExpression.cs" />
+    <Compile Include="Debug\Expressions\NuGenDebugExpressionResult.cs" />
+    <Compile Include="Debug\Expressions\NuGenEvaluationException.cs" />
+    <Compile Include="Debug\Expressions\NuGenExceptionExpression.cs" />
+    <Compile Include="Debug\Expressions\NuGenIndexerExpression.cs" />
+    <Compile Include="Debug\Expressions\NuGenLocalScopeExpression.cs" />
+    <Compile Include="Debug\Expressions\NuGenOperatorExpression.cs" />
+    <Compile Include="Debug\Expressions\NuGenParser.cs" />
+    <Compile Include="Debug\Expressions\NuGenMemberExpression.cs" />
+    <Compile Include="Debug\Expressions\NuGenParserException.cs" />
+    <Compile Include="Debug\Expressions\NuGenTypeArgumentExpression.cs" />
+    <Compile Include="Debug\Expressions\NuGenTypeExpression.cs" />
+    <Compile Include="Debug\NugenMissingModuleException.cs" />
+    <Compile Include="Disassemble\NuGenAssembly.cs" />
+    <Compile Include="Disassemble\NuGenAssemblyReference.cs" />
+    <Compile Include="Disassemble\NuGenCustomAttribute.cs" />
+    <Compile Include="Disassemble\NuGenEnumerations.cs" />
+    <Compile Include="Disassemble\NuGenInMemoryMethodStream.cs" />
+    <Compile Include="Disassemble\NuGenExceptionClause.cs" />
+    <Compile Include="Disassemble\NuGenFieldDefinition.cs" />
+    <Compile Include="Disassemble\NuGenFile.cs" />
+    <Compile Include="Disassemble\NuGenGenericParameter.cs" />
+    <Compile Include="Disassemble\NuGenIHasSignature.cs" />
+    <Compile Include="Disassemble\NuGenILazyInitialized.cs" />
+    <Compile Include="Disassemble\ILCodes\NuGenArgumentILCode.cs" />
+    <Compile Include="Disassemble\ILCodes\NuGenBaseILCode.cs" />
+    <Compile Include="Disassemble\ILCodes\NuGenBaseParameterILCode.cs" />
+    <Compile Include="Disassemble\ILCodes\NuGenCalliILCode.cs" />
+    <Compile Include="Disassemble\ILCodes\NuGenCodeLine.cs" />
+    <Compile Include="Disassemble\ILCodes\NuGenFieldILCode.cs" />
+    <Compile Include="Disassemble\ILCodes\NuGenLdtokenILCode.cs" />
+    <Compile Include="Disassemble\ILCodes\NuGenLocationILCode.cs" />
+    <Compile Include="Disassemble\ILCodes\NuGenMethodILCode.cs" />
+    <Compile Include="Disassemble\ILCodes\NuGenNumberILCode.cs" />
+    <Compile Include="Disassemble\ILCodes\NuGenStringILCode.cs" />
+    <Compile Include="Disassemble\ILCodes\NuGenSwitchILCode.cs" />
+    <Compile Include="Disassemble\ILCodes\NuGenTypeILCode.cs" />
+    <Compile Include="Disassemble\ILCodes\NuGenVariableILCode.cs" />
+    <Compile Include="Disassemble\NuGenIMultiLine.cs" />
+    <Compile Include="Disassemble\NuGenInterfaceImplementation.cs" />
+    <Compile Include="Disassemble\NuGenMethodSpec.cs" />
+    <Compile Include="Disassemble\NuGenPermissionSet.cs" />
+    <Compile Include="Disassemble\NuGenTextTokenBase.cs" />
+    <Compile Include="Disassemble\NuGenTokenBase.cs" />
+    <Compile Include="Disassemble\NuGenManifestResource.cs" />
+    <Compile Include="Disassemble\NuGenMemberReference.cs" />
+    <Compile Include="Disassemble\NuGenMethodDefinition.cs" />
+    <Compile Include="Disassemble\NuGenModuleReference.cs" />
+    <Compile Include="Disassemble\NuGenModuleScope.cs" />
+    <Compile Include="Disassemble\NuGenParameter.cs" />
+    <Compile Include="Disassemble\NuGenProperty.cs" />
+    <Compile Include="Disassemble\NuGenSectionHeader.cs" />
+    <Compile Include="Disassemble\NuGenStandAloneSignature.cs" />
+    <Compile Include="Disassemble\NuGenTypeSpecification.cs" />
+    <Compile Include="Disassemble\NuGenUserString.cs" />
+    <Compile Include="Metadata\NuGenCOR_FIELD_OFFSET.cs" />
+    <Compile Include="Metadata\NuGenOpCodeGroups.cs" />
+    <Compile Include="Disassemble\NuGenProject.cs" />
+    <Compile Include="Disassemble\NuGenTypeDefinition.cs" />
+    <Compile Include="Disassemble\NuGenTypeReference.cs" />
+    <Compile Include="NuGenHelperFunctions.cs" />
+    <Compile Include="Metadata\NuGenAssemblyMetadata.cs" />
+    <Compile Include="Metadata\NuGenGuids.cs" />
+    <Compile Include="Metadata\NuGenCOR_SECATTR.cs" />
+    <Compile Include="Metadata\NuGenCorMetaDataDispenserExClass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Metadata\NuGenEnumerations.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Metadata\NuGenIHostFilter.cs" />
+    <Compile Include="Metadata\NuGenIMapToken.cs" />
+    <Compile Include="Metadata\NuGenIMetaDataAssemblyEmit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Metadata\NuGenIMetaDataAssemblyImport.cs" />
+    <Compile Include="Metadata\NuGenIMetaDataDispenserEx.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Metadata\NuGenIMetaDataEmit.cs" />
+    <Compile Include="Metadata\NuGenIMetaDataEmit2.cs" />
+    <Compile Include="Metadata\NuGenIMetaDataFilter.cs" />
+    <Compile Include="Metadata\NuGenIMetaDataImport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Metadata\NuGenIMetaDataImport2.cs" />
+    <Compile Include="Metadata\NuGenIMetaDataTables.cs" />
+    <Compile Include="Metadata\NuGenIMetaDataTables2.cs" />
+    <Compile Include="Metadata\NuGenIMetaDataValidate.cs" />
+    <Compile Include="Metadata\NuGenMetaDataDispenserEx.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Metadata\Signature\NuGenArraySignatureItem.cs" />
+    <Compile Include="Metadata\Signature\NuGenBaseSignatureItem.cs" />
+    <Compile Include="Metadata\Signature\NuGenBaseTokenSignatureItem.cs" />
+    <Compile Include="Metadata\Signature\NuGenCustomModifier.cs" />
+    <Compile Include="Metadata\Signature\NuGenElementSignatureItem.cs" />
+    <Compile Include="Metadata\Signature\NuGenEndSignatureItem.cs" />
+    <Compile Include="Metadata\Signature\NuGenFieldMarshalSignatureReader.cs" />
+    <Compile Include="Metadata\Signature\NuGenFieldSignatureReader.cs" />
+    <Compile Include="Metadata\Signature\NuGenFunctionPointerSignatureItem.cs" />
+    <Compile Include="Metadata\Signature\NuGenMarshallingDescriptorReader.cs" />
+    <Compile Include="Metadata\Signature\NuGenMashallingDescriptorItem.cs" />
+    <Compile Include="Metadata\Signature\NuGenMethodRefSignatureReader.cs" />
+    <Compile Include="Metadata\Signature\NuGenMethodSignatureReader.cs" />
+    <Compile Include="Metadata\Signature\NuGenMethodSpecSignatureReader.cs" />
+    <Compile Include="Metadata\Signature\NuGenPropertySignatureReader.cs" />
+    <Compile Include="Metadata\Signature\NuGenSignatureCompression.cs" />
+    <Compile Include="Metadata\Signature\NuGenBaseSignatureReader.cs" />
+    <Compile Include="Metadata\Signature\NuGenStandAloneSignatureReader.cs" />
+    <Compile Include="Metadata\Signature\NuGenTypeSignatureItem.cs" />
+    <Compile Include="Metadata\Signature\NuGenTypeSpecSignatureReader.cs" />
+    <Compile Include="Metadata\Signature\NuGenVarSignatureItem.cs" />
+    <Compile Include="Program.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\NuGenCustomDataGridView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenCustomDataGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\NuGenHighlightLabel.resx">
+      <DependentUpon>NuGenHighlightLabel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\NuGenILEditorControl.resx">
+      <DependentUpon>NuGenILEditorControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\NuGenSettingsDisplayerControl.resx">
+      <DependentUpon>NuGenSettingsDisplayerControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\NuGenAttachProcessDialog.resx">
+      <DependentUpon>NuGenAttachProcessDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\NuGenBasePanel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenBasePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\NuGenBreakpointsPanel.resx">
+      <DependentUpon>NuGenBreakpointsPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\NuGenCallStackPanel.resx">
+      <DependentUpon>NuGenCallStackPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\NuGenCodeEditorForm.resx">
+      <DependentUpon>NuGenCodeEditorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\NuGenDebugOutputPanel.resx">
+      <DependentUpon>NuGenDebugOutputPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\NuGenDocumentSelectorForm.resx">
+      <DependentUpon>NuGenDocumentSelectorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\NuGenExtendedMessageBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenExtendedMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\NuGenInformationPanel.resx">
+      <DependentUpon>NuGenInformationPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\NuGenModulesPanel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenModulesPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\NuGenObjectsPanel.resx">
+      <DependentUpon>NuGenObjectsPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\NuGenObjectViewer.resx">
+      <DependentUpon>NuGenObjectViewer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\NuGenProjectExplorer.resx">
+      <DependentUpon>NuGenProjectExplorer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\NuGenProjectProperties.resx">
+      <DependentUpon>NuGenProjectProperties.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\NuGenQuickSearchPanel.resx">
+      <DependentUpon>NuGenQuickSearchPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\NuGenQuickSearchSettingsForm.resx">
+      <DependentUpon>NuGenQuickSearchSettingsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuration\UI\NuGenSettingsDialog.resx">
+      <DependentUpon>NuGenSettingsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\NuGenTextDisplayer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenTextDisplayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\NuGenThreadsPanel.resx">
+      <DependentUpon>NuGenThreadsPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NuGenAssemblyLoader.cs" />
+    <Compile Include="UI\NuGenAssemblySearchOptions.cs" />
+    <Compile Include="UI\NuGenAttachProcessDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\NuGenAttachProcessDialog.Designer.cs">
+      <DependentUpon>NuGenAttachProcessDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NuGenBasePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\NuGenBreakpointsPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\NuGenBreakpointsPanel.Designer.cs">
+      <DependentUpon>NuGenBreakpointsPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NuGenCallStackPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\NuGenCallStackPanel.Designer.cs">
+      <DependentUpon>NuGenCallStackPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NuGenCodeDisplayer.cs" />
+    <Compile Include="UI\NuGenCodeEditorForm.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\NuGenCodeEditorForm.Designer.cs">
+      <DependentUpon>NuGenCodeEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NuGenCodeObjectDisplayOptions.cs" />
+    <Compile Include="UI\Debug\NuGenArgumentValueRefresher.cs" />
+    <Compile Include="UI\Debug\NuGenArrayElementRefresher.cs" />
+    <Compile Include="UI\Debug\NuGenArrayValueFormatter.cs" />
+    <Compile Include="UI\Debug\NuGenBaseEvaluationResult.cs" />
+    <Compile Include="UI\Debug\NuGenBaseValueFormatter.cs" />
+    <Compile Include="UI\Debug\NuGenBaseValueRefresher.cs" />
+    <Compile Include="UI\Debug\NuGenBoolValueFormatter.cs" />
+    <Compile Include="UI\Debug\NuGenBreakpointHandler.cs" />
+    <Compile Include="UI\Debug\NuGenBreakpointInformation.cs" />
+    <Compile Include="UI\Debug\NuGenCharValueFormatter.cs" />
+    <Compile Include="UI\Debug\NuGenDebugEventDescriptor.cs" />
+    <Compile Include="UI\Debug\NuGenDelegates.cs" />
+    <Compile Include="UI\Debug\NuGenEnumerations.cs" />
+    <Compile Include="UI\Debug\NuGenErrorValueFormatter.cs" />
+    <Compile Include="UI\Debug\NuGenEvaluationResult.cs" />
+    <Compile Include="UI\Debug\NuGenExceptionValueRefresher.cs" />
+    <Compile Include="UI\Debug\NuGenExpressionValueRefresher.cs" />
+    <Compile Include="UI\Debug\NuGenFieldValueRefresher.cs" />
+    <Compile Include="UI\Debug\NuGenFrameInformation.cs" />
+    <Compile Include="UI\Debug\NuGenFrameRefresher.cs" />
+    <Compile Include="UI\Debug\NuGenFunctionBreakpointInformation.cs" />
+    <Compile Include="UI\Debug\NuGenISimpleTypeValueFormatter.cs" />
+    <Compile Include="UI\Debug\NuGenIValueFormatter.cs" />
+    <Compile Include="UI\Debug\NuGenLocalVariableRefresher.cs" />
+    <Compile Include="UI\Debug\NuGenEvaluationHandler.cs" />
+    <Compile Include="UI\Debug\NuGenMissingModule.cs" />
+    <Compile Include="UI\Debug\NuGenMissingModuleFormatter.cs" />
+    <Compile Include="UI\Debug\NuGenNumberValueFormatter.cs" />
+    <Compile Include="UI\Debug\NuGenObjectDisplayer.cs" />
+    <Compile Include="UI\Debug\NuGenPropertyValueRefresher.cs" />
+    <Compile Include="UI\Debug\NuGenRootValueFormatter.cs" />
+    <Compile Include="UI\Debug\NuGenStaticFieldValueRefresher.cs" />
+    <Compile Include="UI\Debug\NuGenStringValueFormatter.cs" />
+    <Compile Include="UI\Debug\NuGenThisMethodValueRefresher.cs" />
+    <Compile Include="UI\Debug\NuGenTreeNodeRefresherConnection.cs" />
+    <Compile Include="UI\NuGenDebugOutputPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\NuGenDebugOutputPanel.Designer.cs">
+      <DependentUpon>NuGenDebugOutputPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Debug\NuGenTypeTreeNode.cs" />
+    <Compile Include="UI\Debug\NuGenValueDisplayer.cs" />
+    <Compile Include="UI\NuGenDelegates.cs" />
+    <Compile Include="UI\NuGenDocumentSelectorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\NuGenDocumentSelectorForm.Designer.cs">
+      <DependentUpon>NuGenDocumentSelectorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NuGenEnumerations.cs" />
+    <Compile Include="UI\NuGenExtendedMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\NuGenExtendedMessageBox.Designer.cs">
+      <DependentUpon>NuGenExtendedMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NuGenFoundItemEventArgs.cs" />
+    <Compile Include="UI\NuGenInformationPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\NuGenInformationPanel.Designer.cs">
+      <DependentUpon>NuGenInformationPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NuGenModulesPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\NuGenModulesPanel.Designer.cs">
+      <DependentUpon>NuGenModulesPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NuGenObjectsPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\NuGenObjectsPanel.Designer.cs">
+      <DependentUpon>NuGenObjectsPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NuGenObjectViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\NuGenObjectViewer.Designer.cs">
+      <DependentUpon>NuGenObjectViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\NuGenSettings.cs" />
+    <Compile Include="UI\NuGenProjectExplorer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\NuGenProjectProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\NuGenProjectProperties.Designer.cs">
+      <DependentUpon>NuGenProjectProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NuGenQuickSearch.cs" />
+    <Compile Include="UI\NuGenQuickSearchPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\NuGenQuickSearchPanel.Designer.cs">
+      <DependentUpon>NuGenQuickSearchPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NuGenQuickSearchSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\NuGenQuickSearchSettingsForm.Designer.cs">
+      <DependentUpon>NuGenQuickSearchSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\UI\NuGenSettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuration\UI\NuGenSettingsDialog.Designer.cs">
+      <DependentUpon>NuGenSettingsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NuGenShortcutConverter.cs" />
+    <Compile Include="UI\NuGenTextDisplayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\NuGenTextDisplayer.Designer.cs">
+      <DependentUpon>NuGenTextDisplayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NuGenThreadsPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\NuGenThreadsPanel.Designer.cs">
+      <DependentUpon>NuGenThreadsPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NuGenTreeViewSearcher.cs" />
+    <Compile Include="UI\NuGenUIHandler.cs" />
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="ILEditor.Debug, Version=0.2.5.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\bin\ILEditor.Debug.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Data.v3, Version=3.5.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
+    <Reference Include="Janus.Windows.Common.v3, Version=3.5.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf" />
+    <Reference Include="Janus.Windows.GridEX.v3, Version=3.5.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
+    <Reference Include="Janus.Windows.UI.v3, Version=3.5.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OpCodeNames.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OpCodeItems.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="change_log.txt" />
+    <Content Include="readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetPath)" "$(SolutionDir)bin"</PostBuildEvent>
+  </PropertyGroup>
+</Project>
