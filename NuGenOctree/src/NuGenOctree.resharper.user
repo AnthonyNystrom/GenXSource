@@ -1,0 +1,54 @@
+<Configuration>
+  <SharedSolutionDisabledTemplatesManager>
+    <DisabledTemplates />
+  </SharedSolutionDisabledTemplatesManager>
+  <UnitTestRunner>
+    <CustomStartDirectory>
+    </CustomStartDirectory>
+    <UseShadowCopy>True</UseShadowCopy>
+    <UseCustomFolder>False</UseCustomFolder>
+    <Providers />
+  </UnitTestRunner>
+  <UserSolutionDisabledTemplatesManager>
+    <DisabledTemplates />
+  </UserSolutionDisabledTemplatesManager>
+  <FileStructureView>
+    <AutoScrollToSource>False</AutoScrollToSource>
+    <TrackCaretLocation>False</TrackCaretLocation>
+  </FileStructureView>
+  <ReFormatCode>
+    <ReorderMembers>False</ReorderMembers>
+    <OptimizeUsings>False</OptimizeUsings>
+    <RemoveRedundantThis>False</RemoveRedundantThis>
+    <ShortenReferences>False</ShortenReferences>
+  </ReFormatCode>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <EditorManager>
+    <RecentFiles>
+      <File id="AB397BAF-C825-405C-8B38-10D3FAC1B2E4/f:OctreeAuxiliary.cpp" caret="5687" scrollPosition="0|162" />
+      <File id="AB397BAF-C825-405C-8B38-10D3FAC1B2E4/f:OctreeImplementation.cpp" caret="8680" scrollPosition="0|359" />
+      <File id="AB397BAF-C825-405C-8B38-10D3FAC1B2E4/f:Vector3r.cpp" caret="0" scrollPosition="0|237" />
+      <File id="AB397BAF-C825-405C-8B38-10D3FAC1B2E4/f:Vector3r.hpp" caret="2262" scrollPosition="0|102" />
+      <File id="AB397BAF-C825-405C-8B38-10D3FAC1B2E4/f:Octree_2.cpp" caret="0" scrollPosition="0|6" />
+      <File id="AB397BAF-C825-405C-8B38-10D3FAC1B2E4/f:OcTree.cpp" caret="579" scrollPosition="0|3" />
+      <File id="DF0A6918-C929-4EC4-942E-BD72FBD63EE1/f:Program.cs" caret="516" scrollPosition="0|0" />
+      <File id="AB397BAF-C825-405C-8B38-10D3FAC1B2E4/f:OcTreeVisualizer.h" caret="0" scrollPosition="0|0" />
+      <File id="AB397BAF-C825-405C-8B38-10D3FAC1B2E4/f:OcTree_.cpp" caret="0" scrollPosition="0|0" />
+      <File id="AB397BAF-C825-405C-8B38-10D3FAC1B2E4/f:OcTree.h" caret="10972" scrollPosition="0|374" />
+    </RecentFiles>
+  </EditorManager>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Qualified:@OcTree">
+      <Item value="OcTree" priority="0" />
+      <Item value="OcTreeItem" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@">
+      <Item value="Insert" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.DirectX.Vector3">
+      <Item value="Empty" priority="2" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>
