@@ -1,0 +1,649 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ActionList_LinkLabel_ActiveLinkColor" xml:space="preserve">
+    <value>Hover Color</value>
+  </data>
+  <data name="ActionList_LinkLabel_Image" xml:space="preserve">
+    <value>Link Image</value>
+  </data>
+  <data name="ActionList_LinkLabel_LinkColor" xml:space="preserve">
+    <value>Default Color</value>
+  </data>
+  <data name="ActionList_Orientation" xml:space="preserve">
+    <value>Orientation</value>
+  </data>
+  <data name="ActionList_PictureBox_DisplayMode" xml:space="preserve">
+    <value>DisplayMode</value>
+  </data>
+  <data name="ActionList_PictureBox_Image" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="ActionList_TabControl_AddTabPage" xml:space="preserve">
+    <value>Add TabPage</value>
+  </data>
+  <data name="ActionList_TabControl_RemoveTabPage" xml:space="preserve">
+    <value>Remove TabPage</value>
+  </data>
+  <data name="ActionList_TrackBar_TickStyle" xml:space="preserve">
+    <value>TickStyle</value>
+  </data>
+  <data name="ActionList_TreeView_EditNodes" xml:space="preserve">
+    <value>Edit Nodes</value>
+  </data>
+  <data name="ActionList_TreeView_ImageList" xml:space="preserve">
+    <value>ImageList</value>
+  </data>
+  <data name="Argument_InvalidTabPage" xml:space="preserve">
+    <value>Specified {0} does not belong to this {1}.</value>
+  </data>
+  <data name="Argument_OnlyControlsAcceptable" xml:space="preserve">
+    <value>System.Windows.Forms.Form and its inheritors cannot be reflected.</value>
+  </data>
+  <data name="Argument_SameControl" xml:space="preserve">
+    <value>The control cannot reflect itself.</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Blank" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Blank.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BlankText" xml:space="preserve">
+    <value>(Blank)</value>
+  </data>
+  <data name="Category_Action" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="Category_Appearance" xml:space="preserve">
+    <value>Appearance</value>
+  </data>
+  <data name="Category_Behavior" xml:space="preserve">
+    <value>Behavior</value>
+  </data>
+  <data name="Category_Data" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="Category_Layout" xml:space="preserve">
+    <value>Layout</value>
+  </data>
+  <data name="Category_Properties" xml:space="preserve">
+    <value>Properties</value>
+  </data>
+  <data name="Category_PropertyChanged" xml:space="preserve">
+    <value>Property Changed</value>
+  </data>
+  <data name="Category_Regex" xml:space="preserve">
+    <value>Regex</value>
+  </data>
+  <data name="CloseButton_Hot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CloseButton_Hot.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CloseButton_Normal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CloseButton_Normal.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CloseButton_Pressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CloseButton_Pressed.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Delete.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Description_ColorBox_SelectedColor" xml:space="preserve">
+    <value>Determines the color selected by the user.</value>
+  </data>
+  <data name="Description_ColorBox_SelectedColorChanged" xml:space="preserve">
+    <value>Occurs when the value of the SelectedColor property changes.</value>
+  </data>
+  <data name="Description_ComboBox_AutoDropDownWidth" xml:space="preserve">
+    <value>Indicates whether DropDownWidth is auto-calculated according to the content.</value>
+  </data>
+  <data name="Description_ComboBox_AutoDropDownWidthChanged" xml:space="preserve">
+    <value>Occurs when the value of the AutoDropDownWidth property changes.</value>
+  </data>
+  <data name="Description_ComboBox_ImageList" xml:space="preserve">
+    <value>Determines the ImageList to get the images to display on the combo box items.</value>
+  </data>
+  <data name="Description_ComboBox_ImageListChanged" xml:space="preserve">
+    <value>Occurs when the value of the ImageList property changes.</value>
+  </data>
+  <data name="Description_ControlReflector_ControlToReflect" xml:space="preserve">
+    <value>Determines the control to be mirrored.</value>
+  </data>
+  <data name="Description_ControlReflector_ControlToReflectChanged" xml:space="preserve">
+    <value>Occurs when the value of the ControlToReflect property changes.</value>
+  </data>
+  <data name="Description_ControlReflector_ReflectStyle" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Description_ControlReflector_ReflectStyleChanged" xml:space="preserve">
+    <value>Occurs when the value of the ReflectStyle property changes.</value>
+  </data>
+  <data name="Description_ControlReflector_Transparency" xml:space="preserve">
+    <value>Determines the transparency level for the reflected image.</value>
+  </data>
+  <data name="Description_ControlReflector_TransparencyChanged" xml:space="preserve">
+    <value>Occurs when the value of the Transparency property changes.</value>
+  </data>
+  <data name="Description_DropDown_DropDown" xml:space="preserve">
+    <value>Occurs when the popup window is about to drop down.</value>
+  </data>
+  <data name="Description_DropDown_DropDownClosed" xml:space="preserve">
+    <value>Occurs when the popup window is closed.</value>
+  </data>
+  <data name="Description_DropDown_Image" xml:space="preserve">
+    <value>Determines the image that will be displayed on the drop down control.</value>
+  </data>
+  <data name="Description_DropDown_ImageIndex" xml:space="preserve">
+    <value>Determines the index of the image in the ImageList to display on the drop down body.</value>
+  </data>
+  <data name="Description_DropDown_ImageList" xml:space="preserve">
+    <value>Determines the ImageList to get the image to display on the drop down body.</value>
+  </data>
+  <data name="Description_LinkLabel_ActiveLinkColor" xml:space="preserve">
+    <value>Determines the color of the hyperlink when the mouse is over the control.</value>
+  </data>
+  <data name="Description_LinkLabel_ActiveLinkColorChanged" xml:space="preserve">
+    <value>Occurs when the value of the ActiveLinkColor property changes.</value>
+  </data>
+  <data name="Description_LinkLabel_Image" xml:space="preserve">
+    <value>Determines the image that will be displayed on the control.</value>
+  </data>
+  <data name="Description_LinkLabel_ImageAlign" xml:space="preserve">
+    <value>Determines the alignment of the image that will be displayed on the link label.</value>
+  </data>
+  <data name="Description_LinkLabel_ImageIndex" xml:space="preserve">
+    <value>Determines the index of the image in the ImageList to display on the link label.</value>
+  </data>
+  <data name="Description_LinkLabel_ImageList" xml:space="preserve">
+    <value>Determines the ImageList to get the image to display on the link label.</value>
+  </data>
+  <data name="Description_LinkLabel_LinkColor" xml:space="preserve">
+    <value>Determines the color of the hyperlink in its default state.</value>
+  </data>
+  <data name="Description_LinkLabel_LinkColorChanged" xml:space="preserve">
+    <value>Occurs when the value of the LinkColor property changes.</value>
+  </data>
+  <data name="Description_LinkLabel_TextAlign" xml:space="preserve">
+    <value>Determines the alignment of the text that will be displayed on the link label.</value>
+  </data>
+  <data name="Description_LinkLabel_TextAlignChanged" xml:space="preserve">
+    <value>Occurs when the value of the TextAlign property changes.</value>
+  </data>
+  <data name="Description_ListBox_HotTrack" xml:space="preserve">
+    <value>Indicates whether an item under the cursor is highlighted automatically.</value>
+  </data>
+  <data name="Description_ListBox_HotTrackChanged" xml:space="preserve">
+    <value>Occurs when the value of the HotTrack property changes.</value>
+  </data>
+  <data name="Description_ListBox_ImageList" xml:space="preserve">
+    <value>Determines the ImageList to get the images to display on the list box items.</value>
+  </data>
+  <data name="Description_ListBox_ImageListChanged" xml:space="preserve">
+    <value>Occurs when the value of the ImageList property changes.</value>
+  </data>
+  <data name="Description_Orientation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Description_OrientationChanged" xml:space="preserve">
+    <value>Occurs when the value of the Orientation property changes.</value>
+  </data>
+  <data name="Description_PictureBox_DisplayMode" xml:space="preserve">
+    <value>Determines how the image is resized within the picture box.</value>
+  </data>
+  <data name="Description_PictureBox_DisplayModeChanged" xml:space="preserve">
+    <value>Occurs when the value of the DisplayMode property changes.</value>
+  </data>
+  <data name="Description_PictureBox_Image" xml:space="preserve">
+    <value>Determines the image to display within the picture box.</value>
+  </data>
+  <data name="Description_PictureBox_ImageChanged" xml:space="preserve">
+    <value>Occurs when the value of the Image property changes.</value>
+  </data>
+  <data name="Description_PopupContainer_HostControl" xml:space="preserve">
+    <value>Determines the popup window owner.</value>
+  </data>
+  <data name="Description_PopupContainer_HostControlChanged" xml:space="preserve">
+    <value>Occurs when the value of the HostControl property changed.</value>
+  </data>
+  <data name="Description_PopupContainer_PopupBorderStyle" xml:space="preserve">
+    <value>Determines the border style for the popup window.</value>
+  </data>
+  <data name="Description_PopupContainer_PopupBorderStyleChanged" xml:space="preserve">
+    <value>Occurs when the value of the PopupBorderStyle property changes.</value>
+  </data>
+  <data name="Description_PopupContainer_PopupClosing" xml:space="preserve">
+    <value>Occurs when a popup form is closing.</value>
+  </data>
+  <data name="Description_PopupContainer_PopupSize" xml:space="preserve">
+    <value>Determines the popup window size.</value>
+  </data>
+  <data name="Description_PopupContainer_PopupSizeChanged" xml:space="preserve">
+    <value>Occurs when the value of the PopupSize property changes.</value>
+  </data>
+  <data name="Description_ProgressBar_MarqueeAnimationSpeed" xml:space="preserve">
+    <value>Determines the speed of the marquee animation in milliseconds.</value>
+  </data>
+  <data name="Description_ProgressBar_MarqueeAnimationSpeedChanged" xml:space="preserve">
+    <value>Occurs when the value of the MarqueeAnimationSpeed property changes.</value>
+  </data>
+  <data name="Description_ProgressBar_MarqueeTimerTick" xml:space="preserve">
+    <value>Occurs while marquee blocks are being rendered by the progress bar.</value>
+  </data>
+  <data name="Description_ProgressBar_Maximum" xml:space="preserve">
+    <value>Determines the maximum value this progress bar accepts.</value>
+  </data>
+  <data name="Description_ProgressBar_MaximumChanged" xml:space="preserve">
+    <value>Occurs when the value of the Maximum property changes.</value>
+  </data>
+  <data name="Description_ProgressBar_Minimum" xml:space="preserve">
+    <value>Determines the minimum value this progress bar accepts.</value>
+  </data>
+  <data name="Description_ProgressBar_MinimumChanged" xml:space="preserve">
+    <value>Occurs when the value of the Minimum property changes.</value>
+  </data>
+  <data name="Description_ProgressBar_Step" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Description_ProgressBar_StepChanged" xml:space="preserve">
+    <value>Occurs when the value of the Step property changes.</value>
+  </data>
+  <data name="Description_ProgressBar_Style" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Description_ProgressBar_StyleChanged" xml:space="preserve">
+    <value>Occurs when the value of the Style property changes.</value>
+  </data>
+  <data name="Description_ProgressBar_Value" xml:space="preserve">
+    <value>Determines the current value for the progress bar.</value>
+  </data>
+  <data name="Description_ProgressBar_ValueChanged" xml:space="preserve">
+    <value>Occurs when the current value for the progress bar changes.</value>
+  </data>
+  <data name="Description_PromptTextBox_FocusSelect" xml:space="preserve">
+    <value>Indicates whether to automatically select the text when the text box receives the focus.</value>
+  </data>
+  <data name="Description_PromptTextBox_FocusSelectChanged" xml:space="preserve">
+    <value>Occurs when the value of the FocusSelect property changes.</value>
+  </data>
+  <data name="Description_PromptTextBox_InvalidTextBackColor" xml:space="preserve">
+    <value>Determines the color used as a background color of the control when user input does not match the chosen pattern.</value>
+  </data>
+  <data name="Description_PromptTextBox_InvalidTextBackColorChanged" xml:space="preserve">
+    <value>Occurs when the value of the InvalidTextBackColor property changes.</value>
+  </data>
+  <data name="Description_PromptTextBox_Pattern" xml:space="preserve">
+    <value>Determines the pattern to verify user input against. Affects behavior only if PatternMode is set to CharacterCollection, WildcardPattern, or RegexPattern.</value>
+  </data>
+  <data name="Description_PromptTextBox_PatternChanged" xml:space="preserve">
+    <value>Occurs when the value of the Pattern property changes.</value>
+  </data>
+  <data name="Description_PromptTextBox_PatternMode" xml:space="preserve">
+    <value>Determines the type of the pattern to use.</value>
+  </data>
+  <data name="Description_PromptTextBox_PatternModeChanged" xml:space="preserve">
+    <value>Occurs when the value of the PatternMode property changes.</value>
+  </data>
+  <data name="Description_PromptTextBox_PromptFont" xml:space="preserve">
+    <value>Determines the font to use when displaying the PromptText.</value>
+  </data>
+  <data name="Description_PromptTextBox_PromptFontChanged" xml:space="preserve">
+    <value>Occurs when the value of the PromptFont property changes.</value>
+  </data>
+  <data name="Description_PromptTextBox_PromptForeColor" xml:space="preserve">
+    <value>Determines the fore color to use when displaying the PromptText.</value>
+  </data>
+  <data name="Description_PromptTextBox_PromptForeColorChanged" xml:space="preserve">
+    <value>Occurs when the value of the PromptForeColor changes.</value>
+  </data>
+  <data name="Description_PromptTextBox_PromptText" xml:space="preserve">
+    <value>Determines the prompt text to display if Text = "".</value>
+  </data>
+  <data name="Description_PromptTextBox_PromptTextChanged" xml:space="preserve">
+    <value>Occurs when the value of the PromptText property changes.</value>
+  </data>
+  <data name="Description_PromptTextBox_UseColors" xml:space="preserve">
+    <value>Indicates whether the textbox background should change to notify that user input does not match the chosed pattern.</value>
+  </data>
+  <data name="Description_PromptTextBox_UseColorsChanged" xml:space="preserve">
+    <value>Occurs when the value of the UseColors property changes.</value>
+  </data>
+  <data name="Description_PromptTextBox_ValidTextBackColor" xml:space="preserve">
+    <value>Determines the color used as a background color of the control when user input matches the chosen pattern.</value>
+  </data>
+  <data name="Description_PromptTextBox_ValidTextBackColorChanged" xml:space="preserve">
+    <value>Occurs when the value of the ValidTextBackColor property changes.</value>
+  </data>
+  <data name="Description_ScrollBar_LargeChange" xml:space="preserve">
+    <value>Determines the amount by which the scroll box position changes when the user clicks in the scroll bar or presses the PAGE UP or PAGE DOWN keys.</value>
+  </data>
+  <data name="Description_ScrollBar_LargeChangeChanged" xml:space="preserve">
+    <value>Occurs when the value of the LargeChange property changes.</value>
+  </data>
+  <data name="Description_ScrollBar_Maximum" xml:space="preserve">
+    <value>Determines the upper limit value of the scrollable range.</value>
+  </data>
+  <data name="Description_ScrollBar_MaximumChanged" xml:space="preserve">
+    <value>Occurs when the value of the Maximum property changes.</value>
+  </data>
+  <data name="Description_ScrollBar_Minimum" xml:space="preserve">
+    <value>Determines the lower limit value of the scrollable range.</value>
+  </data>
+  <data name="Description_ScrollBar_MinimumChanged" xml:space="preserve">
+    <value>Occurs when the value of the Minimum property changes.</value>
+  </data>
+  <data name="Description_ScrollBar_SmallChange" xml:space="preserve">
+    <value>Determines the amount by which the scroll box position changes when the user clicks a scroll arrow or presses an arrow key.</value>
+  </data>
+  <data name="Description_ScrollBar_SmallChangeChanged" xml:space="preserve">
+    <value>Occurs when the value of the SmallChange property changes.</value>
+  </data>
+  <data name="Description_ScrollBar_Value" xml:space="preserve">
+    <value>Determines the value that the scroll box position represents.</value>
+  </data>
+  <data name="Description_ScrollBar_ValueChanged" xml:space="preserve">
+    <value>Occurs when the value of the Value property changes.</value>
+  </data>
+  <data name="Description_Spin_Increment" xml:space="preserve">
+    <value>Determines the amount to increment or decrement on each button click.</value>
+  </data>
+  <data name="Description_Spin_IncrementChanged" xml:space="preserve">
+    <value>Occurs when the value of the Increment property changes.</value>
+  </data>
+  <data name="Description_Spin_InterceptArrowKeys" xml:space="preserve">
+    <value>Indicates whether the spin box should increment or decrement the value when the UP ARROW or DOWN ARROW keys are pressed.</value>
+  </data>
+  <data name="Description_Spin_InterceptArrowKeysChanged" xml:space="preserve">
+    <value>Occurs when the value of the InterceptArrowKeys property changes.</value>
+  </data>
+  <data name="Description_Spin_Items" xml:space="preserve">
+    <value>Contains a collection of assigned options.</value>
+  </data>
+  <data name="Description_Spin_Maximum" xml:space="preserve">
+    <value>Determines the maximum allowed value.</value>
+  </data>
+  <data name="Description_Spin_MaximumChanged" xml:space="preserve">
+    <value>Occurs when the value of the Maximum property changes.</value>
+  </data>
+  <data name="Description_Spin_Minimum" xml:space="preserve">
+    <value>Determines the minimum allowed value.</value>
+  </data>
+  <data name="Description_Spin_MinimumChanged" xml:space="preserve">
+    <value>Occurs when the value of the Minimum property changes.</value>
+  </data>
+  <data name="Description_Spin_Value" xml:space="preserve">
+    <value>Determines the current spin value.</value>
+  </data>
+  <data name="Description_Spin_ValueChanged" xml:space="preserve">
+    <value>Occurs when the value of the Value property changes.</value>
+  </data>
+  <data name="Description_TabControl_CloseButtonOnTab" xml:space="preserve">
+    <value>Determines whether to show a close button for every tab.</value>
+  </data>
+  <data name="Description_TabControl_FlatStyle" xml:space="preserve">
+    <value>Determines the tab control appearance.</value>
+  </data>
+  <data name="Description_TabControl_FlatStyleChanged" xml:space="preserve">
+    <value>Occurs when the value of the FlatStyle property changes.</value>
+  </data>
+  <data name="Description_TabControl_TabPageAdded" xml:space="preserve">
+    <value>Occurs when a new tab page is added.</value>
+  </data>
+  <data name="Description_TabControl_TabPageRemoved" xml:space="preserve">
+    <value>Occurs when a tab page is removed.</value>
+  </data>
+  <data name="Description_ToolTip_AutoPopDelay" xml:space="preserve">
+    <value>Determines the period of time the tooltip remains visible if the pointer is stationary on a control.</value>
+  </data>
+  <data name="Description_ToolTip_Font" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Description_ToolTip_MinimumTooltipSize" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Description_ToolTip_PlaceBelowControl" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Description_TrackBar_LargeChange" xml:space="preserve">
+    <value>Determines the number of positions the slider moves in response to mouse clicks or the PageUp and PageDown keys.</value>
+  </data>
+  <data name="Description_TrackBar_LargeChangeChanged" xml:space="preserve">
+    <value>Occurs when the value of the LargeChange property changes.</value>
+  </data>
+  <data name="Description_TrackBar_Maximum" xml:space="preserve">
+    <value>Determines the maximum value for the position of the slider.</value>
+  </data>
+  <data name="Description_TrackBar_MaximumChanged" xml:space="preserve">
+    <value>Occurs when the value of the Maximum property changes.</value>
+  </data>
+  <data name="Description_TrackBar_Minimum" xml:space="preserve">
+    <value>Determines the minimum value for the position of the slider.</value>
+  </data>
+  <data name="Description_TrackBar_MinimumChanged" xml:space="preserve">
+    <value>Occurs when the value of the Minimum property changes.</value>
+  </data>
+  <data name="Description_TrackBar_Orientation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Description_TrackBar_OrientationChanged" xml:space="preserve">
+    <value>Occurs when the value of the Orientation property changes.</value>
+  </data>
+  <data name="Description_TrackBar_SmallChange" xml:space="preserve">
+    <value>Determines the number of positions the slider moves in response to keyboard input (arrow keys).</value>
+  </data>
+  <data name="Description_TrackBar_SmallChangeChanged" xml:space="preserve">
+    <value>Occurs when the value of the SmallChange property changes.</value>
+  </data>
+  <data name="Description_TrackBar_TickStyle" xml:space="preserve">
+    <value>Determines where the ticks appear on the trackbar.</value>
+  </data>
+  <data name="Description_TrackBar_TickStyleChanged" xml:space="preserve">
+    <value>Occurs when the value of the TickStyle property changes.</value>
+  </data>
+  <data name="Description_TrackBar_Value" xml:space="preserve">
+    <value>Determines the position of the slider.</value>
+  </data>
+  <data name="Description_TrackBar_ValueChanged" xml:space="preserve">
+    <value>Occurs when the value of the Value property changes.</value>
+  </data>
+  <data name="Description_TreeNode_ExpandedImageIndex" xml:space="preserve">
+    <value>Determines the index of the image that is used when the node is expanded.</value>
+  </data>
+  <data name="Description_TreeNode_HasCheckBox" xml:space="preserve">
+    <value>Indicates whether this tree node has a check box.</value>
+  </data>
+  <data name="Description_TreeView_EditNodes" xml:space="preserve">
+    <value>Chooses an ImageList to use with this TreeView.</value>
+  </data>
+  <data name="Description_TreeView_ImageList" xml:space="preserve">
+    <value>Invokes the Nodes collection editor.</value>
+  </data>
+  <data name="Down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Down.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InvalidCast_NodeType" xml:space="preserve">
+    <value>The items within the Nodes collection should be compatible with Genetibase.Controls.NuGenTreeNode type.</value>
+  </data>
+  <data name="InvalidOperation_PopupSameControl" xml:space="preserve">
+    <value>Host control and popup control cannot be represented by the same instance.</value>
+  </data>
+  <data name="InvalidOperation_ProgressBarStyle" xml:space="preserve">
+    <value>Style is set to Marquee.</value>
+  </data>
+  <data name="InvalidOperation_VisualStyles" xml:space="preserve">
+    <value>Visual styles are not currently available.</value>
+  </data>
+  <data name="Text_ColorBoxPopup_Custom" xml:space="preserve">
+    <value>Custom</value>
+  </data>
+  <data name="Text_ColorBoxPopup_Other" xml:space="preserve">
+    <value>Other...</value>
+  </data>
+  <data name="Text_ColorBoxPopup_System" xml:space="preserve">
+    <value>System</value>
+  </data>
+  <data name="Text_ColorBoxPopup_Web" xml:space="preserve">
+    <value>Web</value>
+  </data>
+  <data name="Text_ToolTipInfoEditor_cancelButton" xml:space="preserve">
+    <value>&amp;Cancel</value>
+  </data>
+  <data name="Text_ToolTipInfoEditor_customSizeCheckBox" xml:space="preserve">
+    <value>Custom size</value>
+  </data>
+  <data name="Text_ToolTipInfoEditor_EditorForm" xml:space="preserve">
+    <value>ToolTip Editor</value>
+  </data>
+  <data name="Text_ToolTipInfoEditor_EditorPictureBox" xml:space="preserve">
+    <value>Double-click to select an image...</value>
+  </data>
+  <data name="Text_ToolTipInfoEditor_okButton" xml:space="preserve">
+    <value>&amp;Ok</value>
+  </data>
+  <data name="Text_ToolTipInfoEditor_xLabel" xml:space="preserve">
+    <value>x</value>
+  </data>
+  <data name="Text_TreeNodeCollectionEditor_addChildButton" xml:space="preserve">
+    <value>Add &amp;Child</value>
+  </data>
+  <data name="Text_TreeNodeCollectionEditor_addRootButton" xml:space="preserve">
+    <value>Add &amp;Root</value>
+  </data>
+  <data name="Text_TreeNodeCollectionEditor_cancelButton" xml:space="preserve">
+    <value>&amp;Cancel</value>
+  </data>
+  <data name="Text_TreeNodeCollectionEditor_EditorForm" xml:space="preserve">
+    <value>TreeNode Editor</value>
+  </data>
+  <data name="Text_TreeNodeCollectionEditor_node" xml:space="preserve">
+    <value>Node</value>
+  </data>
+  <data name="Text_TreeNodeCollectionEditor_okButton" xml:space="preserve">
+    <value>&amp;Ok</value>
+  </data>
+  <data name="Text_TreeNodeCollectionEditor_propertyDescriptionLabel" xml:space="preserve">
+    <value>{0} properties:</value>
+  </data>
+  <data name="Text_TreeNodeCollectionEditor_propertyDescriptionLabelNone" xml:space="preserve">
+    <value>Properties:</value>
+  </data>
+  <data name="Text_TreeNodeCollectionEditor_treeViewDescriptionLabel" xml:space="preserve">
+    <value>Select a node to edit:</value>
+  </data>
+  <data name="Up" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Up.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>

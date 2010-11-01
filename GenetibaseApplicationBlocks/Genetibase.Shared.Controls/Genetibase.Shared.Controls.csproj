@@ -1,0 +1,344 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7AFBEE90-61C7-46A9-95B8-67373C1C6F4D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Genetibase.Shared.Controls</RootNamespace>
+    <AssemblyName>Genetibase.Shared.Controls</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Genetibase.Shared.Controls.xml</DocumentationFile>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Genetibase.Shared.Controls.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ButtonInternals\INuGenButtonRenderer.cs" />
+    <Compile Include="NuGenButton.cs">
+    </Compile>
+    <Compile Include="Collections\INuGenTreeNodeSorter.cs" />
+    <Compile Include="Collections\NuGenAZTreeNodeComparer.cs" />
+    <Compile Include="Collections\NuGenTreeNodeSorter.cs" />
+    <Compile Include="ComponentModel\NuGenSRCategoryAttribute.cs" />
+    <Compile Include="ComponentModel\NuGenSRDescriptionAttribute.cs" />
+    <Compile Include="Design\NuGenButtonDesigner.cs" />
+    <Compile Include="Design\NuGenPictureBoxActionList.cs" />
+    <Compile Include="Design\NuGenPictureBoxDesigner.cs" />
+    <Compile Include="Design\NuGenTabCloseButtonDesigner.cs" />
+    <Compile Include="Design\NuGenTabControlActionList.cs" />
+    <Compile Include="Design\NuGenTabControlDesigner.cs" />
+    <Compile Include="Design\NuGenTabPageDesigner.cs" />
+    <Compile Include="Design\NuGenTreeNodeCollectionEditor.cs" />
+    <Compile Include="Design\NuGenTreeNodeCollectionEditor.DragDropService.cs" />
+    <Compile Include="Design\NuGenTreeNodeCollectionEditor.EditorForm.cs" />
+    <Compile Include="Design\NuGenTreeNodeCollectionEditor.ServiceProvider.cs" />
+    <Compile Include="Design\NuGenTreeNodeCollectionEditor.TreeView.cs" />
+    <Compile Include="Design\NuGenTreeViewActionList.cs" />
+    <Compile Include="Design\NuGenTreeViewDesigner.cs" />
+    <Compile Include="Enums\NuGenDisplayMode.cs" />
+    <Compile Include="Enums\NuGenDropPosition.cs" />
+    <Compile Include="Enums\NuGenProgressBarStyle.cs" />
+    <Compile Include="Enums\NuGenSpinButtonStyle.cs" />
+    <Compile Include="Enums\NuGenTabControlHitResults.cs" />
+    <Compile Include="Enums\NuGenTextBoxPatternMode.cs" />
+    <Compile Include="NuGenPaintParams.cs" />
+    <Compile Include="NuGenServiceManager.cs" />
+    <Compile Include="PictureBoxInternals\INuGenPictureBoxRenderer.cs" />
+    <Compile Include="NuGenPictureBox.cs" />
+    <Compile Include="NuGenPropertyGrid.cs" />
+    <Compile Include="PictureBoxInternals\NuGenPictureBoxRenderer.cs" />
+    <Compile Include="PictureBoxInternals\NuGenPictureBoxServiceProvider.cs" />
+    <Compile Include="ProgressBarInternals\INuGenProgressBarRenderer.cs" />
+    <Compile Include="NuGenProgressBar.cs" />
+    <Compile Include="NuGenProgressBar.MarqueeBlock.cs" />
+    <Compile Include="NuGenTabButton.cs">
+    </Compile>
+    <Compile Include="NuGenTabControl.cs" />
+    <Compile Include="NuGenTabControl.TabPageCollection.cs" />
+    <Compile Include="TabControlInternals\NuGenTabControlServiceProvider.cs" />
+    <Compile Include="NuGenTabPage.cs" />
+    <Compile Include="NuGenToolStripProgressBar.cs">
+    </Compile>
+    <Compile Include="NuGenTreeNode.cs" />
+    <Compile Include="NuGenTreeView.cs" />
+    <Compile Include="NuGenVisualStudioColorTable.cs" />
+    <Compile Include="TabControlInternals\NuGenTabRenderer.cs" />
+    <Compile Include="TreeViewInternals\NuGenTreeViewServiceProvider.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TabControlInternals\NuGenTabCloseButtonRenderer.cs" />
+    <Compile Include="TreeViewInternals\INuGenTreeViewDragDropService.cs" />
+    <Compile Include="TreeViewInternals\INuGenTreeViewSelectionService.cs" />
+    <Compile Include="TreeViewInternals\NuGenTreeViewDragDropService.cs" />
+    <Compile Include="TreeViewInternals\NuGenTreeViewSelectionService.cs" />
+    <Compile Include="TabControlInternals\NuGenTabBodyPaintParams.cs" />
+    <Compile Include="TabControlInternals\NuGenTabButtonPaintParams.cs" />
+    <Compile Include="TabControlInternals\NuGenTabCancelEventArgs.cs" />
+    <Compile Include="TabControlInternals\NuGenTabCancelEventHandler.cs" />
+    <Compile Include="TabControlInternals\NuGenTabLayoutBuilder.cs" />
+    <Compile Include="TabControlInternals\NuGenTabPagePaintParams.cs" />
+    <Compile Include="TabControlInternals\INuGenTabCloseButtonRenderer.cs" />
+    <Compile Include="NuGenButtonBase.cs">
+    </Compile>
+    <Compile Include="NuGenTabCloseButton.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TabControlInternals\INuGenTabRenderer.cs" />
+    <Compile Include="TrackBarInternals\INuGenTrackBarRenderer.cs" />
+    <Compile Include="NuGenTreeNodeConverter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Genetibase.Shared.Design\Genetibase.Shared.Design.csproj">
+      <Project>{50EE44FC-D51B-471E-A199-15621498ECA7}</Project>
+      <Name>Genetibase.Shared.Design</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Genetibase.Shared\Genetibase.Shared.csproj">
+      <Project>{A7A02558-58A0-4333-BFAF-77CB49DE17F0}</Project>
+      <Name>Genetibase.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Genetibase.Win32\Genetibase.Win32.csproj">
+      <Project>{8E94E64C-52F7-4865-ACF1-3FEC8F61B531}</Project>
+      <Name>Genetibase.Win32</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CloseButton_Hot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CloseButton_Normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ButtonInternals\INuGenButtonLayoutManager.cs" />
+    <Compile Include="ColorBoxInternals\INuGenColorsProvider.cs" />
+    <Compile Include="ControlReflectorInternals\INuGenReflectedImageGenerator.cs" />
+    <Compile Include="ControlReflectorInternals\NuGenControlReflectorServiceProvider.cs" />
+    <Compile Include="ControlReflectorInternals\NuGenReflectedImageGenerator.cs" />
+    <Compile Include="Design\NuGenBevelDesigner.cs" />
+    <Compile Include="Design\NuGenControlReflectorDesigner.cs" />
+    <Compile Include="Design\NuGenDirectorySelectorDesigner.cs" />
+    <Compile Include="Design\NuGenDropDownDesigner.cs" />
+    <Compile Include="Design\NuGenFileSelectorDesigner.cs" />
+    <Compile Include="Design\NuGenToolTipInfoEditorUI.ContentTextBox.cs" />
+    <Compile Include="Design\NuGenToolTipInfoEditorUI.DialogFlowLayoutPanel.cs">
+    </Compile>
+    <Compile Include="Design\NuGenToolTipInfoEditorUI.EditorPictureBox.cs" />
+    <Compile Include="Design\NuGenToolTipInfoEditorUI.EditorTableLayout.cs">
+    </Compile>
+    <Compile Include="Design\NuGenToolTipInfoEditorUI.HeaderTextBox.cs" />
+    <Compile Include="Design\NuGenToolTipInfoEditorUI.MainBlock.cs">
+    </Compile>
+    <Compile Include="Design\NuGenToolTipInfoEditorUI.RemarksBlock.cs">
+    </Compile>
+    <Compile Include="Design\NuGenToolTipInfoEditorUI.SizeBlock.cs" />
+    <Compile Include="Design\NuGenToolTipInfoEditorUI.SizeSpin.cs" />
+    <Compile Include="NuGenBevel.cs" />
+    <Compile Include="NuGenDirectorySelector.cs">
+    </Compile>
+    <Compile Include="NuGenFileSelector.cs">
+    </Compile>
+    <Compile Include="NuGenOpenFileSelector.cs" />
+    <Compile Include="NuGenToolTip.ToolTipControl.cs" />
+    <Compile Include="NuGenToolTipInfoConverter.cs" />
+    <Compile Include="Design\NuGenToolTipInfoEditor.cs" />
+    <Compile Include="Design\NuGenToolTipInfoEditorUI.cs">
+    </Compile>
+    <Compile Include="Enums\NuGenReflectStyle.cs" />
+    <Compile Include="INuGenControlLayoutManager.cs" />
+    <Compile Include="LinkLabelInternals\INuGenLinkLabelLayoutManager.cs" />
+    <Compile Include="LinkLabelInternals\NuGenLinkLabelLayoutManager.cs" />
+    <Compile Include="NavigationBarInternals\INuGenNavigationBarLayoutManager.cs" />
+    <Compile Include="NavigationBarInternals\INuGenNavigationBarRenderer.cs" />
+    <Compile Include="NuGenColorBox.cs" />
+    <Compile Include="NuGenColorBoxPopup.ColorListItem.cs" />
+    <Compile Include="ColorBoxInternals\NuGenColorEventArgs.cs" />
+    <Compile Include="NuGenColorBoxPopup.ColorListBox.cs" />
+    <Compile Include="NuGenColorBoxPopup.ColorPanel.cs" />
+    <Compile Include="NuGenColorBoxPopup.ColorTabControl.cs" />
+    <Compile Include="NuGenColorBoxPopup.cs">
+    </Compile>
+    <Compile Include="NuGenColorBoxPopup.CustomColorsPanel.cs" />
+    <Compile Include="NuGenColorBoxPopup.IColorCollection.cs" />
+    <Compile Include="NuGenColorBoxPopup.StdColorListBox.cs" />
+    <Compile Include="NuGenColorBoxPopup.WebColorListBox.cs" />
+    <Compile Include="ColorBoxInternals\NuGenColorsProvider.cs" />
+    <Compile Include="ComboBoxInternals\INuGenComboBoxRenderer.cs" />
+    <Compile Include="NuGenComboBox.cs">
+    </Compile>
+    <Compile Include="Design\NuGenGroupBoxDesigner.cs" />
+    <Compile Include="Design\NuGenLinkLabelActionList.cs" />
+    <Compile Include="Design\NuGenLinkLabelDesigner.cs" />
+    <Compile Include="Design\NuGenOrientationControlActionList.cs" />
+    <Compile Include="Design\NuGenOrientationControlDesigner.cs" />
+    <Compile Include="Design\NuGenPanelDesigner.cs" />
+    <Compile Include="Design\NuGenSpinDesigner.cs" />
+    <Compile Include="Design\NuGenTextBoxDesigner.cs" />
+    <Compile Include="Design\NuGenTrackBarActionList.cs" />
+    <Compile Include="Design\NuGenTrackBarDesigner.cs" />
+    <Compile Include="DropDownInternals\INuGenDropDownRenderer.cs" />
+    <Compile Include="NuGenContextMenuStrip.cs">
+    </Compile>
+    <Compile Include="NuGenControlLayoutManager.cs" />
+    <Compile Include="NuGenControlReflector.cs">
+    </Compile>
+    <Compile Include="NuGenControlReflector.MessageFilter.cs" />
+    <Compile Include="NuGenDropDown.cs">
+    </Compile>
+    <Compile Include="Enums\NuGenScrollButtonStyle.cs" />
+    <Compile Include="FontBoxInternals\INuGenFontFamiliesProvider.cs" />
+    <Compile Include="NuGenFontBox.cs" />
+    <Compile Include="FontBoxInternals\NuGenFontFamiliesProvider.cs" />
+    <Compile Include="GroupBoxInternals\INuGenGroupBoxRenderer.cs" />
+    <Compile Include="NuGenGroupBox.cs">
+    </Compile>
+    <Compile Include="INuGenItemRenderer.cs" />
+    <Compile Include="ListBoxInternals\INuGenListBoxRenderer.cs" />
+    <Compile Include="NuGenImageBoundsParams.cs" />
+    <Compile Include="NuGenImageControlServiceProvider.cs" />
+    <Compile Include="NuGenListBox.cs">
+    </Compile>
+    <Compile Include="NuGenControlBase.cs">
+    </Compile>
+    <Compile Include="NuGenItemPaintParams.cs" />
+    <Compile Include="NuGenItemParams.cs" />
+    <Compile Include="NuGenItemService.cs" />
+    <Compile Include="NuGenMenuStrip.cs">
+    </Compile>
+    <Compile Include="NuGenNavigationButton.cs">
+    </Compile>
+    <Compile Include="NuGenNavigationBar.cs" />
+    <Compile Include="NuGenNavigationButtonCollection.cs" />
+    <Compile Include="NuGenOrientationControlBase.cs" />
+    <Compile Include="NuGenStatusStrip.cs">
+    </Compile>
+    <Compile Include="NuGenTextBoundsParams.cs" />
+    <Compile Include="NuGenToolStrip.cs">
+    </Compile>
+    <Compile Include="NuGenToolTip.cs">
+    </Compile>
+    <Compile Include="NuGenToolTipInfo.cs">
+    </Compile>
+    <Compile Include="NuGenUIControlBase.cs" />
+    <Compile Include="NuGenPopupContainer.cs">
+    </Compile>
+    <Compile Include="NuGenPopupContainer.FormMessageFilter.cs" />
+    <Compile Include="NuGenPopupContainer.PopupForm.cs" />
+    <Compile Include="ProgressBarInternals\NuGenProgressBarPaintParams.cs" />
+    <Compile Include="ScrollBarInternals\INuGenScrollBarRenderer.cs" />
+    <Compile Include="NuGenScrollBar.cs">
+    </Compile>
+    <Compile Include="NuGenScrollBar.ScrollButton.cs" />
+    <Compile Include="NuGenScrollBar.ScrollPart.cs" />
+    <Compile Include="NuGenScrollBar.ScrollTrack.cs" />
+    <Compile Include="NuGenScrollBar.SizeBox.cs">
+    </Compile>
+    <Compile Include="SpinInternals\NuGenSpinButtonPaintParams.cs" />
+    <Compile Include="TabControlInternals\INuGenTabLayoutManager.cs" />
+    <Compile Include="TabControlInternals\NuGenTabLayoutManager.cs" />
+    <Compile Include="TextBoxInternals\INuGenTextBoxRenderer.cs" />
+    <Compile Include="LabelInternals\INuGenLabelRenderer.cs" />
+    <Compile Include="NuGenLabel.cs">
+    </Compile>
+    <Compile Include="LinkLabelInternals\INuGenLinkLabelRenderer.cs" />
+    <Compile Include="NuGenLinkLabel.cs">
+    </Compile>
+    <Compile Include="LinkLabelInternals\NuGenLinkLabelRenderer.cs" />
+    <Compile Include="LinkLabelInternals\NuGenLinkLabelServiceProvider.cs" />
+    <Compile Include="NuGenTextPaintParams.cs" />
+    <Compile Include="CheckBoxInternals\INuGenCheckBoxRenderer.cs" />
+    <Compile Include="NuGenCheckBox.cs">
+    </Compile>
+    <Compile Include="Design\NuGenCheckBoxDesigner.cs" />
+    <Compile Include="NuGenControlServiceProvider.cs" />
+    <Compile Include="NuGenImagePaintParams.cs" />
+    <Compile Include="PanelInternals\INuGenPanelRenderer.cs" />
+    <Compile Include="NuGenPanel.cs">
+    </Compile>
+    <Compile Include="PropertyGridInternals\INuGenPropertyGridRenderer.cs" />
+    <Compile Include="PropertyGridInternals\NuGenPropertyGridRenderer.cs" />
+    <Compile Include="PropertyGridInternals\NuGenPropertyGridServiceProvider.cs" />
+    <Compile Include="RadioButtonInternals\INuGenRadioButtonRenderer.cs" />
+    <Compile Include="NuGenRadioButton.cs">
+    </Compile>
+    <Compile Include="SpinInternals\INuGenSpinRenderer.cs" />
+    <Compile Include="NuGenOptionSpin.cs" />
+    <Compile Include="NuGenSpin.cs" />
+    <Compile Include="NuGenSpinBase.cs">
+    </Compile>
+    <Compile Include="NuGenSpinBase.SpinButton.cs">
+    </Compile>
+    <Compile Include="NuGenSpinBase.SpinEdit.cs">
+    </Compile>
+    <Compile Include="SplitContainerInternals\INuGenSplitContainerRenderer.cs" />
+    <Compile Include="NuGenSplitContainer.cs">
+    </Compile>
+    <Compile Include="NuGenTextBox.cs">
+    </Compile>
+    <Compile Include="NuGenTextBox.PromptTextBox.cs" />
+    <Compile Include="NuGenToolStripTrackBar.cs">
+    </Compile>
+    <Compile Include="NuGenTrackBar.cs">
+    </Compile>
+    <Compile Include="ToolStripInternals\INuGenToolStripRenderer.cs" />
+    <Compile Include="ToolTipInternals\INuGenToolTipLayoutManager.cs" />
+    <Compile Include="ToolTipInternals\INuGenToolTipRenderer.cs" />
+    <Compile Include="TrackBarInternals\NuGenTrackBarPaintParams.cs" />
+    <Compile Include="NuGenTrackBar.TrackButton.cs" />
+    <Compile Include="TrackBarInternals\NuGenTrackButtonPaintParams.cs" />
+    <None Include="Resources\CloseButton_Pressed.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
