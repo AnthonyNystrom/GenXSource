@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NuGenRenderOptics", "NuGenRenderOptics\NuGenRenderOptics.csproj", "{B29F7EC9-6427-42CB-B30B-81105623C468}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsApplication1", "WindowsApplication1\WindowsApplication1.csproj", "{7FFD5904-00ED-4812-95BC-26C579327DF0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B29F7EC9-6427-42CB-B30B-81105623C468}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B29F7EC9-6427-42CB-B30B-81105623C468}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B29F7EC9-6427-42CB-B30B-81105623C468}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B29F7EC9-6427-42CB-B30B-81105623C468}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FFD5904-00ED-4812-95BC-26C579327DF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FFD5904-00ED-4812-95BC-26C579327DF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FFD5904-00ED-4812-95BC-26C579327DF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FFD5904-00ED-4812-95BC-26C579327DF0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

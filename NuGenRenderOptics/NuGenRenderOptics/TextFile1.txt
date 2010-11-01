@@ -1,0 +1,5 @@
+1. Project out into Octree to determine what 2d-area of rays are needed, by what can be rejected
+by looking at the tree nodes
+2. Batch these areas into groups by sub-divison of the area(s) (or by nodes??)
+3. Project each area into the octree to generate a list of rays and nodes to search in
+4. Run each ray through the nodes it has flagged to conclusion

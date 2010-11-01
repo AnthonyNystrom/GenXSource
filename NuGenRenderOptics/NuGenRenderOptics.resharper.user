@@ -1,0 +1,320 @@
+<Configuration>
+  <SharedSolutionDisabledTemplatesManager>
+    <DisabledTemplates />
+  </SharedSolutionDisabledTemplatesManager>
+  <UnitTestRunner>
+    <CustomStartDirectory>
+    </CustomStartDirectory>
+    <UseShadowCopy>True</UseShadowCopy>
+    <UseCustomFolder>False</UseCustomFolder>
+    <Providers />
+  </UnitTestRunner>
+  <UserSolutionDisabledTemplatesManager>
+    <DisabledTemplates />
+  </UserSolutionDisabledTemplatesManager>
+  <FileStructureView>
+    <AutoScrollToSource>False</AutoScrollToSource>
+    <TrackCaretLocation>False</TrackCaretLocation>
+  </FileStructureView>
+  <ReFormatCode>
+    <ReorderMembers>False</ReorderMembers>
+    <OptimizeUsings>False</OptimizeUsings>
+    <RemoveRedundantThis>False</RemoveRedundantThis>
+    <ShortenReferences>False</ShortenReferences>
+  </ReFormatCode>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <EditorManager>
+    <RecentFiles>
+      <File id="7FFD5904-00ED-4812-95BC-26C579327DF0/f:Program.cs" caret="436" scrollPosition="0|0" />
+      <File id="B29F7EC9-6427-42CB-B30B-81105623C468/f:RayDispatcher.cs" caret="4251" scrollPosition="0|134" />
+      <File id="B29F7EC9-6427-42CB-B30B-81105623C468/f:Vector2D.cs" caret="505" scrollPosition="0|0" />
+      <File id="B29F7EC9-6427-42CB-B30B-81105623C468/f:OpticalSceneObject.cs" caret="475" scrollPosition="0|0" />
+      <File id="B29F7EC9-6427-42CB-B30B-81105623C468/f:RayGroup.cs" caret="1322" scrollPosition="0|33" />
+      <File id="B29F7EC9-6427-42CB-B30B-81105623C468/f:Light.cs" caret="797" scrollPosition="0|20" />
+      <File id="B29F7EC9-6427-42CB-B30B-81105623C468/f:PlaneSceneObject.cs" caret="824" scrollPosition="0|0" />
+      <File id="B29F7EC9-6427-42CB-B30B-81105623C468/f:PlaneD.cs" caret="3304" scrollPosition="0|72" />
+      <File id="B29F7EC9-6427-42CB-B30B-81105623C468/f:Vector3D.cs" caret="2435" scrollPosition="0|63" />
+      <File id="B29F7EC9-6427-42CB-B30B-81105623C468/f:RectangleD.cs" caret="916" scrollPosition="0|13" />
+      <File id="B29F7EC9-6427-42CB-B30B-81105623C468/f:TriangleGroupSceneObject.cs" caret="1702" scrollPosition="0|22" />
+      <File id="B29F7EC9-6427-42CB-B30B-81105623C468/f:HeightField.cs" caret="1540" scrollPosition="0|35" />
+      <File id="7FFD5904-00ED-4812-95BC-26C579327DF0/f:Form1.cs" caret="0" scrollPosition="0|0" />
+      <File id="B29F7EC9-6427-42CB-B30B-81105623C468/f:ISceneManager.cs" caret="303" scrollPosition="0|0" />
+      <File id="B29F7EC9-6427-42CB-B30B-81105623C468/f:SphereSceneObject.cs" caret="816" scrollPosition="0|20" />
+      <File id="B29F7EC9-6427-42CB-B30B-81105623C468/f:Ray.cs" caret="5601" scrollPosition="0|114" />
+      <File id="B29F7EC9-6427-42CB-B30B-81105623C468/f:HeightFieldObject.cs" caret="4056" scrollPosition="0|75" />
+      <File id="B29F7EC9-6427-42CB-B30B-81105623C468/f:SimpleSceneManager.cs" caret="2836" scrollPosition="0|56" />
+      <File id="B29F7EC9-6427-42CB-B30B-81105623C468/f:MaterialShader.cs" caret="5465" scrollPosition="0|144" />
+      <File id="B29F7EC9-6427-42CB-B30B-81105623C468/f:ViewRasterizer.cs" caret="7201" scrollPosition="0|159" />
+    </RecentFiles>
+  </EditorManager>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Qualified:NuGenRenderOptics.Vector3D">
+      <Item value="X" priority="47" />
+      <Item value="Z" priority="25" />
+      <Item value="Normalize" priority="16" />
+      <Item value="Y" priority="28" />
+      <Item value="Cross" priority="3" />
+      <Item value="Dot" priority="0" />
+      <Item value="Round" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@">
+      <Item value="X" priority="28" />
+      <Item value="Y" priority="32" />
+      <Item value="Z" priority="31" />
+      <Item value="normal" priority="1" />
+      <Item value="A" priority="3" />
+      <Item value="Length" priority="0" />
+      <Item value="LockBits" priority="0" />
+      <Item value="Height" priority="3" />
+      <Item value="Width" priority="3" />
+      <Item value="UnlockBits" priority="0" />
+      <Item value="values" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Double">
+      <Item value="NaN" priority="6" />
+      <Item value="MaxValue" priority="6" />
+      <Item value="MinValue" priority="6" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Rectangle">
+      <Item value="Left" priority="6" />
+      <Item value="Right" priority="5" />
+      <Item value="Top" priority="5" />
+      <Item value="Bottom" priority="5" />
+      <Item value="Width" priority="15" />
+      <Item value="Height" priority="15" />
+      <Item value="X" priority="4" />
+      <Item value="Y" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NuGenRenderOptics.ISceneManager">
+      <Item value="GetFirstIntersection" priority="1" />
+      <Item value="TestForContents" priority="4" />
+      <Item value="Lights" priority="0" />
+      <Item value="Ambient" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NuGenRenderOptics.Ray">
+      <Item value="origin" priority="0" />
+      <Item value="directionUV" priority="1" />
+      <Item value="maxLength" priority="0" />
+      <Item value="level" priority="0" />
+      <Item value="length" priority="1" />
+      <Item value="Trace" priority="2" />
+      <Item value="DirectionUV" priority="2" />
+      <Item value="Intensity" priority="8" />
+      <Item value="intensity" priority="2" />
+      <Item value="Length" priority="1" />
+      <Item value="MaxLength" priority="1" />
+      <Item value="scene" priority="1" />
+      <Item value="TraceRayToLight" priority="0" />
+      <Item value="Origin" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NuGenRenderOptics.MaterialShader">
+      <Item value="Shade" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List&lt;NuGenRenderOptics.IOpticalSceneObject&gt;">
+      <Item value="Add" priority="0" />
+      <Item value="Remove" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:T">
+      <Item value="Origin" priority="0" />
+      <Item value="Radius" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NuGenRenderOptics.IOpticalSceneObject">
+      <Item value="GetIntersect" priority="0" />
+      <Item value="Origin" priority="3" />
+      <Item value="Radius" priority="4" />
+      <Item value="GetNormal" priority="0" />
+      <Item value="GetTexCoord" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System">
+      <Item value="Collections" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Collections">
+      <Item value="Generic" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List&lt;NuGenRenderOptics.RayDispatch&gt;">
+      <Item value="Count" priority="1" />
+      <Item value="Add" priority="1" />
+      <Item value="Remove" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NuGenRenderOptics.RayGroup">
+      <Item value="Trace" priority="1" />
+      <Item value="dispatch" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Threading.Thread">
+      <Item value="Start" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NuGenRenderOptics.RayDispatcher">
+      <Item value="ExecutionComplete" priority="0" />
+      <Item value="QueueDispatch" priority="0" />
+      <Item value="DispatchRayGroupReq" priority="0" />
+      <Item value="ProcessedThreads" priority="0" />
+      <Item value="ProcessedRays" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.DirectX.Plane">
+      <Item value="FromPointNormal" priority="0" />
+      <Item value="FromPoints" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NuGenRenderOptics.Vector2D">
+      <Item value="Y" priority="41" />
+      <Item value="X" priority="50" />
+      <Item value="Length" priority="0" />
+      <Item value="Equals" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NuGenRenderOptics.PlaneD">
+      <Item value="DistanceToPoint" priority="3" />
+      <Item value="D" priority="0" />
+      <Item value="GetIntersectionWithLine" priority="4" />
+      <Item value="GetIntersectionWithLimitedLine" priority="2" />
+      <Item value="PlaneNormal" priority="0" />
+      <Item value="IsFrontFacting" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NuGenRenderOptics.IRayDispatch">
+      <Item value="ExecutionComplete" priority="0" />
+      <Item value="QueueDispatch" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.Queue&lt;object&gt;">
+      <Item value="Enqueue" priority="0" />
+      <Item value="Count" priority="0" />
+      <Item value="Dequeue" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NuGenRenderOptics.FrameData">
+      <Item value="Width" priority="4" />
+      <Item value="Data" priority="2" />
+      <Item value="Height" priority="1" />
+      <Item value="AALayer" priority="2" />
+      <Item value="ApplyAAFilter" priority="0" />
+      <Item value="Bg" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NuGenRenderOptics.CameraView">
+      <Item value="Centre" priority="17" />
+      <Item value="Direction" priority="5" />
+      <Item value="XUV" priority="12" />
+      <Item value="YUV" priority="8" />
+      <Item value="Corners" priority="5" />
+      <Item value="Frustum" priority="5" />
+      <Item value="Area" priority="5" />
+      <Item value="ViewArea" priority="2" />
+      <Item value="ProjectionScale" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NuGenRenderOptics.SimpleSceneManager">
+      <Item value="AddObject" priority="3" />
+      <Item value="GetFirstIntersection" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NuGenRenderOptics.ViewRasterizer">
+      <Item value="CollectData" priority="0" />
+      <Item value="ViewArea" priority="0" />
+      <Item value="Rasterize" priority="0" />
+      <Item value="Test" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:float[]">
+      <Item value="Length" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Bitmap">
+      <Item value="LockBits" priority="1" />
+      <Item value="UnlockBits" priority="0" />
+      <Item value="Save" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Imaging.BitmapData">
+      <Item value="Scan0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IntPtr">
+      <Item value="ToPointer" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.PictureBox">
+      <Item value="Image" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Graphics">
+      <Item value="DrawLine" priority="1" />
+      <Item value="DrawString" priority="0" />
+      <Item value="DrawRectangle" priority="0" />
+      <Item value="MeasureString" priority="0" />
+      <Item value="DrawImage" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NuGenRenderOptics.TriangleGroupSceneObject.Triangle">
+      <Item value="P1" priority="5" />
+      <Item value="P3" priority="2" />
+      <Item value="P2" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NuGenRenderOptics.TriangleGroupSceneObject.Triangle[]">
+      <Item value="Length" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="Format" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.TimeSpan">
+      <Item value="TotalMilliseconds" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NuGenRenderOptics.RGBA_D">
+      <Item value="G" priority="1" />
+      <Item value="A" priority="4" />
+      <Item value="Normalize" priority="4" />
+      <Item value="R" priority="8" />
+      <Item value="B" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.SizeF">
+      <Item value="Width" priority="0" />
+      <Item value="Height" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Color">
+      <Item value="R" priority="3" />
+      <Item value="G" priority="1" />
+      <Item value="B" priority="1" />
+      <Item value="A" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NuGenRenderOptics.TriangleGroupSceneObject">
+      <Item value="GetIntersect" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NuGenRenderOptics.Light">
+      <Item value="Position" priority="1" />
+      <Item value="LuminosityForPoint" priority="0" />
+      <Item value="Clr" priority="0" />
+      <Item value="Clr3D" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Image">
+      <Item value="Width" priority="0" />
+      <Item value="Height" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NuGenRenderOptics.Vector3D[]">
+      <Item value="Length" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Single">
+      <Item value="NaN" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Drawing.Imaging.ImageLockMode">
+      <Item value="ReadOnly" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Drawing.Imaging.PixelFormat">
+      <Item value="Format24bppRgb" priority="0" />
+      <Item value="Format32bppArgb" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NuGenRenderOptics.HeightFieldQTNode">
+      <Item value="position" priority="0" />
+      <Item value="IntersectRay" priority="1" />
+      <Item value="maxHeight" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.PointF">
+      <Item value="X" priority="5" />
+      <Item value="Y" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Genetibase.NuGenRenderOptics.MDX1.Rasterization.FrameData">
+      <Item value="AALayer" priority="0" />
+      <Item value="Width" priority="1" />
+      <Item value="Height" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NuGenRenderOptics.Rectangle3D">
+      <Item value="IntersectWithLine" priority="1" />
+      <Item value="Plane" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NuGenRenderOptics.Rectangle3D[]">
+      <Item value="Length" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Genetibase.NuGenRenderOptics.MDX1.HeightFields.HeightField">
+      <Item value="Sample" priority="1" />
+      <Item value="SampleShiftX" priority="1" />
+      <Item value="SampleShiftY" priority="1" />
+      <Item value="Height" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>
