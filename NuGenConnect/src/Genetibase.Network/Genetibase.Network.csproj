@@ -1,0 +1,227 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4775A580-EAB7-4B1C-8DDF-C9A3B0279404}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Genetibase.Network</RootNamespace>
+    <AssemblyName>Genetibase.Network.NuGenConnect</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\bin\Genetibase.Network.NuGenConnect.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Design\DialDLLEditor.cs" />
+    <Compile Include="Design\FlagsConverter.cs" />
+    <Compile Include="Design\FlagsEditor.cs" />
+    <Compile Include="Design\IPConverter.cs" />
+    <Compile Include="Design\IPEditor.cs" />
+    <Compile Include="Design\IPeditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\OptionsFlagsEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\ProtocolsFlagsEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\ScriptEditor.cs" />
+    <Compile Include="Design\frmNag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ras\NuGenConnect.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sockets\HttpResponseStream.cs" />
+    <Compile Include="Sockets\MyNewHeaderList.cs" />
+    <Compile Include="Sockets\MyHeaderList.cs" />
+    <Compile Include="Web\ContentRangeInfo.cs" />
+    <Compile Include="Web\Copy of HttpClient.cs" />
+    <Compile Include="Web\HttpClientRequest.cs" />
+    <Compile Include="Web\HttpClientResponse.cs" />
+    <Compile Include="Web\HttpServerRequest.cs" />
+    <Compile Include="Web\RangeInfo.cs" />
+    <Compile Include="Web\HttpMessage.cs" />
+    <Compile Include="Web\HttpRequest.cs" />
+    <Compile Include="Web\HttpResponse.cs" />
+    <Compile Include="Web\HttpServerComponent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Web\HttpServerComponent.Designer.cs">
+      <DependentUpon>HttpServerComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ras\Ras.cs" />
+    <Compile Include="Ras\RasError.cs" />
+    <Compile Include="Sockets\Buffer.cs" />
+    <Compile Include="Sockets\CompressorBase.cs" />
+    <Compile Include="Sockets\ConnectionIntercept.cs" />
+    <Compile Include="Sockets\Context.cs" />
+    <Compile Include="Sockets\ContextRFC.cs" />
+    <Compile Include="Sockets\Exception.cs" />
+    <Compile Include="Sockets\ExplicitTLSClient.cs" />
+    <Compile Include="Sockets\Global.cs" />
+    <Compile Include="Sockets\HeaderList.cs" />
+    <Compile Include="Sockets\LockableList.cs" />
+    <Compile Include="Sockets\Reply.cs" />
+    <Compile Include="Sockets\ReplyRFC.cs" />
+    <Compile Include="ResourceStrings.Designer.cs" />
+    <Compile Include="Sockets\Scheduler.cs" />
+    <Compile Include="Sockets\SchedulerOfThread.cs" />
+    <Compile Include="Sockets\SchedulerOfThreadDefault.cs" />
+    <Compile Include="Sockets\ServerIntercept.cs" />
+    <Compile Include="Sockets\ServerSocket.cs" />
+    <Compile Include="Sockets\ServerSocketSimulator.cs" />
+    <Compile Include="Sockets\ServerSocketTcp.cs" />
+    <Compile Include="Sockets\ServerSocketTLS.cs" />
+    <Compile Include="Sockets\Socket.cs" />
+    <Compile Include="Sockets\SocketSimulator.cs" />
+    <Compile Include="Sockets\SocketSimulator.DataBlockReaders.cs" />
+    <Compile Include="Sockets\SocketTCP.cs" />
+    <Compile Include="Sockets\SocketTLS.cs" />
+    <Compile Include="Sockets\Task.cs" />
+    <Compile Include="Sockets\TCPClient.cs" />
+    <Compile Include="Sockets\TcpConnection.cs" />
+    <Compile Include="Sockets\TcpPorts.cs" />
+    <Compile Include="Sockets\TcpServerBase.cs" />
+    <Compile Include="Sockets\TcpServerCmd.cs" />
+    <Compile Include="Sockets\TcpServerCmdText.cs" />
+    <Compile Include="Sockets\TextWriterIntercept.cs" />
+    <Compile Include="Sockets\TextWriterServerIntercept.cs" />
+    <Compile Include="Sockets\ThreadWithTask.cs" />
+    <Compile Include="Sockets\TLSUtilities.cs" />
+    <Compile Include="Sockets\Yarn.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Mail\Message.cs" />
+    <Compile Include="Mail\POP3.cs" />
+    <Compile Include="Mail\ReplyPOP3.cs" />
+    <Compile Include="Mail\ReplyPOP3Exception.cs" />
+    <Compile Include="Mail\ReplySMTP.cs" />
+    <Compile Include="Mail\SMTP.cs" />
+    <Compile Include="Mail\SMTPEnhancedCode.cs" />
+    <Compile Include="Sockets\Protocols\Authentication\AuthenticationBase.cs" />
+    <Compile Include="Sockets\Protocols\Authentication\AuthenticationItem.cs" />
+    <Compile Include="Sockets\Protocols\Authentication\AuthenticationManager.cs" />
+    <Compile Include="Sockets\Protocols\Authentication\AuthenticationRegistry.cs" />
+    <Compile Include="Sockets\Protocols\Authentication\BasicAuthentication.cs" />
+    <Compile Include="Sockets\Protocols\Authentication\Enums.cs" />
+    <Compile Include="Sockets\Protocols\Authentication\Exceptions.cs" />
+    <Compile Include="Sockets\Protocols\Encoding\Base64.cs" />
+    <Compile Include="Sockets\Protocols\Encoding\BinHex4.cs" />
+    <Compile Include="Sockets\Protocols\Encoding\Coder.cs" />
+    <Compile Include="Sockets\Protocols\Encoding\Decoder00E.cs" />
+    <Compile Include="Sockets\Protocols\Encoding\Decoder3To4.cs" />
+    <Compile Include="Sockets\Protocols\Encoding\DecoderBase.cs" />
+    <Compile Include="Sockets\Protocols\Encoding\DecoderBase64.cs" />
+    <Compile Include="Sockets\Protocols\Encoding\DecoderBinHex4.cs" />
+    <Compile Include="Sockets\Protocols\Encoding\DecoderUUE.cs" />
+    <Compile Include="Sockets\Protocols\Encoding\DecoderXXE.cs" />
+    <Compile Include="Sockets\Protocols\Encoding\Encoder00E.cs" />
+    <Compile Include="Sockets\Protocols\Encoding\Encoder3To4.cs" />
+    <Compile Include="Sockets\Protocols\Encoding\EncoderBase.cs" />
+    <Compile Include="Sockets\Protocols\Encoding\EncoderBase64.cs" />
+    <Compile Include="Sockets\Protocols\Encoding\EncoderBinHex4.cs" />
+    <Compile Include="Sockets\Protocols\Encoding\EncoderUUE.cs" />
+    <Compile Include="Sockets\Protocols\Encoding\EncoderXXE.cs" />
+    <Compile Include="Sockets\Protocols\Encoding\UUE.cs" />
+    <Compile Include="Sockets\Protocols\Encoding\XXE.cs" />
+    <Compile Include="Sockets\Protocols\MimeTable.cs" />
+    <Compile Include="Sockets\Protocols\ResourceStrings.Designer.cs" />
+    <Compile Include="Sockets\Protocols\URI.cs" />
+    <Compile Include="Web\Cookie.cs" />
+    <Compile Include="Web\CookieCollection.cs" />
+    <Compile Include="Web\CookieList.cs" />
+    <Compile Include="Web\CookieManager.cs" />
+    <Compile Include="Web\CustomHttpServer.cs" />
+    <Compile Include="Web\CustomSessionList.cs" />
+    <Compile Include="Web\DefaultSessionList.cs" />
+    <Compile Include="Web\Delegates.cs" />
+    <Compile Include="Web\EntityHeaderInfo.cs" />
+    <Compile Include="Web\Enums.cs" />
+    <Compile Include="Web\Exception.cs" />
+    <Compile Include="Web\Http.cs" />
+    <Compile Include="Web\HttpClient.cs" />
+    <Compile Include="Web\HttpClientRequestInfo.cs" />
+    <Compile Include="Web\HttpClientResponseInfo.cs" />
+    <Compile Include="Web\HttpRequestInfo.cs" />
+    <Compile Include="Web\HttpResponseInfo.cs" />
+    <Compile Include="Web\HttpServer.cs" />
+    <Compile Include="Web\HttpSession.cs" />
+    <Compile Include="Web\IWebRequestHandler.cs" />
+    <Compile Include="Web\NetscapeCookie.cs" />
+    <Compile Include="Web\ProxyConnectionInfo.cs" />
+    <Compile Include="Web\RequestHeaderInfo.cs" />
+    <Compile Include="Web\ResourceStrings.cs" />
+    <Compile Include="Web\ResponseHeaderInfo.cs" />
+    <Compile Include="Web\RFC2109Cookie.cs" />
+    <Compile Include="Web\RFC2965Cookie.cs" />
+    <Compile Include="Web\ServerCookie.cs" />
+    <Compile Include="Web\ServerCookies.cs" />
+    <Compile Include="Web\SimpleHttpServer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sockets\ClassDiagram.cd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Design\IPeditorForm.resx">
+      <DependentUpon>IPeditorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\OptionsFlagsEditorForm.resx">
+      <DependentUpon>OptionsFlagsEditorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\ProtocolsFlagsEditorForm.resx">
+      <DependentUpon>ProtocolsFlagsEditorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\frmNag.resx">
+      <DependentUpon>frmNag.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceStrings.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sockets\Protocols\ResourceStrings.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
