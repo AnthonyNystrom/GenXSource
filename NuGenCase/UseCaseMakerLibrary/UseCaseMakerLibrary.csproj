@@ -1,0 +1,196 @@
+﻿<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.20706</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2706309F-76DA-4C66-8E78-8165D570B166}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>UseCaseMakerLibrary</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>UseCaseMakerLibrary</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>0.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActiveActor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ActiveActors.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Actor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Actors.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonAttributes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DependencyItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GlossaryItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GlossaryItems.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Goal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Goals.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HistoryItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HistoryItems.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IdentificableObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IdentificableObjectCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IIdentificableObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenIssue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenIssues.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Package.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Packages.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PropertySorter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RelatedDocument.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RelatedDocuments.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Requirement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Requirements.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Step.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Steps.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UseCase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UseCases.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UserViewStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMLSerialization.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

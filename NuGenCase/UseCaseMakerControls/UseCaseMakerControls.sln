@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UseCaseMakerControls", "UseCaseMakerControls.csproj", "{08BAF1B1-10D0-4426-BC09-C56C98AA5A6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UseCaseMaker", "..\UseCaseMaker\UseCaseMaker.csproj", "{EC53BDAF-DAA0-4739-872B-2D3CC8B77B03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UseCaseMakerLibrary", "..\UseCaseMakerLibrary\UseCaseMakerLibrary.csproj", "{2706309F-76DA-4C66-8E78-8165D570B166}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08BAF1B1-10D0-4426-BC09-C56C98AA5A6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08BAF1B1-10D0-4426-BC09-C56C98AA5A6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08BAF1B1-10D0-4426-BC09-C56C98AA5A6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08BAF1B1-10D0-4426-BC09-C56C98AA5A6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC53BDAF-DAA0-4739-872B-2D3CC8B77B03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC53BDAF-DAA0-4739-872B-2D3CC8B77B03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC53BDAF-DAA0-4739-872B-2D3CC8B77B03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC53BDAF-DAA0-4739-872B-2D3CC8B77B03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2706309F-76DA-4C66-8E78-8165D570B166}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2706309F-76DA-4C66-8E78-8165D570B166}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2706309F-76DA-4C66-8E78-8165D570B166}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2706309F-76DA-4C66-8E78-8165D570B166}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

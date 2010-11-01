@@ -1,0 +1,132 @@
+body
+{
+	font-size: 9pt;
+	background: url(body_bg.gif) lavender fixed repeat-y left top;
+	color: darkblue;
+	font-family: Verdana, Tahoma, Arial;
+}
+.href_glossaryitem
+{
+	color: green;
+	background-color: transparent;
+	text-decoration: none;
+}
+.href_elementname
+{
+	color: red;
+	background-color: transparent;
+	text-decoration: none;
+}
+.href_elementpath
+{
+	color: gray;
+	background-color: transparent;
+	text-decoration: none;
+}
+.href_default
+{
+	color: darkblue;
+	background-color: lightsteelblue;
+	text-decoration: none;
+}
+.Table
+{
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;
+	border-bottom-style: none;
+}
+.TableCell
+{
+	border-right: white 1px solid;
+	border-top: silver 1px solid;
+	font-size: 9pt;
+	border-left: silver 1px solid;
+	color: darkblue;
+	border-bottom: white 1px solid;
+	background-repeat: repeat-y;
+	font-family: Verdana, Tahoma, Arial;
+	background-image: url(line_gainsboro_white.gif);
+	background-color: gainsboro;
+}
+.TransparentTableCell
+{
+	font-size: 9pt;
+	color: darkblue;
+	font-family: Verdana, Tahoma, Arial;
+	background-color: transparent;	
+}
+.HeaderTableCell
+{
+	border-right: lightsteelblue 1px solid;
+	border-top: lightsteelblue 1px solid;
+	font-size: 10pt;
+	font-weight: bold;
+	border-left: lightsteelblue 1px solid;
+	color: white;
+	border-bottom: lightsteelblue 1px solid;
+	background-repeat: repeat-y;
+	font-family: Verdana, Tahoma, Arial;
+	background-image: url(line_blue_steelblue.gif);
+	background-color: steelblue;	
+}
+.Title
+{
+	font-weight: bold;
+	font-size: 15pt;
+	color: darkblue;
+	font-family: Verdana, Tahoma, Arial;
+	background-color: transparent;
+	text-align: center;
+}
+.SubTitle
+{
+	font-weight: bold;
+	font-size: 12pt;
+	color: darkblue;
+	font-family: Verdana, Tahoma, Arial;
+	background-color: transparent;	
+}
+HR
+{
+	border-top: darkblue 1px solid;
+	border-bottom: white 1px solid;
+}
+A:visited
+{
+	text-decoration: none;
+}
+A:hover
+{
+	color: yellow;
+	background-color: darkblue;
+	text-decoration: none;
+}
+A:active
+{
+	text-decoration: none;
+}
+UL
+{
+	left: -24px;
+	position: relative;
+}
+.LIPackage
+{
+	list-style-position: inside;
+	left: 5px;
+	list-style-image: url(Package.gif);
+	vertical-align: middle;
+}
+.LIActor
+{
+	list-style-position: inside;
+	list-style-image: url(Actor.gif);
+	vertical-align: middle;
+}
+.LIUseCase
+{
+	list-style-position: inside;
+	list-style-image: url(UseCase.gif);
+	vertical-align: middle;
+}

@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<UCM-StringTable>
+	<Globals>
+		<NewModel>Neues Modell</NewModel>
+		<Model>Modell</Model>
+		<Actor>Akteur</Actor>
+		<Actors>Akteure</Actors>
+		<Package>Paket</Package>
+		<Packages>Pakete</Packages>
+		<UseCase>Anwendungsfall</UseCase>
+		<UseCases>Anwendungsfälle</UseCases>
+		<OpenIssues>Offene Punkte</OpenIssues>
+		<FlowOfEvents>Ereignisfluss</FlowOfEvents>
+		<Prose>Prosa</Prose>
+		<Requirements>Anforderungen</Requirements>
+		<Description>Beschreibung</Description>
+		<Notes>Notiz</Notes>
+		<RelatedDocuments>Zugehörige Dokumente</RelatedDocuments>
+		<Details>Details</Details>
+		<Priority>Priorität</Priority>
+		<Complexity>komplexität</Complexity>
+		<Implementation>Implementation</Implementation>
+		<Level>Level</Level>
+		<Status>Status</Status>
+		<AssignedTo>Zugewiesen an</AssignedTo>
+		<Release>Release</Release>
+		<Preconditions>Vorbedingung</Preconditions>
+		<Postconditions>Nachbedingung</Postconditions>
+		<ActiveActors>Aktive Akteure</ActiveActors>
+		<Primary>Primär</Primary>
+		<History>Historie</History>
+		<ModelBrowser>Modell Browser</ModelBrowser>
+		<Summary>Zusammenfassung</Summary>
+		<Identifier>Identifikation</Identifier>
+		<Owner>Eigentümer</Owner>
+		<Glossary>Glossar</Glossary>
+		<GlossaryItem>Glossar-Element</GlossaryItem>
+		<!-- Start of 0.9.6 section -->
+		<Goals>Goals</Goals>
+		<!-- End of 0.9.6 section -->		
+		<HistoryType>
+			<Item EnumName="Implementation" ListIndex="0">Implementation</Item>
+			<Item EnumName="Status" ListIndex="1">Status</Item>
+		</HistoryType>
+	</Globals>
+	<UserMessages>
+		<actorAlreadyPresent>Acteur ist schon vorhanden</actorAlreadyPresent>
+		<fileAlreadyPresent>Datei ist schon vorhanden</fileAlreadyPresent>
+		<cannotOpenFile>Datei kann nicht geöffnet werden</cannotOpenFile>
+		<exitConfirm>Wollen Sie das Programm wirklich beenden?</exitConfirm>
+		<saveBeforeExport>Das Modell muss vor dem Exportieren gespeichert werden</saveBeforeExport>
+		<htmlExportCompleted>Export abgeschlossen. Wollen Sie die HTML-Seiten ansehen?</htmlExportCompleted>
+		<xmiExportCompleted>Export abgeschlossen.</xmiExportCompleted>
+		<pdfExportCompleted>Export abgeschlossen. Wollen Sie die PDF-Datei ansehen?</pdfExportCompleted>
+		<rtfExportCompleted>Export abgeschlossen. Wollen Sie die RTF-Datei ansehen?</rtfExportCompleted>
+		<exportAsXMI>XMI 1.1 Export</exportAsXMI>
+		<exportAsPDF>PDF Export</exportAsPDF>
+		<exportAsRTF>RTF Export</exportAsRTF>
+		<saveModel>Wollen Sie das aktuelle Modell speichern?</saveModel>
+		<saveModelAs>Modell speichern unter..</saveModelAs>
+		<openModel>Modell öffnen</openModel>
+		<selectHTMLdestination>Wählen sie das Verzeichnis für die HTML-Dateien aus</selectHTMLdestination>
+		<nameAlreadyInUse>Name wird schon verwendet</nameAlreadyInUse>
+	</UserMessages>
+	<frmMain>
+		<Controls>
+			<!-- File menu items -->
+			<mnuFile>&amp;Datei</mnuFile>
+			<mnuFileNew>&amp;Neu</mnuFileNew>
+			<mnuFileOpen>&amp;Öffnen...</mnuFileOpen>
+			<mnuFileSave>&amp;Speichern</mnuFileSave>
+			<mnuFileSaveAs>Speichern &amp;unter...</mnuFileSaveAs>
+			<mnuFileExit>&amp;Beenden</mnuFileExit>
+			<!-- Edit menu items -->
+			<mnuEdit>&amp;Bearbeiten</mnuEdit>
+			<!-- Start of 0.9.5 section -->
+			<mnuEditCut>A&amp;usschneiden</mnuEditCut>
+			<mnuEditCopy>&amp;Kopieren</mnuEditCopy>
+			<mnuEditPaste>E&amp;infügen</mnuEditPaste>
+			<!-- End of 0.9.5 section -->			
+			<mnuEditAddPackage>&amp;Paket hinzufügen</mnuEditAddPackage>
+			<mnuEditRemovePackage>Paket &amp;löschen</mnuEditRemovePackage>
+			<mnuEditAddActor>A&amp;kteur hinzufügen</mnuEditAddActor>
+			<mnuEditRemoveActor>Akteur l&amp;öschen</mnuEditRemoveActor>
+			<mnuEditAddUseCase>&amp;Anwendungsfall hinzufügen</mnuEditAddUseCase>
+			<mnuEditRemoveUseCase>Anwendungsfall lö&amp;schen</mnuEditRemoveUseCase>
+			<!-- Start of 0.9.6 section -->
+			<mnuEditReorderElements>Re&amp;order elements</mnuEditReorderElements>
+			<!-- End of 0.9.6 section -->			
+			<!-- Tools menu items -->
+			<mnuTools>&amp;Tools</mnuTools>
+			<mnuToolsHtmlExport>&amp;HTML export</mnuToolsHtmlExport>
+			<mnuToolsXMIExport>&amp;XMI 1.1 export</mnuToolsXMIExport>
+			<mnuToolsPDFExport>&amp;PDF export</mnuToolsPDFExport>
+			<mnuToolsRTFExport>&amp;RTF export</mnuToolsRTFExport>
+			<mnuToolsOptions>&amp;Optionen</mnuToolsOptions>
+			<!-- Help menu items -->
+			<mnuHelp>&amp;Help</mnuHelp>
+			<mnuHelpAbout>&amp;Über...</mnuHelpAbout>
+			<!-- Model browser context menu items -->
+			<!-- Start of 0.9.5 section -->
+			<mnuCtxMBCut>A&amp;usschneiden</mnuCtxMBCut>
+			<mnuCtxMBCopy>&amp;Kopieren</mnuCtxMBCopy>
+			<mnuCtxMBPaste>E&amp;infügen</mnuCtxMBPaste>
+			<!-- End of 0.9.5 section -->			
+			<mnuCtxMBAddPackage>&amp;Paket hinzufügen</mnuCtxMBAddPackage>
+			<mnuCtxMBRemovePackage>Paket &amp;löschen</mnuCtxMBRemovePackage>
+			<mnuCtxMBAddActor>A&amp;kteur hinzufügen</mnuCtxMBAddActor>
+			<mnuCtxMBRemoveActor>Akteur l&amp;öschen</mnuCtxMBRemoveActor>
+			<mnuCtxMBAddUseCase>&amp;Anwendungsfall hinzufügen</mnuCtxMBAddUseCase>
+			<mnuCtxMBRemoveUseCase>Anwendungsfall lö&amp;schen</mnuCtxMBRemoveUseCase>
+			<!-- Start of 0.9.6 section -->
+			<mnuCtxMBReorderElements>Re&amp;order elements</mnuCtxMBReorderElements>
+			<!-- End of 0.9.6 section -->						
+			<!-- Element token context menu items -->
+			<mnuCtxETGoToDefinition>&amp;Gehe zur Definition</mnuCtxETGoToDefinition>
+			<!-- Start of 0.9.5 section -->
+			<mnuCtxETCut>A&amp;usschneiden</mnuCtxETCut>
+			<mnuCtxETCopy>&amp;Kopieren</mnuCtxETCopy>
+			<mnuCtxETPaste>E&amp;infügen</mnuCtxETPaste>
+			<!-- End of 0.9.5 section -->				
+			<!-- Other controls -->
+			<lblModelBrowser>Modell Browser</lblModelBrowser>
+			<!-- Tab pages -->
+			<!-- Main -->
+			<pgMain>Info</pgMain>
+			<lblFullPathTitle>Voller Pfad</lblFullPathTitle>
+			<lblPackagesTitle>Paket</lblPackagesTitle>
+			<lblActorsTitle>Akteure</lblActorsTitle>
+			<lblUseCasesTitle>Anwendungsfälle</lblUseCasesTitle>
+			<!-- Details -->
+			<pgDetails>Details</pgDetails>
+			<lblPriorityTitle>Priorität</lblPriorityTitle>
+			<lblLevelTitle>Level</lblLevelTitle>
+			<lblComplexityTitle>Komplexität</lblComplexityTitle>
+			<lblStatusTitle>Status</lblStatusTitle>
+			<lblImplTitle>Implementation</lblImplTitle>
+			<btnStatusToHistory>Historien-Eintrag</btnStatusToHistory>
+			<btnImplToHistory>Historien-Eintrag</btnImplToHistory>
+			<lblAssignedToTitle>Zugewiesen an</lblAssignedToTitle>
+			<lblReleaseTitle>Release</lblReleaseTitle>
+			<lblOpenIssuesTitle>Offene Punkte</lblOpenIssuesTitle>
+			<btnAddOpenIssue>Hinzufügen</btnAddOpenIssue>
+			<btnRemoveOpenIssue>Löschen</btnRemoveOpenIssue>
+			<cmbLevel>
+				<Item EnumName="Summary" ListIndex="0">Zusammenfassung</Item>
+				<Item EnumName="User" ListIndex="1">Benutzer</Item>
+				<Item EnumName="Subfunction" ListIndex="2">Unterfunktion</Item>
+			</cmbLevel>
+			<cmbComplexity>
+				<Item EnumName="Low" ListIndex="0">Niedrig</Item>
+				<Item EnumName="Medium" ListIndex="1">Mittel</Item>
+				<Item EnumName="High" ListIndex="2">Hoch</Item>
+			</cmbComplexity>
+			<cmbStatus>
+				<Item EnumName="Named" ListIndex="0">Erfasst</Item>
+				<Item EnumName="Initial" ListIndex="1">Entwurf</Item>
+				<Item EnumName="Base" ListIndex="2">Basis</Item>
+				<Item EnumName="Completed" ListIndex="3">Vollständig</Item>
+				<Item EnumName="Deferred" ListIndex="4">Zurückgestellt</Item>
+				<Item EnumName="Tested" ListIndex="5">Getestet</Item>
+				<Item EnumName="Approved" ListIndex="6">Abgenommen</Item>
+			</cmbStatus>
+			<cmbImplementation>
+				<Item EnumName="Scheduled" ListIndex="0">Eingeplant</Item>
+				<Item EnumName="Started" ListIndex="1">Begonnen</Item>
+				<Item EnumName="Partial" ListIndex="2">in Arbeit</Item>
+				<Item EnumName="Completed" ListIndex="3">Erledigt</Item>
+				<Item EnumName="Deferred" ListIndex="4">Zurückgestellt</Item>
+			</cmbImplementation>
+			<!-- Use Case General -->
+			<pgUCGeneral>Allgemein</pgUCGeneral>
+			<lblUCIDTitle>Identifikation</lblUCIDTitle>
+			<lblUCOwnerTitle>Eigentümer Paket</lblUCOwnerTitle>
+			<lblUCNameTitle>Name</lblUCNameTitle>
+			<btnUCNameChange>Ändern</btnUCNameChange>
+			<lblPreconditionsTitle>Vorbedingungen</lblPreconditionsTitle>
+			<lblPostconditionsTitle>Nachbedingungen</lblPostconditionsTitle>
+			<lblUCActorsTitle>Akteure</lblUCActorsTitle>
+			<chActorName>Name</chActorName>
+			<chActorPrimary>Primär</chActorPrimary>
+			<btnAddActor>Hinzufügen</btnAddActor>
+			<btnRemoveActor>Löschen</btnRemoveActor>
+			<btnSetPrimaryActor>Primär</btnSetPrimaryActor>
+			<!-- Actor General -->
+			<pgAGeneral>Allgemein</pgAGeneral>
+			<lblAIDTitle>Identifikation</lblAIDTitle>
+			<lblAOwnerTitle>Eigentümer Paket</lblAOwnerTitle>
+			<lblANameTitle>Name</lblANameTitle>
+			<btnANameChange>Ändern</btnANameChange>
+			<!-- Start of 0.9.6 section -->
+			<lblAGoalsTitle>Goals</lblAGoalsTitle>
+			<btnAddGoal>Add</btnAddGoal>
+			<btnRemoveGoal>Remove</btnRemoveGoal>
+			<!-- End of 0.9.6 section -->			
+			<!-- Package General -->
+			<pgPGeneral>Allgemein</pgPGeneral>
+			<lblPIDTitle>Identifikation</lblPIDTitle>
+			<lblPOwnerTitle>Eigentümer Paket</lblPOwnerTitle>
+			<lblPNameTitle>Name</lblPNameTitle>
+			<btnPNameChange>Ändern</btnPNameChange>		
+			<!-- Attributes -->
+			<pgAttributes>Eigenschaften</pgAttributes>
+			<lblDescriptionTitle>Beschreibung</lblDescriptionTitle>
+			<lblNotesTitle>Notizen</lblNotesTitle>
+			<lblRelatedDocsTitle>Zugehörige Dokumente</lblRelatedDocsTitle>
+			<btnAddRelatedDoc>Hinzufügen</btnAddRelatedDoc>
+			<btnRemoveRelatedDoc>Löschen</btnRemoveRelatedDoc>
+			<btnOpenRelatedDoc>Öffnen</btnOpenRelatedDoc>
+			<!-- Flow of events -->
+			<pgFlowOfEvents>Ereignisfluss</pgFlowOfEvents>
+			<lblStepsTitle>Schritt</lblStepsTitle>
+			<btnAddStep>Hinzufügen</btnAddStep>
+			<btnInsertStep>Einfügen</btnInsertStep>
+			<!-- Alternative hinzufügen => too long for button-->
+			<btnAddAltStep>Alternative hinzuf.</btnAddAltStep>
+			<!-- Start of 0.9.6 section -->
+			<!-- <btnInsertAltStep>Alternative einf.</btnInsertAltStep> -->
+			<btnAddRefStep>Add dependency</btnAddRefStep>
+			<btnInsertRefStep>Insert dependency</btnInsertRefStep>
+			<!-- End of 0.9.6 section -->			
+			<btnRemoveStep>Löschen</btnRemoveStep>
+			<!-- Prose -->
+			<pgProse>Prosa</pgProse>
+			<!-- Requirements -->
+			<pgRequirements>Anforderungen</pgRequirements>
+			<btnAddRequirement>Hinzufügen</btnAddRequirement>
+			<btnRemoveRequirement>Löschen</btnRemoveRequirement>
+			<!-- History -->
+			<pgHistory>Historie</pgHistory>
+			<btnRemoveHistoryItem>Löschen</btnRemoveHistoryItem>
+			<chDate>Datum</chDate>
+			<chType>Typ</chType>
+			<chAction>Aktion</chAction>
+			<chNotes>Notiz</chNotes>
+			<!-- Glossary -->
+			<pgGlossary>Glossar</pgGlossary>
+			<btnAddGlossaryItem>Hinzufügen</btnAddGlossaryItem>
+			<btnRemoveGlossaryItem>Löschen</btnRemoveGlossaryItem>
+			<btnChangeGlossaryItem>Ändern</btnChangeGlossaryItem>
+			<!-- Toolbar buttons -->
+			<tbBtnNew ToolTipText="Neues Modell"></tbBtnNew>
+			<tbBtnOpen ToolTipText="Modell öffnen"></tbBtnOpen>
+			<tbBtnSave ToolTipText="Modell speichern"></tbBtnSave>
+			<tbBtnAddPackage ToolTipText="Neues Paket"></tbBtnAddPackage>
+			<tbBtnRemovePackage ToolTipText="Paket löschen"></tbBtnRemovePackage>
+			<tbBtnAddActor ToolTipText="Neuer Akteur"></tbBtnAddActor>
+			<tbBtnRemoveActor ToolTipText="Akteur löschen"></tbBtnRemoveActor>
+			<tbBtnAddUseCase ToolTipText="Neuer Anwendungsfall"></tbBtnAddUseCase>
+			<tbBtnRemoveUseCase ToolTipText="Anwendungsfall löschen"></tbBtnRemoveUseCase>
+		</Controls>
+	</frmMain>
+	<frmActorChooser>
+		<Controls>
+			<Self>Liste der Akteure</Self>
+			<lblChooseActorTitle>Akteur auswählen</lblChooseActorTitle>
+			<btnOK>OK</btnOK>
+			<btnCancel>Abbrechen</btnCancel>
+		</Controls>
+	</frmActorChooser>
+	<frmCreator>
+		<Controls>
+			<Self>Element erzeugen</Self>
+			<lblNameTitle>Element-Name</lblNameTitle>
+			<btnOK>OK</btnOK>
+			<btnCancel>Abbrechen</btnCancel>
+		</Controls>
+	</frmCreator>
+	<frmDeleter>
+		<Controls>
+			<Self>Element löschen</Self>
+			<lblUserQuestionTitle>Ausgewähltes Element (und zugehörige Kinder) werden gelöscht.
+			Fortfahren?</lblUserQuestionTitle>
+			<cbDontMark>Auftretende Textbezüge nicht als {Element Name} markieren</cbDontMark>
+			<btnOK>OK</btnOK>
+			<btnCancel>Abbrechen</btnCancel>			
+		</Controls>
+	</frmDeleter>
+	<frmNameChanger>
+		<Controls>
+			<Self>Element umbenennen</Self>
+			<lblOldNameTitle>Alter Name</lblOldNameTitle>
+			<lblNewNameTitle>Neuer Name</lblNewNameTitle>
+			<cbNoReplace>Auftretende Textbezüge nicht ersetzen</cbNoReplace>
+			<btnOK>OK</btnOK>
+			<btnCancel>Abbrechen</btnCancel>			
+		</Controls>	
+	</frmNameChanger>	
+	<frmHistoryNotes>
+		<Controls>
+			<Self>Historien-Notizen</Self>
+			<btnOK>OK</btnOK>
+			<btnCancel>Abbrechen</btnCancel>			
+		</Controls>
+	</frmHistoryNotes>
+	<frmOptions>
+		<Controls>
+			<Self>Optionen</Self>
+			<pgOptLanguages>Verfügbare Sprachen</pgOptLanguages>
+			<lblSelectLanguageTitle>Wählen Sie eine Sprache für die Benutzeroberfläche aus</lblSelectLanguageTitle>
+			<btnOK>OK</btnOK>
+			<btnCancel>Abbrechen</btnCancel>
+		</Controls>
+	</frmOptions>
+	<!-- Start of 0.9.6 section	-->
+	<frmReorder>
+		<Controls>
+			<Self>Reorder elements</Self>
+			<btnMoveUp>Move up</btnMoveUp>
+			<btnMoveDown>Move down</btnMoveDown>
+			<btnOK>OK</btnOK>
+			<btnCancel>Cancel</btnCancel>
+		</Controls>
+	</frmReorder>
+	<frmRefSelector>
+		<Controls>
+			<Self>Use case dependency</Self>
+			<lblStereotypeTitle>Stereotype</lblStereotypeTitle>
+			<lblUseCaseTitle>Use case</lblUseCaseTitle>
+			<gbRelationship>Relationship</gbRelationship>
+			<lblDepFromTitle>depends from</lblDepFromTitle>
+			<btnSwap>Swap</btnSwap>
+			<btnOK>OK</btnOK>
+			<btnCancel>Cancel</btnCancel>
+		</Controls>
+	</frmRefSelector>
+	<!-- End of 0.9.6 section -->	
+</UCM-StringTable>

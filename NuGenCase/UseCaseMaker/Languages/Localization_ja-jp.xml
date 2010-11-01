@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UCM-StringTable>
+	<Globals>
+		<NewModel>新規　モデル</NewModel>
+		<Model>モデル</Model>
+		<Actor>アクター</Actor>
+		<Actors>アクター</Actors>
+		<Package>パッケージ</Package>
+		<Packages>パッケージ</Packages>
+		<UseCase>ユースケース</UseCase>
+		<UseCases>ユースケース</UseCases>
+		<OpenIssues>未解決の問題</OpenIssues>
+		<FlowOfEvents>シナリオフロー(イベント)</FlowOfEvents>
+		<Prose>フロー概略</Prose>
+		<Requirements>要求</Requirements>
+		<Description>説明</Description>
+		<Notes>ノート</Notes>
+		<RelatedDocuments>関連ドキュメント</RelatedDocuments>
+		<Details>詳細</Details>
+		<Priority>優先度</Priority>
+		<Complexity>複雑度</Complexity>
+		<Implementation>実装</Implementation>
+		<Level>レベル</Level>
+		<Status>状態</Status>
+		<AssignedTo>割り当て</AssignedTo>
+		<Release>リリース</Release>
+		<Preconditions>事前条件</Preconditions>
+		<Postconditions>事後条件</Postconditions>
+		<ActiveActors>アクティブなアクター</ActiveActors>
+		<Primary>主要な（Primary）</Primary>
+		<History>履歴</History>
+		<ModelBrowser>モデルブラウズ</ModelBrowser>
+		<Summary>要約</Summary>
+		<Identifier>識別子</Identifier>
+		<Owner>所有者</Owner>
+		<Glossary>用語</Glossary>
+		<GlossaryItem>用語アイテム</GlossaryItem>
+		<!-- Start of 0.9.6 section -->
+		<Goals>ゴール</Goals>
+		<!-- End of 0.9.6 section -->		
+		<HistoryType>
+			<Item EnumName="Implementation" ListIndex="0">実装</Item>
+			<Item EnumName="Status" ListIndex="1">状態</Item>
+		</HistoryType>
+	</Globals>
+	<UserMessages>
+		<actorAlreadyPresent>アクターは既に存在します</actorAlreadyPresent>
+		<fileAlreadyPresent>ファイルは既に存在します</fileAlreadyPresent>
+		<cannotOpenFile>ファイルを開けません</cannotOpenFile>
+		<exitConfirm>本当に終了しますか？</exitConfirm>
+		<saveBeforeExport>モデルをエクスポートする前に保存してください</saveBeforeExport>
+		<htmlExportCompleted>エクスポート完了。HTMLファイルを参照しますか？</htmlExportCompleted>
+		<xmiExportCompleted>エクスポート完了</xmiExportCompleted>
+		<pdfExportCompleted>エクスポート完了。PDFファイルを参照しますか？</pdfExportCompleted>
+		<rtfExportCompleted>エクスポート完了。RTFファイルを参照しますか？</rtfExportCompleted>
+		<exportAsXMI>XMI 1.1 エクスポート</exportAsXMI>
+		<exportAsPDF>PDF エクスポート</exportAsPDF>
+		<exportAsRTF>RTF エクスポート</exportAsRTF>
+		<saveModel>カレントモデルを保存しますか?</saveModel>
+		<saveModelAs>名前をつけて保存...</saveModelAs>
+		<openModel>モデルを開く</openModel>
+		<selectHTMLdestination>HTMLファイルの保存フォルダ</selectHTMLdestination>
+		<nameAlreadyInUse>名前は既に使用されています</nameAlreadyInUse>
+	</UserMessages>
+	<frmMain>
+		<Controls>
+			<!-- File menu items -->
+			<mnuFile>ファイル(&amp;F)</mnuFile>
+			<mnuFileNew>新規モデル作成(&amp;N)</mnuFileNew>
+			<mnuFileOpen>開く(&amp;O)...</mnuFileOpen>
+			<mnuFileSave>保存(&amp;S)</mnuFileSave>
+			<mnuFileSaveAs>名前を付けて保存(&amp;As)...</mnuFileSaveAs>
+			<mnuFileExit>終了(&amp;E)</mnuFileExit>
+			<!-- Edit menu items -->
+			<mnuEdit>編集(&amp;E)</mnuEdit>
+			<!-- Start of 0.9.5 section -->
+			<mnuEditCut>切り取り(&amp;T)</mnuEditCut>
+			<mnuEditCopy>コピー(&amp;C)</mnuEditCopy>
+			<mnuEditPaste>貼り付け(&amp;P)</mnuEditPaste>
+			<!-- End of 0.9.5 section -->			
+			<mnuEditAddPackage>パッケージ追加(&amp;A)</mnuEditAddPackage>
+			<mnuEditRemovePackage>パッケージ削除(&amp;R)</mnuEditRemovePackage>
+			<mnuEditAddActor>アクタ追加(&amp;a)</mnuEditAddActor>
+			<mnuEditRemoveActor>アクタ削除(&amp;m)</mnuEditRemoveActor>
+			<mnuEditAddUseCase>ユースケース追加(&amp;u)</mnuEditAddUseCase>
+			<mnuEditRemoveUseCase>ユースケース削除(&amp;v)</mnuEditRemoveUseCase>
+			<!-- Start of 0.9.6 section -->
+			<mnuEditReorderElements>追加要素(Re&amp;O)</mnuEditReorderElements>
+			<!-- End of 0.9.6 section -->			
+			<!-- Tools menu items -->
+			<mnuTools>ツール(&amp;T)</mnuTools>
+			<mnuToolsHtmlExport>HTML書出し(&amp;H)</mnuToolsHtmlExport>
+			<mnuToolsXMIExport>XMI1.1書出し(&amp;X)</mnuToolsXMIExport>
+			<mnuToolsPDFExport>PDF書出し(&amp;P)</mnuToolsPDFExport>
+			<mnuToolsRTFExport>RTF書出し(&amp;R)</mnuToolsRTFExport>
+			<mnuToolsOptions>オプション(&amp;O)</mnuToolsOptions>
+			<!-- Help menu items -->
+			<mnuHelp>ヘルプ(&amp;H)</mnuHelp>
+			<mnuHelpAbout>UseCaseMakerについて(&amp;A)...</mnuHelpAbout>
+			<!-- Model browser context menu items -->
+			<!-- Start of 0.9.5 section -->
+			<mnuCtxMBCut>切り取り(&amp;T)</mnuCtxMBCut>
+			<mnuCtxMBCopy>コピー(&amp;C)</mnuCtxMBCopy>
+			<mnuCtxMBPaste>貼り付け(&amp;P)</mnuCtxMBPaste>
+			<!-- End of 0.9.5 section -->				
+			<mnuCtxMBAddPackage>パッケージ追加(&amp;A)</mnuCtxMBAddPackage>
+			<mnuCtxMBRemovePackage>パッケージ削除(&amp;R)</mnuCtxMBRemovePackage>
+			<mnuCtxMBAddActor>アクタ追加(&amp;a)</mnuCtxMBAddActor>
+			<mnuCtxMBRemoveActor>アクタ削除(&amp;m)</mnuCtxMBRemoveActor>
+			<mnuCtxMBAddUseCase>ユースケース追加(&amp;u)</mnuCtxMBAddUseCase>
+			<mnuCtxMBRemoveUseCase>ユースケース削除(&amp;v)</mnuCtxMBRemoveUseCase>
+			<!-- Start of 0.9.6 section -->
+			<mnuCtxMBReorderElements>順番の入替え(Re&amp;O)</mnuCtxMBReorderElements>
+			<!-- End of 0.9.6 section -->			
+			<!-- Element token context menu items -->
+			<mnuCtxETGoToDefinition>定義位置を表示(&amp;G)</mnuCtxETGoToDefinition>
+			<!-- Start of 0.9.5 section -->
+			<mnuCtxETCut>切り取り(&amp;T)</mnuCtxETCut>
+			<mnuCtxETCopy>コピー(&amp;C)</mnuCtxETCopy>
+			<mnuCtxETPaste>貼り付け(&amp;P)</mnuCtxETPaste>
+			<!-- End of 0.9.5 section -->	
+			<!-- Other controls -->
+			<lblModelBrowser>モデルブラウザ</lblModelBrowser>
+			<!-- Tab pages -->
+			<!-- Main -->
+			<pgMain>メイン</pgMain>
+			<lblFullPathTitle>フルパス</lblFullPathTitle>
+			<lblPackagesTitle>パッケージ数</lblPackagesTitle>
+			<lblActorsTitle>アクタ数</lblActorsTitle>
+			<lblUseCasesTitle>ユースケース数</lblUseCasesTitle>
+			<!-- Details -->
+			<pgDetails>詳細</pgDetails>
+			<lblPriorityTitle>優先順位</lblPriorityTitle>
+			<lblLevelTitle>レベル</lblLevelTitle>
+			<lblComplexityTitle>複雑度</lblComplexityTitle>
+			<lblStatusTitle>状態</lblStatusTitle>
+			<lblImplTitle>実装</lblImplTitle>
+			<btnStatusToHistory>履歴の追加</btnStatusToHistory>
+			<btnImplToHistory>履歴の追加</btnImplToHistory>
+			<lblAssignedToTitle>割当て</lblAssignedToTitle>
+			<lblReleaseTitle>リリース</lblReleaseTitle>
+			<lblOpenIssuesTitle>未解決の問題</lblOpenIssuesTitle>
+			<btnAddOpenIssue>追加</btnAddOpenIssue>
+			<btnRemoveOpenIssue>削除</btnRemoveOpenIssue>
+			<cmbLevel>
+				<Item EnumName="Summary" ListIndex="0">要約</Item>
+				<Item EnumName="User" ListIndex="1">ユーザ目的</Item>
+				<Item EnumName="Subfunction" ListIndex="2">サブ機能</Item>
+			</cmbLevel>
+			<cmbComplexity>
+				<Item EnumName="Low" ListIndex="0">低い</Item>
+				<Item EnumName="Medium" ListIndex="1">普通</Item>
+				<Item EnumName="High" ListIndex="2">高い</Item>
+			</cmbComplexity>
+			<cmbStatus>
+				<Item EnumName="Named" ListIndex="0">作成</Item>
+				<Item EnumName="Initial" ListIndex="1">設計中</Item>
+				<Item EnumName="Base" ListIndex="2">配置</Item>
+				<Item EnumName="Completed" ListIndex="3">完了</Item>
+				<Item EnumName="Deferred" ListIndex="4">延期</Item>
+				<Item EnumName="Tested" ListIndex="5">評価済</Item>
+				<Item EnumName="Approved" ListIndex="6">承認済</Item>
+			</cmbStatus>
+			<cmbImplementation>
+				<Item EnumName="Scheduled" ListIndex="0">作成</Item>
+				<Item EnumName="Started" ListIndex="1">実装中</Item>
+				<Item EnumName="Partial" ListIndex="2">配置</Item>
+				<Item EnumName="Completed" ListIndex="3">完了</Item>
+				<Item EnumName="Deferred" ListIndex="4">延期</Item>
+			</cmbImplementation>
+			<!-- Use Case General -->
+			<pgUCGeneral>一般</pgUCGeneral>
+			<lblUCIDTitle>識別子</lblUCIDTitle>
+			<lblUCOwnerTitle>属するパッケージ</lblUCOwnerTitle>
+			<lblUCNameTitle>名前</lblUCNameTitle>
+			<btnUCNameChange>変更</btnUCNameChange>
+			<lblPreconditionsTitle>事前条件</lblPreconditionsTitle>
+			<lblPostconditionsTitle>事後条件</lblPostconditionsTitle>
+			<lblUCActorsTitle>アクタ</lblUCActorsTitle>
+			<chActorName>名前</chActorName>
+			<chActorPrimary>主アクタ</chActorPrimary>
+			<btnAddActor>追加</btnAddActor>
+			<btnRemoveActor>削除</btnRemoveActor>
+			<btnSetPrimaryActor>主アクタ</btnSetPrimaryActor>
+			<!-- Actor General -->
+			<pgAGeneral>一般</pgAGeneral>
+			<lblAIDTitle>識別子</lblAIDTitle>
+			<lblAOwnerTitle>属するパッケージ</lblAOwnerTitle>
+			<lblANameTitle>名前</lblANameTitle>
+			<btnANameChange>変更</btnANameChange>
+			<!-- Start of 0.9.6 section -->
+			<lblAGoalsTitle>ゴール</lblAGoalsTitle>
+			<btnAddGoal>追加</btnAddGoal>
+			<btnRemoveGoal>削除</btnRemoveGoal>
+			<!-- End of 0.9.6 section -->			
+			<!-- Package General -->
+			<pgPGeneral>一般</pgPGeneral>
+			<lblPIDTitle>識別子</lblPIDTitle>
+			<lblPOwnerTitle>属するパッケージ</lblPOwnerTitle>
+			<lblPNameTitle>名前</lblPNameTitle>
+			<btnPNameChange>変更</btnPNameChange>
+			<!-- Attributes -->
+			<pgAttributes>属性</pgAttributes>
+			<lblDescriptionTitle>説明</lblDescriptionTitle>
+			<lblNotesTitle>ノート</lblNotesTitle>
+			<lblRelatedDocsTitle>関連ドキュメント</lblRelatedDocsTitle>
+			<btnAddRelatedDoc>追加</btnAddRelatedDoc>
+			<btnRemoveRelatedDoc>削除</btnRemoveRelatedDoc>
+			<btnOpenRelatedDoc>開く</btnOpenRelatedDoc>
+			<!-- Flow of events -->
+			<pgFlowOfEvents>シナリオフロー(イベント)</pgFlowOfEvents>
+			<lblStepsTitle>ステップ</lblStepsTitle>
+			<btnAddStep>追加</btnAddStep>
+			<btnInsertStep>挿入</btnInsertStep>
+			<btnAddAltStep>拡張フロー追加</btnAddAltStep>
+			<!-- Start of 0.9.6 section -->
+			<!-- <btnInsertAltStep>拡張フロー挿入</btnInsertAltStep> -->
+			<btnAddRefStep>依存の追加</btnAddRefStep>
+			<btnInsertRefStep>依存の挿入</btnInsertRefStep>
+			<!-- End of 0.9.6 section -->			
+			<btnRemoveStep>削除</btnRemoveStep>
+			<!-- Prose -->
+			<pgProse>フロー概略</pgProse>
+			<!-- Requirements -->
+			<pgRequirements>要求</pgRequirements>
+			<btnAddRequirement>追加</btnAddRequirement>
+			<btnRemoveRequirement>削除</btnRemoveRequirement>
+			<!-- History -->
+			<pgHistory>履歴</pgHistory>
+			<btnRemoveHistoryItem>削除</btnRemoveHistoryItem>
+			<chDate>日付</chDate>
+			<chType>タイプ</chType>
+			<chAction>作業</chAction>
+			<chNotes>説明</chNotes>
+			<!-- Glossary -->
+			<pgGlossary>用語</pgGlossary>
+			<btnAddGlossaryItem>追加</btnAddGlossaryItem>
+			<btnRemoveGlossaryItem>削除</btnRemoveGlossaryItem>
+			<btnChangeGlossaryItem>変更</btnChangeGlossaryItem>
+			<!-- Toolbar buttons -->
+			<tbBtnNew ToolTipText="新規モデル作成"></tbBtnNew>
+			<tbBtnOpen ToolTipText="開く"></tbBtnOpen>
+			<tbBtnSave ToolTipText="保存"></tbBtnSave>
+			<tbBtnAddPackage ToolTipText="新規パッケージ"></tbBtnAddPackage>
+			<tbBtnRemovePackage ToolTipText="パッケージ削除"></tbBtnRemovePackage>
+			<tbBtnAddActor ToolTipText="新規アクタ"></tbBtnAddActor>
+			<tbBtnRemoveActor ToolTipText="アクタ削除"></tbBtnRemoveActor>
+			<tbBtnAddUseCase ToolTipText="新規ユースケース"></tbBtnAddUseCase>
+			<tbBtnRemoveUseCase ToolTipText="ユースケース削除"></tbBtnRemoveUseCase>
+		</Controls>
+	</frmMain>
+	<frmActorChooser>
+		<Controls>
+			<Self>アクタ一覧</Self>
+			<lblChooseActorTitle>アクタを選択</lblChooseActorTitle>
+			<btnOK>OK</btnOK>
+			<btnCancel>Cancel</btnCancel>
+		</Controls>
+	</frmActorChooser>
+	<frmCreator>
+		<Controls>
+			<Self>要素作成</Self>
+			<lblNameTitle>要素名</lblNameTitle>
+			<btnOK>OK</btnOK>
+			<btnCancel>Cancel</btnCancel>
+		</Controls>
+	</frmCreator>
+	<frmDeleter>
+		<Controls>
+			<Self>要素削除</Self>
+			<lblUserQuestionTitle>選択要素（子の階層も含め）を削除しますよろしいですか?</lblUserQuestionTitle>
+			<cbDontMark>再びこのメッセージを表示しない</cbDontMark>
+			<btnOK>OK</btnOK>
+			<btnCancel>Cancel</btnCancel>
+		</Controls>
+	</frmDeleter>
+	<frmNameChanger>
+		<Controls>
+			<Self>要素名の変更</Self>
+			<lblOldNameTitle>前の名前</lblOldNameTitle>
+			<lblNewNameTitle>新しい名前</lblNewNameTitle>
+			<cbNoReplace>再びこのメッセージを表示しない</cbNoReplace>
+			<btnOK>OK</btnOK>
+			<btnCancel>Cancel</btnCancel>
+		</Controls>
+	</frmNameChanger>
+	<frmHistoryNotes>
+		<Controls>
+			<Self>履歴の説明</Self>
+			<btnOK>OK</btnOK>
+			<btnCancel>Cancel</btnCancel>
+		</Controls>
+	</frmHistoryNotes>
+	<frmOptions>
+		<Controls>
+			<Self>オプション</Self>
+			<pgOptLanguages>言語選択</pgOptLanguages>
+			<lblSelectLanguageTitle>ユーザインターフェース言語選択</lblSelectLanguageTitle>
+			<btnOK>OK</btnOK>
+			<btnCancel>Cancel</btnCancel>
+		</Controls>
+	</frmOptions>
+	<!-- Start of 0.9.6 section	-->
+	<frmReorder>
+		<Controls>
+			<Self>順番の入替え</Self>
+			<btnMoveUp>上へ</btnMoveUp>
+			<btnMoveDown>下へ</btnMoveDown>
+			<btnOK>OK</btnOK>
+			<btnCancel>Cancel</btnCancel>
+		</Controls>
+	</frmReorder>
+	<frmRefSelector>
+		<Controls>
+			<Self>ユースケース依存関係</Self>
+			<lblStereotypeTitle>ステレオタイプ</lblStereotypeTitle>
+			<lblUseCaseTitle>ユースケース</lblUseCaseTitle>
+			<gbRelationship>リレーションシップ</gbRelationship>
+			<lblDepFromTitle>～の依存</lblDepFromTitle>
+			<btnSwap>交換</btnSwap>
+			<btnOK>OK</btnOK>
+			<btnCancel>Cancel</btnCancel>
+		</Controls>
+	</frmRefSelector>
+	<!-- End of 0.9.6 section -->	
+</UCM-StringTable>

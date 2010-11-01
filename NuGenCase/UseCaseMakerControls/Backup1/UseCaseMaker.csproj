@@ -1,0 +1,438 @@
+<VisualStudioProject>
+    <CSHARP
+        ProjectType = "Local"
+        ProductVersion = "7.10.3077"
+        SchemaVersion = "2.0"
+        ProjectGuid = "{EC53BDAF-DAA0-4739-872B-2D3CC8B77B03}"
+    >
+        <Build>
+            <Settings
+                ApplicationIcon = "App.ico"
+                AssemblyKeyContainerName = ""
+                AssemblyName = "UseCaseMaker"
+                AssemblyOriginatorKeyFile = ""
+                DefaultClientScript = "JScript"
+                DefaultHTMLPageLayout = "Grid"
+                DefaultTargetSchema = "IE50"
+                DelaySign = "false"
+                OutputType = "WinExe"
+                PreBuildEvent = ""
+                PostBuildEvent = ""
+                RootNamespace = "UseCaseMaker"
+                RunPostBuildEvent = "OnBuildSuccess"
+                StartupObject = ""
+            >
+                <Config
+                    Name = "Debug"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "DEBUG;TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "true"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "false"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "false"
+                    OutputPath = "bin\Debug\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+                <Config
+                    Name = "Release"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "false"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "false"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "true"
+                    OutputPath = "bin\Release\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+            </Settings>
+            <References>
+                <Reference
+                    Name = "System"
+                    AssemblyName = "System"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.dll"
+                />
+                <Reference
+                    Name = "System.Data"
+                    AssemblyName = "System.Data"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Data.dll"
+                />
+                <Reference
+                    Name = "System.Drawing"
+                    AssemblyName = "System.Drawing"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Drawing.dll"
+                />
+                <Reference
+                    Name = "System.Windows.Forms"
+                    AssemblyName = "System.Windows.Forms"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Windows.Forms.dll"
+                />
+                <Reference
+                    Name = "System.XML"
+                    AssemblyName = "System.Xml"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.XML.dll"
+                />
+                <Reference
+                    Name = "UseCaseMakerLibrary"
+                    Project = "{2706309F-76DA-4C66-8E78-8165D570B166}"
+                    Package = "{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"
+                />
+                <Reference
+                    Name = "UseCaseMakerControls"
+                    Project = "{08BAF1B1-10D0-4426-BC09-C56C98AA5A6A}"
+                    Package = "{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"
+                />
+                <Reference
+                    Name = "itextsharp"
+                    AssemblyName = "itextsharp"
+                    HintPath = "External Libraries\itextsharp.dll"
+                />
+            </References>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "App.ico"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "ApplicationSettings.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "AssemblyInfo.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "frmAbout.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "frmAbout.resx"
+                    DependentUpon = "frmAbout.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "frmActorChooser.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "frmActorChooser.resx"
+                    DependentUpon = "frmActorChooser.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "frmCreator.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "frmCreator.resx"
+                    DependentUpon = "frmCreator.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "frmDeleter.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "frmDeleter.resx"
+                    DependentUpon = "frmDeleter.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "frmHistoryNotes.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "frmHistoryNotes.resx"
+                    DependentUpon = "frmHistoryNotes.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "frmMain.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "frmMain.resx"
+                    DependentUpon = "frmMain.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "frmNameChanger.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "frmNameChanger.resx"
+                    DependentUpon = "frmNameChanger.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "frmOptions.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "frmOptions.resx"
+                    DependentUpon = "frmOptions.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "frmRefSelector.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "frmRefSelector.resx"
+                    DependentUpon = "frmRefSelector.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "frmReorder.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "frmReorder.resx"
+                    DependentUpon = "frmReorder.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "HTMLConverter.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Localizer.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "PDFConverter.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RTFConverter.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "UseCaseMaker.config"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "XMIConverter.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "External Libraries\itextsharp.dll"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Icons\Actor.ico"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Icons\Actors.ico"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Icons\AddActor.ico"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Icons\AddPackage.ico"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Icons\AddUseCase.ico"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Icons\Copy.ico"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Icons\Cut.ico"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Icons\New.ico"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Icons\Open.ico"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Icons\Package.ico"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Icons\Paste.ico"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Icons\RemoveActor.ico"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Icons\RemovePackage.ico"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Icons\RemoveUseCase.ico"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Icons\Save.ico"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Icons\UCMDocument.ico"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Icons\UseCase.ico"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Icons\UseCases.ico"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Images\ucm_image.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Languages\Localization_de-de.xml"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Languages\Localization_en-us.xml"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Languages\Localization_es-es.xml"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Languages\Localization_it-it.xml"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Languages\Localization_ja-jp.xml"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Languages\Localization_list.xml"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Reports\Actor.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Reports\Actor.xsl"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Reports\body_bg.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Reports\CommonTags.xsl"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Reports\Glossary.xsl"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Reports\HomePage.xsl"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Reports\index.htm"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Reports\lf2br.xsl"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Reports\line_blue_steelblue.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Reports\line_gainsboro_white.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Reports\MatchLink.xsl"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Reports\ModelTree.xsl"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Reports\Package.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Reports\Package.xsl"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Reports\PdfRtfExport.xsl"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Reports\UCM.css"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Reports\UseCase.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Reports\UseCase.xsl"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Reports\XMI11Export.xsl"
+                    BuildAction = "Content"
+                />
+            </Include>
+        </Files>
+    </CSHARP>
+</VisualStudioProject>
+

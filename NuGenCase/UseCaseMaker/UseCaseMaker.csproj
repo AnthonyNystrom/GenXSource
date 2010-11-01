@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.20706</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EC53BDAF-DAA0-4739-872B-2D3CC8B77B03}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>UseCaseMaker</AssemblyName>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>UseCaseMaker</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="itextsharp, Version=3.1.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca">
+      <HintPath>External Libraries\itextsharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.ico" />
+    <Content Include="External Libraries\itextsharp.dll" />
+    <Content Include="Icons\Actor.ico" />
+    <Content Include="Icons\Actors.ico" />
+    <Content Include="Icons\AddActor.ico" />
+    <Content Include="Icons\AddPackage.ico" />
+    <Content Include="Icons\AddUseCase.ico" />
+    <Content Include="Icons\Copy.ico" />
+    <Content Include="Icons\Cut.ico" />
+    <Content Include="Icons\New.ico" />
+    <Content Include="Icons\Open.ico" />
+    <Content Include="Icons\Package.ico" />
+    <Content Include="Icons\Paste.ico" />
+    <Content Include="Icons\RemoveActor.ico" />
+    <Content Include="Icons\RemovePackage.ico" />
+    <Content Include="Icons\RemoveUseCase.ico" />
+    <Content Include="Icons\Save.ico" />
+    <Content Include="Icons\UCMDocument.ico" />
+    <Content Include="Icons\UseCase.ico" />
+    <Content Include="Icons\UseCases.ico" />
+    <Content Include="Images\ucm_image.jpg" />
+    <Content Include="Languages\Localization_de-de.xml" />
+    <Content Include="Languages\Localization_en-us.xml" />
+    <Content Include="Languages\Localization_es-es.xml" />
+    <Content Include="Languages\Localization_it-it.xml" />
+    <Content Include="Languages\Localization_ja-jp.xml" />
+    <Content Include="Languages\Localization_list.xml" />
+    <Content Include="Reports\Actor.gif" />
+    <Content Include="Reports\Actor.xsl" />
+    <Content Include="Reports\body_bg.gif" />
+    <Content Include="Reports\CommonTags.xsl" />
+    <Content Include="Reports\Glossary.xsl" />
+    <Content Include="Reports\HomePage.xsl" />
+    <Content Include="Reports\index.htm" />
+    <Content Include="Reports\lf2br.xsl" />
+    <Content Include="Reports\line_blue_steelblue.gif" />
+    <Content Include="Reports\line_gainsboro_white.gif" />
+    <Content Include="Reports\MatchLink.xsl" />
+    <Content Include="Reports\ModelTree.xsl" />
+    <Content Include="Reports\Package.gif" />
+    <Content Include="Reports\Package.xsl" />
+    <Content Include="Reports\PdfRtfExport.xsl" />
+    <Content Include="Reports\UCM.css" />
+    <Content Include="Reports\UseCase.gif" />
+    <Content Include="Reports\UseCase.xsl" />
+    <Content Include="Reports\XMI11Export.xsl" />
+    <Compile Include="ApplicationSettings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmActorChooser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCreator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDeleter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHistoryNotes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNameChanger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRefSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReorder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HTMLConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Localizer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PDFConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RTFConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMIConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmActorChooser.resx">
+      <DependentUpon>frmActorChooser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCreator.resx">
+      <DependentUpon>frmCreator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDeleter.resx">
+      <DependentUpon>frmDeleter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHistoryNotes.resx">
+      <DependentUpon>frmHistoryNotes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNameChanger.resx">
+      <DependentUpon>frmNameChanger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOptions.resx">
+      <DependentUpon>frmOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRefSelector.resx">
+      <DependentUpon>frmRefSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReorder.resx">
+      <DependentUpon>frmReorder.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="UseCaseMaker.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
