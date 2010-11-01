@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.20706</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C31904C6-4B4A-44DF-A660-1FAA98842F24}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Genetibase.NugenObjective.Windows.DiagramDesigner.My.MyApplication</StartupObject>
+    <RootNamespace>Genetibase.NugenObjective.Windows.DiagramDesigner</RootNamespace>
+    <AssemblyName>NuGenObjective</AssemblyName>
+    <MyType>WindowsForms</MyType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>NuGenObjective.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>NuGenObjective.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Genetibase.ApplicationBlocks, Version=2.3.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Genetibase Libs\Genetibase.ApplicationBlocks.dll</HintPath>
+    </Reference>
+    <Reference Include="Genetibase.Shared, Version=3.32.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Genetibase Libs\Genetibase.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="Genetibase.Shared.Controls, Version=1.89.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Genetibase Libs\Genetibase.Shared.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Genetibase.SmoothApplicationBlocks, Version=1.2.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Genetibase Libs\Genetibase.SmoothApplicationBlocks.dll</HintPath>
+    </Reference>
+    <Reference Include="Genetibase.SmoothControls, Version=1.68.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Genetibase Libs\Genetibase.SmoothControls.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddinStatus.vb" />
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Enums\UrlInputDialogMode.vb" />
+    <Compile Include="splash.Designer.vb">
+      <DependentUpon>splash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="splash.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UrlInputDialog.Designer.vb">
+      <DependentUpon>UrlInputDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UrlInputDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiagramDesigner.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiagramDesigner.Designer.vb">
+      <DependentUpon>DiagramDesigner.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiagramPageViewer.Designer.vb">
+      <DependentUpon>DiagramPageViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DiagramPageViewer.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InteractionDialog.Designer.vb">
+      <DependentUpon>InteractionDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InteractionDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="OptionsDialog.Designer.vb">
+      <DependentUpon>OptionsDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OptionsDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="splash.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>splash.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UrlInputDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UrlInputDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiagramDesigner.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DiagramDesigner.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiagramPageViewer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DiagramPageViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InteractionDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InteractionDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OptionsDialog.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Genetibase Diagram Client Library\Genetibase Diagram Client Library.vbproj">
+      <Project>{E186BE84-67F9-41E1-9FE5-D929D753940F}</Project>
+      <Name>Genetibase Diagram Client Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Genetibase Diagram Drawing Library\Genetibase Diagram Drawing Library.vbproj">
+      <Project>{8A6258E1-D2DC-483F-BEF9-AB170BD775D7}</Project>
+      <Name>Genetibase Diagram Drawing Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Genetibase Diagram Library\Genetibase Diagram Library.vbproj">
+      <Project>{69AFE03A-CA8F-43EB-AFB2-D64C04A63979}</Project>
+      <Name>Genetibase Diagram Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zoom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewPage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Redo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CheckOut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Publish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Interconnections.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Preview.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\big_banner_18.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shapes-Connect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Publish Site.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Export.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page-Setup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save As.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Select All.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Publish Site1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tools.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="Resources\Pivot Table.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

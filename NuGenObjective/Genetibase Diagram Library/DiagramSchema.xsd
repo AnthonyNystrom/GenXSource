@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://genetibase.com/Schemas/DiagramSchema.xsd" elementFormDefault="qualified" xmlns="http://tempuri.org/XMLSchema.xsd" xmlns:mstns="http://genetibase.com/Schemas/DiagramSchema.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <!-- Element -->
+  <xs:complexType id="Element" name="Element" abstract="true" mixed="false">
+    <xs:sequence>
+      <xs:element id="ElementKey" name="Key" type="xs:string" minOccurs="1" maxOccurs="1" nillable="false" />
+      <xs:element id="ElementName" name="Name" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="Revision" type="xs:int" minOccurs="0" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+  <!-- Role -->
+  <xs:complexType id="Role" name="Role">
+    <xs:complexContent>
+      <xs:extension base="mstns:Element" />
+    </xs:complexContent>
+  </xs:complexType>
+  <!-- Action -->
+  <xs:complexType id="Action" name="Action">
+    <xs:complexContent>
+      <xs:extension base="mstns:Element" />
+    </xs:complexContent>
+  </xs:complexType>
+  <!-- State -->
+  <xs:complexType id="State" name="State">
+    <xs:complexContent>
+      <xs:extension base="mstns:Element" />
+    </xs:complexContent>
+  </xs:complexType>
+  <!-- Interaction -->
+  <xs:complexType id="Interaction" name="Interaction">
+    <xs:complexContent>
+      <xs:extension base="mstns:Element">
+        <xs:sequence>
+          <xs:element id="InteractionRoleRef" name="RoleRef" type="xs:string" minOccurs="1" maxOccurs="1" />
+          <xs:element id="InteractionActionRef" name="ActionRef" type="xs:string" minOccurs="1" maxOccurs="1" />
+          <xs:element id="InteractionStateRef" name="StateRef" type="xs:string" minOccurs="1" maxOccurs="1" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!-- ModelObject -->
+  <xs:complexType id="ModelObject" name="ModelObject">
+    <xs:complexContent>
+      <xs:extension base="mstns:Element">
+        <xs:sequence>
+          <xs:element name="Interactions" minOccurs="1" maxOccurs="1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Interaction" type="mstns:Interaction" minOccurs="0" maxOccurs="unbounded" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!-- Page -->
+  <xs:complexType id="Page" name="Page">
+    <xs:complexContent>
+      <xs:extension base="mstns:Element">
+        <xs:sequence>
+          <xs:element name="RoleRefs" minOccurs="1" maxOccurs="1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="RoleRef" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="ActionRefs" minOccurs="1" maxOccurs="1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ActionRef" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="StateRefs" minOccurs="1" maxOccurs="1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="StateRef" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="ObjectRefs" minOccurs="1" maxOccurs="1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ObjectRef" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="InteractionRefs" minOccurs="1" maxOccurs="1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="InteractionRef" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!-- ModelSystem -->
+  <xs:complexType id="ModelSystem" name="ModelSystem">
+    <xs:sequence>
+      <xs:element name="Name" type="xs:string" nillable="true" />
+      <xs:element name="Roles" minOccurs="1" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Role" type="mstns:Role" minOccurs="0" maxOccurs="unbounded" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Actions" minOccurs="1" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Action" type="mstns:Action" minOccurs="0" maxOccurs="unbounded" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="States" minOccurs="1" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="State" type="mstns:State" minOccurs="0" maxOccurs="unbounded" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Objects" minOccurs="1" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ModelObject" type="mstns:ModelObject" minOccurs="0" maxOccurs="unbounded" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- Diagram -->
+  <xs:element name="Diagram">
+    <xs:complexType>
+      <xs:sequence>
+        <!--
+        <xs:element name="Title" type="xs:string" nillable="true" />
+        <xs:element name="Revision" type="xs:int" nillable="true" />
+        -->
+        <xs:element name="Revision" type="xs:int" minOccurs="0" maxOccurs="1" />
+        <xs:element name="ModelSystem" type="mstns:ModelSystem" minOccurs="1" maxOccurs="1" />
+        <xs:element name="Pages" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Page" type="mstns:Page" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="Genetibase.NuGenObjective.Page">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Page.vb</FileName>
+      <HashCode>kgAACcEAIAASAcSAAhDgEAGBCghGABEhEAAyBBSQQgE=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.NuGenObjective.Diagram">
+    <Position X="3.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Diagram.vb</FileName>
+      <HashCode>AQEAAYBAAICAIUAgAAAAAQAAKEgAQwgCAQAAAAAAABA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Pages" />
+    </ShowAsCollectionAssociation>
+  </Class>
+</ClassDiagram>

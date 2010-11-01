@@ -1,0 +1,45 @@
+<Configuration>
+  <SharedSolutionDisabledTemplatesManager>
+    <DisabledTemplates />
+  </SharedSolutionDisabledTemplatesManager>
+  <UnitTestRunner>
+    <CustomStartDirectory>
+    </CustomStartDirectory>
+    <UseShadowCopy>True</UseShadowCopy>
+    <UseCustomFolder>False</UseCustomFolder>
+    <Providers />
+  </UnitTestRunner>
+  <UserSolutionDisabledTemplatesManager>
+    <DisabledTemplates />
+  </UserSolutionDisabledTemplatesManager>
+  <FileStructureView>
+    <AutoScrollToSource>False</AutoScrollToSource>
+    <TrackCaretLocation>False</TrackCaretLocation>
+  </FileStructureView>
+  <ReFormatCode>
+    <ReorderMembers>False</ReorderMembers>
+    <OptimizeUsings>False</OptimizeUsings>
+    <RemoveRedundantThis>False</RemoveRedundantThis>
+    <ShortenReferences>False</ShortenReferences>
+  </ReFormatCode>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <EditorManager>
+    <RecentFiles>
+      <File id="AB397BAF-C825-405C-8B38-10D3FAC1B2E4/f:Stdafx.cpp" caret="202" scrollPosition="0|0" />
+      <File id="AB397BAF-C825-405C-8B38-10D3FAC1B2E4/f:octreevisualizer.cpp" caret="164" scrollPosition="0|0" />
+      <File id="AB397BAF-C825-405C-8B38-10D3FAC1B2E4/f:OctreeAuxiliary.cpp" caret="609" scrollPosition="0|0" />
+      <File id="AB397BAF-C825-405C-8B38-10D3FAC1B2E4/f:Octree_2.cpp" caret="198" scrollPosition="0|0" />
+      <File id="AB397BAF-C825-405C-8B38-10D3FAC1B2E4/f:OcTree.cpp" caret="235" scrollPosition="0|0" />
+      <File id="AB397BAF-C825-405C-8B38-10D3FAC1B2E4/f:AssemblyInfo.cpp" caret="526" scrollPosition="0|0" />
+      <File id="AB397BAF-C825-405C-8B38-10D3FAC1B2E4/f:Array.cpp" caret="346" scrollPosition="0|0" />
+      <File id="AB397BAF-C825-405C-8B38-10D3FAC1B2E4/f:Vector3f.cpp" caret="198" scrollPosition="0|0" />
+      <File id="AB397BAF-C825-405C-8B38-10D3FAC1B2E4/f:OcTree.h" caret="241" scrollPosition="0|0" />
+      <File id="AB397BAF-C825-405C-8B38-10D3FAC1B2E4/f:Vector3f.hpp" caret="2084" scrollPosition="0|51" />
+      <File id="AB397BAF-C825-405C-8B38-10D3FAC1B2E4/f:OctreeImplementation.cpp" caret="2337" scrollPosition="0|724" />
+      <File id="AB397BAF-C825-405C-8B38-10D3FAC1B2E4/f:OctreeImplementation.hpp" caret="2981" scrollPosition="0|57" />
+    </RecentFiles>
+  </EditorManager>
+  <CompletionStatisticsManager />
+</Configuration>

@@ -1,0 +1,110 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Genetibase Diagram Library", "Genetibase Diagram Library\Genetibase Diagram Library.vbproj", "{69AFE03A-CA8F-43EB-AFB2-D64C04A63979}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Genetibase Model Diagram Designer", "Genetibase Model Diagram Designer\Genetibase Model Diagram Designer.vbproj", "{C31904C6-4B4A-44DF-A660-1FAA98842F24}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Genetibase Diagram Server", "Genetibase Diagram Server\", "{DDDF41ED-B295-461A-BF55-728AF3A33B75}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFramework = "3.5"
+		ProjectReferences = "{69AFE03A-CA8F-43EB-AFB2-D64C04A63979}|Genetibase.NuGenObjective.dll;{CC9D4530-44F1-4312-B734-F98DF0ED0A51}|Genetibase.NuGenObjective.Web.DiagramServer.dll;{8A6258E1-D2DC-483F-BEF9-AB170BD775D7}|Genetibase.NuGenObjective.Drawing.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/Genetibase Diagram Server"
+		Debug.AspNetCompiler.PhysicalPath = "Genetibase Diagram Server\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Genetibase Diagram Server\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Genetibase Diagram Server"
+		Release.AspNetCompiler.PhysicalPath = "Genetibase Diagram Server\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Genetibase Diagram Server\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "1119"
+		DefaultWebSiteLanguage = "Visual Basic"
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Genetibase Diagram Server Library", "Genetibase Diagram Server Library\Genetibase Diagram Server Library.vbproj", "{CC9D4530-44F1-4312-B734-F98DF0ED0A51}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Genetibase Diagram Drawing Library", "Genetibase Diagram Drawing Library\Genetibase Diagram Drawing Library.vbproj", "{8A6258E1-D2DC-483F-BEF9-AB170BD775D7}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Genetibase Diagram Client Library", "Genetibase Diagram Client Library\Genetibase Diagram Client Library.vbproj", "{E186BE84-67F9-41E1-9FE5-D929D753940F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Release|.NET = Release|.NET
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{69AFE03A-CA8F-43EB-AFB2-D64C04A63979}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{69AFE03A-CA8F-43EB-AFB2-D64C04A63979}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69AFE03A-CA8F-43EB-AFB2-D64C04A63979}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69AFE03A-CA8F-43EB-AFB2-D64C04A63979}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{69AFE03A-CA8F-43EB-AFB2-D64C04A63979}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{69AFE03A-CA8F-43EB-AFB2-D64C04A63979}.Release|.NET.ActiveCfg = Release|Any CPU
+		{69AFE03A-CA8F-43EB-AFB2-D64C04A63979}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69AFE03A-CA8F-43EB-AFB2-D64C04A63979}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69AFE03A-CA8F-43EB-AFB2-D64C04A63979}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{69AFE03A-CA8F-43EB-AFB2-D64C04A63979}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{C31904C6-4B4A-44DF-A660-1FAA98842F24}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{C31904C6-4B4A-44DF-A660-1FAA98842F24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C31904C6-4B4A-44DF-A660-1FAA98842F24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C31904C6-4B4A-44DF-A660-1FAA98842F24}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{C31904C6-4B4A-44DF-A660-1FAA98842F24}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{C31904C6-4B4A-44DF-A660-1FAA98842F24}.Release|.NET.ActiveCfg = Release|Any CPU
+		{C31904C6-4B4A-44DF-A660-1FAA98842F24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C31904C6-4B4A-44DF-A660-1FAA98842F24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C31904C6-4B4A-44DF-A660-1FAA98842F24}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{C31904C6-4B4A-44DF-A660-1FAA98842F24}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{DDDF41ED-B295-461A-BF55-728AF3A33B75}.Debug|.NET.ActiveCfg = Debug|.NET
+		{DDDF41ED-B295-461A-BF55-728AF3A33B75}.Debug|.NET.Build.0 = Debug|.NET
+		{DDDF41ED-B295-461A-BF55-728AF3A33B75}.Debug|Any CPU.ActiveCfg = Debug|.NET
+		{DDDF41ED-B295-461A-BF55-728AF3A33B75}.Debug|Mixed Platforms.ActiveCfg = Debug|.NET
+		{DDDF41ED-B295-461A-BF55-728AF3A33B75}.Debug|Mixed Platforms.Build.0 = Debug|.NET
+		{DDDF41ED-B295-461A-BF55-728AF3A33B75}.Release|.NET.ActiveCfg = Debug|.NET
+		{DDDF41ED-B295-461A-BF55-728AF3A33B75}.Release|.NET.Build.0 = Debug|.NET
+		{DDDF41ED-B295-461A-BF55-728AF3A33B75}.Release|Any CPU.ActiveCfg = Debug|.NET
+		{DDDF41ED-B295-461A-BF55-728AF3A33B75}.Release|Mixed Platforms.ActiveCfg = Debug|.NET
+		{DDDF41ED-B295-461A-BF55-728AF3A33B75}.Release|Mixed Platforms.Build.0 = Debug|.NET
+		{CC9D4530-44F1-4312-B734-F98DF0ED0A51}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{CC9D4530-44F1-4312-B734-F98DF0ED0A51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC9D4530-44F1-4312-B734-F98DF0ED0A51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC9D4530-44F1-4312-B734-F98DF0ED0A51}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{CC9D4530-44F1-4312-B734-F98DF0ED0A51}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{CC9D4530-44F1-4312-B734-F98DF0ED0A51}.Release|.NET.ActiveCfg = Release|Any CPU
+		{CC9D4530-44F1-4312-B734-F98DF0ED0A51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC9D4530-44F1-4312-B734-F98DF0ED0A51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC9D4530-44F1-4312-B734-F98DF0ED0A51}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{CC9D4530-44F1-4312-B734-F98DF0ED0A51}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{8A6258E1-D2DC-483F-BEF9-AB170BD775D7}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{8A6258E1-D2DC-483F-BEF9-AB170BD775D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A6258E1-D2DC-483F-BEF9-AB170BD775D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A6258E1-D2DC-483F-BEF9-AB170BD775D7}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{8A6258E1-D2DC-483F-BEF9-AB170BD775D7}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{8A6258E1-D2DC-483F-BEF9-AB170BD775D7}.Release|.NET.ActiveCfg = Release|Any CPU
+		{8A6258E1-D2DC-483F-BEF9-AB170BD775D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A6258E1-D2DC-483F-BEF9-AB170BD775D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A6258E1-D2DC-483F-BEF9-AB170BD775D7}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{8A6258E1-D2DC-483F-BEF9-AB170BD775D7}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{E186BE84-67F9-41E1-9FE5-D929D753940F}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{E186BE84-67F9-41E1-9FE5-D929D753940F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E186BE84-67F9-41E1-9FE5-D929D753940F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E186BE84-67F9-41E1-9FE5-D929D753940F}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{E186BE84-67F9-41E1-9FE5-D929D753940F}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{E186BE84-67F9-41E1-9FE5-D929D753940F}.Release|.NET.ActiveCfg = Release|Any CPU
+		{E186BE84-67F9-41E1-9FE5-D929D753940F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E186BE84-67F9-41E1-9FE5-D929D753940F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E186BE84-67F9-41E1-9FE5-D929D753940F}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{E186BE84-67F9-41E1-9FE5-D929D753940F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

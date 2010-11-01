@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="Genetibase.NuGenObjective.ElementCollection(Of T)" Collapsed="true">
+    <Position X="12" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ElementCollection.vb</FileName>
+      <HashCode>AAAAAIDAAAAABUCABABAAEAAAAAABAAEAAAAAAgAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.NuGenObjective.Action">
+    <Position X="0.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Action.vb</FileName>
+      <HashCode>EAAAAAEAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.NuGenObjective.Role">
+    <Position X="2.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Role.vb</FileName>
+      <HashCode>EAAAAAEAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.NuGenObjective.State">
+    <Position X="9.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>State.vb</FileName>
+      <HashCode>EAAAAAEAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.NuGenObjective.ModelObject">
+    <Position X="5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ModelObject.vb</FileName>
+      <HashCode>EAMQAAMgIEAAAIwAgAMAAAAAAAACAAABACgwAAAACQA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.NuGenObjective.ModelSystem">
+    <Position X="1.5" Y="9.25" Width="2.5" />
+    <TypeIdentifier>
+      <FileName>ModelSystem.vb</FileName>
+      <HashCode>EBBAgIQCNEmSAEgAAhnMAgQEYnABQgsoIDggHBQwibA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Objects" />
+      <Property Name="States" />
+      <Property Name="Roles" />
+      <Property Name="Actions" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Genetibase.NuGenObjective.Element">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Element.vb</FileName>
+      <HashCode>EAEAAAMAAMAgASwAJgAAEAQAAEAAAgAFAAAAAAhAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Genetibase.NuGenObjective.Interaction">
+    <Position X="7.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Interaction.vb</FileName>
+      <HashCode>EAEAAAEIAAARAAQgEIAAAAAAIAAEAAEhAAABBAAAAAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+</ClassDiagram>

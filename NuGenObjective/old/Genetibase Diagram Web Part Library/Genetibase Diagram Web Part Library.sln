@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Genetibase Diagram Web Part Library", "Genetibase Diagram Web Part Library.vbproj", "{B00903B9-341E-46E4-9E87-1A6AC13C945A}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "GenetibaseDiagramWebPartPack", "..\GenetibaseDiagramWebPartPack\GenetibaseDiagramWebPartPack.vdproj", "{0BD3B7D6-13A5-46C9-8A76-682C7DF7CCB5}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{B00903B9-341E-46E4-9E87-1A6AC13C945A}.Debug.ActiveCfg = Debug|.NET
+		{B00903B9-341E-46E4-9E87-1A6AC13C945A}.Debug.Build.0 = Debug|.NET
+		{B00903B9-341E-46E4-9E87-1A6AC13C945A}.Release.ActiveCfg = Release|.NET
+		{B00903B9-341E-46E4-9E87-1A6AC13C945A}.Release.Build.0 = Release|.NET
+		{0BD3B7D6-13A5-46C9-8A76-682C7DF7CCB5}.Debug.ActiveCfg = Debug
+		{0BD3B7D6-13A5-46C9-8A76-682C7DF7CCB5}.Debug.Build.0 = Debug
+		{0BD3B7D6-13A5-46C9-8A76-682C7DF7CCB5}.Release.ActiveCfg = Release
+		{0BD3B7D6-13A5-46C9-8A76-682C7DF7CCB5}.Release.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,1 @@
+The dll that results from building this project, ProjectExport-AddIn.dll, has to be copied to a directory called addins under the application directory of the Diagram Designer. Also, the file ProjectExport-AddIn.dll.txt has to be copied there.
