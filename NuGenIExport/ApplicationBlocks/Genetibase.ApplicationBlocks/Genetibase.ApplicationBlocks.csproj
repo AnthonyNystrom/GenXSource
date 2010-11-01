@@ -1,0 +1,149 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C7B70FD9-1B0D-4927-A31E-442F9790A2F3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Genetibase.ApplicationBlocks</RootNamespace>
+    <AssemblyName>NuGenIExport.Net</AssemblyName>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>af27814a-6c57-95b4-f62c-9cf4a5f06675.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\NuGenIExport.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Genetibase.ApplicationBlocks.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmNag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImageExport\NuGenExportProgressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImageExport\NuGenExportProgressForm.Designer.cs">
+      <DependentUpon>NuGenExportProgressForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageExport\NuGenFileFormatBlock.cs">
+    </Compile>
+    <Compile Include="ImageExport\NuGenFileFormatBlock.Designer.cs">
+      <DependentUpon>NuGenFileFormatBlock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageExport\NuGenOutputBlock.cs">
+    </Compile>
+    <Compile Include="ImageExport\NuGenOutputBlock.Designer.cs">
+      <DependentUpon>NuGenOutputBlock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageExport\NuGenResolutionSpin.cs">
+    </Compile>
+    <Compile Include="NuGenImageExportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuGenImageExportForm.Designer.cs">
+      <DependentUpon>NuGenImageExportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageExport\NuGenImageTypeBlock.cs">
+    </Compile>
+    <Compile Include="ImageExport\NuGenImageTypeBlock.Designer.cs">
+      <DependentUpon>NuGenImageTypeBlock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageExport\NuGenResolutionBlock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ImageExport\NuGenResolutionBlock.Designer.cs">
+      <DependentUpon>NuGenResolutionBlock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ImageExport\NuGenImageExport.cs" />
+    <Compile Include="ImageExport\NuGenRatioSizeTracker.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Genetibase.Controls\Genetibase.Controls.csproj">
+      <Project>{45800074-EE30-4DBA-82EA-AB5FC52394CF}</Project>
+      <Name>Genetibase.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Genetibase.Shared\Genetibase.Shared.csproj">
+      <Project>{A7A02558-58A0-4333-BFAF-77CB49DE17F0}</Project>
+      <Name>Genetibase.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmNag.resx">
+      <DependentUpon>frmNag.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageExport\NuGenExportProgressForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenExportProgressForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageExport\NuGenFileFormatBlock.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenFileFormatBlock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageExport\NuGenOutputBlock.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenOutputBlock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenImageExportForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenImageExportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageExport\NuGenImageTypeBlock.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenImageTypeBlock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageExport\NuGenResolutionBlock.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenResolutionBlock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="af27814a-6c57-95b4-f62c-9cf4a5f06675.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,3872 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Genetibase.Controls</name>
+    </assembly>
+    <members>
+        <member name="T:Genetibase.Controls.Service.NuGenRtfColorTable">
+            <summary>
+            Encapsulates RTF color.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.Service.NuGenRtfColorTable.UseColor(System.Drawing.Color)">
+            <summary>
+            Adds the specified color to the collection.
+            </summary>
+            <param name="key">Specifies the color to add to the collection.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Genetibase.Controls.Service.NuGenRtfColorTable.ToString">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents the current <see cref="T:System.Object"/>.
+            </summary>
+            <returns>
+            A <see cref="T:System.String"/> that represents the current <see cref="T:System.Object"/>.
+            </returns>
+        </member>
+        <member name="M:Genetibase.Controls.Service.NuGenRtfColorTable.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.Service.NuGenRtfColorTable"/> class.
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.NuGenSizingContainer">
+            <summary>
+            Acts as a container and resizes its child controls.
+            </summary>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenSizingContainer.splitter">
+            <summary>
+            Used to changed the width of this <see cref="T:NuGenSizingContainer"/>.
+            </summary>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenSizingContainer.internalSizingMode">
+            <summary>
+            Determines the way this <see cref="T:NuGenSizingContainer"/> docks to its parent window.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenSizingContainer.OnSizingModeChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:NuGenSizingContainer.SizingModeChanged"/> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenSizingContainer.OnControlAdded(System.Windows.Forms.ControlEventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.ControlAdded"/> event.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.ControlEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenSizingContainer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenSizingContainer"/> class.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenSizingContainer.SizingMode">
+            <summary>
+            Gets or sets the way this <see cref="T:NuGenSizingContainer"/> docks to its parent window.
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenSizingContainer.SizingModeChanged">
+            <summary>
+            Occurs when the value of the <see cref="P:NuGenSizingContainer.SizingMode"/> property changes.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenSizingContainer.DefaultSize">
+            <summary>
+            Gets the default size for this <see cref="T:NuGenSizingContainer"/>.
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.ComponentModel.NuGenSRDescriptionAttribute">
+            <summary>
+            Provides resource strings support for <see cref="T:System.ComponentModel.DescriptionAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:Genetibase.Controls.ComponentModel.NuGenSRDescriptionAttribute._replaced">
+            <summary>
+            Indicates whether the value of the <see cref="P:Genetibase.Controls.ComponentModel.NuGenSRDescriptionAttribute.Description"/> property
+            was replaced with a string from the resources.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.ComponentModel.NuGenSRDescriptionAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.SRDescriptionAttribute"/> class.
+            </summary>
+            <param name="description">The description text.</param>
+        </member>
+        <member name="P:Genetibase.Controls.ComponentModel.NuGenSRDescriptionAttribute.Description">
+            <summary>
+            Gets the description stored in this attribute.
+            </summary>
+            <value></value>
+            <returns>The description stored in this attribute.</returns>
+        </member>
+        <member name="T:Genetibase.Controls.Service.NuGenRtfDocument">
+            <summary>
+            Encapsulates RTF document.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.Service.NuGenRtfDocument.AppendText(System.String)">
+            <summary>
+            Appends the specified text to this <see cref="T:NuGenRtfDocument"/>.
+            </summary>
+            <param name="text">Specifies the text to add to this <see cref="T:NuGenRtfDocument"/>.</param>
+        </member>
+        <member name="M:Genetibase.Controls.Service.NuGenRtfDocument.UseFont(System.String)">
+            <summary>
+            Sets the specified font for this <see cref="T:NuGenRtfDocument"/>.
+            </summary>
+            <param name="fontName">Specifies the font name for this <see cref="T:NuGenRtfDocument"/>.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Genetibase.Controls.Service.NuGenRtfDocument.UseColor(System.Drawing.Color)">
+            <summary>
+            Sets the specified color for this <see cref="T:NuGenRtfDocument"/>.
+            </summary>
+            <param name="fromArgb">Specifies the color for this <see cref="T:NuGenRtfDocument"/>.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Genetibase.Controls.Service.NuGenRtfDocument.ToString">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents the current <see cref="T:System.Object"/>.
+            </summary>
+            <returns>
+            A <see cref="T:System.String"/> that represents the current <see cref="T:System.Object"/>.
+            </returns>
+        </member>
+        <member name="M:Genetibase.Controls.Service.NuGenRtfDocument.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.Service.NuGenRtfDocument"/> class.
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.Design.NuGenDirectorySelectorDesigner">
+            <summary>
+            Provides additional design-time functionality for the <see cref="T:NuGenDirectorySelector"/>.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.Design.NuGenDirectorySelectorDesigner.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.Design.NuGenDirectorySelectorDesigner"/> class.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.Design.NuGenDirectorySelectorDesigner.SelectionRules">
+            <summary>
+            Gets the selection rules that indicate the movement capabilities of a component.
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:Genetibase.Controls.NuGenBevel">
+            <summary>
+            VCL TBevel analogue.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenBevel.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.Paint"/> event.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.PaintEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenBevel.SetBoundsCore(System.Int32,System.Int32,System.Int32,System.Int32,System.Windows.Forms.BoundsSpecified)">
+            <summary>
+            Performs the work of setting the
+            specified bounds of this control.
+            </summary>
+            <param name="x">The new <see cref="P:System.Windows.Forms.Control.Left"/> property value of the control.</param>
+            <param name="y">The new <see cref="P:System.Windows.Forms.Control.Right"/> property value of the control.</param>
+            <param name="width">The new <see cref="P:System.Windows.Forms.Control.Width"/> property value of the control.</param>
+            <param name="height">The new <see cref="P:System.Windows.Forms.Control.Height"/> property value of the control.</param>
+            <param name="specified">A bitwise combination of the <see cref="T:System.Windows.Forms.BoundsSpecified"/> values.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenBevel.WndProc(System.Windows.Forms.Message@)">
+            <summary>
+            Processes Windows messages.
+            </summary>
+            <param name="m">The message to process.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenBevel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenBevel"/> class.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenBevel.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenBevel.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenBevel.DefaultSize">
+            <summary>
+            Gets the default size for this <see cref="T:NuGenBevel"/>.
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.Collections.NuGenTreeNodeCollection">
+            <summary>
+            Represents a proxy for the <see cref="T:NuGenTreeView"/> and <see cref="T:NuGenTreeNode"/> to
+            operate with custom node types without explicit boxing/unboxing (it is necessary to preserve
+            the native collection to process the tree properly). It is recommended to hide the native collection
+            and manage it according to the events bubbled by this <see cref="T:NuGenTreeNodeCollection"/>. Do use
+            calls to the base class (e.g. base.Nodes.Add, not this.Nodes.Add) to prevent
+            <see cref="T:System.StackOverflowException"/>.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.Collections.NuGenTreeNodeCollection.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through a collection.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IEnumerator"></see> object that can be used to iterate through the collection.
+            </returns>
+        </member>
+        <member name="M:Genetibase.Controls.Collections.NuGenTreeNodeCollection.OnEnumeratorRequested(Genetibase.Controls.Collections.NuGenEnumeratorRequestedEventArgs)">
+            <summary>
+            Will bubble the <see cref="E:EnumeratorRequested"/> event.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Genetibase.Controls.Collections.NuGenTreeNodeCollection.OnNodeCountRequested(Genetibase.Controls.Collections.NuGenItemsCountRequestedEventArgs)">
+            <summary>
+            Will bubble the <see cref="E:NodeCountRequested"/> event.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Genetibase.Controls.Collections.NuGenTreeNodeCollection.OnNodeByIndexRequested(Genetibase.Controls.Collections.NuGenIndexedTreeNodeEventArgs)">
+            <summary>
+            Will bubble <see cref="E:NodeByIndexRequested"/> event.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Genetibase.Controls.Collections.NuGenTreeNodeCollection.OnNodeByIndexAdjusted(Genetibase.Controls.Collections.NuGenIndexedTreeNodeEventArgs)">
+            <summary>
+            Will bubble <see cref="E:NodeByIndexAdjusted"/> event.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Genetibase.Controls.Collections.NuGenTreeNodeCollection.AddNode(Genetibase.Controls.NuGenTreeNode)">
+            <summary>
+            </summary>
+            <param name="treeNodeToAdd"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="treeNodeToAdd"/> is <see langword="null"/>.
+            </exception>
+        </member>
+        <member name="M:Genetibase.Controls.Collections.NuGenTreeNodeCollection.OnNodeAdded(Genetibase.Controls.Collections.NuGenAddTreeNodeEventArgs)">
+            <summary>
+            Will bubble <see cref="E:NodeAdded"/> event.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Genetibase.Controls.Collections.NuGenTreeNodeCollection.AddNodeRange(Genetibase.Controls.NuGenTreeNode[])">
+            <summary>
+            </summary>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="treeNodeRangeToAdd"/> is <see langword="null"/>.
+            </exception>
+        </member>
+        <member name="M:Genetibase.Controls.Collections.NuGenTreeNodeCollection.OnNodeRangeAdded(Genetibase.Controls.Collections.NuGenAddTreeNodeRangeEventArgs)">
+            <summary>
+            Will bubble the <see cref="E:NodeRangeAdded"/> event.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Genetibase.Controls.Collections.NuGenTreeNodeCollection.Clear">
+            <summary>
+            Clear underlying collection.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.Collections.NuGenTreeNodeCollection.OnClearNodesRequested(Genetibase.Controls.Collections.NuGenItemsClearRequestedEventArgs)">
+            <summary>
+            Will bubble <see cref="E:ClearNodesRequested"/> event.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Genetibase.Controls.Collections.NuGenTreeNodeCollection.Contains(Genetibase.Controls.NuGenTreeNode)">
+            <summary>
+            </summary>
+            <param name="treeNodeToCheck">Can be <see langword="null"/>.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Genetibase.Controls.Collections.NuGenTreeNodeCollection.OnContainsNodeRequested(Genetibase.Controls.Collections.NuGenContainsItemRequestedEventArgs)">
+            <summary>
+            Will bubble <see cref="E:ContainsNodeRequested"/> event.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Genetibase.Controls.Collections.NuGenTreeNodeCollection.InsertNode(System.Int32,Genetibase.Controls.NuGenTreeNode)">
+            <summary>
+            </summary>
+            <param name="indexToInsertAt"></param>
+            <param name="treeNodeToInsert"></param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="treeNodeToInsert"/> is <see langword="null"/>.
+            </exception>
+        </member>
+        <member name="M:Genetibase.Controls.Collections.NuGenTreeNodeCollection.OnNodeInserted(Genetibase.Controls.Collections.NuGenAddTreeNodeEventArgs)">
+            <summary>
+            Will bubble <see cref="E:NodeInserted"/> event.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Genetibase.Controls.Collections.NuGenTreeNodeCollection.RemoveNode(Genetibase.Controls.NuGenTreeNode)">
+            <summary>
+            </summary>
+            <param name="treeNodeToRemove"></param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="treeNodeToRemove"/> is <see langword="null"/>.
+            </exception>
+        </member>
+        <member name="M:Genetibase.Controls.Collections.NuGenTreeNodeCollection.OnNodeRemoved(Genetibase.Controls.Collections.NuGenRemoveTreeNodeEventArgs)">
+            <summary>
+            Will bubble <see cref="E:NodeRemoved"/> event.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Genetibase.Controls.Collections.NuGenTreeNodeCollection.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.Collections.NuGenTreeNodeCollection"/> class.
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.Collections.NuGenTreeNodeCollection.EnumeratorRequested">
+            <summary>
+            The handler should set the value for the <see cref="P:RequestedEnumerator"/> property.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.Collections.NuGenTreeNodeCollection.Count">
+            <summary>
+            Gets the number of nodes in the collection.
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.Collections.NuGenTreeNodeCollection.NodeCountRequested">
+            <summary>
+            The handler should set the value for the <see cref="P:Count"/> property to indicate the number
+            of nodes contained within the native collection.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.Collections.NuGenTreeNodeCollection.Item(System.Int32)">
+            <summary>
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.Collections.NuGenTreeNodeCollection.NodeByIndexRequested">
+            <summary>
+            The handler should set the value for the <see cref="P:TreeNode"/> property according to the
+            specified index.
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.Collections.NuGenTreeNodeCollection.NodeByIndexAdjusted">
+            <summary>
+            The handler should set the specified value i.e. <see cref="P:TreeNode"/> for the item at the
+            specified index in the collection.
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.Collections.NuGenTreeNodeCollection.NodeAdded">
+            <summary>
+            A new <see cref="T:NuGenTreeNode"/> should be added to the collection. The handler should set
+            the value for the <see cref="P:TreeNodeIndex"/> property that indicates the index the node has
+            been added at.
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.Collections.NuGenTreeNodeCollection.NodeRangeAdded">
+            <summary>
+            The handler should add the specified <see cref="T:NuGenTreeNode"/> range to the collection.
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.Collections.NuGenTreeNodeCollection.ClearNodesRequested">
+            <summary>
+            The handler should clear its collection.
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.Collections.NuGenTreeNodeCollection.ContainsNodeRequested">
+            <summary>
+            The handler should set the value for the <see cref="P:ContainsNode"/> property indicating whether
+            the <see cref="P:NodeToCheck"/> is contained within the collection.
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.Collections.NuGenTreeNodeCollection.NodeInserted">
+            <summary>
+            A new <see cref="T:NuGenTreeNode"/> should be inserted into the native collection.
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.Collections.NuGenTreeNodeCollection.NodeRemoved">
+            <summary>
+            A new <see cref="T:NuGenTreeNode"/> should be removed from the native collection.
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.NuGenTabPage">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabPage.OnTabButtonImageChanged(System.EventArgs)">
+            <summary>
+            Will bubble the <see cref="E:Genetibase.Controls.NuGenTabPage.TabButtonImageChanged"/> event.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabPage.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.Paint"></see> event.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.PaintEventArgs"></see> that contains the event data.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabPage.#ctor(Genetibase.Shared.ComponentModel.INuGenServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenTabPage"/> class.
+            </summary>
+            <param name="serviceProvider">
+            Requires:<para/>
+            <see cref="T:Genetibase.Controls.INuGenTabRenderer"/>
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            <para>
+            	<paramref name="serviceProvider"/> is <see langword="null"/>.
+            </para>
+            </exception>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabPage.TabButtonImage">
+            <summary>
+            Gets or sets the <see cref="T:System.Drawing.Image"/> that the associated <see cref="T:Genetibase.Controls.NuGenTabButton"/> displays.
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenTabPage.TabButtonImageChanged">
+            <summary>
+            Occurs when the value of the <see cref="P:Genetibase.Controls.NuGenTabPage.TabButtonImage"/> property changes.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabPage.Text">
+            <summary>
+            </summary>
+            <value></value>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenTabPage.TextChanged">
+            <summary>
+            Occurs when the tab page text changes.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabPage.TabRenderer">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabPage.DefaultSize">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabPage.Initiator">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabPage.ServiceProvider">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.NuGenTabButtonPaintParams">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabButtonPaintParams.#ctor(System.Drawing.Graphics,System.Drawing.Rectangle)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenTabButtonPaintParams"/> class.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">
+            <para>
+            	<paramref name="g"/> is <see langword="null"/>.
+            </para>
+            </exception>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabButtonPaintParams.Bounds">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabButtonPaintParams.Font">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabButtonPaintParams.ForeColor">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabButtonPaintParams.Graphics">
+            <summary>
+            Read-only.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabButtonPaintParams.Image">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabButtonPaintParams.ImageBounds">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabButtonPaintParams.IsRightToLeft">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabButtonPaintParams.State">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabButtonPaintParams.Text">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabButtonPaintParams.TextBounds">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.Collections.NuGenAZTreeNodeComparer">
+            <summary>
+            A > Z.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.Collections.NuGenAZTreeNodeComparer.Compare(Genetibase.Controls.NuGenTreeNode,Genetibase.Controls.NuGenTreeNode)">
+            <summary>
+            Compares text of the specified <see cref="T:NuGenTreeNode"/> objects for A > Z sorting.
+            </summary>
+            <param name="firstNodeToCompare">Can be <see langword="null"/>.</param>
+            <param name="secondNodeToCompare">Can be <see langword="null"/>.</param>
+        </member>
+        <member name="T:Genetibase.Controls.Design.NuGenToolButtonDesigner">
+            <summary>
+            Provides additional design-time functionality for the <see cref="T:NuGenToolButton"/>.
+            </summary>
+        </member>
+        <member name="F:Genetibase.Controls.Design.NuGenToolButtonDesigner.PEN_WIDTH">
+            <summary>
+            Used for tweaking.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.Design.NuGenToolButtonDesigner.OnPaintAdornments(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Called when the control that the designer is managing has painted its surface so the designer
+            can paint any additional adornments on top of the control.
+            </summary>
+            <param name="e">An <see cref="T:System.Windows.Forms.PaintEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Genetibase.Controls.Design.NuGenToolButtonDesigner.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.Design.NuGenToolButtonDesigner"/> class.
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.NuGenSplitter">
+            <summary>
+            Represents a splitter for the <see cref="T:NuGenSideBar"/>.
+            </summary>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenSplitter.internalMinimumWidth">
+            <summary>
+            Determines the minimum width of the target control.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenSplitter.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Raises the mouse down event.
+            </summary>
+            <param name="e">An <see cref="T:System.Windows.Forms.MouseEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenSplitter.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.MouseMove"/> event.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.MouseEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenSplitter.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.MouseUp"/> event.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.MouseEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenSplitter.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenSplitter"/> class.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenSplitter.MinimumWidth">
+            <summary>
+            Gets or sets the minimum width of the target control.
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.Design.NuGenDialogBlockDesigner">
+            <summary>
+            Provides additional design-time funcionality for the <see cref="T:NuGenDialogBlock"/>.
+            </summary>
+        </member>
+        <member name="F:Genetibase.Controls.Design.NuGenDialogBlockDesigner.OFFSET">
+            <summary>
+            Used for GUI layout.
+            </summary>
+        </member>
+        <member name="F:Genetibase.Controls.Design.NuGenDialogBlockDesigner.dialogBlock">
+            <summary>
+            Determines the <see cref="T:NuGenDialogBlock"/> currently being designed.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.Design.NuGenDialogBlockDesigner.Initialize(System.ComponentModel.IComponent)">
+            <summary>
+            Initializes the designer with the specified component.
+            </summary>
+            <param name="component">The <see cref="T:System.ComponentModel.IComponent"/> to associate the designer with. This component must always be an instance of, or derive from, <see cref="T:System.Windows.Forms.Control"/> .</param>
+        </member>
+        <member name="M:Genetibase.Controls.Design.NuGenDialogBlockDesigner.InitializeNewComponent(System.Collections.IDictionary)">
+            <summary>
+            Called when the designer
+            is initialized, so the designer can set default values for properties of the component.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.Design.NuGenDialogBlockDesigner.GetCurrentComponentName(System.String,System.Int32)">
+            <summary>
+            Retrieves a component name according to the specified default component name and the 
+            specified postfix.
+            </summary>
+            <param name="name">Specifies the default component name.</param>
+            <param name="postfix">Specifies the postfix for the component name.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Genetibase.Controls.Design.NuGenDialogBlockDesigner.GetName(System.Windows.Forms.Control,System.String,System.Int32)">
+            <summary>
+            Retrieves a qualified name within the specified container.
+            </summary>
+            <param name="container">Specifies the container that should contain only unique names.</param>
+            <param name="defaultName">Specifies the default name for a component.</param>
+            <param name="defaultCount">Specifies the default postfix. If zero no postfix is appended.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="container"/> is <see langword="null"/>.
+            -or-
+            <paramref name="defaultName"/> is <see langword="null"/>.
+            </exception>
+        </member>
+        <member name="M:Genetibase.Controls.Design.NuGenDialogBlockDesigner.InitializeDialogButton(System.Windows.Forms.Button)">
+            <summary>
+            Initializes the specified <see cref="T:Button"/>.
+            </summary>
+            <param name="btn">Specifies the <see cref="T:Button"/> to initialize.</param>
+        </member>
+        <member name="M:Genetibase.Controls.Design.NuGenDialogBlockDesigner.NameAlreadyExists(System.ComponentModel.IComponent,System.String)">
+            <summary>
+            Indicates whether the name of the specified component is equal to the specified name.
+            </summary>
+            <param name="component">Specifies the component to retrieve the name from.</param>
+            <param name="name">Specifies the name to compare with.</param>
+            <returns><see langword="true"/> if the name of the specified component is equal to the 
+            specified name; otherwise, <see langword="false"/>.</returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="component"/> is <see langword="null"/>.
+            -or-
+            <paramref name="name"/> is <see langword="null"/>.
+            </exception>
+        </member>
+        <member name="M:Genetibase.Controls.Design.NuGenDialogBlockDesigner.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.Design.NuGenDialogBlockDesigner"/> class.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.Design.NuGenDialogBlockDesigner.SelectionRules">
+            <summary>
+            Gets the selection rules that indicate the movement capabilities of a component.
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:Genetibase.Controls.NuGenTreeNode">
+            <summary>
+            Represents a node of a <see cref="T:NuGenTreeView"/>.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTreeNode.FromHandle(Genetibase.Controls.NuGenTreeView,System.IntPtr)">
+            <summary>
+            Retrieves a <see cref="T:NuGenTreeNode"/> from the given handle.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="nodeOwnerTreView"/> is <see langword="null"/>.
+            </exception>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTreeNode.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenTreeNode"/> class.<para/>
+            <c>Text = ""</c>. <c>HasCheckBox = true</c>. <c>Checked = false</c>.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTreeNode.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenTreeNode"/> class.<para/>
+            <c>HasCheckBox = true</c>. <c>Checked = false</c>.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTreeNode.#ctor(System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenTreeNode"/> class.<para/>
+            <c>Checked = false</c>.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTreeNode.#ctor(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenTreeNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTreeNode.#ctor(System.String,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenTreeNode"/> class.<para/>
+            <c>HasCheckBox = true</c>. <c>Checked = false</c>. <c>SelectedImageIndex = ImageIndex</c>.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTreeNode.#ctor(System.String,System.Boolean,System.Boolean,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenTreeNode"/> class.<para/>
+            <c>SelectedImageIndex = ImageIndex</c>.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTreeNode.DefaultImageIndex">
+            <summary>
+            Gets or sets the index of the image that is used when the node is in its default state (collapsed).
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTreeNode.ExpandedImageIndex">
+            <summary>
+            Gets or sets the index of the image that is used when the node is expanded.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTreeNode.FirstNode">
+            <summary>
+            Gets the first child tree node in the tree node collection.
+            </summary>
+            <value></value>
+            <returns>The first child <see cref="T:System.Windows.Forms.TreeNode"></see> in the <see cref="P:System.Windows.Forms.TreeNode.Nodes"></see> collection.</returns>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTreeNode.HasCheckBox">
+            <summary>
+            Gets or sets the value indicating whether this <see cref="T:NuGenTreeNode"/> has a check box.
+            Default value is <see langword="true"/>.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTreeNode.LastNode">
+            <summary>
+            Gets the last child tree node.
+            </summary>
+            <value></value>
+            <returns>A <see cref="T:System.Windows.Forms.TreeNode"></see> that represents the last child tree node.</returns>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTreeNode.NextNode">
+            <summary>
+            Gets the next sibling tree node.
+            </summary>
+            <value></value>
+            <returns>A <see cref="T:System.Windows.Forms.TreeNode"></see> that represents the next sibling tree node.</returns>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTreeNode.NextVisibleNode">
+            <summary>
+            Gets the next visible tree node.
+            </summary>
+            <value></value>
+            <returns>A <see cref="T:System.Windows.Forms.TreeNode"></see> that represents the next visible tree node.</returns>
+            <PermissionSet><IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true"/><IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true"/><IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence"/><IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true"/></PermissionSet>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTreeNode.Nodes">
+            <summary>
+            Gets the collection of nodes contained within this <see cref="T:NuGenTreeNode"/>.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTreeNode.Parent">
+            <summary>
+            Gets the parent tree node of the current tree node.
+            </summary>
+            <value></value>
+            <returns>A <see cref="T:System.Windows.Forms.TreeNode"></see> that represents the parent of the current tree node.</returns>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTreeNode.PrevNode">
+            <summary>
+            Gets the previous sibling tree node.
+            </summary>
+            <value></value>
+            <returns>A <see cref="T:System.Windows.Forms.TreeNode"></see> that represents the previous sibling tree node.</returns>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTreeNode.PrevVisibleNode">
+            <summary>
+            Gets the previous visible tree node.
+            </summary>
+            <value></value>
+            <returns>A <see cref="T:System.Windows.Forms.TreeNode"></see> that represents the previous visible tree node.</returns>
+            <PermissionSet><IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true"/><IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true"/><IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence"/><IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true"/></PermissionSet>
+        </member>
+        <member name="T:Genetibase.Controls.Collections.NuGenEnumeratorRequestedEventArgs">
+            <summary>
+            The handler should set the value for the <see cref="T:RequestedEnumerator"/> property.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.Collections.NuGenEnumeratorRequestedEventArgs.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.Collections.NuGenEnumeratorRequestedEventArgs"/> class.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.Collections.NuGenEnumeratorRequestedEventArgs.RequestedEnumerator">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.Design.NuGenCTLabelDesigner">
+            <summary>
+            Provides additional design-time functionality for the <see cref="T:NuGenCTLabel"/>.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.Design.NuGenCTLabelDesigner.PostFilterEvents(System.Collections.IDictionary)">
+            <summary>
+            Allows a designer to change or remove items from the set
+            of events that it exposes through a <see cref="T:System.ComponentModel.TypeDescriptor"/>.
+            </summary>
+            <param name="events">The events for the class of the component.</param>
+        </member>
+        <member name="M:Genetibase.Controls.Design.NuGenCTLabelDesigner.PostFilterProperties(System.Collections.IDictionary)">
+            <summary>
+            Allows a designer to change or remove items from the set
+            of properties that it exposes through a <see cref="T:System.ComponentModel.TypeDescriptor"/>.
+            </summary>
+            <param name="properties">The properties for the class of the component.</param>
+        </member>
+        <member name="M:Genetibase.Controls.Design.NuGenCTLabelDesigner.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.Design.NuGenCTLabelDesigner"/> class.
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.Service.NuGenXmlTranslator">
+            <summary>
+            Translates the input string from XHTML into RTF.
+            </summary>
+        </member>
+        <member name="F:Genetibase.Controls.Service.NuGenXmlTranslator.errors">
+            <summary>
+            Determines the list of errors encountered during XHTML to RTF translation.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.Service.NuGenXmlTranslator.TrimBody(System.String)">
+            <summary>
+            If there is a body element, then all XML code outside of it is removed.
+            </summary>
+            <param name="xmlText">XML code to be trimmed.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="xmlText"/> is <see langword="null"/>.</exception>
+        </member>
+        <member name="M:Genetibase.Controls.Service.NuGenXmlTranslator.ToRtfDocument">
+            <summary>
+            Initiates translation from XML to RTF (Rich Text Format)
+            Returns an object representing a RTF document.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Genetibase.Controls.Service.NuGenXmlTranslator.TranslateXmlNodeIntoRtfGroup(System.Xml.XmlNode,System.Int32)">
+            <summary>
+            The primary method responsible for translating XML into RTF code.
+            It recursively walks the XML DOM tree, building the RTF document
+            as it goes.
+            </summary>
+            <param name="x">The current node to be translated.</param>
+            <param name="baseFontSize">The XHTML font size (1-7) of the parent element.</param>
+        </member>
+        <member name="M:Genetibase.Controls.Service.NuGenXmlTranslator.TranslateXhtmlFontSizeIntoRtfFontSize(System.Int32)">
+            <summary>
+            Translates an XHTML font size (1-7) into an RTF font size in half-points.
+            Any errors result in a font size of 12 pts.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.Service.NuGenXmlTranslator.TranslateRtfFontSizeIntoXhtmlFontSize(System.Int32)">
+            <summary>
+            This inverts the previous method.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.Service.NuGenXmlTranslator.TranslateStyleFontSizeIntoRtfFontSize(System.String,System.Int32)">
+            <summary>
+            Translates a style sheet font size, which may have one of several different font
+            measurements, into an RTF font size in half-points. The baseFontSize is required
+            for measurements given in a form relative to the current font size. Any errors
+            result in a font size of 12 pts.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="styleFontSize"/> is <see langword="null"/>.
+            </exception>
+        </member>
+        <member name="M:Genetibase.Controls.Service.NuGenXmlTranslator.TranslateXhtmlColorIntoColorFromArgb(System.String)">
+            <summary>
+            Translates color arguments into Color object representations.
+            The argument may either be a hexidecimal number #RRGGBB,
+            one of sixteen predefined, case-sensitive names (these are 
+            used by the font element with the color attribute).
+            NOTE: Predefined color names for style sheets are NOT supported.
+            Style sheet colors must either be entered in as a hex number or
+            in the form of: rgb float float float, where each float is a value
+            between 0 and 1, representing relative amounts of red, green, and blue,
+            respectively. Any errors result in a default of black (0, 0, 0).
+            </summary>
+            <param name="xhtmlColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Genetibase.Controls.Service.NuGenXmlTranslator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.Service.NuGenXmlTranslator"/> class.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.Service.NuGenXmlTranslator.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.Service.NuGenXmlTranslator"/> class.
+            </summary>
+            <param name="xmlText">XML code to be translated.</param>
+        </member>
+        <member name="P:Genetibase.Controls.Service.NuGenXmlTranslator.Errors">
+            <summary>
+            Gets the list of errors encountered during XHTML to RTF translation.
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.Properties.Resources.Argument_InvalidTabPage">
+            <summary>
+              Looks up a localized string similar to Specified {0} does not belong to this {1}..
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.Properties.Resources.Category_Action">
+            <summary>
+              Looks up a localized string similar to Action.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.Properties.Resources.Category_Appearance">
+            <summary>
+              Looks up a localized string similar to Appearance.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.Properties.Resources.Category_PropertyChanged">
+            <summary>
+              Looks up a localized string similar to Property Changed.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.Properties.Resources.InvalidCast_NodeType">
+            <summary>
+              Looks up a localized string similar to The items within the Nodes collection should be compatible with Genetibase.Controls.NuGenTreeNode type..
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.Properties.Resources.InvalidOperation_VisualStyles">
+            <summary>
+              Looks up a localized string similar to Visual styles are not currently available..
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.Properties.Resources.NuGenTabControl_CloseButtonOnTab_Description">
+            <summary>
+              Looks up a localized string similar to Determines whether to show a close button for every tab..
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.Properties.Resources.NuGenTabControl_FlatStyle_Description">
+            <summary>
+              Looks up a localized string similar to Determines the tab control appearance..
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.Properties.Resources.NuGenTabControl_FlatStyleChanged_Description">
+            <summary>
+              Looks up a localized string similar to Occurs when the value of the FlatStyle property changes..
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.Properties.Resources.NuGenTabControl_TabPageAdded_Description">
+            <summary>
+              Looks up a localized string similar to Occurs when a new tab page is added..
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.Properties.Resources.NuGenTabControl_TabPageRemoved_Description">
+            <summary>
+              Looks up a localized string similar to Occurs when a tab page is removed..
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.NuGenTreeView">
+            <summary>
+            Represents a mixed <see cref="T:System.Windows.Forms.TreeView"/>.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTreeView.GetNodeAt(System.Drawing.Point)">
+            <summary>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTreeView.GetNodeAt(System.Int32,System.Int32)">
+            <summary>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTreeView.SelectAllNodes">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTreeView.Sort``1(System.Collections.Generic.IComparer{``0})">
+            <summary>
+            Do not use standard <see cref="M:Sort"/> method due to significant overhead.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="comparerToUse"/> is <see langword="null"/>.
+            </exception>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTreeView.OnDragDrop(System.Windows.Forms.DragEventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.DragDrop"></see> event.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.DragEventArgs"></see> that contains the event data.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTreeView.OnDragEnter(System.Windows.Forms.DragEventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.DragEnter"></see> event.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.DragEventArgs"></see> that contains the event data.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTreeView.OnDragLeave(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.DragLeave"></see> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs"></see> that contains the event data.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTreeView.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.MouseDown"></see> event.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.MouseEventArgs"></see> that contains the event data.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTreeView.OnAfterCollapse(System.Windows.Forms.TreeViewEventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.TreeView.AfterCollapse"></see> event.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.TreeViewEventArgs"></see> that contains the event data.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTreeView.OnAfterExpand(System.Windows.Forms.TreeViewEventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.TreeView.AfterExpand"></see> event.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.TreeViewEventArgs"></see> that contains the event data.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTreeView.WndProc(System.Windows.Forms.Message@)">
+            <summary>
+            Processes Windows messages.
+            </summary>
+            <param name="m">Specifies the message to process.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTreeView.WmEraseBkGnd(System.Windows.Forms.Message@)">
+            <summary>
+            </summary>
+            <param name="m"></param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTreeView.WmNcHitTest(System.Windows.Forms.Message@)">
+            <summary>
+            </summary>
+            <param name="m"></param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTreeView.WmUser7246(System.Windows.Forms.Message@)">
+            <summary>
+            </summary>
+            <param name="m"></param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTreeView.#ctor(Genetibase.Shared.ComponentModel.INuGenServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenTreeView"/> class.
+            </summary>
+            <param name="serviceProvider">
+            Required:<para/>
+            <see cref="T:Genetibase.Controls.INuGenTreeViewDragDropService"/><para/>
+            <see cref="T:Genetibase.Controls.INuGenTreeViewSelectionService"/><para/>
+            <see cref="T:Genetibase.Controls.Collections.INuGenTreeNodeSorter"/><para/>
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="serviceProvider"/> is <see langword="null"/>.
+            </exception>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTreeView.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenTreeView"/> class.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTreeView.Nodes">
+            <summary>
+            Gets the collection of nodes contained within this <see cref="T:NuGenTreeView"/>.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTreeView.SelectedNodes">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTreeView.TopNode">
+            <summary>
+            Gets the first fully-visible tree node in the tree view control.
+            </summary>
+            <value></value>
+            <returns>A <see cref="T:System.Windows.Forms.TreeNode"></see> that represents the first fully-visible tree node in the tree view control.</returns>
+            <PermissionSet><IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true"/><IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true"/><IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence"/><IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true"/></PermissionSet>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTreeView.DragDropService">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTreeView.IsDragging">
+            <summary>
+            Gets or sets the value indicating whether this <see cref="T:NuGenTreeView"/> is currently dragging
+            node(s).
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTreeView.SelectionService">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTreeView.TreeNodeSorter">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTreeView.ServiceProvider">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTreeView.CreateParams">
+            <summary>
+            Gets the modified window styles to get rid of the horizontal scroll bar.
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.NuGenDigitsOnlyComboBox">
+            <summary>
+            Always returns a string in the appropriate digit format.
+            </summary>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenDigitsOnlyComboBox.PATTERN">
+            <summary>
+            Used to verify user input.
+            </summary>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenDigitsOnlyComboBox.bufferString">
+            <summary>
+            Contains the last appropriate text.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenDigitsOnlyComboBox.OnTextChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.TextChanged"/> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenDigitsOnlyComboBox.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenDigitsOnlyComboBox"/> class.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenDigitsOnlyComboBox.DigitValue">
+            <summary>
+            Gets the digit value for this <see cref="T:NuGenDigitsOnlyComboBox"/>.
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.Design.NuGenBevelDesigner">
+            <summary>
+            Provides additional design-time functionality for the <see cref="T:NuGenBevel"/>.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.Design.NuGenBevelDesigner.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.Design.NuGenBevelDesigner"/> class.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.Design.NuGenBevelDesigner.SelectionRules">
+            <summary>
+            Gets the selection rules that indicate the movement capabilities of a component.
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:Genetibase.Controls.Collections.NuGenRemoveTreeNodeEventArgs">
+            <summary>
+            Contains necessary data for Remove method.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.Collections.NuGenRemoveTreeNodeEventArgs.#ctor(Genetibase.Controls.NuGenTreeNode)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.Collections.NuGenRemoveTreeNodeEventArgs"/> class.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.Collections.NuGenRemoveTreeNodeEventArgs.TreeNodeToRemove">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.INuGenTreeViewSelectionService">
+            <summary>
+            Indicates that this class provides functionality for multiple node selection.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.INuGenTreeViewSelectionService.AddSelectedNode(Genetibase.Controls.NuGenTreeNode,System.Windows.Forms.Keys,System.Windows.Forms.MouseButtons)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.INuGenTreeViewSelectionService.RemoveSelectedNode(Genetibase.Controls.NuGenTreeNode)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.INuGenTreeViewSelectionService.SelectAllNodes(Genetibase.Controls.Collections.NuGenTreeNodeCollection)">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.INuGenTreeViewSelectionService.SelectedNodes">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.Service.NuGenRtfFontTable">
+            <summary>
+            Encapsulates RTF font.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.Service.NuGenRtfFontTable.UseFont(System.String)">
+            <summary>
+            </summary>
+            <param name="fontName"></param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="fontName"/> is <see langword="null"/>.</exception>
+        </member>
+        <member name="M:Genetibase.Controls.Service.NuGenRtfFontTable.ToString">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents the current <see cref="T:System.Object"/>.
+            </summary>
+            <returns>
+            A <see cref="T:System.String"/> that represents the current <see cref="T:System.Object"/>.
+            </returns>
+        </member>
+        <member name="M:Genetibase.Controls.Service.NuGenRtfFontTable.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.Service.NuGenRtfFontTable"/> class.
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.NuGenListView">
+            <summary>
+            Extended <see cref="T:ListView"/>.
+            </summary>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenListView.emptyListViewMessage">
+            <summary>
+            Determines the message that appears when this <see cref="T:NuGenListView"/> contains no items.
+            </summary>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenListView.EventEmptyListViewMessageChanged">
+            <summary>
+            The <see cref="E:NuGenListView.EmptyListViewMessageChanged"/> event identifier.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenListView.OnEmptyListViewMessageChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:NuGenListView.EmptyListViewMessageChanged"/> event.
+            </summary>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenListView.WndProc(System.Windows.Forms.Message@)">
+            <summary>
+            Processes Windows messages.
+            </summary>
+            <param name="m">Specifies the message to process.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenListView.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenListView"/> class.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenListView.EmptyListViewMessage">
+            <summary>
+            Gets or sets the message that appears when this <see cref="T:NuGenListView"/> contains no items.
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenListView.EmptyListViewMessageChanged">
+            <summary>
+            Occurs when the value of the <see cref="P:NuGenListView.EmptyListViewMessage"/> property changes.
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.NuGenTreeViewServiceProvider">
+            <summary>
+            <para/>
+            <see cref="T:INuGenTreeViewDragDropService"/><para/>
+            <see cref="T:INuGenTreeViewSelectionService"/><para/>
+            <see cref="T:INuGenTreeNodeSorter"/><para/>
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTreeViewServiceProvider.GetService``1">
+            <summary>
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTreeViewServiceProvider.GetService(System.Type)">
+            <summary>
+            </summary>
+            <param name="serviceType"></param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="serviceType"/> is <see langword="null"/>.
+            </exception>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTreeViewServiceProvider.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenTreeViewServiceProvider"/> class.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTreeViewServiceProvider.DragService">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTreeViewServiceProvider.SelectionService">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTreeViewServiceProvider.Sorter">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.Collections.NuGenItemsClearRequestedEventArgs">
+            <summary>
+            The handler should clear its collection.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.Collections.NuGenItemsClearRequestedEventArgs.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.Collections.NuGenItemsClearRequestedEventArgs"/> class.
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.NuGenOpenFileSelector">
+            <summary>
+            Provides GUI to select a file to open.
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.NuGenFileSelector">
+            <summary>
+            Provides base functionality for path selection.
+            </summary>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenFileSelector.guid">
+            <summary>
+            Determines the GUID for this <see cref="T:NuGenFileSelector"/>.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenFileSelector.SetPath(System.String)">
+            <summary>
+            Sets the path selected by user.
+            </summary>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenFileSelector.EventPathChanged">
+            <summary>
+            The <see cref="E:NuGenFileSelector.PathChanged"/> event identifier.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenFileSelector.OnPathChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:NuGenFileSelector.PathChanged"/> event.
+            </summary>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenFileSelector.ClearHistory">
+            <summary>
+            Clears the path history.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenFileSelector.Reset">
+            <summary>
+            Resets the <see cref="P:NuGenFileSelector.FileDialog"/> properties to their default values.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenFileSelector.LoadConfig(System.IO.Stream)">
+            <summary>
+            Loads state from the specified <see cref="T:Stream"/>.
+            </summary>
+            <param name="stream">Specifies the <see cref="T:Stream"/> to load state from.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="stream"/> is <see langword="null"/>.</exception>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenFileSelector.LoadConfig(System.String)">
+            <summary>
+            Loads state from the specified path.
+            </summary>
+            <param name="filePath">Specifies the path to load state from.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenFileSelector.LoadConfig(System.Xml.XmlTextReader)">
+            <summary>
+            Loads state from the specified <see cref="T:XmlTextReader"/>.
+            </summary>
+            <param name="xmlTextReader">Specifies the <see cref="T:XmlTextReader"/> to load state from.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="xmlTextReader"/> is <see langword="null"/>.</exception>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenFileSelector.SaveConfig(System.IO.Stream)">
+            <summary>
+            Saves the current state to the specified <see cref="T:Stream"/>.
+            </summary>
+            <param name="stream">Specifies the <see cref="T:Stream"/> to save the current state to.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="stream"/> is <see langword="null"/>.</exception>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenFileSelector.SaveConfig(System.String)">
+            <summary>
+            Saves the current state to the specified path.
+            </summary>
+            <param name="filePath">Specifies the path to save the current state to.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="filePath"/> is <see langword="null"/>.</exception>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenFileSelector.SaveConfig(System.Xml.XmlTextWriter)">
+            <summary>
+            Saves the current state to the specified <see cref="T:XmlTextWriter"/>.
+            </summary>
+            <param name="xmlTextWriter">Specifies the <see cref="T:XmlTextWriter"/> to save the current state to.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenFileSelector.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenFileSelector"/> class.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenFileSelector.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenFileSelector.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenFileSelector.AddExtension">
+            <summary>
+            Gets or sets the value indicating whether the <see cref="P:NuGenFileSelector.FileDialog"/> automatically
+            adds an extension to a file name if the user omits the extension.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenFileSelector.DefaultAddExtension">
+            <summary>
+            Gets the default value for the <see cref="P:NuGenFileSelector.AddExtension"/> property.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenFileSelector.CheckFileExists">
+            <summary>
+            Gets or sets the value indicating whether the <see cref="P:NuGenFileSelector.FileDialog"/> displays a warning
+            if the user specifies the name of the file that does not exist.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenFileSelector.DefaultCheckFileExists">
+            <summary>
+            Gets the default value for the <see cref="P:NuGenFileSelector.CheckFileExists"/> property.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenFileSelector.CheckPathExists">
+            <summary>
+            Gets or sets the value indicating whether the <see cref="P:NuGenFileSelector.FileDialog"/> displays a warning
+            if the user specifies a path that does not exist.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenFileSelector.DefaultCheckPathExists">
+            <summary>
+            Gets the default value for the <see cref="P:NuGenFileSelector.CheckPathExists"/> property.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenFileSelector.DefaultExtension">
+            <summary>
+            Gets or sets the default file name extension.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenFileSelector.DefaultDefaultExtension">
+            <summary>
+            Gets the default value for the <see cref="T:NuGenFileSelector.DefaultExtension"/> property.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenFileSelector.DereferenceLinks">
+            <summary>
+            Gets or sets the value indicating whether the <see cref="P:NuGenFileSelector.FileDialog"/> returns the location
+            of the file referenced by the shortcut or whether it returns the location of the shortcut (*.lnk).
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenFileSelector.DefaultDereferenceLinks">
+            <summary>
+            Gets the default value for the <see cref="P:NuGenFileSelector.DereferenceLinks"/> property.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenFileSelector.Filter">
+            <summary>
+            Gets or sets the current file name filter string, which determines the choices that appear
+            in the "Files of type" box in the <see cref="P:NuGenFileSelector.FileDialog"/>.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenFileSelector.DefaultFilter">
+            <summary>
+            Gets the default value for the <see cref="P:NuGenFileSelector.Filter"/> property.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenFileSelector.FilterIndex">
+            <summary>
+            Gets or sets the index of the filter currently selected in the <see cref="P:NuGenFileSelector.FileDialog"/>.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenFileSelector.DefaultFilterIndex">
+            <summary>
+            Gets the default value for the <see cref="P:NuGenFileSelector.FilterIndex"/> property.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenFileSelector.InitialDirectory">
+            <summary>
+            Gets or sets the initial directory displayed by the <see cref="P:NuGenFileSelector.FileDialog"/>.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenFileSelector.DefaultInitialDirectory">
+            <summary>
+            Gets the default value for the <see cref="P:NuGenFileSelector.InitialDirectory"/> property.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenFileSelector.RestoreDirectory">
+            <summary>
+            Gets or sets the value indicating whether the <see cref="P:NuGenFileSelector.FileDialog"/> restores the
+            current directory before closing.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenFileSelector.DefaultRestoreDirectory">
+            <summary>
+            Gets the default value for the <see cref="P:NuGenFileSelector.RestoreDirectory"/> property.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenFileSelector.ShowHelp">
+            <summary>
+            Gets or sets the value indicating whether the Help button is displayed in the <see cref="P:NuGenFileSelector.FileDialog"/>.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenFileSelector.DefaultShowHelp">
+            <summary>
+            Gets the default value for the <see cref="P:NuGenFileSelector.ShowHelp"/> property.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenFileSelector.Title">
+            <summary>
+            Gets or sets the <see cref="P:NuGenFileSelector.FileDialog"/> title.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenFileSelector.ValidateNames">
+            <summary>
+            Gets or sets the value indicating whether the <see cref="P:NuGenFileSelector.FileDialog"/> accepts only
+            valid Win32 file names.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenFileSelector.DefaultValidateNames">
+            <summary>
+            Gets the default value for the <see cref="P:NuGenFileSelector.ValidateNames"/> property.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenFileSelector.FileDialog">
+            <summary>
+            Gets the <see cref="P:NuGenFileSelector.FileDialog"/> associated with this <see cref="T:NuGenFileSelector"/>.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenFileSelector.Guid">
+            <summary>
+            Gets the GUID for this <see cref="T:NuGenFileSelector"/>.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenFileSelector.GetPath">
+            <summary>
+            Gets the path selected by user. Returns <see langword="null"/> if this <see cref="T:NuGenFileSelector"/>
+            contains no path.
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenFileSelector.PathChanged">
+            <summary>
+            Occurs when the path entered by user changes.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenOpenFileSelector.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenOpenFileSelector"/> class.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenOpenFileSelector.FileDialog">
+            <summary>
+            Gets the <see cref="P:NuGenFileSelector.FileDialog"/> associated with this <see cref="T:NuGenFileSelector"/>.
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:Genetibase.Controls.NuGenCTLabel">
+            <summary>
+            Flexible label with ClearType text rendering.
+            </summary>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenCTLabel.PEN_WIDTH">
+            <summary>
+            Specifies the pen width to draw the border.
+            </summary>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenCTLabel.internalBackgroundColor">
+            <summary>
+            Determines the background color for the control.
+            </summary>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenCTLabel.EventBackgroundColorChanged">
+            <summary>
+            The <see cref="E:NuGenCTLabel.BackgroundColorChanged"/> event identifier.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenCTLabel.OnBackgroundColorChanged(System.EventArgs)">
+            <summary>
+            Raises the <c>Genetibase.UI.NuGenCTLabel.BackgroundColorChanged</c> event.
+            </summary>
+            <param name="e">An <c>System.EventArgs</c> that contains the event data.</param>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenCTLabel.internalBackgroundTransparency">
+            <summary>
+            Determines the background transparency level for the control.
+            </summary>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenCTLabel.EventBackgroundTransparencyChanged">
+            <summary>
+            The <see cref="E:NuGenCTLabel.BackgroundTransparencyChanged"/> event identifier.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenCTLabel.OnBackgroundTransparencyChanged(System.EventArgs)">
+            <summary>
+            Raises the <c>Genetibase.UI.NuGenCTLabel.BackgroundTransparencyChanged</c> event.
+            </summary>
+            <param name="e">An <c>System.EventArgs</c> that contains the event data.</param>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenCTLabel.internalBorderColor">
+            <summary>
+            Determines the border color for the control.
+            </summary>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenCTLabel.EventBorderColorChanged">
+            <summary>
+            The <see cref="E:NuGenCTLabel.BorderColorChanged"/> event identifier.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenCTLabel.OnBorderColorChanged(System.EventArgs)">
+            <summary>
+            Raises the <c>Genetibase.UI.NuGenCTLabel.BorderColorChanged</c> event.
+            </summary>
+            <param name="e">An <c>System.EventArgs</c> that contains the event data.</param>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenCTLabel.internalBorderStyle">
+            <summary>
+            Determines the border style for the control.
+            </summary>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenCTLabel.EventBorderStyleChanged">
+            <summary>
+            The <see cref="E:NuGenCTLabel.BorderStyleChanged"/> event identifier.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenCTLabel.OnBorderStyleChanged(System.EventArgs)">
+            <summary>
+            Raises the <c>Genetibase.UI.NuGenCTLabel.BorderStyleChanged</c> event.
+            </summary>
+            <param name="e">An <c>System.EventArgs</c> that contains the event data.</param>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenCTLabel.internalForegroundColor">
+            <summary>
+            Determines the foreground color for the control.
+            </summary>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenCTLabel.EventForegroundColorChanged">
+            <summary>
+            The <see cref="E:NuGenCTLabel.ForegroundColorChanged"/> event identifier.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenCTLabel.OnForegroundColorChanged(System.EventArgs)">
+            <summary>
+            Raises the <c>Genetibase.UI.NuGenCTLabel.ForegroundColorChanged</c> event.
+            </summary>
+            <param name="e">An <c>System.EventArgs</c> that contains the event data.</param>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenCTLabel.internalForegroundTransparency">
+            <summary>
+            Determines the foreground transparency level for the control.
+            </summary>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenCTLabel.EventForegroundTransparencyChanged">
+            <summary>
+            The <see cref="E:NuGenCTLabel.ForegroundTransparencyChanged"/> event identifier.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenCTLabel.OnForegroundTransparencyChanged(System.EventArgs)">
+            <summary>
+            Raises the <c>Genetibase.UI.NuGenCTLabel.ForegroudnTransparencyChanged</c> event.
+            </summary>
+            <param name="e">An <c>System.EventArgs</c> that contains the event data.</param>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenCTLabel.internalTextAlignment">
+            <summary>
+            Determines the text alignment for the control.
+            </summary>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenCTLabel.EventTextAlignmentChanged">
+            <summary>
+            The <see cref="E:NuGenCTLabel.TextAlignmentChanged"/> event identifier.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenCTLabel.OnTextAlignmentChanged(System.EventArgs)">
+            <summary>
+            Raises the <c>Genetibase.UI.NuGenCTLabel.TextAlignmentChanged</c> event.
+            </summary>
+            <param name="e">An <c>System.EventArgs</c> that contains the event data.</param>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenCTLabel.internalTextLineAlignment">
+            <summary>
+            Determines the text line alignment for the control.
+            </summary>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenCTLabel.EventTextLineAlignmentChanged">
+            <summary>
+            The <see cref="E:NuGenCTLabel.TextLineAlignmentChanged"/> event identifier.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenCTLabel.OnTextLineAlignmentChanged(System.EventArgs)">
+            <summary>
+            Raises the <c>Genetibase.UI.NuGenCTLabel.TextLineAlignmentChanged</c> event.
+            </summary>
+            <param name="e">An <c>System.EventArgs</c> that contains the event data.</param>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenCTLabel.internalTextOrientation">
+            <summary>
+            Determines the text orientation for the control.
+            </summary>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenCTLabel.EventTextOrientationChanged">
+            <summary>
+            The <see cref="E:NuGenCTLabel.TextOrientationChanged"/> event identifier.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenCTLabel.OnTextOrientationChanged(System.EventArgs)">
+            <summary>
+            Raises the <c>Genetibase.UI.NuGenCTLabel.TextOrientationChanged</c> event.
+            </summary>
+            <param name="e">An <c>System.EventArgs</c> that contains the event data.</param>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenCTLabel.useClearTypeTextRendering">
+            <summary>
+            Indicates whether to use ClearType text rendering.
+            </summary>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenCTLabel.EventUseClearTypeTextRenderingChanged">
+            <summary>
+            The <see cref="E:NuGenCTLabel.UseClearTypeTextRenderingChanged"/> event identifier.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenCTLabel.OnUseClearTypeTextRenderingChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:NuGenCTLabel.UseClearTypeTextRenderingChanged"/> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenCTLabel.autoSize">
+            <summary>
+            Indicates whether this <see cref="T:NuGenCTLabel"/> automatically sets its bounds according
+            to the text being displayed.
+            </summary>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenCTLabel.EventAutoSizeChanged">
+            <summary>
+            The <see cref="E:NuGenCTLabel.AutoSizeChanged"/> event identifier.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenCTLabel.OnAutoSizeChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:NuGenCTLabel.AutoSizeChanged"/> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenCTLabel.internalEatLine">
+            <summary>
+            If <c>true</c> replaces the tail symbols which cannot be displayed due to the label width with "...".
+            Takes affect only if WordWrap property is <c>false</c>.
+            </summary>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenCTLabel.EventEatLineChanged">
+            <summary>
+            The <see cref="E:NuGenCTLabel.EatLineChanged"/> event identifier.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenCTLabel.OnEatLineChanged(System.EventArgs)">
+            <summary>
+            Raises the <c>Genetibase.UI.NuGenCTLabel.EatLineChanged</c> event.
+            </summary>
+            <param name="e">An <c>System.EventArgs</c> that contains the event data.</param>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenCTLabel.internalWordWrap">
+            <summary>
+            Indicates whether lines are automatically word-wrapped.
+            </summary>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenCTLabel.EventWordWrapChanged">
+            <summary>
+            The <see cref="E:NuGenCTLabel.WordWrapChanged"/> event identifier.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenCTLabel.OnWordWrapChanged(System.EventArgs)">
+            <summary>
+            Raises the <c>Genetibase.UI.NuGenCTLabel.WordWrapChanged</c> event.
+            </summary>
+            <param name="e">An <c>System.EventArgs</c> that contains the event data.</param>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenCTLabel.internalText">
+            <summary>
+            The text contained in the control.
+            </summary>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenCTLabel.EventTextChanged">
+            <summary>
+            The <see cref="E:NuGenCTLabel.TextChanged"/> event identifier.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenCTLabel.OnTextChanged(System.EventArgs)">
+            <summary>
+            Raises the <c>Genetibase.UI.NuGenCTLabel.TextChanged</c> event.
+            </summary>
+            <param name="e">An <c>System.EventArgs</c> that contains the event data.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenCTLabel.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Draws the control.
+            </summary>
+            <param name="e">Provides data for the <c>System.Windows.Forms.Control.Paint</c> event.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenCTLabel.WndProc(System.Windows.Forms.Message@)">
+            <summary>
+            Makes the control transparent for mouse events.
+            </summary>
+            <param name="m">Windows message.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenCTLabel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenCTLabel"/> class.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenCTLabel.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenCTLabel.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenCTLabel.BackgroundColor">
+            <summary>
+            Gets or sets the background color for the control.
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenCTLabel.BackgroundColorChanged">
+            <summary>
+            Event fired when the value of BackgroundColor property is changed on Control.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenCTLabel.BackgroundTransparency">
+            <summary>
+            Gets or sets the background transparency level for the control.
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenCTLabel.BackgroundTransparencyChanged">
+            <summary>
+            Event fired when the value of BackgroundTransparency property is changed on Control.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenCTLabel.BorderColor">
+            <summary>
+            Gets or sets the border color for the control.
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenCTLabel.BorderColorChanged">
+            <summary>
+            Event fired when the value of BorderColor property is changed on Control.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenCTLabel.BorderStyle">
+            <summary>
+            Gets or sets the border style for the control.
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenCTLabel.BorderStyleChanged">
+            <summary>
+            Event fired when the value of BorderStyle property is changed on Control.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenCTLabel.ForegroundColor">
+            <summary>
+            Gets or sets the foreground color for the control.
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenCTLabel.ForegroundColorChanged">
+            <summary>
+            Event fired when the value of ForegroundColor property is changed on Control.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenCTLabel.ForegroundTransparency">
+            <summary>
+            Gets or sets the foreground transparency level for the control.
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenCTLabel.ForegroundTransparencyChanged">
+            <summary>
+            Event fired when the value of ForegroundTransparency property is changed on Control.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenCTLabel.TextAlignment">
+            <summary>
+            Gets or sets the text alignment for the control.
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenCTLabel.TextAlignmentChanged">
+            <summary>
+            Event fired when the value of TextAlignment property is changed on Control.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenCTLabel.TextLineAlignment">
+            <summary>
+            Gets or sets the text line alignment for the control.
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenCTLabel.TextLineAlignmentChanged">
+            <summary>
+            Event fired when the value of TextLineAlignment property is changed on Control.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenCTLabel.TextOrientation">
+            <summary>
+            Gets or sets the text orientation for the control.
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenCTLabel.TextOrientationChanged">
+            <summary>
+            Event fired when the value of TextOrientation property is changed on Control.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenCTLabel.UseClearTypeTextRendering">
+            <summary>
+            Gets or sets the value indicating whether to use ClearType text rendering.
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenCTLabel.UseClearTypeTextRenderingChanged">
+            <summary>
+            Occurs when the value of the <see cref="P:NuGenCTLabel.UseClearTypeTextRendering"/> property changes.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenCTLabel.AutoSize">
+            <summary>
+            Gets or sets the value indicating whether this <see cref="T:NuGenCTLabel"/> automatically
+            sets its bounds according to the text being displayed.
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenCTLabel.AutoSizeChanged">
+            <summary>
+            Occurs when the value of the <see cref="P:NuGenCTLabel.AutoSize"/> property changes.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenCTLabel.EatLine">
+            <summary>
+            Gets or sets the value indicating whether to eat the tail symbols which cannot
+            be displayed due to the label width.
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenCTLabel.EatLineChanged">
+            <summary>
+            Event fired when the value of EatLine property is changed on Control.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenCTLabel.WordWrap">
+            <summary>
+            Gets or sets the value indicating whether lines are automatically word-wrapped.
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenCTLabel.WordWrapChanged">
+            <summary>
+            Event fired when the value of WordWrap property is changed on Control.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenCTLabel.Text">
+            <summary>
+            Gets or sets the text for the control.
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenCTLabel.TextChanged">
+            <summary>
+            Event fired when the value of Text property is changed on Control.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenCTLabel.StringProcessor">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.NuGenTreeViewSelectionService">
+            <summary>
+            Provides functionality for multiple node selection.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTreeViewSelectionService.AddSelectedNode(Genetibase.Controls.NuGenTreeNode,System.Windows.Forms.Keys,System.Windows.Forms.MouseButtons)">
+            <summary>
+            </summary>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="selectedNodeToAdd"/> is <see langword="null"/>.
+            </exception>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTreeViewSelectionService.RemoveSelectedNode(Genetibase.Controls.NuGenTreeNode)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTreeViewSelectionService.SelectAllNodes(Genetibase.Controls.Collections.NuGenTreeNodeCollection)">
+            <summary>
+            Selects all the nodes, including sub-nodes, in the specified collection.
+            </summary>
+            <param name="nodesToSelect"></param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="nodesToSelect"/> is <see langword="null"/>.</exception>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTreeViewSelectionService.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenTreeViewSelectionService"/> class.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTreeViewSelectionService.SelectedNodes">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.Collections.NuGenItemsCountRequestedEventArgs">
+            <summary>
+            The handler should set the value for the <see cref="P:Count"/> property.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.Collections.NuGenItemsCountRequestedEventArgs.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.Collections.NuGenItemsCountRequestedEventArgs"/> class.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.Collections.NuGenItemsCountRequestedEventArgs.Count">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.NuGenTabPagePaintParams">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabPagePaintParams.#ctor(System.Drawing.Graphics,System.Drawing.Rectangle)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenTabPagePaintParams"/> class.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">
+            <para>
+            	<paramref name="g"/> is <see langword="null"/>.
+            </para>
+            </exception>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabPagePaintParams.Bounds">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabPagePaintParams.Graphics">
+            <summary>
+            Read-only.
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.NuGenTabBodyPaintParams">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabBodyPaintParams.#ctor(System.Drawing.Graphics,System.Drawing.Rectangle)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenTabBodyPaintParams"/> class.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">
+            <para>
+            	<paramref name="g"/> is <see langword="null"/>.
+            </para>
+            </exception>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabBodyPaintParams.Bounds">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabBodyPaintParams.FlatStyle">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabBodyPaintParams.Graphics">
+            <summary>
+            Read-only.
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.Design.NuGenSizingContainerDesigner">
+            <summary>
+            Provides additional design-time functionality for this <see cref="T:NuGenSizingContainer"/>.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.Design.NuGenSizingContainerDesigner.OnPaintAdornments(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Raises the paint adornments event.
+            </summary>
+            <param name="e">An <see cref="T:System.Windows.Forms.PaintEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="T:Genetibase.Controls.NuGenTreeViewDragDropService">
+            <summary>
+            Provides service methods for drag-n-drop operations.
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.INuGenTreeViewDragDropService">
+            <summary>
+            Indicates that this class provides service methods for drag-n-drop operations.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.INuGenTreeViewDragDropService.GetDropPosition(Genetibase.Controls.NuGenTreeNode,System.Drawing.Point)">
+            <summary>
+            Determines the drop position.
+            </summary>
+            <param name="targetTreeNode"></param>
+            <param name="cursorPosition"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Genetibase.Controls.INuGenTreeViewDragDropService.DoDrop(Genetibase.Controls.NuGenTreeNode,System.Collections.Generic.List{Genetibase.Controls.NuGenTreeNode},Genetibase.Shared.NuGenDropPosition)">
+            <summary>
+            Invokes service specific nodes merge operation.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.INuGenTreeViewDragDropService.EdgeSensivity">
+            <summary>
+            Gets or sets the offset that is used to determine the drop position.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTreeViewDragDropService.GetDropPosition(Genetibase.Controls.NuGenTreeNode,System.Drawing.Point)">
+            <summary>
+            Determines the drop position: after the node, before the node, or inside the node. If this
+            operation fails to determine the drop position, <see cref="T:NuGenDropPosition.Nowhere"/> is
+            returned.
+            </summary>
+            <param name="targetTreeNode"></param>
+            <param name="cursorPosition">Client coordinates.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTreeViewDragDropService.DoDrop(Genetibase.Controls.NuGenTreeNode,System.Collections.Generic.List{Genetibase.Controls.NuGenTreeNode},Genetibase.Shared.NuGenDropPosition)">
+            <summary>
+            Invokes service specific nodes merge operation.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTreeViewDragDropService.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenTreeViewDragDropService"/> class.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTreeViewDragDropService.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenTreeViewDragDropService"/> class.
+            </summary>
+            <param name="edgeSensivity">Specifies the offset that is used to determine the drop position:
+            after the node, before the node, or inside the node.</param>
+            <exception cref="T:System.ArgumentException"><paramref name="edgeSensivity"/> should not be
+            negative.</exception>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTreeViewDragDropService.EdgeSensivity">
+            <summary>
+            Gets or sets the offset that is used to determine the drop position: after the node, before the
+            node, or inside the node.
+            </summary>
+            <exception cref="T:System.ArgumentException"><paramref name="value"/> should not be negative.</exception>
+        </member>
+        <member name="T:Genetibase.Controls.NuGenTabControl">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabControl.OnTabButtonClick(System.Object,System.EventArgs)">
+            <summary>
+            Will bubble the <see cref="E:Genetibase.Controls.NuGenTabControl.TabButtonClick"/> event.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabControl.OnTabButtonDoubleClick(System.Object,System.EventArgs)">
+            <summary>
+            Will bubble the <see cref="E:Genetibase.Controls.NuGenTabControl.TabButtonDoubleClick"/> event.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabControl.OnTabButtonDragDrop(System.Object,System.Windows.Forms.DragEventArgs)">
+            <summary>
+            Will bubble the <see cref="E:Genetibase.Controls.NuGenTabControl.TabButtonDragDrop"/> event.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabControl.OnTabButtonDragEnter(System.Object,System.Windows.Forms.DragEventArgs)">
+            <summary>
+            Will bubble the <see cref="E:Genetibase.Controls.NuGenTabControl.TabButtonDragEnter"/> event.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabControl.OnTabButtonDragLeave(System.Object,System.EventArgs)">
+            <summary>
+            Will bubble the <see cref="E:Genetibase.Controls.NuGenTabControl.TabButtonDragLeave"/> event.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabControl.OnTabButtonMouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Will bubble the <see cref="E:Genetibase.Controls.NuGenTabControl.TabButtonMouseDown"/> event.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabControl.OnTabButtonMouseEnter(System.Object,System.EventArgs)">
+            <summary>
+            Will bubble the <see cref="E:Genetibase.Controls.NuGenTabControl.TabButtonMouseEnter"/> event.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabControl.OnTabButtonMouseHover(System.Object,System.EventArgs)">
+            <summary>
+            Will bubble the <see cref="E:Genetibase.Controls.NuGenTabControl.TabButtonMouseHover"/> event.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabControl.OnTabButtonMouseLeave(System.Object,System.EventArgs)">
+            <summary>
+            Will bubble the <see cref="E:Genetibase.Controls.NuGenTabControl.TabButtonMouseLeave"/> event.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabControl.OnTabButtonMouseMove(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Will bubble the <see cref="E:Genetibase.Controls.NuGenTabControl.TabButtonMouseMove"/> event.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabControl.OnTabButtonMouseUp(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Will bubble the <see cref="E:Genetibase.Controls.NuGenTabControl.TabButtonMouseUp"/> event.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabControl.OnTabPageAdded(Genetibase.Shared.Collections.NuGenCollectionEventArgs{Genetibase.Controls.NuGenTabPage})">
+            <summary>
+            Will bubble the <see cref="E:Genetibase.Controls.NuGenTabControl.TabPageAdded"/> event.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabControl.OnTabPageRemoved(Genetibase.Shared.Collections.NuGenCollectionEventArgs{Genetibase.Controls.NuGenTabPage})">
+            <summary>
+            Will bubble the <see cref="E:Genetibase.Controls.NuGenTabControl.TabPageRemoved"/> event.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabControl.OnFlatStyleChanged(System.EventArgs)">
+            <summary>
+            Will bubble the <see cref="E:Genetibase.Controls.NuGenTabControl.FlatStyleChanged"/> event.
+            </summary>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabControl.OnSelectedIndexChanged(System.EventArgs)">
+            <summary>
+            Will bubble the <see cref="E:Genetibase.Controls.NuGenTabControl.SelectedIndexChanged"/> event.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabControl.SelectTab(Genetibase.Controls.NuGenTabPage)">
+            <summary>
+            </summary>
+            <param name="tabPageToSelect"></param>
+            <exception cref="T:System.ArgumentNullException">
+            <para>
+            	<paramref name="tabPageToSelect"/> is <see langword="null"/>.
+            </para>
+            </exception>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabControl.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.Paint"></see> event.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.PaintEventArgs"></see> that contains the event data.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabControl.OnSizeChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.SizeChanged"></see> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs"></see> that contains the event data.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabControl.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenTabControl"/> class.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabControl.#ctor(Genetibase.Shared.ComponentModel.INuGenServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenTabControl"/> class.
+            </summary>
+            <param name="serviceProvider">
+            Requires:<para/>
+            <see cref="T:Genetibase.Shared.Windows.INuGenButtonStateTracker"/><para/>
+            <see cref="T:Genetibase.Controls.INuGenTabRenderer"/>
+            <see cref="T:Genetibase.Shared.Windows.INuGenTabStateTracker"/><para/>
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            <para>
+            	<paramref name="serviceProvider"/> is <see langword="null"/>.
+            </para>
+            </exception>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenTabControl.TabButtonClick">
+            <summary>
+            <seealso cref="E:System.Windows.Forms.Button.Click"/>
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenTabControl.TabButtonDoubleClick">
+            <summary>
+            <seealso cref="E:System.Windows.Forms.Button.DoubleClick"/>
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenTabControl.TabButtonDragDrop">
+            <summary>
+            <seealso cref="E:System.Windows.Forms.Button.DragDrop"/>
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenTabControl.TabButtonDragEnter">
+            <summary>
+            <seealso cref="E:System.Windows.Forms.Button.DragEnter"/>
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenTabControl.TabButtonDragLeave">
+            <summary>
+            <seealso cref="E:System.Windows.Forms.Button.DragLeave"/>
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenTabControl.TabButtonMouseDown">
+            <summary>
+            <seealso cref="E:System.Windows.Forms.Button.MouseDown"/>
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenTabControl.TabButtonMouseEnter">
+            <summary>
+            <seealso cref="E:System.Windows.Forms.Button.MouseEnter"/>
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenTabControl.TabButtonMouseHover">
+            <summary>
+            <seealso cref="E:System.Windows.Forms.Button.MouseHover"/>
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenTabControl.TabButtonMouseLeave">
+            <summary>
+            <seealso cref="E:System.Windows.Forms.Button.MouseLeave"/>
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenTabControl.TabButtonMouseMove">
+            <summary>
+            <seealso cref="E:System.Windows.Forms.Button.MouseMove"/>
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenTabControl.TabButtonMouseUp">
+            <summary>
+            <seealso cref="E:System.Windows.Forms.Button.MouseUp"/>
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenTabControl.TabPageAdded">
+            <summary>
+            Occurs when a new tab page is added.
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenTabControl.TabPageRemoved">
+            <summary>
+            Occurs when a tab page is removed.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabControl.CloseButtonOnTab">
+            <summary>
+            Gets or sets the value indicating whether to show a close button for every tab.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabControl.FlatStyle">
+            <summary>
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenTabControl.FlatStyleChanged">
+            <summary>
+            Occurs when the value of the <see cref="P:Genetibase.Controls.NuGenTabControl.FlatStyle"/> property changes.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabControl.SelectedIndex">
+            <summary>
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            	<paramref name="value"/> must be within the bounds of the <see cref="P:Genetibase.Controls.NuGenTabControl.TabPages"/> collection.
+            </exception>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenTabControl.SelectedIndexChanged">
+            <summary>
+            Occurs when the value of the <see cref="P:Genetibase.Controls.NuGenTabControl.SelectedIndex"/> property changes.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabControl.SelectedTab">
+            <summary>
+            </summary>
+            <exception cref="T:System.ArgumentNullException">
+            <para>
+            	<paramref name="value"/> is <see langword="null"/>.
+            </para>
+            </exception>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabControl.TabCount">
+            <summary>
+            Read-only.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabControl.TabPages">
+            <summary>
+            Read-only.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabControl.ButtonPageDictionary">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabControl.PageButtonDictionary">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabControl.LayoutBuilder">
+            <summary>
+            <seealso cref="T:Genetibase.Controls.NuGenTabLayoutBuilder"/>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabControl.TabRenderer">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabControl.SelectedTabButton">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabControl.TabButtons">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabControl.Initiator">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabControl.TabStripBounds">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabControl.TabPageBounds">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabControl.ServiceProvider">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.NuGenTabControl.TabPageCollection">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabControl.TabPageCollection.Add(System.String)">
+            <summary>
+            </summary>
+            <param name="text"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException">
+            <para>
+            	<paramref name="text"/> is <see langword="null"/>.
+            </para>
+            </exception>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabControl.TabPageCollection.Add(System.String,System.Drawing.Image)">
+            <summary>
+            </summary>
+            <param name="text"></param>
+            <param name="tabButtonImage">Can be <see langword="null"/>.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException">
+            <para>
+            	<paramref name="text"/> is <see langword="null"/>.
+            </para>
+            </exception>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabControl.TabPageCollection.Add(Genetibase.Controls.NuGenTabPage)">
+            <summary>
+            </summary>
+            <exception cref="T:System.ArgumentNullException">
+            <para>
+            	<paramref name="tabPageToAdd"/> is <see langword="null"/>.
+            </para>
+            </exception>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabControl.TabPageCollection.Add(Genetibase.Controls.NuGenTabPage,System.Drawing.Image)">
+            <summary>
+            </summary>
+            <exception cref="T:System.ArgumentNullException">
+            <para>
+            	<paramref name="tabPageToAdd"/> is <see langword="null"/>.
+            </para>
+            </exception>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabControl.TabPageCollection.Clear">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabControl.TabPageCollection.GetEnumerator">
+            <summary>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabControl.TabPageCollection.IndexOf(Genetibase.Controls.NuGenTabPage)">
+            <summary>
+            </summary>
+            <param name="tabPage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabControl.TabPageCollection.Insert(System.Int32,System.String)">
+            <summary>
+            </summary>
+            <param name="index"></param>
+            <param name="text"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <para>
+            	<paramref name="index"/> must be within the bounds of the collection.
+            </para>
+            </exception>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabControl.TabPageCollection.Insert(System.Int32,System.String,System.Drawing.Image)">
+            <summary>
+            </summary>
+            <param name="index"></param>
+            <param name="text"></param>
+            <param name="tabButtonImage"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException">
+            <para>
+            	<paramref name="text"/> is <see langword="null"/>.
+            </para>
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <para>
+            	<paramref name="index"/> must be within the bounds of the collection.
+            </para>
+            </exception>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabControl.TabPageCollection.Insert(System.Int32,Genetibase.Controls.NuGenTabPage)">
+            <summary>
+            </summary>
+            <param name="index"></param>
+            <param name="tabPageToInsert"></param>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <para>
+            	<paramref name="index"/> must be within the bounds of the collection.
+            </para>
+            </exception>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabControl.TabPageCollection.Insert(System.Int32,Genetibase.Controls.NuGenTabPage,System.Drawing.Image)">
+            <summary>
+            </summary>
+            <param name="index"></param>
+            <param name="tabPageToInsert"></param>
+            <param name="tabButtonImage"></param>
+            <exception cref="T:System.ArgumentNullException">
+            <para>
+            	<paramref name="tabPageToInsert"/> is <see langword="null"/>.
+            </para>
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <para>
+            	<paramref name="index"/> must be within the bounds of the collection.
+            </para>
+            </exception>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabControl.TabPageCollection.Remove(Genetibase.Controls.NuGenTabPage)">
+            <summary>
+            </summary>
+            <param name="tabPageToRemove"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabControl.TabPageCollection.#ctor(Genetibase.Controls.NuGenTabControl)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenTabControl.TabPageCollection"/> class.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">
+            <para>
+            	<paramref name="tabControl"/> is <see langword="null"/>.
+            </para>
+            </exception>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabControl.TabPageCollection.Count">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabControl.TabPageCollection.Item(System.Int32)">
+            <summary>
+            </summary>
+            <param name="zeroBasedIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Genetibase.Controls.NuGenToolButton">
+            <summary>
+            Represents a toolbar button.
+            </summary>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenToolButton.internalEatLine">
+            <summary>
+            If <see langword="true"/> replaces the tail symbols which cannot be displayed due to the label width with "...".
+            Takes affect only if WordWrap property is <see langword="false"/>.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenToolButton.OnEatLineChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:NuGenToolButton.EatLineChanged"/> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenToolButton.internalPushed">
+            <summary>
+            Determines if this <see cref="T:NuGenToolButton"/> is currently in the pushed state.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenToolButton.OnPushedChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:NuGenToolButton.PushedChanged"/> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenToolButton.internalPushButton">
+            <summary>
+            Indicates whether this <see cref="T:NuGenToolButton"/> acts like a push button.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenToolButton.OnPushButtonChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:NuGenToolButton.PushButtonChanged"/> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenToolButton.internalUnpushAllInGroup">
+            <summary>
+            Indicates whether this <see cref="T:NuGenToolButton"/> unpushes all the other buttons in the group.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenToolButton.OnUnpushAllInGroupChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:NuGenToolButton.UnpushAllInGroupChanged"/> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenToolButton.internalWordWrap">
+            <summary>
+            Indicates whether lines are automatically word-wrapped.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenToolButton.OnWordWrapChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:NuGenToolButton.WordWrapChanged"/> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenToolButton.internalIsMouseOver">
+            <summary>
+            Determines if the mouse is over this <see cref="T:NuGenToolButton"/>.
+            </summary>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenToolButton.internalIsPressed">
+            <summary>
+            Determines if this <see cref="T:NuGenToolButton"/> is pressed.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenToolButton.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.MouseDown"/> event.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.MouseEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenToolButton.OnMouseEnter(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.MouseEnter"/> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenToolButton.OnMouseLeave(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.MouseLeave"/> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenToolButton.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.MouseUp"/> event.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.MouseEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenToolButton.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.Paint"/> event.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.PaintEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenToolButton.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenToolButton"/> class.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenToolButton.EatLine">
+            <summary>
+            Gets or sets the value indicating whether to eat the tail symbols which cannot
+            be displayed due to the label width.
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenToolButton.EatLineChanged">
+            <summary>
+            Occurs when the value of the <see cref="P:NuGenToolButton.EatLine"/> property changes.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenToolButton.Pushed">
+            <summary>
+            Gets or sets the value indicating whether this <see cref="T:NuGenToolButton"/> is currently
+            in the pushed state.
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenToolButton.PushedChanged">
+            <summary>
+            Occurs when the value of the <see cref="P:NuGenToolButton.Pushed"/> property changes.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenToolButton.PushButton">
+            <summary>
+            Gets or sets the value indicating whether this <see cref="T:NuGenToolButton"/> acts like a push button.
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenToolButton.PushButtonChanged">
+            <summary>
+            Occurs when the value of the <see cref="P:NuGenToolButton.PushButton"/> property changes.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenToolButton.UnpushAllInGroup">
+            <summary>
+            Gets or sets the value indicating whether this <see cref="T:NuGenToolButton"/> unpushes all the
+            other buttons in the group.
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenToolButton.UnpushAllInGroupChanged">
+            <summary>
+            Occurs when value of the <see cref="P:NuGenToolButton.UnpushAllInGroup"/> property changes.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenToolButton.WordWrap">
+            <summary>
+            Gets or sets the value indicating whether lines are automatically word-wrapped.
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenToolButton.WordWrapChanged">
+            <summary>
+            Occurs when the value of the <see cref="P:NuGenToolButton.WordWrap"/> property changes.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenToolButton.BackColor">
+            <summary>
+            Gets or sets the background color for the control.
+            </summary>
+            <value></value>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenToolButton.BackColorChanged">
+            <summary>
+            Occurs when the value of the BackColor property changes on the control.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenToolButton.BackgroundImage">
+            <summary>
+            Gets or sets the background image displayed in the control.
+            </summary>
+            <value></value>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenToolButton.BackgroundImageChanged">
+            <summary>
+            Occurs when the value of the BackgroundImage property changes on the control.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenToolButton.FlatStyle">
+            <summary>
+            Gets or sets the flat style appearance of the button control.
+            </summary>
+            <value></value>
+            <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">The value assigned is not one of the <see cref="T:System.Windows.Forms.FlatStyle"/> values.</exception>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenToolButton.ImageAlign">
+            <summary>
+            Gets or sets the alignment of the image on the button control.
+            </summary>
+            <value></value>
+            <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">The value assigned is not one of the <see cref="T:System.Drawing.ContentAlignment"/> values.</exception>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenToolButton.RightToLeft">
+            <summary>
+            Gets or sets a value indicating whether control's elements are aligned to support locales using right-to-left fonts.
+            </summary>
+            <value></value>
+            <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">The assigned value is not one of the <see cref="T:System.Windows.Forms.RightToLeft"/> values.</exception>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenToolButton.RightToLeftChanged">
+            <summary>
+            Occurs when the value of the RightToLeft property changes on the control.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenToolButton.TabIndex">
+            <summary>
+            Gets or sets the tab order of the control within its container.
+            </summary>
+            <value></value>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenToolButton.TabIndexChanged">
+            <summary>
+            Occurs when the value of the TabIndex property changes on the control.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenToolButton.TabStop">
+            <summary>
+            Gets or sets a value indicating whether the user can give the focus to
+            this control using the TAB key.
+            </summary>
+            <value></value>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenToolButton.TabStopChanged">
+            <summary>
+            Occurs when the value of the TabStop property changes on the control.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenToolButton.TextAlign">
+            <summary>
+            Gets or sets the alignment of the text on the button control.
+            </summary>
+            <value></value>
+            <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">The value assigned is not one of the <see cref="T:System.Drawing.ContentAlignment"/> values.</exception>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenToolButton.IsMouseOver">
+            <summary>
+            Gets or sets the value indicating whether the mouse is over this <see cref="T:NuGenToolButton"/>.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenToolButton.IsPressed">
+            <summary>
+            Gets or sets the value indicating whether this <see cref="T:NuGenToolButton"/> is pressed.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenToolButton.DefaultSize">
+            <summary>
+            Gets the default size for this <see cref="T:NuGenToolButton"/>.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenToolButton.StringProcessor">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.NuGenDialogBlock">
+            <summary>
+            Ok/Cancel/... block.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenDialogBlock.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenDialogBlock"/> class.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenDialogBlock.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenDialogBlock.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.Collections.NuGenContainsItemRequestedEventArgs">
+            <summary>
+            The handler should set the value for the <see cref="P:ContainsNode"/> property indicating whether
+            the specified <see cref="P:NodeToCheck"/> contains within the collection.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.Collections.NuGenContainsItemRequestedEventArgs.#ctor(Genetibase.Controls.NuGenTreeNode)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.Collections.NuGenContainsItemRequestedEventArgs"/> class.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.Collections.NuGenContainsItemRequestedEventArgs.ContainsNode">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.Collections.NuGenContainsItemRequestedEventArgs.NodeToCheck">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.NuGenDirectorySelector">
+            <summary>
+            Provides GUI for directory selection.
+            </summary>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenDirectorySelector.EventPathChanged">
+            <summary>
+            The <see cref="E:NuGenDirectorySelector.PathChanged"/> event identifier.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenDirectorySelector.OnPathChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:NuGenDirectorySelector.PathChanged"/> event.
+            </summary>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenDirectorySelector.ClearHistory">
+            <summary>
+            Clears the path history.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenDirectorySelector.Reset">
+            <summary>
+            Resets the folder browser dialog properties to their default values.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenDirectorySelector.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenDirectorySelector"/> class.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenDirectorySelector.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenDirectorySelector.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenDirectorySelector.Description">
+            <summary>
+            Gets or sets the descriptive text displayed above the tree view control in the folder browser dialog box.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenDirectorySelector.Path">
+            <summary>
+            Gets or sets the path selected by user. Returns <see langword="null"/> if this <see cref="T:NuGenDirectorySelector"/>
+            contains no path.
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenDirectorySelector.PathChanged">
+            <summary>
+            Occurs when the path entered by user changes.
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.Collections.NuGenAddTreeNodeRangeEventArgs">
+            <summary>
+            The handler should add the specified <see cref="T:Genetibase.Controls.NuGenTreeNode"/> range to the collection.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.Collections.NuGenAddTreeNodeRangeEventArgs.#ctor(Genetibase.Controls.NuGenTreeNode[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.Collections.NuGenAddTreeNodeRangeEventArgs"/> class.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.Collections.NuGenAddTreeNodeRangeEventArgs.TreeNodeRangeToAdd">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.NuGenTabLayoutBuilder">
+            <summary>
+            Provides helper methods to build tab buttons and pages layout.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabLayoutBuilder.RebuildLayout(System.Drawing.Rectangle)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabLayoutBuilder.#ctor(System.Collections.Generic.List{Genetibase.Controls.NuGenTabButton},System.Drawing.Size)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenTabLayoutBuilder"/> class.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">
+            <para>
+            	<paramref name="tabButtons"/> is <see langword="null"/>.
+            </para>
+            </exception>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabLayoutBuilder.DefaultTabButtonSize">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabLayoutBuilder.TabButtons">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.NuGenTabControlServiceProvider">
+            <summary>
+            Provides:<para/>
+            <see cref="T:Genetibase.Controls.INuGenTabRenderer"/><para/>
+            <see cref="T:Genetibase.Shared.Windows.INuGenTabStateTracker"/><para/>
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabControlServiceProvider.GetService``1">
+            <summary>
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabControlServiceProvider.GetService(System.Type)">
+            <summary>
+            </summary>
+            <param name="serviceType"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException">
+            <para>
+            	<paramref name="serviceType"/> is <see langword="null"/>.
+            </para>
+            </exception>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabControlServiceProvider.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenTabControlServiceProvider"/> class.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabControlServiceProvider.ButtonStateTracker">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabControlServiceProvider.TabRenderer">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabControlServiceProvider.TabStateTracker">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.NuGenPictureBox">
+            <summary>
+            A picture box with ScaleToFit and AutoScroll features.
+            </summary>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenPictureBox.displayMode">
+            <summary>
+            Determines the image display mode for this <see cref="T:NuGenPictureBox"/>.
+            </summary>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenPictureBox.EventDisplayModeChanged">
+            <summary>
+            The <see cref="E:NuGenPictureBox.DisplayModeChanged"/> event identifier.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenPictureBox.OnDisplayModeChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:NuGenPictureBox.DisplayModeChanged"/> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenPictureBox.image">
+            <summary>
+            Determines the image to display for this <see cref="T:NuGenPictureBox"/>.
+            </summary>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenPictureBox.EventImageChanged">
+            <summary>
+            The <see cref="E:NuGenPictureBox.ImageChanged"/> event identifier.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenPictureBox.OnImageChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:NuGenPictureBox.ImageChanged"/> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenPictureBox.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.Paint"/> event.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.PaintEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenPictureBox.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenPictureBox"/> class.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenPictureBox.DisplayMode">
+            <summary>
+            Gets or sets the image display mode for this <see cref="T:NuGenPictureBox"/>.
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenPictureBox.DisplayModeChanged">
+            <summary>
+            Occurs when the value of the <see cref="P:NuGenPictureBox.DisplayMode"/> property changes.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenPictureBox.Image">
+            <summary>
+            Gets or sets the image to display for this <see cref="T:NuGenPictureBox"/>.
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenPictureBox.ImageChanged">
+            <summary>
+            Occurs when the value of the <see cref="P:NuGenPictureBox.Image"/> property changes.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenPictureBox.BackgroundImage">
+            <summary>
+            Gets or sets the background image displayed in the control.
+            </summary>
+            <value></value>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenPictureBox.BackgroundImageChanged">
+            <summary>
+            Occurs when the value of the <see cref="P:NuGenPictureBox.BackgroundImage"/> property changes.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenPictureBox.AutoScroll">
+            <summary>
+            Gets or sets a value indicating whether the container will allow the user to scroll to any controls placed outside of its visible boundaries.
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:Genetibase.Controls.Design.NuGenDigitsOnlyComboBoxDesigner">
+            <summary>
+            Provides additional desing-time functionlity for the <see cref="T:NuGenDigitsOnlyComboBox"/>.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.Design.NuGenDigitsOnlyComboBoxDesigner.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.Design.NuGenDigitsOnlyComboBoxDesigner"/> class.
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.INuGenTabRenderer">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.INuGenTabRenderer.GetPadding(System.Windows.Forms.FlatStyle)">
+            <summary>
+            </summary>
+            <param name="flatStyle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Genetibase.Controls.INuGenTabRenderer.DrawTabBody(Genetibase.Controls.NuGenTabBodyPaintParams)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.INuGenTabRenderer.DrawTabButton(Genetibase.Controls.NuGenTabButtonPaintParams)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.INuGenTabRenderer.DrawTabPage(Genetibase.Controls.NuGenTabPagePaintParams)">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.NuGenSizingContainerMode">
+            <summary>
+            Specifies the way the <see cref="T:Genetibase.Controls.NuGenSizingContainer"/> docks to its parent window.
+            </summary>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenSizingContainerMode.Left">
+            <summary>
+            This <see cref="T:Genetibase.Controls.NuGenSizingContainer"/> docks to the left parent window border.
+            </summary>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenSizingContainerMode.Right">
+            <summary>
+            This <see cref="T:Genetibase.Controls.NuGenSizingContainer"/> docks to the right parent window border.
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.NuGenTabRenderer">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabRenderer.DrawTabBody(Genetibase.Controls.NuGenTabBodyPaintParams)">
+            <summary>
+            </summary>
+            <exception cref="T:System.ArgumentNullException">
+            <para>
+            	<paramref name="paintParams"/> is <see langword="null"/>.
+            </para>
+            </exception>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabRenderer.DrawTabButton(Genetibase.Controls.NuGenTabButtonPaintParams)">
+            <summary>
+            </summary>
+            <exception cref="T:System.ArgumentNullException">
+            <para>
+            	<paramref name="paintParams"/> is <see langword="null"/>.
+            </para>
+            </exception>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabRenderer.DrawTabPage(Genetibase.Controls.NuGenTabPagePaintParams)">
+            <summary>
+            </summary>
+            <param name="paintParams"></param>
+            <exception cref="T:System.ArgumentNullException">
+            <para>
+            	<paramref name="paintParams"/> is <see langword="null"/>.
+            </para>
+            </exception>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabRenderer.GetPadding(System.Windows.Forms.FlatStyle)">
+            <summary>
+            </summary>
+            <param name="flatStyle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabRenderer.DrawTabBodyFlat(System.Drawing.Graphics,System.Drawing.Rectangle)">
+            <summary>
+            </summary>
+            <param name="g"></param>
+            <param name="bounds"></param>
+            <exception cref="T:System.ArgumentNullException">
+            <para>
+            	<paramref name="g"/> is <see langword="null"/>.
+            </para>
+            </exception>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabRenderer.DrawTabBodyNotched(System.Drawing.Graphics,System.Drawing.Rectangle)">
+            <summary>
+            </summary>
+            <exception cref="T:System.ArgumentNullException">
+            <para>
+            	<paramref name="g"/> is <see langword="null"/>.
+            </para>
+            </exception>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabRenderer.DrawTabBodyFlatUsingVisualStyles(System.Drawing.Graphics,System.Drawing.Rectangle)">
+            <summary>
+            </summary>
+            <param name="g"></param>
+            <param name="bounds"></param>
+            <exception cref="T:System.ArgumentNullException">
+            <para>
+            	<paramref name="g"/> is <see langword="null"/>.
+            </para>
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            <para>
+            	Visual styles are not currently available.
+            </para>
+            </exception>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabRenderer.DrawTabBodyUsingVisualStyles(System.Drawing.Graphics,System.Drawing.Rectangle)">
+            <summary>
+            </summary>
+            <exception cref="T:System.ArgumentNullException">
+            <para>
+            	<paramref name="g"/> is <see langword="null"/>.
+            </para>
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            <para>
+            	Visual styles are not currently available.
+            </para>
+            </exception>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabRenderer.DrawTabButtonBackground(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.VisualStyles.TabItemState)">
+            <summary>
+            </summary>
+            <exception cref="T:System.ArgumentNullException">
+            <para>
+            	<paramref name="g"/> is <see langword="null"/>.
+            </para>
+            </exception>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabRenderer.DrawTabButtonBackgroundUsingVisualStyles(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.VisualStyles.TabItemState)">
+            <summary>
+            </summary>
+            <exception cref="T:System.ArgumentNullException">
+            <para>
+            	<paramref name="g"/> is <see langword="null"/>.
+            </para>
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            <para>
+            	Visual styles are not currently available.
+            </para>
+            </exception>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabRenderer.DrawTabButtonImage(System.Drawing.Graphics,System.Drawing.Image,System.Drawing.Rectangle,System.Boolean)">
+            <summary>
+            </summary>
+            <exception cref="T:System.ArgumentNullException">
+            <para>
+            	<paramref name="g"/> is <see langword="null"/>.
+            </para>
+            -or-
+            <para>
+            	<paramref name="imageToDraw"/> is <see langword="null"/>.
+            </para>
+            </exception>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabRenderer.DrawTabButtonText(System.Drawing.Graphics,System.String,System.Drawing.Rectangle,System.Drawing.Font,System.Drawing.Color,System.Boolean)">
+            <summary>
+            </summary>
+            <exception cref="T:System.ArgumentNullException">
+            <para>
+            	<paramref name="g"/> is <see langword="null"/>.
+            </para>
+            -or-
+            <para>
+            	<paramref name="text"/> is <see langword="null"/>.
+            </para>
+            -or-
+            <para>
+            	<paramref name="font"/> is <see langword="null"/>.
+            </para>
+            </exception>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabRenderer.DrawTabPageBackground(System.Drawing.Graphics,System.Drawing.Rectangle)">
+            <summary>
+            </summary>
+            <param name="g"></param>
+            <param name="bounds"></param>
+            <exception cref="T:System.ArgumentNullException">
+            <para>
+            	<paramref name="g"/> is <see langword="null"/>.
+            </para>
+            </exception>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabRenderer.DrawTabPageBackgroundUsingVisualStyles(System.Drawing.Graphics,System.Drawing.Rectangle)">
+            <summary>
+            </summary>
+            <param name="g"></param>
+            <param name="bounds"></param>
+            <exception cref="T:System.ArgumentNullException">
+            <para>
+            	<paramref name="g"/> is <see langword="null"/>.
+            </para>
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            	Visual styles are not currently available.
+            </exception>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabRenderer.GetLeftTopNotchedPolygon(System.Drawing.Rectangle)">
+            <summary>
+            </summary>
+            <param name="bounds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabRenderer.GetRightNotchedPolygon(System.Drawing.Rectangle)">
+            <summary>
+            </summary>
+            <param name="bounds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabRenderer.GetRightShadowNotchedPolygon(System.Drawing.Rectangle)">
+            <summary>
+            </summary>
+            <param name="bounds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabRenderer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenTabRenderer"/> class.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabRenderer.TabBodyVisualStyleRenderer">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.NuGenDigitsOnlyTextBox">
+            <summary>
+            Represents a text box that allows only digit input.
+            </summary>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenDigitsOnlyTextBox.PATTERN">
+            <summary>
+            Used to filter input.
+            </summary>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenDigitsOnlyTextBox.bufferText">
+            <summary>
+            Contains the previous valid text.
+            </summary>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenDigitsOnlyTextBox.bufferIndex">
+            <summary>
+            Contains the cursor position for the previous valid text.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenDigitsOnlyTextBox.WndProc(System.Windows.Forms.Message@)">
+            <summary>
+            Processes Windows messages.
+            </summary>
+            <param name="m">The message to process.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenDigitsOnlyTextBox.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenDigitsOnlyTextBox"/> class.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenDigitsOnlyTextBox.BackgroundImage">
+            <summary>
+            Gets or sets the background image.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenDigitsOnlyTextBox.Multiline">
+            <summary>
+            Gets or sets a value indicating whether this
+            is a multiline text box control.
+            </summary>
+            <value></value>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenDigitsOnlyTextBox.MultilineChanged">
+            <summary>
+            Occurs when the value of the <see cref="P:NuGenDigitsOnlyTextBox.Multiline"/> property changes.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenDigitsOnlyTextBox.ScrollBars">
+            <summary>
+            Gets or sets which scroll bars should
+            appear in a multiline <see cref="T:System.Windows.Forms.TextBox"/>
+            control.
+            </summary>
+            <value></value>
+            <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">A value that is not within the range of valid values for the enumeration was assigned to the property.</exception>
+        </member>
+        <member name="T:Genetibase.Controls.NuGenButtonBaseServiceProvider">
+            <summary>
+            Provides:<para/>
+            <see cref="T:Genetibase.Shared.Windows.INuGenButtonStateTracker"/><para/>
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenButtonBaseServiceProvider.GetService``1">
+            <summary>
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenButtonBaseServiceProvider.GetService(System.Type)">
+            <summary>
+            </summary>
+            <param name="serviceType"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException">
+            <para>
+            	<paramref name="serviceType"/> is <see langword="null"/>.
+            </para>
+            </exception>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenButtonBaseServiceProvider.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenButtonBaseServiceProvider"/> class.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenButtonBaseServiceProvider.ButtonStateTracker">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.ComponentModel.NuGenSRCategoryAttribute">
+            <summary>
+            Provides resource strings support for <see cref="T:System.ComponentModel.CategoryAttribute"/>.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.ComponentModel.NuGenSRCategoryAttribute.GetLocalizedString(System.String)">
+            <summary>
+            Looks up the localized name of the specified category.
+            </summary>
+            <param name="value">The identifer for the category to look up.</param>
+            <returns>
+            The localized name of the category, or null if a localized name does not exist.
+            </returns>
+        </member>
+        <member name="M:Genetibase.Controls.ComponentModel.NuGenSRCategoryAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.SRCategoryAttribute"/> class.
+            </summary>
+            <param name="category">Specifies the category name.</param>
+        </member>
+        <member name="T:Genetibase.Controls.NuGenXhtmlTextBox">
+            <summary>
+            Enhanced <see cref="T:RichTextBox"/> that supports XHTML rendering.
+            </summary>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenXhtmlTextBox.errors">
+            <summary>
+            Determines the list of errors encountered during XHTML to RTF translation.
+            </summary>
+        </member>
+        <member name="F:Genetibase.Controls.NuGenXhtmlTextBox.text">
+            <summary>
+            Determines the text for this <see cref="T:NuGenXhtmlTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenXhtmlTextBox.OnSizeChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.SizeChanged"/> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenXhtmlTextBox.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenXhtmlTextBox"/> class.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenXhtmlTextBox.Errors">
+            <summary>
+            Gets the list of errors encountered during XHTML to RTF translation.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenXhtmlTextBox.Text">
+            <summary>
+            Gets or sets the text for this <see cref="T:NuGenXhtmlTextBox"/>.
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.Design.NuGenPictureBoxDesigner">
+            <summary>
+            Provides additional design-time functionality for the <see cref="T:NuGenPictureBox"/>.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.Design.NuGenPictureBoxDesigner.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.Design.NuGenPictureBoxDesigner"/> class.
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.Collections.NuGenAddTreeNodeEventArgs">
+            <summary>
+            <para>Add: The handler should set the index the node will be added at.</para>
+            -or-
+            <para>Insert: Contains necessary data for Insert method.</para>
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.Collections.NuGenAddTreeNodeEventArgs.#ctor(Genetibase.Controls.NuGenTreeNode)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.Collections.NuGenAddTreeNodeEventArgs"/> class.<para/>
+            TreeNodeIndex = 0.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.Collections.NuGenAddTreeNodeEventArgs.#ctor(Genetibase.Controls.NuGenTreeNode,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.Collections.NuGenAddTreeNodeEventArgs"/> class.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.Collections.NuGenAddTreeNodeEventArgs.TreeNodeToAdd">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.Collections.NuGenAddTreeNodeEventArgs.TreeNodeIndex">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.NuGenTabCloseButton">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.NuGenButtonBase">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenButtonBase.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Raises the <see cref="M:System.Windows.Forms.Control.OnMouseDown(System.Windows.Forms.MouseEventArgs)"></see> event.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.MouseEventArgs"></see> that contains the event data.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenButtonBase.OnMouseEnter(System.EventArgs)">
+            <summary>
+            Raises the mouse enter event.
+            </summary>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenButtonBase.OnMouseLeave(System.EventArgs)">
+            <summary>
+            Raises the mouse leave event.
+            </summary>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenButtonBase.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Raises the <see cref="M:System.Windows.Forms.ButtonBase.OnMouseUp(System.Windows.Forms.MouseEventArgs)"></see> event.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.MouseEventArgs"></see> that contains the event data.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenButtonBase.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenButtonBase"/> class.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenButtonBase.#ctor(Genetibase.Shared.ComponentModel.INuGenServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenButtonBase"/> class.
+            </summary>
+            <param name="serviceProvider">
+            Requires:<para/>
+            <see cref="T:Genetibase.Shared.Windows.INuGenButtonStateTracker"/><para/>
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            <para>
+            	<paramref name="serviceProvider"/> is <see langword="null"/>.
+            </para>
+            </exception>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenButtonBase.ButtonStateTracker">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenButtonBase.ServiceProvider">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabCloseButton.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.Paint"></see> event.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.PaintEventArgs"></see> that contains the event data.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabCloseButton.SetBoundsCore(System.Int32,System.Int32,System.Int32,System.Int32,System.Windows.Forms.BoundsSpecified)">
+            <summary>
+            Performs the work of setting the specified bounds of this control.
+            </summary>
+            <param name="x">The new <see cref="P:System.Windows.Forms.Control.Left"></see> property value of the control.</param>
+            <param name="y">The new <see cref="P:System.Windows.Forms.Control.Top"></see> property value of the control.</param>
+            <param name="width">The new <see cref="P:System.Windows.Forms.Control.Width"></see> property value of the control.</param>
+            <param name="height">The new <see cref="P:System.Windows.Forms.Control.Height"></see> property value of the control.</param>
+            <param name="specified">A bitwise combination of the <see cref="T:System.Windows.Forms.BoundsSpecified"></see> values.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabCloseButton.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenTabCloseButton"/> class.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabCloseButton.#ctor(Genetibase.Shared.ComponentModel.INuGenServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenTabCloseButton"/> class.
+            </summary>
+            <param name="serviceProvider">
+            Requires:<para/>
+            <see cref="T:Genetibase.Shared.Windows.INuGenButtonStateTracker"/><para/>
+            </param>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabCloseButton.DefaultSize">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.NuGenTabButton">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabButton.OnClose(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Genetibase.Controls.NuGenTabButton.Close"/> event.
+            </summary>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabButton.OnImageChanged(System.EventArgs)">
+            <summary>
+            Will bubble the <see cref="E:Genetibase.Controls.NuGenTabButton.ImageChanged"/> event.
+            </summary>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabButton.OnSelectedChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Genetibase.Controls.NuGenTabButton.SelectedChanged"/> event.
+            </summary>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabButton.OnMouseEnter(System.EventArgs)">
+            <summary>
+            Raises the <see cref="M:System.Windows.Forms.Control.OnMouseEnter(System.EventArgs)"></see> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs"></see> that contains the event data.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabButton.OnMouseLeave(System.EventArgs)">
+            <summary>
+            Raises the <see cref="M:System.Windows.Forms.Control.OnMouseLeave(System.EventArgs)"></see> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs"></see> that contains the event data.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabButton.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.Paint"></see> event.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.PaintEventArgs"></see> that contains the event data.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabButton.OnSizeChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.SizeChanged"></see> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs"></see> that contains the event data.</param>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabButton.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenTabButton"/> class.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenTabButton.#ctor(Genetibase.Shared.ComponentModel.INuGenServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenTabButton"/> class.
+            </summary>
+            <param name="serviceProvider">
+            Requires:<para/>
+            <see cref="T:Genetibase.Shared.Windows.INuGenButtonStateTracker"/><para/>
+            <see cref="T:Genetibase.Controls.INuGenTabRenderer"/><para/>
+            <see cref="T:Genetibase.Shared.Windows.INuGenTabStateTracker"/><para/>
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            <para>
+            	<paramref name="serviceProvider"/> is <see langword="null"/>.
+            </para>
+            </exception>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenTabButton.Close">
+            <summary>
+            Occurs when the close button was clicked.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabButton.Image">
+            <summary>
+            Gets or sets the image this <see cref="T:Genetibase.Controls.NuGenTabButton"/> displays.
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenTabButton.ImageChanged">
+            <summary>
+            Occurs when the value of the <see cref="P:Genetibase.Controls.NuGenTabButton.Image"/> property changes.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabButton.Selected">
+            <summary>
+            </summary>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenTabButton.SelectedChanged">
+            <summary>
+            Occurs when the value of the <see cref="P:Genetibase.Controls.NuGenTabButton.Selected"/> property changes.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabButton.ShowCloseButton">
+            <summary>
+            Gets or sets the value indicating whether to show the close button for this <see cref="T:Genetibase.Controls.NuGenTabButton"/>.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabButton.Text">
+            <summary>
+            </summary>
+            <value></value>
+        </member>
+        <member name="E:Genetibase.Controls.NuGenTabButton.TextChanged">
+            <summary>
+            Occurs when the tab button text changes.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabButton.CloseButton">
+            <summary>
+            Read-only.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabButton.TabRenderer">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabButton.TabStateTracker">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabButton.DefaultSize">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabButton.CloseButtonBounds">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabButton.ImageBounds">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabButton.Initiator">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenTabButton.ServiceProvider">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.Collections.NuGenTreeNodeSorter">
+            <summary>
+            Sorts <see cref="T:NuGenTreeNodeCollection"/> using specified <see cref="T:IComparer`1"/>.
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.Collections.INuGenTreeNodeSorter">
+            <summary>
+            Indicates that this class can sort <see cref="T:Genetibase.Controls.Collections.NuGenTreeNodeCollection"/> using specified
+            <see cref="T:System.Collections.Generic.IComparer`1"></see>.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.Collections.INuGenTreeNodeSorter.Sort``1(Genetibase.Controls.Collections.NuGenTreeNodeCollection,System.Collections.Generic.IComparer{``0})">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.Collections.NuGenTreeNodeSorter.Sort``1(Genetibase.Controls.Collections.NuGenTreeNodeCollection,System.Collections.Generic.IComparer{``0})">
+            <summary>
+            </summary>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="collectionToSort"/> is <see langword="null"/>.
+            <paramref name="comparerToUse"/> is <see langword="null"/>.
+            </exception>
+        </member>
+        <member name="T:Genetibase.Controls.NuGenSaveFileSelector">
+            <summary>
+            Provides GUI to select a file to save to.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenSaveFileSelector.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenSaveFileSelector"/> class.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenSaveFileSelector.FileDialog">
+            <summary>
+            Gets the <see cref="P:NuGenFileSelector.FileDialog"/> associated with this <see cref="T:NuGenFileSelector"/>.
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:Genetibase.Controls.NuGenPlaceHolder">
+            <summary>
+            A panel that acts like a placeholder.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.NuGenPlaceHolder.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.NuGenPlaceHolder"/> class.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.NuGenPlaceHolder.DefaultSize">
+            <summary>
+            Gets the default size for this <see cref="T:NuGenPlaceHolder"/>.
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.Collections.NuGenIndexedTreeNodeEventArgs">
+            <summary>
+            Get by index: The handler should set the value of the <see cref="P:TreeNode"/> property according
+            to the specified <see cref="P:TreeNodeIndex"/>.
+            -or-
+            Set by index: <see cref="P:TreeNode"/> specified the node to be set at the specified index at the 
+            collection.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.Collections.NuGenIndexedTreeNodeEventArgs.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.Collections.NuGenIndexedTreeNodeEventArgs"/> class.
+            TreeNode = null.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.Collections.NuGenIndexedTreeNodeEventArgs.#ctor(System.Int32,Genetibase.Controls.NuGenTreeNode)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.Collections.NuGenIndexedTreeNodeEventArgs"/> class.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.Collections.NuGenIndexedTreeNodeEventArgs.TreeNode">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.Collections.NuGenIndexedTreeNodeEventArgs.TreeNodeIndex">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Genetibase.Controls.Design.NuGenFileSelectorDesigner">
+            <summary>
+            Provides additional design-time functionality for the <see cref="T:NuGenFileSelector"/>.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.Design.NuGenFileSelectorDesigner.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.Design.NuGenFileSelectorDesigner"/> class.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.Design.NuGenFileSelectorDesigner.SelectionRules">
+            <summary>
+            Gets the selection rules that indicate the movement capabilities of a component.
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:Genetibase.Controls.Design.NuGenDigitsOnlyTextBoxDesigner">
+            <summary>
+            Provides additional design-time functionality for this <see cref="T:NuGenDigitsOnlyTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:Genetibase.Controls.Design.NuGenDigitsOnlyTextBoxDesigner.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.Controls.Design.NuGenDigitsOnlyTextBoxDesigner"/> class.
+            </summary>
+        </member>
+        <member name="P:Genetibase.Controls.Design.NuGenDigitsOnlyTextBoxDesigner.SelectionRules">
+            <summary>
+            Gets the selection rules that indicate the movement capabilities of a component.
+            </summary>
+            <value></value>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,285 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{45800074-EE30-4DBA-82EA-AB5FC52394CF}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Genetibase.Controls</AssemblyName>
+    <AssemblyOriginatorKeyFile>af27814a-6c57-95b4-f62c-9cf4a5f06675.snk</AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Genetibase.Controls</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>doc\Genetibase.Controls.xml</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>doc\Genetibase.Controls.xml</DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>system.design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>system.drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>system.windows.forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>system.xml</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Collections\INuGenTreeNodeSorter.cs" />
+    <Compile Include="Collections\NuGenAZTreeNodeComparer.cs" />
+    <Compile Include="Collections\NuGenTreeNodeSorter.cs" />
+    <Compile Include="ComponentModel\NuGenSRCategoryAttribute.cs" />
+    <Compile Include="ComponentModel\NuGenSRDescriptionAttribute.cs" />
+    <Compile Include="Design\NuGenTabCloseButtonDesigner.cs" />
+    <Compile Include="Enums\NuGenSizingContainerMode.cs" />
+    <Compile Include="NuGenButtonBase.cs">
+    </Compile>
+    <Compile Include="NuGenButtonBaseServiceProvider.cs" />
+    <Compile Include="TabControl\INuGenTabRenderer.cs" />
+    <Compile Include="TabControl\NuGenTabButton.cs">
+    </Compile>
+    <Compile Include="TabControl\NuGenTabCloseButton.cs">
+    </Compile>
+    <Compile Include="TabControl\NuGenTabControl.TabPageCollection.cs" />
+    <Compile Include="TabControl\NuGenTabControlServiceProvider.cs" />
+    <Compile Include="TabControl\NuGenTabButtonPaintParams.cs" />
+    <Compile Include="TabControl\NuGenTabLayoutBuilder.cs" />
+    <Compile Include="TabControl\NuGenTabPage.cs">
+    </Compile>
+    <Compile Include="TabControl\NuGenTabBodyPaintParams.cs" />
+    <Compile Include="TabControl\NuGenTabPagePaintParams.cs" />
+    <Compile Include="TabControl\NuGenTabRenderer.cs" />
+    <Compile Include="TreeView\INuGenTreeViewDragDropService.cs" />
+    <Compile Include="TreeView\INuGenTreeViewSelectionService.cs" />
+    <Compile Include="Collections\NuGenAddTreeNodeEventArgs.cs" />
+    <Compile Include="Collections\NuGenAddTreeNodeRangeEventArgs.cs" />
+    <Compile Include="Collections\NuGenContainsItemRequestedEventArgs.cs" />
+    <Compile Include="Collections\NuGenEnumeratorRequestedEventArgs.cs" />
+    <Compile Include="Collections\NuGenIndexedTreeNodeEventArgs.cs" />
+    <Compile Include="Collections\NuGenItemsClearRequestedEventArgs.cs" />
+    <Compile Include="Collections\NuGenRemoveTreeNodeEventArgs.cs" />
+    <Compile Include="TabControl\NuGenTabControl.cs">
+    </Compile>
+    <Compile Include="NuGenTreeNode.cs" />
+    <Compile Include="Collections\NuGenTreeNodeCollection.cs" />
+    <Compile Include="Collections\NuGenItemsCountRequestedEventArgs.cs" />
+    <Compile Include="TreeView\NuGenTreeViewDragDropService.cs" />
+    <Compile Include="TreeView\NuGenTreeViewSelectionService.cs" />
+    <Compile Include="TreeView\NuGenTreeViewServiceProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NuGenBevel.cs">
+    </Compile>
+    <Compile Include="Design\NuGenBevelDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NuGenCTLabel.cs">
+    </Compile>
+    <Compile Include="Design\NuGenCTLabelDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NuGenDialogBlock.cs">
+    </Compile>
+    <Compile Include="Design\NuGenDialogBlockDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NuGenDigitsOnlyComboBox.cs">
+    </Compile>
+    <Compile Include="Design\NuGenDigitsOnlyComboBoxDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NuGenDigitsOnlyTextBox.cs">
+    </Compile>
+    <Compile Include="Design\NuGenDigitsOnlyTextBoxDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NuGenDirectorySelector.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Design\NuGenDirectorySelectorDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NuGenFileSelector.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Design\NuGenFileSelectorDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NuGenListView.cs">
+    </Compile>
+    <Compile Include="NuGenOpenFileSelector.cs">
+    </Compile>
+    <Compile Include="NuGenPictureBox.cs">
+    </Compile>
+    <Compile Include="Design\NuGenPictureBoxDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NuGenPlaceHolder.cs">
+    </Compile>
+    <Compile Include="NuGenSaveFileSelector.cs">
+    </Compile>
+    <Compile Include="NuGenSizingContainer.cs">
+    </Compile>
+    <Compile Include="Design\NuGenSizingContainerDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NuGenSplitter.cs">
+    </Compile>
+    <Compile Include="NuGenToolButton.cs">
+    </Compile>
+    <Compile Include="Design\NuGenToolButtonDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TreeView\NuGenTreeView.cs">
+    </Compile>
+    <Compile Include="NuGenXhtmlTextBox.cs">
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\NuGenRtfColorTable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Service\NuGenRtfDocument.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Service\NuGenRtfFontTable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Service\NuGenXmlTranslator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="NuGenBevel.resx">
+      <DependentUpon>NuGenBevel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenCTLabel.resx">
+      <DependentUpon>NuGenCTLabel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenDialogBlock.resx">
+      <DependentUpon>NuGenDialogBlock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenDirectorySelector.resx">
+      <DependentUpon>NuGenDirectorySelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuGenFileSelector.resx">
+      <DependentUpon>NuGenFileSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Genetibase.Design\Genetibase.Design.csproj">
+      <Project>{50EE44FC-D51B-471E-A199-15621498ECA7}</Project>
+      <Name>Genetibase.Design</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Genetibase.Shared\Genetibase.Shared.csproj">
+      <Project>{A7A02558-58A0-4333-BFAF-77CB49DE17F0}</Project>
+      <Name>Genetibase.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Genetibase.Win32\Genetibase.Win32.csproj">
+      <Project>{8E94E64C-52F7-4865-ACF1-3FEC8F61B531}</Project>
+      <Name>Genetibase.Win32</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CloseButton_Pressed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CloseButton_Hot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CloseButton_Normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="af27814a-6c57-95b4-f62c-9cf4a5f06675.snk" />
+    <None Include="Resources\Blank.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

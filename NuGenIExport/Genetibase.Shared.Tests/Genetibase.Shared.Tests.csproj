@@ -1,0 +1,105 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9BB5FF25-149E-4E2E-A475-D9045835A364}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Genetibase.Shared.Tests</RootNamespace>
+    <AssemblyName>Genetibase.Shared.Tests</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetMock, Version=0.7.5.0, Culture=neutral, PublicKeyToken=805ea88df19095f6">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files\DotNetMock-0.8.0\bin\DotNetMock.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.2.7.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files\TestDriven.NET 2.0\NUnit\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NuGenArgument\NuGenArgumentTests.Exchange.cs" />
+    <Compile Include="NuGenArgument\NuGenArgumentTests.IsCompatibleType.cs" />
+    <Compile Include="NuGenArgument\NuGenArgumentTests.cs" />
+    <Compile Include="NuGenArgument\NuGenArgumentTests.GetCompatibleDataObjectType.cs" />
+    <Compile Include="NuGenArgument\NuGenArgumentTests.IsEven.cs" />
+    <Compile Include="NuGenArgument\NuGenArgumentTests.IsValidDirectoryName.cs" />
+    <Compile Include="NuGenArgument\NuGenArgumentTests.IsValidFilename.cs" />
+    <Compile Include="NuGenArgument\NuGenArgumentTests.Mockery.cs" />
+    <Compile Include="NuGenButtonStateTrackerTests.cs" />
+    <Compile Include="NuGenDEHService\NuGenDEHServiceTests.AddClient.cs" />
+    <Compile Include="NuGenDEHService\NuGenDEHServiceTests.cs" />
+    <Compile Include="NuGenDEHService\NuGenDEHServiceTests.Mockery.cs" />
+    <Compile Include="NuGenDEHService\NuGenDEHServiceTests.RemoveClient.cs" />
+    <Compile Include="NuGenEnum\NuGenEnumTests.cs" />
+    <Compile Include="NuGenEnum\NuGenEnumTests.FlagsSetOn.cs" />
+    <Compile Include="NuGenEnum\NuGenEnumTests.ToArray.cs" />
+    <Compile Include="NuGenEnum\NuGenEnumTests.ToUInt64.cs" />
+    <Compile Include="NuGenEventInitiatorService\NuGenEventInitiatorServiceTests.cs" />
+    <Compile Include="NuGenEventInitiatorService\NuGenEventInitiatorServiceTests.InvokeAction.cs" />
+    <Compile Include="NuGenEventInitiatorService\NuGenEventInitiatorServiceTests.InvokeActionT.cs" />
+    <Compile Include="NuGenEventInitiatorService\NuGenEventInitiatorServiceTests.InvokeMouseAction.cs" />
+    <Compile Include="NuGenEventInitiatorService\NuGenEventInitiatorServiceTests.InvokePropertyChanged.cs" />
+    <Compile Include="NuGenEventInitiatorService\NuGenEventInitiatorServiceTests.Mockery.cs" />
+    <Compile Include="NuGenEventInitiator\NuGenEventInitiatorTests.cs" />
+    <Compile Include="NuGenEventInitiator\NuGenEventInitiatorTests.InvokeAction.cs" />
+    <Compile Include="NuGenEventInitiator\NuGenEventInitiatorTests.Mockery.cs" />
+    <Compile Include="NuGenExtensibility\NuGenExtensibilityTests.BuildSlnAssociatedPath.cs" />
+    <Compile Include="NuGenExtensibility\NuGenExtensibilityTests.cs" />
+    <Compile Include="NuGenExtensibility\NuGenExtensibilityTests.BuildCommandName.cs" />
+    <Compile Include="NuGenList\NuGenListTests.cs" />
+    <Compile Include="NuGenList\NuGenListTests.Mockery.cs" />
+    <Compile Include="NuGenMenuItemCheckedTrackerTests.cs" />
+    <Compile Include="NuGenTabStateTrackerTests.cs" />
+    <Compile Include="NuGenWindowStateTrackerTests.cs" />
+    <Compile Include="NuGenImageListServiceTests.cs" />
+    <Compile Include="NuGenMessageFilter\NuGenMessageFilterTests.cs" />
+    <Compile Include="NuGenMessageFilter\NuGenMessageFilterTests.Mockery.cs" />
+    <Compile Include="NuGenServiceNotFoundException\NuGenServiceNotFoundExceptionTests.cs" />
+    <Compile Include="NuGenServiceNotFoundException\NuGenServiceNotFoundExceptionTests.Mockery.cs" />
+    <Compile Include="NuGenStringProcessorTests.cs" />
+    <Compile Include="NuGenTargetEventArgsTTests.cs" />
+    <Compile Include="NuGenWmHandlerAttributeTests.cs" />
+    <Compile Include="NuGenWmHandlerList\NuGenWmHandlerListTests.cs" />
+    <Compile Include="NuGenWmHandlerList\NuGenWmHandlerListTests.Mockery.cs" />
+    <Compile Include="NuGenWmHandlerMapper\NuGenWmHandlerMapperTests.BuildMessageMap.cs" />
+    <Compile Include="NuGenWmHandlerMapper\NuGenWmHandlerMapperTests.cs" />
+    <Compile Include="NuGenWmHandlerMapper\NuGenWmHandlerMapperTests.Mockery.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Genetibase.Shared\Genetibase.Shared.csproj">
+      <Project>{A7A02558-58A0-4333-BFAF-77CB49DE17F0}</Project>
+      <Name>Genetibase.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
