@@ -1,0 +1,530 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A95BA64D-E86C-4994-BEA7-D2B178F59526}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Genetibase.MathX.NuGenEQML</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>
+    </RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Genetibase.ApplicationBlocks, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReferenceAssemblies\Genetibase.ApplicationBlocks.dll</HintPath>
+    </Reference>
+    <Reference Include="Genetibase.Shared, Version=3.20.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReferenceAssemblies\Genetibase.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="Genetibase.Shared.Controls, Version=1.41.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReferenceAssemblies\Genetibase.Shared.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Genetibase.Shared.Design, Version=2.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReferenceAssemblies\Genetibase.Shared.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Genetibase.Win32, Version=1.18.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReferenceAssemblies\Genetibase.Win32.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib">
+      <Name>mscorlib</Name>
+      <HintPath>mscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+      <HintPath>System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+      <HintPath>System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security">
+      <Name>System.Security</Name>
+      <HintPath>System.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+      <HintPath>System.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.Xml</Name>
+      <HintPath>System.XML.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Attrs\Attributes.cs" />
+    <Compile Include="Attrs\AttributeBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Attrs\StyleAttributes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Facade\NodesBuilder_edit.cs" />
+    <Compile Include="Facade\NodesBuilder_Insert.cs" />
+    <Compile Include="Facade\NodesBuilder_undo.cs" />
+    <Compile Include="MathMLControl\MathMLControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MathMLControl\MathMLTypeInfoArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MathMLControl\OnMathMLSelectionChanged.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MathMLControl\ValidationErrorEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nodes\Node_save.cs" />
+    <Compile Include="Nodes\Node_setprops.cs" />
+    <Compile Include="Nodes\Node_tree.cs" />
+    <Compile Include="Nodes\Node_parse.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Rendering\Painter_brackets.cs" />
+    <Compile Include="Rendering\Painter_fonts.cs" />
+    <Compile Include="Fonts\FontCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="JpegComment\CommentIO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Boxes\BaseBox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Boxes\BoxBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Boxes\Box_Text.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Boxes\Box_entity.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Boxes\Box_Ms.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Boxes\Box_Mspace.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Boxes\Box_Msqrt.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Boxes\Box_mroot.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Boxes\Box_mfenced.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Boxes\Box_Mfrac.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Boxes\Box_mrow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Boxes\Box_mstyle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Boxes\Box_mphantom.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Boxes\Box_mover.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Boxes\Box_munder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Boxes\Box_munderover.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Boxes\Box_maction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Boxes\Box_mtable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Boxes\Box_mtr.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Boxes\Box_mlabeledtr.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Boxes\Box_mtd.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Boxes\Box_none.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Boxes\Box_msub.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Boxes\Box_multiscripts.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Boxes\Box_Mo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Boxes\Box_Mglyph.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nodes\Types.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MathTable\MTable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MathTable\MRow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MathTable\MCell.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nodes\Node.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nodes\NodesList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nodes\Attribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nodes\AttributeList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nodes\CaretLocation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nodes\FontStyle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nodes\Tokens.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nodes\CaretPosition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Operators\Form.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Operators\OpDictImpl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Operators\Operator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Operators\OperatorDictionary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Rendering\Painter_string.cs" />
+    <Compile Include="Facade\ResourceLoader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Fonts\Entity2FontMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Fonts\EntityInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Fonts\EntityManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Fonts\FontFamilyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Fonts\FontTable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Fonts\Glyph.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Fonts\MapItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Fonts\MapItems.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Fonts\Symbol.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Fonts\UnicodeCategories.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Fonts\UnicodeCategory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Facade\Schema.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UI\Button UI\DoubleBufferedPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Button UI\DoubleBufferedPanel.designer.cs">
+      <DependentUpon>DoubleBufferedPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Button UI\GlassButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Button UI\GlassButton.designer.cs">
+      <DependentUpon>GlassButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CoreControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\ControlWithMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Edit_keys.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\ValidationErrorArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UI\SelectionArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UI\SelectionInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UI\ValidationHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UI\MActionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MatrixDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FencedDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facade\NodesBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Facade\NodesInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Facade\FileInfoArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Facade\InvalidXMLArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Facade\UndoRedo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Facade\InsertionHappenned.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Facade\MatrixPropertiesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facade\FractionsPropertiesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facade\IdentifierDictionaryDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facade\StylePropertiesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facade\Selection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Facade\NodeClass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Fonts\FontsProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Rendering\Category.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Rendering\Space.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Rendering\Painter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="UI\FencedDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FencedDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MActionDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MActionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MatrixDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MatrixDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facade\FractionsPropertiesDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FractionsPropertiesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facade\IdentifierDictionaryDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>IdentifierDictionaryDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facade\MatrixPropertiesDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MatrixPropertiesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facade\StylePropertiesDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StylePropertiesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CoreControl.resx">
+      <DependentUpon>CoreControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ControlWithMenu.resx">
+      <DependentUpon>ControlWithMenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Binary\ESSTIX10.TTF" />
+    <EmbeddedResource Include="Binary\ESSTIX11.TTF" />
+    <EmbeddedResource Include="Binary\ESSTIX12.TTF" />
+    <EmbeddedResource Include="Binary\ESSTIX13.TTF" />
+    <EmbeddedResource Include="Binary\ESSTIX14.TTF" />
+    <EmbeddedResource Include="Binary\ESSTIX15.TTF" />
+    <EmbeddedResource Include="Binary\ESSTIX16.TTF" />
+    <EmbeddedResource Include="Binary\ESSTIX17.TTF" />
+    <EmbeddedResource Include="Binary\ESSTIX1_.TTF" />
+    <EmbeddedResource Include="Binary\ESSTIX2_.TTF" />
+    <EmbeddedResource Include="Binary\ESSTIX3_.TTF" />
+    <EmbeddedResource Include="Binary\ESSTIX4_.TTF" />
+    <EmbeddedResource Include="Binary\ESSTIX5_.TTF" />
+    <EmbeddedResource Include="Binary\ESSTIX6_.TTF" />
+    <EmbeddedResource Include="Binary\ESSTIX7_.TTF" />
+    <EmbeddedResource Include="Binary\ESSTIX8_.TTF" />
+    <EmbeddedResource Include="Binary\ESSTIX9_.TTF" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Binary\FT_ESSTIXEight.xml" />
+    <EmbeddedResource Include="Binary\FT_ESSTIXEleven.xml" />
+    <EmbeddedResource Include="Binary\FT_ESSTIXFifteen.xml" />
+    <EmbeddedResource Include="Binary\FT_ESSTIXFive.xml" />
+    <EmbeddedResource Include="Binary\FT_ESSTIXFour.xml" />
+    <EmbeddedResource Include="Binary\FT_ESSTIXFourteen.xml" />
+    <EmbeddedResource Include="Binary\FT_ESSTIXNine.xml" />
+    <EmbeddedResource Include="Binary\FT_ESSTIXOne.xml" />
+    <EmbeddedResource Include="Binary\FT_ESSTIXSeven.xml" />
+    <EmbeddedResource Include="Binary\FT_ESSTIXSeventeen.xml" />
+    <EmbeddedResource Include="Binary\FT_ESSTIXSix.xml" />
+    <EmbeddedResource Include="Binary\FT_ESSTIXTen.xml" />
+    <EmbeddedResource Include="Binary\FT_ESSTIXThirteen.xml" />
+    <EmbeddedResource Include="Binary\FT_ESSTIXThree.xml" />
+    <EmbeddedResource Include="Binary\FT_ESSTIXTwelve.xml" />
+    <EmbeddedResource Include="Binary\FT_ESSTIXTwo.xml" />
+    <EmbeddedResource Include="Binary\FT_Symbol.xml" />
+    <EmbeddedResource Include="Binary\FT_TimesNewRoman.xml" />
+    <EmbeddedResource Include="Binary\FontMapping.xml" />
+    <EmbeddedResource Include="Binary\UnicodeCategories.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Binary\Operator_Dictionary.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Binary\MathML_XMLSchema.xsd">
+      <SubType>
+      </SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MathMLControl\MathMLControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MathMLControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Binary\MathML_XMLSchema.xsx">
+      <DependentUpon>MathML_XMLSchema.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

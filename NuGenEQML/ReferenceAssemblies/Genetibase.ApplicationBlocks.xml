@@ -1,0 +1,545 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Genetibase.ApplicationBlocks</name>
+    </assembly>
+    <members>
+        <member name="T:Genetibase.ApplicationBlocks.ImageExport.NuGenImageExport">
+            <summary>
+            Provides functionality to export images to various formats.
+            </summary>
+        </member>
+        <member name="M:Genetibase.ApplicationBlocks.ImageExport.NuGenImageExport.OnProgress(System.ComponentModel.CancelEventArgs)">
+            <summary>
+            Raises the <see cref="E:Progress"/> event.
+            </summary>
+            <param name="e">The <see cref="T:System.ComponentModel.CancelEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Genetibase.ApplicationBlocks.ImageExport.NuGenImageExport.Export(System.Drawing.Image,Genetibase.ApplicationBlocks.NuGenImageType,Genetibase.Shared.NuGenImageFileFormat,System.Drawing.Size,System.String,System.String)">
+            <summary>
+            Exports the specified image to the specified file formats and types.
+            </summary>
+            <param name="image">Specifies the image to export.</param>
+            <param name="imageType">Specifies image types (i.e. color, grayscale, monochrome).</param>
+            <param name="resolution">Specifies the resolution for the image.</param>
+            <param name="fileFormat">Specifies file formats (i.e. BMP, JPEG, etc).</param>
+            <param name="path">Specifies destination directory.</param>
+            <param name="filename">Specifies the string that is used in the filename pattern.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <para><paramref name="image"/> is <see langword="null"/>.</para>
+            -or-
+            <para><paramref name="path"/> is <see langword="null"/> or empty string.</para>
+            -or-
+            <para><paramref name="filename"/> is <see langword="null"/> or empty string.</para>
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            Width or height of the <paramref name="resolution"/> structure are not positive.
+            </exception>
+        </member>
+        <member name="E:Genetibase.ApplicationBlocks.ImageExport.NuGenImageExport.Progress">
+            <summary>
+            Occurs while process is going on.
+            </summary>
+        </member>
+        <member name="T:Genetibase.ApplicationBlocks.ImageExport.NuGenImageTypeBlock">
+            <summary>
+            Provides UI to select image types.
+            </summary>
+        </member>
+        <member name="F:Genetibase.ApplicationBlocks.ImageExport.NuGenImageTypeBlock.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Genetibase.ApplicationBlocks.ImageExport.NuGenImageTypeBlock.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Genetibase.ApplicationBlocks.ImageExport.NuGenImageTypeBlock.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Genetibase.ApplicationBlocks.ImageExport.NuGenImageTypeBlock.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.ApplicationBlocks.ImageExport.NuGenImageTypeBlock"/> class.
+            </summary>
+        </member>
+        <member name="P:Genetibase.ApplicationBlocks.ImageExport.NuGenImageTypeBlock.ImageType">
+            <summary>
+            Gets the image types selected by user.
+            </summary>
+        </member>
+        <member name="T:Genetibase.ApplicationBlocks.ImageExport.NuGenExportProgressForm">
+            <summary>
+            Displays export progress to the user.
+            </summary>
+        </member>
+        <member name="M:Genetibase.ApplicationBlocks.ImageExport.NuGenExportProgressForm.ShowDialog(System.Drawing.Image,Genetibase.ApplicationBlocks.NuGenImageType,Genetibase.Shared.NuGenImageFileFormat,System.Drawing.Size,System.String,System.String)">
+            <summary>
+            Shows the dialog to the user.
+            </summary>
+            <param name="image">Specifies the image to export.</param>
+            <param name="imageType">Specifies image types (i.e. color, grayscale, monochrome).</param>
+            <param name="resolution">Specifies the resolution for the image.</param>
+            <param name="fileFormat">Specifies file formats (i.e. BMP, JPEG, etc).</param>
+            <param name="path">Specifies destination directory.</param>
+            <param name="filename">Specifies the string that is used in the filename pattern.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="image"/> is <see langword="null"/>.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            <para>
+            	Width or height of the <paramref name="resolution"/> structure are not positive.
+            </para>
+            -or-
+            <para>
+            	<paramref name="path"/> is <see langword="null"/> or an empty string.
+            </para>
+            -or-
+            <para>
+            	<paramref name="filename"/> is <see langword="null"/> or an empty string.
+            </para>
+            </exception>
+        </member>
+        <member name="M:Genetibase.ApplicationBlocks.ImageExport.NuGenExportProgressForm.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.ApplicationBlocks.ImageExport.NuGenExportProgressForm"/> class.
+            </summary>
+        </member>
+        <member name="F:Genetibase.ApplicationBlocks.ImageExport.NuGenExportProgressForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Genetibase.ApplicationBlocks.ImageExport.NuGenExportProgressForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Genetibase.ApplicationBlocks.ImageExport.NuGenExportProgressForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Genetibase.ApplicationBlocks.ImageExport.NuGenFileFormatBlock">
+            <summary>
+            Provides UI to select file formats.
+            </summary>
+        </member>
+        <member name="F:Genetibase.ApplicationBlocks.ImageExport.NuGenFileFormatBlock.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Genetibase.ApplicationBlocks.ImageExport.NuGenFileFormatBlock.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Genetibase.ApplicationBlocks.ImageExport.NuGenFileFormatBlock.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Genetibase.ApplicationBlocks.ImageExport.NuGenFileFormatBlock.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.ApplicationBlocks.ImageExport.NuGenFileFormatBlock"/> class.
+            </summary>
+        </member>
+        <member name="P:Genetibase.ApplicationBlocks.ImageExport.NuGenFileFormatBlock.FileFormat">
+            <summary>
+            Gets the file formats selected by user.
+            </summary>
+        </member>
+        <member name="T:Genetibase.ApplicationBlocks.ImageExport.NuGenRatioSizeTracker">
+            <summary>
+            Provides functionality to track changes on the initial size. If width (height) is changed and
+            <see cref="P:Genetibase.ApplicationBlocks.ImageExport.NuGenRatioSizeTracker.MaintainAspectRatio"/> is <see langword="true"/>, height (width)
+            is recalculated according to the <see cref="P:Genetibase.ApplicationBlocks.ImageExport.NuGenRatioSizeTracker.Ratio"/>. <see cref="P:Genetibase.ApplicationBlocks.ImageExport.NuGenRatioSizeTracker.Ratio"/> is calculated as
+            <see cref="P:System.Drawing.Size.Width"/> / <see cref="P:System.Drawing.Size.Height"/>. Default value for <see cref="P:Genetibase.ApplicationBlocks.ImageExport.NuGenRatioSizeTracker.Ratio"/>
+            is <c>1.0</c>.
+            </summary>
+        </member>
+        <member name="M:Genetibase.ApplicationBlocks.ImageExport.NuGenRatioSizeTracker.OnHeightChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Genetibase.ApplicationBlocks.ImageExport.NuGenRatioSizeTracker.HeightChanged"/> event.
+            </summary>
+        </member>
+        <member name="M:Genetibase.ApplicationBlocks.ImageExport.NuGenRatioSizeTracker.OnWidthChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Genetibase.ApplicationBlocks.ImageExport.NuGenRatioSizeTracker.WidthChanged"/> event.
+            </summary>
+        </member>
+        <member name="M:Genetibase.ApplicationBlocks.ImageExport.NuGenRatioSizeTracker.ToString">
+            <summary>
+            Returns a <see cref="T:System.String"></see> that represents the current <see cref="T:System.Object"></see>.
+            </summary>
+            <returns>
+            A <see cref="T:System.String"></see> that represents the current <see cref="T:System.Object"></see>.
+            </returns>
+        </member>
+        <member name="M:Genetibase.ApplicationBlocks.ImageExport.NuGenRatioSizeTracker.#ctor(System.Drawing.Size)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.ApplicationBlocks.ImageExport.NuGenRatioSizeTracker"/> class.
+            </summary>
+            <param name="size">Specifies the initial size to track.</param>
+        </member>
+        <member name="M:Genetibase.ApplicationBlocks.ImageExport.NuGenRatioSizeTracker.#ctor(System.Drawing.Size,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.ApplicationBlocks.ImageExport.NuGenRatioSizeTracker"/> class.
+            </summary>
+            <param name="size">Specifies the initial size to track.</param>
+            <param name="maintainAspectRatio">Specifies the value indicating whether to recalculate tracked
+            size width (height) according to the <see cref="P:Ratio"/> or leave as is.</param>
+        </member>
+        <member name="P:Genetibase.ApplicationBlocks.ImageExport.NuGenRatioSizeTracker.Height">
+            <summary>
+            Gets or sets tracked size height.
+            </summary>
+        </member>
+        <member name="E:Genetibase.ApplicationBlocks.ImageExport.NuGenRatioSizeTracker.HeightChanged">
+            <summary>
+            Occurs when the value of the <see cref="P:Genetibase.ApplicationBlocks.ImageExport.NuGenRatioSizeTracker.Width"/> property changes.
+            </summary>
+        </member>
+        <member name="P:Genetibase.ApplicationBlocks.ImageExport.NuGenRatioSizeTracker.MaintainAspectRatio">
+            <summary>
+            Gets or sets the value indicating whether to recalculate tracked size width (height) according
+            to the <see cref="P:Genetibase.ApplicationBlocks.ImageExport.NuGenRatioSizeTracker.Ratio"/> or leave as is.
+            </summary>
+        </member>
+        <member name="P:Genetibase.ApplicationBlocks.ImageExport.NuGenRatioSizeTracker.Ratio">
+            <summary>
+            Gets the ratio that is specified in the constructor by the passed <see cref="P:Genetibase.ApplicationBlocks.ImageExport.NuGenRatioSizeTracker.Size"/> structure
+            and is used to recalculate tracked size width (height).
+            </summary>
+        </member>
+        <member name="P:Genetibase.ApplicationBlocks.ImageExport.NuGenRatioSizeTracker.Size">
+            <summary>
+            Gets tracked size.
+            </summary>
+        </member>
+        <member name="P:Genetibase.ApplicationBlocks.ImageExport.NuGenRatioSizeTracker.Width">
+            <summary>
+            Gets or sets tracked size width.
+            </summary>
+        </member>
+        <member name="E:Genetibase.ApplicationBlocks.ImageExport.NuGenRatioSizeTracker.WidthChanged">
+            <summary>
+            Occurs when the value of the <see cref="P:Genetibase.ApplicationBlocks.ImageExport.NuGenRatioSizeTracker.Width"/> property changes.
+            </summary>
+        </member>
+        <member name="T:Genetibase.ApplicationBlocks.Design.NuGenDialogBlockDesigner">
+            <summary>
+            Provides additional design-time funcionality for the <see cref="T:Genetibase.ApplicationBlocks.NuGenDialogBlock"/>.
+            </summary>
+        </member>
+        <member name="M:Genetibase.ApplicationBlocks.Design.NuGenDialogBlockDesigner.Initialize(System.ComponentModel.IComponent)">
+            <summary>
+            Initializes the designer with the specified component.
+            </summary>
+            <param name="component">The <see cref="T:System.ComponentModel.IComponent"/> to associate the designer with. This component must always be an instance of, or derive from, <see cref="T:System.Windows.Forms.Control"/> .</param>
+        </member>
+        <member name="M:Genetibase.ApplicationBlocks.Design.NuGenDialogBlockDesigner.InitializeNewComponent(System.Collections.IDictionary)">
+            <summary>
+            Called when the designer
+            is initialized, so the designer can set default values for properties of the component.
+            </summary>
+        </member>
+        <member name="M:Genetibase.ApplicationBlocks.Design.NuGenDialogBlockDesigner.GetCurrentComponentName(System.String,System.Int32)">
+            <summary>
+            Retrieves a component name according to the specified default component name and the 
+            specified postfix.
+            </summary>
+            <param name="name">Specifies the default component name.</param>
+            <param name="postfix">Specifies the postfix for the component name.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Genetibase.ApplicationBlocks.Design.NuGenDialogBlockDesigner.GetName(System.Windows.Forms.Control,System.String,System.Int32)">
+            <summary>
+            Retrieves a qualified name within the specified container.
+            </summary>
+            <param name="container">Specifies the container that should contain only unique names.</param>
+            <param name="defaultName">Specifies the default name for a component.</param>
+            <param name="defaultCount">Specifies the default postfix. If zero no postfix is appended.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="container"/> is <see langword="null"/>.
+            -or-
+            <paramref name="defaultName"/> is <see langword="null"/>.
+            </exception>
+        </member>
+        <member name="M:Genetibase.ApplicationBlocks.Design.NuGenDialogBlockDesigner.InitializeDialogButton(System.Windows.Forms.Button)">
+            <summary>
+            Initializes the specified <see cref="T:Button"/>.
+            </summary>
+            <param name="btn">Specifies the <see cref="T:Button"/> to initialize.</param>
+        </member>
+        <member name="M:Genetibase.ApplicationBlocks.Design.NuGenDialogBlockDesigner.NameAlreadyExists(System.ComponentModel.IComponent,System.String)">
+            <summary>
+            Indicates whether the name of the specified component is equal to the specified name.
+            </summary>
+            <param name="component">Specifies the component to retrieve the name from.</param>
+            <param name="name">Specifies the name to compare with.</param>
+            <returns><see langword="true"/> if the name of the specified component is equal to the 
+            specified name; otherwise, <see langword="false"/>.</returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="component"/> is <see langword="null"/>.
+            -or-
+            <paramref name="name"/> is <see langword="null"/>.
+            </exception>
+        </member>
+        <member name="M:Genetibase.ApplicationBlocks.Design.NuGenDialogBlockDesigner.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.ApplicationBlocks.Design.NuGenDialogBlockDesigner"/> class.
+            </summary>
+        </member>
+        <member name="P:Genetibase.ApplicationBlocks.Design.NuGenDialogBlockDesigner.SelectionRules">
+            <summary>
+            Gets the selection rules that indicate the movement capabilities of a component.
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:Genetibase.ApplicationBlocks.NuGenImageExportForm">
+            <summary>
+            Configures image export options.
+            </summary>
+        </member>
+        <member name="M:Genetibase.ApplicationBlocks.NuGenImageExportForm.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Genetibase.ApplicationBlocks.NuGenImageExportForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Genetibase.ApplicationBlocks.NuGenImageExportForm.Show(System.Drawing.Image)">
+            <summary>
+            Shows the form to the user.
+            </summary>
+            <param name="imageToExport">Specifies the image to export.</param>
+        </member>
+        <member name="M:Genetibase.ApplicationBlocks.NuGenImageExportForm.ShowDialog(System.Drawing.Image)">
+            <summary>
+            Shows the form as a modal dialog.
+            </summary>
+            <param name="imageToExport">Specifies the <see cref="T:Image"/> to export.</param>
+        </member>
+        <member name="M:Genetibase.ApplicationBlocks.NuGenImageExportForm.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.ApplicationBlocks.NuGenImageExportForm"/> class.
+            </summary>
+        </member>
+        <member name="T:Genetibase.ApplicationBlocks.ImageExport.NuGenResolutionBlock">
+            <summary>
+            Provides UI to specify resolution.
+            </summary>
+        </member>
+        <member name="M:Genetibase.ApplicationBlocks.ImageExport.NuGenResolutionBlock.SetResolutionFromImage(System.Drawing.Image)">
+            <summary>
+            Sets the initial resolution that is displayed on the UI.
+            </summary>
+            <param name="image">Specifies the <see cref="T:Image"/> to set the initial resolution upon.</param>
+        </member>
+        <member name="M:Genetibase.ApplicationBlocks.ImageExport.NuGenResolutionBlock.Verify">
+            <summary>
+            Determines whether the data entered by the user is valid.
+            </summary>
+            <returns><see langword="true"/> if the data is valid; otherwise, <see langword="false"/>.</returns>
+        </member>
+        <member name="M:Genetibase.ApplicationBlocks.ImageExport.NuGenResolutionBlock.OnEnabledChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.EnabledChanged"></see> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs"></see> that contains the event data.</param>
+        </member>
+        <member name="M:Genetibase.ApplicationBlocks.ImageExport.NuGenResolutionBlock.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.ApplicationBlocks.ImageExport.NuGenResolutionBlock"/> class.
+            </summary>
+        </member>
+        <member name="F:Genetibase.ApplicationBlocks.ImageExport.NuGenResolutionBlock.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Genetibase.ApplicationBlocks.ImageExport.NuGenResolutionBlock.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Genetibase.ApplicationBlocks.ImageExport.NuGenResolutionBlock.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Genetibase.ApplicationBlocks.ImageExport.NuGenResolutionBlock.Resolution">
+            <summary>
+            Gets the resolution specified on the UI.
+            </summary>
+        </member>
+        <member name="P:Genetibase.ApplicationBlocks.ImageExport.NuGenResolutionBlock.SizeTracker">
+            <summary>
+            Gets the <see cref="T:Genetibase.ApplicationBlocks.ImageExport.NuGenRatioSizeTracker"/> that is used to track resolution changes on the UI.
+            </summary>
+        </member>
+        <member name="T:Genetibase.ApplicationBlocks.NuGenImageType">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:Genetibase.ApplicationBlocks.NuGenImageType.None">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:Genetibase.ApplicationBlocks.NuGenImageType.Color">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:Genetibase.ApplicationBlocks.NuGenImageType.Monochrome">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:Genetibase.ApplicationBlocks.NuGenImageType.Grayscale">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Genetibase.ApplicationBlocks.NuGenDialogBlock">
+            <summary>
+            Ok/Cancel/... block.
+            </summary>
+        </member>
+        <member name="M:Genetibase.ApplicationBlocks.NuGenDialogBlock.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.ApplicationBlocks.NuGenDialogBlock"/> class.
+            </summary>
+        </member>
+        <member name="M:Genetibase.ApplicationBlocks.NuGenDialogBlock.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Genetibase.ApplicationBlocks.NuGenDialogBlock.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Genetibase.ApplicationBlocks.ImageExport.NuGenResolutionSpin">
+            <summary>
+            <see cref="T:NumericUpDown"/> control with tweaked <see cref="P:Maximum"/> and <see cref="P:Minimum"/>
+            properties.
+            </summary>
+        </member>
+        <member name="M:Genetibase.ApplicationBlocks.ImageExport.NuGenResolutionSpin.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.ApplicationBlocks.ImageExport.NuGenResolutionSpin"/> class.
+            </summary>
+        </member>
+        <member name="T:Genetibase.ApplicationBlocks.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Genetibase.ApplicationBlocks.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Genetibase.ApplicationBlocks.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Genetibase.ApplicationBlocks.Properties.Resources.Argument_InvalidDirectory">
+            <summary>
+              Looks up a localized string similar to Destination directory should not be empty and should not contain the follwoing characters: {0}.
+            </summary>
+        </member>
+        <member name="P:Genetibase.ApplicationBlocks.Properties.Resources.Argument_InvalidFilename">
+            <summary>
+              Looks up a localized string similar to Filename should not be empty and should not contain the following characters: {0}.
+            </summary>
+        </member>
+        <member name="P:Genetibase.ApplicationBlocks.Properties.Resources.Argument_InvalidHeightResolution">
+            <summary>
+              Looks up a localized string similar to Height resolution should be positive..
+            </summary>
+        </member>
+        <member name="P:Genetibase.ApplicationBlocks.Properties.Resources.Argument_InvalidWidthResolution">
+            <summary>
+              Looks up a localized string similar to Width resolution should be positive..
+            </summary>
+        </member>
+        <member name="P:Genetibase.ApplicationBlocks.Properties.Resources.Message_Alert">
+            <summary>
+              Looks up a localized string similar to Alert.
+            </summary>
+        </member>
+        <member name="P:Genetibase.ApplicationBlocks.Properties.Resources.Text_DialogBlock_cancelButton">
+            <summary>
+              Looks up a localized string similar to &amp;Cancel.
+            </summary>
+        </member>
+        <member name="P:Genetibase.ApplicationBlocks.Properties.Resources.Text_DialogBlock_okButton">
+            <summary>
+              Looks up a localized string similar to &amp;Ok.
+            </summary>
+        </member>
+        <member name="T:Genetibase.ApplicationBlocks.ImageExport.NuGenOutputBlock">
+            <summary>
+            Provides UI for file output parameters selection.
+            </summary>
+        </member>
+        <member name="M:Genetibase.ApplicationBlocks.ImageExport.NuGenOutputBlock.Verify">
+            <summary>
+            Verifies whether the data entered by the user is valid.
+            </summary>
+            <returns><see langword="true"/> if the entered data is valid; otherwise, <see langword="false"/>.</returns>
+        </member>
+        <member name="M:Genetibase.ApplicationBlocks.ImageExport.NuGenOutputBlock.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Genetibase.ApplicationBlocks.ImageExport.NuGenOutputBlock"/> class.
+            </summary>
+        </member>
+        <member name="F:Genetibase.ApplicationBlocks.ImageExport.NuGenOutputBlock.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Genetibase.ApplicationBlocks.ImageExport.NuGenOutputBlock.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Genetibase.ApplicationBlocks.ImageExport.NuGenOutputBlock.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Genetibase.ApplicationBlocks.ImageExport.NuGenOutputBlock.DirectoryName">
+            <summary>
+            Gets or sets the directory name displayed to the user.
+            </summary>
+        </member>
+        <member name="P:Genetibase.ApplicationBlocks.ImageExport.NuGenOutputBlock.Filename">
+            <summary>
+            Gets or sets the filename displayed to the user.
+            </summary>
+        </member>
+    </members>
+</doc>
