@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="FactCubeHost.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="FactCubeHost_Photos_Photos" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/ContentServer/Flickr.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

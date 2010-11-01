@@ -1,0 +1,45 @@
+﻿<Page x:Class="FactCubeHost.Page1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cube="clr-namespace:Genetibase.FactCube;assembly=Genetibase.FactCube"
+    Title="FactCube test"
+    >
+
+  <Grid>
+    <cube:FactCube x:Name="factCube"
+                   ShowCubes="{Binding ElementName=showCubes, Path=IsChecked}"
+                   ClipFade="{Binding ElementName=clipFade, Path=IsChecked}"
+                   LimitDepth="{Binding ElementName=limitDepth, Path=IsChecked}"
+                   EmptyImages="{Binding ElementName=emptyImages, Path=IsChecked}"
+                   Distance="{Binding ElementName=distance, Path=Value}">
+      <cube:FactCube.CubeBrush>
+        <ImageBrush ImageSource="CubeColors.png" ViewportUnits="Absolute"/>
+      </cube:FactCube.CubeBrush>
+      <cube:FactCube.FlatBrush>
+        <VisualBrush ViewportUnits="Absolute" Opacity="0.5">
+          <VisualBrush.Visual>
+            <StackPanel Orientation="Horizontal">
+              <Image Source="Sphere_Blue.png"/>
+              <Image Source="Sphere_Red.png"/>
+            </StackPanel>
+          </VisualBrush.Visual>
+        </VisualBrush>
+      </cube:FactCube.FlatBrush>
+    </cube:FactCube>
+    <Canvas>
+      <Border BorderBrush="LightSteelBlue" CornerRadius="5" BorderThickness="4" Canvas.Top="10" Canvas.Left="10" Background="#E0FFFFFF">
+        <StackPanel Orientation="Vertical" Margin="5">
+          <TextBlock>Tags</TextBlock>
+          <TextBox Name="search" Width="100"/>
+          <Button Name="searchButton" Click="search_Click" IsDefault="True">Search</Button>
+          <CheckBox Name="showCubes" IsChecked="True">Cubes?</CheckBox>
+          <CheckBox Name="clipFade" IsChecked="True">Clip fade?</CheckBox>
+          <CheckBox Name="limitDepth" IsChecked="False">Limit depth?</CheckBox>
+          <CheckBox Name="emptyImages" IsChecked="True">Empty images?</CheckBox>
+          <Slider Name="distance" Orientation="Vertical" Height="100" Minimum="0" Maximum="1" Value="0.5"/>
+        </StackPanel>
+      </Border>
+    </Canvas>
+  </Grid>
+
+</Page>

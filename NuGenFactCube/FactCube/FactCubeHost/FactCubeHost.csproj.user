@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <EnableUnmanagedDebugging>true</EnableUnmanagedDebugging>
+    <StartArguments>-debug "C:\Development\WPF\FactCube\FactCubeHost\bin\Debug\FactCubeHost.xbap" -DebugSecurityZoneURL http://localhost/ContentServer</StartArguments>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectView>ShowAllFiles</ProjectView>
+    <PublishUrlHistory>\\65.166.200.208\d%24\websites\btr\Chris\|Publish\</PublishUrlHistory>
+    <InstallUrlHistory>http://www.chriscavanagh.com/Chris/FactCubeHost.xbap/</InstallUrlHistory>
+    <SupportUrlHistory>
+    </SupportUrlHistory>
+    <UpdateUrlHistory>
+    </UpdateUrlHistory>
+    <BootstrapperUrlHistory>
+    </BootstrapperUrlHistory>
+    <FallbackCulture>en-US</FallbackCulture>
+    <VerifyUploadedFiles>false</VerifyUploadedFiles>
+    <DebugSecurityZoneURL>http://localhost/ContentServer</DebugSecurityZoneURL>
+    <ErrorReportUrlHistory />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <StartArguments>-debug "C:\Development\WPF\FactCube\FactCubeHost\bin\Release\FactCubeHost.xbap" -DebugSecurityZoneURL "http://localhost"</StartArguments>
+  </PropertyGroup>
+</Project>

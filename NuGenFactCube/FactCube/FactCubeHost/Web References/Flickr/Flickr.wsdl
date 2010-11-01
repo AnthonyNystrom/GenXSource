@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.chriscavanagh.com/Flickr" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.chriscavanagh.com/Flickr" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.chriscavanagh.com/Flickr">
+      <s:element name="GetPhotos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="apiKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tags" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPhotosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPhotosResult" type="tns:ArrayOfPhoto" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPhoto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Photo" nillable="true" type="tns:Photo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Photo">
+        <s:attribute name="OwnerName" type="s:string" />
+        <s:attribute name="DateTaken" type="s:dateTime" use="required" />
+        <s:attribute name="Latitude" type="s:decimal" use="required" />
+        <s:attribute name="Longitude" type="s:decimal" use="required" />
+        <s:attribute name="Title" type="s:string" />
+        <s:attribute name="ThumbnailUrl" type="s:string" />
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetPhotosSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPhotos" />
+  </wsdl:message>
+  <wsdl:message name="GetPhotosSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPhotosResponse" />
+  </wsdl:message>
+  <wsdl:portType name="FlickrSoap">
+    <wsdl:operation name="GetPhotos">
+      <wsdl:input message="tns:GetPhotosSoapIn" />
+      <wsdl:output message="tns:GetPhotosSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="FlickrSoap" type="tns:FlickrSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPhotos">
+      <soap:operation soapAction="http://www.chriscavanagh.com/Flickr/GetPhotos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="FlickrSoap12" type="tns:FlickrSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPhotos">
+      <soap12:operation soapAction="http://www.chriscavanagh.com/Flickr/GetPhotos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Flickr">
+    <wsdl:port name="FlickrSoap" binding="tns:FlickrSoap">
+      <soap:address location="http://localhost/ContentServer/Flickr.asmx" />
+    </wsdl:port>
+    <wsdl:port name="FlickrSoap12" binding="tns:FlickrSoap12">
+      <soap12:address location="http://localhost/ContentServer/Flickr.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
