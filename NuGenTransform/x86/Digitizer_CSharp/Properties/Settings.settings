@@ -1,0 +1,291 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Genetibase.NuGenTransform.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="COORD_FRAME" Type="ReferenceFrame" Scope="User">
+      <Value Profile="(Default)">Cartesian</Value>
+    </Setting>
+    <Setting Name="COORD_XTHETASCALE" Type="Scale" Scope="User">
+      <Value Profile="(Default)">Linear</Value>
+    </Setting>
+    <Setting Name="COORD_YRSCALE" Type="Scale" Scope="User">
+      <Value Profile="(Default)">Linear</Value>
+    </Setting>
+    <Setting Name="COORD_THETAUNITS" Type="ThetaUnits" Scope="User">
+      <Value Profile="(Default)">ThetaDegrees</Value>
+    </Setting>
+    <Setting Name="EXPORT_POINTSSELECTION" Type="ExportPointsSelection" Scope="User">
+      <Value Profile="(Default)">XFromAllCurves</Value>
+    </Setting>
+    <Setting Name="EXPORT_LAYOUT" Type="ExportLayout" Scope="User">
+      <Value Profile="(Default)">AllCurvesOnEachLine</Value>
+    </Setting>
+    <Setting Name="EXPORT_DELIMITERS" Type="ExportDelimiters" Scope="User">
+      <Value Profile="(Default)">Commas</Value>
+    </Setting>
+    <Setting Name="EXPORT_HEADER" Type="ExportHeader" Scope="User">
+      <Value Profile="(Default)">HeaderSimple</Value>
+    </Setting>
+    <Setting Name="VIEW_FILETOOLBAR" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="VIEW_SELECTTOOLBAR" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="VIEW_IMAGESCALETOOLBAR" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="VIEW_DIGITIZECURVEPOINTSTOOLBAR" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="VIEW_DIGITIZEMEASUREPOINTSTOOLBAR" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="VIEW_ZOOMTOOLBAR" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="VIEW_STATUSBAR" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="VIEW_POINTS" Type="ViewPointSelection" Scope="User">
+      <Value Profile="(Default)">ViewAllPoints</Value>
+    </Setting>
+    <Setting Name="VIEW_BACKGROUND" Type="BackgroundSelection" Scope="User">
+      <Value Profile="(Default)">ProcessedImage</Value>
+    </Setting>
+    <Setting Name="VIEW_CURVEGEOMETRY" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="VIEW_MEASUREGEOMETRY" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="MATH_POWERMOSTSIGMAX" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">6</Value>
+    </Setting>
+    <Setting Name="MATH_POWERMOSTSIGMIN" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">-4</Value>
+    </Setting>
+    <Setting Name="MATH_DOUBLEMIN" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">1E-12</Value>
+    </Setting>
+    <Setting Name="MATH_MAXCOMMANDS" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">100</Value>
+    </Setting>
+    <Setting Name="WINDOW_CURVE_WIDTH" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">400</Value>
+    </Setting>
+    <Setting Name="WINDOW_CURVE_HEIGHT" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">280</Value>
+    </Setting>
+    <Setting Name="WINDOW_MAIN_WIDTH" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">700</Value>
+    </Setting>
+    <Setting Name="WINDOW_MAIN_HEIGHT" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">500</Value>
+    </Setting>
+    <Setting Name="WINDOW_MAIN_X" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">40</Value>
+    </Setting>
+    <Setting Name="WINDOW_MAIN_Y" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">40</Value>
+    </Setting>
+    <Setting Name="WINDOW_MAIN_FONT_OVERRIDE" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="WINDOW_MAIN_FONT_NAME" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Arial</Value>
+    </Setting>
+    <Setting Name="WINDOW_MAIN_FONT_SIZE" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">12</Value>
+    </Setting>
+    <Setting Name="WINDOW_MEASURE_WIDTH" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">400</Value>
+    </Setting>
+    <Setting Name="WINDOW_MEASURE_HEIGHT" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">280</Value>
+    </Setting>
+    <Setting Name="SEGMENT_MINPOINTS" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">4</Value>
+    </Setting>
+    <Setting Name="SEGMENT_POINTMINSEPARATION" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="SEGMENT_POINTDEFAULTSEPARATION" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="SEGMENT_FILLCORNERS" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="SEGMENT_LINESIZE" Type="LineSize" Scope="User">
+      <Value Profile="(Default)">LineSize3</Value>
+    </Setting>
+    <Setting Name="SEGMENT_LINECOLOR" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Lime</Value>
+    </Setting>
+    <Setting Name="GRID_REMOVAL_REMOVETHINLINES" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="GRID_REMOVAL_THINTHICKNESS" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="GRID_REMOVAL_REMOVEGRIDLINES" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="GRID_REMOVAL_GRIDSETX" Type="GridSet" Scope="User">
+      <Value Profile="(Default)">AllButStep</Value>
+    </Setting>
+    <Setting Name="GRID_REMOVAL_GRIDSETY" Type="GridSet" Scope="User">
+      <Value Profile="(Default)">AllButStep</Value>
+    </Setting>
+    <Setting Name="GRID_REMOVAL_GRIDDISTANCE" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">4</Value>
+    </Setting>
+    <Setting Name="GRID_REMOVAL_REMOVECOLOR" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="GRID_REMOVAL_GAPSEPARATION" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">6</Value>
+    </Setting>
+    <Setting Name="GRID_REMOVAL_FOREGROUNDTHRESHOLDLOW" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="GRID_REMOVAL_FOREGROUNDTHRESHOLDHIGH" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="GRID_DISPLAY_GRIDSETX" Type="GridSet" Scope="User">
+      <Value Profile="(Default)">AllButStep</Value>
+    </Setting>
+    <Setting Name="GRID_DISPLAY_GRIDSETY" Type="GridSet" Scope="User">
+      <Value Profile="(Default)">AllButStep</Value>
+    </Setting>
+    <Setting Name="POINTMATCH_HIGHLIGHTDIAMETER" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">26</Value>
+    </Setting>
+    <Setting Name="POINTMATCH_HIGHLIGHTLINESIZE" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="POINTMATCH_SEPARATIONDEFAULT" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">15</Value>
+    </Setting>
+    <Setting Name="POINTMATCH_ACCEPTEDCOLOR" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Lime</Value>
+    </Setting>
+    <Setting Name="POINTMATCH_REJECTEDCOLOR" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Red</Value>
+    </Setting>
+    <Setting Name="DISCRETIZE_METHODDEFAULT" Type="DiscretizeMethod" Scope="User">
+      <Value Profile="(Default)">DiscretizeIntensity</Value>
+    </Setting>
+    <Setting Name="DISCRETIZE_INTENSITY_THRESHOLDLOW" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="DISCRETIZE_INTENSITY_THRESHOLDHIGH" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">50</Value>
+    </Setting>
+    <Setting Name="DISCRETIZE_FOREGROUND_THRESHOLDLOW" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="DISCRETIZE_FOREGROUND_THRESHOLDHIGH" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="DISCRETIZE_HUE_THRESHOLDLOW" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">180</Value>
+    </Setting>
+    <Setting Name="DISCRETIZE_HUE_THRESHOLDHIGH" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">360</Value>
+    </Setting>
+    <Setting Name="DISCRETIZE_SATURATION_THRESHOLDLOW" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">50</Value>
+    </Setting>
+    <Setting Name="DISCRETIZE_SATURATION_THRESHOLDHIGH" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">100</Value>
+    </Setting>
+    <Setting Name="DISCRETIZE_VALUE_THRESHOLDLOW" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="DISCRETIZE_VALUE_THRESHOLDHIGH" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">50</Value>
+    </Setting>
+    <Setting Name="POINTSET_AXES_POINTSHAPE" Type="PointShape" Scope="User">
+      <Value Profile="(Default)">Cross</Value>
+    </Setting>
+    <Setting Name="POINTSET_AXES_POINTSIZE" Type="PointSize" Scope="User">
+      <Value Profile="(Default)">PointSize4</Value>
+    </Setting>
+    <Setting Name="POINTSET_AXES_POINTLINESIZE" Type="PointLineSize" Scope="User">
+      <Value Profile="(Default)">PointLineSize2</Value>
+    </Setting>
+    <Setting Name="POINTSET_AXES_POINTLINECOLOR" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Red</Value>
+    </Setting>
+    <Setting Name="POINTSET_AXES_POINTINCOLOR" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Red</Value>
+    </Setting>
+    <Setting Name="POINTSET_AXES_LINESIZE" Type="LineSize" Scope="User">
+      <Value Profile="(Default)">LineSize1</Value>
+    </Setting>
+    <Setting Name="POINTSET_AXES_LINECOLOR" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Transparent</Value>
+    </Setting>
+    <Setting Name="POINTSET_AXES_LINECONNECTAS" Type="LineConnectAs" Scope="User">
+      <Value Profile="(Default)">SingleValuedFunction</Value>
+    </Setting>
+    <Setting Name="POINTSET_SCALE_POINTSHAPE" Type="PointShape" Scope="User">
+      <Value Profile="(Default)">Cross</Value>
+    </Setting>
+    <Setting Name="POINTSET_SCALE_POINTSIZE" Type="PointSize" Scope="User">
+      <Value Profile="(Default)">PointSize4</Value>
+    </Setting>
+    <Setting Name="POINTSET_SCALE_POINTLINESIZE" Type="PointLineSize" Scope="User">
+      <Value Profile="(Default)">PointLineSize2</Value>
+    </Setting>
+    <Setting Name="POINTSET_SCALE_POINTLINECOLOR" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Magenta</Value>
+    </Setting>
+    <Setting Name="POINTSET_SCALE_POINTINCOLOR" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Magenta</Value>
+    </Setting>
+    <Setting Name="POINTSET_SCALE_LINESIZE" Type="LineSize" Scope="User">
+      <Value Profile="(Default)">LineSize1</Value>
+    </Setting>
+    <Setting Name="POINTSET_SCALE_LINECOLOR" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Magenta</Value>
+    </Setting>
+    <Setting Name="POINTSET_SCALE_LINECONNECTAS" Type="LineConnectAs" Scope="User">
+      <Value Profile="(Default)">SingleValuedFunction</Value>
+    </Setting>
+    <Setting Name="SESSIONS_INITIALDIGITZESTATE" Type="DigitizeState" Scope="User">
+      <Value Profile="(Default)">SegmentState</Value>
+    </Setting>
+    <Setting Name="GRID_REMOVAL_COLOR" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Green</Value>
+    </Setting>
+    <Setting Name="POINTSET_CURVES" Type="System.Collections.ArrayList" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfAnyType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;anyType /&gt;
+&lt;/ArrayOfAnyType&gt;</Value>
+    </Setting>
+    <Setting Name="POINTSET_MEASURES" Type="System.Collections.ArrayList" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfAnyType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;anyType /&gt;
+&lt;/ArrayOfAnyType&gt;</Value>
+    </Setting>
+    <Setting Name="POINTMATCH_SIZEDEFAULT" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">60</Value>
+    </Setting>
+    <Setting Name="WINDOW_CURVE_X" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">300</Value>
+    </Setting>
+    <Setting Name="WINDOW_CURVE_Y" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">300</Value>
+    </Setting>
+    <Setting Name="WINDOW_MEASURE_X" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">300</Value>
+    </Setting>
+    <Setting Name="WINDOW_MEASURE_Y" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">300</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

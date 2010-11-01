@@ -1,0 +1,16 @@
+﻿Microsoft Visual Studio Solution File, Format Version 9.00
+# SharpDevelop 2.0.0.1291
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS Digitizer", "CS Digitizer.csproj", "{3EA146C6-18D1-4689-8C79-AB8244423A6B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3EA146C6-18D1-4689-8C79-AB8244423A6B}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{3EA146C6-18D1-4689-8C79-AB8244423A6B}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{3EA146C6-18D1-4689-8C79-AB8244423A6B}.Release|AnyCPU.Build.0 = Release|AnyCPU
+		{3EA146C6-18D1-4689-8C79-AB8244423A6B}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+	EndGlobalSection
+EndGlobal

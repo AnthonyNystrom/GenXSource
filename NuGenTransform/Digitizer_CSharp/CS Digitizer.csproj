@@ -1,0 +1,306 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3EA146C6-18D1-4689-8C79-AB8244423A6B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Genetibase.NuGenTransform</RootNamespace>
+    <AssemblyName>Digitizer_CSharp</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GUI\Dialogs\AxisPointDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Dialogs\AxisPointDialog.Designer.cs">
+      <DependentUpon>AxisPointDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Dialogs\CoordinatesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Dialogs\CoordinatesDialog.Designer.cs">
+      <DependentUpon>CoordinatesDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Dialogs\DiscretizeSettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Dialogs\DiscretizeSettingsDialog.Designer.cs">
+      <DependentUpon>DiscretizeSettingsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Dialogs\ExportSettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Dialogs\ExportSettingsDialog.Designer.cs">
+      <DependentUpon>ExportSettingsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Dialogs\GeometryDisplayDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Dialogs\GeometryDisplayDialog.Designer.cs">
+      <DependentUpon>GeometryDisplayDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Dialogs\GridRemovalSettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Dialogs\GridRemovalSettingsDialog.Designer.cs">
+      <DependentUpon>GridRemovalSettingsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Dialogs\GridSettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Dialogs\GridSettingsDialog.Designer.cs">
+      <DependentUpon>GridSettingsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Dialogs\ImageHistogram.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\Dialogs\PointMatchDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Dialogs\PointMatchDialog.Designer.cs">
+      <DependentUpon>PointMatchDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Dialogs\PointsetsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Dialogs\PointsetsDialog.Designer.cs">
+      <DependentUpon>PointsetsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Dialogs\PointSettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Dialogs\PointSettingsDialog.Designer.cs">
+      <DependentUpon>PointSettingsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Dialogs\Popups\NuGenFilePopupMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Dialogs\Popups\NuGenSettingsPopupMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Dialogs\Popups\NuGenViewPopupMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Dialogs\Popups\NuGenWindowPopupMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Dialogs\ProgressDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Dialogs\ProgressDialog.Designer.cs">
+      <DependentUpon>ProgressDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Dialogs\ScaleBarDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Dialogs\ScaleBarDialog.Designer.cs">
+      <DependentUpon>ScaleBarDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Dialogs\SegmentsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Dialogs\SegmentsDialog.Designer.cs">
+      <DependentUpon>SegmentsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Dialogs\Popups\NuGenMainPopupMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\NuGenForm.Designer.cs">
+      <DependentUpon>NuGenForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NuGenPopupMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\NuGenStatusBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="System\Digitization\NuGenPointMatch.cs" />
+    <Compile Include="System\ImageProcessing\NuGenGridMesh.cs" />
+    <Compile Include="System\ImageProcessing\NuGenGridRemoval.cs" />
+    <Compile Include="System\ImageProcessing\NuGenImageProcessor.cs" />
+    <Compile Include="System\ImageProcessing\NuGenDiscretize.cs" />
+    <Compile Include="System\Digitization\NuGenPoint.cs" />
+    <Compile Include="System\ImageProcessing\NuGenSegment.cs" />
+    <Compile Include="System\NuGenMath.cs" />
+    <Compile Include="GUI\NuGenEventHandler.cs" />
+    <Compile Include="System\NuGenDocument.cs" />
+    <Compile Include="GUI\NuGenView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\NuGenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System\Digitization\NuGenPointSet.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\Dialogs\AxisPointDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AxisPointDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Dialogs\CoordinatesDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CoordinatesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Dialogs\DiscretizeSettingsDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DiscretizeSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Dialogs\ExportSettingsDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ExportSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Dialogs\GeometryDisplayDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GeometryDisplayDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Dialogs\GridRemovalSettingsDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GridRemovalSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Dialogs\GridSettingsDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GridSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Dialogs\PointMatchDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PointMatchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Dialogs\PointsetsDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PointsetsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Dialogs\PointSettingsDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PointSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Dialogs\Popups\NuGenSettingsPopupMenu.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenSettingsPopupMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Dialogs\Popups\NuGenViewPopupMenu.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenViewPopupMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Dialogs\Popups\NuGenWindowPopupMenu.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenWindowPopupMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Dialogs\ProgressDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Dialogs\ScaleBarDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ScaleBarDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Dialogs\SegmentsDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SegmentsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Dialogs\Popups\NuGenMainPopupMenu.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenMainPopupMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NuGenForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuGenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="System\NuGenDefaultSettings.cs" />
+    <Compile Include="System\NuGenTransform.cs" />
+    <Compile Include="System\Digitization\NuGenGeometryWindowItem.cs" />
+    <Compile Include="GUI\NuGenImageListener.cs" />
+    <Compile Include="System\Digitization\NuGenMatchSet.cs" />
+    <Compile Include="System\Digitization\NuGenPointSetCollection.cs" />
+    <Compile Include="System\ImageProcessing\NuGenSegmentCollection.cs" />
+    <Compile Include="System\Digitization\NuGenScreenTranslate.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Release\img\greenarrow.png" />
+    <None Include="bin\Release\img\digitaxissmall.png" />
+    <None Include="bin\Release\img\digitselectsmall.png" />
+    <None Include="bin\Release\img\digitcurvelarge.png" />
+    <None Include="bin\Release\img\digitcurvesmall.png" />
+    <None Include="bin\Release\img\digitmatchlarge.png" />
+    <None Include="bin\Release\img\digitmatchsmall.png" />
+    <None Include="bin\Release\img\digitmeasurelarge.png" />
+    <None Include="bin\Release\img\digitmeasuresmall.png" />
+    <None Include="bin\Release\img\digitscalelarge.png" />
+    <None Include="bin\Release\img\digitscalesmall.png" />
+    <None Include="bin\Release\img\digitsegmentlarge.png" />
+    <None Include="bin\Release\img\digitsegmentsmall.png" />
+    <None Include="bin\Release\img\digitselectlarge.png" />
+    <None Include="bin\Debug\img\filesave.png" />
+    <None Include="bin\Debug\img\fileexport.png" />
+    <None Include="bin\Debug\img\fileimport.png" />
+    <None Include="bin\Debug\img\fileopen.png" />
+    <Content Include="System\digitizer.sln" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\NuGenInterface\Genetibase.UI.NuGenInterface.csproj">
+      <Project>{1B29AC63-B032-4710-A7C8-B4C6C69D331B}</Project>
+      <Name>Genetibase.UI.NuGenInterface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Documentation\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
